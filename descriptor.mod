@@ -1,0 +1,15 @@
+version="1.0"
+tags={
+	"Overhaul"
+	"Balance"
+	"Buildings"
+	"Diplomacy"
+	"Economy"
+	"Total Conversion"
+	"Galaxy Generation"
+	"Gameplay"
+	"Species"
+	"Spaceships"
+}
+name="BTR Skunkworks"
+supported_version="3.11.*"

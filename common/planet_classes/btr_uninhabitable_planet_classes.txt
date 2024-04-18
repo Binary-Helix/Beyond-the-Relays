@@ -1,0 +1,279 @@
+############################
+### UNINHABITABLE WORLDS ###
+############################
+
+##### Gas Giants #####
+
+pc_hot_giant = {
+	entity = "hot_giant"
+	entity_scale = 14
+	icon = GFX_planet_type_hot_giant
+
+	atmosphere_color		= hsv { 0.1 0.15 1.1 }		#DONE
+	atmosphere_intensity	= 1.1
+	atmosphere_width		= 0.5
+
+	min_distance_from_sun = 40
+	max_distance_from_sun = 1000
+
+	spawn_odds = 6
+	extra_orbit_size = 1
+	extra_planet_count = 2
+
+	can_be_moon = no
+	chance_of_ring = 0.6
+
+	planet_size = { min = 20 max = 30 }
+	moon_size = { min = 8 max = 15 }
+
+	production_spawn_chance = 0.5
+
+	space_monster_target = yes
+	enable_tilt = no
+	colonizable = no
+}
+
+pc_ice_giant = {
+	entity = "ice_giant"
+	entity_scale = 14
+	icon = GFX_planet_type_ice_giant
+
+	atmosphere_color		= hsv { 0.1 0.15 1.1 }		#DONE
+	atmosphere_intensity	= 1.1
+	atmosphere_width		= 0.5
+
+	min_distance_from_sun = 40
+	max_distance_from_sun = 1000
+
+	spawn_odds = 6
+	extra_orbit_size = 1
+	extra_planet_count = 2
+
+	can_be_moon = no
+	chance_of_ring = 0.6
+
+	planet_size = { min = 20 max = 30 }
+	moon_size = { min = 8 max = 15 }
+
+	production_spawn_chance = 0.5
+
+	space_monster_target = yes
+	enable_tilt = no
+	colonizable = no
+}
+
+##### TERRAN UNINHABITABLES #####
+
+pc_carbon = {
+	entity = "carbon_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_carbon
+	#appearance
+	picture = pc_barren
+	atmosphere_color 		= hsv { 0.50 0.2 0.8 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_arid.dds"
+	#planet defines
+	colonizable = no
+	#colonization_tech = { }
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	enable_tilt = no
+}
+
+pc_iron = {
+	entity = "iron_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_iron
+	#appearance
+	picture = pc_barren
+	atmosphere_color 		= hsv { 0.50 0.2 0.8 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_arid.dds"
+	#planet defines
+	colonizable = no
+	#colonization_tech = { }
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	enable_tilt = no
+}
+
+pc_chthonian = {
+	entity = "chthonian_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_chthonian
+	#appearance
+	picture = pc_barren
+	atmosphere_color 		= hsv { 0.55 0.3 0.75 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_arid.dds"
+	#planet defines
+	colonizable = no
+	#colonization_tech = { }
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	enable_tilt = no
+}
+
+pc_hothouse = {
+	entity = "hothouse_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_hothouse
+	#appearance
+	picture = pc_hothouse
+	atmosphere_color 		= hsv { 0.50 0.2 0.8 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_arid.dds"
+	#planet defines
+	colonizable = no
+	#colonization_tech = { }
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	enable_tilt = no
+}
+
+##### SMALL BODY UNINHABITABLES #####
+
+pc_vulcanoid = {
+	entity = "vulcanoid"
+	entity_scale = 1.5
+	icon = GFX_planet_type_asteroid
+	picture = pc_asteroid
+	asteroid = yes
+
+	spawn_odds = 10
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = 5
+
+	colonizable = no
+	survey_time_factor = 0.5
+}
+
+pc_met_asteroid = {
+	entity = "asteroid"
+	entity_scale = 1.5
+	icon = GFX_planet_type_asteroid
+	picture = pc_asteroid
+	asteroid = yes
+
+	spawn_odds = 10
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = 5
+
+	colonizable = no
+	survey_time_factor = 0.5
+}
+
+pc_sil_asteroid = {
+	entity = "sil_asteroid"
+	entity_scale = 1.5
+	icon = GFX_planet_type_asteroid
+	picture = pc_asteroid
+	asteroid = yes
+
+	spawn_odds = 10
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = 5
+
+	colonizable = no
+	survey_time_factor = 0.5
+}
+
+pc_carb_asteroid = {
+	entity = "carb_asteroid"
+	entity_scale = 1.5
+	icon = GFX_planet_type_asteroid
+	picture = pc_asteroid
+	asteroid = yes
+
+	spawn_odds = 10
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = 5
+
+	colonizable = no
+	survey_time_factor = 0.5
+}
+
+pc_gel_asteroid = {
+	entity = "gel_asteroid"
+	entity_scale = 1.5
+	icon = GFX_planet_type_asteroid
+	picture = pc_asteroid
+	asteroid = yes
+
+	spawn_odds = 10
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = 5
+
+	colonizable = no
+	survey_time_factor = 0.5
+}
+
+pc_eezo_asteroid = {
+	entity = "eezo_asteroid"
+	entity_scale = 1.5
+	icon = GFX_planet_type_asteroid
+	picture = pc_asteroid
+	asteroid = yes
+
+	spawn_odds = 10
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = 5
+
+	colonizable = no
+	survey_time_factor = 0.5
+}
+
+# pc_comet = {
+# 	entity = "comet"
+# 	entity_scale = 1.5
+# 	icon = GFX_planet_type_comet
+
+# 	asteroid = yes
+
+# 	spawn_odds = 10
+
+# 	extra_orbit_size = 0
+# 	extra_planet_count = 0
+
+# 	chance_of_ring = 0
+
+# 	planet_size = 5
+
+# 	colonizable = no
+# 	survey_time_factor = 0.5
+# }
