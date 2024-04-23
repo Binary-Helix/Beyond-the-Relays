@@ -5,17 +5,33 @@ spriteTypes = {
 		#borderSize = { x=9 y=9 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
 	}
+	
+	SpriteType = {
+		name = "GFX_btr_bottom_frame"
+		texturefile = "gfx/interface/tiles/bottom_frame.dds"
+		#borderSize = { x=9 y=9 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+	
+		
+	SpriteType = {
+		name = "GFX_btr_origin_frame"
+		texturefile = "gfx/interface/tiles/origin_frame.dds"
+		#borderSize = { x=9 y=9 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
 
 	spriteType = {
-		name = "GFX_start_screen_button"
-		texturefile = "gfx/interface/buttons/button_520_animated.dds"
+		name = "btr_empty_button"
+		texturefile = "gfx/interface/buttons/btr_empty_button_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
 		noOfFrames = 3
 		animation = {
-			animationmaskfile = "gfx/interface/buttons/button_520_animated_mask.dds"
-			animationtexturefile = "gfx/interface/buttons/button_520_animated_texture.dds"
+			animationmaskfile = "gfx/interface/buttons/btr_empty_button_animated_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_142_animated_texture.dds"
 			animationrotation = 180.0
 			animationlooping = yes
-			animationtime = 200.0
+			animationtime = 40.0
 			animationdelay = 0.0
 			animationblendmode = "overlay"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
@@ -23,6 +39,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 			animationframes = { 1 2 3 }
 		}
+		hitbox_margin = { x=11 y=11 }
 	}
 	
 	spriteType = {
