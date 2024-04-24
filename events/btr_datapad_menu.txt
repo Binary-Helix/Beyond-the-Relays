@@ -1,0 +1,37 @@
+###########################
+###
+### WRITTEN BY PUCKHEAD73
+###
+### 
+###########################
+
+namespace = btr_datapad_menu
+
+#####################
+# GLOBAL START EVENTS
+#####################
+
+##### WELCOME MENU #####
+# On press begin - Beyond the Relays Datapad Initialization
+country_event = {
+	id = btr_datapad_menu.1
+	title = "btr_datapad_menu.1.name"
+	desc = "btr_datapad_menu.1.desc"
+	diplomatic = yes
+	custom_gui = "btr_datapad_menu"
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = has_beyond_the_relays
+		log = "Playing Beyond the Relays"
+
+	}
+
+	option = {
+		custom_gui = "btr_datapad_menu_confirm"
+		default_hide_option = yes
+		name = btr_datapad_menu.2.confirm"
+		custom_tooltip = "btr_datapad_menu.2.confirm.tooltip"
+
+	}
+}
