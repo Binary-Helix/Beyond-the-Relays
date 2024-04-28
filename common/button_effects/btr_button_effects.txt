@@ -1,0 +1,238 @@
+btr_menu_prev = {
+	potential = { exists = from }
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			from = {
+				if = {
+					limit = { has_country_flag = btr_menu_page_00 }
+					remove_country_flag = btr_menu_page_00
+					set_country_flag = btr_menu_page_dev_news
+					country_event = { id =  btr_datapad_menu.7 }
+				}
+				else_if = {
+					limit = { has_country_flag = btr_menu_page_empire_dossier }
+					remove_country_flag = btr_menu_page_empire_dossier
+					set_country_flag = btr_menu_page_00
+					country_event = { id =  btr_datapad_menu.1 }
+				}
+				else_if = {
+					limit = { has_country_flag = btr_menu_page_economy }
+					remove_country_flag = btr_menu_page_economy
+					set_country_flag = btr_menu_page_empire_dossier
+					country_event = { id =  btr_datapad_menu.2 }
+				}
+				else_if = {
+					limit = { has_country_flag = btr_menu_page_relay_network }
+					remove_country_flag = btr_menu_page_relay_network
+					set_country_flag = btr_menu_page_economy
+					country_event = { id =  btr_datapad_menu.3 }
+				}
+				else_if = {
+					limit = { has_country_flag = btr_menu_page_warfare }
+					remove_country_flag = btr_menu_page_warfare
+					set_country_flag = btr_menu_page_relay_network
+					country_event = { id =  btr_datapad_menu.4 }
+				}
+				else_if = {
+					limit = { has_country_flag = btr_menu_page_planet_classes }
+					remove_country_flag = btr_menu_page_planet_classes
+					set_country_flag = btr_menu_page_warfare
+					country_event = { id =  btr_datapad_menu.5 }
+				}
+				else_if = {
+					limit = { has_country_flag = btr_menu_page_dev_news }
+					remove_country_flag = btr_menu_page_dev_news
+					set_country_flag = btr_menu_page_planet_classes
+					country_event = { id =  btr_datapad_menu.6 }
+				}
+			}
+		}
+	}
+}
+
+btr_menu_next = {
+	potential = { exists = from }
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			from = {
+				if = {
+					limit = { has_country_flag = btr_menu_page_00 }
+					remove_country_flag = btr_menu_page_00
+					set_country_flag = btr_menu_page_empire_dossier
+					country_event = { id =  btr_datapad_menu.2 }
+				}
+				else_if = {
+					limit = { has_country_flag = btr_menu_page_empire_dossier }
+					remove_country_flag = btr_menu_page_empire_dossier
+					set_country_flag = btr_menu_page_economy
+					country_event = { id =  btr_datapad_menu.3 }
+				}
+				else_if = {
+					limit = { has_country_flag = btr_menu_page_economy }
+					remove_country_flag = btr_menu_page_economy
+					set_country_flag = btr_menu_page_relay_network
+					country_event = { id =  btr_datapad_menu.4 }
+				}
+				else_if = {
+					limit = { has_country_flag = btr_menu_page_relay_network }
+					remove_country_flag = btr_menu_page_relay_network
+					set_country_flag = btr_menu_page_warfare
+					country_event = { id =  btr_datapad_menu.5 }
+				}
+				else_if = {
+					limit = { has_country_flag = btr_menu_page_warfare }
+					remove_country_flag = btr_menu_page_warfare
+					set_country_flag = btr_menu_page_planet_classes
+					country_event = { id =  btr_datapad_menu.6 }
+				}
+				else_if = {
+					limit = { has_country_flag = btr_menu_page_planet_classes }
+					remove_country_flag = btr_menu_page_planet_classes
+					set_country_flag = btr_menu_page_dev_news
+					country_event = { id =  btr_datapad_menu.7 }
+				}
+				else_if = {
+					limit = { has_country_flag = btr_menu_page_dev_news }
+					remove_country_flag = btr_menu_page_dev_news
+					set_country_flag = btr_menu_page_00
+					country_event = { id =  btr_datapad_menu.1 }
+				}
+			}
+		}
+	}
+}
+
+btr_menu_goto_main_page = {
+	potential = { exists = from }
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			from = {
+				remove_country_flag = btr_menu_page_00
+				remove_country_flag = btr_menu_page_economy
+				remove_country_flag = btr_menu_page_relay_network
+				remove_country_flag = btr_menu_page_warfare
+				remove_country_flag = btr_menu_page_planet_classes
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_goto_dossier
+				country_event = { id =  btr_datapad_menu.1 }
+			}
+		}
+	}
+}
+
+btr_menu_dossier = {
+	potential = { exists = from }
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			from = {
+				remove_country_flag = btr_menu_page_00
+				remove_country_flag = btr_menu_page_economy
+				remove_country_flag = btr_menu_page_relay_network
+				remove_country_flag = btr_menu_page_warfare
+				remove_country_flag = btr_menu_page_planet_classes
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_goto_dossier
+				country_event = { id =  btr_datapad_menu.2 }
+			}
+		}
+	}
+}
+
+btr_menu_economy = {
+	potential = { exists = from }
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			from = {
+				remove_country_flag = btr_menu_page_00
+				remove_country_flag = btr_menu_goto_dossier
+				remove_country_flag = btr_menu_page_relay_network
+				remove_country_flag = btr_menu_page_warfare
+				remove_country_flag = btr_menu_page_planet_classes
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.3 }
+			}
+		}
+	}
+}
+
+btr_menu_relay_network = {
+	potential = { exists = from }
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			from = {
+				remove_country_flag = btr_menu_page_00
+				remove_country_flag = btr_menu_goto_dossier
+				remove_country_flag = btr_menu_page_economy
+				remove_country_flag = btr_menu_page_relay_network
+				remove_country_flag = btr_menu_page_planet_classes
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.4 }
+			}
+		}
+	}
+}
+
+btr_menu_warfare = {
+	potential = { exists = from }
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			from = {
+				remove_country_flag = btr_menu_page_00
+				remove_country_flag = btr_menu_goto_dossier
+				remove_country_flag = btr_menu_page_economy
+				remove_country_flag = btr_menu_page_relay_network
+				remove_country_flag = btr_menu_page_planet_classes
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.5 }
+			}
+		}
+	}
+}
+
+btr_menu_planet_classes = {
+	potential = { exists = from }
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			from = {
+				remove_country_flag = btr_menu_page_00
+				remove_country_flag = btr_menu_goto_dossier
+				remove_country_flag = btr_menu_page_economy
+				remove_country_flag = btr_menu_page_relay_network
+				remove_country_flag = btr_menu_page_warfare
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.6 }
+			}
+		}
+	}
+}
+
+btr_menu_dev_news = {
+	potential = { exists = from }
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			from = {
+				remove_country_flag = btr_menu_page_00
+				remove_country_flag = btr_menu_goto_dossier
+				remove_country_flag = btr_menu_page_economy
+				remove_country_flag = btr_menu_page_relay_network
+				remove_country_flag = btr_menu_page_warfare
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.7 }
+			}
+		}
+	}
+}

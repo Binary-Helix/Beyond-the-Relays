@@ -14,24 +14,306 @@ namespace = btr_datapad_menu
 ##### WELCOME MENU #####
 # On press begin - Beyond the Relays Datapad Initialization
 country_event = {
-	id = btr_datapad_menu.1
-	title = "btr_datapad_menu.1.name"
-	desc = "btr_datapad_menu.1.desc"
-	diplomatic = yes
-	custom_gui = "btr_datapad_menu"
+	id = btr_datapad_menu.0
+	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
 		set_global_flag = has_beyond_the_relays
 		log = "Playing Beyond the Relays"
+		country_event = { id = btr_datapad_menu.01 }
+	}
+}
 
+#BTR Datapad - Empire Dossier (Recreation of Vanilla Start Screen)
+country_event = {
+	id = btr_datapad_menu.01
+	title = "btr_datapad_menu.01.name"
+	desc = "btr_datapad_menu.01.desc"
+	diplomatic = yes
+	custom_gui = "btr_datapad_menu_empire_dossier"
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = btr_menu_page_00
+				}
+			}
+		}
+		set_country_flag = btr_menu_page_00
 	}
 
 	option = {
-		custom_gui = "btr_datapad_menu_confirm"
-		default_hide_option = yes
-		name = btr_datapad_menu.2.confirm"
-		custom_tooltip = "btr_datapad_menu.2.confirm.tooltip"
+		name = "btr_datapad_menu.01.a"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.01 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.b"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.02 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.c"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.03 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.d"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.04 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.e"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.05 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.f"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.06 }
+		}
+	}
+}
 
+#BTR Datapad - Economy
+country_event = {
+	id = btr_datapad_menu.02
+	title = "btr_datapad_menu.02.name"
+	desc = "btr_datapad_menu.02.desc"
+	diplomatic = yes
+	custom_gui = "btr_datapad_menu_economy"
+	is_triggered_only = yes
+
+	option = {
+		name = "btr_datapad_menu.01.a"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.01 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.b"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.02 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.c"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.03 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.d"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.04 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.e"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.05 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.f"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.06 }
+		}
+	}
+}
+
+#BTR Datapad - Relay Network
+country_event = {
+	id = btr_datapad_menu.03
+	title = "btr_datapad_menu.03.name"
+	desc = "btr_datapad_menu.03.desc"
+	diplomatic = yes
+	custom_gui = "btr_datapad_menu"
+	is_triggered_only = yes
+
+	option = {
+		name = "btr_datapad_menu.01.a"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.01 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.b"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.02 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.c"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.03 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.d"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.04 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.e"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.05 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.f"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.06 }
+		}
+	}
+}
+
+#BTR Datapad - Warfare
+country_event = {
+	id = btr_datapad_menu.04
+	title = "btr_datapad_menu.04.name"
+	desc = "btr_datapad_menu.04.desc"
+	diplomatic = yes
+	custom_gui = "btr_datapad_menu"
+	is_triggered_only = yes
+
+	option = {
+		name = "btr_datapad_menu.01.a"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.01 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.b"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.02 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.c"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.03 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.d"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.04 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.e"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.05 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.f"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.06 }
+		}
+	}
+}
+
+#BTR Datapad - Planet Classes
+country_event = {
+	id = btr_datapad_menu.05
+	title = "btr_datapad_menu.05.name"
+	desc = "btr_datapad_menu.05.desc"
+	diplomatic = yes
+	custom_gui = "btr_datapad_menu"
+	is_triggered_only = yes
+
+	option = {
+		name = "btr_datapad_menu.01.a"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.01 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.b"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.02 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.c"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.03 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.d"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.04 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.e"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.05 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.f"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.06 }
+		}
+	}
+}
+
+#BTR Datapad - Dev News
+country_event = {
+	id = btr_datapad_menu.06
+	title = "btr_datapad_menu.06.name"
+	desc = "btr_datapad_menu.06.desc"
+	diplomatic = yes
+	custom_gui = "btr_datapad_menu"
+	is_triggered_only = yes
+
+	option = {
+		name = "btr_datapad_menu.01.a"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.01 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.b"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.02 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.c"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.03 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.d"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.04 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.e"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.05 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.f"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.06 }
+		}
 	}
 }

@@ -1,25 +1,53 @@
 spriteTypes = {
-	SpriteType = {
+	SpriteType = { #INTRO SCREEN
 		name = "GFX_btr_intro_screen_bg"
 		texturefile = "gfx/interface/tiles/btr_intro_screen_datapad.dds"
 		#borderSize = { x=9 y=9 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
 	}
 
-	SpriteType = {
-		name = "GFX_btr_start_screen_bg"
-		texturefile = "gfx/interface/tiles/btr_start_screen_datapad.dds"
+	SpriteType = { #EMPIRE DOSSIER
+		name = "GFX_btr_datapad_menu_empire_dossier"
+		texturefile = "gfx/interface/tiles/btr_datapad_menu_empire_dossier.dds"
 		#borderSize = { x=9 y=9 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
 	}
 
-	SpriteType = {
-		name = "GFX_btr_datapad_menu"
-		texturefile = "gfx/interface/tiles/btr_datapad_menu.dds"
+	SpriteType = { #ECONOMY
+		name = "GFX_btr_datapad_menu_economy"
+		texturefile = "gfx/interface/tiles/btr_datapad_menu_economy.dds"
 		#borderSize = { x=9 y=9 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
 	}
-	
+
+	SpriteType = { #RELAY NETWORK
+		name = "GFX_btr_datapad_menu_relay_network"
+		texturefile = "gfx/interface/tiles/btr_datapad_menu_relay_network.dds"
+		#borderSize = { x=9 y=9 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	SpriteType = { #WARFARE
+		name = "GFX_btr_datapad_menu_warfare"
+		texturefile = "gfx/interface/tiles/btr_datapad_menu_warfare.dds"
+		#borderSize = { x=9 y=9 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	SpriteType = { #PLANET CLASSES
+		name = "GFX_btr_datapad_menu_planet_classes"
+		texturefile = "gfx/interface/tiles/btr_datapad_menu_planet_classes.dds"
+		#borderSize = { x=9 y=9 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	SpriteType = { #DEV NEWS
+		name = "GFX_btr_datapad_menu_dev_news"
+		texturefile = "gfx/interface/tiles/btr_datapad_menu_dev_news.dds"
+		#borderSize = { x=9 y=9 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
 	SpriteType = {
 		name = "GFX_btr_bottom_frame"
 		texturefile = "gfx/interface/tiles/bottom_frame.dds"
@@ -37,6 +65,27 @@ spriteTypes = {
 	spriteType = {
 		name = "btr_empty_button"
 		texturefile = "gfx/interface/buttons/btr_empty_button_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/btr_empty_button_animated_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_142_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 40.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=11 y=11 }
+	}
+
+	spriteType = {
+		name = "btr_empty_button_long"
+		texturefile = "gfx/interface/buttons/btr_datapad_menu_long_button.dds"
 		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
 		noOfFrames = 3
 		animation = {
@@ -94,11 +143,11 @@ spriteTypes = {
 			animationframes = { 1 2 3 }
 		}
 	}
-	
+
 	spriteType = {
 		name = "GFX_start_screen_effect"
 		texturefile = "gfx/interface/tiles/btr_start_screen_datapad_animated.dds"
-		noOfFrames = 1			
+		noOfFrames = 1
 		animation = {
 			animationmaskfile = "gfx/interface/tiles/btr_start_screen_datapad_animated_mask.dds"
 			animationtexturefile = "gfx/interface/tiles/btr_start_screen_datapad_animated_texture.dds"
@@ -109,7 +158,7 @@ spriteTypes = {
 			animationblendmode = "add"       #add, multiply, overlay
 			animationtype = "scrolling"      #scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationtexturescale = { x = 1.0 y = 1.0 }
 			animationframes = { 1 }
 		}
 	}

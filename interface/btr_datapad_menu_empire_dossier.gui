@@ -1,10 +1,32 @@
 guiTypes = {
 	#BTR Option
 
+	ContainerWindowType = {
+		name = "event_option_entry"
+		position = { x=0 y=0 }
+		size = { width = 150 height = 26 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "btr_empty_button_long"
+			position = { x=35 y=10 }
+			font = "korataki_12"
+			text = "OPTION_TEXT"
+			borderSize = { x = 0 y = 0 }
+			format = Center
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 10 }
+			size = { x=65 y= 28 }
+		}
+	}
 
 	# BTR Datapad
 	containerWindowType = {
-		name = "btr_datapad_menu"
+		name = "btr_datapad_menu_empire_dossier"
 		orientation = center
 		origo = center
 		movable = yes
@@ -12,7 +34,7 @@ guiTypes = {
 
 		iconType = {
 			name = "btr_datapad_menu_bg_extended"
-			spriteType = "GFX_btr_datapad_menu"
+			spriteType = "GFX_btr_datapad_menu_empire_dossier"
 			alwaysTransparent = yes
 		}
 
@@ -20,6 +42,7 @@ guiTypes = {
 			name = "background"
 			quadTextureSprite = "gfx_transparency_button"
 		}
+
 
 		#iconType = {
 		#	name = "empire_header_line"
