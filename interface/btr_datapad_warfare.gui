@@ -1,0 +1,360 @@
+guiTypes = {
+	containerWindowType = {
+		name = "btr_datapad_datapad_menu_confirm"
+		position = { x = 0 y = 0 }
+		size = { width = 35 height = 35 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_btr_datapad_confirm_button"
+			position = { x = -930 y = 245 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+			scale = 0.5
+		}
+	}
+	containerWindowType = {
+		name = "btr_datapad_empire_dossier_menu_button1"
+		position = { x = 0 y = 0 }
+		size = { width = 32 height = 30 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_btr_datapad_empire_dossier_button"
+			position = { x = -1292 y = 240 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+			scale = 0.45
+		}
+	}
+	containerWindowType = {
+		name = "btr_datapad_empire_dossier_menu_button2"
+		position = { x = 0 y = 0 }
+		size = { width = 32 height = 30 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_btr_datapad_economy_button"
+			position = { x = -1146 y = 210 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+			scale = 0.45
+		}
+	}
+	containerWindowType = {
+		name = "btr_datapad_empire_dossier_menu_button3"
+		position = { x = 0 y = 0 }
+		size = { width = 32 height = 30 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_btr_datapad_relay_network_button"
+			position = { x = -999 y = 180 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+			scale = 0.45
+		}
+	}
+	containerWindowType = {
+		name = "btr_datapad_empire_dossier_menu_button4"
+		position = { x = 0 y = 0 }
+		size = { width = 32 height = 30 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_btr_datapad_warfare_button"
+			position = { x = -852 y = 150 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+			scale = 0.45
+		}
+	}
+	containerWindowType = {
+		name = "btr_datapad_empire_dossier_menu_button5"
+		position = { x = 0 y = 0 }
+		size = { width = 32 height = 30 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_btr_datapad_planet_classes_button"
+			position = { x = -705 y = 120 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+			scale = 0.45
+		}
+	}
+	containerWindowType = {
+		name = "btr_datapad_empire_dossier_menu_button6"
+		position = { x = 0 y = 0 }
+		size = { width = 32 height = 30 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_btr_datapad_dev_news_button"
+			position = { x = -558 y = 90 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+			scale = 0.45
+		}
+	}
+
+	# BTR Datapad
+	containerWindowType = {
+		name = "btr_datapad_menu_warfare"
+		orientation = center
+		origo = center
+		movable = yes
+		size = { width = 900 height = 1133 }
+
+		background = {
+			name = "background"
+			quadTextureSprite = "gfx_transparency_button"
+		}
+
+		iconType = {
+			name = "btr_datapad_empire_dossier_bg"
+			spriteType = "GFX_btr_datapad_warfare_bg"
+			alwaysTransparent = yes
+		}
+
+		effectButtonType = {
+			name = "btr_prev"
+			quadTextureSprite = "GFX_btn_prev"
+			position = { x = 6 y = 915 }
+			clicksound = interface
+			#effect = "btr_menu_prev"
+			scale = 0.75
+		}
+
+		effectButtonType = {
+			name = "btr_next"
+			quadTextureSprite = "GFX_btn_next"
+			position = { x = 784 y = 915 }
+			clicksound = interface
+			#effect = "btr_menu_next"
+			scale = 0.75
+		}
+
+		### EVENT DIPLO ###
+
+		containerWindowType = {
+			#Event Title
+			name = "EVENT_DIPLO"
+			position = { x = 20 y = 5 }
+			size = { width = 563 height = 280 }
+			moveable = no
+
+			instantTextBoxType = {
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = -5 y = 0 }
+				maxWidth = 520
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = 490 y = 0 }
+				maxWidth = 500
+				maxHeight = 180
+				Orientation = "UPPER_LEFT"
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+			listboxType = {
+				name = "option_list"
+				position = { x = 0 y = 0 }
+				size = { x = 1000 y = 3000 }
+				spacing = 1
+				scrollbartype = "standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
+				Orientation = "center"
+			}
+		}
+
+		### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+
+		buttonType = {
+			#HIDDEN
+			name = "focus_button"
+			position = { x = -1180 y = -1112 }
+			spriteType = "GFX_fleetview_focus"
+		}
+		instantTextBoxType = {
+			#HIDDEN
+			name = "heading"
+			font = "malgun_goth_24"
+			position = { x = -1120 y = -115 }
+		}
+		buttonType = {
+			#HIDDEN
+			name = "alien_message_background"
+			size = { x = 0 y = 0 }
+			position = { x = -1110 y = -11430 }
+			spriteType = "GFX_tiles_dark_area_cut_8"
+		}
+		buttonType = {
+			#HIDDEN
+			name = "confirm_button"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+		}
+		containerWindowType = {
+			#HIDDEN
+			name = "portrait_background"
+			position = { x = -1117 y = -1145 }
+			size = { width = 0 height = 0 }    # hide portrait window
+			iconType = {
+				#HIDDEN
+				name = "event_picture"
+				spriteType = "GFX_diplomacy_portrait_frame"
+			}
+			iconType = {
+				#HIDDEN
+				name = "portrait"
+				spriteType = "GFX_portrait_character"
+			}
+		}
+		containerWindowType = {
+			#HIDDEN
+			name = "portrait"
+			position = { x = -1117 y = -1145 }
+			size = { width = 0 height = 0 } # hide portrait window
+			iconType = {
+				#HIDDEN
+				name = "portrait"
+				spriteType = "GFX_portrait_gamesetup_mask"
+			}
+			iconType = {
+				#HIDDEN
+				name = "black_frame"
+				spriteType = "GFX_diplomacy_portrait_shadow_frame"
+			}
+			iconType = {
+				#HIDDEN
+				name = "stripes_1"
+				spriteType = "GFX_diplomacy_stripes_2"
+			}
+			iconType = {
+				#HIDDEN
+				name = "city_frame"
+				spriteType = "GFX_diplomacy_portrait_frame"
+			}
+		}
+		iconType = {
+			#HIDDEN
+			name = "empire_info_bg"
+			spriteType = "GFX_diplomacy_dark_fade_bg"
+		}
+		instantTextBoxType = {
+			#HIDDEN
+			name = "empire_name"
+			font = "malgun_goth_24"
+		}
+		instantTextBoxType = {
+			#HIDDEN
+			name = "empire_government_type"
+			font = "cg_16b"
+		}
+		instantTextBoxType = {
+			#HIDDEN
+			name = "empire_personality_type"
+			font = "cg_16b"
+		}
+		overlappingElementsBoxType = {
+			#HIDDEN
+			name = "empire_ethics_icons"
+			position = { x = -1145 y = -11138 }
+		}
+		iconType = {
+			#HIDDEN
+			name = "empire_flag"
+			spriteType = "GFX_empire_flag_128"
+			position = { x = -1125 y = -11235 }
+		}
+		containerWindowType = {
+			#HIDDEN
+			name = "leader_details"
+			position = { x = -1125 y = -1175 }
+			containerWindowType = {
+				#HIDDEN
+				name = "empire_traits_box"
+			}
+			instantTextBoxType = {
+				#HIDDEN
+				name = "empire_traits_label"
+				font = "cg_16b"
+			}
+			overlappingElementsBoxType = {
+				#HIDDEN
+				name = "leader_traits"
+			}
+			instantTextBoxType = {
+				#HIDDEN
+				name = "leader_name"
+				font = "cg_16b"
+			}
+			instantTextBoxType = {
+				#HIDDEN
+				name = "leader_species"
+				font = "cg_16b"
+			}
+		}
+		containerWindowType = {
+			#HIDDEN
+			name = "opinion_window"
+			position = { x = -1127 y = -11110 }
+			size = { width = 94 height = 30 }
+			iconType = {
+				#HIDDEN
+				name = "their_opinion_icon"
+				spriteType = "GFX_diplomacy_opinion"
+			}
+			instantTextBoxType = {
+				#HIDDEN
+				name = "their_opinion" font = "cg_16b"
+			}
+		}
+
+		# Description Section
+		instantTextBoxType = {
+			#HIDDEN
+			name = "alien_message"
+			font = "cg_16b"
+			position = { x = 20 y = 100 }
+			maxWidth = 465
+			maxHeight = 220
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+
+		containerWindowType = {
+			name = "start_screen_effect"
+			size = { width = 875 height = 946 }
+			position = { x = 500 y = 0 }
+			orientation = upper_left
+
+			buttonType = {
+				name = "btr_start_screen_effect"
+				quadTextureSprite = "GFX_start_screen_effect"
+				alwaysTransparent = yes
+				position = { x = -489 y = 93 }
+				orientation = upper_left
+			}
+		}
+	}
+}
