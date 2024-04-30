@@ -25,11 +25,222 @@ country_event = {
 	}
 }
 
-#BTR Datapad - Empire Dossier (Recreation of Vanilla Start Screen)
+#BTR Datapad - Main Page
 country_event = {
 	id = btr_datapad_menu.01
 	title = "btr_datapad_menu.01.name"
 	desc = "btr_datapad_menu.01.desc"
+	diplomatic = yes
+	custom_gui = "btr_datapad_menu_main"
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = btr_datapad_menu_main
+				}
+			}
+			set_country_flag = btr_datapad_menu_main
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_empire_dossier
+			}
+			remove_country_flag = btr_menu_page_empire_dossier
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_economy
+			}
+			remove_country_flag = btr_menu_page_economy
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_relay_network
+			}
+			remove_country_flag = btr_menu_page_relay_network
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_warfare
+			}
+			remove_country_flag = btr_menu_page_warfare
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_planet_classes
+			}
+			remove_country_flag = btr_menu_page_planet_classes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_dev_news
+			}
+			remove_country_flag = btr_menu_page_dev_news
+		}
+	}
+
+	option = {
+		name = "btr_datapad_menu.01.confirm"
+		custom_gui = "btr_datapad_menu_confirm"
+		default_hide_option = yes
+	}
+
+	option = {
+		name = "btr_datapad_menu.01.main"
+		custom_gui = "btr_datapad_datapad_menu_main"
+		default_hide_option = yes
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.01 }
+		}
+	}
+
+	option = {
+		name = "btr_datapad_menu.01.a"
+		custom_gui = "btr_datapad_empire_dossier_menu_button1"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.02 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.b"
+		custom_gui = "btr_datapad_empire_dossier_menu_button2"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.03 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.c"
+		custom_gui = "btr_datapad_empire_dossier_menu_button3"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.04 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.d"
+		custom_gui = "btr_datapad_empire_dossier_menu_button4"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.05 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.e"
+		custom_gui = "btr_datapad_empire_dossier_menu_button5"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.06 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.f"
+		custom_gui = "btr_datapad_empire_dossier_menu_button6"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.07 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.g"
+		custom_gui = "btr_prev"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = btr_datapad_menu_main }
+				remove_country_flag = btr_datapad_menu_main
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.07 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_00
+				country_event = { id =  btr_datapad_menu.01 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_economy }
+				remove_country_flag = btr_menu_page_economy
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.02 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_relay_network }
+				remove_country_flag = btr_menu_page_relay_network
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.03 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
+				set_country_flag = btr_menu_page_relay_network
+				country_event = { id =  btr_datapad_menu.04 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.05 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.06 }
+			}
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.h"
+		custom_gui = "btr_next"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = btr_datapad_menu_main }
+				remove_country_flag = btr_datapad_menu_main
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.02 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.03 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_economy }
+				remove_country_flag = btr_menu_page_economy
+				set_country_flag = btr_menu_page_relay_network
+				country_event = { id =  btr_datapad_menu.04 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_relay_network }
+				remove_country_flag = btr_menu_page_relay_network
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.05 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.06 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.07 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_00
+				country_event = { id =  btr_datapad_menu.01 }
+			}
+		}
+	}
+}
+
+#BTR Datapad - Empire Dossier (Recreation of Vanilla Start Screen)
+country_event = {
+	id = btr_datapad_menu.02
+	title = "btr_datapad_menu.02.name"
+	desc = "btr_datapad_menu.02.desc"
 	diplomatic = yes
 	custom_gui = "btr_datapad_menu_empire_dossier"
 	is_triggered_only = yes
@@ -38,354 +249,1249 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					has_country_flag = btr_menu_page_00
+					has_country_flag = btr_menu_page_empire_dossier
 				}
 			}
+			set_country_flag = btr_menu_page_empire_dossier
 		}
-		set_country_flag = btr_menu_page_00
+		else_if = {
+			limit = {
+				has_country_flag = btr_datapad_menu_main
+			}
+			remove_country_flag = btr_datapad_menu_main
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_economy
+			}
+			remove_country_flag = btr_menu_page_economy
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_relay_network
+			}
+			remove_country_flag = btr_menu_page_relay_network
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_warfare
+			}
+			remove_country_flag = btr_menu_page_warfare
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_planet_classes
+			}
+			remove_country_flag = btr_menu_page_planet_classes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_dev_news
+			}
+			remove_country_flag = btr_menu_page_dev_news
+		}
 	}
 
 	option = {
 		name = "btr_datapad_menu.01.confirm"
-		custom_gui = "btr_datapad_datapad_menu_confirm"
+		custom_gui = "btr_datapad_menu_confirm"
 		default_hide_option = yes
+	}
+
+	option = {
+		name = "btr_datapad_menu.01.main"
+		custom_gui = "btr_datapad_datapad_menu_main"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.01 }
+		}
 	}
 
 	option = {
 		name = "btr_datapad_menu.01.a"
 		custom_gui = "btr_datapad_empire_dossier_menu_button1"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.01 }
+			country_event = { id = btr_datapad_menu.02 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.b"
 		custom_gui = "btr_datapad_empire_dossier_menu_button2"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.02 }
+			country_event = { id = btr_datapad_menu.03 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.c"
 		custom_gui = "btr_datapad_empire_dossier_menu_button3"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.03 }
+			country_event = { id = btr_datapad_menu.04 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.d"
 		custom_gui = "btr_datapad_empire_dossier_menu_button4"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.04 }
+			country_event = { id = btr_datapad_menu.05 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.e"
 		custom_gui = "btr_datapad_empire_dossier_menu_button5"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.05 }
+			country_event = { id = btr_datapad_menu.06 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.f"
 		custom_gui = "btr_datapad_empire_dossier_menu_button6"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.06 }
+			country_event = { id = btr_datapad_menu.07 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.g"
+		custom_gui = "btr_prev"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = btr_datapad_menu_main }
+				remove_country_flag = btr_datapad_menu_main
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.07 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_00
+				country_event = { id =  btr_datapad_menu.01 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_economy }
+				remove_country_flag = btr_menu_page_economy
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.02 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_relay_network }
+				remove_country_flag = btr_menu_page_relay_network
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.03 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
+				set_country_flag = btr_menu_page_relay_network
+				country_event = { id =  btr_datapad_menu.04 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.05 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.06 }
+			}
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.h"
+		custom_gui = "btr_next"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = btr_datapad_menu_main }
+				remove_country_flag = btr_datapad_menu_main
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.02 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.03 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_economy }
+				remove_country_flag = btr_menu_page_economy
+				set_country_flag = btr_menu_page_relay_network
+				country_event = { id =  btr_datapad_menu.04 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_relay_network }
+				remove_country_flag = btr_menu_page_relay_network
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.05 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.06 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.07 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_00
+				country_event = { id =  btr_datapad_menu.01 }
+			}
 		}
 	}
 }
 
 #BTR Datapad - Economy
 country_event = {
-	id = btr_datapad_menu.02
-	title = "btr_datapad_menu.02.name"
-	desc = "btr_datapad_menu.02.desc"
+	id = btr_datapad_menu.03
+	title = "btr_datapad_menu.03.name"
+	desc = "btr_datapad_menu.03.desc"
 	diplomatic = yes
 	custom_gui = "btr_datapad_menu_economy"
 	is_triggered_only = yes
 
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = btr_menu_page_economy
+				}
+			}
+			set_country_flag = btr_menu_page_economy
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_datapad_menu_main
+			}
+			remove_country_flag = btr_datapad_menu_main
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_empire_dossier
+			}
+			remove_country_flag = btr_menu_page_empire_dossier
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_relay_network
+			}
+			remove_country_flag = btr_menu_page_relay_network
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_warfare
+			}
+			remove_country_flag = btr_menu_page_warfare
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_planet_classes
+			}
+			remove_country_flag = btr_menu_page_planet_classes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_dev_news
+			}
+			remove_country_flag = btr_menu_page_dev_news
+		}
+	}
+
 	option = {
 		name = "btr_datapad_menu.01.confirm"
-		custom_gui = "btr_datapad_datapad_menu_confirm"
+		custom_gui = "btr_datapad_menu_confirm"
 		default_hide_option = yes
+	}
+
+	option = {
+		name = "btr_datapad_menu.01.main"
+		custom_gui = "btr_datapad_datapad_menu_main"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.01 }
+		}
 	}
 
 	option = {
 		name = "btr_datapad_menu.01.a"
 		custom_gui = "btr_datapad_empire_dossier_menu_button1"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.01 }
+			country_event = { id = btr_datapad_menu.02 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.b"
 		custom_gui = "btr_datapad_empire_dossier_menu_button2"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.02 }
+			country_event = { id = btr_datapad_menu.03 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.c"
 		custom_gui = "btr_datapad_empire_dossier_menu_button3"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.03 }
+			country_event = { id = btr_datapad_menu.04 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.d"
 		custom_gui = "btr_datapad_empire_dossier_menu_button4"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.04 }
+			country_event = { id = btr_datapad_menu.05 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.e"
 		custom_gui = "btr_datapad_empire_dossier_menu_button5"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.05 }
+			country_event = { id = btr_datapad_menu.06 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.f"
 		custom_gui = "btr_datapad_empire_dossier_menu_button6"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.06 }
+			country_event = { id = btr_datapad_menu.07 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.g"
+		custom_gui = "btr_prev"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = btr_datapad_menu_main }
+				remove_country_flag = btr_datapad_menu_main
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.07 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_00
+				country_event = { id =  btr_datapad_menu.01 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_economy }
+				remove_country_flag = btr_menu_page_economy
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.02 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_relay_network }
+				remove_country_flag = btr_menu_page_relay_network
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.03 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
+				set_country_flag = btr_menu_page_relay_network
+				country_event = { id =  btr_datapad_menu.04 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.05 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.06 }
+			}
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.h"
+		custom_gui = "btr_next"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = btr_datapad_menu_main }
+				remove_country_flag = btr_datapad_menu_main
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.02 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.03 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_economy }
+				remove_country_flag = btr_menu_page_economy
+				set_country_flag = btr_menu_page_relay_network
+				country_event = { id =  btr_datapad_menu.04 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_relay_network }
+				remove_country_flag = btr_menu_page_relay_network
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.05 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.06 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.07 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_00
+				country_event = { id =  btr_datapad_menu.01 }
+			}
 		}
 	}
 }
 
 #BTR Datapad - Relay Network
 country_event = {
-	id = btr_datapad_menu.03
-	title = "btr_datapad_menu.03.name"
-	desc = "btr_datapad_menu.03.desc"
+	id = btr_datapad_menu.04
+	title = "btr_datapad_menu.04.name"
+	desc = "btr_datapad_menu.04.desc"
 	diplomatic = yes
 	custom_gui = "btr_datapad_menu_relay_network"
 	is_triggered_only = yes
 
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = btr_menu_page_relay_network
+				}
+			}
+			set_country_flag = btr_menu_page_relay_network
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_datapad_menu_main
+			}
+			remove_country_flag = btr_datapad_menu_main
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_empire_dossier
+			}
+			remove_country_flag = btr_menu_page_empire_dossier
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_economy
+			}
+			remove_country_flag = btr_menu_page_economy
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_warfare
+			}
+			remove_country_flag = btr_menu_page_warfare
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_planet_classes
+			}
+			remove_country_flag = btr_menu_page_planet_classes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_dev_news
+			}
+			remove_country_flag = btr_menu_page_dev_news
+		}
+	}
+
 	option = {
 		name = "btr_datapad_menu.01.confirm"
-		custom_gui = "btr_datapad_datapad_menu_confirm"
+		custom_gui = "btr_datapad_menu_confirm"
 		default_hide_option = yes
+	}
+
+	option = {
+		name = "btr_datapad_menu.01.main"
+		custom_gui = "btr_datapad_datapad_menu_main"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.01 }
+		}
 	}
 
 	option = {
 		name = "btr_datapad_menu.01.a"
 		custom_gui = "btr_datapad_empire_dossier_menu_button1"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.01 }
+			country_event = { id = btr_datapad_menu.02 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.b"
 		custom_gui = "btr_datapad_empire_dossier_menu_button2"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.02 }
+			country_event = { id = btr_datapad_menu.03 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.c"
 		custom_gui = "btr_datapad_empire_dossier_menu_button3"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.03 }
+			country_event = { id = btr_datapad_menu.04 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.d"
 		custom_gui = "btr_datapad_empire_dossier_menu_button4"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.04 }
+			country_event = { id = btr_datapad_menu.05 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.e"
 		custom_gui = "btr_datapad_empire_dossier_menu_button5"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.05 }
+			country_event = { id = btr_datapad_menu.06 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.f"
 		custom_gui = "btr_datapad_empire_dossier_menu_button6"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.06 }
+			country_event = { id = btr_datapad_menu.07 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.g"
+		custom_gui = "btr_prev"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = btr_datapad_menu_main }
+				remove_country_flag = btr_datapad_menu_main
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.07 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_00
+				country_event = { id =  btr_datapad_menu.01 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_economy }
+				remove_country_flag = btr_menu_page_economy
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.02 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_relay_network }
+				remove_country_flag = btr_menu_page_relay_network
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.03 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
+				set_country_flag = btr_menu_page_relay_network
+				country_event = { id =  btr_datapad_menu.04 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.05 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.06 }
+			}
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.h"
+		custom_gui = "btr_next"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = btr_datapad_menu_main }
+				remove_country_flag = btr_datapad_menu_main
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.02 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.03 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_economy }
+				remove_country_flag = btr_menu_page_economy
+				set_country_flag = btr_menu_page_relay_network
+				country_event = { id =  btr_datapad_menu.04 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_relay_network }
+				remove_country_flag = btr_menu_page_relay_network
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.05 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.06 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.07 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_00
+				country_event = { id =  btr_datapad_menu.01 }
+			}
 		}
 	}
 }
 
 #BTR Datapad - Warfare
 country_event = {
-	id = btr_datapad_menu.04
-	title = "btr_datapad_menu.04.name"
-	desc = "btr_datapad_menu.04.desc"
+	id = btr_datapad_menu.05
+	title = "btr_datapad_menu.05.name"
+	desc = "btr_datapad_menu.05.desc"
 	diplomatic = yes
 	custom_gui = "btr_datapad_menu_warfare"
 	is_triggered_only = yes
 
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = btr_menu_page_warfare
+				}
+			}
+			set_country_flag = btr_menu_page_warfare
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_datapad_menu_main
+			}
+			remove_country_flag = btr_datapad_menu_main
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_empire_dossier
+			}
+			remove_country_flag = btr_menu_page_empire_dossier
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_economy
+			}
+			remove_country_flag = btr_menu_page_economy
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_relay_network
+			}
+			remove_country_flag = btr_menu_page_relay_network
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_planet_classes
+			}
+			remove_country_flag = btr_menu_page_planet_classes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_dev_news
+			}
+			remove_country_flag = btr_menu_page_dev_news
+		}
+	}
+
 	option = {
 		name = "btr_datapad_menu.01.confirm"
-		custom_gui = "btr_datapad_datapad_menu_confirm"
+		custom_gui = "btr_datapad_menu_confirm"
 		default_hide_option = yes
+	}
+
+	option = {
+		name = "btr_datapad_menu.01.main"
+		custom_gui = "btr_datapad_datapad_menu_main"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.01 }
+		}
 	}
 
 	option = {
 		name = "btr_datapad_menu.01.a"
 		custom_gui = "btr_datapad_empire_dossier_menu_button1"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.01 }
+			country_event = { id = btr_datapad_menu.02 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.b"
 		custom_gui = "btr_datapad_empire_dossier_menu_button2"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.02 }
+			country_event = { id = btr_datapad_menu.03 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.c"
 		custom_gui = "btr_datapad_empire_dossier_menu_button3"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.03 }
+			country_event = { id = btr_datapad_menu.04 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.d"
 		custom_gui = "btr_datapad_empire_dossier_menu_button4"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.04 }
+			country_event = { id = btr_datapad_menu.05 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.e"
 		custom_gui = "btr_datapad_empire_dossier_menu_button5"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.05 }
+			country_event = { id = btr_datapad_menu.06 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.f"
 		custom_gui = "btr_datapad_empire_dossier_menu_button6"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.06 }
+			country_event = { id = btr_datapad_menu.07 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.g"
+		custom_gui = "btr_prev"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = btr_datapad_menu_main }
+				remove_country_flag = btr_datapad_menu_main
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.07 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_00
+				country_event = { id =  btr_datapad_menu.01 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_economy }
+				remove_country_flag = btr_menu_page_economy
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.02 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_relay_network }
+				remove_country_flag = btr_menu_page_relay_network
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.03 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
+				set_country_flag = btr_menu_page_relay_network
+				country_event = { id =  btr_datapad_menu.04 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.05 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.06 }
+			}
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.h"
+		custom_gui = "btr_next"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = btr_datapad_menu_main }
+				remove_country_flag = btr_datapad_menu_main
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.02 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.03 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_economy }
+				remove_country_flag = btr_menu_page_economy
+				set_country_flag = btr_menu_page_relay_network
+				country_event = { id =  btr_datapad_menu.04 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_relay_network }
+				remove_country_flag = btr_menu_page_relay_network
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.05 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.06 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.07 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_00
+				country_event = { id =  btr_datapad_menu.01 }
+			}
 		}
 	}
 }
 
 #BTR Datapad - Planet Classes
 country_event = {
-	id = btr_datapad_menu.05
-	title = "btr_datapad_menu.05.name"
-	desc = "btr_datapad_menu.05.desc"
+	id = btr_datapad_menu.06
+	title = "btr_datapad_menu.06.name"
+	desc = "btr_datapad_menu.06.desc"
 	diplomatic = yes
 	custom_gui = "btr_datapad_menu_planet_classes"
 	is_triggered_only = yes
 
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = btr_menu_page_planet_classes
+				}
+			}
+			set_country_flag = btr_menu_page_planet_classes
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_datapad_menu_main
+			}
+			remove_country_flag = btr_datapad_menu_main
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_empire_dossier
+			}
+			remove_country_flag = btr_menu_page_empire_dossier
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_economy
+			}
+			remove_country_flag = btr_menu_page_economy
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_relay_network
+			}
+			remove_country_flag = btr_menu_page_relay_network
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_warfare
+			}
+			remove_country_flag = btr_menu_page_warfare
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_dev_news
+			}
+			remove_country_flag = btr_menu_page_dev_news
+		}
+	}
+
 	option = {
 		name = "btr_datapad_menu.01.confirm"
-		custom_gui = "btr_datapad_datapad_menu_confirm"
+		custom_gui = "btr_datapad_menu_confirm"
 		default_hide_option = yes
+	}
+
+	option = {
+		name = "btr_datapad_menu.01.main"
+		custom_gui = "btr_datapad_datapad_menu_main"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.01 }
+		}
 	}
 
 	option = {
 		name = "btr_datapad_menu.01.a"
 		custom_gui = "btr_datapad_empire_dossier_menu_button1"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.01 }
+			country_event = { id = btr_datapad_menu.02 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.b"
 		custom_gui = "btr_datapad_empire_dossier_menu_button2"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.02 }
+			country_event = { id = btr_datapad_menu.03 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.c"
 		custom_gui = "btr_datapad_empire_dossier_menu_button3"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.03 }
+			country_event = { id = btr_datapad_menu.04 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.d"
 		custom_gui = "btr_datapad_empire_dossier_menu_button4"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.04 }
+			country_event = { id = btr_datapad_menu.05 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.e"
 		custom_gui = "btr_datapad_empire_dossier_menu_button5"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.05 }
+			country_event = { id = btr_datapad_menu.06 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.f"
 		custom_gui = "btr_datapad_empire_dossier_menu_button6"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.06 }
+			country_event = { id = btr_datapad_menu.07 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.g"
+		custom_gui = "btr_prev"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = btr_datapad_menu_main }
+				remove_country_flag = btr_datapad_menu_main
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.07 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_00
+				country_event = { id =  btr_datapad_menu.01 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_economy }
+				remove_country_flag = btr_menu_page_economy
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.02 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_relay_network }
+				remove_country_flag = btr_menu_page_relay_network
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.03 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
+				set_country_flag = btr_menu_page_relay_network
+				country_event = { id =  btr_datapad_menu.04 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.05 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.06 }
+			}
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.h"
+		custom_gui = "btr_next"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = btr_datapad_menu_main }
+				remove_country_flag = btr_datapad_menu_main
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.02 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.03 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_economy }
+				remove_country_flag = btr_menu_page_economy
+				set_country_flag = btr_menu_page_relay_network
+				country_event = { id =  btr_datapad_menu.04 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_relay_network }
+				remove_country_flag = btr_menu_page_relay_network
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.05 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.06 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.07 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_00
+				country_event = { id =  btr_datapad_menu.01 }
+			}
 		}
 	}
 }
 
 #BTR Datapad - Dev News
 country_event = {
-	id = btr_datapad_menu.06
-	title = "btr_datapad_menu.06.name"
-	desc = "btr_datapad_menu.06.desc"
+	id = btr_datapad_menu.07
+	title = "btr_datapad_menu.07.name"
+	desc = "btr_datapad_menu.07.desc"
 	diplomatic = yes
 	custom_gui = "btr_datapad_menu_dev_news"
 	is_triggered_only = yes
 
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = btr_menu_page_dev_news
+				}
+			}
+			set_country_flag = btr_menu_page_dev_news
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_datapad_menu_main
+			}
+			remove_country_flag = btr_datapad_menu_main
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_empire_dossier
+			}
+			remove_country_flag = btr_menu_page_empire_dossier
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_economy
+			}
+			remove_country_flag = btr_menu_page_economy
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_relay_network
+			}
+			remove_country_flag = btr_menu_page_relay_network
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_warfare
+			}
+			remove_country_flag = btr_menu_page_warfare
+		}
+		else_if = {
+			limit = {
+				has_country_flag = btr_menu_page_planet_classes
+			}
+			remove_country_flag = btr_menu_page_planet_classes
+		}
+	}
+
 	option = {
 		name = "btr_datapad_menu.01.confirm"
-		custom_gui = "btr_datapad_datapad_menu_confirm"
+		custom_gui = "btr_datapad_menu_confirm"
 		default_hide_option = yes
+	}
+
+	option = {
+		name = "btr_datapad_menu.01.main"
+		custom_gui = "btr_datapad_datapad_menu_main"
+		hidden_effect = {
+			country_event = { id = btr_datapad_menu.01 }
+		}
 	}
 
 	option = {
 		name = "btr_datapad_menu.01.a"
 		custom_gui = "btr_datapad_empire_dossier_menu_button1"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.01 }
+			country_event = { id = btr_datapad_menu.02 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.b"
 		custom_gui = "btr_datapad_empire_dossier_menu_button2"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.02 }
+			country_event = { id = btr_datapad_menu.03 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.c"
 		custom_gui = "btr_datapad_empire_dossier_menu_button3"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.03 }
+			country_event = { id = btr_datapad_menu.04 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.d"
 		custom_gui = "btr_datapad_empire_dossier_menu_button4"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.04 }
+			country_event = { id = btr_datapad_menu.05 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.e"
 		custom_gui = "btr_datapad_empire_dossier_menu_button5"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.05 }
+			country_event = { id = btr_datapad_menu.06 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.01.f"
 		custom_gui = "btr_datapad_empire_dossier_menu_button6"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.06 }
+			country_event = { id = btr_datapad_menu.07 }
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.g"
+		custom_gui = "btr_prev"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = btr_datapad_menu_main }
+				remove_country_flag = btr_datapad_menu_main
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.07 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_00
+				country_event = { id =  btr_datapad_menu.01 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_economy }
+				remove_country_flag = btr_menu_page_economy
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.02 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_relay_network }
+				remove_country_flag = btr_menu_page_relay_network
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.03 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
+				set_country_flag = btr_menu_page_relay_network
+				country_event = { id =  btr_datapad_menu.04 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.05 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.06 }
+			}
+		}
+	}
+	option = {
+		name = "btr_datapad_menu.01.h"
+		custom_gui = "btr_next"
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = btr_datapad_menu_main }
+				remove_country_flag = btr_datapad_menu_main
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.02 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_economy
+				country_event = { id =  btr_datapad_menu.03 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_economy }
+				remove_country_flag = btr_menu_page_economy
+				set_country_flag = btr_menu_page_relay_network
+				country_event = { id =  btr_datapad_menu.04 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_relay_network }
+				remove_country_flag = btr_menu_page_relay_network
+				set_country_flag = btr_menu_page_warfare
+				country_event = { id =  btr_datapad_menu.05 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.06 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.07 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_00
+				country_event = { id =  btr_datapad_menu.01 }
+			}
 		}
 	}
 }

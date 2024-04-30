@@ -7,6 +7,28 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_btr_datapad_icon"
+		texturefile = "gfx/interface/icons/btr_datapad_icon.dds"
+		#borderSize = { x=9 y=9 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/btr_empty_button_animated_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_142_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 40.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=11 y=11 }
+	}
+
+	SpriteType = {
 		name = "GFX_btr_datapad_empire_dossier_bg"
 		texturefile = "gfx/interface/tiles/btr_datapad_empire_dossier_bg.dds"
 		#borderSize = { x=9 y=9 }

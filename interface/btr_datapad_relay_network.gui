@@ -1,6 +1,6 @@
 guiTypes = {
 	containerWindowType = {
-		name = "btr_datapad_empire_dossier_menu_confirm"
+		name = "btr_datapad_menu_confirm"
 		position = { x = 0 y = 0 }
 		size = { width = 35 height = 35 }
 		moveable = no
@@ -8,7 +8,23 @@ guiTypes = {
 		buttonType = {
 			name = "option_button"
 			quadTextureSprite = "GFX_btr_datapad_confirm_button"
-			position = { x = -930 y = 245 }
+			position = { x = -848 y = 250 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+			scale = 0.5
+		}
+	}
+	containerWindowType = {
+		name = "btr_datapad_datapad_menu_main"
+		position = { x = 0 y = 0 }
+		size = { width = 35 height = 35 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_btr_datapad_main_page_button"
+			position = { x = -1011 y = 215}
 			font = "cg_16b"
 			text = ""
 			orientation = upper_left
@@ -24,7 +40,7 @@ guiTypes = {
 		buttonType = {
 			name = "option_button"
 			quadTextureSprite = "GFX_btr_datapad_empire_dossier_button"
-			position = { x = -1292 y = 240 }
+			position = { x = -1290 y = 215 }
 			font = "cg_16b"
 			text = ""
 			orientation = upper_left
@@ -40,7 +56,7 @@ guiTypes = {
 		buttonType = {
 			name = "option_button"
 			quadTextureSprite = "GFX_btr_datapad_economy_button"
-			position = { x = -1146 y = 210 }
+			position = { x = -1144 y = 185 }
 			font = "cg_16b"
 			text = ""
 			orientation = upper_left
@@ -56,7 +72,7 @@ guiTypes = {
 		buttonType = {
 			name = "option_button"
 			quadTextureSprite = "GFX_btr_datapad_relay_network_button"
-			position = { x = -999 y = 180 }
+			position = { x = -996 y = 155 }
 			font = "cg_16b"
 			text = ""
 			orientation = upper_left
@@ -72,7 +88,7 @@ guiTypes = {
 		buttonType = {
 			name = "option_button"
 			quadTextureSprite = "GFX_btr_datapad_warfare_button"
-			position = { x = -852 y = 150 }
+			position = { x = -847 y = 125 }
 			font = "cg_16b"
 			text = ""
 			orientation = upper_left
@@ -88,7 +104,7 @@ guiTypes = {
 		buttonType = {
 			name = "option_button"
 			quadTextureSprite = "GFX_btr_datapad_planet_classes_button"
-			position = { x = -705 y = 120 }
+			position = { x = -700 y = 95 }
 			font = "cg_16b"
 			text = ""
 			orientation = upper_left
@@ -104,11 +120,43 @@ guiTypes = {
 		buttonType = {
 			name = "option_button"
 			quadTextureSprite = "GFX_btr_datapad_dev_news_button"
-			position = { x = -558 y = 90 }
+			position = { x = -555 y = 65 }
 			font = "cg_16b"
 			text = ""
 			orientation = upper_left
 			scale = 0.45
+		}
+	}
+	containerWindowType = {
+		name = "btr_prev"
+		position = { x = 0 y = 0 }
+		size = { width = 32 height = 30 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_btn_prev"
+			position = { x = -1292 y = 8 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+			scale = 0.725
+		}
+	}
+	containerWindowType = {
+		name = "btr_next"
+		position = { x = 0 y = 0 }
+		size = { width = 32 height = 30 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_btn_next"
+			position = { x = -505 y = -23 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+			scale = 0.725
 		}
 	}
 
@@ -129,24 +177,6 @@ guiTypes = {
 			name = "btr_datapad_empire_dossier_bg"
 			spriteType = "GFX_btr_datapad_relay_network_bg"
 			alwaysTransparent = yes
-		}
-
-		effectButtonType = {
-			name = "btr_prev"
-			quadTextureSprite = "GFX_btn_prev"
-			position = { x = 6 y = 915 }
-			clicksound = interface
-			#effect = "btr_menu_prev"
-			scale = 0.75
-		}
-
-		effectButtonType = {
-			name = "btr_next"
-			quadTextureSprite = "GFX_btn_next"
-			position = { x = 784 y = 915 }
-			clicksound = interface
-			#effect = "btr_menu_next"
-			scale = 0.75
 		}
 
 		### EVENT DIPLO ###
