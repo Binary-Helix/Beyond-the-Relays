@@ -25,15 +25,19 @@ guiTypes = {
 		# BTR DATAPAD BUTTON
 		containerWindowType = {
 			name = "btr_datapad_button_window"
-			position = { x=-168 y=72 }
+			position = { x = -1050 y = 1378 }
 			orientation = upper_right
+			moveable = yes
 
 			effectButtonType = {
 				name = "btr_datapad_button"
 				spriteType = "GFX_btr_datapad_icon"
 				position = { x= 0 y = 0 }
 				effect = btr_datapad_button
-				multiline = yes
+				multiline = no
+				scale = 0.85
+				oversound = mouse_over
+				clicksound = interface
 			}
 		}
 

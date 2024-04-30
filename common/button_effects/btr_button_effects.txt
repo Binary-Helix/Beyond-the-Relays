@@ -3,8 +3,11 @@ btr_datapad_button = {
 	potential = { exists = from }
 	allow = { always = yes }
 	effect = {
-		country_event = {
-			id = btr_datapad_menu.01
+		hidden_effect = {
+			country_event = {
+				id = btr_datapad_menu.01
+			}
 		}
+		custom_tooltip = "btr_datapad_tooltip"
 	}
 }
