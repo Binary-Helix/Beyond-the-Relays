@@ -29,6 +29,13 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_btr_datapad_main_menu_bg"
+		texturefile = "gfx/interface/tiles/btr_datapad_main_menu_bg.dds"
+		#borderSize = { x=9 y=9 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	SpriteType = {
 		name = "GFX_btr_datapad_empire_dossier_bg"
 		texturefile = "gfx/interface/tiles/btr_datapad_empire_dossier_bg.dds"
 		#borderSize = { x=9 y=9 }
@@ -102,4 +109,5 @@ spriteTypes = {
 			animationframes = { 1 }
 		}
 	}
+
 }
