@@ -1,0 +1,98 @@
+
+eezo_expenditure_ship_components = {
+	resource = eezo
+	type = expenditure
+	category = ship_components
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.6
+
+		# spend more alloys building ships while at war
+		modifier = {
+			factor = 2
+			OR = {
+				recently_lost_war = yes
+				is_at_war = yes
+			}
+		}
+
+		# If we want to colonize and are at peace then prio that
+		modifier = {
+			factor = 0.25
+			AND = {
+				ai_colonize_plans > 0
+				is_at_war = no
+			}
+		}
+
+		# spend less alloys on ships if over capacity
+		modifier = {
+			factor = 0.5
+			used_naval_capacity_percent >= 1.0
+		}
+
+		modifier = {
+			factor = 5
+			used_naval_capacity_percent < 1.0
+			OR = {
+				any_neighbor_country = {
+					has_ascension_perk = ap_become_the_crisis
+				}
+				any_country = {
+					is_crisis_faction = yes
+				}
+			}
+		}
+	}
+}
+
+eezo_expenditure_planets = {
+	resource = eezo
+	type = expenditure
+	category = planets
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.1
+	}
+
+	desired_max = {
+		base = 1000
+	}
+}
+
+
+############
+## Upkeep ##
+############
+
+eezo_upkeep_ships = {
+	resource = eezo
+	type = upkeep
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.5
+		modifier = {
+			factor = 1.5
+			OR = {
+				is_at_war = yes
+				resource_income_compare = {
+					resource = eezo
+					value > 500
+				}
+			}
+		}
+	}
+}
