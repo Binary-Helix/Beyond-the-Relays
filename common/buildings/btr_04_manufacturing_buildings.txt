@@ -10,7 +10,6 @@ building_foundry_1 = {
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 		}
 		NOT = { has_planet_flag = planetary_station }
 		OR = {
@@ -25,7 +24,6 @@ building_foundry_1 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 			AND = {
 				exists = owner
 				owner = {
@@ -76,7 +74,6 @@ building_foundry_2 = {
 			NOT = { exists = owner }
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 			AND = {
 				exists = owner
 				owner = {
@@ -154,7 +151,6 @@ building_foundry_3 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 			AND = {
 				exists = owner
 				owner = {
@@ -297,7 +293,6 @@ building_factory_1 = {
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 		}
 		NOT = { has_planet_flag = planetary_station }
 		OR = {
@@ -317,7 +312,6 @@ building_factory_1 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 
 			AND = {
 				exists = owner
@@ -388,7 +382,6 @@ building_factory_2 = {
 		NOT = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 		}
 		NOT = { has_planet_flag = planetary_station }
 	}
@@ -397,7 +390,6 @@ building_factory_2 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 			AND = {
 				exists = owner
 				OR = {
@@ -464,7 +456,6 @@ building_factory_3 = {
 		NOT = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 		}
 		NOT = { has_planet_flag = planetary_station }
 	}
@@ -473,7 +464,6 @@ building_factory_3 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 
 			AND = {
 				exists = owner
@@ -592,7 +582,6 @@ building_refinery = {
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 		}
 		NOT = { has_planet_flag = planetary_station }   
 	}
@@ -629,7 +618,6 @@ building_chemical_plant = {
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 		}
 		NOT = { has_planet_flag = planetary_station }   
 	}
@@ -666,7 +654,6 @@ building_crystal_plant = {
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 		}
 		NOT = { has_planet_flag = planetary_station }  
 	}
@@ -703,17 +690,6 @@ building_nanite_transmuter = {
 	category = manufacturing
 
 	potential = {
-		NOR = {
-			galaxy_size = btr_sandbox_600
-			galaxy_size = btr_sandbox_1300
-			galaxy_size = btr_sandbox_1500
-#			#galaxy_size = btr_hybrid_600
-#			#galaxy_size = btr_hybrid_1300
-#			#galaxy_size = btr_hybrid_1500
-			galaxy_size = btr_canon_600
-			galaxy_size = btr_canon_1300
-			galaxy_size = btr_canon_1500
-		}
 		exists = owner
 		OWNER = {
 			OR = {
@@ -733,7 +709,6 @@ building_nanite_transmuter = {
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 		}
 		NOT = { has_planet_flag = planetary_station }
 	}
@@ -889,7 +864,6 @@ building_production_center = {
 			owner = { is_ai = no }
 			has_any_industry_district = yes
 		}
-		NOT = { has_modifier = crucible_colony }
 		NOT = { has_planet_flag = planetary_station }
 	}
 
@@ -901,7 +875,6 @@ building_production_center = {
 				owner = { is_ai = yes }
 				has_any_industry_district = no
 			}
-			has_modifier = crucible_colony
 		}
 	}
 
@@ -1368,7 +1341,6 @@ building_archaeo_refinery = {
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 		}
 		owner = { has_technology = tech_archaeo_refinery }
 	}

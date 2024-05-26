@@ -68,7 +68,6 @@ building_food_processing_facility = {
 		NOR = {
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 		}
 
 		OR = {
@@ -89,7 +88,6 @@ building_food_processing_facility = {
 			}
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 			AND = {
 				owner = {
 					is_ai = yes
@@ -157,7 +155,6 @@ building_food_processing_center = {
 			}
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 		}
 	}
 
@@ -226,7 +223,6 @@ building_baol_organic_plant = {
 		NOR = {
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 		}
 	}
 
@@ -239,7 +235,6 @@ building_baol_organic_plant = {
 			}
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 		}
 	}
 
@@ -326,7 +321,6 @@ building_mineral_purification_plant = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 			AND = {
 				exists = owner
 				owner = {
@@ -340,7 +334,6 @@ building_mineral_purification_plant = {
 	potential = {
 		NOR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 		}
 
 		NOT = { has_planet_flag = planetary_station }
@@ -442,16 +435,14 @@ building_mineral_purification_hub = {
 
 	allow = {
 		has_upgraded_capital = yes
-		NOR = {
+		NOT = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 		}
 	}
 
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 			AND = {
 				exists = owner
 				owner = {
@@ -571,7 +562,6 @@ building_energy_grid = {
 		OR = {
 			OR = {
 				has_modifier = resort_colony
-				has_modifier = crucible_colony
 			}
 			AND = {
 				exists = owner
@@ -586,7 +576,6 @@ building_energy_grid = {
 	potential = {
 		NOR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 		}
 		NOT = { has_planet_flag = planetary_station }
 		OR = {
@@ -677,7 +666,6 @@ building_energy_nexus = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 			AND = {
 				exists = owner
 				owner = {
@@ -733,7 +721,6 @@ building_energy_nexus = {
 			minerals = @btr_civil_b2_mineral_cost
 			light_metals = @btr_civil_b2_light_metals_cost
 			heavy_metals = @btr_civil_b2_heavy_metals_cost
-			antimatter_fuel = 25
 		}
 		cost = {
 			trigger = {
@@ -742,21 +729,18 @@ building_energy_nexus = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_metals = @btr_civil_b1_light_metals_cost
 			heavy_metals = @btr_civil_b1_heavy_metals_cost
-			antimatter_fuel = 100
 		}
 		upkeep = {
 			trigger = {
 				has_ringworld_output_boost = no
 			}
 			energy = @btr_civil_b2_energy_upkeep
-			antimatter_fuel = 0.5
 		}
 		upkeep = {
 			trigger = {
 				has_ringworld_output_boost = yes
 			}
 			energy = @btr_civil_b2_energy_upkeep
-			antimatter_fuel = 1.5
 		}
 	}
 
@@ -774,7 +758,6 @@ building_resource_silo = {
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
 		}
 		NOT = { has_planet_flag = planetary_station }
 	}
@@ -911,5 +894,74 @@ building_bio_reactor = {
 
 	prerequisites = {
 		"tech_bio_reactor"
+	}
+}
+
+building_bio_reactor_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = resource
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	potential = {
+		exists = owner
+		NOR = {
+			is_planet_class = pc_machine
+			has_modifier = resort_colony
+		}
+
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			has_any_farming_district_or_buildings = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			is_planet_class = pc_machine
+			has_modifier = resort_colony
+			AND = {
+				owner = {
+					is_ai = yes
+				}
+				has_any_farming_district_or_buildings = no
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			food = @b2_upkeep
+		}
+	}
+
+	inline_script = {
+		script = jobs/farmers_add
+		FARMER_AMOUNT = 2
+		ANGLER_AMOUNT = 2
+	}
+
+	planet_modifier = {
+		planet_farmers_food_produces_add = -3
+		planet_farmers_energy_produces_add = 2
+		planet_farmers_exotic_gases_produces_add = 0.1
+	}
+
+	prerequisites = {
+		tech_bio_reactor_2
 	}
 }

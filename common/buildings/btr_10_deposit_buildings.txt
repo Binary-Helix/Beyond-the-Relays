@@ -12,19 +12,7 @@ building_mote_harvesters = {
 
 	potential = {
 		NOR = {
-			galaxy_size = btr_sandbox_600
-			galaxy_size = btr_sandbox_1300
-			galaxy_size = btr_sandbox_1500
-#			#galaxy_size = btr_hybrid_600
-#			#galaxy_size = btr_hybrid_1300
-#			#galaxy_size = btr_hybrid_1500
-			galaxy_size = btr_canon_600
-			galaxy_size = btr_canon_1300
-			galaxy_size = btr_canon_1500
-		}
-		NOR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 		}
 	}
 
@@ -74,7 +62,6 @@ building_gas_extractors = {
 	potential = {
 		NOR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 		}
 	}
 
@@ -124,19 +111,7 @@ building_crystal_mines = {
 
 	potential = {
 		NOR = {
-			galaxy_size = btr_sandbox_600
-			galaxy_size = btr_sandbox_1300
-			galaxy_size = btr_sandbox_1500
-#			#galaxy_size = btr_hybrid_600
-#			#galaxy_size = btr_hybrid_1300
-#			#galaxy_size = btr_hybrid_1500
-			galaxy_size = btr_canon_600
-			galaxy_size = btr_canon_1300
-			galaxy_size = btr_canon_1500
-		}
-		NOR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 		}
 	}
 
@@ -186,19 +161,7 @@ building_betharian_power_plant = {
 
 	potential = {
 		NOR = {
-			galaxy_size = btr_sandbox_600
-			galaxy_size = btr_sandbox_1300
-			galaxy_size = btr_sandbox_1500
-#			#galaxy_size = btr_hybrid_600
-#			#galaxy_size = btr_hybrid_1300
-#			#galaxy_size = btr_hybrid_1500
-			galaxy_size = btr_canon_600
-			galaxy_size = btr_canon_1300
-			galaxy_size = btr_canon_1500
-		}
-		NOR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
 		}
 	}
 
@@ -236,6 +199,7 @@ building_xeno_zoo = {
 		exists = owner
 		owner = {
 			is_regular_empire = yes
+			is_guided_sapience_empire = no
 		}
 		planet = {
 			OR = {
