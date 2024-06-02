@@ -5,16 +5,139 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08664527-6757-472e-b0f6-9970e531260c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/common/static_modifiers/btr_empire_modifiers.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/technology/btr_empire_technologies.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/traits/btr_species_traits.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/aralakh_kah_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/asari_rep_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/caleston_dir_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/cerberus_emp_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/citadel_council_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/collectors_emp_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/courts_dek_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/disciples_naz_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/geth_con_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/gothones_rem_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/hegemony_kha_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/illium_cor_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/illuminated_pri_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/lystheni_ord_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/migrant_fle_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/omega_emp_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/parnack_reg_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/rachni_hiv_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/raloi_rep_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/remnants_rak_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/salarian_uni_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/sedriicae_col_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/systems_all_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/turian_hier_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/vol_pro_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/vorcha_cla_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/asari_trait_biotic.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/asari_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/asari_trait_smooth_talk.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/asari_trait_sophisticated.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/batarian_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/batarian_trait_enduring_physique.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/batarian_trait_four_eyed.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/batarian_trait_shrewd_business.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/collector_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/collector_trait_drones.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/collector_trait_instruments.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/collector_trait_lovecraftian.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/drell_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/drell_trait_eidetic_memory.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/drell_trait_hardened_survivors.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/drell_trait_nomadic_warriors.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/elcor_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/elcor_trait_ecologists.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/elcor_trait_gesture_based_speech.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/elcor_trait_homebound.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/forayan_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/forayan_trait_forayan_happiness.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/forayan_trait_gender_castes.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/forayan_trait_insectoids.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/geth_consequentialist_philosophy.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/geth_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/geth_trait_deontological_primacy.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/geth_trait_linked_consciousness.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/geth_trait_purpose_built_models.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/gothones_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/gothones_trait_eco_reverence.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/gothones_trait_survivalists.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/gothones_trait_trials_of_vindicta.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/hanar_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/hanar_trait_non_bipedal.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/hanar_trait_toxic_secretions.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/hanar_trait_water_bound.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/human_trait_biodiversity.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/human_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/human_trait_frontier_spirit.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/human_trait_rugged_individualism.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/krogan_trait_biological_redundancy.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/krogan_trait_blood_rage.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/krogan_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/krogan_trait_genophage.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/lystheni_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/lystheni_trait_divine_duty.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/lystheni_trait_law_of_one.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/lystheni_trait_unimpeded_minds.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/quarian_suit_entombment.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/quarian_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/quarian_trait_quarian_traditionalism.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/quarian_trait_social_precedent.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/rachni_trait_collective_engineering.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/rachni_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/rachni_trait_hardened_biology.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/rachni_trait_wrath_of_the_swarm.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/raloi_trait_avians.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/raloi_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/raloi_trait_galactic_newcomers.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/raloi_trait_weak_immune.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/salarian_trait_bleed_edge.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/salarian_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/salarian_trait_impressive_minds.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/salarian_trait_societal_trade.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_pc_ammonia_preference.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_pc_chlorine_preference.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_pc_mephitic_preference.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_pc_methane_preference.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_pc_primal_preference.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_pc_swamp_preference.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_pc_tidal_aquatic_preference.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_pc_tidal_scorched_preference.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/trait_pc_tidal_temperate_preference.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/turian_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/turian_trait_martial_nature.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/turian_trait_op_discipline.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/turian_trait_team_player.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/volus_trait_clan_based.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/volus_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/volus_trait_economic_mindset.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/volus_trait_yoqtan_survivor.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/vorcha_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/vorcha_trait_philistine_horde.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/vorcha_trait_spontaneous_conception.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/vorcha_trait_surreal_adaptation.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/yahg_trait_apex_predators.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/yahg_trait_control_obsessed.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/yahg_trait_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/traits/yahg_trait_truthsayers.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/btr_empire_modifiers_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/btr_empire_technologies_l_english.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/buildings/btr_01_pop_assembly_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/btr_01_pop_assembly_buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/buildings/btr_03_resource_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/btr_03_resource_buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/buildings/btr_04_manufacturing_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/btr_04_manufacturing_buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/buildings/btr_05_research_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/btr_05_research_buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/buildings/btr_08_unity_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/btr_08_unity_buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/buildings/btr_09_army_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/btr_09_army_buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/buildings/btr_10_deposit_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/btr_10_deposit_buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/buildings/btr_13_fallen_empire_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/btr_13_fallen_empire_buildings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/events/btr_datapad_test_menu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/btr_datapad_test_menu.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/ai_budget/btr_light_metals_budget.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/ai_budget/btr_light_metals_budget.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/governments/civics/btr_empire_civics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/governments/civics/btr_empire_civics.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/governments/civics/btr_origins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/governments/civics/btr_empire_origins.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/personalities/btr_personalities.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/personalities/btr_personalities.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pop_jobs/btr_01_ruler_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/pop_jobs/btr_01_ruler_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pop_jobs/btr_02_specialist_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/pop_jobs/btr_02_specialist_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pop_jobs/btr_03_worker_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/pop_jobs/btr_03_worker_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pop_jobs/btr_08_overlord_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/pop_jobs/btr_08_overlord_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/strategic_resources/00_strategic_resources.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/strategic_resources/00_strategic_resources.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gfx/models/ships/other/_other_entities.asset" beforeDir="false" afterPath="$PROJECT_DIR$/gfx/models/ships/other/_other_entities.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/btr_origin_event_pictures.gfx" beforeDir="false" afterPath="$PROJECT_DIR$/interface/btr_origin_event_pictures.gfx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +146,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -37,29 +163,29 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Repositories/btr_skunkworks/common/ai_budget&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2954023&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/Repositories/btr_skunkworks/gfx/interface/icons/traits",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2954023",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "pls"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Repositories\btr_skunkworks\common\ai_budget" />
-      <recent name="E:\Repositories\btr_skunkworks\interface" />
-      <recent name="E:\Repositories\btr_skunkworks\common\governments\civics" />
-      <recent name="E:\Repositories\btr_skunkworks\common\scripted_variables" />
+      <recent name="E:\Repositories\btr_skunkworks\gfx\interface\icons\traits" />
       <recent name="E:\Repositories\btr_skunkworks\localisation\english" />
+      <recent name="E:\Repositories\btr_skunkworks\gfx\interface\icons\origins" />
+      <recent name="E:\Repositories\btr_skunkworks\common\technology" />
+      <recent name="E:\Repositories\btr_skunkworks\common\static_modifiers" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

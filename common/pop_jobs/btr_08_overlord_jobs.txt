@@ -1863,7 +1863,7 @@ overlord_knight = {
 	}
 
 	overlord_resources = {
-		category = knights_independent_category
+		category = planet_knights
 		produces = {
 			unity = 3
 			mult = value:knights_unity_output_modifier
@@ -1877,7 +1877,7 @@ overlord_knight = {
 	}
 
 	resources = {
-		category = knights_independent_category
+		category = planet_knights
 		upkeep = {
 			#alloys = 1
 			light_metals = 0.7
@@ -1890,12 +1890,12 @@ overlord_knight = {
 			always = yes
 		}
 		pop_defense_armies_add = 2
-		mult = value:scripted_modifier_mult|MODIFIER|knights_independent_category_produces_mult|
+		mult = value:scripted_modifier_mult|MODIFIER|planet_knights_produces_mult|
 	}
 
 	triggered_planet_modifier = {
 		planet_stability_add = 3
-		mult = value:scripted_modifier_mult|MODIFIER|knights_independent_category_produces_mult|
+		mult = value:scripted_modifier_mult|MODIFIER|planet_knights_produces_mult|
 	}
 
 	triggered_country_modifier = {
@@ -1948,7 +1948,7 @@ overlord_knight_drone = {
 	}
 
 	overlord_resources = {
-		category = knights_independent_category
+		category = planet_knights
 		produces = {
 			unity = 3
 			mult = value:knights_unity_output_modifier
@@ -1962,7 +1962,7 @@ overlord_knight_drone = {
 	}
 
 	resources = {
-		category = knights_independent_category
+		category = planet_knights
 		upkeep = {
 			#alloys = 1
 			light_metals = 0.7
@@ -1975,12 +1975,12 @@ overlord_knight_drone = {
 			always = yes
 		}
 		pop_defense_armies_add = 2
-		mult = value:scripted_modifier_mult|MODIFIER|knights_independent_category_produces_mult|
+		mult = value:scripted_modifier_mult|MODIFIER|planet_knights_produces_mult|
 	}
 
 	triggered_planet_modifier = {
 		planet_stability_add = 3
-		mult = value:scripted_modifier_mult|MODIFIER|knights_independent_category_produces_mult|
+		mult = value:scripted_modifier_mult|MODIFIER|planet_knights_produces_mult|
 	}
 
 	triggered_country_modifier = {

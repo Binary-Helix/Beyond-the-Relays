@@ -82,22 +82,22 @@ salarian_union = {
 		uplifter = yes
 		purger = no
 		displacer = no
-		infiltrator = yes 
+		infiltrator = yes
 		dominator = no
 		robot_exploiter = yes
 		robot_liberator = no
 		propagator = no
-		multispecies = yes 
+		multispecies = yes
 		crisis_fighter = yes
 	}
-	
+
 	allow = {
 		has_origin = salarian_uni_origin
 	}
 
 	weight_modifier = {
-		weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 turian_hierarchy = {
@@ -149,8 +149,8 @@ turian_hierarchy = {
 	}
 
 	weight_modifier = {
-			weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 systems_alliance = {
@@ -188,20 +188,20 @@ systems_alliance = {
 		uplifter = no
 		purger = no
 		displacer = no
-		infiltrator = no 
+		infiltrator = no
 		dominator = no
 		robot_exploiter = yes
 		robot_liberator = no
 		propagator = yes
-		multispecies = yes 
+		multispecies = yes
 		crisis_fighter = yes
 	}
 
 	allow = {
 		has_origin = systems_all_origin
-	}	
+	}
 	weight_modifier = {
-		weight = 1000			
+		weight = 1000
 	}
 }
 
@@ -240,21 +240,21 @@ courts_of_dekuuna = {
 		uplifter = yes
 		purger = no
 		displacer = no
-		infiltrator = no 
+		infiltrator = no
 		dominator = no
 		robot_exploiter = yes
 		robot_liberator = no
 		propagator = no
-		multispecies = no 
+		multispecies = no
 		crisis_fighter = yes
 	}
 
 	allow = {
 		has_origin = courts_dek_origin
 	}
-	
+
 	weight_modifier = {
-		weight = 1000			
+		weight = 1000
 	}
 }
 
@@ -293,12 +293,12 @@ illuminated_primacy = {
 		uplifter = yes
 		purger = no
 		displacer = no
-		infiltrator = no 
+		infiltrator = no
 		dominator = no
 		robot_exploiter = yes
 		robot_liberator = no
 		propagator = no
-		multispecies = yes 
+		multispecies = yes
 		crisis_fighter = no
 	}
 
@@ -307,8 +307,8 @@ illuminated_primacy = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 vol_protectorate = {
@@ -360,8 +360,8 @@ vol_protectorate = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 hegemony_kharshan = {
@@ -399,12 +399,12 @@ hegemony_kharshan = {
 		uplifter = no
 		purger = yes
 		displacer = yes
-		infiltrator = no 
+		infiltrator = no
 		dominator = yes
 		robot_exploiter = yes
 		robot_liberator = no
 		propagator = yes
-		multispecies = no 
+		multispecies = no
 		crisis_fighter = yes
 	}
 
@@ -413,8 +413,8 @@ hegemony_kharshan = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 aralakh_kahmat = {
@@ -466,8 +466,8 @@ aralakh_kahmat = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 migrant_fleet_civilian = {
@@ -517,10 +517,10 @@ migrant_fleet_civilian = {
 	allow = {
 		has_origin = migrant_fle_origin
 	}
-	
+
 	weight_modifier = {
-		weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 migrant_fleet_militarized = {
@@ -571,17 +571,17 @@ migrant_fleet_militarized = {
 		has_origin = migrant_fle_origin
 		has_global_flag = migrant_fleet_mobilized
 	}
-	
+
 	weight_modifier = {
-		weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 cerberus = {
 	aggressiveness = 1.5
 	trade_willingness = 0.5
 	bravery = 1.0
-	combat_bravery = 0.6 
+	combat_bravery = 0.6
 
 	military_spending = 1.3
 	colony_spending = 0.6
@@ -611,7 +611,7 @@ cerberus = {
 		slaver = yes
 		uplifter = no
 		purger = yes
-		displacer = yes 
+		displacer = yes
 		infiltrator = yes
 		dominator = no
 		robot_exploiter = yes
@@ -626,8 +626,8 @@ cerberus = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 omega = {
@@ -662,7 +662,7 @@ omega = {
 		liberator = no
 		opportunist = no
 		slaver = yes
-		uplifter = no 
+		uplifter = no
 		purger = no
 		displacer = no
 		infiltrator = yes
@@ -679,8 +679,8 @@ omega = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 illium_corporate_interests = {
@@ -715,7 +715,7 @@ illium_corporate_interests = {
 		liberator = no
 		opportunist = yes
 		slaver = yes
-		uplifter = no 
+		uplifter = no
 		purger = no
 		displacer = no
 		infiltrator = yes
@@ -730,10 +730,10 @@ illium_corporate_interests = {
 	allow = {
 		has_origin = illium_cor_origin
 	}
-	
+
 	weight_modifier = {
-		weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 remnants_of_rakhana = {
@@ -768,7 +768,7 @@ remnants_of_rakhana = {
 		liberator = no
 		opportunist = yes
 		slaver = yes
-		uplifter = no 
+		uplifter = no
 		purger = no
 		displacer = yes
 		infiltrator = yes
@@ -782,11 +782,11 @@ remnants_of_rakhana = {
 
 	allow = {
 		has_origin = remnants_rak_origin
-	}	
+	}
 
 	weight_modifier = {
-		weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 vorcha_clandom = {
@@ -838,8 +838,8 @@ vorcha_clandom = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 sedriicae_collective = {
@@ -877,12 +877,12 @@ sedriicae_collective = {
 		uplifter = no
 		purger = no
 		displacer = no
-		infiltrator = no 
+		infiltrator = no
 		dominator = no
 		robot_exploiter = no
 		robot_liberator = no
 		propagator = yes
-		multispecies = no 
+		multispecies = no
 		crisis_fighter = yes
 	}
 
@@ -891,7 +891,7 @@ sedriicae_collective = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
+		weight = 1000
 	}
 }
 
@@ -935,7 +935,7 @@ lystheni_order = {
 		robot_exploiter = yes
 		robot_liberator = no
 		propagator = no
-		multispecies = no 
+		multispecies = no
 		crisis_fighter = yes
 	}
 
@@ -944,8 +944,8 @@ lystheni_order = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 gothones_remnant = {
@@ -988,7 +988,7 @@ gothones_remnant = {
 		robot_exploiter = no
 		robot_liberator = no
 		propagator = yes
-		multispecies = yes 
+		multispecies = yes
 		crisis_fighter = yes
 	}
 
@@ -997,8 +997,8 @@ gothones_remnant = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
-	}	
+		weight = 1000
+	}
 }
 
 parnack_regime = {
@@ -1048,10 +1048,10 @@ parnack_regime = {
 	allow = {
 		has_origin = parnack_reg_origin
 	}
-	
+
 	weight_modifier = {
-		weight = 1000			
- 	}	
+		weight = 1000
+	}
 }
 
 raloi_republic = {
@@ -1103,7 +1103,7 @@ raloi_republic = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
+		weight = 1000
 	}
 }
 
@@ -1156,8 +1156,8 @@ geth_consensus = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
- 	}	
+		weight = 1000
+	}
 }
 
 disciples_of_nazara = {
@@ -1209,8 +1209,8 @@ disciples_of_nazara = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
- 	}	
+		weight = 1000
+	}
 }
 
 rachni_hive = {
@@ -1248,12 +1248,12 @@ rachni_hive = {
 		uplifter = no
 		purger = yes
 		displacer = no
-		infiltrator = no 
+		infiltrator = no
 		dominator = yes
 		robot_exploiter = no
 		robot_liberator = no
 		propagator = no
-		multispecies = no 
+		multispecies = no
 		crisis_fighter = yes
 	}
 
@@ -1262,8 +1262,8 @@ rachni_hive = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
- 	}	
+		weight = 1000
+	}
 }
 
 collectors = {
@@ -1315,8 +1315,8 @@ collectors = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
- 	}	
+		weight = 1000
+	}
 }
 
 citadel_council = {
@@ -1368,14 +1368,6 @@ citadel_council = {
 	}
 
 	weight_modifier = {
-		weight = 1000			
- 	}	
+		weight = 1000
+	}
 }
-
-
- 
-
-
-
-
-
