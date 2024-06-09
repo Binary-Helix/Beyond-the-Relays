@@ -61,9 +61,12 @@ event = {
 					has_country_flag = human_lithoid
 					species_portrait = lith_human
 				}
-				NOT = {
+				NOR = {
 					any_country = {
 						has_country_flag = human_1
+					}
+					any_system = {
+						has_star_flag = sol
 					}
 				}
 				num_ai_empires_setting >= 1
@@ -266,8 +269,6 @@ event = {
 				limit = {
 					has_origin = origin_lost_colony
 					NOT = {has_country_flag = human_2 }
-					# no need to change the planet class of your planets if you're a machine
-					is_machine_empire = no
 				}
 				country_event = { id = origin.100 }
 			}
@@ -306,7 +307,12 @@ event = {
 
 		# Ocean Paradise
 		every_playable_country = {
-			limit = { has_origin = origin_ocean_paradise }
+			limit = {
+				OR  = {
+					has_origin = origin_ocean_paradise
+					has_origin = origin_ocean_machines
+				}
+			}
 			country_event = { id = aquatics.1000 }
 		}
 
@@ -401,14 +407,104 @@ event = {
 			country_event = { id = paragon.5000 }
 		}
 
-		# Eagar Explorers
+		# Eager Explorers
 		every_playable_country = {
 			limit = {
 				is_eager_explorer_empire = yes
 			}
-			give_technology = { message = no tech = tech_subspace_drive }
+			give_technology = {
+				message = no
+				tech = tech_subspace_drive
+			}
 			low_tech_start_add_research_options_effect = yes
 			add_research_option = tech_hyper_drive_1
+		}
+
+		# Cybernetic Creed
+		every_playable_country = {
+			limit = {
+				has_origin = origin_cybernetic_creed
+			}
+			add_research_option = tech_integrated_cybernetics
+			every_owned_leader = {
+				limit = {
+					is_ruler = yes
+					NOT = { has_trait = leader_trait_cyborg	}
+				}
+				add_trait = leader_trait_ritualistic_implants_cyborg
+			}
+		}
+
+		# Synthetic Fertility
+		every_playable_country = {
+			limit = {
+				has_origin = origin_synthetic_fertility
+			}
+			country_event = { id = machine_age.3100 }
+		}
+
+		# Arc Welders
+		every_playable_country = {
+			limit = {
+				has_origin = origin_arc_welders
+			}
+			arc_welders_start_effect = yes
+		}
+
+		# Astro-Mining Drones
+		every_playable_country = {
+			limit = {
+				has_valid_civic = civic_machine_astromining_drones
+			}
+			random_owned_starbase = {
+				set_starbase_module = {
+					slot = 2
+					module = astromining_bay
+				}
+			}
+		}
+
+		# Genesis Guides
+		every_playable_country = {
+			limit = {
+				is_guided_sapience_empire = yes
+			}
+			set_variable = {
+				which = presapients_guided
+				value = 1
+			}
+			set_country_flag = found_presapients
+			capital_scope = {
+				spawn_presapient_species_randomizer_homeworld_effect = yes
+				add_deposit = d_genesis_preserve
+				set_planet_flag = pre_sapient_planet
+			}
+		}
+
+		# Natural Design
+		every_playable_country = {
+			limit = {
+				is_natural_design_empire = yes
+				capital_scope = {
+					free_building_slots > 0
+				}
+			}
+			if = {
+				limit = {
+					is_hive_empire = yes
+				}
+				capital_scope = {
+					add_building = building_hive_transcendental_retreat
+				}
+			}
+			if = {
+				limit = {
+					is_hive_empire = no
+				}
+				capital_scope = {
+					add_building = building_transcendental_retreat
+				}
+			}
 		}
 
 		every_playable_country = {
@@ -418,6 +514,13 @@ event = {
 			every_owned_planet = {
 				set_planetary_ascension_tier = 1
 			}
+		}
+
+		every_playable_country = {
+			limit = {
+				has_valid_civic = civic_machine_obsessional_directive
+			}
+			obsessional_directive_start_effect = yes
 		}
 	}
 }
@@ -736,9 +839,9 @@ country_event = {
 	immediate = {
 		set_country_flag = is_advanced_start_AI
 
-		give_technology = { tech = "tech_society_1" message = no }
-		give_technology = { tech = "tech_engineering_1" message = no }
-		give_technology = { tech = "tech_physics_1" message = no }
+		give_technology = { tech = "tech_galactic_ambitions" message = no }
+		give_technology = { tech = "tech_mining_1" message = no }
+		give_technology = { tech = "tech_combat_computers_1" message = no }
 		give_technology = { tech = "tech_planetary_unification" message = no }
 
 		add_resource = { energy = 1000	}
@@ -746,7 +849,17 @@ country_event = {
 		add_resource = { alloys = 500	}
 		add_resource = { influence = 200 }
 		if = {
-			limit = { is_machine_empire = no }
+			limit = {
+				OR = {
+					AND = {
+						is_lithoid_empire = no
+						is_machine_empire = no
+					}
+					is_catalytic_empire = yes
+					has_country_flag = non_lithoid_subspecies
+					has_origin = origin_broken_shackles
+				}
+			}
 			add_resource = { food = 1000 }
 		}
 		else = {
@@ -790,6 +903,8 @@ country_event = {
 	immediate = {
 		add_resource = { energy = 100	}
 		add_resource = { minerals = 100	}
+		#add_resource = { alloys = 100	}
+		add_resource = { influence = 100 }
 		add_resource = { beryllium = 100 }
 		add_resource = { lithium = 100 }
 		add_resource = { titanium = 100 }
@@ -803,9 +918,6 @@ country_event = {
 		add_resource = { antimatter_fuel = 100 }
 		add_resource = { uranium = 100 }
 		add_resource = { eezo = 100 }
-		#add_resource = { alloys = 100	}
-		add_resource = { influence = 100 }
-
 		if = {
 			limit = {
 				OR = {
@@ -1206,20 +1318,6 @@ country_event = {
 			days = -1
 		}
 		if = {
-			limit = { is_materialist = yes }
-			modify_species = {
-				species = this
-				add_trait = trait_cybernetic
-			}
-		}
-		if = {
-			limit = { is_spiritualist = yes }
-			modify_species = {
-				species = this
-				add_trait = trait_psionic
-			}
-		}
-		if = {
 			limit = {
 				has_authority = auth_machine_intelligence
 			}
@@ -1285,7 +1383,9 @@ planet_event = {
 
 	immediate = {
 		if = {
-			limit = { NOT = { has_planet_flag = special_start_planet } }
+			limit = {
+				NOT = { has_planet_flag = special_start_planet }
+			}
 			if = {
 				limit = {
 					OR = {
@@ -1318,7 +1418,6 @@ planet_event = {
 			limit = { has_planet_flag = void_dweller_habitat_1 }
 			void_dweller_home_planet_setup = yes
 		}
-
 
 		if = {
 			limit = { has_planet_flag = toxic_knights_homeworld }
@@ -2448,8 +2547,8 @@ country_event = {
 	id = game_start.62
 	hide_window = yes
 	trigger = {
-		is_country_type = default
 		is_memory_vault_empire = yes
+		is_country_type = default
 		NOR = {
 			has_origin = origin_broken_shackles
 			has_origin = origin_payback
@@ -2526,13 +2625,9 @@ country_event = {
 	id = game_start.64
 	hide_window = yes
 	trigger = {
-		exists = owner
 		has_civic = civic_private_healthcare_corporate
 		is_country_type = default
-		NOT = {
-			# Done in 01_start_of_game_effects.txt instead.
-			has_origin = origin_void_dwellers
-		}
+		has_void_dweller_origin = no # Done in 01_start_of_game_effects.txt instead.
 	}
 
 	is_triggered_only = yes
@@ -2566,13 +2661,12 @@ country_event = {
 	id = game_start.65
 	hide_window = yes
 	trigger = {
-		exists = owner
 		has_civic = civic_dystopian_society
 		is_country_type = default
 		NOR = {
 			has_origin = origin_broken_shackles
 			has_origin = origin_payback
-			has_origin = origin_void_dwellers
+			has_void_dweller_origin = yes
 		}
 	}
 
@@ -2609,7 +2703,6 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		has_paragon_dlc = yes
-		exists = owner
 		is_country_type = default
 		OR = {
 			has_origin = origin_broken_shackles
@@ -2686,7 +2779,7 @@ country_event = {
 					is_ruler = no
 				}
 				add_skill = 9
-				set_gestalt_node_protrait_effect = yes
+				set_gestalt_node_portrait_effect = yes
 			}
 		}
 	}
@@ -3014,6 +3107,56 @@ country_event = {
 				last_created_leader = {
 					set_council_position = councilor_fanatic_purifiers
 				}
+			}
+		}
+	}
+}
+
+#Add 1 of 3 cyborg trait to species
+country_event = {
+	id = game_start.73
+	hide_window = yes
+	trigger = {
+		has_machine_age_dlc = yes
+		has_valid_civic = civic_augmentation_bazaars
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			30 = {
+				every_owned_pop = {
+					limit = {
+						is_robot_pop = no
+					}
+					modify_species = {
+						add_trait = trait_cyborg_power_drills
+					}
+				}
+				set_country_flag = augmentation_bazaars_power_drills
+			}
+			30 = {
+				every_owned_pop = {
+					limit = {
+						is_robot_pop = no
+					}
+					modify_species = {
+						add_trait = trait_cyborg_harvesters
+					}
+				}
+				set_country_flag = augmentation_bazaars_harvesters
+			}
+			30 = {
+				every_owned_pop = {
+					limit = {
+						is_robot_pop = no
+					}
+					modify_species = {
+						add_trait = trait_cyborg_superconductive
+					}
+				}
+				set_country_flag = augmentation_bazaars_superconductive
 			}
 		}
 	}

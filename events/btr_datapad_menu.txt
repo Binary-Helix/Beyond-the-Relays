@@ -347,7 +347,7 @@ country_event = {
 		custom_gui = "btr_datapad_datapad_menu_main"
 		default_hide_option = yes
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.01 }
+			country_event = { id = btr_datapad_menu.10 }
 		}
 	}
 
@@ -355,42 +355,42 @@ country_event = {
 		name = "btr_datapad_menu.10.a"
 		custom_gui = "btr_datapad_empire_dossier_menu_button1"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.02 }
+			country_event = { id = btr_datapad_menu.11 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.10.b"
 		custom_gui = "btr_datapad_empire_dossier_menu_button2"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.03 }
+			country_event = { id = btr_datapad_menu.12 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.10.c"
 		custom_gui = "btr_datapad_empire_dossier_menu_button3"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.04 }
+			country_event = { id = btr_datapad_menu.13 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.10.d"
 		custom_gui = "btr_datapad_empire_dossier_menu_button4"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.05 }
+			country_event = { id = btr_datapad_menu.14 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.10.e"
 		custom_gui = "btr_datapad_empire_dossier_menu_button5"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.06 }
+			country_event = { id = btr_datapad_menu.15 }
 		}
 	}
 	option = {
 		name = "btr_datapad_menu.10.f"
 		custom_gui = "btr_datapad_empire_dossier_menu_button6"
 		hidden_effect = {
-			country_event = { id = btr_datapad_menu.07 }
+			country_event = { id = btr_datapad_menu.16 }
 		}
 	}
 	option = {
@@ -485,7 +485,7 @@ country_event = {
 				limit = { has_country_flag = btr_menu_page_dev_news }
 				remove_country_flag = btr_menu_page_dev_news
 				set_country_flag = btr_menu_page_00
-				country_event = { id =  btr_datapad_menu.17 }
+				country_event = { id =  btr_datapad_menu.10 }
 			}
 		}
 	}

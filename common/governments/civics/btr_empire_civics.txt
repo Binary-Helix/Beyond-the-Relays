@@ -597,9 +597,9 @@ migrant_fle_step_further_than_ancestors = {
 # CERBERUS CIVICS #
 ###################
 
-cerberus_no_price_to_great = {
+cerberus_emp_no_price_to_great = {
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/no_price_to_great.dds"
+	icon = gfx/interface/icons/governments/civics/cerberus_emp_no_price_to_great.dds
 	potential = {
 		origin = {
 			value = cerberus_emp_origin
@@ -615,9 +615,9 @@ cerberus_no_price_to_great = {
 	}
 }
 
-cerberus_project_doorway = {
+cerberus_emp_project_doorway = {
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/project_doorway.dds"
+	icon = gfx/interface/icons/governments/civics/cerberus_emp_project_doorway.dds
 	potential = {
 		origin = {
 			value = cerberus_emp_origin
@@ -632,9 +632,9 @@ cerberus_project_doorway = {
 	}
 }
 
-cerberus_sophistic_ideals = {
+cerberus_emp_sophistic_ideals = {
 	modification = yes
-	icon = "gfx/interface/icons/governments/civics/sophistic_ideals.dds"
+	icon = gfx/interface/icons/governments/civics/cerberus_emp_sophistic_ideals.dds
 	potential = {
 		origin = {
 			value = cerberus_emp_origin
@@ -652,7 +652,7 @@ cerberus_sophistic_ideals = {
 # OMEGA CIVICS #
 ################
 
-omega_merc_enforcers = {
+omega_emp_merc_enforcers = {
 	modification = no
 	potential = {
 		origin = {
@@ -671,10 +671,10 @@ omega_merc_enforcers = {
 		job_soldier_per_pop = 0.05
 	}
 
-	description = "omega_merc_enforcers_effects"
+	description = "omega_emp_merc_enforcers_effects"
 }
 
-omega_common_cause = {
+omega_emp_common_cause = {
 	modification = no
 	potential = {
 		origin = {
@@ -688,10 +688,10 @@ omega_common_cause = {
 		pop_amenities_usage_mult = -0.2
 	}
 
-	description = "omega_common_cause_effects"
+	description = "omega_emp_common_cause_effects"
 }
 
-omega_broken_mirror = {
+omega_emp_broken_mirror = {
 	modification = yes
 	potential = {
 		origin = {
@@ -916,7 +916,7 @@ vorcha_cla_we_take_now = {
 	}
 }
 
-vorcha_cla__aagh ={
+vorcha_cla_aagh ={
 	modification = no
 	potential = {
 		origin = {
@@ -934,7 +934,7 @@ vorcha_cla__aagh ={
 	}
 }
 
-vorcha_cla__everyone_knows = {
+vorcha_cla_everyone_knows = {
 	modification = yes
 	potential = {
 		origin = {
@@ -956,7 +956,7 @@ vorcha_cla__everyone_knows = {
 # SED'RIICAE COLLECTIVE CIVICS #
 ################################
 
-sedriicae_collective_totalitarian_state ={
+sedriicae_col_totalitarian_state ={
 	modification = no
 	potential = {
 		origin = {
@@ -975,7 +975,7 @@ sedriicae_collective_totalitarian_state ={
 	}
 }
 
-sedriicae_collective_status_intellectus ={
+sedriicae_col_status_intellectus ={
 	modification = no
 	potential = {
 		origin = {
@@ -993,7 +993,7 @@ sedriicae_collective_status_intellectus ={
 	}
 }
 
-sedriicae_collective_desperate_measures = {
+sedriicae_col_desperate_measures = {
 	modification = yes
 	potential = {
 		origin = {
@@ -1018,7 +1018,7 @@ sedriicae_collective_desperate_measures = {
 # LYSTHENI CIVICS #
 ################
 
-lystheni_order_thirteenth_promise ={
+lystheni_ord_thirteenth_promise ={
 	modification = no
 	potential = {
 		origin = {
@@ -1032,10 +1032,10 @@ lystheni_order_thirteenth_promise ={
 		country_war_exhaustion_mult = -0.15
 	}
 
-	description = "lystheni_thirteenth_promise_effects"
+	description = "lystheni_ord_thirteenth_promise_effects"
 }
 
-lystheni_order_divine ={
+lystheni_ord_divine ={
 	modification = no
 	potential = {
 		origin = {
@@ -1057,7 +1057,7 @@ lystheni_order_divine ={
 	}
 }
 
-lystheni_order_we_have_our_ways = {
+lystheni_ord_we_have_our_ways = {
 	modification = no
 	potential = {
 		origin = {
@@ -1077,14 +1077,14 @@ lystheni_order_we_have_our_ways = {
 		planet_sensor_range_add = 1
 	}
 
-	description = "lystheni_we_have_our_ways_effects"
+	description = "lystheni_ord_we_have_our_ways_effects"
 }
 
 ###########################
 # GOTHONES REMNANT CIVICS #
 ###########################
 
-gothones_cooperative_reciprocity ={
+gothones_rem_cooperative_reciprocity ={
 	modification = no
 	potential = {
 		origin = {
@@ -1099,10 +1099,10 @@ gothones_cooperative_reciprocity ={
 		pop_demotion_time_mult = -0.45
 	}
 
-	description = "gothones_cooperative_reciprocity_effects"
+	description = "gothones_rem_cooperative_reciprocity_effects"
 }
 
-gothones_warriors_of_the_green ={
+gothones_rem_warriors_of_the_green ={
 	modification = no
 	potential = {
 		origin = {
@@ -1118,10 +1118,10 @@ gothones_warriors_of_the_green ={
 		starbase_shipyard_build_speed_mult = 0.1
 	}
 
-	description = "gothones_warriors_of_the_green_effects"
+	description = "gothones_rem_warriors_of_the_green_effects"
 }
 
-gothones_braves_of_vindicta = {
+gothones_rem_braves_of_vindicta = {
 	modification = yes
 	potential = {
 		origin = {
@@ -1142,7 +1142,7 @@ gothones_braves_of_vindicta = {
 ##################
 # YAHG CIVICS #
 ##################
-yahg_pack_mentality ={
+parnack_reg_pack_mentality ={
 	modification = no
 	potential = {
 		origin = {
@@ -1158,10 +1158,10 @@ yahg_pack_mentality ={
 		pop_happiness = 0.10
 	}
 
-	description = "yahg_pack_mentality_effects"
+	description = "parnack_reg_pack_mentality_effects"
 }
 
-yahg_enforced_isolation ={
+parnack_reg_enforced_isolation ={
 	modification = no
 	potential = {
 		origin = {
@@ -1180,7 +1180,7 @@ yahg_enforced_isolation ={
 	}
 }
 
-yahg_galactic_hegemony ={
+parnack_reg_galactic_hegemony ={
 	modification = yes
 	potential = {
 		origin = {
@@ -1308,7 +1308,7 @@ geth_con_civic_collective_conscious = {
 	}
 }
 
-geth_consensus_remnant_code = {
+geth_con_remnant_code = {
 
 	potential = {
 		origin = {
@@ -1329,7 +1329,7 @@ geth_consensus_remnant_code = {
 # DISCIPLES OF NAZARA CIVICS #
 ##############################
 
-nazara_gifts_of_nazara = {
+disciples_naz_gifts_of_nazara = {
 	modification = no
 	potential = {
 		origin = {
@@ -1346,7 +1346,7 @@ nazara_gifts_of_nazara = {
 	}
 }
 
-nazara_the_schism = {
+disciples_naz_the_schism = {
 	modification = no
 	potential = {
 		origin = {
@@ -1360,10 +1360,10 @@ nazara_the_schism = {
 		drone_deviancy = 0.1
 	}
 
-	description = "nazara_the_schism_effects"
+	description = "disciples_naz_the_schism_effects"
 }
 
-nazara_upgraded_code = {
+disciples_naz_upgraded_code = {
 	modification = yes
 	potential = {
 		origin = {
@@ -1384,7 +1384,7 @@ nazara_upgraded_code = {
 # Rachni Hive CIVICS #
 ##########################
 
-rachni_hive_del_capo_al_fine = {
+rachni_hiv_del_capo_al_fine = {
 	modification = no
 	potential = {
 		origin = {
@@ -1401,7 +1401,7 @@ rachni_hive_del_capo_al_fine = {
 	}
 }
 
-rachni_hive_crescendo = {
+rachni_hiv_crescendo = {
 	modification = no
 	potential = {
 		origin = {
@@ -1418,7 +1418,7 @@ rachni_hive_crescendo = {
 	}
 }
 
-rachni_hive_symphonic_structure = {
+rachni_hiv_symphonic_structure = {
 	modification = yes
 	potential = {
 		origin = {
@@ -1438,7 +1438,7 @@ rachni_hive_symphonic_structure = {
 # THE COLLECTORS #
 ##################
 
-collectors_machine_assimilator = {
+collectors_emp_machine_assimilator = {
 	potential = {
 		origin = {
 			value = collectors_emp_origin
@@ -1466,7 +1466,7 @@ collectors_machine_assimilator = {
 	}
 }
 
-collectors_voice_of_reapers = {
+collectors_emp_voice_of_reapers = {
 	modification = no
 	potential = {
 		origin = {
@@ -1482,7 +1482,7 @@ collectors_voice_of_reapers = {
 	}
 }
 
-collectors_apostle_of_gods = {
+collectors_emp_apostle_of_gods = {
 	modification = yes
 	potential = {
 		origin = {

@@ -17,7 +17,9 @@ tech_asari_architecture = {
 		# Amenities from Structures
     }
 
-    weight_modifier = { factor = 0 }
+	weight_modifier = {
+		weight = 0
+	}
 }
 
 tech_asari_ship_design = {
@@ -44,7 +46,9 @@ tech_asari_ship_design = {
 		ship_evasion_mult = 0.05
     }
 
-    weight_modifier = { factor = 0 }
+	weight_modifier = {
+		weight = 0
+	}
 }
 
 ### Salarian Union Tech
@@ -139,7 +143,7 @@ tech_turian_elkoss_contract = {
     }
 
     potential = {
-        has_origin = turian_hier_origin
+        has_origin = turian_hie_origin
     }
 
     modifier = {
@@ -160,7 +164,7 @@ tech_turian_planetary_kasrs = {
     }
 
     potential = {
-        has_origin = turian_hier_origin
+        has_origin = turian_hie_origin
     }
 
     modifier = {
@@ -1045,7 +1049,7 @@ tech_lystheni_oracle_class_ai = {
     }
 
     prerequisites = {
-        tech_physics_3
+		tech_sapient_ai
     }
 }
 
