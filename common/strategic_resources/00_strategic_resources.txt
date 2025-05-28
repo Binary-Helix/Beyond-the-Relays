@@ -9,19 +9,19 @@
 # special_max_amount = yes/no	# default no, if yes maximum storage capacity of the resource is fixed to the amount specified in max = INT + country_resource_max_RESOURCE_NAME_add modifiers + dynamic_capacity
 #								This explicitly ignores MOD_COUNTRY_RESOURCE_MAX_ADD modifiers.
 
-time = {
-	# Must be present here, but really: do not add a Deficit situation for Time.
-}
-
-
 ### Basic Resources
 
 energy = {
 	tradable = yes
 	category = basic
-	max = 50000
+	market_amount = 100
+	market_price = 100
+	max = 25000
 
 	deficit_situation = situation_energy_deficit
+	deficit_trade_conversion_mult = -0.125
+
+	culling_conversion_value = 1
 
 	ai_weight = {
 		weight = 1.5
@@ -40,6 +40,9 @@ minerals = {
 	max = 15000
 
 	deficit_situation = situation_mineral_deficit
+	deficit_trade_conversion_mult = -0.125
+
+	culling_conversion_value = 1
 
 	ai_weight = {
 		weight = 1
@@ -56,21 +59,42 @@ food = {
 	market_amount = 100
 	market_price = 100
 	max = 15000
+	dynamic_capacity = {
+		base = 0
+		modifier = {
+			country_uses_bio_ships = yes
+			add = 10000
+		}
+	}
 
 	deficit_situation = situation_food_deficit
+	deficit_trade_conversion_mult = -0.125
+
+	culling_conversion_value = 1
 
 	ai_weight = {
 		weight = 1
+		modifier = {
+			factor = 0.1
+			country_uses_food = no
+		}
 	}
 
 	ai_wants = {
 		base = 500
+		modifier = {
+			factor = 0.1
+			country_uses_food = no
+		}
 	}
 }
 
 physics_research = {
 	category = other
 	allow_deficit = no
+
+	culling_conversion_value = 3
+
 	ai_weight = {
 		weight = 1
 	}
@@ -80,6 +104,9 @@ physics_research = {
 society_research = {
 	category = other
 	allow_deficit = no
+
+	culling_conversion_value = 3
+
 	ai_weight = {
 		weight = 1
 	}
@@ -89,6 +116,9 @@ society_research = {
 engineering_research = {
 	category = other
 	allow_deficit = no
+
+	culling_conversion_value = 3
+
 	ai_weight = {
 		weight = 1
 	}
@@ -112,6 +142,8 @@ unity = {
 	category = other
 	deficit_modifier = unity_deficit #found in static modifiers
 
+	culling_conversion_value = 1
+
 	ai_weight = {
 		weight = 1
 	}
@@ -121,6 +153,14 @@ unity = {
 ### Advanced Resources ###
 ##########################
 
+trade = {
+	tradable = yes
+	category = advanced
+	max = 50000
+
+	culling_conversion_value = 1
+}
+
 consumer_goods = {
 	tradable = yes
 	category = advanced
@@ -129,13 +169,40 @@ consumer_goods = {
 	max = 15000
 
 	deficit_situation = situation_consumer_goods_deficit
+	deficit_trade_conversion_mult = -0.25
+
+	visibility_prerequisite = {
+		OR = {
+			is_scope_valid = no
+			is_wilderness_empire = no
+		}
+	}
+
+	culling_conversion_value = 2
 
 	ai_weight = {
 		weight = 5
+		modifier = {
+			factor = 0.1
+			country_uses_consumer_goods = no
+		}
 	}
 
 	ai_wants = {
 		base = 500
+		modifier = {
+			factor = 0.1
+			country_uses_consumer_goods = no
+		}
+	}
+
+	tradable_in_market = {
+		NOT = {
+			AND = {
+				exists = this
+				has_valid_civic = civic_machine_obsessional_directive
+			}
+		}
 	}
 }
 
@@ -145,8 +212,18 @@ alloys = {
 	#market_amount = 25
 	#market_price = 100
 	max = 15000
+	dynamic_capacity = {
+		base = 0
+		modifier = {
+			country_uses_bio_ships = yes
+			subtract = 2500
+		}
+	}
 
 	#deficit_situation = situation_alloys_deficit
+	#deficit_trade_conversion_mult = -0.50
+
+	culling_conversion_value = 4
 
 	ai_weight = {
 		weight = 0 # Disable AI
@@ -171,6 +248,9 @@ volatile_motes = {
 	prerequisites = { "tech_mine_volatile_motes" }
 
 	#deficit_situation = situation_volatile_motes_deficit
+	#deficit_trade_conversion_mult = -1.25
+
+	culling_conversion_value = 7
 
 	ai_weight = {
 		weight = 0 # Disable AI
@@ -191,6 +271,9 @@ exotic_gases = {
 	prerequisites = { "tech_mine_exotic_gases" }
 
 	#deficit_situation = situation_exotic_gases_deficit
+	#deficit_trade_conversion_mult = -1.25
+
+	culling_conversion_value = 7
 
 	ai_weight = {
 		weight = 0 # Disable AI
@@ -211,6 +294,9 @@ rare_crystals = {
 	prerequisites = { "tech_mine_rare_crystals" }
 
 	#deficit_situation = situation_rare_crystals_deficit
+	#deficit_trade_conversion_mult = -1.25
+
+	culling_conversion_value = 7
 
 	ai_weight = {
 		weight = 0 # Disable AI
@@ -234,9 +320,12 @@ sr_living_metal = {
 	#market_price = 100
 	max = 15000
 
-	#prerequisites = { "tech_mine_living_metal" }
+	#prerequisites = { "tech_mine_zro" }
 	#visibility_prerequisite = { always = yes }
 	#deficit_modifier = sr_living_metal_deficit
+	#deficit_trade_conversion_mult = -2.5
+
+	culling_conversion_value = 20
 
 	ai_weight = {
 		weight = 0 # Disable AI
@@ -258,6 +347,9 @@ sr_zro = {
 	#prerequisites = { "tech_mine_zro" }
 	#visibility_prerequisite = { always = yes }
 	#deficit_modifier = sr_zro_deficit
+	#deficit_trade_conversion_mult = -2.5
+
+	culling_conversion_value = 20
 
 	ai_weight = {
 		weight = 0 # Disable AI
@@ -278,8 +370,8 @@ sr_dark_matter = {
 
 	#prerequisites = { "tech_mine_dark_matter" }
 	#visibility_prerequisite = { always = yes }
-
 	#deficit_modifier = dark_matter_deficit #found in static modifiers
+	#deficit_trade_conversion_mult = -2.5
 
 	ai_weight = {
 		weight = 0 # Disable AI
@@ -298,6 +390,9 @@ nanites = {
 
 	#visibility_prerequisite = { always = yes }
 	#deficit_modifier = nanites_deficit #found in static modifiers
+	#deficit_trade_conversion_mult = -2.5
+
+	culling_conversion_value = 20
 
 	ai_weight = {
 		weight = 0 # Disable AI
@@ -316,10 +411,14 @@ nanites = {
 minor_artifacts = {
 	tradable = no
 	category = rare
-	max = 3000
+	max = 2000
 	fixed_max_amount = yes
 
 	visibility_prerequisite = { has_ancrel = yes }
+
+	deficit_trade_conversion_mult = -0.50
+
+	culling_conversion_value = 10
 
 	ai_weight = {
 		weight = 100
@@ -332,10 +431,12 @@ minor_artifacts = {
 
 # Astral Thread
 astral_threads = {
-	tradable = yes
+	tradable = no
 	category = rare
 	max = 500
 	special_max_amount = yes
+
+
 	dynamic_capacity = {
 		base = @astral_threads_capacity_from_each_explored_rift
 		complex_trigger_modifier = {
@@ -344,9 +445,11 @@ astral_threads = {
 		}
 	}
 
-	prerequisites = { "tech_astral_harvesting" }
+	#prerequisites = { "tech_astral_harvesting" }
+	#visibility_prerequisite = { has_astral_planes_dlc = yes }
+	#deficit_trade_conversion_mult = -0.50
 
-	visibility_prerequisite = { has_astral_planes_dlc = yes }
+	culling_conversion_value = 5
 
 	ai_weight = {
 		weight = 0 # Disable AI
@@ -354,6 +457,20 @@ astral_threads = {
 
 	ai_wants = {
 		base = 0 # Disable AI
+	}
+}
+
+biomass = {
+	tradable = no
+	category = advanced
+	hide_gain = yes
+
+	visibility_prerequisite = {
+		has_biogenesis_dlc = yes
+		OR = {
+			is_scope_valid = no
+			is_wilderness_empire = yes
+		}
 	}
 }
 
@@ -372,6 +489,15 @@ menace = {
 }
 
 advanced_logic = {
+	tradable = no
+	category = other
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+feral_insight = {
 	tradable = no
 	category = other
 
