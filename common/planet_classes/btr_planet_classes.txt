@@ -9,6 +9,10 @@ pc_swamp = {
 	climate = "wet"
 	initial = yes
 
+	auto_trait_prio = {
+		trait_auto_dry_preference
+	}
+
 	entity_scale = @planet_standard_scale
 
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }

@@ -7,7 +7,7 @@
 # 	spawn_odds = 10							# Weighting applied to random_lists which include this star class
 # 	num_planets	= { min = 4 max = 10 }		# How many planets should be spawned in systems using this star class (using the 'spawn_odds' of each planet class)
 
-# 	NOTE: You may also set the odds that a given planet class will or will not spawn for system initializers which use this star class. By default the game will assume all planet classes are valid for random draws (while obeying placement rules like 'min_distance_from_sun') unless the spawn_odds for that planet class have been set to '0' (see 'common\planet_classes\00_planet_classes.txt'). For example:
+# 	NOTE: You may also set the odds that a given planet class will or will not spawn for system initializers which use this star class. By default the game will assume all planet classes are valid for random draws (while obeying placement rules like 'min_distance_from_sun') unless the spawn_odds for that planet class have been set to '0' (see 'common\planet_classes\btr_00_planet_classes.txt'). For example:
 # 	pc_savannah = { spawn_odds = 0.5 }		# Savannah-class planets will appear in random draws half as often (@habitable_spawn_odds * 0.5)
 #	pc_continental = { spawn_odds = 0 }		# Continental-class planets may never spawn here randomly (@habitable_spawn_odds * 0)
 # }
