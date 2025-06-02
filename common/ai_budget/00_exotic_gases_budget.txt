@@ -16,7 +16,7 @@ exotic_gases_expenditure_planets = {
 	}
 
 	weight = {
-		weight = 0.2
+		weight = 0.0
 	}
 }
 
@@ -31,11 +31,11 @@ exotic_gases_expenditure_ships = {
 	}
 
 	weight = {
-		weight = 0.1
-		modifier = {
-			factor = 5
-			is_dragon_breeder_country = yes
-		}
+		weight = 0.0
+		# modifier = {
+		# 	factor = 5
+		# 	is_dragon_breeder_country = yes
+		# }
 	}
 }
 
@@ -50,7 +50,7 @@ exotic_gases_expenditure_upgrade = {
 	}
 
 	weight = {
-		base = 0.1
+		base = 0.0
 	}
 }
 
@@ -65,7 +65,7 @@ exotic_gases_expenditure_trade = {
 	}
 
 	weight = {
-		weight = 0.1
+		weight = 0.0
 	}
 }
 
@@ -83,30 +83,30 @@ exotic_gases_expenditure_starbases = {
 	}
 
 	weight = {
-		weight = 0.2
+		weight = 0.0
 
-		modifier = {
-			factor = 0
-			NOT = {
-				any_owned_nonprimary_starbase = {
-					exists = planet
-					OR = {
-						AND = {
-							has_starbase_size = orbital_ring_tier_2
-							count_starbase_buildings = {
-								count = 0
-							}
-						}
-						AND = {
-							has_starbase_size = orbital_ring_tier_3
-							count_starbase_buildings = {
-								count < 2
-							}
-						}
-					}
-				}
-			}
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	NOT = {
+		# 		any_owned_nonprimary_starbase = {
+		# 			exists = planet
+		# 			OR = {
+		# 				AND = {
+		# 					has_starbase_size = orbital_ring_tier_2
+		# 					count_starbase_buildings = {
+		# 						count = 0
+		# 					}
+		# 				}
+		# 				AND = {
+		# 					has_starbase_size = orbital_ring_tier_3
+		# 					count_starbase_buildings = {
+		# 						count < 2
+		# 					}
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
 	}
 }
 
@@ -123,7 +123,7 @@ exotic_gases_upkeep_planets = {
 	}
 
 	weight = {
-		weight = 0.9
+		weight = 0.0
 	}
 }
 
@@ -138,7 +138,7 @@ exotic_gases_upkeep_ships = {
 	}
 
 	weight = {
-		weight = 0.1
+		weight = 0.00
 	}
 }
 
@@ -153,7 +153,7 @@ exotic_gases_upkeep_edicts = {
 	}
 
 	weight = {
-		base = 0.25
+		base = 0.0
 	}
 }
 
@@ -168,7 +168,7 @@ exotic_gases_upkeep_hyper_relays = {
 	}
 
 	weight = {
-		weight = 0.1
+		weight = 0.0
 	}
 }
 
@@ -186,6 +186,6 @@ exotic_gases_upkeep_starbases = {
 	}
 
 	weight = {
-		weight = 0.1
+		weight = 0.0
 	}
 }

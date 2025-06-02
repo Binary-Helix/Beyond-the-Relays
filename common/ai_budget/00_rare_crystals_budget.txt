@@ -16,7 +16,7 @@ rare_crystals_expenditure_planets = {
 	}
 
 	weight = {
-		weight = 0.2
+		weight = 0.0
 	}
 }
 
@@ -32,10 +32,10 @@ rare_crystals_expenditure_ships = {
 
 	weight = {
 		weight = 0.1
-		modifier = {
-			factor = 5
-			is_dragon_breeder_country = yes
-		}
+		# modifier = {
+		# 	factor = 5
+		# 	is_dragon_breeder_country = yes
+		# }
 	}
 }
 
@@ -50,7 +50,7 @@ rare_crystals_expenditure_upgrade = {
 	}
 
 	weight = {
-		base = 0.1
+		base = 0.0
 	}
 }
 
@@ -65,7 +65,7 @@ rare_crystals_expenditure_trade = {
 	}
 
 	weight = {
-		weight = 0.1
+		weight = 0.0
 	}
 }
 
@@ -95,13 +95,13 @@ rare_crystals_expenditure_hyper_relays = {
 	}
 
 	weight = {
-		weight = 0.5
+		weight = 0.0
 	}
 	desired_min = {
-		base = 100
+		base = 0
 	}
 	desired_max = {
-		base = 100
+		base = 0
 	}
 }
 
@@ -119,30 +119,30 @@ rare_crystals_expenditure_starbases = {
 	}
 
 	weight = {
-		weight = 0.2
+		weight = 0.0
 
-		modifier = {
-			factor = 0
-			NOT = {
-				any_owned_nonprimary_starbase = {
-					exists = planet
-					OR = {
-						AND = {
-							has_starbase_size = orbital_ring_tier_2
-							count_starbase_buildings = {
-								count = 0
-							}
-						}
-						AND = {
-							has_starbase_size = orbital_ring_tier_3
-							count_starbase_buildings = {
-								count < 2
-							}
-						}
-					}
-				}
-			}
-		}
+		# modifier = {
+		# 	factor = 0
+		# 	NOT = {
+		# 		any_owned_nonprimary_starbase = {
+		# 			exists = planet
+		# 			OR = {
+		# 				AND = {
+		# 					has_starbase_size = orbital_ring_tier_2
+		# 					count_starbase_buildings = {
+		# 						count = 0
+		# 					}
+		# 				}
+		# 				AND = {
+		# 					has_starbase_size = orbital_ring_tier_3
+		# 					count_starbase_buildings = {
+		# 						count < 2
+		# 					}
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
 	}
 }
 
@@ -159,7 +159,7 @@ rare_crystals_upkeep_planets = {
 	}
 
 	weight = {
-		weight = 0.9
+		weight = 0.0
 	}
 }
 
@@ -174,7 +174,7 @@ rare_crystals_upkeep_ships = {
 	}
 
 	weight = {
-		weight = 0.1
+		weight = 0.0
 	}
 }
 
@@ -189,7 +189,7 @@ rare_crystals_upkeep_edicts = {
 	}
 
 	weight = {
-		base = 0.25
+		base = 0.0
 	}
 }
 
@@ -204,7 +204,7 @@ rare_crystals_upkeep_hyper_relays = {
 	}
 
 	weight = {
-		weight = 0.1
+		weight = 0.0
 	}
 }
 
@@ -222,6 +222,6 @@ rare_crystals_upkeep_starbases = {
 	}
 
 	weight = {
-		weight = 0.1
+		weight = 0.0
 	}
 }

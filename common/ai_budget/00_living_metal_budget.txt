@@ -16,7 +16,7 @@ living_metal_expenditure_planets = {
 	}
 
 	weight = {
-		weight = 0.2
+		weight = 0.0
 	}
 }
 
@@ -31,11 +31,11 @@ living_metal_expenditure_ships = {
 	}
 
 	weight = {
-		weight = 0.1
-		modifier = {
-			factor = 5
-			is_dragon_breeder_country = yes
-		}
+		weight = 0.0
+		# modifier = {
+		# 	factor = 5
+		# 	is_dragon_breeder_country = yes
+		# }
 	}
 }
 
@@ -50,7 +50,7 @@ living_metal_expenditure_upgrade = {
 	}
 
 	weight = {
-		base = 0.1
+		base = 0.0
 	}
 }
 
@@ -65,7 +65,7 @@ living_metal_expenditure_trade = {
 	}
 
 	weight = {
-		weight = 0.1
+		weight = 0.0
 	}
 }
 
@@ -82,7 +82,7 @@ living_metal_upkeep_planets = {
 	}
 
 	weight = {
-		weight = 0.9
+		weight = 0.0
 	}
 }
 
@@ -97,7 +97,7 @@ living_metal_upkeep_ships = {
 	}
 
 	weight = {
-		weight = 0.1
+		weight = 0.0
 	}
 }
 
@@ -112,6 +112,6 @@ living_metal_upkeep_edicts = {
 	}
 
 	weight = {
-		base = 0.25
+		base = 0.0
 	}
 }

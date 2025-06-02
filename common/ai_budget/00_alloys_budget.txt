@@ -1,3 +1,5 @@
+##### BTR NOTE - DISABLED ALLOYS FOR NEW ECON
+
 ## Categories used in this file must have use_for_ai_budget = yes defined in economic_categories ##
 ## It is possible to have multiple entries with the same category and resource ##
 
@@ -28,44 +30,44 @@ alloys_expenditure_ships = {
 	}
 
 	weight = {
-		weight = 0.6
+		weight = 0.0
 
-		# spend more alloys building ships while at war
-		modifier = {
-			factor = 2
-			OR = {
-				recently_lost_war = yes
-				is_at_war = yes
-			}
-		}
-
-		# If we want to colonize and are at peace then prio that
-		modifier = {
-			factor = 0.25
-			AND = {
-				ai_colonize_plans > 0
-				is_at_war = no
-			}
-		}
-
-		# spend less alloys on ships if over capacity
-		modifier = {
-			factor = 0.5
-			used_naval_capacity_percent >= 1.0
-		}
-
-		modifier = {
-			factor = 5
-			used_naval_capacity_percent < 1.0
-			OR = {
-				any_neighbor_country = {
-					has_ascension_perk = ap_become_the_crisis
-				}
-				any_country = {
-					is_crisis_faction = yes
-				}
-			}
-		}
+		# # spend more alloys building ships while at war
+		# modifier = {
+		# 	factor = 2
+		# 	OR = {
+		# 		recently_lost_war = yes
+		# 		is_at_war = yes
+		# 	}
+		# }
+		#
+		# # If we want to colonize and are at peace then prio that
+		# modifier = {
+		# 	factor = 0.25
+		# 	AND = {
+		# 		ai_colonize_plans > 0
+		# 		is_at_war = no
+		# 	}
+		# }
+		#
+		# # spend less alloys on ships if over capacity
+		# modifier = {
+		# 	factor = 0.5
+		# 	used_naval_capacity_percent >= 1.0
+		# }
+		#
+		# modifier = {
+		# 	factor = 5
+		# 	used_naval_capacity_percent < 1.0
+		# 	OR = {
+		# 		any_neighbor_country = {
+		# 			has_ascension_perk = ap_become_the_crisis
+		# 		}
+		# 		any_country = {
+		# 			is_crisis_faction = yes
+		# 		}
+		# 	}
+		# }
 	}
 }
 
@@ -84,13 +86,13 @@ alloys_expenditure_ship_upgrades = {
 	}
 
 	weight = {
-		weight = 0.2
+		weight = 0.0
 
 		# spend more on ship upgrades if at capacity
-		modifier = {
-			factor = 2.5
-			used_naval_capacity_percent >= 1.0
-		}
+		# modifier = {
+		# 	factor = 2.5
+		# 	used_naval_capacity_percent >= 1.0
+		# }
 	}
 }
 
@@ -104,7 +106,7 @@ alloys_expenditure_planets = {
 	}
 
 	weight = {
-		weight = 0.1
+		weight = 0.0
 	}
 
 	desired_max = {
@@ -125,51 +127,51 @@ alloys_expenditure_starbases = {
 	}
 
 	weight = {
-		weight = 0.4
-
-		# spend more on starbase upgrades if at fleet cap
-		modifier = {
-			factor = 2
-			used_naval_capacity_percent >= 1.0
-		}
-
-		# Reduce spending on claiming new systems if we have unclaimed planets
-		modifier = {
-			is_machine_empire = yes
-			has_country_resource = { type = alloys amount < 450 }
-			factor = 0.25 # more aggresive saving for robots since their colony ships cost more
-			ai_colonize_plans > 0
-		}
-		# Reduce spending on claiming new systems if we have unclaimed planets
-		modifier = {
-			is_machine_empire = no
-			has_country_resource = { type = alloys amount < 250 }
-			factor = 0.50
-			ai_colonize_plans > 0
-		}
-
-		modifier = {
-			factor = 1.5
-			used_starbase_capacity_percent < 1
-			any_owned_starbase = {
-				can_be_upgraded = yes
-			}
-		}
-		modifier = {
-			factor = 1.5
-			OR = {
-				any_owned_starbase = {
-					NOT = { has_starbase_size = starbase_outpost }
-					can_be_upgraded = yes
-				}
-				any_owned_nonprimary_starbase = {
-					can_be_upgraded = yes
-				}
-			}
-		}
+		weight = 0.0
+		#
+		# # spend more on starbase upgrades if at fleet cap
+		# modifier = {
+		# 	factor = 2
+		# 	used_naval_capacity_percent >= 1.0
+		# }
+		#
+		# # Reduce spending on claiming new systems if we have unclaimed planets
+		# modifier = {
+		# 	is_machine_empire = yes
+		# 	has_country_resource = { type = alloys amount < 450 }
+		# 	factor = 0.25 # more aggresive saving for robots since their colony ships cost more
+		# 	ai_colonize_plans > 0
+		# }
+		# # Reduce spending on claiming new systems if we have unclaimed planets
+		# modifier = {
+		# 	is_machine_empire = no
+		# 	has_country_resource = { type = alloys amount < 250 }
+		# 	factor = 0.50
+		# 	ai_colonize_plans > 0
+		# }
+		#
+		# modifier = {
+		# 	factor = 1.5
+		# 	used_starbase_capacity_percent < 1
+		# 	any_owned_starbase = {
+		# 		can_be_upgraded = yes
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 1.5
+		# 	OR = {
+		# 		any_owned_starbase = {
+		# 			NOT = { has_starbase_size = starbase_outpost }
+		# 			can_be_upgraded = yes
+		# 		}
+		# 		any_owned_nonprimary_starbase = {
+		# 			can_be_upgraded = yes
+		# 		}
+		# 	}
+		# }
 	}
 	desired_max = {
-		base = 12000
+		base = 0
 	}
 }
 
@@ -184,7 +186,7 @@ alloys_expenditure_starbases_fallen_empires = {
 	}
 
 	weight = {
-		weight = 0.2
+		weight = 0.0
 	}
 }
 
@@ -194,22 +196,23 @@ alloys_expenditure_starbases_expand = {
 	category = starbases
 
 	potential = {
-		has_ai_expansion_plan = yes
-		highest_threat < 50
-		NOT = {
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-			ai_colonize_plans > 0
-		}
-		has_resource = { type = influence amount > 75 }
+		always = no
+		# has_ai_expansion_plan = yes
+		# highest_threat < 50
+		# NOT = {
+		# 	is_country_type = fallen_empire
+		# 	is_country_type = awakened_fallen_empire
+		# 	ai_colonize_plans > 0
+		# }
+		# has_resource = { type = influence amount > 75 }
 	}
 
 	weight = {
-		weight = 0.2
+		weight = 0.0
 	}
 
 	desired_min = {
-		base = 150
+		base = 0
 	}
 }
 
@@ -220,7 +223,6 @@ alloys_expenditure_colonies_expand = {
 
 	potential = {
 		always = no
-		# is_machine_empire = no
 		# OR = {
 		# 	is_at_war = no
 		# 	mid_game_years_passed > 0
@@ -243,6 +245,14 @@ alloys_expenditure_colonies_expand = {
 		# 			value > 0
 		# 		}
 		# 	}
+		# 	AND = {
+		# 		is_robot_empire = yes
+		# 		has_resource = { type = energy amount > 400 }
+		# 		has_monthly_income = {
+		# 			resource = energy
+		# 			value > 0
+		# 		}
+		# 	}
 		# }
 	}
 
@@ -256,34 +266,6 @@ alloys_expenditure_colonies_expand = {
 
 	desired_max = {
 		base = 0
-	}
-}
-
-alloys_expenditure_colonies_expand_machine = {
-	resource = alloys
-	type = expenditure
-	category = colonies
-
-	potential = {
-		always = no
-		# is_machine_empire = yes
-		# OR = {
-		# 	is_at_war = no
-		# 	mid_game_years_passed > 0
-		# }
-		# ai_colonize_plans > 0
-	}
-
-	weight = {
-		weight = 0.5
-	}
-
-	desired_min = {
-		base = 400
-	}
-
-	desired_max = {
-		base = 450
 	}
 }
 
@@ -303,20 +285,20 @@ alloys_expenditure_megastructures = {
 	}
 
 	weight = {
-		weight = 0.4
+		weight = 0.0
 
 		# increase budget if megastructures are unfinished
-		modifier = {
-			factor = 3
-			used_naval_capacity_percent > 0.8
-			any_owned_megastructure = {
-				can_be_upgraded = yes
-			}
-		}
+		# modifier = {
+		# 	factor = 3
+		# 	used_naval_capacity_percent > 0.8
+		# 	any_owned_megastructure = {
+		# 		can_be_upgraded = yes
+		# 	}
+		# }
 	}
 
 	desired_max = {
-		base = 20000 # current max alloy cost for a stage
+		base = 0 # current max alloy cost for a stage
 	}
 }
 
@@ -331,52 +313,53 @@ alloys_expenditure_habitats = {
 	}
 
 	weight = {
-		weight = 0.2
-		modifier = {
-			factor = 2.5
-			has_origin = origin_void_dwellers
-		}
-		modifier = {
-			factor = 2
-			has_origin = origin_void_dwellers
-			count_owned_planet = {
-				limit = { is_planet_class = pc_habitat }
-				count < 4
-			}
-		}
-		modifier = {
-			factor = 2
-			has_origin = origin_void_dwellers
-			count_owned_planet = {
-				limit = { is_planet_class = pc_habitat }
-				count < 6
-			}
-		}
-		modifier = {
-			factor = 5
-			mid_game_years_passed > 0
-			num_owned_planets < 12
-		}
-		modifier = {
-			factor = 0.5
-			has_trait = trait_aquatic
-		}
-		modifier = { #Build fortress habitats
-			factor = 2
-			used_naval_capacity_percent > 0.95
-			used_starbase_capacity_percent >= 1
-		}
-		modifier = {
-			factor = 0.5
-			is_at_war = yes
-		}
+		weight = 0.0
+
+		# modifier = {
+		# 	factor = 2.5
+		# 	has_origin = origin_void_dwellers
+		# }
+		# modifier = {
+		# 	factor = 2
+		# 	has_origin = origin_void_dwellers
+		# 	count_owned_planet = {
+		# 		limit = { is_planet_class = pc_habitat }
+		# 		count < 4
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 2
+		# 	has_origin = origin_void_dwellers
+		# 	count_owned_planet = {
+		# 		limit = { is_planet_class = pc_habitat }
+		# 		count < 6
+		# 	}
+		# }
+		# modifier = {
+		# 	factor = 5
+		# 	mid_game_years_passed > 0
+		# 	num_owned_planets < 12
+		# }
+		# modifier = {
+		# 	factor = 0.5
+		# 	has_trait = trait_aquatic
+		# }
+		# modifier = { #Build fortress habitats
+		# 	factor = 2
+		# 	used_naval_capacity_percent > 0.95
+		# 	used_starbase_capacity_percent >= 1
+		# }
+		# modifier = {
+		# 	factor = 0.5
+		# 	is_at_war = yes
+		# }
 	}
 
 	desired_min = {
-		base = 1000
+		base = 0
 	}
 	desired_max = {
-		base = 1500
+		base = 0
 	}
 }
 
@@ -403,20 +386,23 @@ alloys_expenditure_decisions = {
 		# 	amount > 5000
 		# }
 	}
+
 	weight = {
-		weight = 0.20
+		weight = 0.0
 	}
+
 	# based on habitat / restore ring
 	desired_max = {
-		base = 2000
-		modifier = {
-			add = 8000
-			has_technology = tech_mega_engineering
-			any_owned_planet = {
-				is_planet_class = pc_shattered_ring_habitable
-				num_uncleared_blockers < 1
-			}
-		}
+		base = 0
+
+		# modifier = {
+		# 	add = 8000
+		# 	has_technology = tech_mega_engineering
+		# 	any_owned_planet = {
+		# 		is_planet_class = pc_shattered_ring_habitable
+		# 		num_uncleared_blockers < 1
+		# 	}
+		# }
 	}
 }
 
@@ -434,7 +420,7 @@ alloys_upkeep_buffer = {	# Buffer, will not be spent
 	}
 
 	weight = {
-		weight = 0.3
+		weight = 0.0
 	}
 }
 
@@ -449,17 +435,18 @@ alloys_upkeep_ships = {
 	}
 
 	weight = {
-		weight = 0.5
-		modifier = {
-			factor = 1.5
-			OR = {
-				is_at_war = yes
-				resource_income_compare = {
-					resource = alloys
-					value > 800
-				}
-			}
-		}
+		weight = 0.0
+
+		# modifier = {
+		# 	factor = 1.5
+		# 	OR = {
+		# 		is_at_war = yes
+		# 		resource_income_compare = {
+		# 			resource = alloys
+		# 			value > 800
+		# 		}
+		# 	}
+		# }
 	}
 }
 
@@ -474,6 +461,6 @@ alloys_upkeep_planets = {
 	}
 
 	weight = {
-		weight = 0.2
+		weight = 0.0
 	}
 }

@@ -1,0 +1,107 @@
+## Categories used in this file must have use_for_ai_budget = yes defined in economic_categories ##
+## It is possible to have multiple entries with the same category and resource ##
+
+#################
+## Expenditure ##
+#################
+
+biomass_expenditure_buffer = {	# Buffer, will not be spent
+	resource = biomass
+	type = expenditure
+	category = buffer
+
+	potential = {
+		always = no
+	}
+
+	weight = {
+		weight = 0
+	}
+
+	desired_min = {
+		base = 0 # We want to keep a bit of biomass around to make sure pop growth is healthy
+		# modifier = {
+		# 	add = 500
+		# 	num_owned_planets > 1
+		# }
+		# modifier = {
+		# 	add = 500
+		# 	num_owned_planets > 2
+		# }
+		# modifier = {
+		# 	add = 500
+		# 	num_owned_planets > 3
+		# }
+		# modifier = {
+		# 	add = 500
+		# 	num_owned_planets > 4
+		# }
+		# modifier = {
+		# 	add = 500
+		# 	num_owned_planets > 5
+		# }
+		# modifier = {
+		# 	add = 500
+		# 	num_owned_planets > 6
+		# }
+		# modifier = {
+		# 	add = 500
+		# 	num_owned_planets > 7
+		# }
+		# modifier = {
+		# 	add = 500
+		# 	num_owned_planets > 8
+		# }
+		# modifier = {
+		# 	add = 500
+		# 	num_owned_planets > 9
+		# }
+		# modifier = {
+		# 	add = 500
+		# 	num_owned_planets > 10
+		# }
+	}
+}
+
+biomass_expenditure_planets = {
+	resource = biomass
+	type = expenditure
+	category = planets
+
+	potential = {
+		always = no
+		# resource_stockpile_compare = { resource = biomass value >= 1000 }
+	}
+
+	weight = {
+		weight = 0.0
+	}
+}
+
+biomass_expenditure_terraforming_to_colonize = {
+	resource = biomass
+	type = expenditure
+	category = terraforming
+
+	potential = {
+		always = no
+		# is_wilderness_empire = yes
+		# ai_terraform_plans > 0
+	}
+
+	weight = {
+		weight = 0
+	}
+
+	desired_max = {
+		base = 0 # @wildernessCost = 750
+		modifier = {
+		# 	add = 2500 # @advancedCost = 5000
+		# 	has_technology = tech_terrestrial_sculpting
+		# }
+		# modifier = {
+		# 	add = 5000 # never any need for more than that for a single planet
+		# 	has_technology = tech_climate_restoration
+		# }
+	}
+}
