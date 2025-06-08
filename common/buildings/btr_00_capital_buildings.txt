@@ -37,6 +37,7 @@ building_colony_shelter = {
             uses_habitat_capitals = yes
             uses_district_set = cosmogenesis_world
         }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -179,6 +180,7 @@ building_capital = {
             uses_habitat_capitals = yes
             is_planet_class = pc_cosmogenesis_world
         }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -310,6 +312,7 @@ building_major_capital = {
             has_modifier = resort_colony
             has_modifier = slave_colony
         }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     allow = {
@@ -458,6 +461,7 @@ building_system_capital = {
             has_modifier = resort_colony
             has_modifier = slave_colony
         }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -626,6 +630,7 @@ building_deployment_post = {
         }
         uses_habitat_capitals = no
         NOT = { is_planet_class = pc_cosmogenesis_world }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -733,6 +738,7 @@ building_machine_capital = {
         }
         uses_habitat_capitals = no
         NOT = { is_planet_class = pc_cosmogenesis_world }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     destroy_trigger = {
@@ -870,6 +876,7 @@ building_machine_major_capital = {
             }
             is_fallen_empire = no
         }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -1008,6 +1015,7 @@ building_machine_system_capital = {
             }
             is_fallen_empire = no
         }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -1177,6 +1185,7 @@ building_hive_capital = {
         }
         uses_habitat_capitals = no
         NOT = { is_planet_class = pc_cosmogenesis_world }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     destroy_trigger = { # destroys and/or triggers conversion if true
@@ -1284,6 +1293,7 @@ building_hive_major_capital = {
             is_fallen_empire = no
             is_wilderness_empire = no
         }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -1407,6 +1417,7 @@ building_hab_capital = {
             is_fallen_empire = no
             is_wilderness_empire = no
         }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -1684,6 +1695,7 @@ building_hab_major_capital = {
             is_fallen_empire = no
             is_wilderness_empire = no
         }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -1995,6 +2007,7 @@ building_hab_system_capital = {
             is_fallen_empire = no
             is_wilderness_empire = no
         }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -2314,6 +2327,7 @@ building_resort_capital = {
 
     potential = {
         has_modifier = resort_colony # not available to gestalts
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -2441,6 +2455,7 @@ building_resort_major_capital = {
 
     potential = {
         has_modifier = resort_colony
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -2584,6 +2599,7 @@ building_slave_capital = {
 
     potential = {
         has_modifier = slave_colony # not available to gestalts
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -2680,6 +2696,8 @@ building_slave_major_capital = {
 
     potential = {
         has_modifier = slave_colony
+        NOT = { has_planet_flag = planetary_station }
+
     }
 
     allow = {
@@ -2797,6 +2815,7 @@ building_imperial_capital = {
             is_galactic_emperor = yes
         }
         planet = { is_capital = yes }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -2949,6 +2968,7 @@ building_imperial_machine_capital = {
             is_galactic_emperor = yes
         }
         planet = { is_capital = yes }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {
@@ -3118,6 +3138,7 @@ building_imperial_hive_capital = {
             is_wilderness_empire = no
         }
         planet = { is_capital = yes }
+        NOT = { has_planet_flag = planetary_station }
     }
 
     convert_to = {

@@ -31,6 +31,7 @@ building_robot_assembly_plant = {
 			}
 		}
 		NOT = {	has_modifier = resort_colony }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -223,6 +224,7 @@ building_robot_assembly_complex = {
 				is_materialist = yes
 			}
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -396,6 +398,7 @@ building_machine_assembly_plant = {
 			has_modifier = gestation_colony
 			has_modifier = resort_colony
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -498,6 +501,7 @@ building_machine_assembly_complex = {
 			has_modifier = gestation_colony
 			has_modifier = resort_colony
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -602,6 +606,7 @@ building_spawning_pool = {
 			is_wilderness_empire = no
 			NOT = { has_origin = origin_progenitor_hive }
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {
@@ -710,6 +715,7 @@ building_offspring_nest = {
 			num_buildings = { type = any value < 15 }
 			owner = { is_ai = no }
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {
@@ -812,6 +818,7 @@ building_necrophage_elevation_chamber = {
 				has_valid_civic = civic_hive_devouring_swarm
 			}
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -988,6 +995,7 @@ building_necrophage_house_of_apotheosis = {
 			}
 			is_ai = no #the AI will just kill all its necrophytes
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -1162,6 +1170,7 @@ building_clone_vats = {
 				free_jobs <= 0
 			}
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {
@@ -1415,6 +1424,7 @@ building_clone_army_clone_vat = {
 				has_country_flag = clone_army_fertility_unlocked
 			}
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {
@@ -1609,6 +1619,7 @@ building_posthumous_employment_center = {
 			is_regular_empire = yes
 			has_valid_civic = civic_permanent_employment
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -1685,6 +1696,7 @@ building_toxic_bath_hive = {
 			is_wilderness_empire = no
 			has_valid_civic = civic_hive_toxic_baths
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 	destroy_trigger = {
 		exists = owner
@@ -1748,6 +1760,7 @@ building_toxic_bath_machine = {
 				owner = { has_toxic_baths = yes }
 			}
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 	destroy_trigger = {
 		exists = owner
@@ -1941,6 +1954,7 @@ building_automation_city_1 = {
 
 	potential = {
 		owner = { is_wilderness_empire = no }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	upgrades = {
@@ -2011,6 +2025,7 @@ building_automation_city_2 = {
 
 	potential = {
 		owner = { is_wilderness_empire = no }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -2075,6 +2090,7 @@ building_automation_generator_1 = {
 
 	potential = {
 		owner = { is_wilderness_empire = no }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	upgrades = {
@@ -2144,6 +2160,7 @@ building_automation_generator_2 = {
 
 	potential = {
 		owner = { is_wilderness_empire = no }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -2208,6 +2225,7 @@ building_automation_mining_1 = {
 
 	potential = {
 		owner = { is_wilderness_empire = no }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	upgrades = {
@@ -2277,6 +2295,7 @@ building_automation_mining_2 = {
 
 	potential = {
 		owner = { is_wilderness_empire = no }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -2341,6 +2360,7 @@ building_automation_farming_1 = {
 
 	potential = {
 		owner = { is_wilderness_empire = no }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	upgrades = {
@@ -2410,6 +2430,7 @@ building_automation_farming_2 = {
 
 	potential = {
 		owner = { is_wilderness_empire = no }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
