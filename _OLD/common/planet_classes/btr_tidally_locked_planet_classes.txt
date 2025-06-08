@@ -1,0 +1,136 @@
+#############################
+### TIDALLY-LOCKED WORLDS ###
+#############################
+
+pc_tidal_temperate = {
+	entity = "tidal_temperate_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_tidal_temp
+
+	atmosphere_color 		= hsv { 0.48 0.15 0.8 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
+	starting_planet = no
+	colonizable = yes
+	district_set = standard
+	uses_alternative_skies_for_moons = no
+	enable_tilt = no
+	can_be_moon = no
+
+	modifier = {
+		pop_environment_tolerance = 0.50
+		planet_max_districts_mult = -0.30
+	}
+
+	carry_cap_per_free_district = @carry_cap_normal
+}
+
+pc_tidal_scorched = {
+	entity = "tidal_scorched_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_tidal_scorched
+
+	atmosphere_color 		= hsv { 0.48 0.15 0.8 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
+	starting_planet = no
+	colonizable = yes
+	district_set = standard
+	uses_alternative_skies_for_moons = no
+	enable_tilt = no
+
+	modifier = {
+		pop_environment_tolerance = 0.80
+		planet_max_districts_mult = -0.30
+	}
+
+	carry_cap_per_free_district = @carry_cap_normal
+}
+
+pc_tidal_aquatic = {
+	entity = "tidal_aquatic"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_tidal_aquatic
+
+	atmosphere_color 		= hsv { 0.48 0.15 0.8 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
+	starting_planet = no
+	colonizable = yes
+	district_set = standard
+	uses_alternative_skies_for_moons = no
+	enable_tilt = no
+
+	modifier = {
+		pop_environment_tolerance = 0.80
+		planet_max_districts_mult = -0.30
+	}
+
+	carry_cap_per_free_district = @carry_cap_normal
+}
+
+pc_tidal_frozen = {
+	entity = "tidal_frozen"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_tidal_frozen
+
+	atmosphere_color 		= hsv { 0.48 0.15 0.8 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0
+
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
+	starting_planet = no
+	colonizable = yes
+	district_set = standard
+	uses_alternative_skies_for_moons = no
+	enable_tilt = no
+
+	modifier = {
+		pop_environment_tolerance = 0.80
+		planet_max_districts_mult = -0.30
+	}
+
+	carry_cap_per_free_district = @carry_cap_normal
+}

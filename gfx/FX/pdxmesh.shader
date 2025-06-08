@@ -1,13 +1,17 @@
 Includes = {
 	"constants.fxh"
-	"vertex_structs.fxh"
-	"standardfuncsgfx.fxh"
+	"pdxmesh_astral_rift.fxh"
+	"pdxmesh_gravity_snare.fxh"
+	"pdxmesh_reanimated.fxh"
+	"pdxmesh_samplers.fxh"
+	"pdxmesh_ship.fxh"
+	"shadow.fxh"
 	"standard_vertex.fxh"
+	"standardfuncsgfx.fxh"
 	"shadow.fxh"
 	"tiled_pointlights.fxh"
-	"pdxmesh_samplers.fxh"
-	"pdxmesh_astral_rift.fxh"
-	"pdxmesh_ship.fxh"
+	"vertex_structs.fxh"
+	"utils.fxh"
 }
 
 VertexShader =
@@ -195,6 +199,8 @@ ConstantBuffer( PortraitCommon, 0, 0 )
 	float 		PortraitMipLevel;
 	float		CustomDiffuseTexture;
 	float		FlowMapIntensity;
+	float		HueShift;
+	float2		UVStep;
 }
 
 ConstantBuffer( TwelthKind, 1, 28 )
@@ -576,9 +582,7 @@ PixelShader =
 
 			float4 vProperties = tex2D( SpecularMap, In.vUV0 );
 
-		#ifdef IS_PLANET
 			PointLight systemPointlight = GetPointLight(SystemLightPosRadius, SystemLightColorFalloff);
-		#endif
 
 		#ifdef USE_FLOWMAP
 			float3 vNormal = vInNormal;
@@ -609,8 +613,7 @@ PixelShader =
 
 		#ifdef GUI_ICON
 			#ifndef IS_CLOUDS
-				float Grey = dot( vDiffuse.rgb, float3( 0.212671f, 0.715160f, 0.072169f ) + vec3( 0.1f ) );
-				vDiffuse.rgb = lerp( vDiffuse.rgb, vec3( Grey ), 0.4f );
+				vDiffuse.rgb = GreyOutDotLerp( vDiffuse.rgb, 0.4f );
 			#endif
 		#endif
 
@@ -644,15 +647,13 @@ PixelShader =
 		#endif
 
 			float3 vColor = vDiffuse.rgb;
-		#ifndef ADD_COLOR //Adds empire/atmosphere color to parts of mesh, depending on mask
+		#ifdef ADD_COLOR //Adds empire/atmosphere color to parts of mesh, depending on mask
 			if( AtmosphereColor.a > 0.0f )
 			{
-		#endif
 				// Gamma - Linear ping pong
 				// All content is already created for gamma space math, so we do this in gamma space
 				vColor = ToGamma(vColor);
 				vColor = ToLinear(lerp( vColor, vColor * ( vProperties.r * AtmosphereColor.rgb ), vProperties.r ));
-		#ifndef ADD_COLOR
 			}
 		#endif
 
@@ -671,15 +672,19 @@ PixelShader =
 		#ifdef EMISSIVE
 			#ifndef IS_RING
 				#ifndef NO_PLANET_EMISSIVE
-					#ifdef IS_PLANET
-						// Emissive only on dark side of planets
-						float3 vSystemLightDir = normalize( systemPointlight._Position - lightingProperties._WorldSpacePos );
-						float NdotL = saturate( saturate( dot( vInNormal, -vSystemLightDir ) - 0.05f ) * 5.0f );
+					#ifndef PLANET_LIGHTS_EMISSIVE
+						#ifdef IS_PLANET
+							// Emissive only on dark side of planets
+							float3 vSystemLightDir = normalize( systemPointlight._Position - lightingProperties._WorldSpacePos );
+							float NdotL = saturate( saturate( dot( vInNormal, -vSystemLightDir ) - 0.05f ) * 5.0f );
 
-						float vDarksideEmissive = 1.0f - saturate( length( diffuseLight + specularLight ) );
-						vEmissive *= vDarksideEmissive * vProperties.r * NdotL;
+							float vDarksideEmissive = 1.0f - saturate( length( diffuseLight + specularLight ) );
+							vEmissive *= vDarksideEmissive * vProperties.r * NdotL;
 
-						vCubemapIntensity *= ( 1.0f - vDarksideEmissive ) / 2.0f;
+							vCubemapIntensity *= ( 1.0f - vDarksideEmissive ) / 2.0f;
+						#endif
+					#else // PLANET_LIGHTS_EMISSIVE
+						float vDarksideEmissive = 1.0f;
 					#endif
 				#endif
 			#endif
@@ -766,108 +771,6 @@ PixelShader =
 			return float4(vColor, alpha);
 		}
 
-	]]
-
-	MainCode PixelPdxMeshReanimatedLeviathan
-		ConstantBuffers = { Common, ShipConstants, Shadow, TiledPointLight }
-	[[
-		float4 main( VS_OUTPUT_PDXMESHSTANDARD In ) : PDX_COLOR
-		{
-			const float  DMG_START		= 0.5f;
-			const float  DMG_END		= 1.0f;
-			const float  DMG_TILING		= 3.5f;
-			const float  DMG_EDGE		= 0.0f;
-			const float3 DMG_EDGE_COLOR	= float3( 10.0f, 6.6f, 0.1f );
-
-			float3 pos = In.vPos.xyz / In.vPos.w;
-
-			LightingProperties lightProps;
-			lightProps._WorldSpacePos = pos;
-			lightProps._ToCameraDir = normalize( vCamPos - pos );
-
-			float3 inNormal = normalize( In.vNormal );
-			float4 normalTex = tex2D( NormalMap, In.vUV0 );
-			float3x3 TBN = Create3x3( normalize( In.vTangent ), normalize( In.vBitangent ), inNormal );
-
-			float3 normal;
-			float4 diffuse;
-			float emissive;
-
-			float emissiveSample = tex2D( SpecularMap, In.vUV0 + vUVAnimationDir * vUVAnimationTime ).r;
-			float4 properties = tex2D( SpecularMap, In.vUV0 );
-
-			normal = normalize( mul( UnpackRRxGNormal( normalTex ), TBN ) );
-			diffuse = tex2D( DiffuseMap, In.vUV0 );
-			emissive = normalTex.b * emissiveSample;
-
-			//Fade in damage texture
-			float4 damageTex = tex2D( CustomTexture2, In.vUV0 * DMG_TILING );
-
-			float dmgTemp = ShipVars.b;
-			dmgTemp = 1.0f - saturate( ( dmgTemp - DMG_START ) / ( DMG_END - DMG_START ) );
-			float damageValue = ( damageTex.a - dmgTemp ) * 5.0f;
-			if( damageTex.a <= 0.001f )
-			{
-				damageValue = 0.0f;
-			}
-			float damageEdge = DMG_EDGE * saturate( 1.0f - abs( ( damageValue - 0.5f ) * 2 ) );
-			damageValue = saturate( damageValue );
-			diffuse.rgb = lerp( diffuse.rgb, damageTex.rgb, damageValue );
-			properties = lerp( properties, vec4( 0.0f ), damageValue );
-
-			diffuse.rgb *= lerp( vec3( 1.0f ), DMG_EDGE_COLOR, saturate( damageEdge ) );
-
-			emissive *= 1.0f - damageValue;
-			emissive += damageEdge;
-
-			float3 outColor = diffuse.rgb;
-
-			lightProps._Glossiness = properties.a;
-			lightProps._NonLinearGlossiness = GetNonLinearGlossiness( lightProps._Glossiness );
-
-			lightProps._Normal = normal;
-			float specRemapped = properties.g * properties.g * 0.4f;
-			float metalness = properties.b;
-
-			float metalnessRemapped = 1.0f - (1.0f - metalness) * (1.0f - metalness);
-
-			lightProps._Diffuse = MetalnessToDiffuse( metalnessRemapped, outColor );
-			lightProps._SpecularColor = MetalnessToSpec( metalnessRemapped, outColor, specRemapped );
-
-			float3 diffuseLight = vec3( 0.0f );
-			float3 specularLight = vec3( 0.0f );
-			CalculateSystemPointLight( lightProps, 1.0f, diffuseLight, specularLight );
-			CalculateShipCameraLights( lightProps, 1.0f, diffuseLight, specularLight );
-			CalculatePointLights( lightProps, LightDataMap, LightIndexMap, diffuseLight, specularLight );
-
-			float3 eyeDir = normalize( pos - vCamPos.xyz );
-			float3 reflection = reflect( eyeDir, normal );
-			float mipmapIndex = GetEnvmapMipLevel( lightProps._Glossiness );
-			float3 reflectiveColor = texCUBElod( EnvironmentMap, float4( reflection, mipmapIndex ) ).rgb * CubemapIntensity;
-			specularLight += reflectiveColor * FresnelGlossy( lightProps._SpecularColor, -eyeDir, lightProps._Normal, lightProps._Glossiness );
-
-			float camDistance = length( pos - vCamPos );
-			float camDistFadeValue = saturate( ( camDistance - CamLightFadeStartStop.x ) / ( CamLightFadeStartStop.y - CamLightFadeStartStop.x ) );
-			float ambientIntensity = lerp( AmbientIntensityNearFar.x, AmbientIntensityNearFar.y, camDistFadeValue );
-
-			outColor = ComposeLight( lightProps, ambientIntensity, diffuseLight, specularLight );
-			outColor = lerp( outColor, diffuse.rgb, emissive );
-
-			float alpha = diffuse.a;
-			alpha *= emissive;
-			alpha *= vBloomFactor;
-
-			float rimStart = lerp( RimLightStartNearFar.x, RimLightStartNearFar.y, camDistFadeValue );
-			float rimStop = lerp( RimLightStopNearFar.x, RimLightStopNearFar.y, camDistFadeValue );
-
-			float rim = smoothstep( rimStart, rimStop, 1.0f - dot( normal, lightProps._ToCameraDir ) );
-
-			outColor.rgb = lerp( outColor.rgb, RimLightDiffuse.rgb, saturate( rim ) );
-
-			outColor = ApplyDissolve( PrimaryColor.rgb, ShipVars.b, outColor.rgb, diffuse.rgb, In.vUV0 );
-
-			return float4( outColor, alpha );
-		}
 	]]
 
 	MainCode PixelPdxMeshBlackHole
@@ -1109,12 +1012,30 @@ PixelShader =
 					float4 vDiffuseOffset = tex2D( DiffuseMap, offsetFlowUVs );
 					vDiffuse = lerp( vDiffuse, vDiffuseOffset, blendValue );
 				#else
-					vUV += vUVAnimationDir * vUVAnimationTime;
-					vDiffuse = tex2D( DiffuseMap, vUV );
+					#ifdef RIPPLE_UV
+						float2 p = -1.0f + 2.0f * vUV;
+						float len = length(p);
+
+						float2 rippleUVs = vUV + (p / len) * cos(len * 4.0f - vUVAnimationTime * 8.0f) * 0.03f;
+						vDiffuse = tex2D( DiffuseMap, rippleUVs );
+					#else
+						float2 animationDir;
+						#ifdef ANIMATE_UV_UP
+							animationDir = float2(0.0f, 1.0f);
+						#else
+							animationDir = vUVAnimationDir;
+						#endif
+						vUV += animationDir * vUVAnimationTime;
+						vDiffuse = tex2D( DiffuseMap, vUV );
+					#endif
 				#endif
 
 				#ifndef ANIMATE_UV_ALPHA
-					vDiffuse.a = tex2D( DiffuseMap, In.vUV0 ).a;
+						vDiffuse.a = tex2D( DiffuseMap, In.vUV0 ).a;
+				#endif
+
+				#ifdef USE_NORMALMAP_AS_ALPHA
+					vDiffuse.a *= tex2D( NormalMap, In.vUV0 ).r;
 				#endif
 			#else
 				vDiffuse = tex2D( DiffuseMap, vUV );
@@ -1212,7 +1133,7 @@ PixelShader =
 	[[
 		float4 main( VS_OUTPUT_PDXMESHSTANDARD In ) : PDX_COLOR
 		{
-			float4 UVLod = float4( (In.vUV0), 0.0, PortraitMipLevel * 0.35 );
+			float4 UVLod = float4( (In.vUV0), 0.0f, PortraitMipLevel * 0.35f );
 
 			#ifdef CLOTHES
 				float4 vDiffuse = tex2Dlod( PortraitClothes, UVLod );
@@ -1222,9 +1143,56 @@ PixelShader =
 				#else
 					float4 vDiffuse;
 					if( CustomDiffuseTexture > 0.5f )
-						vDiffuse = tex2Dlod( PortraitCharacter, UVLod );
+					{
+						const float4 MASK_COLOR = float4( 0.0f, 1.0f, 1.0f, 1.0f ); // There is corresponding mask_color entry in portrait database
+						const float COMPARISON_PRECISION = 0.1f;
+						const float ABOUT_ZERO = 0.00001f;
+
+						float4 vDecalColor = tex2Dlod( PortraitEvolutionDecal, UVLod );
+						float4 vMaskColor = tex2Dlod( CustomTexture2, UVLod );
+
+						if( AreEqual( vMaskColor, MASK_COLOR, COMPARISON_PRECISION ) )
+						{
+							float4 vCharacterColor = tex2Dlod( PortraitCharacter, UVLod );
+
+							float backgroundAlpha = vCharacterColor.a;
+							float foregroundAlpha = vDecalColor.a;
+							float summarisedAlpha = foregroundAlpha + backgroundAlpha;
+
+							float3 blendedColor;
+							if( summarisedAlpha > ABOUT_ZERO )
+							{
+								float scalar = foregroundAlpha + ( 1.f - foregroundAlpha ) * foregroundAlpha / summarisedAlpha;
+								blendedColor = lerp( vCharacterColor.rgb, vDecalColor.rgb, scalar );
+							}
+							else
+							{
+								blendedColor = vCharacterColor.rgb;
+							}
+
+							vDiffuse.rgb = blendedColor;
+							vDiffuse.a = ( foregroundAlpha + ( 1.f - foregroundAlpha ) * backgroundAlpha );
+						}
+						else
+						{
+							vDiffuse = vDecalColor;
+							vDiffuse.a = vDecalColor.a;
+						}
+					}
 					else
+					{
 						vDiffuse = tex2Dlod( DiffuseMap, UVLod );
+					}
+				#endif
+			#endif
+
+			#ifdef HUE_SHIFT
+				#ifdef USE_HUE_SHIFT_MASK
+					float mask = tex2Dlod( SpecularMap, UVLod ).a;
+					float3 shiftedColor = FastHueShift( vDiffuse.rgb, HueShift + vUVAnimationTime );
+					vDiffuse.rgb = lerp( vDiffuse, shiftedColor, mask );
+				#else
+					vDiffuse.rgb = FastHueShift( vDiffuse.rgb, HueShift + vUVAnimationTime );
 				#endif
 			#endif
 
@@ -1370,8 +1338,7 @@ PixelShader =
 			vColor = lerp( vColor, vColorOver, vOverValue );
 			vColor = lerp( vColor, vColorDown, vDownValue );
 
-		    float Grey = dot( vColorUp.rgb, float3( 0.212671f, 0.715160f, 0.072169f ) );
-		    vColor.rgb = lerp( float3(Grey, Grey, Grey), vColor.rgb, vIntelValue );
+			vColor.rgb = GreyOutDotLerp( vColor.rgb, vIntelValue );
 
 			return vColor;
 		}
@@ -1846,6 +1813,15 @@ Effect PdxMeshAlphaAdditiveAnimateUVErosionSkinned
 	Defines = { "ANIMATE_UV" "DISSOLVE" "DISSOLVE_USE_EROSION" }
 }
 
+Effect PdxMeshAlphaAdditiveAnimateUVRipple
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelPdxMeshAdditive"
+	BlendState = "BlendStateAdditiveBlend"
+	DepthStencilState = "DepthStencilNoZWrite"
+	Defines = { "ANIMATE_UV" "ANIMATE_UV_ALPHA" "RIPPLE_UV" "DISSOLVE" }
+}
+
 Effect PdxMeshAlphaAnimateUVErosion
 {
 	VertexShader = "VertexPdxMeshStandard"
@@ -2174,6 +2150,15 @@ Effect PdxMeshAlphaAdditiveAnimateUVAlpha
 	Defines = { "ANIMATE_UV" "ANIMATE_UV_ALPHA" "DISSOLVE" }
 }
 
+Effect PdxMeshAlphaAdditiveAnimateUVAlphaMapUp
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelPdxMeshAdditive"
+	BlendState = "BlendStateAdditiveBlend"
+	DepthStencilState = "DepthStencilNoZWrite"
+	Defines = { "ANIMATE_UV" "ANIMATE_UV_ALPHA" "USE_NORMALMAP_AS_ALPHA" "ANIMATE_UV_UP" "DISSOLVE" }
+}
+
 Effect PdxMeshAlphaAdditiveAnimateUVAlphaSkinned
 {
 	VertexShader = "VertexPdxMeshStandardSkinned"
@@ -2198,6 +2183,13 @@ Effect PdxMeshAlphaAdditiveSkinnedShadow
 }
 
 Effect PdxMeshAlphaAdditiveAnimateUVShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshNoShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect PdxMeshAlphaAdditiveAnimateUVRippleShadow
 {
 	VertexShader = "VertexPdxMeshStandardShadow"
 	PixelShader = "PixelPdxMeshNoShadow"
@@ -2239,6 +2231,13 @@ Effect PdxMeshAlphaAdditiveAnimateUVNoDissolveSkinnedShadow
 }
 
 Effect PdxMeshAlphaAdditiveAnimateUVAlphaShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshNoShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect PdxMeshAlphaAdditiveAnimateUVAlphaMapUpShadow
 {
 	VertexShader = "VertexPdxMeshStandardShadow"
 	PixelShader = "PixelPdxMeshNoShadow"
@@ -2400,28 +2399,28 @@ Effect PdxMeshTerra
 {
 	VertexShader = "VertexPdxMeshStandard"
 	PixelShader = "PixelPdxMeshStandard"
-	Defines = { "ADD_COLOR" "EMISSIVE"  }
+	Defines = { "EMISSIVE" }
 }
 
 Effect PdxMeshTerraSkinned
 {
 	VertexShader = "VertexPdxMeshStandardSkinned"
 	PixelShader = "PixelPdxMeshStandard"
-	Defines = { "ADD_COLOR" "EMISSIVE" }
+	Defines = { "EMISSIVE" }
 }
 
 Effect PdxMeshTerraEmissiveMask
 {
 	VertexShader = "VertexPdxMeshStandard"
 	PixelShader = "PixelPdxMeshStandard"
-	Defines = { "ADD_COLOR" "EMISSIVE" "USE_EMPIRE_COLOR_MASK_FOR_EMISSIVE" }
+	Defines = { "EMISSIVE" "USE_EMPIRE_COLOR_MASK_FOR_EMISSIVE" }
 }
 
 Effect PdxMeshTerraEmissiveMaskSkinned
 {
 	VertexShader = "VertexPdxMeshStandardSkinned"
 	PixelShader = "PixelPdxMeshStandard"
-	Defines = { "ADD_COLOR" "EMISSIVE" "USE_EMPIRE_COLOR_MASK_FOR_EMISSIVE" }
+	Defines = { "EMISSIVE" "USE_EMPIRE_COLOR_MASK_FOR_EMISSIVE" }
 }
 
 Effect PdxMeshTerraAlphaBlend
@@ -2546,7 +2545,6 @@ Effect AlphaBlendNoDepth_00ConstructionAlphaBlendSkinned
 	defines = { BLEND_TO_DIFFUSE_ALPHA }
 }
 
-
 Effect PdxMeshTerraAlphaTest
 {
 	VertexShader = "VertexPdxMeshStandard"
@@ -2615,6 +2613,13 @@ Effect PdxMeshPlanetEmissiveSkinned
 	VertexShader = "VertexPdxMeshStandardSkinned"
 	PixelShader = "PixelPdxMeshStandard"
 	Defines = { "IS_PLANET" "NO_PLANET_EMISSIVE" "EMISSIVE"  }
+}
+
+Effect PdxMeshPlanetEmissiveWithLights
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelPdxMeshStandard"
+	Defines = { "IS_PLANET" "PLANET_LIGHTS_EMISSIVE" "EMISSIVE" }
 }
 
 Effect PdxMeshPlanetRings
@@ -2719,6 +2724,14 @@ Effect PdxMeshClouds
 	Defines = { "IS_PLANET" "IS_CLOUDS"  }
 }
 
+Effect PdxMeshRingworldClouds
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelPdxMeshStandard"
+	BlendState = "BlendStateAlphaBlend"
+	Defines = { "IS_CLOUDS" }
+}
+
 Effect PdxMeshCloudsSkinned
 {
 	VertexShader = "VertexPdxMeshStandardSkinned"
@@ -2726,22 +2739,58 @@ Effect PdxMeshCloudsSkinned
 	BlendState = "BlendStateAlphaBlend";
 	Defines = { "IS_PLANET" "IS_CLOUDS"  }
 }
+
+Effect PdxMeshRingworldCloudsSkinned
+{
+	VertexShader = "VertexPdxMeshStandardSkinned"
+	PixelShader = "PixelPdxMeshStandard"
+	BlendState = "BlendStateAlphaBlend";
+	Defines = { "IS_CLOUDS"  }
+}
+
 Effect PdxMeshCloudsConstruction
 {
 	VertexShader = "VertexPdxMeshStandard"
 	PixelShader = "PixelPdxMeshInvisible"
 }
+
+Effect PdxMeshRingworldCloudsConstruction
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelPdxMeshInvisible"
+}
+
 Effect PdxMeshCloudsConstructionSkinned
 {
 	VertexShader = "VertexPdxMeshStandardSkinned"
 	PixelShader = "PixelPdxMeshInvisible"
 }
+
+Effect PdxMeshRingworldCloudsConstructionSkinned
+{
+	VertexShader = "VertexPdxMeshStandardSkinned"
+	PixelShader = "PixelPdxMeshInvisible"
+}
+
 Effect PdxMeshCloudsConstructionAlphaBlend
 {
 	VertexShader = "VertexPdxMeshStandard"
 	PixelShader = "PixelPdxMeshInvisible"
 }
+
+Effect PdxMeshRingworldCloudsConstructionAlphaBlend
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelPdxMeshInvisible"
+}
+
 Effect PdxMeshCloudsConstructionAlphaBlendSkinned
+{
+	VertexShader = "VertexPdxMeshStandardSkinned"
+	PixelShader = "PixelPdxMeshInvisible"
+}
+
+Effect PdxMeshRingworldCloudsConstructionAlphaBlendSkinned
 {
 	VertexShader = "VertexPdxMeshStandardSkinned"
 	PixelShader = "PixelPdxMeshInvisible"
@@ -2774,6 +2823,20 @@ Effect PdxMeshAstralRiftSkinned
 {
 	VertexShader = "VertexPdxMeshStandardSkinned"
 	PixelShader = "PixelPdxMeshAstralRift"
+	BlendState = "BlendStateAlphaBlend";
+}
+
+Effect PdxMeshGravitySnare
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelPdxMeshGravitySnare"
+	BlendState = "BlendStateAlphaBlend";
+}
+
+Effect PdxMeshGravitySnareSkinned
+{
+	VertexShader = "VertexPdxMeshStandardSkinned"
+	PixelShader = "PixelPdxMeshGravitySnare"
 	BlendState = "BlendStateAlphaBlend";
 }
 
@@ -2817,6 +2880,46 @@ Effect PdxMeshPortraitSkinned
 	BlendState = "BlendStateAlphaBlendWriteAlpha";
 	DepthStencilState = "DepthStencilNoZ"
 	RasterizerState = "RasterizerStateNoCulling"
+}
+
+Effect PdxMeshPortraitHueShift
+{
+	VertexShader = "VertexPdxMeshPortraitStandard"
+	PixelShader = "PixelPdxMeshPortrait"
+	BlendState = "BlendStateAlphaBlendWriteAlpha";
+	DepthStencilState = "DepthStencilNoZ"
+	RasterizerState = "RasterizerStateNoCulling"
+	Defines = { "HUE_SHIFT" }
+}
+
+Effect PdxMeshPortraitHueShiftSkinned
+{
+	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
+	PixelShader = "PixelPdxMeshPortrait"
+	BlendState = "BlendStateAlphaBlendWriteAlpha";
+	DepthStencilState = "DepthStencilNoZ"
+	RasterizerState = "RasterizerStateNoCulling"
+	Defines = { "HUE_SHIFT" }
+}
+
+Effect PdxMeshPortraitHueShiftMasked
+{
+	VertexShader = "VertexPdxMeshPortraitStandard"
+	PixelShader = "PixelPdxMeshPortrait"
+	BlendState = "BlendStateAlphaBlendWriteAlpha";
+	DepthStencilState = "DepthStencilNoZ"
+	RasterizerState = "RasterizerStateNoCulling"
+	Defines = { "HUE_SHIFT" "USE_HUE_SHIFT_MASK" }
+}
+
+Effect PdxMeshPortraitHueShiftMaskedSkinned
+{
+	VertexShader = "VertexPdxMeshPortraitStandardSkinned"
+	PixelShader = "PixelPdxMeshPortrait"
+	BlendState = "BlendStateAlphaBlendWriteAlpha";
+	DepthStencilState = "DepthStencilNoZ"
+	RasterizerState = "RasterizerStateNoCulling"
+	Defines = { "HUE_SHIFT" "USE_HUE_SHIFT_MASK" }
 }
 
 Effect PdxMeshPortraitClothes
@@ -3037,6 +3140,13 @@ Effect PdxMeshPlanetEmissiveShadow
 	Defines = { "IS_SHADOW" "IS_PLANET" }
 }
 
+Effect PdxMeshPlanetEmissiveWithLightsShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" "IS_PLANET" }
+}
+
 Effect PdxMeshPlanetEmissiveSkinnedShadow
 {
 	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
@@ -3126,11 +3236,25 @@ Effect PdxMeshCloudsShadow
 	Defines = { "IS_SHADOW" "IS_PLANET" "IS_CLOUDS" }
 }
 
+Effect PdxMeshRingworldCloudsShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" "IS_CLOUDS" }
+}
+
 Effect PdxMeshCloudsSkinnedShadow
 {
 	VertexShader = "VertexPdxMeshStandardShadow"
 	PixelShader = "PixelPdxMeshStandardShadow"
 	Defines = { "IS_SHADOW" "IS_PLANET" "IS_CLOUDS" }
+}
+
+Effect PdxMeshRingworldCloudsSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" "IS_CLOUDS" }
 }
 
 Effect PdxMeshRingsShadow
@@ -3155,6 +3279,20 @@ Effect PdxMeshAstralRiftShadow
 }
 
 Effect PdxMeshAstralRiftSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect PdxMeshGravitySnareShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect PdxMeshGravitySnareSkinnedShadow
 {
 	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
 	PixelShader = "PixelPdxMeshStandardShadow"
@@ -3227,7 +3365,35 @@ Effect PdxMeshPortraitShadow
 
 Effect PdxMeshPortraitSkinnedShadow
 {
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect PdxMeshPortraitHueShiftShadow
+{
 	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect PdxMeshPortraitHueShiftSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect PdxMeshPortraitHueShiftMaskedShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect PdxMeshPortraitHueShiftMaskedSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
 	PixelShader = "PixelPdxMeshStandardShadow"
 	Defines = { "IS_SHADOW" }
 }
@@ -3241,7 +3407,7 @@ Effect PdxMeshPortraitClothesShadow
 
 Effect PdxMeshPortraitClothesSkinnedShadow
 {
-	VertexShader = "VertexPdxMeshStandardShadow"
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
 	PixelShader = "PixelPdxMeshStandardShadow"
 	Defines = { "IS_SHADOW" }
 }
@@ -3255,7 +3421,7 @@ Effect PdxMeshPortraitHairShadow
 
 Effect PdxMeshPortraitHairSkinnedShadow
 {
-	VertexShader = "VertexPdxMeshStandardShadow"
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
 	PixelShader = "PixelPdxMeshStandardShadow"
 	Defines = { "IS_SHADOW" }
 }
@@ -3269,7 +3435,7 @@ Effect PdxMeshFrontendBackgroundShadow
 
 Effect PdxMeshFrontendBackgroundSkinnedShadow
 {
-	VertexShader = "VertexPdxMeshStandardShadow"
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
 	PixelShader = "PixelPdxMeshStandardShadow"
 	Defines = { "IS_SHADOW" }
 }
@@ -3283,7 +3449,7 @@ Effect PdxMeshSimpleShadow
 
 Effect PdxMeshSimpleSkinnedShadow
 {
-	VertexShader = "VertexPdxMeshStandardShadow"
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
 	PixelShader = "PixelPdxMeshStandardShadow"
 	Defines = { "IS_SHADOW" }
 }
@@ -3551,11 +3717,13 @@ Effect PdxMeshReanimatedLeviathan
 {
 	VertexShader = "VertexPdxMeshStandard"
 	PixelShader = "PixelPdxMeshReanimatedLeviathan"
+	Defines = { "APPLY_EMISSIVE_TO_ALPHA" }
 }
 
 Effect PdxMeshReanimatedLeviathanSkinned {
 	VertexShader = "VertexPdxMeshStandardSkinned"
 	PixelShader = "PixelPdxMeshReanimatedLeviathan"
+	Defines = { "APPLY_EMISSIVE_TO_ALPHA" }
 }
 
 Effect PdxMeshReanimatedLeviathanShadow
@@ -3569,6 +3737,35 @@ Effect PdxMeshReanimatedLeviathanSkinnedShadow
 {
 	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
 	PixelShader = "PixelPdxMeshStandardShadow"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect PdxMeshReanimatedLeviathanAlpha
+{
+	VertexShader = "VertexPdxMeshStandard"
+	PixelShader = "PixelPdxMeshReanimatedLeviathan"
+	BlendState = "BlendStateAlphaBlend"
+}
+
+Effect PdxMeshReanimatedLeviathanAlphaSkinned {
+	VertexShader = "VertexPdxMeshStandardSkinned"
+	PixelShader = "PixelPdxMeshReanimatedLeviathan"
+	BlendState = "BlendStateAlphaBlend"
+}
+
+Effect PdxMeshReanimatedLeviathanAlphaShadow
+{
+	VertexShader = "VertexPdxMeshStandardShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	BlendState = "BlendStateAlphaBlend"
+	Defines = { "IS_SHADOW" }
+}
+
+Effect PdxMeshReanimatedLeviathanAlphaSkinnedShadow
+{
+	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
+	PixelShader = "PixelPdxMeshStandardShadow"
+	BlendState = "BlendStateAlphaBlend"
 	Defines = { "IS_SHADOW" }
 }
 
@@ -4041,10 +4238,8 @@ Effect AlphaBlendNoDepthSkinnedShadow
 {
 	VertexShader = "VertexPdxMeshStandardSkinnedShadow"
 	PixelShader = "PixelPdxMeshStandardShadow"
-	Defines = { "IS_SHADOW" }
-}
-
-##### BTR SHADERS START HERE #####
+	Defines = { "IS_SHADOW" }						   
+}															 
 
 Effect OmniMeshShip
 {

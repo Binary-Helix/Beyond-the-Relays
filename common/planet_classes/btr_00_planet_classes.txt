@@ -56,16 +56,11 @@
 # Dry
 pc_desert = {
 	entity = "desert_planet"
+	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_desert
 
 	climate = "dry"
 	initial = yes
-
-	auto_trait_prio = {
-		trait_auto_dry_preference
-	}
-
-	entity_scale = @planet_standard_scale
 
 	atmosphere_color		= hsv { 0.50 0.2 0.8 }
 	atmosphere_intensity	= 1.0
@@ -102,10 +97,6 @@ pc_arid = {
 	climate = "dry"
 	initial = yes
 
-	auto_trait_prio = {
-		trait_auto_dry_preference
-	}
-
 	atmosphere_color		= hsv { 0.50 0.3 0.7 }
 	atmosphere_intensity	= 1.0
 	atmosphere_width		= 0.5
@@ -123,6 +114,7 @@ pc_arid = {
 
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
 	colonizable = yes
 	district_set = standard
 	uses_alternative_skies_for_moons = yes
@@ -138,10 +130,6 @@ pc_savannah = {
 
 	climate = "dry"
 	initial = yes
-
-	auto_trait_prio = {
-		trait_auto_dry_preference
-	}
 
 	atmosphere_color		= hsv { 0.50 0.3 0.7 }
 	atmosphere_intensity	= 1.0
@@ -160,6 +148,7 @@ pc_savannah = {
 
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
 	colonizable = yes
 	district_set = standard
 	uses_alternative_skies_for_moons = yes
@@ -176,10 +165,6 @@ pc_tropical = {
 
 	climate = "wet"
 	initial = yes
-
-	auto_trait_prio = {
-		trait_auto_wet_preference
-	}
 
 	atmosphere_color		= hsv { 0.58	0.3 0.7 }
 	atmosphere_intensity	= 1.0
@@ -198,6 +183,42 @@ pc_tropical = {
 
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
+	colonizable = yes
+	district_set = standard
+	uses_alternative_skies_for_moons = yes
+	uses_alternative_skies_if_has_orbital_ring = yes
+
+	carry_cap_per_free_district = @carry_cap_normal
+}
+
+pc_swamp = {
+	entity = "swamp_planet"
+	icon = GFX_planet_type_swamp
+	picture = pc_swamp
+	climate = "wet"
+	initial = yes
+
+	entity_scale = @planet_standard_scale
+
+	atmosphere_color 		= hsv { 0.58 0.3 0.7 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+
+	min_distance_from_sun = @habitable_min_distance
+	max_distance_from_sun = @habitable_max_distance
+	spawn_odds = @habitable_spawn_odds
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_tropical.dds"
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0.2
+
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
 	colonizable = yes
 	district_set = standard
 	uses_alternative_skies_for_moons = yes
@@ -213,10 +234,6 @@ pc_continental = {
 
 	climate = "wet"
 	initial = yes
-
-	auto_trait_prio = {
-		trait_auto_wet_preference
-	}
 
 	atmosphere_color		= hsv { 0.59 0.45 0.95 }
 	atmosphere_intensity	= 1.0
@@ -236,6 +253,7 @@ pc_continental = {
 
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
 	colonizable = yes
 	district_set = standard
 	uses_alternative_skies_for_moons = no
@@ -251,10 +269,6 @@ pc_ocean = {
 
 	climate = "wet"
 	initial = yes
-
-	auto_trait_prio = {
-		trait_auto_wet_preference
-	}
 
 	atmosphere_color		= hsv { 0.58 0.5 0.9 }
 	atmosphere_intensity	= 1.0
@@ -273,6 +287,7 @@ pc_ocean = {
 
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
 	colonizable = yes
 	district_set = standard
 	uses_alternative_skies_for_moons = yes
@@ -289,10 +304,6 @@ pc_tundra = {
 
 	climate = "cold"
 	initial = yes
-
-	auto_trait_prio = {
-		trait_auto_cold_preference
-	}
 
 	atmosphere_color		= hsv { 0.58 0.3 0.8 }
 	atmosphere_intensity	= 1.0
@@ -327,10 +338,6 @@ pc_arctic = {
 	climate = "cold"
 	initial = yes
 
-	auto_trait_prio = {
-		trait_auto_cold_preference
-	}
-
 	atmosphere_color		= hsv { 0.48 0.15 0.8 }
 	atmosphere_intensity	= 1.0
 	atmosphere_width		= 0.5
@@ -348,6 +355,7 @@ pc_arctic = {
 
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
 	colonizable = yes
 	district_set = standard
 	uses_alternative_skies_for_moons = yes
@@ -363,10 +371,6 @@ pc_alpine = {
 
 	climate = "cold"
 	initial = yes
-
-	auto_trait_prio = {
-		trait_auto_cold_preference
-	}
 
 	atmosphere_color		= hsv { 0.48 0.15 0.8 }
 	atmosphere_intensity	= 1.0
@@ -423,6 +427,7 @@ pc_gas_giant = {
 	production_spawn_chance = 0.5
 
 	space_monster_target = yes
+
 	colonizable = no
 }
 
@@ -504,6 +509,7 @@ pc_molten = {
 	extra_planet_count = 0
 
 	chance_of_ring = 0
+
 	planet_size = { min = 14 max = 30 }
 	moon_size = { min = 6 max = 12 }
 
@@ -530,6 +536,7 @@ pc_barren = {
 
 	planet_size = { min = 12 max = 30 }
 	moon_size = { min = 6 max = 10 }
+
 	colonizable = no
 }
 
@@ -553,6 +560,7 @@ pc_barren_cold = {
 
 	planet_size = { min = 12 max = 30 }
 	moon_size = { min = 6 max = 10 }
+
 	colonizable = no
 }
 
@@ -577,6 +585,7 @@ pc_toxic = {
 
 	planet_size = { min = 12 max = 25 }
 	moon_size = { min = 6 max = 10 }
+
 	colonizable = no
 	show_city = no
 }
@@ -601,6 +610,7 @@ pc_frozen = {
 
 	planet_size = { min = 10 max = 25 }
 	moon_size = { min = 6 max = 10 }
+
 	colonizable = no
 }
 
@@ -612,10 +622,6 @@ pc_nuked = {
 	entity = "nuked_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_nuked
-
-	auto_trait_prio = {
-		trait_auto_pc_nuked_preference
-	}
 
 	atmosphere_color		= hsv { 0.6 0.4 0.5 }
 	atmosphere_intensity	= 1.0
@@ -635,6 +641,7 @@ pc_nuked = {
 
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
 	starting_planet = yes
 	colonizable = yes
 	district_set = standard
@@ -661,9 +668,8 @@ pc_hive = {
 
 	modifier = {
 		planet_jobs_produces_mult = 0.10
-		planet_max_buildings_add = 12
-		job_spawning_drone_add = 1
 		planet_resettlement_unemployed_destination_mult = 0.5
+		pop_environment_tolerance = 1.0
 	}
 
 	spawn_odds = 0
@@ -675,6 +681,7 @@ pc_hive = {
 
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
 	colonizable = yes
 	district_set = hive_world
 	ideal = yes
@@ -706,8 +713,6 @@ pc_machine = {
 		planet_jobs_produces_mult = 0.10
 		pop_housing_usage_mult = -0.10
 		pop_environment_tolerance = 0.0
-		planet_max_buildings_add = 12
-		job_replicator_add = 1
 		planet_resettlement_unemployed_destination_mult = 0.5
 	}
 
@@ -720,6 +725,7 @@ pc_machine = {
 
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
 	colonizable = yes
 	district_set = machine_world
 	starting_planet = no
@@ -869,10 +875,6 @@ pc_gaia = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_gaia
 
-	auto_trait_prio = {
-		trait_auto_pc_gaia_preference
-	}
-
 	atmosphere_color		= hsv { 0.58	0.3 0.7 }
 	atmosphere_intensity	= 1.0
 	atmosphere_width		= 0.5
@@ -1004,11 +1006,15 @@ pc_ringworld_habitable = {
 	is_artificial_planet = yes
 	uses_alternative_skies_for_moons = yes
 
-	modifier = {
-		planet_max_buildings_add = 12
-		planet_resettlement_unemployed_destination_mult = 0.5
+	auto_trait_prio = {
+		trait_auto_pc_ringworld_habitable_preference
 	}
-	spawn_odds = 0
+
+	modifier = {
+		planet_resettlement_unemployed_destination_mult = 0.5
+		pop_environment_tolerance = 1.0
+	}
+
 	carry_cap_per_free_district = @carry_cap_high
 }
 
@@ -1032,7 +1038,6 @@ pc_ringworld_habitable_damaged = {
 	moon_size = 1
 	colonizable = no
 	orbit_lines = no
-	spawn_odds = 0
 }
 
 pc_ringworld_tech = {
@@ -1055,7 +1060,6 @@ pc_ringworld_tech = {
 	moon_size = 1
 	colonizable = no
 	orbit_lines = no
-	spawn_odds = 0
 	is_artificial_planet = yes
 }
 
@@ -1079,7 +1083,6 @@ pc_ringworld_tech_damaged = {
 	moon_size = 1
 	colonizable = no
 	orbit_lines = no
-	spawn_odds = 0
 	is_artificial_planet = yes
 
 }
@@ -1104,7 +1107,6 @@ pc_ringworld_seam = {
 	moon_size = 1
 	colonizable = no
 	orbit_lines = no
-	spawn_odds = 0
 	is_artificial_planet = yes
 
 }
@@ -1129,7 +1131,6 @@ pc_ringworld_seam_damaged = {
 	moon_size = 1
 	colonizable = no
 	orbit_lines = no
-	spawn_odds = 0
 	is_artificial_planet = yes
 
 }
@@ -1157,7 +1158,6 @@ pc_shattered_ring_habitable = {
 	district_set = shattered_ring_world
 	ideal = yes
 	starting_planet = no
-	spawn_odds = 0
 	orbit_lines = no
 	has_colonization_influence_cost = no		# applies when within own borders
 
@@ -1192,6 +1192,7 @@ pc_habitat = {
 	moon_size = 1
 	colonizable = yes
 	district_set = habitat
+	starting_district = district_hab_housing
 	#	ideal = yes
 	starting_planet = yes
 	orbit_lines = no
@@ -1229,7 +1230,7 @@ pc_cosmogenesis_world = {
 	moon_size = 1
 	colonizable = yes
 	district_set = cosmogenesis_world
-	building_set = cosmogenesis_world
+	starting_district = district_cosmogenesis_goverment
 	#holdings = no
 	#ideal = yes
 	starting_planet = no
@@ -1242,7 +1243,7 @@ pc_cosmogenesis_world = {
 
 	modifier = {
 		pop_environment_tolerance = 0.85
-		pop_growth_speed = -1.0
+		logistic_growth_mult = -1.0
 		planet_crime_mult = -1
 	}
 
@@ -1269,6 +1270,7 @@ pc_shrouded = {
 
 	planet_size = { min = 10 max = 25 }
 	moon_size = { min = 6 max = 10 }
+
 	colonizable = no
 }
 
@@ -1288,6 +1290,7 @@ pc_broken = {
 
 	planet_size = { min = 12 max = 30 }
 	moon_size = { min = 6 max = 10 }
+
 	colonizable = no
 }
 
@@ -1307,6 +1310,7 @@ pc_shattered = {
 
 	planet_size = { min = 12 max = 30 }
 	moon_size = { min = 6 max = 10 }
+
 	colonizable = no
 }
 
@@ -1413,3 +1417,5 @@ random_list = {
 		"pc_broken"
 	}
 }
+
+#TODO: Tidally Locked Worlds

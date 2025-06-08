@@ -1,0 +1,118 @@
+#####################
+### EXOTIC WORLDS ###
+#####################
+
+pc_chlorine = {
+	entity = "chlorine_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_chlorine
+	#appearance
+	picture = pc_chlorine
+	atmosphere_color 		= hsv { 0.50 0.2 0.8 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_savannah.dds"
+	#planet defines
+	climate = "exotic"
+	colonizable = yes
+	initial = yes
+	#colonization_tech = { }
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	district_set = standard
+	carry_cap_per_free_district = @carry_cap_normal
+	starting_planet = no
+	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
+}
+
+pc_methane = {
+	entity = "methane_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_methane
+	#appearance
+	picture = pc_methane
+	atmosphere_color 		= hsv { 0.50 0.2 0.8 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_savannah.dds"
+	#planet defines
+	climate = "exotic"
+	colonizable = yes
+	initial = yes
+	#colonization_tech = { }
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	district_set = standard
+	carry_cap_per_free_district = @carry_cap_normal
+	starting_planet = no
+	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
+}
+
+pc_ammonia = {
+	entity = "ammonia_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_ammonia
+	#appearance
+	picture = pc_ammonia
+	atmosphere_color 		= hsv { 0.50 0.2 0.8 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_savannah.dds"
+	#planet defines
+	climate = "exotic"
+	colonizable = yes
+	initial = yes
+	#colonization_tech = { }
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	district_set = standard
+	carry_cap_per_free_district = @carry_cap_normal
+	starting_planet = no
+	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
+}
+
+pc_mephitic = {
+	entity = "mephitic_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_mephitic
+	#appearance
+	picture = pc_mephitic
+	atmosphere_color 		= hsv { 0.50 0.2 0.8 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_savannah.dds"
+	#planet defines
+	climate = "exotic"
+	colonizable = yes
+	initial = yes
+	#colonization_tech = { }
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	district_set = standard
+	carry_cap_per_free_district = @carry_cap_normal
+	starting_planet = no
+	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
+}
+
+pc_primal = {
+	entity = "primal_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_primal
+	#appearance
+	picture = pc_methane
+	atmosphere_color 		= hsv { 0.50 0.2 0.8 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_savannah.dds"
+	#planet defines
+	climate = "exotic"
+	colonizable = yes
+	initial = yes
+	#colonization_tech = { }
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	district_set = standard
+	carry_cap_per_free_district = @carry_cap_normal
+	starting_planet = no
+	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
+}
