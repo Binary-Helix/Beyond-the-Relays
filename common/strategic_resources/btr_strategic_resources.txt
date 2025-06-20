@@ -1,0 +1,334 @@
+###########################
+### BTR Basic Resources ###
+###########################
+
+#Light Metals
+beryllium = {
+	tradable = yes
+	category = basic
+	market_amount = 75
+	market_price = 100
+	max = 15000
+
+	deficit_situation = situation_beryllium_deficit
+	deficit_trade_conversion_mult = -0.125
+
+	culling_conversion_value = 1
+
+	ai_weight = {
+		weight = 1
+	}
+
+	ai_wants = {
+		base = 1000
+	}
+}
+
+lithium = {
+	tradable = yes
+	category = basic
+	market_amount = 75
+	market_price = 100
+	max = 15000
+
+	deficit_situation = situation_lithium_deficit
+	deficit_trade_conversion_mult = -0.125
+
+	culling_conversion_value = 1
+
+	ai_weight = {
+		weight = 1
+	}
+
+	ai_wants = {
+		base = 1000
+	}
+}
+
+titanium = {
+	tradable = yes
+	category = basic
+	market_amount = 75
+	market_price = 100
+	max = 15000
+
+	deficit_situation = situation_titanium_deficit
+	deficit_trade_conversion_mult = -0.125
+
+	culling_conversion_value = 1
+
+	ai_weight = {
+		weight = 1
+	}
+
+	ai_wants = {
+		base = 1000
+	}
+}
+
+#Heavy Metals
+iridium = {
+	tradable = yes
+	category = basic
+	market_amount = 50
+	market_price = 100
+	max = 15000
+
+	deficit_situation = situation_iridium_deficit
+	deficit_trade_conversion_mult = -0.125
+
+	culling_conversion_value = 1
+
+	ai_weight = {
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 1000
+	}
+}
+
+palladium = {
+	tradable = yes
+	category = basic
+	market_amount = 50
+	market_price = 100
+	max = 15000
+
+	deficit_situation = situation_palladium_deficit
+	deficit_trade_conversion_mult = -0.125
+
+	culling_conversion_value = 1
+
+	ai_weight = {
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 1000
+	}
+}
+
+platinum = {
+	tradable = yes
+	category = basic
+	market_amount = 50
+	market_price = 100
+	max = 15000
+
+	deficit_situation = situation_platinum_deficit
+	deficit_trade_conversion_mult = -0.125
+
+	culling_conversion_value = 1
+
+	ai_weight = {
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 1000
+	}
+}
+
+helium_3 = {
+	tradable = yes
+	category = basic
+	market_amount = 50
+	market_price = 100
+	max = 15000
+
+	deficit_situation = situation_helium_3_deficit
+	deficit_trade_conversion_mult = -0.125
+
+	culling_conversion_value = 1
+
+	ai_weight = {
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 1000
+	}
+}
+
+hydrogen = {
+	tradable = yes
+	category = basic
+	market_amount = 50
+	market_price = 100
+	max = 15000
+
+	deficit_situation = situation_hydrogen_deficit
+	deficit_trade_conversion_mult = -0.125
+
+	culling_conversion_value = 1
+
+	ai_weight = {
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 1000
+	}
+}
+
+##############################
+### BTR Advanced Resources ###
+##############################
+
+# Light Metals
+light_metals = {
+	tradable = yes
+	category = advanced
+	market_amount = 50
+	market_price = 100
+	max = 15000
+
+	deficit_situation = situation_light_metals_deficit
+	deficit_trade_conversion_mult = -0.50
+
+	culling_conversion_value = 4
+
+	ai_weight = {
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 500
+	}
+}
+
+# Heavy Metals
+heavy_metals = {
+	tradable = yes
+	category = advanced
+	market_amount = 25
+	market_price = 100
+	max = 15000
+
+	deficit_situation = situation_heavy_metals_deficit
+	deficit_trade_conversion_mult = -0.50
+
+	culling_conversion_value = 4
+
+	ai_weight = {
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 500
+	}
+}
+
+# Antimatter Fuel
+antimatter_fuel = {
+	tradable = yes
+	category = advanced
+	market_amount = 25
+	market_price = 100
+	max = 15000
+
+	deficit_situation = situation_antimatter_fuel_deficit
+	deficit_trade_conversion_mult = -0.50
+
+	culling_conversion_value = 4
+
+	ai_weight = {
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 500
+	}
+}
+
+###########################
+###	BTR Rare Resources	###
+###########################
+
+uranium = {
+	tradable = yes
+	category = strategic
+	market_amount = 50
+	market_price = 100
+	max = 15000
+
+	deficit_situation = situation_uranium_deficit
+	deficit_trade_conversion_mult = -1.25
+
+	culling_conversion_value = 7
+
+	ai_weight = {
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 10
+	}
+}
+
+# Element Zero
+eezo = {
+	tradable = yes
+	category = strategic
+	max = 15000
+
+	deficit_situation = situation_eezo_deficit
+	deficit_trade_conversion_mult = -2.5
+
+	culling_conversion_value = 20
+
+	ai_weight = {
+		weight = 100
+	}
+
+	ai_wants = {
+		base = 10
+	}
+}
+
+#############################
+### Exceptional Materials ###
+#############################
+
+# Prothean Artifacts
+prothean_artifacts = {
+	tradable = yes
+	category = rare
+	max = 3000
+	fixed_max_amount = yes
+
+	deficit_trade_conversion_mult = -0.50
+
+	culling_conversion_value = 10
+
+	ai_weight = {
+		weight = 100
+	}
+
+	ai_wants = {
+		base = 5
+	}
+}
+
+# Reaper Artifacts
+reaper_artifacts = {
+	tradable = no
+	category = rare
+	max = 500
+	fixed_max_amount = yes
+
+	deficit_trade_conversion_mult = -0.50
+
+	culling_conversion_value = 10
+
+	ai_weight = {
+		weight = 100
+	}
+
+	ai_wants = {
+		base = 5
+	}
+}
+
+#TODO: Reaper Indoctrination scored similarly to Menace, also create Reaper Artifact resource
