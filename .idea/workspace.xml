@@ -5,32 +5,403 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08664527-6757-472e-b0f6-9970e531260c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/asteroid_belts/btr_asteroid_belts.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/deposits/01_orbital_deposits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/deposits/01_planetary_deposits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/deposits/02_sr_deposits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/deposits/btr_01_orbital_deposits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/deposits/btr_01_planetary_deposits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/deposits/btr_02_sr_deposits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/deposits/btr_empire_planetary_blockers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/deposits/btr_empire_planetary_features.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/deposits/btr_orbital_deposits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/deposits/btr_standard_planetary_deposits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/deposits/btr_unique_planetary_features.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/planet_modifiers/btr_map_planet_modifiers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/scripted_triggers/btr_map_scripted_triggers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/solar_system_initializers/canon/00_attican_traverse_initializers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/solar_system_initializers/canon/01_citadel_space_initializers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/solar_system_initializers/canon/02_skyllian_verge_initializers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/solar_system_initializers/canon/03_terminus_systems_initializers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/solar_system_initializers/canon/04_miscellaneous_system_initializers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/static_modifiers/btr_map_static_modifiers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/strategic_resources/00_strategic_resources.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/strategic_resources/btr_00_strategic_resources.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/strategic_resources/btr_strategic_resources.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/english/btr_initializers_l_english.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/localisation/english/btr_planet_names_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_OLD/localisation/english/btr_initializers_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_OLD/localisation/english/btr_megastructures_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_OLD/localisation/english/btr_planet_names_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_acidic_sinkhole.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_ammonia_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_angels_valley.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_arborary_oasis.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_asteroid_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_barren_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_barren_cold_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_bellowing_rainforest.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_bleeding_volcano.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_blue_zone.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_boreal_megafauna.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_bottomless_mud_lakes.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_bountiful_valley.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_broken_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_broken_cold_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_bubbling_sea.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_bumping_rocks.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_buried_ruins.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_caleston_catacombs.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_caleston_central_admin_plaza.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_caleston_charred_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_caleston_magma_wastes.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_caleston_spatium_foram.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_caustic_vents.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_chlorine_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_citadel_csec.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_citadel_huerta_memorial_hospital.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_citadel_joint_research_division.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_citadel_keeper_workshops.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_citadel_presidium.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_citadel_purgatory_bar.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_citadel_tower.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_citadel_wards.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_collector_consumption_chambers.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_collector_deconstruction_bays.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_colorful_seasons.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_cooperative_weather.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_creeping_tendrils.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_cronos_cerberus_news_network.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_cronos_combat_labs.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_cronos_hydroponics_bays.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_cronos_inner_sanctum.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_cronos_luxury_accommodations.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_cronos_reactor.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_cronos_science_labs.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_cryogazers_valley.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_crystal_asteroid_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_cumulus_plains.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_dead_centre.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_deadly_clouds.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_deaths_plateau.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_dekuuna_dispersed_settlements.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_dekuuna_environmental_law.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_dekuuna_forests.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_dekuuna_natural_sanctuaries.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_dekuuna_savannah_belt.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_dekuuna_sereuun_malvuon.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_dekuuna_unovasereng.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_desolate_slopes.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_diamond_cliff.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_disease_factory.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_duneless_sands.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_earth_alliance_courts.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_earth_alliance_land_grants.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_earth_atmospheric_purifiers.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_earth_deep_minerals.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_earth_east_african_sprawl.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_earth_london.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_earth_norsefire_geothermal_project.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_earth_sao_paulo_shipyards.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_earth_vila_militar.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_eezo_abundant.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_eezo_scarce.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_eezo_sinkhole.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_eezo_trace.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_empyrean_lakes.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_endless_mud.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_enigmatic_anomaly.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_eternal_storm.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_fairwinds_basin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_fire_rivers.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_frozen_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_fuming_hot_springs.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_gas_giant_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_geothermal_springs.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_ghosts.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_giants_eye.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_glowing_jungle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_grand_bay.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_great_blue_spot.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_great_crater.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_great_hunting_grounds.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_great_mystery_tree.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_great_place.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_great_sea.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_green_hell.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_green_ring.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_heart_of_grove.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_helium_clouds.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_hells_gate.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_heretic_datacore.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_heretic_geth_alcoves.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_heretic_geth_server_hubs.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_heretic_no_life_support.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_heretic_windowless.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_heshtok_inhospitable_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_heshtok_ocean_of_cinders.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_heshtok_stripped_fields.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_heshtok_tribal_settlements.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_heshtok_volcanic_treasures.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_hidden_treasures.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_holy_realm.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_hot_currents.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_hothouse_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_hydric_soil.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_hydrocarbon_deposits.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_ice_asteroid_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_ice_giant_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_illium_comfortable_poles.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_illium_nos_astra_metropolis.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_illium_saefos_valley.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_illium_trade_infrastructure.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_illium_young_colony.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_irune_ammonia_paradise.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_irune_central_bank.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_irune_grand_palace_assembly.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_irune_indefensible_cities.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_irune_lenos.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_jarrahe_research.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_jarrahe_vi.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_kahje_automated_defense_array.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_kahje_cnidaria_city.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_kahje_expansive_prothean_ruins.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_kahje_heavy_cloud_cover.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_kahje_mount_vassla.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_kahje_rasiil_life_dome.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_kharshan_batarian_state_arms_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_kharshan_dizesh_slave_market.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_kharshan_dostraz_agglomerate.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_kharshan_greboshts_public_works.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_kharshan_ignac_plains.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_kharshan_krudanzi_jungle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_kharshan_qnobis.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_lichen_trees.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_magma_lakes.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_majestic_reef.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_mammoth_cave.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_mars_archive.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_mars_farming_habitats.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_mars_lowell_city.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_mars_maxwell_mining_base.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_mars_olympus_mons.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_mars_tharsis_solar_arrays.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_mephitic_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_methane_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_mineral_rich_delta.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_misty_valley.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_molten_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_mysterious_site.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_mysterious_xenofacts.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_nanites_source.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_northern_highlands.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_noveria_peak_research_facility.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_noveria_port_hanshan.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_odd_life_forms.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_omega_afterlife.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_omega_carrd_district.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_omega_doru_district.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_omega_element_zero_refineries.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_omega_fumi_district.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_omega_gozu_district.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_omega_kenzo_district.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_omega_kima_district.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_omega_the_plague.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_omega_tuhi_district.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_omega_zeta_district.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_ore_rich_rings.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_organic_islands.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_palaven_bountiful_oceans.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_palaven_cipritine_sprawl.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_palaven_hot_spots.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_palaven_radiation.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_palaven_sercusium_river.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_palaven_temple_palaven_ruins.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_palaven_urcaveix_training_area.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_parnack_darlock_range.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_parnack_dartack_agglomerate.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_parnack_ipock_black_soil_plains.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_parnack_mapofter_industrial_parks.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_parnack_yockar_nuclear_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_polarizing_seasons.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_precious_rings.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_purple_haze.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_purple_heaven_arch.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rachni_nests.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rachni_origin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rainbow_lakes.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rakhana_dense_ruins.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rakhana_depleted_mining_tunnels.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rakhana_endless_desert.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rakhana_irradiated_ruins.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rakhana_metal_boneyards.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rannoch_ancestors_fleet.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rannoch_asteroid_mining_pads.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rannoch_consensus_core.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rannoch_geth_base.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rannoch_geth_factory.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rannoch_graveyard_homeworld.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rannoch_insect_free.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rannoch_quarian_ruins.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rannoch_southern_farmlands.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rannoch_tikkuns_embrace.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_regdika_main_industry_hub.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_regdika_mukiilak_ocean.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_regdika_natural_mines.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_regdika_surface_radiation_collector.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_regdika_underground_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_relic_valley.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_restricted_area.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_retinal_flora.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rich_regolith_formations.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rich_stones_area.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rolling_mists.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_sea_of_flames.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_sepkai_covert_infrastructure.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_sepkai_grand_temple.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_sepkai_mothers_hearth.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_sepkai_tomb_thirteen.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_sepkai_untouched_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_shifting_valley.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_shifty_cow.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_shifty_cow_2.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_sights_to_behold.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_sky_pillars.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_splintered_lands.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_standing_waters.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_stellarite_archway.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_storm_area.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_storm_eye.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_subterranean_ocean.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_surkesh_burngrass.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_surkesh_maint_beauty.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_surkesh_optim_energy.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_surkesh_parkan_research_institute.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_surkesh_stg_hq.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_surkesh_vast_wild.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_surkesh_wesbii_forest.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_territorial_thresher_maw.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thessia_askasian_mountains.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thessia_cresyl_plateau.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thessia_devastated_republic_yisrin.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thessia_eezo_deposits.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thessia_irssal_tea.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thessia_lifio_tidal_barrage.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thessia_nosdesera.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thessia_pulian_delta.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thessia_republic_armali.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thessia_senecan_lakes.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thessia_serrice_university.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thessia_thessia_net.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thessia_zalis_chemical_spill.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thessia_zalis_sea.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_thunderless.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_toxic_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_toxic_waters.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_trading_route.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_tuchanka_ancient_alien_occupation_sites.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_tuchanka_kradak_wastes.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_tuchanka_nakmor_rebuilt.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_tuchanka_nakmor_ruined.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_tuchanka_scars_of_rebellion.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_tuchanka_the_hollows.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_tuchanka_the_shroud.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_tuchanka_underground_tunnels.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_tuchanka_wasteland_plains.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_turvess_advanced_farming_industry.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_turvess_advanced_wind_farms.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_turvess_condensed_industrial_zones.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_turvess_ecological_preservation.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_turvess_heart_republic.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_unfinished_server_cores.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_unusual_formations.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_utukku_amphitheater_residential_chambers.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_utukku_deep_tunneling_mines.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_utukku_grounds_discovery.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_utukku_nurturing_halls_respite.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_vailing_arches.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_valley_of_100_volcanoes.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_venting_lake.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_vindicta_bella_saevix.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_vindicta_subterranean_generator_sites.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_vindicta_subterranean_mineral_deposits.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_vindicta_vallis_vetaxis.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_water_web.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_wild_thresher_maws.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_zro_source.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_btr_redsand_cost_mult.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_btr_redsand_produces_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_btr_redsand_produces_mult.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_btr_redsand_upkeep_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_btr_redsand_upkeep_mult.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_atmospheric_power_plant_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_crystal_mining_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_dark_matter_extractor_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_free_port_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_gas_refinery_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_geothermal_power_plant_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_helium_extractor_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_helium_mining_facility_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_hydrocarbon_power_plant_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_living_metal_processing_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_mining_bay_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_mining_complex_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_mote_mine_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_ore_processing_complex_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_zro_harvesting_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_adventurer_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_btr_redsand_antifarmer_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_btr_redsand_farmer_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_croupier_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_dark_matter_collector_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_dark_matter_collector_drone_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_docker_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_docking_drone_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_driller_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_driller_drone_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_free_trader_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_gladiator_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_guard_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_helium_extraction_drone_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_helium_extractor_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_living_metal_caster_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_living_metal_drone_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_logistic_drone_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_logistic_worker_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_nuclear_drone_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_nuclear_employee_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_prison_warden_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_prospector_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_racer_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_regolith_miner_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_regolith_miner_drone_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_tourist_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_zro_harvester_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_zro_harvesting_drone_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_antar_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_aquifer_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_atoll_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_badlands_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_basalt_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_biolum_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_bog_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_boreal_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_cascadian_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_cenote_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_coastal_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_coldocean_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_crag_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_cryovolcanic_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_dextro_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_dune_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_dust_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_forest_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_fungal_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_glacial_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_heightened_security.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_highland_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_hotocean_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_jungle_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_lake_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_lichen_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_mangrove_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_marsh_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_medit_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_mesa_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_mire_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_oasis_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_open_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_outback_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_planetary_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_political_persecution.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_prairie_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_retinal_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_snow_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_station_wreckage.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_steppe_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_storm_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_supercon_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_temperate_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_tempocean_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_veld_world.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/shifty_cow_death.dds" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/english/btr_planet_names_l_english.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/english/btr_planet_names_l_english.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,24 +430,24 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "herewegoagain",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/Repositories/btr_skunkworks/localisation/english",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2954023",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.rainbow.brackets.disable.when"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;herewegoagain&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Repositories/btr_skunkworks/localisation/english&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2954023&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.rainbow.brackets.disable.when&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Repositories\btr_skunkworks\localisation\english" />
