@@ -1,0 +1,76 @@
+tr_btr_cyberdreams_adoption = {
+    possible = {
+        has_origin = caleston_dir_origin
+    }
+    unlocks_agenda = agenda_cyberdreams
+    modifier = {
+        planet_amenities_add = 10
+        planet_pops_upkeep_mult = -0.5
+
+    }
+}
+
+tr_btr_cyberdreams_finish = {
+    modifier = {
+       planet_building_build_speed_mult = 0.1
+        starbase_upgrade_speed_mult = 0.15
+        starbase_upgrade_cost_mult = -0.1
+        ascension_perks_add = 1
+    }
+}
+
+tr_btr_cyberdreams_secret_sales = {
+    modifier = {
+        intel_decryption_add = 5
+        espionage_operation_skill_mult = 0.2
+    }
+}
+
+tr_btr_cyberdreams_mandatory_overtime = {
+    possible = {
+        has_tradition = tr_btr_cyberdreams_secret_sales
+    }
+    modifier = {
+        pop_cat_specialist_bonus_workforce_mult = 0.15
+        worker_and_simple_drone_cat_bonus_workforce_mult = 0.15
+     #   pop_category_specialists_produces_mult = 0.15
+      #  pop_category_worker_produces_mult = 0.15
+        pop_citizen_happiness = -0.05
+    }
+}
+
+tr_btr_cyberdreams_brand_sponsorship = {
+    possible = {
+        has_tradition = tr_btr_cyberdreams_secret_sales
+    }
+    modifier = {
+        job_politician_add = 100
+        planet_jobs_trade_produces_mult = 0.25
+       # pop_job_trade_mult = 0.25
+      #  trade_value_mult = 0.05
+      #  local_trade_protection_add = 5
+      #  starbase_trade_collection_range_add = 1
+       # country_base_influence_produces_add = -1
+    }
+}
+
+tr_btr_cyberdreams_prosperity_through_order = {
+    possible = { has_tradition = tr_btr_cyberdreams_mandatory_overtime }
+    modifier = {
+        job_enforcer_per_pop = 0.05
+        planet_enforcers_energy_upkeep_add = 2
+      #  planet_enforcer_energy_upkeep_add = 2
+    }
+}
+
+tr_btr_cyberdreams_untouchables = {
+    possible = { has_tradition = tr_btr_cyberdreams_brand_sponsorship }
+    modifier = {
+        leader_officials_unity_produces_add = 1
+        leader_officials_energy_upkeep_add = 5
+      #  leader_officals_unity_produces_add = 1
+      #  leader_officals_energy_upkeep_add = 5
+        pop_demotion_time_mult = 0.25
+        pop_cat_ruler_happiness = 0.5
+    }
+}
