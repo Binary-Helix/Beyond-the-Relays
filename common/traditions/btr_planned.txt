@@ -1,0 +1,103 @@
+tr_btr_planned_adoption = {
+    #possible = {
+    #}
+    unlocks_agenda = agenda_planned
+    modifier = {
+        miner_jobs_bonus_workforce_mult = 0.1
+        farmer_jobs_bonus_workforce_mult = 0.1
+        technician_jobs_bonus_workforce_mult = 0.1
+      #  planet_jobs_miner_produces_mult = 0.1
+      #  planet_jobs_farmers_produces_mult = 0.1
+      #  planet_jobs_technicians_produces_mult = 0.1
+        #Officials generate influence, handled in the leaders script
+    }
+}
+
+tr_btr_planned_finish = {
+    modifier = {
+        #custom_tooltip = btr_vigilance_finish_desc
+        #TODO Make administration buildings provide +5 housing per level
+        ascension_perks_add = 1
+        #Also unlocks 4 special resolutions
+    }
+}
+
+tr_btr_planned_pricing = {
+    #Handled through galcom.300
+    modifier = {
+        planet_buildings_cost_mult = -0.5
+        shipclass_starbase_build_cost_mult = -0.3
+        starbase_shipyard_build_time_mult = 0.3
+        planet_building_build_speed_mult = -0.5
+    }
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_planned_public = {
+    possible = {
+        has_tradition = tr_btr_planned_pricing
+    }
+    modifier = {
+        country_resource_max_add = 10000
+        planet_metallurgists_upkeep_mult = -0.1
+        planet_artisans_upkeep_mult = -0.1
+        #planet_jobs_metallurgists_upkeep_mult = -0.1
+        #planet_jobs_artisans_upkeep_mult = -0.1
+
+    }
+
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_planned_oversight = {
+    possible = {
+        has_tradition = tr_btr_planned_public
+    }
+    modifier = {
+        pop_demotion_time_mult = -1
+
+    }
+    #Handled through galcom.305
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_planned_predetermined = {
+    possible = {
+        has_tradition = tr_btr_planned_public
+    }
+    modifier = {
+        planet_pops_consumer_goods_upkeep_mult = -0.2
+        pop_happiness = -0.1
+    }
+    #Handled through galcom.310-315
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+"tr_btr_planned_harmonious" = {
+    possible = {
+        has_tradition = tr_btr_planned_predetermined
+        has_tradition = tr_btr_planned_oversight
+    }
+
+    modifier = {
+      #  planet_pops_unemployed_upkeep_mult = -0.2
+       # pop_growth_from_immigration = 0.1
+        planet_resettlement_unemployed_mult = 0.2
+        planet_resettlement_unemployed_destination_mult = 0.1
+
+    }
+
+    ai_weight = {
+        factor = 5000
+    }
+}

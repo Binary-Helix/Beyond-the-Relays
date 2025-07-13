@@ -1,0 +1,101 @@
+tr_btr_synthetic_adoption = {
+    #possible = {
+    #}
+    unlocks_agenda = agenda_synthetic
+    modifier = {
+        robotic_pop_bonus_workforce_mult = 0.1
+        planet_pops_robotics_upkeep_mult = -0.1
+       # planet_jobs_robotic_produces_mult = 0.1
+       # planet_pops_robotics_upkeep = -0.1
+        #Officials generate influence, handled in the leaders script
+    }
+}
+
+tr_btr_synthetic_finish = {
+    modifier = {
+        #custom_tooltip = btr_vigilance_finish_desc
+        leader_trait_selection_options_add = 1
+        leader_lifespan_add = 10
+        planet_crime_mult = -0.1
+        planet_jobs_worker_produces_mult = 0.05
+        ascension_perks_add = 1
+        #Also unlocks 4 special resolutions
+        #TODO Make this give -100 relations with all organic empires
+    }
+}
+
+tr_btr_synthetic_VI = {
+    #Handled through galcom.300
+    modifier = {
+        planet_jobs_engineering_research_produces_mult = 0.1
+        planet_jobs_physics_research_produces_mult = 0.1
+        planet_jobs_society_research_produces_mult = 0.1
+    }
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_synthetic_AI = {
+    possible = {
+        has_tradition = tr_btr_synthetic_VI
+    }
+    modifier = {
+        all_technology_research_speed = 0.05
+    }
+
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_synthetic_self = {
+    possible = {
+        has_tradition = tr_btr_synthetic_AI
+    }
+    modifier = {
+        ROBOT_species_trait_points_add = 2
+        ROBOT_species_trait_picks_add = 2
+        planet_pop_assembly_mult = 0.15
+    }
+    #Handled through galcom.305
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_synthetic_synthetic = {
+    possible = {
+        has_tradition = tr_btr_synthetic_AI
+    }
+    modifier = {
+        #TODO Make it so robotic pops increase unity production by 1% per pop on planets
+        planet_jobs_robotic_unity_produces_mult = 0.5
+        planet_jobs_robotic_engineering_research_produces_mult = 0.5
+        planet_jobs_robotic_physics_research_produces_mult = 0.5
+        planet_jobs_robotic_society_research_produces_mult = 0.5
+    }
+    #Handled through galcom.310-315
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_synthetic_advanced = {
+    possible = {
+        has_tradition = tr_btr_synthetic_AI
+    }
+
+    modifier = {
+        planet_jobs_alloys_produces_mult = 0.1
+        planet_jobs_consumer_goods_produces_mult = 0.1
+        starbase_shipyard_build_speed_mult = 0.05
+        planet_building_build_speed_mult = 0.1
+    }
+
+    ai_weight = {
+        factor = 5000
+    }
+}

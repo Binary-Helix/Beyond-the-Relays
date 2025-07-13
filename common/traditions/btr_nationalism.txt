@@ -1,0 +1,100 @@
+tr_btr_nationalism_adoption = {
+    #possible = {
+    #}
+    unlocks_agenda = agenda_nationalism
+    modifier = {
+        pop_ethic_xenophobe_attraction_mult = 0.05
+        planet_resettlement_unemployed_destination_mult = -0.5
+       # planet_immigration_pull_mult = -0.5
+        country_unity_produces_mult = 0.05
+        #Officials generate influence, handled in the leaders script
+    }
+}
+
+tr_btr_nationalism_finish = {
+    modifier = {
+        #custom_tooltip = btr_vigilance_finish_desc
+        starbase_shipyard_build_speed_mult = 0.1
+        starbase_defense_platform_capacity_add = 5
+        ascension_perks_add = 1
+        #Also unlocks 4 special resolutions
+    }
+}
+
+tr_btr_nationalism_ours = {
+    #Handled through galcom.300
+    modifier = {
+        planet_resettlement_unemployed_mult = 0.15
+       # pop_growth_from_immigration = 0.15
+        pop_resettlement_cost_mult = -0.25
+    }
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_nationalism_peace = {
+    possible = {
+        #has_tradition = tr_btr_nationalism_ours
+    }
+    modifier = {
+        country_claim_influence_cost_mult = 0.5
+        shipclass_starbase_hull_mult = 0.5
+        shipclass_starbase_armor_mult = 0.5
+        shipclass_starbase_shield_hardening_add = 0.5
+        ship_friendly_territory_fire_rate_mult = 0.5
+    }
+
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_nationalism_non = {
+    possible = {
+        has_tradition = tr_btr_nationalism_peace
+        has_tradition = tr_btr_nationalism_ours
+    }
+    modifier = {
+        planet_jobs_worker_produces_mult = 0.1
+        planet_jobs_specialist_produces_mult = 0.05
+        planet_jobs_ruler_produces_mult = 0.025
+    }
+    #Handled through galcom.305
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_nationalism_firm = {
+    possible = {
+        has_tradition = tr_btr_nationalism_non
+    }
+    modifier = {
+        monthly_loyalty_from_subjects = 2
+        country_subject_acceptance_add = 10
+        subject_integration_influence_cost_mult = 0.5
+        country_subject_integration_speed_add = -0.5
+    }
+    #Handled through galcom.310-315
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+"tr_btr_naitonalism_singular" = {
+    possible = {
+        has_tradition = tr_btr_nationalism_non
+    }
+
+    modifier = {
+        all_technology_research_speed = 0.1
+        planet_stability_add = 5
+    }
+
+    ai_weight = {
+        factor = 5000
+    }
+}
