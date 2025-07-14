@@ -77,10 +77,24 @@ tr_btr_renegade_suspicious = {
 tr_btr_renegade_our_own = {
     possible = {
     }
-    modifier = {
-        country_base_influence_produces_add = 5
-        country_unity_produces_mult = 0.15
-        #TODO Make this only apply if the empire has no relations other than Embassies and NAPs and is not a subject
+    triggered_modifier = {
+        potential = {
+            exists = owner
+            is_subject = no
+            AND = {
+                has_federation = no
+                num_defensive_pacts = 0
+                num_migration_pacts = 0
+                num_commercial_pacts = 0
+                num_research_agreements = 0
+                num_guarantees = 0
+            }
+        }
+        modifier = {
+            country_base_influence_produces_add = 5
+            country_unity_produces_mult = 0.15
+            #TODO Make this only apply if the empire has no relations other than Embassies and NAPs and is not a subject
+        }
     }
     #Handled through galcom.310-315
 
