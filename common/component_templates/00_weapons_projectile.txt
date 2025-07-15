@@ -21,6 +21,16 @@ weapon_component_template = {
 	icon = "GFX_ship_part_mass_driver_1"
 	icon_frame = 1
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_mass_drivers_1" }
 	component_set = "MASS_DRIVER_1"
 	projectile_gfx = "mass_driver_s"
@@ -39,6 +49,14 @@ weapon_component_template = {
 			#alloys = @s_t1_upkeep_alloys
 		}
 	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
 }
 
 weapon_component_template = {
@@ -49,6 +67,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_mass_driver_1"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_mass_drivers_1"}
 	component_set = "MASS_DRIVER_1"
@@ -68,6 +96,14 @@ weapon_component_template = {
 			#alloys = @m_t1_upkeep_alloys
 		}
 	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
 }
 
 weapon_component_template = {
@@ -78,6 +114,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_mass_driver_1"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	min_range = 45.0
 
@@ -99,6 +145,18 @@ weapon_component_template = {
 			#alloys = @l_t1_upkeep_alloys
 		}
 	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
 }
 
 # ## Coilguns
@@ -110,6 +168,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_mass_driver_2"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_mass_drivers_2" }
 	component_set = "MASS_DRIVER_2"
@@ -129,6 +197,14 @@ weapon_component_template = {
 			#alloys = @s_t2_upkeep_alloys
 		}
 	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
 }
 
 weapon_component_template = {
@@ -139,6 +215,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_mass_driver_2"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_mass_drivers_2" }
 	component_set = "MASS_DRIVER_2"
@@ -158,6 +244,14 @@ weapon_component_template = {
 			#alloys = @m_t2_upkeep_alloys
 		}
 	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
 }
 
 weapon_component_template = {
@@ -168,6 +262,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_mass_driver_2"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	min_range = 45.0
 
@@ -189,6 +293,18 @@ weapon_component_template = {
 			#alloys = @l_t2_upkeep_alloys
 		}
 	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
 }
 
 # ## Railguns
@@ -200,6 +316,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_mass_driver_3"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_mass_drivers_3" }
 	component_set = "MASS_DRIVER_3"
@@ -219,6 +345,14 @@ weapon_component_template = {
 			#alloys = @s_t3_upkeep_alloys
 		}
 	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
 }
 
 weapon_component_template = {
@@ -229,6 +363,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_mass_driver_3"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_mass_drivers_3" }
 	component_set = "MASS_DRIVER_3"
@@ -248,6 +392,14 @@ weapon_component_template = {
 			#alloys = @m_t3_upkeep_alloys
 		}
 	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
 }
 
 weapon_component_template = {
@@ -258,6 +410,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_mass_driver_3"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	min_range = 45.0
 
@@ -279,6 +441,18 @@ weapon_component_template = {
 			#alloys = @l_t3_upkeep_alloys
 		}
 	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
 }
 
 # ## Advanced Railguns
@@ -290,6 +464,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_mass_driver_4"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_mass_drivers_4" }
 	component_set = "MASS_DRIVER_4"
@@ -318,6 +502,10 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = eezo }
 		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
 	}
 }
 
@@ -329,6 +517,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_mass_driver_4"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_mass_drivers_4" }
 	component_set = "MASS_DRIVER_4"
@@ -357,6 +555,10 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = eezo }
 		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
 	}
 }
 
@@ -368,6 +570,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_mass_driver_4"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	min_range = 45.0
 
@@ -398,6 +610,14 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = eezo }
 		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
 	}
 }
 
@@ -410,6 +630,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_mass_driver_5"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_mass_drivers_5" }
 	component_set = "MASS_DRIVER_5"
@@ -437,6 +667,10 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = eezo }
 		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
 	}
 }
 
@@ -448,6 +682,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_mass_driver_5"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_mass_drivers_5" }
 	component_set = "MASS_DRIVER_5"
@@ -475,6 +719,10 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = eezo }
 		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
 	}
 }
 
@@ -486,6 +734,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_mass_driver_5"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	min_range = 45.0
 
@@ -515,6 +773,14 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = eezo }
 		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
 	}
 }
 
@@ -535,6 +801,15 @@ weapon_component_template = {
 	min_range = 45.0
 
 	prerequisites = { "tech_kinetic_artillery_1" }
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 	component_set = "KINETIC_ARTILLERY_1"
 	projectile_gfx = "kinetic_artillery"
 	tags = { weapon_type_kinetic l_slot weapon_role_artillery }
@@ -562,6 +837,14 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = eezo }
 		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
 	}
 }
 
@@ -578,6 +861,15 @@ weapon_component_template = {
 	min_range = 45.0
 
 	prerequisites = { "tech_kinetic_artillery_2" }
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 	component_set = "KINETIC_ARTILLERY_2"
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic l_slot weapon_role_artillery }
@@ -604,6 +896,14 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = eezo }
 		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
 	}
 }
 
@@ -621,6 +921,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_autocannon_1"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_autocannons_1" }
 	component_set = "AUTOCANNON_1"
@@ -641,6 +951,14 @@ weapon_component_template = {
 			#alloys = @s_t3_upkeep_alloys
 		}
 	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
 }
 
 weapon_component_template = {
@@ -652,10 +970,20 @@ weapon_component_template = {
 	icon = "GFX_ship_part_autocannon_1"
 	icon_frame = 1
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_autocannons_1" }
 	component_set = "AUTOCANNON_1"
 	projectile_gfx = "auto_cannons_m"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = "MEDIUM_AUTOCANNON_2"
 	resources = {
@@ -671,6 +999,14 @@ weapon_component_template = {
 			#alloys = @m_t3_upkeep_alloys
 		}
 	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
 }
 
 weapon_component_template = {
@@ -682,10 +1018,20 @@ weapon_component_template = {
 	icon = "GFX_ship_part_autocannon_1"
 	icon_frame = 1
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_autocannons_1" }
 	component_set = "AUTOCANNON_1"
 	projectile_gfx = "auto_cannons_l"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = "LARGE_AUTOCANNON_2"
 	resources = {
@@ -701,6 +1047,14 @@ weapon_component_template = {
 			#alloys = @l_t3_upkeep_alloys
 		}
 	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
 }
 
 # ## Autocannons 2
@@ -712,6 +1066,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_autocannon_2"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_autocannons_2" }
 	component_set = "AUTOCANNON_2"
@@ -740,6 +1104,10 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = eezo }
 		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
 	}
 }
 
@@ -752,10 +1120,20 @@ weapon_component_template = {
 	icon = "GFX_ship_part_autocannon_2"
 	icon_frame = 1
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_autocannons_2" }
 	component_set = "AUTOCANNON_2"
 	projectile_gfx = "ripper_auto_cannons_m"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = "MEDIUM_AUTOCANNON_3"
 	resources = {
@@ -779,6 +1157,10 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = eezo }
 		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
 	}
 }
 
@@ -791,10 +1173,20 @@ weapon_component_template = {
 	icon = "GFX_ship_part_autocannon_2"
 	icon_frame = 1
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_autocannons_2" }
 	component_set = "AUTOCANNON_2"
 	projectile_gfx = "ripper_auto_cannons_l"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = "LARGE_AUTOCANNON_3"
 	resources = {
@@ -818,6 +1210,10 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = eezo }
 		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
 	}
 }
 
@@ -830,6 +1226,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_autocannon_3"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_autocannons_3" }
 	component_set = "AUTOCANNON_3"
@@ -858,6 +1264,10 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = eezo }
 		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
 	}
 }
 
@@ -870,10 +1280,20 @@ weapon_component_template = {
 	icon = "GFX_ship_part_autocannon_3"
 	icon_frame = 1
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_autocannons_3" }
 	component_set = "AUTOCANNON_3"
 	projectile_gfx = "stormfire_auto_cannons_m"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = "MEDIUM_AUTOCANNON_4"
 	resources = {
@@ -897,6 +1317,10 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = eezo }
 		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
 	}
 }
 
@@ -909,10 +1333,20 @@ weapon_component_template = {
 	icon = "GFX_ship_part_autocannon_3"
 	icon_frame = 1
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_autocannons_3" }
 	component_set = "AUTOCANNON_3"
 	projectile_gfx = "stormfire_auto_cannons_l"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = "LARGE_AUTOCANNON_4"
 	resources = {
@@ -936,6 +1370,10 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = eezo }
 		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
 	}
 }
 
@@ -948,6 +1386,16 @@ weapon_component_template = {
 
 	icon = "GFX_ship_part_autocannon_4"
 	icon_frame = 1
+
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
 
 	prerequisites = { "tech_nanite_autocannon" }
 	component_set = "AUTOCANNON_4"
@@ -991,10 +1439,20 @@ weapon_component_template = {
 	icon = "GFX_ship_part_autocannon_4"
 	icon_frame = 1
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_nanite_autocannon" }
 	component_set = "AUTOCANNON_4"
 	projectile_gfx = "stormfire_auto_cannons_m"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	resources = {
 		category = ship_components
@@ -1033,10 +1491,20 @@ weapon_component_template = {
 	icon = "GFX_ship_part_autocannon_4"
 	icon_frame = 1
 
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
 	prerequisites = { "tech_nanite_autocannon" }
 	component_set = "AUTOCANNON_4"
 	projectile_gfx = "stormfire_auto_cannons_l"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	resources = {
 		category = ship_components
