@@ -730,7 +730,6 @@ pc_machine = {
 	district_set = machine_world
 	starting_planet = no
 	show_city = no
-
 	carry_cap_per_free_district = @carry_cap_low
 }
 
@@ -864,6 +863,7 @@ pc_infested = {
 
 	planet_size = { min = 12 max = 25 }
 	moon_size = { min = 7 max = 12 }
+
 	colonizable = no
 	colonizable_by_event = yes	# Ensure colonization mechanics are handled even if the planet cannot be colonized the usual way
 
@@ -915,6 +915,7 @@ pc_cybrex = {
 	picture = pc_ai
 	icon = GFX_planet_type_ringworld
 	entity_scale = 1.0
+	enable_tilt = no
 	fixed_entity_scale = yes
 	atmosphere_color		= hsv { 0.50 0.2 0.8 }
 	atmosphere_intensity	= 1.0
@@ -998,6 +999,7 @@ pc_ringworld_habitable = {
 	moon_size = 1
 	colonizable = yes
 	district_set = ring_world
+	starting_district = district_rw_city
 	ideal = yes
 	starting_planet = no
 	orbit_lines = no
@@ -1027,6 +1029,7 @@ pc_ringworld_habitable_damaged = {
 	entity_scale = 1.0
 	fixed_entity_scale = yes
 	enable_tilt = no
+	fixed_entity_scale = yes
 	atmosphere_color		= hsv { 0.50 0.2 0.8 }
 	atmosphere_intensity	= 1.0
 	atmosphere_width		= 0.5
@@ -1047,6 +1050,7 @@ pc_ringworld_tech = {
 	picture = pc_ringworld_section
 	icon = GFX_planet_type_ringworld
 	entity_scale = 1.0
+	enable_tilt = no
 	fixed_entity_scale = yes
 	enable_tilt = no
 	atmosphere_color		= hsv { 0.50 0.2 0.8 }
@@ -1060,6 +1064,7 @@ pc_ringworld_tech = {
 	moon_size = 1
 	colonizable = no
 	orbit_lines = no
+
 	is_artificial_planet = yes
 }
 
@@ -1070,6 +1075,7 @@ pc_ringworld_tech_damaged = {
 	picture = pc_ringworld_broken
 	icon = GFX_planet_type_ringworld
 	entity_scale = 1.0
+	enable_tilt = no
 	fixed_entity_scale = yes
 	enable_tilt = no
 	atmosphere_color		= hsv { 0.50 0.2 0.8 }
@@ -1083,6 +1089,7 @@ pc_ringworld_tech_damaged = {
 	moon_size = 1
 	colonizable = no
 	orbit_lines = no
+
 	is_artificial_planet = yes
 
 }
@@ -1107,6 +1114,7 @@ pc_ringworld_seam = {
 	moon_size = 1
 	colonizable = no
 	orbit_lines = no
+
 	is_artificial_planet = yes
 
 }
@@ -1131,6 +1139,7 @@ pc_ringworld_seam_damaged = {
 	moon_size = 1
 	colonizable = no
 	orbit_lines = no
+
 	is_artificial_planet = yes
 
 }
@@ -1210,7 +1219,7 @@ pc_habitat = {
 }
 
 pc_cosmogenesis_world = {
-	#habitat = yes
+	synaptic_lathe = yes
 	entity = "orbital_habitat"
 	icon = GFX_planet_type_synaptic_lathe
 	entity_scale = 1.0
@@ -1243,13 +1252,14 @@ pc_cosmogenesis_world = {
 
 	modifier = {
 		pop_environment_tolerance = 0.85
-		logistic_growth_mult = -1.0
+		logistic_growth_mult = -1
 		planet_crime_mult = -1
 	}
 
 	carry_cap_per_free_district = @carry_cap_low
 	can_be_invaded = no
 }
+
 ##########################
 # Altered/Damaged Planets
 ##########################
@@ -1272,6 +1282,7 @@ pc_shrouded = {
 	moon_size = { min = 6 max = 10 }
 
 	colonizable = no
+	show_city = no
 }
 
 pc_broken = {
@@ -1292,6 +1303,7 @@ pc_broken = {
 	moon_size = { min = 6 max = 10 }
 
 	colonizable = no
+	show_city = no
 }
 
 pc_shattered = {
@@ -1312,6 +1324,7 @@ pc_shattered = {
 	moon_size = { min = 6 max = 10 }
 
 	colonizable = no
+	show_city = no
 }
 
 pc_toxoid_star = {
