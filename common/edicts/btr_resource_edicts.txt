@@ -1,0 +1,36 @@
+@Edict1Cost = 20
+@Edict2Cost = 25
+@Edict3Cost = 30
+
+@EdictDuration = -1
+
+#Uranium
+btr_uranium_warheads = {
+    length = @EdictDuration
+    icon = "GFX_edict_type_time"
+    resources = {
+        category = ship_edicts
+        cost = {
+            uranium = @Edict1Cost
+            multiplier = value:edict_size_effect
+        }
+        upkeep = {
+            uranium = 1
+            multiplier = value:edict_size_effect
+        }
+    }
+
+    modifier = {
+        weapon_type_kinetic_weapon_damage_mult = 0.2
+        ship_armor_penetration_mult = 0.1
+    }
+
+    prerequisites = {
+        "tech_btr_uranium_warheads"
+    }
+
+    ai_weight = {
+        weight = 1
+    }
+}
+
