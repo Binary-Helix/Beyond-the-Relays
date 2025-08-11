@@ -2364,8 +2364,8 @@
 		SURRENDER_ACCEPTANCE_LOW = -60			# Display "unlikely to surrender" in war summary badge
 		SURRENDER_ACCEPTANCE_LOWEST = -100		# Display "for sure not surrender" in war summary badge
 
-		AI_ALLOWED_TO_BUY = { "minerals" "food" "light_metals" "heavy_metals "consumer_goods" "helium_3" "hydrogen" "antimatter_fuel" "uranium" "beryllium" "iridium" "titanium" "palladium" "platinum" "lithium" "eezo" }
-		AI_ALLOWED_TO_SELL = { "minerals" "food" "light_metals" "heavy_metals "consumer_goods" "helium_3" "hydrogen" "antimatter_fuel" "uranium" "beryllium" "iridium" "titanium" "palladium" "platinum" "lithium" "eezo" }
+		AI_ALLOWED_TO_BUY = { "minerals" "food" "light_alloys" "heavy_metals "consumer_goods" "helium_3" "hydrogen" "antimatter_fuel" "uranium" "beryllium" "iridium" "titanium" "palladium" "platinum" "lithium" "eezo" }
+		AI_ALLOWED_TO_SELL = { "minerals" "food" "light_alloys" "heavy_metals "consumer_goods" "helium_3" "hydrogen" "antimatter_fuel" "uranium" "beryllium" "iridium" "titanium" "palladium" "platinum" "lithium" "eezo" }
 		AI_MIN_CURRENCY_TO_SELL = 1000.0		# If the AI has less currency (trade) than this it will consider selling resources
 		AI_MIN_CURRENCY_INCOME_TO_SELL = 10.0	# If the AI has less currency (trade) gain last month than this it will consider selling resources
 		AI_MAIN_CONSTRUCTION_CURRENCY = "minerals"			# Tells the AI which is the most important construction resource

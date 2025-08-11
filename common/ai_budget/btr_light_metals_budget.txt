@@ -4,8 +4,8 @@
 #################
 ## Expenditure ##
 #################
-light_metals_expenditure_buffer = { # Buffer, will not be spent
-	resource = light_metals
+light_alloys_expenditure_buffer = { # Buffer, will not be spent
+	resource = light_alloys
 	type = expenditure
 	category = buffer
 
@@ -18,8 +18,8 @@ light_metals_expenditure_buffer = { # Buffer, will not be spent
 	}
 }
 
-light_metals_expenditure_ships = {
-	resource = light_metals
+light_alloys_expenditure_ships = {
+	resource = light_alloys
 	type = expenditure
 	category = ships
 
@@ -30,7 +30,7 @@ light_metals_expenditure_ships = {
 	weight = {
 		weight = 0.6
 
-		# spend more light_metals building ships while at war
+		# spend more light_alloys building ships while at war
 		modifier = {
 			factor = 2
 			OR = {
@@ -48,7 +48,7 @@ light_metals_expenditure_ships = {
 			}
 		}
 
-		# spend less light_metals on ships if over capacity
+		# spend less light_alloys on ships if over capacity
 		modifier = {
 			factor = 0.5
 			used_naval_capacity_percent >= 1.0
@@ -69,8 +69,8 @@ light_metals_expenditure_ships = {
 	}
 }
 
-light_metals_expenditure_ship_upgrades = {
-	resource = light_metals
+light_alloys_expenditure_ship_upgrades = {
+	resource = light_alloys
 	type = expenditure
 	category = ship_upgrades
 
@@ -93,8 +93,8 @@ light_metals_expenditure_ship_upgrades = {
 	}
 }
 
-light_metals_expenditure_planets = {
-	resource = light_metals
+light_alloys_expenditure_planets = {
+	resource = light_alloys
 	type = expenditure
 	category = planets
 
@@ -111,8 +111,8 @@ light_metals_expenditure_planets = {
 	}
 }
 
-light_metals_expenditure_starbases = {
-	resource = light_metals
+light_alloys_expenditure_starbases = {
+	resource = light_alloys
 	type = expenditure
 	category = starbases
 
@@ -134,14 +134,14 @@ light_metals_expenditure_starbases = {
 		# Reduce spending on claiming new systems if we have unclaimed planets
 		modifier = {
 			is_machine_empire = yes
-			has_country_resource = { type = light_metals amount < 450 }
+			has_country_resource = { type = light_alloys amount < 450 }
 			factor = 0.25 # more aggresive saving for robots since their colony ships cost more
 			ai_colonize_plans > 0
 		}
 		# Reduce spending on claiming new systems if we have unclaimed planets
 		modifier = {
 			is_machine_empire = no
-			has_country_resource = { type = light_metals amount < 250 }
+			has_country_resource = { type = light_alloys amount < 250 }
 			factor = 0.50
 			ai_colonize_plans > 0
 		}
@@ -175,8 +175,8 @@ light_metals_expenditure_starbases = {
 	}
 }
 
-light_metals_expenditure_starbases_fallen_empires = {
-	resource = light_metals
+light_alloys_expenditure_starbases_fallen_empires = {
+	resource = light_alloys
 	type = expenditure
 	category = starbases
 
@@ -189,8 +189,8 @@ light_metals_expenditure_starbases_fallen_empires = {
 	}
 }
 
-light_metals_expenditure_starbases_expand = {
-	resource = light_metals
+light_alloys_expenditure_starbases_expand = {
+	resource = light_alloys
 	type = expenditure
 	category = starbases
 
@@ -214,8 +214,8 @@ light_metals_expenditure_starbases_expand = {
 	}
 }
 
-light_metals_expenditure_colonies_expand = {
-	resource = light_metals
+light_alloys_expenditure_colonies_expand = {
+	resource = light_alloys
 	type = expenditure
 	category = colonies
 
@@ -313,8 +313,8 @@ light_metals_expenditure_colonies_expand = {
 	}
 }
 
-light_metals_expenditure_habitats = {
-	resource = light_metals
+light_alloys_expenditure_habitats = {
+	resource = light_alloys
 	type = expenditure
 	category = megastructures_habitat
 
@@ -370,8 +370,8 @@ light_metals_expenditure_habitats = {
 	}
 }
 
-light_metals_expenditure_decisions = {
-	resource = light_metals
+light_alloys_expenditure_decisions = {
+	resource = light_alloys
 	type = expenditure
 	category = decisions
 	potential = {
@@ -388,7 +388,7 @@ light_metals_expenditure_decisions = {
 		}
 		# only consider these kinds of decisions when "wealthy"
 		has_resource = {
-			type = light_metals
+			type = light_alloys
 			amount > 5000
 		}
 	}
@@ -412,8 +412,8 @@ light_metals_expenditure_decisions = {
 ############
 ## Upkeep ##
 ############
-light_metals_upkeep_buffer = {	# Buffer, will not be spent
-	resource = light_metals
+light_alloys_upkeep_buffer = {	# Buffer, will not be spent
+	resource = light_alloys
 	type = upkeep
 	category = buffer
 

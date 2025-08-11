@@ -43,7 +43,7 @@ basic_economy_plan = {
 			has_monthly_income = { resource = minerals value > @economic_plan_mineral_target }
 			has_monthly_income = { resource = energy value > 0 }
 			#has_monthly_income = { resource = alloys value > @economic_plan_alloy_target }
-			has_monthly_income = { resource = light_metals value > @economic_plan_light_metals_target }
+			has_monthly_income = { resource = light_alloys value > @economic_plan_light_alloys_target }
 			has_monthly_income = { resource = heavy_metals value > @economic_plan_heavy_metals_target }
 
 			if = {
@@ -183,7 +183,7 @@ basic_economy_plan = {
 			titanium = 10
 			helium_3 = 10
 			hydrogen = 10
-			light_metals = 10
+			light_alloys = 10
 			heavy_metals = 10
 			antimatter_fuel = 10
 			minerals = 10
@@ -206,7 +206,7 @@ basic_economy_plan = {
 				# Alloys
 				AND = {
 					country_uses_bio_ships = no
-					resource_stockpile_compare = { resource = light_metals value >= 2000 }#alloys value >= 2000 }
+					resource_stockpile_compare = { resource = light_alloys value >= 2000 }#alloys value >= 2000 }
 					resource_stockpile_compare = { resource = heavy_metals value >= 2000 }
 				}
 				# Food
@@ -222,7 +222,7 @@ basic_economy_plan = {
 				AND = {
 					country_uses_bio_ships = no
 					#has_monthly_income = { resource = alloys value > @economic_plan_fleet_cap_alloy_target }
-					has_monthly_income = { resource = light_metals value > @economic_plan_fleet_cap_light_metals_target }
+					has_monthly_income = { resource = light_alloys value > @economic_plan_fleet_cap_light_alloys_target }
 					has_monthly_income = { resource = heavy_metals value > @economic_plan_fleet_cap_heavy_metals_target }
 				}
 				AND = {
@@ -245,7 +245,7 @@ basic_economy_plan = {
 			has_monthly_income = { resource = energy value > @economic_plan_energy_target }
 			has_monthly_income = { resource = minerals value > @economic_plan_mineral_target }
 			#has_monthly_income = { resource = alloys value > @economic_plan_alloy_target }
-			has_monthly_income = { resource = light_metals value > @economic_plan_fleet_cap_light_metals_target }
+			has_monthly_income = { resource = light_alloys value > @economic_plan_fleet_cap_light_alloys_target }
 			has_monthly_income = { resource = heavy_metals value > @economic_plan_fleet_cap_heavy_metals_target }
 			OR = {
 				has_monthly_income = { resource = consumer_goods value < @economic_plan_scaling_consumer_goods_limit }
@@ -271,7 +271,7 @@ basic_economy_plan = {
 
 		income = {
 			#alloys = 10
-			light_metals = 10
+			light_alloys = 10
 			heavy_metals = 10
 		}
 	}
@@ -293,7 +293,7 @@ basic_economy_plan = {
 
 		income = {
 			#alloys = @economic_plan_scaling_alloy_target
-			light_metals = @economic_plan_scaling_alloy_target
+			light_alloys = @economic_plan_scaling_alloy_target
 			heavy_metals = @economic_plan_scaling_alloy_target
 		}
 	}
@@ -313,7 +313,7 @@ basic_economy_plan = {
 
 		income = {
 			#alloys = 10
-			light_metals = @economic_plan_scaling_alloy_target
+			light_alloys = @economic_plan_scaling_alloy_target
 			heavy_metals = @economic_plan_scaling_alloy_target
 			food = 20
 		}
@@ -333,7 +333,7 @@ basic_economy_plan = {
 
 		income = {
 			#alloys = @economic_plan_scaling_alloy_target
-			light_metals = @economic_plan_scaling_alloy_target
+			light_alloys = @economic_plan_scaling_alloy_target
 			heavy_metals = @economic_plan_scaling_alloy_target
 		}
 	}

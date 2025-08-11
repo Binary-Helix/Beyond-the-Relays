@@ -1,9 +1,9 @@
 
-count_robots_to_recycle_for_light_metals = {
+count_robots_to_recycle_for_light_alloys = {
 
 	set_variable = {
-		which = light_metals_for_robot
-		value = $LIGHT_METALS$
+		which = light_alloys_for_robot
+		value = $light_alloys$
 	}
 
 	set_variable = {
@@ -49,13 +49,13 @@ count_robots_to_recycle_for_light_metals = {
 	}
 
 	set_variable = {
-		which = total_light_metals_gained
+		which = total_light_alloys_gained
 		value = recycled_robots
 	}
 
 	multiply_variable = {
-		which = total_light_metals_gained
-		value = $LIGHT_METALS$
+		which = total_light_alloys_gained
+		value = $light_alloys$
 	}
 }
 

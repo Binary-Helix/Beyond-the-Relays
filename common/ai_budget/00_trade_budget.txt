@@ -179,11 +179,11 @@ trade_expenditure_trade_deficit = {
 			}
 			AND = {
 				has_monthly_income = {
-					resource = light_metals
+					resource = light_alloys
 					value < -1
 				}
 				has_resource = {
-					type = light_metals
+					type = light_alloys
 					amount < 500
 				}
 			}

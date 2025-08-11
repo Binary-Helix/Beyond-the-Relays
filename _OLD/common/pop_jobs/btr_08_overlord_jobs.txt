@@ -687,7 +687,7 @@ overlord_metallurgist = {
 		category = planet_overlord_metallurgists
 		produces = {
 			#alloys = 3
-			light_metals = 2
+			light_alloys = 2
 			heavy_metals = 1
 		}
 	}
@@ -729,7 +729,7 @@ overlord_foundry_drone = {
 		category = planet_overlord_metallurgists
 		produces = {
 			#alloys = 3
-			light_metals = 2
+			light_alloys = 2
 			heavy_metals = 1
 		}
 	}
@@ -771,7 +771,7 @@ overlord_fabricator = {
 		category = planet_overlord_metallurgists
 		produces = {
 			#alloys = 4
-			light_metals = 2.5
+			light_alloys = 2.5
 			heavy_metals = 1.5
 		}
 	}
@@ -808,7 +808,7 @@ overlord_catalytic_technician = {
 		category = planet_overlord_metallurgists
 		produces = {
 			#alloys = 3
-			light_metals = 2
+			light_alloys = 2
 			heavy_metals = 1
 		}
 	}
@@ -864,7 +864,7 @@ overlord_catalytic_drone = {
 		category = planet_overlord_metallurgists
 		produces = {
 			#alloys = 3
-			light_metals = 2
+			light_alloys = 2
 			heavy_metals = 1
 		}
 
@@ -876,7 +876,7 @@ overlord_catalytic_drone = {
 				}
 			}
 			#alloys = 1
-			light_metals = 0.7
+			light_alloys = 0.7
 			heavy_metals = 0.3
 		}
 	}
@@ -920,7 +920,7 @@ overlord_beholder = {
 				}
 			}
 			#alloys = 2
-			light_metals = 1.4
+			light_alloys = 1.4
 			heavy_metals = 0.6
 		}
 		upkeep = {
@@ -934,7 +934,7 @@ overlord_beholder = {
 				}
 			}
 			#alloys = 4
-			light_metals = 2.5
+			light_alloys = 2.5
 			heavy_metals = 1.5
 		}
 		upkeep = {
@@ -948,7 +948,7 @@ overlord_beholder = {
 				}
 			}
 			#alloys = 8
-			light_metals = 5
+			light_alloys = 5
 			heavy_metals = 3
 		}
 	}
@@ -993,7 +993,7 @@ overlord_beholder_drone = {
 				}
 			}
 			#alloys = 2
-			light_metals = 1.4
+			light_alloys = 1.4
 			heavy_metals = 0.6
 		}
 		upkeep = {
@@ -1007,7 +1007,7 @@ overlord_beholder_drone = {
 				}
 			}
 			#alloys = 4
-			light_metals = 2.5
+			light_alloys = 2.5
 			heavy_metals = 1.5
 		}
 		upkeep = {
@@ -1021,7 +1021,7 @@ overlord_beholder_drone = {
 				}
 			}
 			#alloys = 8
-			light_metals = 5
+			light_alloys = 5
 			heavy_metals = 3
 		}
 	}
@@ -1880,7 +1880,7 @@ overlord_knight = {
 		category = planet_knights
 		upkeep = {
 			#alloys = 1
-			light_metals = 0.7
+			light_alloys = 0.7
 			heavy_metals = 0.3
 		}
 	}
@@ -1903,7 +1903,7 @@ overlord_knight = {
 			owner.overlord = { has_modifier = alloy_producing_knights }
 		}
 		#country_alloys_produces_mult = 0.015
-		country_light_metals_produces_mult = 0.015
+		country_light_alloys_produces_mult = 0.015
 		country_heavy_metals_produces_mult = 0.015
 	}
 
@@ -1965,7 +1965,7 @@ overlord_knight_drone = {
 		category = planet_knights
 		upkeep = {
 			#alloys = 1
-			light_metals = 0.7
+			light_alloys = 0.7
 			heavy_metals = 0.3
 		}
 	}
@@ -1988,7 +1988,7 @@ overlord_knight_drone = {
 			owner.overlord = { has_modifier = alloy_producing_knights }
 		}
 		#country_alloys_produces_mult = 0.015
-		country_light_metals_produces_mult = 0.015
+		country_light_alloys_produces_mult = 0.015
 		country_heavy_metals_produces_mult = 0.015
 	}
 

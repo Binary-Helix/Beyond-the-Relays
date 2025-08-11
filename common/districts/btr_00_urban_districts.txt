@@ -1,7 +1,7 @@
 @base_cost = 250 #Vanilla 300
 # Vanilla @city_cost = 500
 @city_cost_minerals = 400
-@city_cost_light_metals = 50
+@city_cost_light_alloys = 50
 @city_cost_heavy_metals = 50
 
 district_city = {
@@ -88,7 +88,7 @@ district_city = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost_minerals
-			light_metals = @city_cost_light_metals
+			light_alloys = @city_cost_light_alloys
 			heavy_metals = @city_cost_heavy_metals
 			trigger = {
 				NOT = { has_modifier = wooden_planet }
@@ -369,7 +369,7 @@ district_resort = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost_minerals
-			light_metals = @city_cost_light_metals
+			light_alloys = @city_cost_light_alloys
 			heavy_metals = @city_cost_heavy_metals
 			trigger = {
 				NOT = { has_modifier = wooden_planet }
@@ -516,7 +516,7 @@ district_resort_1 = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost_minerals
-			light_metals = @city_cost_light_metals
+			light_alloys = @city_cost_light_alloys
 			heavy_metals = @city_cost_heavy_metals
 		}
 		upkeep = {
@@ -596,7 +596,7 @@ district_resort_2 = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost_minerals
-			light_metals = @city_cost_light_metals
+			light_alloys = @city_cost_light_alloys
 			heavy_metals = @city_cost_heavy_metals
 		}
 		upkeep = {
@@ -676,7 +676,7 @@ district_resort_3 = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost_minerals
-			light_metals = @city_cost_light_metals
+			light_alloys = @city_cost_light_alloys
 			heavy_metals = @city_cost_heavy_metals
 		}
 		upkeep = {
@@ -768,7 +768,7 @@ district_prison = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost_minerals
-			light_metals = @city_cost_light_metals
+			light_alloys = @city_cost_light_alloys
 			heavy_metals = @city_cost_heavy_metals
 		}
 		upkeep = {
@@ -901,7 +901,7 @@ district_slave = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost_minerals
-			light_metals = @city_cost_light_metals
+			light_alloys = @city_cost_light_alloys
 			heavy_metals = @city_cost_heavy_metals
 		}
 		upkeep = {
@@ -1044,7 +1044,7 @@ district_hive = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost_minerals
-			light_metals = @city_cost_light_metals
+			light_alloys = @city_cost_light_alloys
 			heavy_metals = @city_cost_heavy_metals
 		}
 		upkeep = {
@@ -1142,7 +1142,7 @@ district_hive_1 = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost_minerals
-			light_metals = @city_cost_light_metals
+			light_alloys = @city_cost_light_alloys
 			heavy_metals = @city_cost_heavy_metals
 		}
 		upkeep = {
@@ -1228,7 +1228,7 @@ district_hive_2 = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost_minerals
-			light_metals = @city_cost_light_metals
+			light_alloys = @city_cost_light_alloys
 			heavy_metals = @city_cost_heavy_metals
 		}
 		upkeep = {
@@ -1314,7 +1314,7 @@ district_hive_3 = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost_minerals
-			light_metals = @city_cost_light_metals
+			light_alloys = @city_cost_light_alloys
 			heavy_metals = @city_cost_heavy_metals
 		}
 		upkeep = {
@@ -1427,7 +1427,7 @@ district_nexus = {
 		category = planet_districts_cities
 		cost = {
 			minerals = @city_cost_minerals
-			light_metals = @city_cost_light_metals
+			light_alloys = @city_cost_light_alloys
 			heavy_metals = @city_cost_heavy_metals
 		}
 		upkeep = {
@@ -1529,7 +1529,7 @@ district_nexus_1 = {
 		category = planet_districts
 		cost = {
 			minerals = 750 #1000
-			light_metals = 150
+			light_alloys = 150
 			heavy_metals = 100
 		}
 		upkeep = {
@@ -1611,7 +1611,7 @@ district_nexus_2 = {
 		category = planet_districts
 		cost = {
 			minerals = 750 #1000
-			light_metals = 150
+			light_alloys = 150
 			heavy_metals = 100
 		}
 		upkeep = {
@@ -1693,7 +1693,7 @@ district_nexus_3 = {
 		category = planet_districts
 		cost = {
 			minerals = 750 #1000
-			light_metals = 150
+			light_alloys = 150
 			heavy_metals = 100
 		}
 		upkeep = {
@@ -1787,7 +1787,7 @@ district_prison_industrial = {
 		category = planet_districts_industrial
 		cost = {
 			minerals = @city_cost_minerals
-			light_metals = @city_cost_light_metals
+			light_alloys = @city_cost_light_alloys
 			heavy_metals = @city_cost_heavy_metals
 		}
 		upkeep = {
@@ -1855,7 +1855,7 @@ district_battle_thrall = {
 		category = planet_districts_industrial
 		cost = {
 			minerals = @city_cost_minerals
-			light_metals = @city_cost_light_metals
+			light_alloys = @city_cost_light_alloys
 			heavy_metals = @city_cost_heavy_metals
 		}
 		upkeep = {
@@ -1938,7 +1938,7 @@ district_srw_commercial = {
 		category = planet_districts
 		cost = {
 			minerals = @base_cost
-			light_metals = 25
+			light_alloys = 25
 			heavy_metals = 25
 		}
 		upkeep = {
