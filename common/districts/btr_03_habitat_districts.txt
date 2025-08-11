@@ -1,9 +1,9 @@
 @hab_cost = 150
 @hab_maintenance = 2
 @low_hab_maintenance = 0.25
-@hab_cost_light_metals = 100
-@hab_light_metals_maintenance = 1
-@low_hab_light_metals_maintenance = 0.15
+@hab_cost_light_alloys = 100
+@hab_light_alloys_maintenance = 1
+@low_hab_light_alloys_maintenance = 0.15
 @hab_heavy_metals_cost = 50
 @hab_heavy_metals_maintenance = 1
 @low_hab_heavy_metals_maintenance = 0.1
@@ -46,13 +46,13 @@ district_hab_housing = {
 		category = planet_districts_hab
 		cost = {
 			#alloys = @hab_cost
-			light_metals = @hab_cost_light_metals
+			light_alloys = @hab_cost_light_alloys
 			heavy_metals = @hab_heavy_metals_cost
 		}
 		upkeep = {
 			energy = @hab_maintenance
 			#alloys = @low_hab_maintenance
-			light_metals = @low_hab_light_metals_maintenance
+			light_alloys = @low_hab_light_alloys_maintenance
 			heavy_metals = @low_hab_heavy_metals_maintenance
 		}
 	}
@@ -103,13 +103,13 @@ district_hab_energy = {
 		category = planet_districts_hab
 		cost = {
 			#alloys = @hab_cost
-			light_metals = @hab_cost_light_metals
+			light_alloys = @hab_cost_light_alloys
 			heavy_metals = @hab_heavy_metals_cost
 		}
 		upkeep = {
 			energy = @hab_maintenance
 			#alloys = @low_hab_maintenance
-			light_metals = @low_hab_light_metals_maintenance
+			light_alloys = @low_hab_light_alloys_maintenance
 			heavy_metals = @low_hab_heavy_metals_maintenance
 		}
 		upkeep = {
@@ -159,13 +159,13 @@ district_hab_mining = {
 		category = planet_districts_hab
 		cost = {
 			#alloys = @hab_cost
-			light_metals = @hab_cost_light_metals
+			light_alloys = @hab_cost_light_alloys
 			heavy_metals = @hab_heavy_metals_cost
 		}
 		upkeep = {
 			energy = @hab_maintenance
 			#alloys = @low_hab_maintenance
-			light_metals = @low_hab_light_metals_maintenance
+			light_alloys = @low_hab_light_alloys_maintenance
 			heavy_metals = @low_hab_heavy_metals_maintenance
 		}
 	}
@@ -222,13 +222,13 @@ district_hab_science = {
 		category = planet_districts_hab
 		cost = {
 			#alloys = @hab_cost
-			light_metals = @hab_cost_light_metals
+			light_alloys = @hab_cost_light_alloys
 			heavy_metals = @hab_heavy_metals_cost
 		}
 		upkeep = {
 			energy = @hab_maintenance
 			#alloys = @low_hab_maintenance
-			light_metals = @low_hab_light_metals_maintenance
+			light_alloys = @low_hab_light_alloys_maintenance
 			heavy_metals = @low_hab_heavy_metals_maintenance
 		}
 	}

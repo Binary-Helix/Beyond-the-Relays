@@ -25,14 +25,14 @@ low_tech_laborer = {
 		produces = {
 			consumer_goods = 3
 			#alloys = 1.5
-			light_metals = 1
+			light_alloys = 1
 			heavy_metals = 0.5
 		}
 	}
 
 	weight = {
 		weight = @worker_job_weight
-		mult = value:job_weights_multiple_resources_modifier|JOB|low_tech_laborer|RESOURCE1|consumer_goods|WEIGHT1|0.5|RESOURCE2|light_metals|WEIGHT2|0.5|
+		mult = value:job_weights_multiple_resources_modifier|JOB|low_tech_laborer|RESOURCE1|consumer_goods|WEIGHT1|0.5|RESOURCE2|light_alloys|WEIGHT2|0.5|
 		modifier = {
 			factor = 5
 			has_job = low_tech_laborer

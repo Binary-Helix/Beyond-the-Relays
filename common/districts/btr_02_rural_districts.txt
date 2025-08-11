@@ -1,6 +1,6 @@
 @base_cost = 300
 @base_cost_minerals = 200
-@base_cost_light_metals = 25
+@base_cost_light_alloys = 25
 @base_cost_heavy_metals = 25
 @city_cost_minerals = 400
 @city_cost_light_minerals = 50
@@ -50,7 +50,7 @@ district_generator = {
 		category = planet_districts_generator
 		cost = {
 			minerals = @base_cost_minerals
-			light_metals = @base_cost_light_metals
+			light_alloys = @base_cost_light_alloys
 			heavy_metals = @base_cost_heavy_metals
 		}
 		upkeep = {
@@ -147,7 +147,7 @@ district_generator_uncapped = {
 		category = planet_districts_generator
 		cost = {
 			minerals = @base_cost_minerals
-			light_metals = @base_cost_light_metals
+			light_alloys = @base_cost_light_alloys
 			heavy_metals = @base_cost_heavy_metals
 		}
 		upkeep = {
@@ -252,7 +252,7 @@ district_mining = {
 		category = planet_districts_mining
 		cost = {
 			minerals = @base_cost_minerals
-			light_metals = @base_cost_light_metals
+			light_alloys = @base_cost_light_alloys
 			heavy_metals = @base_cost_heavy_metals
 		}
 		upkeep = {
@@ -385,7 +385,7 @@ district_mining_uncapped = {
 		category = planet_districts_mining
 		cost = {
 			minerals = @base_cost_minerals
-			light_metals = @base_cost_light_metals
+			light_alloys = @base_cost_light_alloys
 			heavy_metals = @base_cost_heavy_metals
 		}
 		upkeep = {
@@ -506,7 +506,7 @@ district_farming = {
 		category = planet_districts_farming
 		cost = {
 			minerals = @base_cost_minerals
-			light_metals = @base_cost_light_metals
+			light_alloys = @base_cost_light_alloys
 			heavy_metals = @base_cost_heavy_metals
 			trigger = {
 				NOT = { has_modifier = wooden_planet }
@@ -653,7 +653,7 @@ district_farming_uncapped = {
 		category = planet_districts_farming
 		cost = {
 			minerals = @base_cost_minerals
-			light_metals = @base_cost_light_metals
+			light_alloys = @base_cost_light_alloys
 			heavy_metals = @base_cost_heavy_metals
 		}
 		# Anglers Civic cost effect
