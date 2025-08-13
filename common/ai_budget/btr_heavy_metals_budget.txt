@@ -4,8 +4,8 @@
 #################
 ## Expenditure ##
 #################
-heavy_metals_expenditure_buffer = { # Buffer, will not be spent
-	resource = heavy_metals
+heavy_alloys_expenditure_buffer = { # Buffer, will not be spent
+	resource = heavy_alloys
 	type = expenditure
 	category = buffer
 
@@ -18,8 +18,8 @@ heavy_metals_expenditure_buffer = { # Buffer, will not be spent
 	}
 }
 
-heavy_metals_expenditure_ships = {
-	resource = heavy_metals
+heavy_alloys_expenditure_ships = {
+	resource = heavy_alloys
 	type = expenditure
 	category = ships
 
@@ -69,8 +69,8 @@ heavy_metals_expenditure_ships = {
 	}
 }
 
-heavy_metals_expenditure_ship_upgrades = {
-	resource = heavy_metals
+heavy_alloys_expenditure_ship_upgrades = {
+	resource = heavy_alloys
 	type = expenditure
 	category = ship_upgrades
 
@@ -93,8 +93,8 @@ heavy_metals_expenditure_ship_upgrades = {
 	}
 }
 
-heavy_metals_expenditure_planets = {
-	resource = heavy_metals
+heavy_alloys_expenditure_planets = {
+	resource = heavy_alloys
 	type = expenditure
 	category = planets
 
@@ -111,8 +111,8 @@ heavy_metals_expenditure_planets = {
 	}
 }
 
-heavy_metals_expenditure_starbases = {
-	resource = heavy_metals
+heavy_alloys_expenditure_starbases = {
+	resource = heavy_alloys
 	type = expenditure
 	category = starbases
 
@@ -134,14 +134,14 @@ heavy_metals_expenditure_starbases = {
 		# Reduce spending on claiming new systems if we have unclaimed planets
 		modifier = {
 			is_machine_empire = yes
-			has_country_resource = { type = heavy_metals amount < 450 }
+			has_country_resource = { type = heavy_alloys amount < 450 }
 			factor = 0.25 # more aggresive saving for robots since their colony ships cost more
 			ai_colonize_plans > 0
 		}
 		# Reduce spending on claiming new systems if we have unclaimed planets
 		modifier = {
 			is_machine_empire = no
-			has_country_resource = { type = heavy_metals amount < 250 }
+			has_country_resource = { type = heavy_alloys amount < 250 }
 			factor = 0.50
 			ai_colonize_plans > 0
 		}
@@ -175,8 +175,8 @@ heavy_metals_expenditure_starbases = {
 	}
 }
 
-heavy_metals_expenditure_starbases_fallen_empires = {
-	resource = heavy_metals
+heavy_alloys_expenditure_starbases_fallen_empires = {
+	resource = heavy_alloys
 	type = expenditure
 	category = starbases
 
@@ -189,8 +189,8 @@ heavy_metals_expenditure_starbases_fallen_empires = {
 	}
 }
 
-heavy_metals_expenditure_starbases_expand = {
-	resource = heavy_metals
+heavy_alloys_expenditure_starbases_expand = {
+	resource = heavy_alloys
 	type = expenditure
 	category = starbases
 
@@ -214,8 +214,8 @@ heavy_metals_expenditure_starbases_expand = {
 	}
 }
 
-heavy_metals_expenditure_colonies_expand = {
-	resource = heavy_metals
+heavy_alloys_expenditure_colonies_expand = {
+	resource = heavy_alloys
 	type = expenditure
 	category = colonies
 
@@ -313,8 +313,8 @@ heavy_metals_expenditure_colonies_expand = {
 	}
 }
 
-heavy_metals_expenditure_megastructures = {
-	resource = heavy_metals
+heavy_alloys_expenditure_megastructures = {
+	resource = heavy_alloys
 	type = expenditure
 	category = megastructures
 
@@ -345,8 +345,8 @@ heavy_metals_expenditure_megastructures = {
 	}
 }
 
-heavy_metals_expenditure_habitats = {
-	resource = heavy_metals
+heavy_alloys_expenditure_habitats = {
+	resource = heavy_alloys
 	type = expenditure
 	category = megastructures_habitat
 
@@ -402,8 +402,8 @@ heavy_metals_expenditure_habitats = {
 	}
 }
 
-heavy_metals_expenditure_decisions = {
-	resource = heavy_metals
+heavy_alloys_expenditure_decisions = {
+	resource = heavy_alloys
 	type = expenditure
 	category = decisions
 	potential = {
@@ -420,7 +420,7 @@ heavy_metals_expenditure_decisions = {
 		}
 		# only consider these kinds of decisions when "wealthy"
 		has_resource = {
-			type = heavy_metals
+			type = heavy_alloys
 			amount > 5000
 		}
 	}
@@ -441,8 +441,8 @@ heavy_metals_expenditure_decisions = {
 	}
 }
 
-heavy_metals_expenditure_armies = {
-	resource = heavy_metals
+heavy_alloys_expenditure_armies = {
+	resource = heavy_alloys
 	type = expenditure
 	category = armies
 
@@ -469,8 +469,8 @@ heavy_metals_expenditure_armies = {
 }
 
 
-heavy_metals_expenditure_armies_threatened = {
-	resource = heavy_metals
+heavy_alloys_expenditure_armies_threatened = {
+	resource = heavy_alloys
 	type = expenditure
 	category = armies
 
@@ -486,8 +486,8 @@ heavy_metals_expenditure_armies_threatened = {
 ############
 ## Upkeep ##
 ############
-heavy_metals_upkeep_buffer = {	# Buffer, will not be spent
-	resource = heavy_metals
+heavy_alloys_upkeep_buffer = {	# Buffer, will not be spent
+	resource = heavy_alloys
 	type = upkeep
 	category = buffer
 
@@ -500,8 +500,8 @@ heavy_metals_upkeep_buffer = {	# Buffer, will not be spent
 	}
 }
 
-heavy_metals_upkeep_habitats = {
-	resource = heavy_metals
+heavy_alloys_upkeep_habitats = {
+	resource = heavy_alloys
 	type = upkeep
 	category = megastructures_habitat
 
@@ -516,7 +516,7 @@ heavy_metals_upkeep_habitats = {
 			OR = {
 				is_at_war = yes
 				resource_income_compare = {
-					resource = heavy_metals
+					resource = heavy_alloys
 					value > 800
 				}
 			}

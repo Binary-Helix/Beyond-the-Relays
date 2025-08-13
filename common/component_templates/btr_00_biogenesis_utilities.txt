@@ -685,7 +685,7 @@ utility_component_template = { # Small
 		cost = {
 			#alloys = @s_t5_cost
 			light_alloys = @s_t5_cost
-			heavy_metals = @s_t5_cost
+			heavy_alloys = @s_t5_cost
 			minor_artifacts = @minor_artifacts_cost_s
 		}
 		upkeep = {
@@ -771,7 +771,7 @@ utility_component_template = { # Medium
 		cost = {
 			#alloys = @m_t5_cost
 			light_alloys = @m_t5_cost
-			heavy_metals = @m_t5_cost
+			heavy_alloys = @m_t5_cost
 			minor_artifacts = @minor_artifacts_cost_m
 		}
 		upkeep = {
@@ -857,7 +857,7 @@ utility_component_template = { # Large
 		cost = {
 			#alloys = @l_t5_cost
 			light_alloys = @l_t5_cost
-			heavy_metals = @l_t5_cost
+			heavy_alloys = @l_t5_cost
 			minor_artifacts = @minor_artifacts_cost_l
 		}
 		upkeep = {
@@ -915,7 +915,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_s_t1_cost
 			light_alloys = @shield_s_t1_cost
-			heavy_metals = @shield_s_t1_cost
+			heavy_alloys = @shield_s_t1_cost
 		}
 		upkeep = {
 			food = @shield_s_t1_upkeep_energy
@@ -962,7 +962,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_m_t1_cost
 			light_alloys = @shield_m_t1_cost
-			heavy_metals = @shield_m_t1_cost
+			heavy_alloys = @shield_m_t1_cost
 		}
 		upkeep = {
 			food = @shield_m_t1_upkeep_energy
@@ -1009,7 +1009,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_l_t1_cost
 			light_alloys = @shield_l_t1_cost
-			heavy_metals = @shield_l_t1_cost
+			heavy_alloys = @shield_l_t1_cost
 		}
 		upkeep = {
 			food = @shield_l_t1_upkeep_energy
@@ -1057,7 +1057,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_s_t2_cost
 			light_alloys = @shield_s_t2_cost
-			heavy_metals = @shield_s_t2_cost
+			heavy_alloys = @shield_s_t2_cost
 		}
 		upkeep = {
 			food = @shield_s_t2_upkeep_energy
@@ -1104,7 +1104,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_m_t2_cost
 			light_alloys = @shield_m_t2_cost
-			heavy_metals = @shield_m_t2_cost
+			heavy_alloys = @shield_m_t2_cost
 		}
 		upkeep = {
 			food = @shield_m_t2_upkeep_energy
@@ -1151,7 +1151,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_l_t2_cost
 			light_alloys = @shield_l_t2_cost
-			heavy_metals = @shield_l_t2_cost
+			heavy_alloys = @shield_l_t2_cost
 		}
 		upkeep = {
 			food = @shield_l_t2_upkeep_energy
@@ -1199,7 +1199,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_s_t3_cost
 			light_alloys = @shield_s_t3_cost
-			heavy_metals = @shield_s_t3_cost
+			heavy_alloys = @shield_s_t3_cost
 		}
 		upkeep = {
 			food = @shield_s_t3_upkeep_energy
@@ -1244,7 +1244,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_m_t3_cost
 			light_alloys = @shield_m_t3_cost
-			heavy_metals = @shield_m_t3_cost
+			heavy_alloys = @shield_m_t3_cost
 		}
 		upkeep = {
 			food = @shield_m_t3_upkeep_energy
@@ -1289,7 +1289,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_l_t3_cost
 			light_alloys = @shield_l_t3_cost
-			heavy_metals = @shield_l_t3_cost
+			heavy_alloys = @shield_l_t3_cost
 		}
 		upkeep = {
 			food = @shield_l_t3_upkeep_energy
@@ -1335,7 +1335,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_s_t4_cost
 			light_alloys = @shield_s_t4_cost
-			heavy_metals = @shield_s_t4_cost
+			heavy_alloys = @shield_s_t4_cost
 			#exotic_gases = 0.25
 			helium_3 = 0.25
 			hydrogen = 0.25
@@ -1387,7 +1387,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_m_t4_cost
 			light_alloys = @shield_s_t4_cost
-			heavy_metals = @shield_s_t4_cost
+			heavy_alloys = @shield_s_t4_cost
 			#exotic_gases = 0.50
 			helium_3 = 0.5
 			hydrogen = 0.5
@@ -1439,7 +1439,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_l_t4_cost
 			light_alloys =  @shield_l_t4_cost
-			heavy_metals =  @shield_l_t4_cost
+			heavy_alloys =  @shield_l_t4_cost
 			#exotic_gases = 1
 			helium_3 = 1
 			hydrogen = 1
@@ -1492,7 +1492,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_s_t5_cost
 			light_alloys = @shield_s_t5_cost
-			heavy_metals = @shield_s_t5_cost
+			heavy_alloys = @shield_s_t5_cost
 			#exotic_gases = 0.333
 			helium_3 = 0.333
 			hydrogen = 0.333
@@ -1544,7 +1544,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_m_t5_cost
 			light_alloys = @shield_m_t5_cost
-			heavy_metals = @shield_m_t5_cost
+			heavy_alloys = @shield_m_t5_cost
 			#exotic_gases = 0.666
 			helium_3 = 0.666
 			hydrogen = 0.666
@@ -1596,7 +1596,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_l_t5_cost
 			light_alloys = @shield_l_t5_cost
-			heavy_metals = @shield_l_t5_cost
+			heavy_alloys = @shield_l_t5_cost
 			#exotic_gases = 1.333
 			helium_3 = 1.333
 			hydrogen = 1.333
@@ -1649,7 +1649,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_s_t6_cost
 			light_alloys = @shield_s_t6_cost
-			heavy_metals = @shield_s_t6_cost
+			heavy_alloys = @shield_s_t6_cost
 			#sr_dark_matter = 0.25
 			eezo = 0.25
 		}
@@ -1703,7 +1703,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_m_t6_cost
 			light_alloys = @shield_m_t6_cost
-			heavy_metals = @shield_m_t6_cost
+			heavy_alloys = @shield_m_t6_cost
 			#sr_dark_matter = 0.5
 			eezo = 0.5
 		}
@@ -1757,7 +1757,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_l_t6_cost
 			light_alloys = @shield_l_t6_cost
-			heavy_metals = @shield_l_t6_cost
+			heavy_alloys = @shield_l_t6_cost
 			#sr_dark_matter = 1
 			eezo = 1
 		}
@@ -1815,7 +1815,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_s_t7_cost
 			light_alloys = @shield_s_t7_cost
-			heavy_metals = @shield_s_t7_cost
+			heavy_alloys = @shield_s_t7_cost
 			#sr_zro = 0.111
 			eezo = 0.111
 		}
@@ -1869,7 +1869,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_m_t7_cost
 			light_alloys = @shield_m_t7_cost
-			heavy_metals = @shield_m_t7_cost
+			heavy_alloys = @shield_m_t7_cost
 			#sr_zro = 0.222
 			eezo = 0.222
 		}
@@ -1923,7 +1923,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @shield_l_t7_cost
 			light_alloys = @shield_l_t7_cost
-			heavy_metals = @shield_l_t7_cost
+			heavy_alloys = @shield_l_t7_cost
 			#sr_zro = 0.333
 			eezo = 0.333
 		}
@@ -1977,12 +1977,12 @@ utility_component_template = { #Low power requirements, lower str. Maybe good re
 		cost = {
 			#alloys = @shield_s_t2_cost
 			light_alloys = @shield_s_t2_cost
-			heavy_metals = @shield_s_t2_cost
+			heavy_alloys = @shield_s_t2_cost
 		}
 		upkeep = {
 			#alloys = @shield_s_t2_upkeep_alloys
 			light_alloys = @shield_s_t2_upkeep_alloys
-			heavy_metals = @shield_s_t2_upkeep_alloys
+			heavy_alloys = @shield_s_t2_upkeep_alloys
 		}
 	}
 	modifier = {
@@ -2022,12 +2022,12 @@ utility_component_template = { #Low power requirements, lower str. Maybe good re
 		cost = {
 			#alloys = @shield_m_t2_cost
 			light_alloys = @shield_m_t2_cost
-			heavy_metals = @shield_m_t2_cost
+			heavy_alloys = @shield_m_t2_cost
 		}
 		upkeep = {
 			#alloys = @shield_m_t2_upkeep_alloys
 			light_alloys = @shield_m_t2_upkeep_alloys
-			heavy_metals = @shield_m_t2_upkeep_alloys
+			heavy_alloys = @shield_m_t2_upkeep_alloys
 		}
 	}
 	modifier = {
@@ -2067,12 +2067,12 @@ utility_component_template = { #Low power requirements, lower str. Maybe good re
 		cost = {
 			#alloys = @shield_l_t2_cost
 			light_alloys = @shield_l_t2_cost
-			heavy_metals = @shield_l_t2_cost
+			heavy_alloys = @shield_l_t2_cost
 		}
 		upkeep = {
 			#alloys = @shield_l_t2_upkeep_alloys
 			light_alloys = @shield_l_t2_upkeep_alloys
-			heavy_metals = @shield_l_t2_upkeep_alloys
+			heavy_alloys = @shield_l_t2_upkeep_alloys
 		}
 	}
 	modifier = {
@@ -2121,7 +2121,7 @@ utility_component_template = { # Small
 		cost = {
 			#alloys = @shield_s_t5_cost
 			light_alloys = @shield_s_t5_cost
-			heavy_metals = @shield_s_t5_cost
+			heavy_alloys = @shield_s_t5_cost
 			minor_artifacts = @minor_artifacts_cost_s
 		}
 		upkeep = {
@@ -2201,7 +2201,7 @@ utility_component_template = { # Medium
 		cost = {
 			#alloys = @shield_m_t5_cost
 			light_alloys = @shield_m_t5_cost
-			heavy_metals = @shield_m_t5_cost
+			heavy_alloys = @shield_m_t5_cost
 			minor_artifacts = @minor_artifacts_cost_m
 		}
 		upkeep = {
@@ -2281,7 +2281,7 @@ utility_component_template = { # Large
 		cost = {
 			#alloys = @shield_l_t5_cost
 			light_alloys = @shield_l_t5_cost
-			heavy_metals = @shield_l_t5_cost
+			heavy_alloys = @shield_l_t5_cost
 			minor_artifacts = @minor_artifacts_cost_l
 		}
 		upkeep = {
@@ -3912,7 +3912,7 @@ utility_component_template = {
 		cost = {
 			#alloys = @cruiser_reactor_cost_5
 			light_alloys = @cruiser_reactor_cost_5
-			heavy_metals = @cruiser_reactor_cost_5
+			heavy_alloys = @cruiser_reactor_cost_5
 		}
 	}
 
