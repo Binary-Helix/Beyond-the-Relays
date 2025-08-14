@@ -210,7 +210,7 @@ cyber_drone = {
 		category = planet_pop_assemblers
 		upkeep = {
 			#alloys = 1
-			light_metals = 0.7
+			light_alloys = 0.7
 			heavy_metals = 0.3
 		}
 	}
@@ -263,7 +263,7 @@ replicator = {
 		category = planet_pop_assemblers
 		upkeep = {
 			#alloys = 1
-			light_metals = 0.7
+			light_alloys = 0.7
 			heavy_metals = 0.3
 		}
 	}
@@ -318,7 +318,7 @@ crucible_drone = {
 		category = planet_doctors
 		upkeep = {
 			#alloys = 2
-			light_metals = 1.4
+			light_alloys = 1.4
 			heavy_metals = 0.6
 		}
 		upkeep = {
@@ -789,7 +789,7 @@ fabricator = {
 		category = planet_metallurgists
 		produces = {
 			#alloys = 4
-			light_metals = 2
+			light_alloys = 2
 			heavy_metals = 1
 		}
 		upkeep = {
@@ -807,7 +807,7 @@ fabricator = {
 				}
 			}
 			#alloys = @requisitorium_alloys_reduction
-			light_metals = @requisitorium_alloys_reduction
+			light_alloys = @requisitorium_alloys_reduction
 			heavy_metals = @requisitorium_alloys_reduction
 		}
 
@@ -830,7 +830,7 @@ fabricator = {
 				}
 			}
 			#alloys = @requisitorium_alloys_overlord
-			light_metals = @requisitorium_alloys_overlord
+			light_alloys = @requisitorium_alloys_overlord
 			heavy_metals = @requisitorium_alloys_overlord
 		}
 	}
@@ -869,7 +869,7 @@ alloy_drone = {
 		category = planet_metallurgists
 		produces = {
 			#alloys = 4
-			light_metals = 2
+			light_alloys = 2
 			heavy_metals = 1
 		}
 		upkeep = {
@@ -887,7 +887,7 @@ alloy_drone = {
 				}
 			}
 			#alloys = @requisitorium_alloys_reduction
-			light_metals = @requisitorium_alloys_reduction
+			light_alloys = @requisitorium_alloys_reduction
 			heavy_metals = @requisitorium_alloys_reduction
 		}
 
@@ -910,7 +910,7 @@ alloy_drone = {
 				}
 			}
 			#alloys = @requisitorium_alloys_overlord
-			light_metals = @requisitorium_alloys_overlord
+			light_alloys = @requisitorium_alloys_overlord
 			heavy_metals = @requisitorium_alloys_overlord
 		}
 	}
@@ -1895,7 +1895,7 @@ bluelotus_drone = {
 		category = planet_metallurgists
 		produces = {
 			#alloys = 4
-			light_metals = 2
+			light_alloys = 2
 			heavy_metals = 1
 		}
 
@@ -2066,7 +2066,7 @@ scrap_miner_drone = {
 		produces = {
 			minerals = 2
 			#alloys = 1
-			light_metals = 1
+			light_alloys = 1
 			heavy_metals = 0.5
 		}
 	}

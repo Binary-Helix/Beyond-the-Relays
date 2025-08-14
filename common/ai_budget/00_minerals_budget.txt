@@ -1,0 +1,469 @@
+## Categories used in this file must have use_for_ai_budget = yes defined in economic_categories ##
+## It is possible to have multiple entries with the same category and resource ##
+
+#################
+## Expenditure ##
+#################
+minerals_expenditure_buffer = { # Buffer, will not be spent
+	resource = minerals
+	type = expenditure
+	category = buffer
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.05
+	}
+}
+
+minerals_expenditure_planets_low = {
+	resource = minerals
+	type = expenditure
+	category = planets
+
+	potential = {
+		resource_stockpile_compare = { resource = minerals value < 1000 }
+	}
+
+	weight = {
+		weight = 1.0
+	}
+}
+
+minerals_expenditure_planets_med = {
+	resource = minerals
+	type = expenditure
+	category = planets
+
+	potential = {
+		resource_stockpile_compare = { resource = minerals value >= 1000 }
+		resource_stockpile_compare = { resource = minerals value < 2000	}
+	}
+
+	weight = {
+		weight = 0.8
+	}
+}
+
+minerals_expenditure_planets_high = {
+	resource = minerals
+	type = expenditure
+	category = planets
+
+	potential = {
+		resource_stockpile_compare = { resource = minerals value >= 2000 }
+	}
+
+	weight = {
+		weight = 0.6
+	}
+}
+
+minerals_expenditure_stations_low = {
+	resource = minerals
+	type = expenditure
+	category = stations
+
+	potential = {
+		country_uses_bio_ships = no
+		resource_stockpile_compare = { resource = minerals value < 1000 }
+	}
+
+	weight = {
+		weight = 0.2
+	}
+}
+
+minerals_expenditure_stations_med = {
+	resource = minerals
+	type = expenditure
+	category = stations
+
+	potential = {
+		country_uses_bio_ships = no
+		resource_stockpile_compare = { resource = minerals value >= 1000 }
+		resource_stockpile_compare = { resource = minerals value < 2000 }
+	}
+
+	weight = {
+		weight = 0.1
+	}
+}
+
+minerals_expenditure_stations_high = {
+	resource = minerals
+	type = expenditure
+	category = stations
+
+	potential = {
+		country_uses_bio_ships = no
+		resource_stockpile_compare = { resource = minerals value >= 2000 }
+	}
+
+	weight = {
+		weight = 0.05
+	}
+}
+#
+# minerals_expenditure_armies = {
+# 	resource = minerals
+# 	type = expenditure
+# 	category = armies
+#
+# 	potential = {
+# 		always = yes
+# 	}
+#
+# 	weight = {
+# 		weight = 0.1
+#
+# 		modifier = {
+# 			factor = 2
+# 			OR = {
+# 				any_neighbor_country = {
+# 					has_ascension_perk = ap_become_the_crisis
+# 				}
+# 				any_country = {
+# 					is_crisis_faction = yes
+# 				}
+# 			}
+# 		}
+#
+# 	}
+# }
+#
+# minerals_expenditure_armies_threatened = {
+# 	resource = minerals
+# 	type = expenditure
+# 	category = armies
+#
+# 	potential = {
+# 		highest_threat > 20
+# 	}
+#
+# 	weight = {
+# 		weight = 0.10
+# 	}
+# }
+#
+# minerals_expenditure_stations_expand = {
+# 	resource = minerals
+# 	type = expenditure
+# 	category = stations
+#
+# 	potential = {
+# 		exploitable_planets >= 1
+# 	}
+#
+# 	weight = {
+# 		weight = 0.05
+# 	}
+#
+# 	desired_min = {
+# 		base = 100
+# 	}
+# }
+
+minerals_expenditure_colonies_lithoid_expand = {
+	resource = minerals
+	type = expenditure
+	category = colonies
+
+	potential = {
+		is_robot_empire = no
+		is_lithoid_empire = yes
+		NOT = {
+			has_origin = origin_synthetic_fertility
+		}
+		has_resource = { type = minerals amount > 400 }
+		has_monthly_income = {
+			resource = minerals
+			value > 0
+		}
+	}
+
+	weight = {
+		weight = 0.8
+	}
+
+	desired_min = {
+		base = 0
+		modifier = {
+			add = @colony_cost_base
+			is_hive_empire = no
+		}
+		modifier = {
+			add = @colony_cost_high
+			OR = {
+				is_hive_empire = yes
+				has_origin = origin_lithoid
+			}
+		}
+	}
+
+	desired_max = {
+		base = 0
+		modifier = {
+			add = @colony_cost_base_max
+			is_hive_empire = no
+		}
+		modifier = {
+			add = @colony_cost_high_max
+			OR = {
+				is_hive_empire = yes
+				has_origin = origin_lithoid
+			}
+		}
+	}
+}
+
+minerals_expenditure_ships = {
+	resource = minerals
+	type = expenditure
+	category = ships
+
+	potential = {
+		OR = {
+			uses_fauna_ship_sizes = yes
+			AND = {
+				has_ascension_perk = ap_become_the_crisis
+				has_crisis_level = crisis_level_2
+			}
+		}
+	}
+
+	weight = {
+		weight = 0.4
+
+		# spend more minerals building ships while at war
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
+
+		# spend less minerals on ships if over capacity
+		modifier = {
+			factor = 0.5
+			used_naval_capacity_percent >= 1.0
+		}
+	}
+}
+
+minerals_expenditure_ship_upgrades = {
+	resource = minerals
+	type = expenditure
+	category = ship_upgrades
+
+	potential = {
+		OR = {
+			uses_fauna_ship_sizes = yes
+			AND = {
+				has_ascension_perk = ap_become_the_crisis
+				has_crisis_level = crisis_level_2
+			}
+		}
+	}
+
+	weight = {
+		weight = 0.2
+
+		# spend more on ship upgrades if at capacity
+		modifier = {
+			factor = 4
+			used_naval_capacity_percent >= 1.0
+		}
+	}
+}
+
+minerals_expenditure_decisions_wilderness = {
+	resource = minerals
+	type = expenditure
+	category = decisions
+
+	potential = {
+		has_origin = origin_wilderness
+		any_owned_planet = {
+			free_district_slots < 3
+			planet_size < 25
+		}
+	}
+
+	weight = {
+		weight = 0.1
+		modifier = {
+			factor = 4
+			any_owned_planet = {
+				free_district_slots = 0
+			}
+		}
+	}
+}
+
+############
+## Upkeep ##
+############
+minerals_upkeep_buffer = {	# Buffer, will not be spent
+	resource = minerals
+	type = upkeep
+	category = buffer
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.30
+	}
+}
+
+minerals_upkeep_planets = {
+	resource = minerals
+	type = upkeep
+	category = planets
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.70
+	}
+}
+
+minerals_expenditure_decisions = {
+	resource = minerals
+	type = expenditure
+	category = decisions
+
+	potential = {
+		OR = {
+			AND = {
+				has_technology = tech_housing_2
+				any_owned_planet = {
+					is_planet_class = pc_relic
+					num_uncleared_blockers < 1
+				}
+			}
+			AND = {
+				has_ascension_perk = ap_arcology_project
+				any_owned_planet = {
+					is_artificial = no
+					NOR = {
+						is_planet_class = pc_city
+						is_planet_class = pc_relic
+						has_modifier = resort_colony
+						has_modifier = penal_colony
+						has_modifier = slave_colony
+						has_modifier = pm_wenkwort_custodian
+					}
+					num_uncleared_blockers < 1
+					free_district_slots < 1
+					OR = {
+						pop_amount >= 7000
+						is_capital = yes
+					}
+				}
+			}
+		}
+		# only consider these kinds of decisions when "wealthy"
+		has_resource = {
+			type = minerals
+			amount > 25000
+		}
+	}
+
+	weight = {
+		weight = 0.20
+	}
+
+	desired_min = {
+		base = 20000
+	}
+	desired_max = {
+		base = 20000
+	}
+}
+
+minerals_expenditure_deposit_blockers = {
+	resource = minerals
+	type = expenditure
+	category = deposit_blockers
+
+	potential = {
+		any_owned_planet = {
+			OR = {
+				has_deposit = d_ruined_arcology
+				has_deposit = d_resource_consolidation_1
+				AND = {
+					OR = {
+						has_deposit = d_buried_lithoids
+						has_deposit = d_hibernating_lithoids
+					}
+					is_homeworld = yes
+				}
+			}
+		}
+	}
+
+	weight = {
+		weight = 0.3
+		modifier = {
+			factor = 5
+
+			# if we have any planet that is currently completely blocked
+			any_owned_planet = {
+				OR = {
+					has_deposit = d_ruined_arcology
+					AND = {
+						OR = {
+							has_deposit = d_buried_lithoids
+							has_deposit = d_hibernating_lithoids
+						}
+						is_homeworld = yes
+					}
+				}
+				num_free_districts = { type = any value < 1 }
+			}
+		}
+	}
+
+	# base remove blocker cost
+	desired_min = {
+		base = 250
+	}
+
+	desired_max = {
+		base = 1000
+	}
+}
+#
+#minerals_upkeep_ships = {
+#	resource = minerals
+#	type = upkeep
+#	category = ships
+#
+#	potential = {
+#		has_ascension_perk = ap_become_the_crisis
+#		has_crisis_level = crisis_level_2
+#	}
+#
+#	weight = {
+#		weight = 0.3
+#	}
+#}
+
+minerals_upkeep_country = {
+	resource = minerals
+	type = upkeep
+	category = country
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.1
+	}
+}

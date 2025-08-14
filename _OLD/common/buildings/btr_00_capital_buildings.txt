@@ -252,7 +252,7 @@ building_capital = {
         category = planet_buildings
         cost = {
             minerals = @btr_govt_b2_mineral_cost
-            light_metals = @btr_govt_b2_light_metals_cost
+            light_alloys = @btr_govt_b2_light_alloys_cost
             heavy_metals = @btr_govt_b2_heavy_metals_cost
         }
         upkeep = {
@@ -390,7 +390,7 @@ building_major_capital = {
         category = planet_buildings
         cost = {
             minerals = @btr_govt_b3_mineral_cost
-            light_metals = @btr_govt_b3_light_metals_cost
+            light_alloys = @btr_govt_b3_light_alloys_cost
             heavy_metals = @btr_govt_b3_heavy_metals_cost
         }
         upkeep = {
@@ -562,7 +562,7 @@ building_system_capital = {
         category = planet_buildings
         cost = {
             minerals = @btr_govt_b4_mineral_cost
-            light_metals = @btr_govt_b4_light_metals_cost
+            light_alloys = @btr_govt_b4_light_alloys_cost
             heavy_metals = @btr_govt_b4_heavy_metals_cost
         }
         upkeep = {
@@ -814,7 +814,7 @@ building_machine_capital = {
         category = planet_buildings
         cost = {
             minerals = @btr_govt_b2_mineral_cost
-            light_metals = @btr_govt_b2_light_metals_cost
+            light_alloys = @btr_govt_b2_light_alloys_cost
             heavy_metals = @btr_govt_b2_heavy_metals_cost
         }
         upkeep = {
@@ -957,7 +957,7 @@ building_machine_major_capital = {
         category = planet_buildings
         cost = {
             minerals = @btr_govt_b3_mineral_cost
-            light_metals = @btr_govt_b3_light_metals_cost
+            light_alloys = @btr_govt_b3_light_alloys_cost
             heavy_metals = @btr_govt_b3_heavy_metals_cost
         }
         upkeep = {
@@ -1123,7 +1123,7 @@ building_machine_system_capital = {
         category = planet_buildings
         cost = {
             minerals = @btr_govt_b4_mineral_cost
-            light_metals = @btr_govt_b4_light_metals_cost
+            light_alloys = @btr_govt_b4_light_alloys_cost
             heavy_metals = @btr_govt_b4_heavy_metals_cost
         }
         upkeep = {
@@ -1246,7 +1246,7 @@ building_hive_capital = {
         category = planet_buildings
         cost = {
             minerals = @btr_govt_b1_mineral_cost
-            light_metals = @btr_govt_b1_light_metals_cost
+            light_alloys = @btr_govt_b1_light_alloys_cost
             heavy_metals = @btr_govt_b1_heavy_metals_cost
         }
         upkeep = {
@@ -1435,7 +1435,7 @@ building_hab_capital = {
         }
         upkeep = {
             trigger = { owner = { has_active_tradition = tr_expansion_adopt } }
-            light_metals = @btr_govt_b1_light_metals_cost
+            light_alloys = @btr_govt_b1_light_alloys_cost
             heavy_metals = @btr_govt_b1_heavy_metals_cost
         }
     }
@@ -1714,7 +1714,7 @@ building_hab_major_capital = {
         category = planet_buildings_hab_capital
         cost = {
             minerals = @btr_govt_b2_mineral_cost
-            light_metals = @btr_govt_b2_light_metals_cost
+            light_alloys = @btr_govt_b2_light_alloys_cost
             heavy_metals = @btr_govt_b2_heavy_metals_cost
         }
         upkeep = {
@@ -1722,7 +1722,7 @@ building_hab_major_capital = {
         }
         upkeep = {
             trigger = { owner = { has_active_tradition = tr_expansion_adopt } }
-            light_metals = @btr_govt_b2_light_metals_cost
+            light_alloys = @btr_govt_b2_light_alloys_cost
             heavy_metals = @btr_govt_b2_heavy_metals_cost
         }
     }
@@ -2026,7 +2026,7 @@ building_hab_system_capital = {
         category = planet_buildings_hab_capital
         cost = {
             minerals = @btr_govt_b3_mineral_cost
-            light_metals = @btr_govt_b3_light_metals_cost
+            light_alloys = @btr_govt_b3_light_alloys_cost
             heavy_metals = @btr_govt_b3_heavy_metals_cost
         }
         upkeep = {
@@ -2034,7 +2034,7 @@ building_hab_system_capital = {
         }
         upkeep = {
             trigger = { owner = { has_active_tradition = tr_expansion_adopt } }
-            light_metals = @btr_govt_b3_light_metals_cost
+            light_alloys = @btr_govt_b3_light_alloys_cost
             heavy_metals = @btr_govt_b3_heavy_metals_cost
         }
     }
@@ -2475,7 +2475,7 @@ building_resort_major_capital = {
         category = planet_buildings
         cost = {
             minerals = @btr_govt_b2_mineral_cost
-            light_metals = @btr_govt_b2_light_metals_cost
+            light_alloys = @btr_govt_b2_light_alloys_cost
             heavy_metals = @btr_govt_b2_heavy_metals_cost
         }
         upkeep = {
@@ -2717,7 +2717,7 @@ building_slave_major_capital = {
         category = planet_buildings
         cost = {
             minerals = @btr_govt_b2_mineral_cost
-            light_metals = @btr_govt_b2_light_metals_cost
+            light_alloys = @btr_govt_b2_light_alloys_cost
             heavy_metals = @btr_govt_b2_heavy_metals_cost
         }
         upkeep = {
@@ -2909,7 +2909,7 @@ building_imperial_capital = {
         category = planet_buildings
         cost = {
             minerals = @btr_govt_b4_mineral_cost
-            light_metals = @btr_govt_b4_light_metals_cost
+            light_alloys = @btr_govt_b4_light_alloys_cost
             heavy_metals = @btr_govt_b4_heavy_metals_cost
         }
         upkeep = {
@@ -3084,7 +3084,7 @@ building_imperial_machine_capital = {
         category = planet_buildings
         cost = {
             minerals = @btr_govt_b4_mineral_cost
-            light_metals = @btr_govt_b4_light_metals_cost
+            light_alloys = @btr_govt_b4_light_alloys_cost
             heavy_metals = @btr_govt_b4_heavy_metals_cost
 
         }
@@ -3223,7 +3223,7 @@ building_imperial_hive_capital = {
         category = planet_buildings
         cost = {
             minerals = @btr_govt_b4_mineral_cost
-            light_metals = @btr_govt_b4_light_metals_cost
+            light_alloys = @btr_govt_b4_light_alloys_cost
             heavy_metals = @btr_govt_b4_heavy_metals_cost
         }
         upkeep = {

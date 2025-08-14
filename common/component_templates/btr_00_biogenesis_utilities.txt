@@ -1,0 +1,7073 @@
+##################
+# CARAPACE ARMOR #
+##################
+
+# Plasteel Armor
+utility_component_template = {
+	key = "SMALL_BIO_ARMOR_1"
+	size = small
+	icon = "GFX_ship_part_bio_armor_1"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = s
+		TIER = 1
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "BIO_ARMOR_1"
+	upgrades_to = "SMALL_BIO_ARMOR_2"
+
+	ai_weight = {
+		weight = @T1_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_BIO_ARMOR_1"
+	size = medium
+	icon = "GFX_ship_part_bio_armor_1"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = m
+		TIER = 1
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "BIO_ARMOR_1"
+	upgrades_to = "MEDIUM_BIO_ARMOR_2"
+
+	ai_weight = {
+		weight = @T1_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_BIO_ARMOR_1"
+	size = large
+	icon = "GFX_ship_part_bio_armor_1"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = l
+		TIER = 1
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_1" }
+	component_set = "BIO_ARMOR_1"
+	upgrades_to = "LARGE_BIO_ARMOR_2"
+
+	ai_weight = {
+		weight = @T1_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# Durasteel Armor
+utility_component_template = {
+	key = "SMALL_BIO_ARMOR_2"
+	size = small
+	icon = "GFX_ship_part_bio_armor_2"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = s
+		TIER = 2
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "BIO_ARMOR_2"
+	upgrades_to = "SMALL_BIO_ARMOR_3"
+
+	ai_weight = {
+		weight = @T2_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_BIO_ARMOR_2"
+	size = medium
+	icon = "GFX_ship_part_bio_armor_2"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = m
+		TIER = 2
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "BIO_ARMOR_2"
+	upgrades_to = "MEDIUM_BIO_ARMOR_3"
+
+	ai_weight = {
+		weight = @T2_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_BIO_ARMOR_2"
+	size = large
+	icon = "GFX_ship_part_bio_armor_2"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = l
+		TIER = 2
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_2" }
+	component_set = "BIO_ARMOR_2"
+	upgrades_to = "LARGE_BIO_ARMOR_3"
+
+	ai_weight = {
+		weight = @T2_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# Ceramo-Metal Armor
+utility_component_template = {
+	key = "SMALL_BIO_ARMOR_3"
+	size = small
+	icon = "GFX_ship_part_bio_armor_3"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = s
+		TIER = 3
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "BIO_ARMOR_3"
+	upgrades_to = "SMALL_BIO_ARMOR_4"
+
+	ai_weight = {
+		weight = @T3_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_BIO_ARMOR_3"
+	size = medium
+	icon = "GFX_ship_part_bio_armor_3"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = m
+		TIER = 3
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "BIO_ARMOR_3"
+	upgrades_to = "MEDIUM_BIO_ARMOR_4"
+
+	ai_weight = {
+		weight = @T3_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_BIO_ARMOR_3"
+	size = large
+	icon = "GFX_ship_part_bio_armor_3"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = l
+		TIER = 3
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_3" }
+	component_set = "BIO_ARMOR_3"
+	upgrades_to = "LARGE_BIO_ARMOR_4"
+
+	ai_weight = {
+		weight = @T3_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# Nanocomposite Armor
+utility_component_template = {
+	key = "SMALL_BIO_ARMOR_4"
+	size = small
+	icon = "GFX_ship_part_bio_armor_4"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = s
+		TIER = 4
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "BIO_ARMOR_4"
+	upgrades_to = "SMALL_BIO_ARMOR_5"
+
+	ai_weight = {
+		weight = @T4_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_BIO_ARMOR_4"
+	size = medium
+	icon = "GFX_ship_part_bio_armor_4"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = m
+		TIER = 4
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "BIO_ARMOR_4"
+	upgrades_to = "MEDIUM_BIO_ARMOR_5"
+
+	ai_weight = {
+		weight = @T4_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_BIO_ARMOR_4"
+	size = large
+	icon = "GFX_ship_part_bio_armor_4"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = l
+		TIER = 4
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_4" }
+	component_set = "BIO_ARMOR_4"
+	upgrades_to = "LARGE_BIO_ARMOR_5"
+
+	ai_weight = {
+		weight = @T4_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# Neutronium Armor
+utility_component_template = {
+	key = "SMALL_BIO_ARMOR_5"
+	size = small
+	icon = "GFX_ship_part_bio_armor_5"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = s
+		TIER = 5
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "BIO_ARMOR_5"
+	upgrades_to = "SMALL_DRAGON_BIO_ARMOR"
+
+	ai_weight = {
+		weight = @T5_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_BIO_ARMOR_5"
+	size = medium
+	icon = "GFX_ship_part_bio_armor_5"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = m
+		TIER = 5
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "BIO_ARMOR_5"
+	upgrades_to = "MEDIUM_DRAGON_BIO_ARMOR"
+
+	ai_weight = {
+		weight = @T5_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_BIO_ARMOR_5"
+	size = large
+	icon = "GFX_ship_part_bio_armor_5"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = l
+		TIER = 5
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_ship_armor_5" }
+	component_set = "BIO_ARMOR_5"
+	upgrades_to = "LARGE_DRAGON_BIO_ARMOR"
+
+	ai_weight = {
+		weight = @T5_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+########################
+# Dragon Armor
+########################
+
+# Dragonscale Armor
+utility_component_template = {
+	key = "SMALL_DRAGON_BIO_ARMOR"
+	size = small
+	icon = "GFX_ship_part_bio_dragon_armor"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = s
+		TIER = 6
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "DRAGON_BIO_ARMOR"
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_DRAGON_BIO_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_bio_dragon_armor"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = m
+		TIER = 6
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "DRAGON_BIO_ARMOR"
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_DRAGON_BIO_ARMOR"
+	size = large
+	icon = "GFX_ship_part_bio_dragon_armor"
+	icon_frame = 1
+	power = 0
+	inline_script = {
+		script = ship_components/bio_ship_armor
+		SIZE = l
+		TIER = 6
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_dragon_armor" }
+	component_set = "DRAGON_BIO_ARMOR"
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = { # Small
+	key = "SMALL_BIO_ARCHAEO_ARMOR"
+	size = small
+	icon = "GFX_ship_part_bio_archaeo_armor"
+	icon_frame = 1
+	power = @power_S3
+	modifier = {
+		ship_hull_add = @bio_ship_hull_s_3
+		ship_armor_add = @bio_ship_armor_s_3
+		ship_shield_add = @bio_ship_shield_S1
+		ship_shield_regen_add_static = @bio_ship_regen_S3 #Regeneration per day
+	}
+	custom_tooltip = tt_SMALL_BIO_ARCHAEO_AP
+	triggered_ship_modifier = {
+		potential = {
+			has_armor_percentage < @bio_ship_armor_regen_threshold
+		}
+		ship_armor_regen_add_static = @bio_ship_armor_regen_s_3
+	}
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+		ship_shield_add = @bio_ship_shield_S1
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_archaeoarmor" }
+	component_set = "BIO_ARCHAEO_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @s_t5_cost
+			light_alloys = @s_t5_cost
+			heavy_alloys = @s_t5_cost
+			minor_artifacts = @minor_artifacts_cost_s
+		}
+		upkeep = {
+			food = @s_t5_upkeep_energy
+			#alloys = @s_t5_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = @T5_weight
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 1.5
+		}
+	}
+}
+
+utility_component_template = { # Medium
+	key = "MEDIUM_BIO_ARCHAEO_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_bio_archaeo_armor"
+	icon_frame = 1
+	power = @power_M3
+	modifier = {
+		ship_hull_add = @bio_ship_hull_m_3
+		ship_armor_add = @bio_ship_armor_m_3
+		ship_shield_add = @bio_ship_shield_M1
+		ship_shield_regen_add_static = @bio_ship_regen_M3
+	}
+	custom_tooltip = tt_MEDIUM_BIO_ARCHAEO_AP
+	triggered_ship_modifier = {
+		potential = {
+			has_armor_percentage < @bio_ship_armor_regen_threshold
+		}
+		ship_armor_regen_add_static = @bio_ship_armor_regen_m_3
+	}
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+		ship_shield_add = @bio_ship_shield_M1
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_archaeoarmor" }
+	component_set = "BIO_ARCHAEO_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @m_t5_cost
+			light_alloys = @m_t5_cost
+			heavy_alloys = @m_t5_cost
+			minor_artifacts = @minor_artifacts_cost_m
+		}
+		upkeep = {
+			food = @m_t5_upkeep_energy
+			#alloys = @m_t5_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = @T5_weight
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 1.5
+		}
+	}
+}
+
+utility_component_template = { # Large
+	key = "LARGE_BIO_ARCHAEO_ARMOR"
+	size = large
+	icon = "GFX_ship_part_bio_archaeo_armor"
+	icon_frame = 1
+	power = @power_L3
+	modifier = {
+		ship_hull_add = @bio_ship_hull_l_3
+		ship_armor_add = @bio_ship_armor_l_3
+		ship_shield_add = @bio_ship_shield_L1
+		ship_shield_regen_add_static = @bio_ship_regen_L3
+	}
+	custom_tooltip = tt_LARGE_BIO_ARCHAEO_AP
+	triggered_ship_modifier = {
+		potential = {
+			has_armor_percentage < @bio_ship_armor_regen_threshold
+		}
+		ship_armor_regen_add_static = @bio_ship_armor_regen_m_3
+	}
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+		ship_shield_add = @bio_ship_shield_L1
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_archaeoarmor" }
+	component_set = "BIO_ARCHAEO_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @l_t5_cost
+			light_alloys = @l_t5_cost
+			heavy_alloys = @l_t5_cost
+			minor_artifacts = @minor_artifacts_cost_l
+		}
+		upkeep = {
+			food = @l_t5_upkeep_energy
+			alloys = @l_t5_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = @T5_weight
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 1.5
+		}
+	}
+}
+
+
+#########################
+# ENERGETIC MUSCULATURE #
+#########################
+
+# Deflectors
+utility_component_template = {
+	key = "SMALL_BIO_SHIELD_1"
+	size = small
+	icon = "GFX_ship_part_bio_shield_1"
+	icon_frame = 1
+	power = @power_S1
+
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_s_t1_cost
+			light_alloys = @shield_s_t1_cost
+			heavy_alloys = @shield_s_t1_cost
+		}
+		upkeep = {
+			food = @shield_s_t1_upkeep_energy
+			#alloys = @shield_s_t1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_S1
+		ship_shield_regen_add_static = @bio_ship_regen_S1 #Regeneration per day
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_shields_1" }
+	component_set = "BIO_SHIELD_1"
+	upgrades_to = "SMALL_BIO_SHIELD_2"
+
+	ai_weight = {
+		weight = @T1_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_BIO_SHIELD_1"
+	size = medium
+	icon = "GFX_ship_part_bio_shield_1"
+	icon_frame = 1
+	power = @power_M1
+
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_m_t1_cost
+			light_alloys = @shield_m_t1_cost
+			heavy_alloys = @shield_m_t1_cost
+		}
+		upkeep = {
+			food = @shield_m_t1_upkeep_energy
+			#alloys = @shield_m_t1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_M1
+		ship_shield_regen_add_static = @bio_ship_regen_M1 #Regeneration per day
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_shields_1" }
+	component_set = "BIO_SHIELD_1"
+	upgrades_to = "MEDIUM_BIO_SHIELD_2"
+
+	ai_weight = {
+		weight = @T1_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_BIO_SHIELD_1"
+	size = large
+	icon = "GFX_ship_part_bio_shield_1"
+	icon_frame = 1
+	power = @power_L1
+
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_l_t1_cost
+			light_alloys = @shield_l_t1_cost
+			heavy_alloys = @shield_l_t1_cost
+		}
+		upkeep = {
+			food = @shield_l_t1_upkeep_energy
+			#alloys = @shield_l_t1_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_L1
+		ship_shield_regen_add_static = @bio_ship_regen_L1 #Regeneration per day
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_shields_1" }
+	component_set = "BIO_SHIELD_1"
+	upgrades_to = "LARGE_BIO_SHIELD_2"
+
+	ai_weight = {
+		weight = @T1_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+# Advanced Deflectors
+utility_component_template = {
+	key = "SMALL_BIO_SHIELD_2"
+	size = small
+	icon = "GFX_ship_part_bio_shield_2"
+	icon_frame = 1
+	power = @power_S2
+
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_s_t2_cost
+			light_alloys = @shield_s_t2_cost
+			heavy_alloys = @shield_s_t2_cost
+		}
+		upkeep = {
+			food = @shield_s_t2_upkeep_energy
+			#alloys = @shield_s_t2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_S2
+		ship_shield_regen_add_static = @bio_ship_regen_S2 #Regeneration per day
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_shields_2" }
+	component_set = "BIO_SHIELD_2"
+	upgrades_to = "SMALL_BIO_SHIELD_3"
+
+	ai_weight = {
+		weight = @T2_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_BIO_SHIELD_2"
+	size = medium
+	icon = "GFX_ship_part_bio_shield_2"
+	icon_frame = 1
+	power = @power_M2
+
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_m_t2_cost
+			light_alloys = @shield_m_t2_cost
+			heavy_alloys = @shield_m_t2_cost
+		}
+		upkeep = {
+			food = @shield_m_t2_upkeep_energy
+			#alloys = @shield_m_t2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_M2
+		ship_shield_regen_add_static = @bio_ship_regen_M2 #Regeneration per day
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_shields_2" }
+	component_set = "BIO_SHIELD_2"
+	upgrades_to = "MEDIUM_BIO_SHIELD_3"
+
+	ai_weight = {
+		weight = @T2_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_BIO_SHIELD_2"
+	size = large
+	icon = "GFX_ship_part_bio_shield_2"
+	icon_frame = 1
+	power = @power_L2
+
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_l_t2_cost
+			light_alloys = @shield_l_t2_cost
+			heavy_alloys = @shield_l_t2_cost
+		}
+		upkeep = {
+			food = @shield_l_t2_upkeep_energy
+			#alloys = @shield_l_t2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_L2
+		ship_shield_regen_add_static = @bio_ship_regen_L2 #Regeneration per day
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_shields_2" }
+	component_set = "BIO_SHIELD_2"
+	upgrades_to = "LARGE_BIO_SHIELD_3"
+
+	ai_weight = {
+		weight = @T2_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+
+# Shields
+utility_component_template = {
+	key = "SMALL_BIO_SHIELD_3"
+	size = small
+	icon = "GFX_ship_part_bio_shield_3"
+	icon_frame = 1
+	power = @power_S3
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_s_t3_cost
+			light_alloys = @shield_s_t3_cost
+			heavy_alloys = @shield_s_t3_cost
+		}
+		upkeep = {
+			food = @shield_s_t3_upkeep_energy
+			#alloys = @shield_s_t3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_S3
+		ship_shield_regen_add_static = @bio_ship_regen_S3 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_3" }
+	component_set = "BIO_SHIELD_3"
+	upgrades_to = "SMALL_BIO_SHIELD_4"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T3_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_BIO_SHIELD_3"
+	size = medium
+	icon = "GFX_ship_part_bio_shield_3"
+	icon_frame = 1
+	power = @power_M3
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_m_t3_cost
+			light_alloys = @shield_m_t3_cost
+			heavy_alloys = @shield_m_t3_cost
+		}
+		upkeep = {
+			food = @shield_m_t3_upkeep_energy
+			#alloys = @shield_m_t3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_M3
+		ship_shield_regen_add_static = @bio_ship_regen_M3 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_3" }
+	component_set = "BIO_SHIELD_3"
+	upgrades_to = "MEDIUM_BIO_SHIELD_4"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T3_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_BIO_SHIELD_3"
+	size = large
+	icon = "GFX_ship_part_bio_shield_3"
+	icon_frame = 1
+	power = @power_L3
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_l_t3_cost
+			light_alloys = @shield_l_t3_cost
+			heavy_alloys = @shield_l_t3_cost
+		}
+		upkeep = {
+			food = @shield_l_t3_upkeep_energy
+			#alloys = @shield_l_t3_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_L3
+		ship_shield_regen_add_static = @bio_ship_regen_L3 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_3" }
+	component_set = "BIO_SHIELD_3"
+	upgrades_to = "LARGE_BIO_SHIELD_4"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T3_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+# Advanced Shields
+utility_component_template = {
+	key = "SMALL_BIO_SHIELD_4"
+	size = small
+	icon = "GFX_ship_part_bio_shield_4"
+	icon_frame = 1
+	power = @power_S4
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_s_t4_cost
+			light_alloys = @shield_s_t4_cost
+			heavy_alloys = @shield_s_t4_cost
+			#exotic_gases = 0.25
+			helium_3 = 0.25
+			hydrogen = 0.25
+		}
+		upkeep = {
+			food = @shield_s_t4_upkeep_energy
+			#alloys = @shield_s_t4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_S4
+		ship_shield_regen_add_static= @bio_ship_regen_S4 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_4" }
+	component_set = "BIO_SHIELD_4"
+	upgrades_to = "SMALL_BIO_SHIELD_5"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T4_weight
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_BIO_SHIELD_4"
+	size = medium
+	icon = "GFX_ship_part_bio_shield_4"
+	icon_frame = 1
+	power = @power_M4
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_m_t4_cost
+			light_alloys = @shield_s_t4_cost
+			heavy_alloys = @shield_s_t4_cost
+			#exotic_gases = 0.50
+			helium_3 = 0.5
+			hydrogen = 0.5
+		}
+		upkeep = {
+			food = @shield_m_t4_upkeep_energy
+			#alloys = @shield_m_t4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_M4
+		ship_shield_regen_add_static= @bio_ship_regen_M4 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_4" }
+	component_set = "BIO_SHIELD_4"
+	upgrades_to = "MEDIUM_BIO_SHIELD_5"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T4_weight
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_BIO_SHIELD_4"
+	size = large
+	icon = "GFX_ship_part_bio_shield_4"
+	icon_frame = 1
+	power = @power_L4
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_l_t4_cost
+			light_alloys =  @shield_l_t4_cost
+			heavy_alloys =  @shield_l_t4_cost
+			#exotic_gases = 1
+			helium_3 = 1
+			hydrogen = 1
+		}
+		upkeep = {
+			food = @shield_l_t4_upkeep_energy
+			#alloys = @shield_l_t4_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_L4
+		ship_shield_regen_add_static= @bio_ship_regen_L4 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_4" }
+	component_set = "BIO_SHIELD_4"
+	upgrades_to = "LARGE_BIO_SHIELD_5"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T4_weight
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+# Hyper Shields
+utility_component_template = {
+	key = "SMALL_BIO_SHIELD_5"
+	size = small
+	icon = "GFX_ship_part_bio_shield_5"
+	icon_frame = 1
+	power = @power_S5
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_s_t5_cost
+			light_alloys = @shield_s_t5_cost
+			heavy_alloys = @shield_s_t5_cost
+			#exotic_gases = 0.333
+			helium_3 = 0.333
+			hydrogen = 0.333
+		}
+		upkeep = {
+			food = @shield_s_t5_upkeep_energy
+			#alloys = @shield_s_t5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_S5
+		ship_shield_regen_add_static= @bio_ship_regen_S5 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_5" }
+	upgrades_to = "SMALL_DARK_MATTER_BIO_DEFLECTOR"
+	component_set = "BIO_SHIELD_5"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T5_weight
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_BIO_SHIELD_5"
+	size = medium
+	icon = "GFX_ship_part_bio_shield_5"
+	icon_frame = 1
+	power = @power_M5
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_m_t5_cost
+			light_alloys = @shield_m_t5_cost
+			heavy_alloys = @shield_m_t5_cost
+			#exotic_gases = 0.666
+			helium_3 = 0.666
+			hydrogen = 0.666
+		}
+		upkeep = {
+			food = @shield_m_t5_upkeep_energy
+			#alloys = @shield_m_t5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_M5
+		ship_shield_regen_add_static= @bio_ship_regen_M5 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_5" }
+	upgrades_to = "MEDIUM_DARK_MATTER_BIO_DEFLECTOR"
+	component_set = "BIO_SHIELD_5"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T5_weight
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_BIO_SHIELD_5"
+	size = large
+	icon = "GFX_ship_part_bio_shield_5"
+	icon_frame = 1
+	power = @power_L5
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_l_t5_cost
+			light_alloys = @shield_l_t5_cost
+			heavy_alloys = @shield_l_t5_cost
+			#exotic_gases = 1.333
+			helium_3 = 1.333
+			hydrogen = 1.333
+		}
+		upkeep = {
+			food = @shield_l_t5_upkeep_energy
+			#alloys = @shield_l_t5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_L5
+		ship_shield_regen_add_static= @bio_ship_regen_L5 #Regeneration per day
+	}
+	prerequisites = { "tech_shields_5" }
+	upgrades_to = "LARGE_DARK_MATTER_BIO_DEFLECTOR"
+	component_set = "BIO_SHIELD_5"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T5_weight
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+# Enigmatic Deflectors
+utility_component_template = {
+	key = "SMALL_DARK_MATTER_BIO_DEFLECTOR"
+	size = small
+	icon = "GFX_ship_part_bio_dark_matter_shield"
+	icon_frame = 1
+	power = @power_S6
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_s_t6_cost
+			light_alloys = @shield_s_t6_cost
+			heavy_alloys = @shield_s_t6_cost
+			#sr_dark_matter = 0.25
+			eezo = 0.25
+		}
+		upkeep = {
+			food = @shield_s_t6_upkeep_energy
+			#alloys = @shield_s_t6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_S6
+		ship_shield_regen_add_static = @bio_ship_regen_S6 #Regeneration per day
+	}
+	prerequisites = { "tech_dark_matter_deflector" }
+	component_set = "DARK_MATTER_BIO_DEFLECTOR"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T5_weight
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_DARK_MATTER_BIO_DEFLECTOR"
+	size = medium
+	icon = "GFX_ship_part_bio_dark_matter_shield"
+	icon_frame = 1
+	power = @power_M6
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_m_t6_cost
+			light_alloys = @shield_m_t6_cost
+			heavy_alloys = @shield_m_t6_cost
+			#sr_dark_matter = 0.5
+			eezo = 0.5
+		}
+		upkeep = {
+			food = @shield_m_t6_upkeep_energy
+			#alloys = @shield_m_t6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_M6
+		ship_shield_regen_add_static = @bio_ship_regen_M6 #Regeneration per day
+	}
+	prerequisites = { "tech_dark_matter_deflector" }
+	component_set = "DARK_MATTER_BIO_DEFLECTOR"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T5_weight
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_DARK_MATTER_BIO_DEFLECTOR"
+	size = large
+	icon = "GFX_ship_part_bio_dark_matter_shield"
+	icon_frame = 1
+	power = @power_L6
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_l_t6_cost
+			light_alloys = @shield_l_t6_cost
+			heavy_alloys = @shield_l_t6_cost
+			#sr_dark_matter = 1
+			eezo = 1
+		}
+		upkeep = {
+			food = @shield_l_t6_upkeep_energy
+			#alloys = @shield_l_t6_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_L6
+		ship_shield_regen_add_static = @bio_ship_regen_L6 #Regeneration per day
+	}
+	prerequisites = { "tech_dark_matter_deflector" }
+	component_set = "DARK_MATTER_BIO_DEFLECTOR"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T5_weight
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+####################
+# Psionic Shields
+####################
+
+utility_component_template = {
+	key = "SMALL_PSI_BIO_SHIELD"
+	size = small
+	icon = "GFX_ship_part_bio_psi_shield"
+	icon_frame = 1
+	power = @power_S7
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_s_t7_cost
+			light_alloys = @shield_s_t7_cost
+			heavy_alloys = @shield_s_t7_cost
+			#sr_zro = 0.111
+			eezo = 0.111
+		}
+		upkeep = {
+			food = @shield_s_t7_upkeep_energy
+			#alloys = @shield_s_t7_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_S7
+		ship_shield_regen_add_static = @bio_ship_regen_S7 #Regeneration per day
+	}
+	prerequisites = { "tech_psionic_shield" }
+	component_set = "PSI_BIO_SHIELD"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T5_weight
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_PSI_BIO_SHIELD"
+	size = medium
+	icon = "GFX_ship_part_bio_psi_shield"
+	icon_frame = 1
+	power = @power_M7
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_m_t7_cost
+			light_alloys = @shield_m_t7_cost
+			heavy_alloys = @shield_m_t7_cost
+			#sr_zro = 0.222
+			eezo = 0.222
+		}
+		upkeep = {
+			food = @shield_m_t7_upkeep_energy
+			#alloys = @shield_m_t7_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_M7
+		ship_shield_regen_add_static = @bio_ship_regen_M7 #Regeneration per day
+	}
+	prerequisites = { "tech_psionic_shield" }
+	component_set = "PSI_BIO_SHIELD"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T5_weight
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_PSI_BIO_SHIELD"
+	size = large
+	icon = "GFX_ship_part_bio_psi_shield"
+	icon_frame = 1
+	power = @power_L7
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_l_t7_cost
+			light_alloys = @shield_l_t7_cost
+			heavy_alloys = @shield_l_t7_cost
+			#sr_zro = 0.333
+			eezo = 0.333
+		}
+		upkeep = {
+			food = @shield_l_t7_upkeep_energy
+			#alloys = @shield_l_t7_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_L7
+		ship_shield_regen_add_static = @bio_ship_regen_L7 #Regeneration per day
+	}
+	prerequisites = { "tech_psionic_shield" }
+	component_set = "PSI_BIO_SHIELD"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T5_weight
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = { #Low power requirements, lower str. Maybe good regen.
+	key = "SMALL_PSI_BIO_BARRIER"
+	size = small
+	icon = "GFX_ship_part_bio_psi_shield"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_s_t2_cost
+			light_alloys = @shield_s_t2_cost
+			heavy_alloys = @shield_s_t2_cost
+		}
+		upkeep = {
+			#alloys = @shield_s_t2_upkeep_alloys
+			light_alloys = @shield_s_t2_upkeep_alloys
+			heavy_alloys = @shield_s_t2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_S2
+		ship_shield_regen_add_static = @bio_ship_regen_S5 #Regeneration per day
+	}
+	prerequisites = { "tech_psionic_barrier" }
+	component_set = "PSI_BIO_BARRIER"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T3_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = { #Low power requirements, lower str. Maybe good regen.
+	key = "MEDIUM_PSI_BIO_BARRIER"
+	size = medium
+	icon = "GFX_ship_part_bio_psi_shield"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_m_t2_cost
+			light_alloys = @shield_m_t2_cost
+			heavy_alloys = @shield_m_t2_cost
+		}
+		upkeep = {
+			#alloys = @shield_m_t2_upkeep_alloys
+			light_alloys = @shield_m_t2_upkeep_alloys
+			heavy_alloys = @shield_m_t2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_M2
+		ship_shield_regen_add_static = @bio_ship_regen_M5 #Regeneration per day
+	}
+	prerequisites = { "tech_psionic_barrier" }
+	component_set = "PSI_BIO_BARRIER"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T3_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = { #Low power requirements, lower str. Maybe good regen.
+	key = "LARGE_PSI_BIO_BARRIER"
+	size = large
+	icon = "GFX_ship_part_bio_psi_shield"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_l_t2_cost
+			light_alloys = @shield_l_t2_cost
+			heavy_alloys = @shield_l_t2_cost
+		}
+		upkeep = {
+			#alloys = @shield_l_t2_upkeep_alloys
+			light_alloys = @shield_l_t2_upkeep_alloys
+			heavy_alloys = @shield_l_t2_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_L2
+		ship_shield_regen_add_static = @bio_ship_regen_L5 #Regeneration per day
+	}
+	prerequisites = { "tech_psionic_barrier" }
+	component_set = "PSI_BIO_BARRIER"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = @T3_weight
+		modifier = {
+			factor = 0
+			NOT = {
+				has_technology = tech_cloaking_psi
+			}
+			from = {
+				has_stealth_ship_role = yes
+			}
+		}
+	}
+}
+
+#######################
+# Archaeotech Shields
+#######################
+
+utility_component_template = { # Small
+	key = "SMALL_BIO_ARCHAEO_SHIELD"
+	size = small
+	icon = "GFX_ship_part_bio_archaeo_shield"
+	icon_frame = 1
+	power = @power_S5
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_s_t5_cost
+			light_alloys = @shield_s_t5_cost
+			heavy_alloys = @shield_s_t5_cost
+			minor_artifacts = @minor_artifacts_cost_s
+		}
+		upkeep = {
+			food = @shield_s_t5_upkeep_energy
+			#alloys = @shield_s_t5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_S3
+		ship_shield_regen_add_static = @bio_ship_regen_S6 #Regeneration per day
+	}
+
+	ship_modifier = {
+		ship_shield_hardening_add = 0.15
+	}
+
+	custom_tooltip = tt_SMALL_BIO_ARCHAEO_AP
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
+		}
+		ship_shield_add = @bio_ship_shield_S1
+	}
+	prerequisites = { "tech_archaeoshield" }
+	component_set = "BIO_ARCHAEO_SHIELD"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = @T5_weight
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = { # Medium
+	key = "MEDIUM_BIO_ARCHAEO_SHIELD"
+	size = medium
+	icon = "GFX_ship_part_bio_archaeo_shield"
+	icon_frame = 1
+	power = @power_M5
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_m_t5_cost
+			light_alloys = @shield_m_t5_cost
+			heavy_alloys = @shield_m_t5_cost
+			minor_artifacts = @minor_artifacts_cost_m
+		}
+		upkeep = {
+			food = @shield_m_t5_upkeep_energy
+			#alloys = @shield_m_t5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_M3
+		ship_shield_regen_add_static = @bio_ship_regen_M6 #Regeneration per day
+	}
+
+	ship_modifier = {
+		ship_shield_hardening_add = 0.15
+	}
+
+	custom_tooltip = tt_MEDIUM_BIO_ARCHAEO_AP
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
+		}
+		ship_shield_add = @bio_ship_shield_M1
+	}
+	prerequisites = { "tech_archaeoshield" }
+	component_set = "BIO_ARCHAEO_SHIELD"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = @T5_weight
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+utility_component_template = { # Large
+	key = "LARGE_BIO_ARCHAEO_SHIELD"
+	size = large
+	icon = "GFX_ship_part_bio_archaeo_shield"
+	icon_frame = 1
+	power = @power_L5
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @shield_l_t5_cost
+			light_alloys = @shield_l_t5_cost
+			heavy_alloys = @shield_l_t5_cost
+			minor_artifacts = @minor_artifacts_cost_l
+		}
+		upkeep = {
+			food = @shield_l_t5_upkeep_energy
+			#alloys = @shield_l_t5_upkeep_alloys
+		}
+	}
+	modifier = {
+		ship_shield_add = @bio_ship_shield_L3
+		ship_shield_regen_add_static = @bio_ship_regen_L6 #Regeneration per day
+	}
+
+	ship_modifier = {
+		ship_shield_hardening_add = 0.15
+	}
+
+
+	custom_tooltip = tt_LARGE_BIO_ARCHAEO
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
+		}
+		ship_shield_add = @bio_ship_shield_L1
+	}
+	prerequisites = { "tech_archaeoshield" }
+	component_set = "BIO_ARCHAEO_SHIELD"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = @T5_weight
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
+		}
+	}
+}
+
+#############
+# REACTORS #
+#############
+
+########################
+# Fission Reactors
+########################
+
+utility_component_template = {
+	key = "CORVETTE_BIO_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_1"
+	icon_frame = 1
+	power = @corvette_reactor_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @corvette_reactor_cost_1
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.10
+		}
+		upkeep = {
+			food = 0.01
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_corvette_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "CORVETTE_BIO_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_BIO_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_1"
+	icon_frame = 1
+	power = @destroyer_reactor_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @destroyer_reactor_cost_1
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.20
+		}
+		upkeep = {
+			food = 0.02
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_destroyer_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "DESTROYER_BIO_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_BIO_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_1"
+	icon_frame = 1
+	power = @cruiser_reactor_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cruiser_reactor_cost_1
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.40
+		}
+		upkeep = {
+			food = 0.04
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_cruiser_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "CRUISER_BIO_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_BIO_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_1"
+	icon_frame = 1
+	power = @battleship_reactor_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @battleship_reactor_cost_1
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.80
+		}
+		upkeep = {
+			food = 0.08
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_battleship_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "BATTLESHIP_BIO_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_BIO_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_1"
+	icon_frame = 1
+	power = @titan_reactor_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @titan_reactor_cost_1
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 1.60
+		}
+		upkeep = {
+			food = 0.16
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_titan_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "TITAN_BIO_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_BIO_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_1"
+	icon_frame = 1
+	power = @juggernaut_reactor_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @juggernaut_reactor_cost_1
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 5.6
+		}
+		upkeep = {
+			food = 0.56
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_juggernaut_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "JUGGERNAUT_BIO_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_BIO_FISSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_bio_reactor_1"
+	icon_frame = 1
+	power = @platform_reactor_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @platform_reactor_cost_1
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.20
+		}
+		upkeep = {
+			food = 0.02
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	potential = {
+		ship_uses_platform_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "power_core"
+	upgrades_to = "PLATFORM_BIO_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_BIO_FISSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_bio_reactor_1"
+	icon_frame = 1
+	power = @starbase_reactor_power_1
+
+	prerequisites = { "tech_fission_power" }
+	potential = {
+		ship_uses_starbase_components = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	component_set = "power_core"
+	upgrades_to = "STARBASE_BIO_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+########################
+# Fusion Reactors
+########################
+
+utility_component_template = {
+	key = "CORVETTE_BIO_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_2"
+	icon_frame = 1
+	power = @corvette_reactor_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @corvette_reactor_cost_2
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.13
+		}
+		upkeep = {
+			food = 0.013
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_corvette_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "CORVETTE_BIO_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_BIO_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_2"
+	icon_frame = 1
+	power = @destroyer_reactor_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @destroyer_reactor_cost_2
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.26
+		}
+		upkeep = {
+			food = 0.026
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_destroyer_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "DESTROYER_BIO_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_BIO_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_2"
+	icon_frame = 1
+	power = @cruiser_reactor_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cruiser_reactor_cost_2
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.52
+		}
+		upkeep = {
+			food = 0.052
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_cruiser_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "CRUISER_BIO_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_BIO_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_2"
+	icon_frame = 1
+	power = @battleship_reactor_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @battleship_reactor_cost_2
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 1.04
+		}
+		upkeep = {
+			food = 0.104
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_battleship_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "BATTLESHIP_BIO_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_BIO_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_2"
+	icon_frame = 1
+	power = @titan_reactor_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @titan_reactor_cost_2
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 2.08
+		}
+		upkeep = {
+			food = 0.208
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_titan_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "TITAN_BIO_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_BIO_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_2"
+	icon_frame = 1
+	power = @juggernaut_reactor_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @juggernaut_reactor_cost_2
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 7.28
+		}
+		upkeep = {
+			food = 0.728
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_juggernaut_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "JUGGERNAUT_BIO_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_BIO_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_bio_reactor_2"
+	icon_frame = 1
+	power = @platform_reactor_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @platform_reactor_cost_2
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.26
+		}
+		upkeep = {
+			food = 0.026
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	potential = {
+		ship_uses_platform_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "power_core"
+	upgrades_to = "PLATFORM_BIO_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_BIO_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_bio_reactor_2"
+	icon_frame = 1
+	power = @starbase_reactor_power_2
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_starbase_components = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "STARBASE_BIO_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+########################
+# Cold Fusion Reactors
+########################
+
+utility_component_template = {
+	key = "CORVETTE_BIO_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_3"
+	icon_frame = 1
+	power = @corvette_reactor_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @corvette_reactor_cost_3
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.17
+		}
+		upkeep = {
+			food = 0.017
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_corvette_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "CORVETTE_BIO_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_BIO_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_3"
+	icon_frame = 1
+	power = @destroyer_reactor_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @destroyer_reactor_cost_3
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.34
+		}
+		upkeep = {
+			food = 0.034
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_destroyer_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "DESTROYER_BIO_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_BIO_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_3"
+	icon_frame = 1
+	power = @cruiser_reactor_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cruiser_reactor_cost_3
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.68
+		}
+		upkeep = {
+			food = 0.068
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_cruiser_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "CRUISER_BIO_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_BIO_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_3"
+	icon_frame = 1
+	power = @battleship_reactor_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @battleship_reactor_cost_3
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 1.35
+		}
+		upkeep = {
+			food = 0.135
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_battleship_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "BATTLESHIP_BIO_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_BIO_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_3"
+	icon_frame = 1
+	power = @titan_reactor_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @titan_reactor_cost_3
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 2.70
+		}
+		upkeep = {
+			food = 0.270
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_titan_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "TITAN_BIO_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_BIO_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_3"
+	icon_frame = 1
+	power = @juggernaut_reactor_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @juggernaut_reactor_cost_3
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 9.46
+		}
+		upkeep = {
+			food = 0.946
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_juggernaut_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "JUGGERNAUT_BIO_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_BIO_COLD_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_bio_reactor_3"
+	icon_frame = 1
+	power = @platform_reactor_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @platform_reactor_cost_3
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.26
+		}
+		upkeep = {
+			food = 0.026
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_platform_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "PLATFORM_BIO_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_BIO_COLD_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_bio_reactor_3"
+	icon_frame = 1
+	power = @starbase_reactor_power_3
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_starbase_components = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "STARBASE_BIO_ANTIMATTER_REACTOR"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+########################
+# Antimatter Reactors
+########################
+
+utility_component_template = {
+	key = "CORVETTE_BIO_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_4"
+	icon_frame = 1
+	power = @corvette_reactor_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @corvette_reactor_cost_4
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.22
+		}
+		upkeep = {
+			food = 0.022
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_corvette_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "CORVETTE_BIO_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_BIO_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_4"
+	icon_frame = 1
+	power = @destroyer_reactor_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @destroyer_reactor_cost_4
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.44
+		}
+		upkeep = {
+			food = 0.044
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_destroyer_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "DESTROYER_BIO_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_BIO_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_4"
+	icon_frame = 1
+	power = @cruiser_reactor_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cruiser_reactor_cost_4
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.88
+		}
+		upkeep = {
+			food = 0.088
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_cruiser_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "CRUISER_BIO_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_BIO_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_4"
+	icon_frame = 1
+	power = @battleship_reactor_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @battleship_reactor_cost_4
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 1.76
+		}
+		upkeep = {
+			food = 0.176
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_battleship_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "BATTLESHIP_BIO_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_BIO_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_4"
+	icon_frame = 1
+	power = @titan_reactor_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @titan_reactor_cost_4
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 3.51
+		}
+		upkeep = {
+			food = 0.351
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_titan_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "TITAN_BIO_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_BIO_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_4"
+	icon_frame = 1
+	power = @juggernaut_reactor_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @juggernaut_reactor_cost_4
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 12.30
+		}
+		upkeep = {
+			food = 1.230
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_juggernaut_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "JUGGERNAUT_BIO_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_BIO_ANTIMATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_bio_reactor_4"
+	icon_frame = 1
+	power = @platform_reactor_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @platform_reactor_cost_4
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.44
+		}
+		upkeep = {
+			food = 0.044
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_platform_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "PLATFORM_BIO_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_BIO_ANTIMATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_bio_reactor_4"
+	icon_frame = 1
+	power = @starbase_reactor_power_4
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_starbase_components = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "STARBASE_BIO_ZERO_POINT_REACTOR"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+########################
+# Zero-Point Reactors
+########################
+
+utility_component_template = {
+	key = "CORVETTE_BIO_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_5"
+	icon_frame = 1
+	power = @corvette_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @corvette_reactor_cost_5
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.28
+		}
+		upkeep = {
+			food = 0.028
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_corvette_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "CORVETTE_BIO_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_BIO_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_5"
+	icon_frame = 1
+	power = @destroyer_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @destroyer_reactor_cost_5
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.57
+		}
+		upkeep = {
+			food = 0.057
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_destroyer_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "DESTROYER_BIO_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_BIO_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_5"
+	icon_frame = 1
+	power = @cruiser_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cruiser_reactor_cost_5
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 1.14
+		}
+		upkeep = {
+			food = 0.114
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_cruiser_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "CRUISER_BIO_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_BIO_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_5"
+	icon_frame = 1
+	power = @battleship_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @battleship_reactor_cost_5
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 2.29
+		}
+		upkeep = {
+			food = 0.229
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_battleship_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "BATTLESHIP_BIO_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_BIO_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_5"
+	icon_frame = 1
+	power = @titan_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @titan_reactor_cost_5
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 4.56
+		}
+		upkeep = {
+			food = 0.456
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_titan_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "TITAN_BIO_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_BIO_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_5"
+	icon_frame = 1
+	power = @colossus_power
+
+	component_set = "power_core"
+	potential = {
+		ship_uses_colossus_components = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+	upgrades_to = "COLOSSUS_BIO_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_BIO_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_5"
+	icon_frame = 1
+	power = @juggernaut_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @juggernaut_reactor_cost_5
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 15.99
+		}
+		upkeep = {
+			food = 1.599
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_juggernaut_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "JUGGERNAUT_BIO_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_BIO_ZERO_POINT_REACTOR"
+	size = large
+	icon = "GFX_ship_part_bio_reactor_5"
+	icon_frame = 1
+	power = @platform_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @platform_reactor_cost_5
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.57
+		}
+		upkeep = {
+			food = 0.057
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_platform_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "PLATFORM_BIO_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "ION_CANNON_BIO_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_reactor_5"
+	icon_frame = 1
+	power = @cruiser_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @cruiser_reactor_cost_5
+			light_alloys = @cruiser_reactor_cost_5
+			heavy_alloys = @cruiser_reactor_cost_5
+		}
+	}
+
+	component_set = "power_core"
+	potential = {
+		ship_uses_ion_cannon_components = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+	upgrades_to = "ION_CANNON_BIO_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_BIO_ZERO_POINT_REACTOR"
+	size = large
+	icon = "GFX_ship_part_bio_reactor_5"
+	icon_frame = 1
+	power = @starbase_reactor_power_5
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_starbase_components = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	upgrades_to = "STARBASE_BIO_DARK_MATTER_REACTOR"
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+####################
+# Engimatic Reactors
+####################
+
+utility_component_template = {
+	key = "CORVETTE_BIO_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_dark_matter_power_core"
+	icon_frame = 1
+	power = @corvette_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			#sr_dark_matter = 1
+			eezo = 1
+		}
+		cost = {
+			food = @corvette_reactor_cost_6
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.37
+		}
+		upkeep = {
+			food = 0.037
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_corvette_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_BIO_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_dark_matter_power_core"
+	icon_frame = 1
+	power = @destroyer_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			#sr_dark_matter = 2
+			eezo = 2
+		}
+		cost = {
+			food = @destroyer_reactor_cost_6
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.74
+		}
+		upkeep = {
+			food = 0.074
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_destroyer_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_BIO_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_dark_matter_power_core"
+	icon_frame = 1
+	power = @cruiser_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			#sr_dark_matter = 4
+			eezo = 4
+		}
+		cost = {
+			food = @cruiser_reactor_cost_6
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 1.48
+		}
+		upkeep = {
+			food = 0.148
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_cruiser_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_BIO_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_dark_matter_power_core"
+	icon_frame = 1
+	power = @battleship_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			#sr_dark_matter = 8
+			eezo = 8
+		}
+		cost = {
+			food = @battleship_reactor_cost_6
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 2.98
+		}
+		upkeep = {
+			food = 0.298
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_battleship_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_BIO_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_dark_matter_power_core"
+	icon_frame = 1
+	power = @titan_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			#sr_dark_matter = 16
+			eezo = 16
+		}
+		cost = {
+			food = @titan_reactor_cost_6
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 5.93
+		}
+		upkeep = {
+			food = 0.593
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_titan_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_BIO_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_dark_matter_power_core"
+	icon_frame = 1
+	power = @colossus_power
+	resources = {
+		category = ship_components
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_colossus_components = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_BIO_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_dark_matter_power_core"
+	icon_frame = 1
+	power = @juggernaut_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			#sr_dark_matter = 32
+			eezo = 32
+		}
+		cost = {
+			food = @juggernaut_reactor_cost_6
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 20.79
+		}
+		upkeep = {
+			food = 2.079
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_juggernaut_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_BIO_DARK_MATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_bio_dark_matter_power_core"
+	icon_frame = 1
+	power = @platform_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			#sr_dark_matter = 4
+			eezo = 4
+		}
+		cost = {
+			food = @platform_reactor_cost_6
+			mult = @alloy_to_food_cost_ratio
+		}
+		upkeep = {
+			energy = 0.74
+		}
+		upkeep = {
+			food = 0.074
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_platform_reactors = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "ION_CANNON_BIO_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_bio_dark_matter_power_core"
+	icon_frame = 1
+	power = @cruiser_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			#sr_dark_matter = 8
+			eezo = 8
+		}
+		cost = {
+			food = @cruiser_reactor_cost_6
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_ion_cannon_components = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_BIO_DARK_MATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_bio_dark_matter_power_core"
+	icon_frame = 1
+	power = @starbase_reactor_power_6
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_starbase_components = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+####################
+# FTL Drives
+####################
+
+@cost1 = 5
+@cost2 = 10
+@cost3 = 15
+@cost4 = 20
+
+@power0 = -5
+@power1 = -10
+@power2 = -15
+@power3 = -20
+@power4 = -30
+
+### NON-FTL DRIVE
+utility_component_template = {
+	key = "BIO_EMPTY_DRIVE"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+
+	potential = {
+		is_eager_explorer_ship = no
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	component_set = "ftl_components"
+	upgrades_to = "BIO_HYPER_DRIVE_1"
+
+	ai_weight = {
+		base = 0
+	}
+}
+
+### HYPER DRIVES
+utility_component_template = {
+	key = "BIO_HYPER_DRIVE_1"
+	size = small
+	icon = "GFX_ship_part_bioship_hyper_drive_1"
+	icon_frame = 1
+	power = @power1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	ftl = yes
+
+	ship_modifier = {
+		ship_disengage_opportunities_add = 1
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+
+	potential = {
+		is_eager_explorer_ship = no
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	prerequisites = { "tech_hyper_drive_1" }
+	component_set = "ftl_components"
+	upgrades_to = "BIO_HYPER_DRIVE_2"
+}
+
+utility_component_template = {
+	key = "BIO_HYPER_DRIVE_2"
+	size = small
+	icon = "GFX_ship_part_bioship_hyper_drive_2"
+	icon_frame = 1
+	power = @power2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	ftl = yes
+	ship_modifier = {
+		ship_disengage_opportunities_add = 1
+		ship_windup_mult = -0.25
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+
+	potential = {
+		is_eager_explorer_ship = no
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	prerequisites = { "tech_hyper_drive_2" }
+	component_set = "ftl_components"
+	upgrades_to = "BIO_HYPER_DRIVE_3"
+}
+
+utility_component_template = {
+	key = "BIO_HYPER_DRIVE_3"
+	size = small
+	icon = "GFX_ship_part_bioship_hyper_drive_3"
+	icon_frame = 1
+	power = @power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	ftl = yes
+	ship_modifier = {
+		ship_disengage_opportunities_add = 1
+		ship_windup_mult = -0.5
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+
+	potential = {
+		is_eager_explorer_ship = no
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	prerequisites = { "tech_hyper_drive_3" }
+	component_set = "ftl_components"
+	upgrades_to = "BIO_JUMP_DRIVE_1"
+}
+
+### Jump drives
+
+utility_component_template = {
+	key = "BIO_JUMP_DRIVE_1"
+	size = small
+	icon = "GFX_ship_part_bioship_jump_drive_1"
+	icon_frame = 1
+	power = @power4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cost4
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_disengage_opportunities_add = 1
+		ship_windup_mult = -0.7
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+
+	potential = {
+		ship_uses_jump_drives = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+
+	prerequisites = { "tech_jump_drive_1" }
+	component_set = "ftl_components"
+	upgrades_to = "BIO_PSI_JUMP_DRIVE_1"
+}
+
+### Jump drives
+utility_component_template = {
+	key = "BIO_PSI_JUMP_DRIVE_1"
+	size = small
+	icon = "GFX_ship_part_bioship_psi_jump_drive_1"
+	icon_frame = 1
+	power = @power4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cost4
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	ftl = yes
+	jumpdrive = yes
+	ship_modifier = {
+		ship_disengage_opportunities_add = 2
+		ship_windup_mult = -0.8
+		ship_ftl_jumpdrive_range_mult = 0.50
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+
+	potential = {
+		ship_uses_jump_drives = yes
+		from = {
+			country_uses_bio_ships = yes
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	prerequisites = { "tech_psi_jump_drive_1" }
+	component_set = "ftl_components"
+}
+
+####################
+# DEFAULT COMPUTER #
+####################
+
+@computer_cost0 = 0
+@computer_cost1 = 5
+@computer_cost2 = 10
+@computer_cost3 = 20
+
+@computer_power0 = -5
+@computer_power1 = -10
+@computer_power2 = -15
+@computer_power3 = -25
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_DEFAULT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_default"
+	icon_frame = 1
+	ship_behavior = "default"
+	upgrade_path = default
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		OR = {
+			is_ship_class = shipclass_military
+			is_ship_size = juggernaut
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+########################
+# BASIC SHIP COMPUTERS #
+########################
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_SWARM_DEFAULT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_default"
+	icon_frame = 1
+	power = @computer_power0
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost0
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	ship_behavior = "swarm"
+	upgrade_path = swarm
+	hidden = yes
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_swarm_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	upgrades_to = "BIO_COMBAT_COMPUTER_SWARM_BASIC"
+	ai_tags = { gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_PICKET_DEFAULT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_default"
+	icon_frame = 1
+	power = @computer_power0
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost0
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	ship_behavior = "picket"
+	upgrade_path = picket
+	hidden = yes
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_picket_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	upgrades_to = "BIO_COMBAT_COMPUTER_PICKET_BASIC"
+	ai_tags = { screen screen_stealth }
+	ai_tag_weight = 0
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_LINE_DEFAULT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_default"
+	icon_frame = 1
+	power = @computer_power0
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost0
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	ship_behavior = "line"
+	upgrade_path = line
+	hidden = yes
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_line_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	upgrades_to = "BIO_COMBAT_COMPUTER_LINE_BASIC"
+	ai_tags = { gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_ARTILLERY_DEFAULT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_default"
+	icon_frame = 1
+	power = @computer_power0
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost0
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	ship_behavior = "artillery"
+	upgrade_path = artillery
+	hidden = yes
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_artillery_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	upgrades_to = "BIO_COMBAT_COMPUTER_ARTILLERY_BASIC"
+	ai_tags = { artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_PLATFORM_DEFAULT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_default"
+	icon_frame = 1
+	power = @computer_power0
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost0
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_platform_computers = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	upgrades_to = "BIO_COMBAT_COMPUTER_PLATFORM_BASIC"
+
+	ship_modifier = {
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_DEBUFFER_DEFAULT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_default"
+	icon_frame = 1
+	power = @computer_power0
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost0
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	ship_behavior = "swarm"
+	upgrade_path = debuffer
+	hidden = yes
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_debuffer_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	upgrades_to = "BIO_COMBAT_COMPUTER_DEBUFFER_BASIC"
+	ai_tags = { debuffer_role debuffer_role_stealth }
+	ai_tag_weight = 0
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_BUFFER_DEFAULT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_default"
+	icon_frame = 1
+	power = @computer_power0
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost0
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	ship_behavior = "swarm"
+	upgrade_path = buffer
+	hidden = yes
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_buffer_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	upgrades_to = "BIO_COMBAT_COMPUTER_BUFFER_BASIC"
+	ai_tags = { buffer_role buffer_role_stealth }
+	ai_tag_weight = 0
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+#####################
+# 'SWARM' COMPUTERS #
+#####################
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_SWARM_BASIC"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_basic"
+	icon_frame = 1
+	power = @computer_power1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_swarm_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = swarm
+	prerequisites = { "tech_combat_computers_1" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_SWARM_ADVANCED"
+	ai_tags = { gunship gunship_stealth brawler brawler_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.05
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.05
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_SWARM_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_advanced"
+	icon_frame = 1
+	power = @computer_power2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_swarm_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = swarm
+	prerequisites = { "tech_combat_computers_2" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_SWARM_SAPIENT"
+	ai_tags = { gunship gunship_stealth brawler brawler_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.10
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.10
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_SWARM_SAPIENT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_swarm_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = swarm
+	prerequisites = { "tech_combat_computers_3" }
+	ai_tags = { gunship gunship_stealth brawler brawler_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.25
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = ghost_signal_5_flag
+				has_global_flag = ghost_signal_4_flag
+				has_global_flag = ghost_signal_3_flag
+				has_global_flag = ghost_signal_2_flag
+				has_global_flag = ghost_signal_1_flag
+				has_policy_flag = ai_outlawed
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_SWARM_AUTONOMOUS"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_swarm_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = swarm
+	prerequisites = { "tech_combat_computers_autonomous" }
+	ai_tags = { gunship gunship_stealth brawler brawler_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.25
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_SWARM_PRECOG"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_precog"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_swarm_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = swarm
+	prerequisites = { "tech_precognition_interface" }
+	ai_tags = { gunship gunship_stealth brawler brawler_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.15
+		ship_speed_mult = 0.20
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+#####################
+# 'TORPEDO' COMPUTERS #
+#####################
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_TORPEDO_BASIC"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_basic"
+	icon_frame = 1
+	power = @computer_power1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_torpedo_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "torpedo"
+	upgrade_path = torpedo
+	prerequisites = {
+		tech_combat_computers_1
+		tech_torpedoes_1
+	}
+	upgrades_to = "BIO_COMBAT_COMPUTER_SWARM_ADVANCED"
+	ai_tags = { explosive explosive_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.05
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_TORPEDO_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_advanced"
+	icon_frame = 1
+	power = @computer_power2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_torpedo_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "torpedo"
+	upgrade_path = torpedo
+	prerequisites = {
+		tech_combat_computers_2
+		tech_torpedoes_1
+	}
+	upgrades_to = "BIO_COMBAT_COMPUTER_TORPEDO_SAPIENT"
+	ai_tags = { explosive explosive_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.10
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_TORPEDO_SAPIENT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_torpedo_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "torpedo"
+	upgrade_path = torpedo
+	prerequisites = {
+		tech_combat_computers_3
+		tech_torpedoes_1
+	}
+	ai_tags = { explosive explosive_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.10
+		weapon_type_explosive_weapon_damage_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = ghost_signal_5_flag
+				has_global_flag = ghost_signal_4_flag
+				has_global_flag = ghost_signal_3_flag
+				has_global_flag = ghost_signal_2_flag
+				has_global_flag = ghost_signal_1_flag
+				has_policy_flag = ai_outlawed
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_TORPEDO_AUTONOMOUS"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_torpedo_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "torpedo"
+	upgrade_path = torpedo
+	prerequisites = {
+		tech_combat_computers_autonomous
+		tech_torpedoes_1
+	}
+	ai_tags = { explosive explosive_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.10
+		weapon_type_explosive_weapon_damage_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_TORPEDO_PRECOG"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_precog"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_torpedo_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "torpedo"
+	upgrade_path = torpedo
+	prerequisites = {
+		tech_precognition_interface
+		tech_torpedoes_1
+	}
+	ai_tags = { explosive explosive_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.15
+		ship_tracking_add = 10
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+######################
+# 'PICKET' COMPUTERS #
+######################
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_PICKET_BASIC"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_picket_basic"
+	icon_frame = 1
+	power = @computer_power1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_picket_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "picket"
+	upgrade_path = picket
+	prerequisites = { "tech_combat_computers_1" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_PICKET_ADVANCED"
+	ai_tags = { screen screen_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_tracking_add = 10
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_PICKET_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_picket_advanced"
+	icon_frame = 1
+	power = @computer_power2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_picket_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "picket"
+	upgrade_path = picket
+	prerequisites = { "tech_combat_computers_2" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_PICKET_SAPIENT"
+	ai_tags = { screen screen_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.10
+		ship_tracking_add = 20
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_PICKET_SAPIENT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_picket_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_picket_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "picket"
+	upgrade_path = picket
+	prerequisites = { "tech_combat_computers_3" }
+	ai_tags = { screen screen_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.10
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_tracking_add = 30
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = ghost_signal_5_flag
+				has_global_flag = ghost_signal_4_flag
+				has_global_flag = ghost_signal_3_flag
+				has_global_flag = ghost_signal_2_flag
+				has_global_flag = ghost_signal_1_flag
+				has_policy_flag = ai_outlawed
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_PICKET_AUTONOMOUS"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_picket_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_picket_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "picket"
+	upgrade_path = picket
+	prerequisites = { "tech_combat_computers_autonomous" }
+	ai_tags = { screen screen_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.10
+	}
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_tracking_add = 30
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_PICKET_PRECOG"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_picket_precog"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_picket_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "picket"
+	upgrade_path = picket
+	prerequisites = { "tech_precognition_interface" }
+	ai_tags = { screen screen_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.20
+		ship_tracking_add = 40
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+####################
+# 'LINE' COMPUTERS #
+####################
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_LINE_BASIC"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_line_basic"
+	icon_frame = 1
+	power = @computer_power1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_line_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	upgrade_path = line
+	prerequisites = { "tech_combat_computers_1" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_LINE_ADVANCED"
+	ai_tags = { gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_accuracy_add = 5
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_LINE_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_line_advanced"
+	icon_frame = 1
+	power = @computer_power2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_line_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	upgrade_path = line
+	prerequisites = { "tech_combat_computers_2" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_LINE_SAPIENT"
+	ai_tags = { gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.10
+		ship_accuracy_add = 10
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_LINE_SAPIENT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_line_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_line_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	upgrade_path = line
+	prerequisites = { "tech_combat_computers_3" }
+	ai_tags = { gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.20
+		ship_accuracy_add = 20
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = ghost_signal_5_flag
+				has_global_flag = ghost_signal_4_flag
+				has_global_flag = ghost_signal_3_flag
+				has_global_flag = ghost_signal_2_flag
+				has_global_flag = ghost_signal_1_flag
+				has_policy_flag = ai_outlawed
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_LINE_AUTONOMOUS"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_line_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_line_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	upgrade_path = line
+	prerequisites = { "tech_combat_computers_autonomous" }
+	ai_tags = { gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.20
+		ship_accuracy_add = 20
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_LINE_PRECOG"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_line_precog"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_line_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	upgrade_path = line
+	prerequisites = { "tech_precognition_interface" }
+	ai_tags = { gunship gunship_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_accuracy_add = 15
+		ship_tracking_add = 10
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+######################
+# 'ARTILLERY' COMPUTERS #
+######################
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_ARTILLERY_BASIC"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_artillery_basic"
+	icon_frame = 1
+	power = @computer_power1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_artillery_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "artillery"
+	upgrade_path = artillery
+	prerequisites = { "tech_combat_computers_1" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_ARTILLERY_ADVANCED"
+	ai_tags = { artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_weapon_range_mult = 0.05
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_ARTILLERY_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_artillery_advanced"
+	icon_frame = 1
+	power = @computer_power2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_artillery_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "artillery"
+	upgrade_path = artillery
+	prerequisites = { "tech_combat_computers_2" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_ARTILLERY_SAPIENT"
+	ai_tags = { artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.10
+		ship_weapon_range_mult = 0.10
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_ARTILLERY_SAPIENT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_artillery_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_artillery_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "artillery"
+	upgrade_path = artillery
+	prerequisites = { "tech_combat_computers_3" }
+	ai_tags = { artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.20
+		ship_weapon_range_mult = 0.20
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = ghost_signal_5_flag
+				has_global_flag = ghost_signal_4_flag
+				has_global_flag = ghost_signal_3_flag
+				has_global_flag = ghost_signal_2_flag
+				has_global_flag = ghost_signal_1_flag
+				has_policy_flag = ai_outlawed
+			}
+		}
+	}
+}
+
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_ARTILLERY_AUTONOMOUS"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_artillery_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_artillery_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "artillery"
+	upgrade_path = artillery
+	prerequisites = { "tech_combat_computers_autonomous" }
+	ai_tags = { artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.20
+		ship_weapon_range_mult = 0.20
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_ARTILLERY_PRECOG"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_artillery_precog"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_artillery_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "artillery"
+	upgrade_path = artillery
+	prerequisites = { "tech_precognition_interface" }
+	ai_tags = { artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_range_mult = 0.15
+		ship_tracking_add = 10
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+######################
+# 'CARRIER' COMPUTERS #
+######################
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_CARRIER_BASIC"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_carrier_basic"
+	icon_frame = 1
+	power = @computer_power1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_carrier_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "carrier"
+	upgrade_path = carrier
+	prerequisites = { "tech_combat_computers_1" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_CARRIER_ADVANCED"
+	ai_tags = { carrier }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_engagement_range_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_CARRIER_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_carrier_advanced"
+	icon_frame = 1
+	power = @computer_power2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_carrier_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "carrier"
+	upgrade_path = carrier
+	prerequisites = { "tech_combat_computers_2" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_CARRIER_SAPIENT"
+	ai_tags = { carrier }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_engagement_range_mult = 0.50
+	}
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_CARRIER_SAPIENT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_carrier_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_carrier_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "carrier"
+	upgrade_path = carrier
+	prerequisites = { "tech_combat_computers_3" }
+	ai_tags = { carrier }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_engagement_range_mult = 1.0
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = ghost_signal_5_flag
+				has_global_flag = ghost_signal_4_flag
+				has_global_flag = ghost_signal_3_flag
+				has_global_flag = ghost_signal_2_flag
+				has_global_flag = ghost_signal_1_flag
+				has_policy_flag = ai_outlawed
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_CARRIER_AUTONOMOUS"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_carrier_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_carrier_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "carrier"
+	upgrade_path = carrier
+	prerequisites = { "tech_combat_computers_autonomous" }
+	ai_tags = { carrier }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_engagement_range_mult = 1.0
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_CARRIER_PRECOG"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_carrier_precog"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_carrier_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "carrier"
+	upgrade_path = carrier
+	prerequisites = { "tech_precognition_interface" }
+	ai_tags = { carrier }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		ship_engagement_range_mult = 0.75
+		ship_tracking_add = 10
+	}
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 5
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+	}
+}
+
+################
+# Platform
+################
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_PLATFORM_BASIC"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_basic"
+	icon_frame = 1
+	power = @computer_power1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_platform_computers = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_combat_computers_1" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_PLATFORM_ADVANCED"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.25
+		ship_tracking_add = 15
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_PLATFORM_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_advanced"
+	icon_frame = 1
+	power = @computer_power2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_platform_computers = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_combat_computers_2" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_PLATFORM_SAPIENT"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.30
+		ship_tracking_add = 20
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_PLATFORM_SAPIENT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_platform_computers = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_combat_computers_3" }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.35
+		ship_tracking_add = 25
+		ship_accuracy_add = 10
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = ghost_signal_5_flag
+				has_global_flag = ghost_signal_4_flag
+				has_global_flag = ghost_signal_3_flag
+				has_global_flag = ghost_signal_2_flag
+				has_global_flag = ghost_signal_1_flag
+				has_policy_flag = ai_outlawed
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_PLATFORM_AUTONOMOUS"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_platform_computers = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_combat_computers_autonomous" }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.35
+		ship_tracking_add = 25
+		ship_accuracy_add = 10
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_PLATFORM_PRECOG"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_swarm_precog"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_platform_computers = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_precognition_interface" }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.35
+		ship_tracking_add = 35
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+################
+# Starbase
+################
+
+utility_component_template = {
+	key = "STARBASE_BIO_COMBAT_COMPUTER_1"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_default"
+	icon_frame = 1
+	power = 0
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_starbase_components = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	upgrades_to = "STARBASE_BIO_COMBAT_COMPUTER_2"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_tracking_add = 10
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_BIO_COMBAT_COMPUTER_2"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_default"
+	icon_frame = 1
+	power = 0
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_starbase_components = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_combat_computers_1" }
+	upgrades_to = "STARBASE_BIO_COMBAT_COMPUTER_3"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.10
+		ship_tracking_add = 20
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_BIO_COMBAT_COMPUTER_3"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_default"
+	icon_frame = 1
+	power = 0
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_starbase_components = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	prerequisites = { "tech_combat_computers_2" }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_tracking_add = 30
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+################
+# Special
+################
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_COLOSSUS"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_default"
+	icon_frame = 1
+	power = @computer_power0
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost0
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	ship_behavior = "colossus"
+
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_colossus_computers = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+########################
+# 'DEBUFFER' COMPUTERS #
+########################
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_DEBUFFER_BASIC"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_debuffer_basic"
+	icon_frame = 1
+	power = @computer_power1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_debuffer_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = debuffer
+	prerequisites = { "tech_combat_computers_1" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_DEBUFFER_ADVANCED"
+	ai_tags = { debuffer_role debuffer_role_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		debuffer_role_weapon_fire_rate_mult = 0.05
+		ship_accuracy_add = 5
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_DEBUFFER_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_debuffer_advanced"
+	icon_frame = 1
+	power = @computer_power2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_debuffer_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = debuffer
+	prerequisites = { "tech_combat_computers_2" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_DEBUFFER_SAPIENT"
+	ai_tags = { debuffer_role debuffer_role_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		debuffer_role_weapon_fire_rate_mult = 0.10
+		ship_accuracy_add = 10
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_DEBUFFER_SAPIENT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_debuffer_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_debuffer_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = debuffer
+	prerequisites = { "tech_combat_computers_3" }
+	ai_tags = { debuffer_role debuffer_role_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		debuffer_role_weapon_fire_rate_mult = 0.20
+		ship_accuracy_add = 20
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = ghost_signal_5_flag
+				has_global_flag = ghost_signal_4_flag
+				has_global_flag = ghost_signal_3_flag
+				has_global_flag = ghost_signal_2_flag
+				has_global_flag = ghost_signal_1_flag
+				has_policy_flag = ai_outlawed
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_DEBUFFER_AUTONOMOUS"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_debuffer_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_debuffer_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = debuffer
+	prerequisites = { "tech_combat_computers_autonomous" }
+	ai_tags = { debuffer_role debuffer_role_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		debuffer_role_weapon_fire_rate_mult = 0.20
+		ship_accuracy_add = 20
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_DEBUFFER_PRECOG"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_debuffer_precog"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_debuffer_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = debuffer
+	prerequisites = { "tech_precognition_interface" }
+	ai_tags = { debuffer_role debuffer_role_stealth }
+	ai_tag_weight = 0
+
+	ship_modifier = {
+		debuffer_role_weapon_fire_rate_mult = 0.15
+		ship_accuracy_add = 15
+		ship_tracking_add = 10
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+########################
+# 'BUFFER' COMPUTERS #
+########################
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_BUFFER_BASIC"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_buffer_basic"
+	icon_frame = 1
+	power = @computer_power1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_buffer_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = buffer
+	target_type = target_allies
+	prerequisites = { "tech_combat_computers_1" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_BUFFER_ADVANCED"
+	ai_tags = { buffer_role buffer_role_stealth }
+	ai_tag_weight = 0
+
+	modifier = {
+		ship_evasion_mult = 0.05
+	}
+	ship_modifier = {
+		buffer_role_weapon_fire_rate_mult = 0.05
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_BUFFER_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_buffer_advanced"
+	icon_frame = 1
+	power = @computer_power2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_buffer_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = buffer
+	target_type = target_allies
+	prerequisites = { "tech_combat_computers_2" }
+	upgrades_to = "BIO_COMBAT_COMPUTER_BUFFER_SAPIENT"
+	ai_tags = { buffer_role buffer_role_stealth }
+	ai_tag_weight = 0
+	modifier = {
+		ship_evasion_mult = 0.10
+	}
+	ship_modifier = {
+		buffer_role_weapon_fire_rate_mult = 0.10
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_BUFFER_SAPIENT"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_buffer_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_buffer_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = buffer
+	target_type = target_allies
+	prerequisites = { "tech_combat_computers_3" }
+	ai_tags = { buffer_role buffer_role_stealth }
+	ai_tag_weight = 0
+	modifier = {
+		ship_evasion_mult = 0.20
+	}
+	ship_modifier = {
+		buffer_role_weapon_fire_rate_mult = 0.20
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = ghost_signal_5_flag
+				has_global_flag = ghost_signal_4_flag
+				has_global_flag = ghost_signal_3_flag
+				has_global_flag = ghost_signal_2_flag
+				has_global_flag = ghost_signal_1_flag
+				has_policy_flag = ai_outlawed
+			}
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_BUFFER_AUTONOMOUS"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_buffer_sapient"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_buffer_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = buffer
+	target_type = target_allies
+	prerequisites = { "tech_combat_computers_autonomous" }
+	ai_tags = { buffer_role buffer_role_stealth }
+	ai_tag_weight = 0
+	modifier = {
+		ship_evasion_mult = 0.20
+	}
+	ship_modifier = {
+		buffer_role_weapon_fire_rate_mult = 0.20
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "BIO_COMBAT_COMPUTER_BUFFER_PRECOG"
+	size = small
+	icon = "GFX_ship_part_bioship_computer_buffer_precog"
+	icon_frame = 1
+	power = @computer_power3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @computer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_buffer_role = yes
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = yes
+	}
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = buffer
+	target_type = target_allies
+	prerequisites = { "tech_precognition_interface" }
+	ai_tags = { buffer_role buffer_role_stealth }
+	ai_tag_weight = 0
+	modifier = {
+		ship_evasion_mult = 0.15
+		ship_speed_mult = 0.20
+	}
+	ship_modifier = {
+		buffer_role_weapon_fire_rate_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}

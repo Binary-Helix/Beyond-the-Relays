@@ -1226,7 +1226,7 @@ primitive_hive_factory_drone = {
 		category = planet_artisans
 		produces = {
 			#alloys = 2
-			light_metals = 1
+			light_alloys = 1
 			heavy_metals = 1
 		}
 		upkeep = {
@@ -1236,7 +1236,7 @@ primitive_hive_factory_drone = {
 
 	weight = {
 		weight = @complex_drone_job_weight
-		mult = value:job_weights_modifier|JOB|primitive_hive_factory_drone|RESOURCE|light_metals|
+		mult = value:job_weights_modifier|JOB|primitive_hive_factory_drone|RESOURCE|light_alloys|
 	}
 }
 

@@ -1,0 +1,1482 @@
+#####################################
+# Biological Ship Growth Components #
+#####################################
+
+utility_component_template = {
+	key = "GROWTH_EMPTY"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+
+	potential = {
+		ship_is_stage_3_bioship = yes
+	}
+	prerequisites = { }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = empty
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "MAULER_STAGE_1_GROWTH_EMPTY"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+
+	potential = {
+		is_ship_size = mauler_stage_1
+	}
+	prerequisites = { }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = empty
+	upgrades_to = "MAULER_STAGE_1_GROWTH_1"
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "MAULER_STAGE_1_GROWTH_1"
+	size = small
+	icon = "GFX_ship_part_growth_component_1"
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @mauler_stage_1_bioship_growth_t1_food_cost
+		}
+		upkeep = {
+			food = @mauler_stage_1_bioship_growth_t1_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		bioship_growth_progress_add = @mauler_stage_1_bioship_growth_t1_progress
+	}
+
+	potential = {
+		is_ship_size = mauler_stage_1
+	}
+	prerequisites = { tech_mauler_growth_1 }
+	component_set = "bio_ship_unique_components"
+	upgrades_to = "MAULER_STAGE_1_GROWTH_2"
+	upgrade_path = growth
+	ai_tags = {
+		brawler
+		brawler_stealth
+		screen
+		screen_stealth
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "MAULER_STAGE_1_GROWTH_2"
+	size = small
+	icon = "GFX_ship_part_growth_component_2"
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @mauler_stage_1_bioship_growth_t2_food_cost
+			#exotic_gases = @genetic_component_2_rare_cost
+			helium_3 = @genetic_component_2_rare_cost
+			hydrogen = @genetic_component_2_rare_cost
+		}
+		upkeep = {
+			food = @mauler_stage_1_bioship_growth_t2_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		bioship_growth_progress_add = @mauler_stage_1_bioship_growth_t2_progress
+	}
+
+	potential = {
+		is_ship_size = mauler_stage_1
+	}
+	prerequisites = { tech_mauler_growth_2 }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = growth
+	ai_tags = {
+		brawler
+		brawler_stealth
+		screen
+		screen_stealth
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = helium_3 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MAULER_STAGE_2_GROWTH_EMPTY"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+
+	potential = {
+		is_ship_size = mauler_stage_2
+	}
+	prerequisites = { }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = empty
+	upgrades_to = "MAULER_STAGE_2_GROWTH_1"
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "MAULER_STAGE_2_GROWTH_1"
+	size = small
+	icon = "GFX_ship_part_growth_component_1"
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @mauler_stage_2_bioship_growth_t1_food_cost
+		}
+		upkeep = {
+			food = @mauler_stage_2_bioship_growth_t1_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		bioship_growth_progress_add = @mauler_stage_2_bioship_growth_t1_progress
+	}
+
+	potential = {
+		is_ship_size = mauler_stage_2
+	}
+	prerequisites = { tech_mauler_growth_2 }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = growth
+	ai_tags = {
+		brawler
+		brawler_stealth
+		screen
+		screen_stealth
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "STINGER_STAGE_1_GROWTH_EMPTY"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+
+	potential = {
+		is_ship_size = stinger_stage_1
+	}
+	prerequisites = { }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = empty
+	upgrades_to = "STINGER_STAGE_1_GROWTH_1"
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "STINGER_STAGE_1_GROWTH_1"
+	size = small
+	icon = "GFX_ship_part_growth_component_1"
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @stinger_stage_1_bioship_growth_t1_food_cost
+		}
+		upkeep = {
+			food = @stinger_stage_1_bioship_growth_t1_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		bioship_growth_progress_add = @stinger_stage_1_bioship_growth_t1_progress
+	}
+
+	potential = {
+		is_ship_size = stinger_stage_1
+	}
+	prerequisites = { tech_stinger_growth_1 }
+	component_set = "bio_ship_unique_components"
+	upgrades_to = "STINGER_STAGE_1_GROWTH_2"
+	upgrade_path = growth
+	ai_tags = {
+		artillery
+		artillery_stealth
+		gunship
+		gunship_stealth
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "STINGER_STAGE_1_GROWTH_2"
+	size = small
+	icon = "GFX_ship_part_growth_component_2"
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @stinger_stage_1_bioship_growth_t2_food_cost
+			#exotic_gases = @genetic_component_2_rare_cost
+			helium_3 = @genetic_component_2_rare_cost
+			hydrogen = @genetic_component_2_rare_cost
+		}
+		upkeep = {
+			food = @stinger_stage_1_bioship_growth_t2_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		bioship_growth_progress_add = @stinger_stage_1_bioship_growth_t2_progress
+	}
+
+	potential = {
+		is_ship_size = stinger_stage_1
+	}
+	prerequisites = { tech_stinger_growth_2 }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = growth
+	ai_tags = {
+		artillery
+		artillery_stealth
+		gunship
+		gunship_stealth
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = helium_3 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STINGER_STAGE_2_GROWTH_EMPTY"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+
+	potential = {
+		is_ship_size = stinger_stage_2
+	}
+	prerequisites = { }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = empty
+	upgrades_to = "STINGER_STAGE_2_GROWTH_1"
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "STINGER_STAGE_2_GROWTH_1"
+	size = small
+	icon = "GFX_ship_part_growth_component_1"
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @stinger_stage_2_bioship_growth_t1_food_cost
+		}
+		upkeep = {
+			food = @stinger_stage_2_bioship_growth_t1_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		bioship_growth_progress_add = @stinger_stage_2_bioship_growth_t1_progress
+	}
+
+	potential = {
+		is_ship_size = stinger_stage_2
+	}
+	prerequisites = { tech_stinger_growth_2 }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = growth
+	ai_tags = {
+		artillery
+		artillery_stealth
+		gunship
+		gunship_stealth
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "WEAVER_STAGE_1_GROWTH_EMPTY"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+
+	potential = {
+		is_ship_size = weaver_stage_1
+	}
+	prerequisites = { }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = empty
+	upgrades_to = "WEAVER_STAGE_1_GROWTH_1"
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "WEAVER_STAGE_1_GROWTH_1"
+	size = small
+	icon = "GFX_ship_part_growth_component_1"
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @weaver_stage_1_bioship_growth_t1_food_cost
+		}
+		upkeep = {
+			food = @weaver_stage_1_bioship_growth_t1_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		bioship_growth_progress_add = @weaver_stage_1_bioship_growth_t1_progress
+	}
+
+	potential = {
+		is_ship_size = weaver_stage_1
+	}
+	prerequisites = { tech_weaver_growth_1 }
+	component_set = "bio_ship_unique_components"
+	upgrades_to = "WEAVER_STAGE_1_GROWTH_2"
+	upgrade_path = growth
+	ai_tags = {
+		buffer_role
+		buffer_role_stealth
+		debuffer_role
+		debuffer_role_stealth
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "WEAVER_STAGE_1_GROWTH_2"
+	size = small
+	icon = "GFX_ship_part_growth_component_2"
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @weaver_stage_1_bioship_growth_t2_food_cost
+			#exotic_gases = @genetic_component_2_rare_cost
+			helium_3 = @genetic_component_2_rare_cost
+			hydrogen = @genetic_component_2_rare_cost
+		}
+		upkeep = {
+			food = @weaver_stage_1_bioship_growth_t2_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		bioship_growth_progress_add = @weaver_stage_1_bioship_growth_t2_progress
+	}
+
+	potential = {
+		is_ship_size = weaver_stage_1
+	}
+	prerequisites = { tech_weaver_growth_2 }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = growth
+	ai_tags = {
+		buffer_role
+		buffer_role_stealth
+		debuffer_role
+		debuffer_role_stealth
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = helium_3 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "WEAVER_STAGE_2_GROWTH_EMPTY"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+
+	potential = {
+		is_ship_size = weaver_stage_2
+	}
+	prerequisites = { }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = empty
+	upgrades_to = "WEAVER_STAGE_2_GROWTH_1"
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "WEAVER_STAGE_2_GROWTH_1"
+	size = small
+	icon = "GFX_ship_part_growth_component_1"
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @weaver_stage_2_bioship_growth_t1_food_cost
+		}
+		upkeep = {
+			food = @weaver_stage_2_bioship_growth_t1_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		bioship_growth_progress_add = @weaver_stage_2_bioship_growth_t1_progress
+	}
+
+	potential = {
+		is_ship_size = weaver_stage_2
+	}
+	prerequisites = { tech_weaver_growth_2 }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = growth
+	ai_tags = {
+		buffer_role
+		buffer_role_stealth
+		debuffer_role
+		debuffer_role_stealth
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "HARBINGER_STAGE_1_GROWTH_EMPTY"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+
+	potential = {
+		is_ship_size = harbinger_stage_1
+	}
+	prerequisites = { }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = empty
+	upgrades_to = "HARBINGER_STAGE_1_GROWTH_1"
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "HARBINGER_STAGE_1_GROWTH_1"
+	size = small
+	icon = "GFX_ship_part_growth_component_1"
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @harbinger_stage_1_bioship_growth_t1_food_cost
+		}
+		upkeep = {
+			food = @harbinger_stage_1_bioship_growth_t1_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		bioship_growth_progress_add = @harbinger_stage_1_bioship_growth_t1_progress
+	}
+
+	potential = {
+		is_ship_size = harbinger_stage_1
+	}
+	prerequisites = { tech_harbinger_growth_1 }
+	component_set = "bio_ship_unique_components"
+	upgrades_to = "HARBINGER_STAGE_1_GROWTH_2"
+	upgrade_path = growth
+	ai_tags = {
+		carrier
+		carrier_stealth
+		artillery
+		artillery_stealth
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "HARBINGER_STAGE_1_GROWTH_2"
+	size = small
+	icon = "GFX_ship_part_growth_component_2"
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @harbinger_stage_1_bioship_growth_t2_food_cost
+			#exotic_gases = @genetic_component_2_rare_cost
+			helium_3 = @genetic_component_2_rare_cost
+			hydrogen = @genetic_component_2_rare_cost
+		}
+		upkeep = {
+			food = @harbinger_stage_1_bioship_growth_t2_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		bioship_growth_progress_add = @harbinger_stage_1_bioship_growth_t2_progress
+	}
+
+	potential = {
+		is_ship_size = harbinger_stage_1
+	}
+	prerequisites = { tech_harbinger_growth_2 }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = growth
+	ai_tags = {
+		carrier
+		carrier_stealth
+		artillery
+		artillery_stealth
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = helium_3 }
+		}
+	}
+}
+
+utility_component_template = {
+	key = "HARBINGER_STAGE_2_GROWTH_EMPTY"
+	size = small
+	icon = "GFX_ship_part_empty_ftl_drive"
+	icon_frame = 1
+	power = 0
+
+	potential = {
+		is_ship_size = harbinger_stage_2
+	}
+	prerequisites = { }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = empty
+	upgrades_to = "HARBINGER_STAGE_2_GROWTH_1"
+	ai_weight = {
+		weight = 0
+	}
+}
+
+utility_component_template = {
+	key = "HARBINGER_STAGE_2_GROWTH_1"
+	size = small
+	icon = "GFX_ship_part_growth_component_1"
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @harbinger_stage_2_bioship_growth_t1_food_cost
+		}
+		upkeep = {
+			food = @harbinger_stage_2_bioship_growth_t1_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		bioship_growth_progress_add = @harbinger_stage_2_bioship_growth_t1_progress
+	}
+
+	potential = {
+		is_ship_size = harbinger_stage_2
+	}
+	prerequisites = { tech_harbinger_growth_2 }
+	component_set = "bio_ship_unique_components"
+	upgrade_path = growth
+	ai_tags = {
+		carrier
+		carrier_stealth
+		artillery
+		artillery_stealth
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+######################################
+# Biological Ship Genetic Components #
+######################################
+
+#####################
+#	Mauler Pursuit	#
+#####################
+
+utility_component_template = {
+	key = "MAULER_PURSUIT_1"
+	icon = GFX_ship_part_mauler_pursuit_component_1
+	size = small
+
+	icon_frame = 1
+	power = -5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_1_food_cost
+			#volatile_motes = @genetic_component_1_rare_cost
+			light_alloys = @genetic_component_1_rare_cost
+			heavy_alloys = @genetic_component_1_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_1_food_upkeep
+		}
+	}
+
+	modifier = {
+		ship_speed_mult = 0.05
+		ship_evasion_mult = 0.025
+	}
+
+	prerequisites = {
+		tech_mauler_growth_1
+	}
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_mauler_components = yes
+	}
+	upgrades_to = "MAULER_PURSUIT_2"
+	upgrade_path = mauler_pursuit
+	ai_tags = {
+		screen
+		screen_stealth
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "MAULER_PURSUIT_2"
+	icon = GFX_ship_part_mauler_pursuit_component_2
+	size = small
+
+	icon_frame = 1
+	power = -10
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_2_food_cost
+			#volatile_motes = @genetic_component_2_rare_cost
+			light_alloys = @genetic_component_2_rare_cost
+			heavy_alloys = @genetic_component_2_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_2_food_upkeep
+		}
+	}
+
+	modifier = {
+		ship_speed_mult = 0.10
+		ship_evasion_mult = 0.05
+	}
+
+	prerequisites = {
+		tech_mauler_growth_2
+	}
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_mauler_components = yes
+	}
+	upgrade_path = mauler_pursuit
+	ai_tags = {
+		screen
+		screen_stealth
+	}
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = light_alloys }
+		}
+	}
+}
+
+#####################
+#	Mauler Biter	#
+#####################
+
+utility_component_template = {
+	key = "MAULER_BITER_1"
+	icon = GFX_ship_part_mauler_biter_component_1
+	size = small
+
+	icon_frame = 1
+	power = -5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_1_food_cost
+			#exotic_gases = @genetic_component_1_rare_cost
+			helium_3 = @genetic_component_1_rare_cost
+			hydrogen = @genetic_component_1_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_1_food_upkeep
+		}
+	}
+
+	modifier = {
+		weapon_type_mandible_weapon_damage_mult = 0.05
+		ship_armor_damage_mult = 0.05
+	}
+
+	prerequisites = {
+		tech_mauler_growth_1
+	}
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_mauler_components = yes
+	}
+	upgrades_to = "MAULER_BITER_2"
+	upgrade_path = mauler_biter
+	ai_tags = {
+		brawler
+		brawler_stealth
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "MAULER_BITER_2"
+	icon = GFX_ship_part_mauler_biter_component_2
+	size = small
+
+	icon_frame = 1
+	power = -10
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_2_food_cost
+			#exotic_gases = @genetic_component_2_rare_cost
+			helium_3 = @genetic_component_2_rare_cost
+			hydrogen = @genetic_component_2_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_2_food_upkeep
+		}
+	}
+
+	modifier = {
+		weapon_type_mandible_weapon_damage_mult = 0.10
+		ship_armor_damage_mult = 0.10
+	}
+
+	prerequisites = {
+		tech_mauler_growth_2
+	}
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_mauler_components = yes
+	}
+	upgrade_path = mauler_biter
+	ai_tags = {
+		brawler
+		brawler_stealth
+	}
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = helium_3 }
+		}
+	}
+}
+
+#########################
+#	Weaver Grwoth Aura	#
+#########################
+
+utility_component_template = {
+	key = "WEAVER_GROWTH_AURA_1"
+	icon = GFX_ship_part_weaver_growth_aura_component_1
+	size = small
+
+	icon_frame = 1
+	power = -5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_1_food_cost
+			#exotic_gases = @genetic_component_1_rare_cost
+			helium_3 = @genetic_component_1_rare_cost
+			hydrogen = @genetic_component_1_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_1_food_upkeep
+		}
+	}
+
+	prerequisites = {
+		tech_weaver_growth_1
+	}
+
+	friendly_aura = {
+		name = "GROWTH_AURA"
+		system_wide = no
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = growth_aura
+			priority = 1
+		}
+
+		# limit = {
+		# 	bioship_can_grow = yes
+		# }
+
+		modifier = {
+			bioship_growth_progress_add = 1
+			# ship_military_upkeep_mult = 0.50
+		}
+	}
+
+	# custom_tooltip = GROWTH_AURA_TT
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_weaver_components = yes
+	}
+	upgrades_to = "WEAVER_GROWTH_AURA_2"
+	upgrade_path = weaver_growth_aura
+
+	ai_tags = { buffer_role buffer_role_stealth }
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "WEAVER_GROWTH_AURA_2"
+	icon = GFX_ship_part_weaver_growth_aura_component_2
+	size = small
+
+	icon_frame = 1
+	power = -10
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_2_food_cost
+			#exotic_gases = @genetic_component_2_rare_cost
+			helium_3 = @genetic_component_2_rare_cost
+			hydrogen = @genetic_component_2_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_2_food_upkeep
+		}
+	}
+
+	prerequisites = {
+		tech_weaver_growth_2
+	}
+
+	friendly_aura = {
+		name = "GROWTH_AURA"
+		system_wide = no
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = growth_aura
+			priority = 5
+		}
+
+		# limit = {
+		# 	bioship_can_grow = yes
+		# }
+
+		modifier = {
+			bioship_growth_progress_add = 2
+			# ship_military_upkeep_mult = 1.00
+		}
+	}
+
+	# custom_tooltip = GROWTH_AURA_TT
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_weaver_components = yes
+	}
+	upgrade_path = weaver_growth_aura
+
+	ai_tags = { buffer_role buffer_role_stealth }
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = helium_3 }
+		}
+	}
+}
+
+#####################
+#	Weaver Booster	#
+#####################
+
+utility_component_template = {
+	key = "WEAVER_BOOSTER_1"
+	icon = GFX_ship_part_weaver_booster_component_1
+	size = small
+
+	icon_frame = 1
+	power = -5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_1_food_cost
+			#volatile_motes = @genetic_component_1_rare_cost
+			light_alloys = @genetic_component_1_rare_cost
+			heavy_alloys = @genetic_component_1_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_1_food_upkeep
+		}
+	}
+
+	modifier = {
+		buffer_role_weapon_fire_rate_mult = 0.05
+		debuffer_role_weapon_fire_rate_mult = 0.05
+		ship_weapon_range_mult = 0.05
+	}
+
+	prerequisites = {
+		tech_weaver_growth_1
+	}
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_weaver_components = yes
+	}
+	upgrades_to = "WEAVER_BOOSTER_2"
+	upgrade_path = weaver_booster
+	ai_tags = {
+		brawler
+		brawler_stealth
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "WEAVER_BOOSTER_2"
+	icon = GFX_ship_part_weaver_booster_component_2
+	size = small
+
+	icon_frame = 1
+	power = -10
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_2_food_cost
+			#volatile_motes = @genetic_component_2_rare_cost
+			light_alloys = @genetic_component_2_rare_cost
+			heavy_alloys = @genetic_component_2_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_2_food_upkeep
+		}
+	}
+
+	modifier = {
+		buffer_role_weapon_fire_rate_mult = 0.10
+		debuffer_role_weapon_fire_rate_mult = 0.10
+		ship_weapon_range_mult = 0.10
+	}
+
+	prerequisites = {
+		tech_weaver_growth_2
+	}
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_weaver_components = yes
+	}
+	upgrade_path = weaver_booster
+	ai_tags = {
+		brawler
+		brawler_stealth
+	}
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = light_alloys }
+		}
+	}
+}
+
+#########################
+#	Harbinger Incubator	#
+#########################
+
+utility_component_template = {
+	key = "HARBINGER_INCUBATOR_1"
+	icon = GFX_ship_part_harbinger_incubator_component_1
+	size = small
+
+	icon_frame = 1
+	power = -5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_1_food_cost
+			#exotic_gases = @genetic_component_1_rare_cost
+			helium_3 = @genetic_component_1_rare_cost
+			hydrogen = @genetic_component_1_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_1_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		ship_engagement_range_mult = 0.05
+		strike_craft_cooldown_mult = -0.05
+	}
+
+	prerequisites = {
+		tech_harbinger_growth_1
+	}
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_harbinger_components = yes
+	}
+	upgrades_to = "HARBINGER_INCUBATOR_2"
+	upgrade_path = harbinger_incubator
+	ai_tags = {
+		artillery
+		artillery_stealth
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "HARBINGER_INCUBATOR_2"
+	icon = GFX_ship_part_harbinger_incubator_component_2
+	size = small
+
+	icon_frame = 1
+	power = -10
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_2_food_cost
+			#exotic_gases = @genetic_component_2_rare_cost
+			helium_3 = @genetic_component_2_rare_cost
+			hydrogen = @genetic_component_2_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_2_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		ship_engagement_range_mult = 0.10
+		strike_craft_cooldown_mult = -0.10
+	}
+
+	prerequisites = {
+		tech_harbinger_growth_2
+	}
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_harbinger_components = yes
+	}
+	upgrade_path = harbinger_incubator
+	ai_tags = {
+		artillery
+		artillery_stealth
+	}
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = helium_3 }
+		}
+	}
+}
+#########################
+#	Harbinger Chitin	#
+#########################
+
+utility_component_template = {
+
+	key = "HARBINGER_CHITIN_1"
+	icon = GFX_ship_part_harbinger_chitin_component_1
+	size = small
+
+	icon_frame = 1
+	power = -5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_1_food_cost
+			#rare_crystals = @genetic_component_1_rare_cost
+			eezo = @genetic_component_1_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_1_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		ship_engagement_range_mult = 0.05
+		strike_craft_armor_add = 5
+	}
+
+	prerequisites = {
+		tech_harbinger_growth_1
+	}
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_harbinger_components = yes
+	}
+	upgrades_to = "HARBINGER_CHITIN_2"
+	upgrade_path = harbinger_chitin
+	ai_tags = {
+		carrier
+		carrier_stealth
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "HARBINGER_CHITIN_2"
+	icon = GFX_ship_part_harbinger_chitin_component_2
+	size = small
+
+	icon_frame = 1
+	power = -10
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_2_food_cost
+			#rare_crystals = @genetic_component_2_rare_cost
+			eezo = @genetic_component_1_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_2_food_upkeep
+		}
+	}
+
+	ship_modifier = {
+		ship_engagement_range_mult = 0.10
+		strike_craft_armor_add = 10
+	}
+
+	prerequisites = {
+		tech_harbinger_growth_2
+	}
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_harbinger_components = yes
+	}
+	upgrade_path = harbinger_chitin
+	ai_tags = {
+		carrier
+		carrier_stealth
+	}
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = eezo }
+		}
+	}
+}
+
+#####################
+#	Stinger Range	#
+#####################
+
+utility_component_template = {
+
+	key = "STINGER_RANGE_1"
+	icon = GFX_ship_part_stinger_range_component_1
+	size = small
+
+	icon_frame = 1
+	power = -5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_1_food_cost
+			#rare_crystals = @genetic_component_1_rare_cost
+			eezo = @genetic_component_1_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_1_food_upkeep
+		}
+	}
+
+	modifier = {
+		ship_weapon_range_mult = 0.05
+		ship_tracking_add = 5
+	}
+
+	prerequisites = {
+		tech_stinger_growth_1
+	}
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_stinger_components = yes
+	}
+	upgrades_to = "STINGER_RANGE_2"
+	upgrade_path = stinger_range
+	ai_tags = {
+		artillery
+		artillery_stealth
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "STINGER_RANGE_2"
+	icon = GFX_ship_part_stinger_range_component_2
+	size = small
+
+	icon_frame = 1
+	power = -10
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_2_food_cost
+			#rare_crystals = @genetic_component_2_rare_cost
+			eezo = @genetic_component_2_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_2_food_upkeep
+		}
+	}
+
+	modifier = {
+		ship_weapon_range_mult = 0.10
+		ship_tracking_add = 10
+	}
+
+	prerequisites = {
+		tech_stinger_growth_2
+	}
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_stinger_components = yes
+	}
+	upgrade_path = stinger_range
+	ai_tags = {
+		artillery
+		artillery_stealth
+	}
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = eezo }
+		}
+	}
+}
+
+#########################
+#	Stinger Reloading	#
+#########################
+
+utility_component_template = {
+
+	key = "STINGER_FIRE_RATE_1"
+	icon = GFX_ship_part_stinger_fire_rate_component_1
+	size = small
+
+	icon_frame = 1
+	power = -5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_1_food_cost
+			#volatile_motes = @genetic_component_1_rare_cost
+			light_alloys = @genetic_component_1_rare_cost
+			heavy_alloys = @genetic_component_1_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_1_food_upkeep
+		}
+	}
+
+	modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_tracking_add = 5
+	}
+
+	prerequisites = {
+		tech_stinger_growth_1
+	}
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_stinger_components = yes
+	}
+	upgrades_to = "STINGER_FIRE_RATE_2"
+	upgrade_path = stinger_fire_rate
+	ai_tags = {
+		gunship
+		gunship_stealth
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "STINGER_FIRE_RATE_2"
+	icon = GFX_ship_part_stinger_fire_rate_component_2
+	size = small
+
+	icon_frame = 1
+	power = -10
+	resources = {
+		category = ship_components
+		cost = {
+			food = @genetic_component_2_food_cost
+			#volatile_motes = @genetic_component_2_rare_cost
+			light_alloys = @genetic_component_2_rare_cost
+			heavy_alloys = @genetic_component_2_rare_cost
+		}
+		upkeep = {
+			food = @genetic_component_2_food_upkeep
+		}
+	}
+
+	modifier = {
+		ship_fire_rate_mult = 0.10
+		ship_tracking_add = 10
+	}
+
+	prerequisites = {
+		tech_stinger_growth_2
+	}
+
+	component_set = "bio_ship_unique_components"
+	potential = {
+		ship_uses_stinger_components = yes
+	}
+	upgrade_path = stinger_fire_rate
+	ai_tags = {
+		gunship
+		gunship_stealth
+	}
+
+	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = light_alloys }
+		}
+	}
+}
