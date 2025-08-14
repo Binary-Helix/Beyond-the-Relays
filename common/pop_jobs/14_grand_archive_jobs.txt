@@ -1,0 +1,996 @@
+geologist = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = xeno_geology_holomuseum
+		}
+	}
+
+	tags = { unity research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_culture_workers
+		produces = {
+			unity = 5
+			engineering_research = 6
+		}
+		upkeep = {
+			minerals = 4
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_multiple_resources_modifier|JOB|geologist|RESOURCE1|unity|WEIGHT1|0.5|RESOURCE2|engineering_research|WEIGHT2|0.5|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+
+	inline_script = {
+		script = "jobs/galactic_curator_council_output"
+		CATEGORY = planet_culture_workers
+	}
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+treasure_gatherer = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = wildlife_sanctuary
+		}
+	}
+
+	tags = { energy unity minerals research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_treasure_gatherers
+		produces = {
+			energy = 10
+			minerals = 4
+			unity = 4
+			society_research = 1
+			trade = 3
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+		mult = value:job_weights_multiple_resources_modifier|JOB|treasure_gatherer|RESOURCE1|energy|WEIGHT1|1.6|RESOURCE2|minerals|WEIGHT2|1.0|
+		mult = value:job_weights_multiple_resources_modifier|JOB|treasure_gatherer|RESOURCE1|unity|WEIGHT1|1|RESOURCE2|society_research|WEIGHT2|0.1|
+		mult = value:job_weights_modifier|JOB|treasure_gatherer|RESOURCE|trade|
+	}
+
+	inline_script = "jobs/automodding_priority_energy"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+wonder_curator = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = aesthetic_wonders_holomuseum
+		}
+	}
+
+	tags = { unity amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_culture_workers
+		produces = {
+			unity = 5
+		}
+	}
+
+	country_modifier = {
+		country_edict_fund_add = 10
+	}
+
+	triggered_planet_modifier = {
+		potential = { always = yes }
+		planet_amenities_add = -1000
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_modifier|JOB|wonder_curator|RESOURCE|unity|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+
+	inline_script = {
+		script = "jobs/galactic_curator_council_output"
+		CATEGORY = planet_culture_workers
+	}
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+historical_curator = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = galactic_history_holomuseum
+		}
+	}
+
+	tags = { unity}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_culture_workers
+		produces = {
+			unity = 6
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_add = 2.5
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_modifier|JOB|historical_curator|RESOURCE|unity|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_living_standard = { type = living_standard_academic_privilege }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+
+	inline_script = {
+		script = "jobs/galactic_curator_council_output"
+		CATEGORY = planet_culture_workers
+	}
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+drone_geologist = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = xeno_geology_museum
+			icon = geologist
+		}
+	}
+
+	tags = { unity research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { can_think = yes }
+
+	resources = {
+		category = planet_evaluators
+		produces = {
+			unity = 6
+			engineering_research = 6
+		}
+		upkeep = {
+			minerals = 4
+		}
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:job_weights_multiple_resources_modifier|JOB|drone_geologist|RESOURCE1|unity|WEIGHT1|0.5|RESOURCE2|engineering_research|WEIGHT2|0.5|
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+drone_wonder_curator = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = aesthetic_wonders_holomuseum
+			icon = wonder_curator
+		}
+	}
+
+	tags = { unity amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { can_think = yes }
+
+	resources = {
+		category = planet_evaluators
+		produces = {
+			unity = 5
+		}
+	}
+
+	country_modifier = {
+		country_edict_fund_add = 10
+	}
+
+	triggered_planet_modifier = {
+		potential = { always = yes }
+		planet_amenities_no_happiness_add = -1000
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:job_weights_modifier|JOB|drone_wonder_curator|RESOURCE|unity|
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+drone_historical_curator = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = galactic_history_holomuseum
+			icon = historical_curator
+		}
+	}
+
+	tags = { unity }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { can_think = yes }
+
+	resources = {
+		category = planet_evaluators
+		produces = {
+			unity = 8
+		}
+		upkeep = {
+			trigger = {
+				owner = { is_hive_empire = yes }
+			}
+			minerals = 4
+		}
+		upkeep = {
+			trigger = {
+				owner = { is_machine_empire = yes }
+			}
+			energy = 4
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_stability_add = 2.5
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:job_weights_modifier|JOB|drone_historical_curator|RESOURCE|unity|
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+#################
+# Wrangler Jobs #
+#################
+
+inline_script = {
+	script = "jobs/wrangler_job"
+	JOB_KEY = wrangler
+}
+
+inline_script = {
+	script = "jobs/wrangler_job"
+	JOB_KEY = rancher
+}
+
+trophy_hunter = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = hunting_grounds
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		OR = {
+			owner = {
+				has_trophy_hunter_job = yes
+			}
+			planet = { has_modifier = resort_colony }
+		}
+	}
+
+	inline_script = "grand_archive/wrangler_jobs_produces"
+
+	# Trophy Hunter production modification
+	resources = {
+		category = planet_primal_jobs
+		produces = {
+			food = 3
+			society_research = -4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { always = yes }
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|trophy_hunter|RESOURCE|unity|FACTOR|0.25|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_robot_domestic_protocols
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+		}
+		modifier = {
+			factor = 0.1
+			is_domestic_servant = yes
+		}
+
+		modifier = {
+			factor = 0.1
+			exists = planet
+			planet = {
+				free_amenities > 500
+			}
+		}
+
+		modifier = {
+			factor = 2
+			exists = planet
+			planet = {
+				free_amenities < 200
+				has_available_jobs = trophy_hunter
+			}
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+animal_handler = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = wildlife_sanctuary
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		owner = {
+			has_animal_handler_job = yes
+		}
+	}
+
+	inline_script = "grand_archive/wrangler_jobs_produces"
+
+	# Animal Handler production modification
+	resources = {
+		category = planet_primal_jobs
+		produces = {
+			society_research = 1
+			unity = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { always = yes }
+		planet_amenities_add = -400
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|animal_handler|RESOURCE|unity|FACTOR|0.25|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_robot_domestic_protocols
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+		}
+		modifier = {
+			factor = 0.1
+			is_domestic_servant = yes
+		}
+
+		modifier = {
+			factor = 0.1
+			exists = planet
+			planet = {
+				free_amenities > 500
+			}
+		}
+		modifier = {
+			factor = 2
+			exists = planet
+			planet = {
+				free_amenities < 200
+				has_available_jobs = animal_handler
+			}
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+beastfighter = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = BATTLE_THRALL_JOB_TRIGGER
+			building_icon = primal_arena
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+		battle_thrall_job_check_trigger = yes
+		owner = {
+			has_beastfighter_job = yes
+		}
+	}
+
+	inline_script = "grand_archive/wrangler_jobs_produces"
+
+	# Beastfighter production modification
+	resources = {
+		category = planet_primal_jobs
+		produces = {
+			unity = 2
+		}
+		upkeep = {
+			alloys = 1
+			consumer_goods = -1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { always = yes }
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_councilor = { COUNCILOR = "councilor_warrior_culture" }
+		}
+		planet_amenities_add = 100
+		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_amenities_mult|TYPE|councilor_warrior_culture|
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_modifier|JOB|beastfighter|RESOURCE|unity|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 10
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_military }
+		}
+		modifier = {
+			factor = 0.5
+			exists = planet
+			planet = {
+				free_amenities > 500
+			}
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+#############################
+# Wrangler Gestalt Variants #
+#############################
+drone_wrangler = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = wildlife_ranch
+			icon = wrangler
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		owner = {
+			can_think = yes
+			has_drone_wrangler_job = yes
+		}
+	}
+
+	inline_script = "grand_archive/wrangler_jobs_produces"
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:job_weights_research_modifier|JOB|drone_wrangler|
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+hunter_drone = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = hunting_grounds
+			icon = trophy_hunter
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		owner = {
+			can_think = yes
+			has_hunter_drone_job = yes
+		}
+	}
+
+	inline_script = "grand_archive/wrangler_jobs_produces"
+
+	# Trophy Hunter production modification
+	resources = {
+		category = planet_primal_jobs
+		produces = {
+			food = 5
+			society_research = -4
+		}
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:job_weights_research_modifier|JOB|hunter_drone|
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+symbiosis_integrator = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = wildlife_sanctuary
+			icon = animal_handler
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		owner = {
+			can_think = yes
+			has_symbiosis_integrator_job = yes
+		}
+	}
+
+	inline_script = "grand_archive/wrangler_jobs_produces"
+
+	# Animal Handler production modification
+	resources = {
+		category = planet_primal_jobs
+		produces = {
+			society_research = 1
+			unity = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { always = yes }
+		planet_amenities_no_happiness_add = -400
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:job_weights_research_modifier|JOB|symbiosis_integrator|
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+treasure_gatherer_gestalt = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = wildlife_sanctuary
+			icon = treasure_gatherer
+		}
+	}
+
+	tags = { energy minerals unity research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { can_think = yes }
+
+	resources = {
+		category = planet_treasure_gatherers
+		produces = {
+			energy = 10
+			minerals = 4
+			unity = 4
+			society_research = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_hive_empire = yes }
+			}
+			minerals = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_machine_empire = yes }
+			}
+			energy = 1
+		}
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		mult = value:job_weights_research_modifier|JOB|treasure_gatherer_gestalt|
+	}
+
+	inline_script = "jobs/automodding_priority_energy"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
