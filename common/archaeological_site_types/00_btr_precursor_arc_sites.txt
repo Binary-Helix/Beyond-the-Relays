@@ -1,0 +1,57 @@
+mars_triangle = {
+    desc = mars_triangle_site_desc
+    picture = #TODO
+    stages = 3
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        owner = {
+            has_origin = systems_all_origin
+        }
+    }
+    visible = {
+        default_site_visible_trigger = yes
+        has_origin = systems_all_origin
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_precursor_all.1
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = btr_precursor_all.2
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_all.3
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_all.4
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_all.5
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_all.6
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
