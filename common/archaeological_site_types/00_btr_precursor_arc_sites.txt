@@ -172,3 +172,61 @@ btr_precursor_ancient_return = {
     }
 }
 
+btr_precursor_new_report = {
+    desc = btr_precursor_new_report_site_desc
+    picture = #TODO
+    stages = 5
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        owner = {
+            has_origin = courts_dek_origin
+        }
+    }
+    visible = {
+        default_site_visible_trigger = yes
+        has_origin = courts_dek_origin
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_precursor_elcor.1
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = btr_precursor_elcor.2
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_elcor.3
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_elcor.4
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_elcor.5
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_elcor.6
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
