@@ -383,6 +383,12 @@ miner = {
 		category = planet_miners
 		produces = {
 			minerals = 4
+			beryllium = 1
+			lithium = 1
+			iridium = 1
+			titanium = 1
+			palladium = 1
+			platinum = 1
 		}
 		# Job Swap - Scrap Miners
 		produces = {
@@ -393,7 +399,9 @@ miner = {
 				}
 			}
 			minerals = -2
-			alloys = 1
+			#alloys = 1
+			light_alloys = 1
+			heavy_alloys = 1
 		}
 		# Job Swap - Cave Cleaners
 		produces = {
@@ -404,6 +412,12 @@ miner = {
 				}
 			}
 			minerals = 2
+			beryllium = 0.5
+			lithium = 0.5
+			iridium = 0.5
+			titanium = 0.5
+			palladium = 0.5
+			platinum = 0.5
 		}
 		# Job Swap - Mineral Diver
 		produces = {
@@ -414,7 +428,9 @@ miner = {
 				}
 			}
 			minerals = -1
-			alloys = 1
+			#alloys = 1
+			light_alloys = 1
+			heavy_alloys = 1
 		}
 		# Job Swap - Turtle
 		produces = {
@@ -533,7 +549,8 @@ crystal_miner = {
 		}
 	}
 
-	tags = { strategic_resource rare_crystals }
+	#tags = { strategic_resource rare_crystals }
+	tags = { strategic_resource eezo }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -551,7 +568,8 @@ crystal_miner = {
 	resources = {
 		category = planet_sr_miners
 		produces = {
-			rare_crystals = 2
+			#rare_crystals = 2
+			eezo = 1
 		}
 		upkeep = {
 			trigger = {
@@ -567,7 +585,8 @@ crystal_miner = {
 
 	weight = {
 		weight = @specialist_job_weight # Important job
-		mult = value:job_weights_modifier|JOB|crystal_miner|RESOURCE|rare_crystals|
+		#mult = value:job_weights_modifier|JOB|crystal_miner|RESOURCE|rare_crystals|
+		mult = value:job_weights_modifier|JOB|crystal_miner|RESOURCE|eezo|
 		modifier = {
 			factor = 10
 			is_enslaved = yes
@@ -622,7 +641,8 @@ gas_extractor = {
 		}
 	}
 
-	tags = { strategic_resource exotic_gases }
+	#tags = { strategic_resource exotic_gases }
+	tags = { strategic_resource antimatter_fuel helium_3 hydrogen }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -636,13 +656,17 @@ gas_extractor = {
 	resources = {
 		category = planet_sr_miners
 		produces = {
-			exotic_gases = 2
+			#exotic_gases = 2
+			helium_3 = 2
+			hydrogen = 2
 		}
 	}
 
 	weight = {
 		weight = @specialist_job_weight # Important job
-		mult = value:job_weights_modifier|JOB|gas_extractor|RESOURCE|exotic_gases|
+		#mult = value:job_weights_modifier|JOB|gas_extractor|RESOURCE|exotic_gases|
+		mult = value:job_weights_modifier|JOB|gas_extractor|RESOURCE|hydrogen|
+		mult = value:job_weights_modifier|JOB|gas_extractor|RESOURCE|helium_3|
 		modifier = {
 			factor = 10
 			is_enslaved = yes
@@ -697,7 +721,8 @@ mote_harvester = {
 		}
 	}
 
-	tags = { strategic_resource volatile_motes }
+	#tags = { strategic_resource volatile_motes }
+	tags = { strategic_resource uranium }
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -711,7 +736,8 @@ mote_harvester = {
 	resources = {
 		category = planet_sr_miners
 		produces = {
-			volatile_motes = 2
+			#volatile_motes = 2
+			uranium = 2
 		}
 
 		produces = {
@@ -720,7 +746,8 @@ mote_harvester = {
 					has_deposit = d_explosive_atmosphere
 				}
 			}
-			volatile_motes = 1
+			#volatile_motes = 1
+			uranium = 1
 		}
 	}
 

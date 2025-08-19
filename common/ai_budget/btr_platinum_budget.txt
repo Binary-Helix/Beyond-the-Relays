@@ -1,3 +1,19 @@
+platinum_upkeep_buffer = {
+	resource = platinum
+	type = upkeep
+	category = buffer
+
+	potential = {
+		always = yes
+	}
+	weight = {
+		weight = 0.1
+	}
+	desired_max = {
+		base = 1000
+	}
+}
+
 platinum_upkeep_planets = {
 	resource = platinum
 	type = upkeep
@@ -9,5 +25,23 @@ platinum_upkeep_planets = {
 
 	weight = {
 		weight = 0.70
+	}
+
+	desired_max = { base = 2000 }
+}
+
+platinum_expenditure_planets = {
+	resource = platinum
+	type = expenditure
+	category = planets
+
+	potential = {
+		has_technology = tech_platinum_biomed
+	}
+	weight = {
+		weight = 0.20
+	}
+	desired_max = {
+		base = 1200
 	}
 }

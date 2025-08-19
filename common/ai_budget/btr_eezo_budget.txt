@@ -60,14 +60,72 @@ eezo_expenditure_planets = {
 	}
 
 	weight = {
-		weight = 0.1
+		weight = 0.05
 	}
 
 	desired_max = {
-		base = 1000
+		base = 400
 	}
 }
 
+# Mass Effect Reactors — planetary eezo reactors
+eezo_expenditure_planets_mass_effect_reactors = {
+	resource = eezo
+	type = expenditure
+	category = planets
+
+	potential = {
+		has_technology = tech_mass_effect_reactors
+	}
+
+	weight = {
+		weight = 0.20
+	}
+	desired_max = {
+		base = 1200
+	}
+}
+
+# Biotics Infrastructure — civilian/amenities/research support
+eezo_expenditure_planets_biotics = {
+	resource = eezo
+	type = expenditure
+	category = planets
+
+	potential = {
+		has_technology = tech_biotics_infrastructure
+	}
+
+	weight = {
+		weight = 0.10
+	}
+	desired_max = {
+		base = 800
+	}
+}
+
+# Relay Stabilizers — relay/megascale support (late game)
+eezo_expenditure_planets_relay_stabilizers = {
+	resource = eezo
+	type = expenditure
+	category = planets
+
+	potential = {
+		has_technology = tech_relay_stabilizers
+	}
+
+	weight = {
+		weight = 0.10
+		# Nudge up if crisis-level threats are present
+		modifier = {
+			factor = 1.5
+			highest_threat >= 75
+		}
+	}
+	desired_max = {
+		base = 800
+	}
+}
 
 ############
 ## Upkeep ##
@@ -88,11 +146,27 @@ eezo_upkeep_ships = {
 			factor = 1.5
 			OR = {
 				is_at_war = yes
-				resource_income_compare = {
-					resource = eezo
-					value > 500
+
+				# Big fleet load + negative eezo cashflow
+				AND = {
+					used_naval_capacity_percent >= 0.9
+					has_monthly_income = {
+						resource = eezo
+						value < 0
+					}
+				}
+
+				# Low stockpile + large fleet even if income is ~flat
+				AND = {
+					has_resource = {
+						type = eezo
+						amount < 1500
+					}
+					used_naval_capacity_percent >= 0.8
 				}
 			}
 		}
 	}
+
+	desired_max = { base = 4000 }
 }

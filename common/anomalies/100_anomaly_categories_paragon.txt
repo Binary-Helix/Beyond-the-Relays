@@ -1,0 +1,49 @@
+############################
+### ANOMALY CATEGORIES ###
+############################
+
+# The Beholder / Temple of Whispers
+paragon_beholder_category = {
+	desc = paragon_beholder_category_desc
+	picture = GFX_evt_ship_in_orbit_3
+	level = 2
+
+	spawn_chance = {
+		# modifier = {
+		# 	add = 3
+		# 	has_paragon_dlc = yes
+		# 	has_planet_flag = pre_sapient_planet
+		# 	NOT = { has_planet_flag = missing_scientist_planet }
+		# }
+		# modifier = {
+		# 	factor = 0
+		# 	from.owner = { is_gestalt = yes }
+		# }
+
+		modifier = { factor = 0 } # disables completely
+	}
+
+	max_once_global = yes
+
+	on_spawn = {
+		prevent_anomaly = yes
+		weighted_random_owned_pop_group = {
+			limit = {
+				is_sapient = no
+			}
+			species = {
+				save_global_event_target_as = beholder_presapients
+			}
+		}
+		every_owned_pop_group = {
+			limit = {
+				is_sapient = no
+			}
+			modify_species = {
+				add_trait = trait_psionic
+			}
+		}
+	}
+
+	on_success = paragon.3
+}
