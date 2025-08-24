@@ -1,0 +1,201 @@
+#
+
+################################
+#
+# BtR Precursor
+#
+# Written by John Giallorenzo
+#
+#
+################################
+
+namespace = btr_precursor_hanar
+
+# Alliance
+# via on_survey = {} | this = surveying vessel
+#ship_event = {
+#    id = btr_precursor_all.1
+#    title = "btr_precursor_all.1.name"
+#    desc = "btr_precursor_all.1.desc"
+#    picture = #TODO
+#    location = from
+#    show_sound = event_wind_ruins
+#    fire_only_once = yes
+#    is_triggered_only = yes
+#
+#    immediate = {
+#        owner = { set_country_flag = btr_alliance_prothean }
+#        set_global_flag = btr_prothean_alliance_started
+#        solar_system = { set_star_flag = btr_alliance_prothean@root.owner }
+#        from = { prevent_anomaly = yes }
+#    }
+
+#    option = {
+#        name = btr_precursor_all.1.a
+#        hidden_effect = {
+#            owner = { country_event = { id = story } }
+#        }
+#        owner = {
+#            add_monthly_resource_mult = {
+#                resource = engineering_research
+#                value = @tier1researchreward
+#                min = @tier1researchmin
+#                max = @tier1researchmax
+#            }
+#        }
+#    }
+#}
+
+#zroni_digsite_1
+fleet_event = {
+    id = btr_precursor_hanar.1
+    title = "btr_precursor_hanar.1.name"
+    desc = btr_precursor_hanar.1.desc
+    picture = #TODO
+    show_sound = event_wind_ruins
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_precursor_hanar.1.a
+        medium_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = btr_precursor_hanar.2
+    title = "btr_precursor_hanar.2"
+    desc = btr_precursor_hanar.2.desc
+    picture = #TODO
+    show_sound = event_whispering
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_precursor_hanar.2.a
+        medium_artifact_reward = yes
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = @tier2unityreward
+                min = @tier2unitymin
+                max = @tier2unitymax
+            }
+        }
+    }
+}
+
+fleet_event = {
+    id = btr_precursor_hanar.3
+    title = "btr_precursor_hanar.3"
+    desc = btr_precursor_hanar.3.desc
+    picture = #TODO
+    show_sound = event_whispering
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_precursor_hanar.3.a
+        large_artifact_reward = yes
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier2researchreward
+                min = @tier2researchmin
+                max = @tier2researchmax
+            }
+        }
+        owner = {
+            add_resource = {
+                influence = -80
+            }
+        }
+    }
+}
+
+fleet_event = {
+    id = btr_precursor_hanar.4
+    title = "btr_precursor_hanar.4"
+    desc = btr_precursor_hanar.4.desc
+    picture = #TODO
+    show_sound = event_whispering
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_precursor_hanar.4.a
+        medium_artifact_reward = yes
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+    }
+}
+
+fleet_event = {
+    id = btr_precursor_hanar.5
+    title = "btr_precursor_hanar.5"
+    desc = btr_precursor_hanar.5.desc
+    picture = #TODO
+    show_sound = event_whispering
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_precursor_hanar.5.a
+        large_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = btr_precursor_hanar.6
+    title = "btr_precursor_hanar.6"
+    desc = btr_precursor_hanar.6.desc
+    picture = #TODO
+    show_sound = event_whispering
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_precursor_hanar.6.a
+        great_artifact_reward = yes
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+    }
+}
