@@ -1,0 +1,97 @@
+r_ancient_generator = {
+    activation_duration = @triumph_duration
+    portrait = "#TODO"
+    sound = "relic_activation_ether_drake_trophy"
+
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            minerals = @activation_cost
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        country_energy_produces_mult = 0.1
+    }
+
+    score = 1000
+
+    active_effect = {
+        add_modifier = {
+            modifier = "ancient_generator"
+            days = 150
+        }
+        #custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 150
+            }
+        }
+    }
+
+    # Possible check for activation
+    possible = {
+        inline_script = {
+            script = relics/activation_checks
+            RELIC = r_ancient_generator
+        }
+    }
+}
+
+r_precursor_shadow = {
+    activation_duration = @triumph_duration
+    portrait = "#TODO"
+    sound = "relic_activation_ether_drake_trophy"
+
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            energy = @activation_cost
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        country_base_influence_produces_add = 2
+    }
+
+    score = 1000
+
+    active_effect = {
+        add_modifier = {
+            modifier = "precursor_shadow"
+            days = 150
+        }
+        #custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = 150
+            }
+        }
+    }
+
+    # Possible check for activation
+    possible = {
+        inline_script = {
+            script = relics/activation_checks
+            RELIC = r_precursor_shadow
+        }
+    }
+}
