@@ -3,6 +3,8 @@ building_ammos_aegis = {
     base_buildtime = @btr_civil_b3_time
 	base_cap_amount = 1
 
+    building_sets = { urban fortress }
+
     is_capped_by_modifier = yes
 
     icon = building_organic_sanctuary
@@ -55,6 +57,8 @@ building_atmospheric_hydrator = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { farming hydroponics }
+
     category = resource
     icon = building_bio_reactor
     potential = {
@@ -105,6 +109,8 @@ building_roughneck_barracks = {
 	base_cap_amount = 1
 
     is_capped_by_modifier = yes
+
+    building_sets = { fortress }
 
     category = resource
     icon = building_military_academy
@@ -160,6 +166,8 @@ building_groundwater_reclamation_complex = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { farming hydroponics }
+
     category = resource
     icon = building_colony_shelter
     potential = {
@@ -213,6 +221,8 @@ building_urban_canyon = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { urban }
+
     category = resource
     icon = building_residence
     potential = {
@@ -265,6 +275,8 @@ building_sinkhole_mining_infrastructure = {
 	base_cap_amount = 1
 
     is_capped_by_modifier = yes
+
+    building_sets = { mining industrial }
 
     category = resource
     icon = building_primitive_mine
@@ -327,6 +339,8 @@ building_hydro_mining_station = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { mining industrial }
+
     category = resource
     icon = building_primitive_mine
     potential = {
@@ -377,6 +391,8 @@ building_hydro_mining_station = {
 building_planetary_canal_system = {
     base_buildtime = @btr_civil_b3_time
 	base_cap_amount = 1
+
+    building_sets = { urban }
 
     is_capped_by_modifier = yes
 
@@ -430,6 +446,8 @@ building_planetary_canal_system = {
 building_galactic_retreat = {
     base_buildtime = @btr_civil_b3_time
 	base_cap_amount = 1
+
+    building_sets = { resort   }
 
     is_capped_by_modifier = yes
 
@@ -488,6 +506,8 @@ building_ground_taming_operations = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { farming hydroponics }
+
     category = resource
     icon = building_food_processing_facility
     potential = {
@@ -536,6 +556,8 @@ building_aqueduct_system = {
 	base_cap_amount = 1
 
     is_capped_by_modifier = yes
+
+    building_sets = { urban }
 
     category = resource
     icon = building_colony_shelter
@@ -586,6 +608,8 @@ building_retinal_power_plant = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { generator industrial }
+
     category = resource
     icon = building_primitive_power_plant
     potential = {
@@ -635,6 +659,8 @@ building_island_hoppers = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+
+    building_sets = { urban }
 
     category = resource
     icon = building_commercial_zone
@@ -689,6 +715,8 @@ building_luxury_resort = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { resort entertainment }
+
     category = resource
     icon = building_heritage_site
     potential = {
@@ -740,6 +768,8 @@ building_sustainable_agriculture_plant = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { farming hydroponics }
+
     category = resource
     icon = building_food_processing_facility
     potential = {
@@ -789,6 +819,8 @@ building_exotic_hunting_lodge = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { hunting_zone }
+
     category = resource
     icon = building_food_processing_facility
     potential = {
@@ -837,6 +869,8 @@ building_water_drainage_system = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+
+    building_sets = { industrial }
 
     category = resource
     icon = building_food_processing_facility
@@ -890,6 +924,8 @@ building_stilted_community = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { urban  }
+
     category = resource
     icon = building_residence   
     potential = {
@@ -940,6 +976,8 @@ building_hydroponics_platforms = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+
+    building_sets = { hydroponics farming }
 
     category = resource
     icon = building_food_processing_facility
@@ -993,6 +1031,8 @@ building_maraetropian_dams = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { farming }
+
     category = resource
     icon = building_primitive_capital
     potential = {
@@ -1044,6 +1084,8 @@ building_wilderness_retreat = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { hunting_zone resort entertainment }
+
     category = resource
     icon = holding_tree_of_life_sapling
     potential = {
@@ -1093,6 +1135,8 @@ building_wind_farm = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { generator }
+
     category = resource
     icon = building_energy_grid
     potential = {
@@ -1141,6 +1185,8 @@ building_athsean_lumber_yard = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+
+    building_sets = { industrial }
 
     category = resource
     icon = building_primitive_dwellings
@@ -1193,6 +1239,8 @@ building_transcontinental_monorail_system = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { urban }
+
     category = resource
     icon = building_residence
     potential = {
@@ -1244,6 +1292,8 @@ building_hydrothermal_generator_system = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { generator }
+
     category = resource
     icon = building_energy_grid
     potential = {
@@ -1293,6 +1343,7 @@ building_subsurface_infrastructure = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+    building_sets = { urban }
 
     category = resource
     icon = building_hypercomms_forum
@@ -1344,6 +1395,8 @@ building_tempests_demise = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+
+    building_sets = { urban fortress }
 
     category = resource
     icon = building_hypercomms_forum
@@ -1400,6 +1453,7 @@ building_geothermal_station = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+    building_sets = { generator }
 
     category = resource
     icon = building_resource_silo
@@ -1451,6 +1505,8 @@ building_distillery_complex = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+
+    building_sets = { industrial }
 
     category = resource
     icon = building_resource_silo
@@ -1504,6 +1560,8 @@ building_mountain_compounds = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+
+    building_sets = { fortress }
 
     category = resource
     icon = building_residence
@@ -1562,6 +1620,8 @@ building_aero_mining_base = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+
+    building_sets = { mining industrial }
 
     category = resource
     icon = building_primitive_mine
@@ -1626,6 +1686,8 @@ building_construction_industrial_complex = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { industrial factory }
+
     category = resource
     icon = building_foundry_1
     potential = {
@@ -1681,6 +1743,8 @@ building_lichen_harvesting_facility = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { farming hydroponics }
+
     category = resource
     icon = building_toxic_bath
     potential = {
@@ -1729,6 +1793,8 @@ building_mudslide_barriers = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+
+    building_sets = { urban }
 
     category = resource
     icon = building_organic_sanctuary
@@ -1780,6 +1846,8 @@ building_green_zone = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+
+    building_sets = { urban }
 
     category = resource
     icon = building_paradise_dome
@@ -1836,6 +1904,8 @@ building_planetary_train = {
 
     is_capped_by_modifier = yes
 
+    building_sets = { urban }
+
     category = resource
     icon = building_imperial_concession_port
     potential = {
@@ -1888,6 +1958,8 @@ building_the_generator = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+
+    building_sets = { generator }
 
     category = resource
     icon = building_energy_nexus
@@ -1942,6 +2014,8 @@ building_underground_vault = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+
+    building_sets = { research }
 
     category = resource
     icon = building_wildcat_miners
@@ -1998,6 +2072,8 @@ building_magmatic_forge = {
 	base_cap_amount = 2
 
     is_capped_by_modifier = yes
+
+    building_sets = { industrial factory }
 
     category = resource
     icon = building_private_shipyards

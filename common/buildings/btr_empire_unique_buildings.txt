@@ -8,6 +8,8 @@ building_asari_rep_comm_center = {
 	icon = building_residence
     exempt_from_ai_planet_specialization = no
 
+	building_sets = { government urban }
+
     category = government
 
     potential = {
@@ -57,6 +59,8 @@ building_asari_galactic_sports_center = {
     exempt_from_ai_planet_specialization = no
 	icon = building_commercial_zone
     empire_limit = 1
+
+	building_sets = { unity urban resort }
 
     category = unity
 
@@ -128,6 +132,8 @@ building_salarian_exo_arch_res_outpost = {
 		}
 	}
 
+	building_sets = { research }
+
 	category = research
 
 	allow = {
@@ -172,6 +178,8 @@ building_salarian_covert_collection = {
 			has_technology = tech_colonial_centralization
 		}
 	}
+
+	building_sets = { research }
 
 	category = research
 
@@ -235,6 +243,9 @@ building_turian_planetary_kasrs = {
 	base_cap_amount = 1
 	icon = building_stronghold
 	category = army
+
+	building_sets = { government fortress }
+
 	potential = {
 		exists = owner
 		owner = {
@@ -304,6 +315,8 @@ building_turian_castra_auxilia = {
 		}
 	}
 
+	building_sets = { government urban }
+
 	category = government
 
 	allow = {
@@ -362,6 +375,8 @@ building_systems_colonial_affairs_office = {
 		}
 	}
 
+	building_sets = { government urban }
+
 	allow = {
 		exists = owner
 		colony_age = 120
@@ -416,6 +431,8 @@ building_systems_ict_academy = {
 		}
 	}
 
+	building_sets = {government fortress }
+
 	allow = {
 		exists = owner
 		has_planet_flag = earth_planet
@@ -466,6 +483,8 @@ building_elcor_elders_assembly = {
 		}
 	}
 
+	building_sets = { government }
+
 	destroy_trigger = {
 		OR = {
 			owner = { is_regular_empire = no }
@@ -507,6 +526,8 @@ building_elcor_communal_croplands = {
 		}
 	}
 
+	building_sets = { unity farming }
+
 	destroy_trigger = {
 		OR = {
 			owner = { is_regular_empire = no }
@@ -539,6 +560,8 @@ building_volus_galactic_commercial_zone = {
 	icon = building_commercial_megaplex
 	exempt_from_ai_planet_specialization = no
 	category = trade
+
+	building_sets = { trade urban }
 
 	allow = {
 		has_major_upgraded_capital = yes 
@@ -603,6 +626,8 @@ building_volus_economic_regulation_office = {
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
 
+	building_sets = { industrial trade }
+
 	allow = {
 		has_upgraded_capital = yes
 	}
@@ -666,6 +691,8 @@ building_hanar_enkindler_reliquary = {
 	exempt_from_ai_planet_specialization = no
 	category = unity
 
+	building_sets = { unity	 }
+
 	allow = {
 		has_upgraded_capital = yes 
 	}
@@ -721,6 +748,8 @@ building_hanar_drell_barracks = {
 	icon = building_stronghold
 	exempt_from_ai_planet_specialization = no
 	category = army
+
+	building_sets = { fortress }
 
 	allow = {
 		has_upgraded_capital = yes 
@@ -779,6 +808,8 @@ building_batarian_slave_market = {
 	exempt_from_ai_planet_specialization = no
 	category = government
 
+	building_sets = { government trade }
+
 	allow = {
 		has_upgraded_capital = yes 
 	}
@@ -823,6 +854,8 @@ building_batarian_black_site = {
 	icon = building_slave_processing
 	exempt_from_ai_planet_specialization = no
 	category = government
+
+	building_sets = { government fortress }
 
 	allow = {
 		has_upgraded_capital = yes 
@@ -869,6 +902,8 @@ building_krogan_maw_hammers = {
 	icon = building_order_holding
 	exempt_from_ai_planet_specialization = no
 	category = government
+
+	building_sets = { government unity }
 
 	allow = {
 		has_deposit = d_wild_thresher_maws
@@ -919,6 +954,8 @@ building_krogan_neutral_ground = {
 	exempt_from_ai_planet_specialization = no
 	category = government
 
+	building_sets = { government unity	 }
+
 	potential = {
 		owner = {
 			has_origin = aralakh_kah_origin
@@ -967,6 +1004,8 @@ building_omega_grey_market = {
 	exempt_from_ai_planet_specialization = no
 	category = government
 
+	building_sets = { government trade }
+
 	allow = {
 		has_upgraded_capital = yes 
 	}
@@ -1013,6 +1052,8 @@ building_omega_scrap_garage = {
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
 
+	building_sets = { industrial trade }
+
 	allow = {
 		has_upgraded_capital = yes 
 	}
@@ -1020,7 +1061,9 @@ building_omega_scrap_garage = {
 	potential = {
 		owner = {
 			has_origin = omega_emp_origin
-			is_planet_class = pc_habitat
+			root = {
+				is_planet_class = pc_habitat
+			}
 		}
 	}
 
@@ -1060,6 +1103,8 @@ building_illium_stock_exchange = {
 	icon = building_commercial_megaplex
 	exempt_from_ai_planet_specialization = no
 	category = trade
+
+	building_sets = { trade urban }
 
 	allow = {
 		AND = {
@@ -1116,6 +1161,8 @@ building_illium_information_broker_network = {
 	exempt_from_ai_planet_specialization = no
 	category = government
 
+	building_sets = { government }
+
 	allow = {
 		AND = {
 			planet = {
@@ -1170,6 +1217,8 @@ building_illium_trade_center = {
 	icon = building_commercial_forum
 	exempt_from_ai_planet_specialization = no
 	category = trade
+
+	building_sets = { trade urban }
 
 	allow = {
 		AND = {
@@ -1234,6 +1283,8 @@ building_caleston_great_dome = {
 	icon = building_hydroponics_farm
 	exempt_from_ai_planet_specialization = no
 	base_cap_amount = 2
+
+	building_sets = { government trade }
 	
 	category = government
 
@@ -1292,6 +1343,8 @@ building_caleston_energy_pits = {
 	icon = building_archaeo_refinery
 	exempt_from_ai_planet_specialization = no
 	base_cap_amount = 2
+
+	building_sets = { industrial }
 	
 	category = resource
 
@@ -1356,6 +1409,8 @@ building_drell_museum_wander = {
 	exempt_from_ai_planet_specialization = no
 	category = unity
 
+	building_sets = { unity	urban }
+
 	allow = {
 		planet = {
 			NOT = {
@@ -1405,6 +1460,8 @@ building_drell_bureau_resources_labor = {
 	icon = building_bureaucratic_1
 	exempt_from_ai_planet_specialization = no
 	category = unity
+
+	building_sets = { unity	government }
 
 	allow = {
 		planet = {
@@ -1461,6 +1518,8 @@ building_vorcha_pyro_training = {
 	exempt_from_ai_planet_specialization = no
 	category = army
 
+	building_sets = { fortress  }
+
 #	allow = {
 #		owner = {
 #			has_technology = tech_vorcha_call_of_heshtok
@@ -1509,6 +1568,8 @@ building_vorcha_communal_spawning_pits = {
 	icon = building_toxic_bath
 	exempt_from_ai_planet_specialization = no
 	category = pop_assembly
+
+	building_sets = { urban medical }
 
 #	allow = {
 #		owner = {
@@ -1564,6 +1625,8 @@ building_sedriicae_foreign_trade = {
 	exempt_from_ai_planet_specialization = no
 	category = trade
 
+	building_sets = { trade	government }
+
 	potential = {
 		owner = {
 			has_origin = sedriicae_col_origin
@@ -1608,6 +1671,8 @@ building_sedriicae_central_plaza = {
 	exempt_from_ai_planet_specialization = no
 	category = government
 
+	building_sets = { government urban }
+
 	potential = {
 		owner = {
 			has_origin = sedriicae_col_origin
@@ -1650,6 +1715,8 @@ building_lystheni_fortress_one = {
 	icon = holding_overlord_garrison
 	exempt_from_ai_planet_specialization = no
 	category = government
+
+	building_sets = { government fortress }
 
 #	allow = {
 #		owner = {
@@ -1702,6 +1769,8 @@ building_lystheni_league_monastery = {
 	exempt_from_ai_planet_specialization = no
 	category = government
 
+	building_sets = { government unity }
+
 #	allow = {
 #		owner = {
 #			has_technology = tech_galactic_bureaucracy
@@ -1751,6 +1820,8 @@ building_lystheni_ai_training_center = {
 	exempt_from_ai_planet_specialization = no
 	category = army
 
+	building_sets = { research fortress }
+
 #	allow = {
 #		owner = {
 #			has_technology = tech_lystheni_oracle_class_ai
@@ -1798,6 +1869,8 @@ building_lystheni_temple_mother = {
 	exempt_from_ai_planet_specialization = no
 	category = research
 
+	building_sets = { research unity }
+
 	potential = {
 		owner = {
 			has_origin = lystheni_ord_origin
@@ -1841,6 +1914,8 @@ building_gothones_beastmasters_quarters = {
 	icon = holding_park_ranger_lodge
 	exempt_from_ai_planet_specialization = no
 
+	building_sets = { research }
+
 	category = research
 
 	potential = {
@@ -1883,6 +1958,8 @@ building_gothones_longhouse = {
 	base_buildtime = @btr_civil_b3_time
 	icon = building_precinct_house
 	exempt_from_ai_planet_specialization = no
+
+	building_sets = { urban	unity }
 
 	category = research
 
@@ -1933,6 +2010,8 @@ building_yahg_blood_arena = {
 			has_origin = parnack_reg_origin
 		}
 	}
+
+	building_sets = { entertainment government unity }
 
 	category = army
 
@@ -1986,6 +2065,8 @@ building_raloi_foreign_instructor_center = {
 		}
 	}
 
+	building_sets = { government fortress }
+
 	category = army
 
 	destroy_trigger = {
@@ -2034,6 +2115,8 @@ building_raloi_development_coop_institute = {
 		}
 	}
 
+	building_sets = { research }
+
 	category = research
 
 	destroy_trigger = {
@@ -2081,6 +2164,8 @@ building_geth_uplink_node = {
 			has_origin = disciples_naz_origin
 		}
 	}
+
+	building_sets = { research unity }
 
 	category = amenity
 
@@ -2135,6 +2220,8 @@ building_geth_production_center = {
 		}
 	}
 
+	building_sets = { industrial urban }
+
 	category = manufacturing
 
 	allow = {
@@ -2185,6 +2272,8 @@ building_nazara_altar = {
 			has_origin = disciples_naz_origin
 		}
 	}
+
+	building_sets = { unity	 }
 	
 	category = unity
 
@@ -2220,7 +2309,7 @@ building_nazara_altar = {
 		}
 		upkeep = {
 			energy = @btr_research_b2_energy_upkeep
-			iridium = @btr_research_b2_irdium_upkeep
+			iridium = @btr_research_b2_energy_upkeep
 
 		}
 	}
@@ -2237,6 +2326,8 @@ building_rachni_subsurface_palace = {
 			has_origin = rachni_hiv_origin
 		}
 	}
+
+	building_sets = { government urban }
 
 	category = unity
 
@@ -2284,6 +2375,8 @@ building_rachni_swarmshop = {
 		}
 	}
 
+	building_sets = { government	research }
+
 	category = unity
 
 	allow = {
@@ -2330,6 +2423,8 @@ building_rachni_swarmshop_2 = {
 			has_origin = rachni_hiv_origin
 		}
 	}
+
+	building_sets = { research government }
 
 	category = unity
 
@@ -2384,6 +2479,8 @@ building_citadel_tower = {
 		}
 	}
 
+	building_sets = { government }
+
 	category = government
 
 	allow = {
@@ -2428,6 +2525,8 @@ building_citadel_embassies = {
 			is_capital = yes
 		}
 	}
+
+	building_sets = { government }
 
 	category = government
 
@@ -2476,6 +2575,8 @@ building_citadel_commons= {
 			is_capital = yes
 		}
 	}
+
+	building_sets = { urban	unity }
 
 	category = trade
 
@@ -2526,6 +2627,8 @@ building_citadel_financial= {
 		}
 	}
 
+	building_sets = { trade	 }
+
 	category = trade
 
 	allow = {
@@ -2573,6 +2676,8 @@ building_citadel_docks= {
 			is_capital = yes
 		}
 	}
+
+	building_sets = { fortress }
 
 	category = army
 
@@ -2623,6 +2728,8 @@ building_citadel_csec= {
 		}
 	}
 
+	building_sets = { fortress government }
+
 	category = government
 
 	allow = {
@@ -2669,6 +2776,8 @@ building_citadel_park = {
 			is_capital = yes
 		}
 	}
+
+	building_sets = { unity	urban }
 
 	category = unity
 

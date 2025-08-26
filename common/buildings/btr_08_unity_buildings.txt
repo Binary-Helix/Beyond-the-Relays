@@ -2832,7 +2832,7 @@ building_autocurating_vault = {
 			}
 			energy = @b2_upkeep
 			#rare_crystals = @b2_rare_upkeep
-			palladium =  = @b2_rare_upkeep
+			palladium = @b2_rare_upkeep
 		}
 		upkeep = {
 			trigger = {
@@ -2840,7 +2840,7 @@ building_autocurating_vault = {
 			}
 			energy = 8
 			#rare_crystals = 3
-			palladium =  = @b2_rare_upkeep
+			palladium = @b2_rare_upkeep
 		}
 	}
 
@@ -3585,30 +3585,34 @@ building_organic_paradise = {
 		heavy_alloys = 20
 
 		trigger = {
-			any_owned_pop_group = {
-				is_pop_category = bio_trophy_unemployment
-			}
+			OR = {
+				AND = {
+					any_owned_pop_group = {
+						is_pop_category = bio_trophy_unemployment
+					}
+					planet_resource_compare = {
+						#resource = alloys
+						resource = light_alloys
+						value >= 100
+						type = produces
+					}
+				}
 
-			planet_resource_compare = {
-				#resource = alloys
-				resource = light_alloys
-				value >= 100
-				type = produces
+				AND = {
+					any_owned_pop_group = {
+						is_pop_category = bio_trophy_unemployment
+					}
+
+					planet_resource_compare = {
+						#resource = alloys
+						resource = heavy_alloys
+						value >= 100
+						type = produces
+					}
+				}
 			}
 		}
 
-		trigger = {
-			any_owned_pop_group = {
-				is_pop_category = bio_trophy_unemployment
-			}
-
-			planet_resource_compare = {
-				#resource = alloys
-				resource = heavy_alloys
-				value >= 100
-				type = produces
-			}
-		}
 	}
 
 	#cgs

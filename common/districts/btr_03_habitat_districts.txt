@@ -17,6 +17,7 @@ district_hab_housing = {
 	base_buildtime = @hab_time
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_government
 
 	zone_slots = {
 		slot_city_government
@@ -79,6 +80,7 @@ district_hab_housing = {
 district_hab_energy = {
 	base_buildtime = @hab_time
 	is_capped_by_modifier = yes
+	overlay_icon = GFX_district_energy
 
 	zone_slots = {
 		slot_habitat_energy
@@ -95,9 +97,21 @@ district_hab_energy = {
 	convert_to = {
 	}
 
-	planet_modifier = {
-		planet_housing_add = 300
-	}
+    planet_modifier = {
+        planet_housing_add = 300
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_btr_laisez_towns
+            }
+        }
+        modifier = {
+            planet_housing_add = 300
+        }
+    }
+
 
 	resources = {
 		category = planet_districts_hab
@@ -142,6 +156,7 @@ district_hab_energy = {
 district_hab_mining = {
 	base_buildtime = @hab_time
 	is_capped_by_modifier = yes
+	overlay_icon = GFX_district_minerals
 
 	zone_slots = {
 		slot_habitat_minerals
@@ -170,9 +185,21 @@ district_hab_mining = {
 		}
 	}
 
-	planet_modifier = {
-		planet_housing_add = 300
-	}
+    planet_modifier = {
+        planet_housing_add = 300
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_btr_laisez_towns
+            }
+        }
+        modifier = {
+            planet_housing_add = 300
+        }
+    }
 
 	inline_script = {
 		script = jobs/habitat_miners_add
@@ -189,6 +216,7 @@ district_hab_mining = {
 district_hab_science = {
 	base_buildtime = @hab_time
 	is_capped_by_modifier = yes
+	overlay_icon = GFX_district_research
 
 	zone_slots = {
 		slot_habitat_research
@@ -233,9 +261,21 @@ district_hab_science = {
 		}
 	}
 
-	planet_modifier = {
-		planet_housing_add = 300
-	}
+    planet_modifier = {
+        planet_housing_add = 300
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_btr_laisez_towns
+            }
+        }
+        modifier = {
+            planet_housing_add = 300
+        }
+    }
+
 
 	inline_script = {
 		script = jobs/habitat_researchers_add

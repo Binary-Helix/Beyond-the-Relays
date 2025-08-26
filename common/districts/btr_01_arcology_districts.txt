@@ -2,6 +2,7 @@ district_arcology_housing = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_government
 
 	zone_slots = {
 		slot_city_government
@@ -134,9 +135,22 @@ district_arcology_leisure = {
 		}
 	}
 
-	planet_modifier = {
-		planet_housing_add = 1000
-	}
+    planet_modifier = {
+        planet_housing_add = 1000
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_btr_laisez_towns
+            }
+        }
+        modifier = {
+            planet_housing_add = 1000
+        }
+    }
+
 
 	inline_script = {
 		script = jobs/entertainers_add
@@ -149,6 +163,7 @@ district_arcology_urban_1 = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
 
 	zone_slots = {
 		slot_arcology_urban_01
@@ -181,18 +196,31 @@ district_arcology_urban_1 = {
 		}
 	}
 
-	planet_modifier = {
-		planet_housing_add = 1500
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_prosperity_public_works }
-		}
-		modifier = {
-			planet_housing_add = 300
-		}
-	}
+    planet_modifier = {
+        planet_housing_add = 1500
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_btr_laisez_towns
+            }
+        }
+        modifier = {
+            planet_housing_add = 1500
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_active_tradition = tr_prosperity_public_works }
+        }
+        modifier = {
+            planet_housing_add = 300
+        }
+    }
 
 	triggered_planet_modifier = {
 		potential = {
@@ -225,6 +253,7 @@ district_arcology_urban_2 = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
 
 	zone_slots = {
 		slot_arcology_urban_02
@@ -261,15 +290,27 @@ district_arcology_urban_2 = {
 		planet_housing_add = 1500
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_prosperity_public_works }
-		}
-		modifier = {
-			planet_housing_add = 300
-		}
-	}
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_btr_laisez_towns
+            }
+        }
+        modifier = {
+            planet_housing_add = 1500
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { has_active_tradition = tr_prosperity_public_works }
+        }
+        modifier = {
+            planet_housing_add = 300
+        }
+    }
 
 	triggered_planet_modifier = {
 		potential = {
@@ -302,6 +343,7 @@ district_arcology_urban_3 = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
 
 	zone_slots = {
 		slot_arcology_urban_03
@@ -334,9 +376,21 @@ district_arcology_urban_3 = {
 		}
 	}
 
-	planet_modifier = {
-		planet_housing_add = 1500
-	}
+    planet_modifier = {
+        planet_housing_add = 1500
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = tr_btr_laisez_towns
+            }
+        }
+        modifier = {
+            planet_housing_add = 1500
+        }
+    }
 
 	triggered_planet_modifier = {
 		potential = {

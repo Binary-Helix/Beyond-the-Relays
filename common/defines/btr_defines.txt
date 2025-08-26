@@ -1,0 +1,107 @@
+    NCamera = {
+        FOV								= 35	# 35	# Field-of-View
+        SYSTEM_NEAR_PLANE_DISTANCE_BASE = 0.0
+        SYSTEM_FAR_PLANE_DISTANCE_BASE = 20000.0	# 12000.0
+
+        GALAXY_SHOW_FLEETS_ZOOM 		= 2500	# 2300	# Camera zoom interval to show fleet icons
+        GALAXY_SHOW_STARNAME_ZOOM 		= 1000	# 800	# Camera zoom interval to show star name
+
+        #											0		1		2		3		4		5		6		7		8		9		10		11		12		13
+        ZOOM_STEPS_GALAXY 			  		= { 	100 	200 	400 	600 	800 	1000 	1200 	1400 	1600 	1800 	2000 	2400 	2800 	3200 } 	# Galaxy zoom steps
+        ZOOM_STEPS_SYSTEM_PERCENTAGES 		= { 	0.002 0.01 0.03 0.05 0.075 0.1 0.15 0.2 0.35 0.5 0.75 1.0 1.25 1.5 1.75 2.0 2.5 3.0 3.25 3.5 } # System zoom steps in percent relative to the system size
+
+        BORDER_NAMES_FADEOUT_ZOOM	= 500 	# 600
+        BORDER_NAMES_FADEOUT_SPEED	= 1.5 	# 4.0
+        BORDER_FLAG_FADEOUT_ZOOM	= 600 	# 600
+        BORDER_FLAG_FADEOUT_SPEED	= 1.5	# 4.0
+        NEBULA_NAMES_FADEOUT_ZOOM	= 500	# 250
+        NEBULA_NAMES_FADEOUT_SPEED	= 1.5	# 1.5
+
+        SYSTEM_MIN_PITCH				= -30	# 20.0	# in degrees
+        SYSTEM_MAX_PITCH				= 89.0	# 80.0	# in degrees
+        GALAXY_MIN_PITCH				= -30	# 30.0	# in degrees
+        GALAXY_MAX_PITCH				= 89	# 85.0	# in degrees
+        FOCUSED_MIN_PITCH				= -89.0	# -80.0	# in degrees used when focused on planet/ship
+        FOCUSED_MAX_PITCH				= 89.0	# 80.0	# in degrees used when focused on planet/ship
+        FOCUSED_MIN_ZOOM_BASE			= 20.0	# 20.0	# base min zoom. The smaller the value is, the closer of the ENTITY the camera is at minimal zoom
+        FOCUSED_MIN_ZOOM_MULT			= 1.5	# 0.5	# The smaller the value is, the closer of the SHIP the camera is at minimal zoom # Minimal zoom = Base + Entity radius *
+        FOCUSED_PLANET_MIN_ZOOM_MULT	= 2.0	# 1.6	# The smaller the value is, the closer of the PLANET the camera is at minimal zoom
+
+        SYSTEM_SLIDE_RADIUS_FACTOR		= 0.25	# 4.0
+    }
+
+    NGraphics = {
+        ORBIT_HSV = { .567 0.926 0.99 }
+        SYSTEM_INNER_BORDER_HSV	= { .381 0.926 0.99 }
+        SYSTEM_OUTER_BORDER_HSV	= { .0 0.927 0.592 }
+
+        DEFAULT_PLANET_PLANE			= -330.0		# -150.0
+        MOON_SCALE 						= 0.6
+        PLANET_SCALE_SYSTEM				= { 0.002 0.01 0.03 0.05 0.075 0.1 0.15 0.2 0.35 0.5 0.75 1.0 1.25 1.5 1.75 2.0 2.5 3.0 3.25 3.55 }	# Scale for each System zoom steps
+
+        ASTEROID_PLANE					= -330.0 # -100.0
+
+        GALAXY_DUST_SIZE					= 50.0 	#25.0
+        GALAXY_DUST_SIZE_EXTRA				= 50.0 	#35.0
+        GALAXY_DUST_ROTATION_SPEED			= 0.005	#0.005
+        GALAXY_NEBULA_DUST_SIZE			= 25.0		#10.0
+        GALAXY_NEBULA_DUST_SIZE_EXTRA		= 50.0	#25.0
+        GALAXY_NEBULA_DUST_ROTATION_SPEED	= 0.002	#0.002
+
+        PLANET_TILT_FROM_SUN				 = 0.235 # 0.52 Tilt away from sun
+
+        TRAILS_ALPHA_FADE					= 1.5 # 0.5 # Controls of quick we alpha fade-out
+        TRAILS_MISSILE_ALPHA_FADE			= 18 #6 # Controls of quick we alpha fade-out missile trails
+        TRAILS_BASE_WIDTH					= 0.35 #1.0 # Trails width
+        TRAILS_MISSILE_BASE_WIDTH			= 1.0 #3.0 # Missile trails width
+        TRAILS_LOCATOR_NAME					= ""
+        STRIKE_CRAFT_TRAIL_FADE_RATE		= 1.5 #1.0
+        STRIKE_CRAFT_HEIGHT_OFFSET			= 40.0  # 30
+
+        BORDER_MIN_SIZE_FOR_SYMBOL			= 32 # 16 To show a symbol the border blob must be able to fit a square of x pixels
+
+        BORDER_SYSTEM_RADIUS = 70.0 			#35.0
+
+        BORDER_OWNERLESS_SYSTEM_RADIUS = 35.0	#30.0
+
+        BORDER_VISIBILITY_THRESHOLD = 1.0	#0.05
+
+        CELESTIAL_WARNING_COORDINATE_VALUE = 1000
+    }
+
+    NGameplay = {
+        PLANET_SHIP_ORBIT_DISTANCE 			= 4.0	#2.0	# how far from the planet ships will orbit
+        PLANET_STATION_ORBIT_DISTANCE		= 3.5	#6.0	# how far from the planet orbital stations will be
+
+        LEADER_LIFESPAN_DEATH_CHANCE_AGE	= 100			# 80			# Before this age the chance wont increase
+
+        HABITABILITY_WRONG_PLANET		= 60			# 0.70			# Below which point we color habitability icons and text yellow
+        HABITABILITY_OPPOSITE_PLANET	= 0.25			# 0.40			# Below which point we color habitability icons and text red
+    }
+
+    NSpecies = {
+        HABITABILITY_CEIL_UNCAPPED			= 2.0		# Highest possible habitability for a species if species_has_uncapped_habitability_on_planet game rule is true
+    }
+
+    NShip = {
+        HYPERLANE_WINDUP					= 0 	# 150	# In micro updates ( 10/day )
+        HYPERLANE_WINDDOWN					= 0		# In micro updates
+        HYPERDRIVE_INTERSTELLAR_TRAVEL_SPEED = 0.5 	# 1.0 # In micro updates ( 10/day )
+
+        CAN_TRAVEL_BETWEEN_UNEXPLORED_SYSTEMS = yes		# Can move between 2 unexplored systems
+    }
+
+    NEconomy = {
+        SLAVE_MARKET_SLAVE_BASE_COST_RESOURCES	= { "trade" }
+    }
+
+    NAI = {
+        AI_AMENITIES_SCORE_MULT = 5								# AI will score amenity buildings this much more than other misc resources
+        AI_HOUSING_SCORE_MULT = 4.5								# AI will score housing buildings this much more than other misc resources
+        AI_CRIME_REDUCTION_SCORE_MULT = 2						# AI will score crime fighting buildings this much more than other misc resource
+        AI_UPGRADE_SCORE_MULT = 1.5								# AI will score building upgrades this much more ( since they don't take up a new building slot )
+
+        AI_ALLOWED_TO_BUY = { "minerals" "food" "light_alloys" "heavy_alloys "consumer_goods" "helium_3" "hydrogen" "antimatter_fuel" "uranium" "beryllium" "iridium" "titanium" "palladium" "platinum" "lithium" "eezo" }
+        AI_ALLOWED_TO_SELL = { "minerals" "food" "light_alloys" "heavy_alloys "consumer_goods" "helium_3" "hydrogen" "antimatter_fuel" "uranium" "beryllium" "iridium" "titanium" "palladium" "platinum" "lithium" "eezo" }
+        AI_RARE_RESOURCES = { "helium_3" "hydrogen" "uranium" "eezo" } #Tells AI which the "strategic" resources are used for their economy planing
+    }

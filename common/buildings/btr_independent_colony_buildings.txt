@@ -5,6 +5,8 @@ building_ps_capitol = {
 	can_demolish = yes
 	icon = building_palace
 
+	building_sets = { government urban }
+
 	potential = {
 		exists = owner
 		owner = { is_country_type = planet_state }
@@ -55,6 +57,8 @@ building_ps_anti_matter_reactor = {
 	can_build = yes
 	can_demolish = yes
 	icon = building_energy_nexus
+
+	building_sets = { generator engineering }
 
 	potential = {
 		custom_tooltip = {
@@ -110,6 +114,8 @@ building_ps_aeroponics_farms_complex = {
 	can_demolish = yes
 	icon = building_hydroponics_farm
 
+	building_sets = { hydroponics farming }
+
 	potential = {
 		custom_tooltip = {
 			exists = owner
@@ -163,6 +169,8 @@ building_ps_mineral_purification_complex = {
 	can_build = yes
 	can_demolish = yes
 	icon = building_mineral_purification_hub
+
+	building_sets = { mining industrial }
 
 	potential = {
 		custom_tooltip = {
@@ -229,6 +237,8 @@ building_ps_multidimensional_printers = {
 	can_demolish = yes
 	icon = building_factory_3
 
+	building_sets = { industrial }
+
 	potential = {
 		custom_tooltip = {
 			exists = owner
@@ -271,6 +281,8 @@ building_ps_leisure_complex = {
 	can_build = yes
 	can_demolish = yes
 	icon = building_hyper_entertainment_forum
+
+	building_sets = { resort entertainment }
 
 	potential = {
 		custom_tooltip = {
@@ -331,6 +343,8 @@ building_ps_distillation_complex = {
 	can_demolish = yes
 	icon = building_refinery
 
+	building_sets = { industrial }
+
 	potential = {
 		custom_tooltip = {
 			exists = owner
@@ -384,6 +398,8 @@ building_ps_chemical_complex = {
 	can_build = yes
 	can_demolish = yes
 	icon = building_chemical_plant
+
+	building_sets = { industrial }
 
 	potential = {
 		custom_tooltip = {
@@ -439,6 +455,8 @@ building_ps_synthesizers_complex = {
 	can_demolish = yes
 	icon = building_crystal_plant
 
+	building_sets = { industrial }
+
 	potential = {
 		custom_tooltip = {
 			exists = owner
@@ -493,6 +511,8 @@ building_ps_crowded_serf_houses = {
 	can_demolish = yes
 	icon = building_crude_huts
 
+	building_sets = { urban  }
+
 	potential = {
 		custom_tooltip = {
 			exists = owner
@@ -526,6 +546,8 @@ building_ps_manorial_lands = {
 	can_build = yes
 	can_demolish = yes
 	icon = building_palace
+
+	building_sets = { urban }
 
 	potential = {
 		custom_tooltip = {
@@ -565,6 +587,8 @@ building_ps_bastion = {
 	planetary_ftl_inhibitor = yes
 	can_demolish = yes
 	icon = building_fortress
+
+	building_sets = { fortress }
 
 	potential = {
 		custom_tooltip = {
