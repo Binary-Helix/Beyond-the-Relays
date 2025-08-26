@@ -216,6 +216,7 @@ technophant = {
 
 neural_chip = {
 	category = chip_slave
+	first_come_first_served = yes
 	purge = purge_cosmogenesis
 	is_capped_by_modifier = no
 
@@ -227,7 +228,7 @@ neural_chip = {
 	}
 
 	tags = { research }
-	
+
 	possible_pre_triggers = {
 		has_owner = yes
 		has_planet = yes
@@ -255,7 +256,7 @@ neural_chip = {
 	}
 
 	weight = {
-		weight = 99999
+		weight = 90000
 	}
 
 	inline_script = "jobs/automodding_priority_research"
@@ -295,9 +296,9 @@ neural_chip_processing = {
 		planet = { is_planet_class = pc_cosmogenesis_world }
 		has_virtual_species_trait = no
 	}
-	
+
 	weight = {
-		weight = 90000
+		weight = 99999
 	}
 }
 
@@ -326,7 +327,7 @@ neural_chip_unprocessing = {
 					CATEGORY = civilian
 					AMOUNT = local_pop_amount
 				}
-			} 
+			}
 			else_if = {
 				limit = {
 					owner = {
@@ -339,7 +340,7 @@ neural_chip_unprocessing = {
 					CATEGORY = bio_trophy
 					AMOUNT = local_pop_amount
 				}
-			} 
+			}
 			else_if = {
 				limit = {
 					owner = {
@@ -351,7 +352,7 @@ neural_chip_unprocessing = {
 					CATEGORY = maintenance_drone
 					AMOUNT = local_pop_amount
 				}
-			} 
+			}
 			else_if = {
 				limit = {
 					owner = {
@@ -378,7 +379,7 @@ neural_chip_unprocessing = {
 		is_pop_category = chip_slave
 		planet = { NOT = { is_planet_class = pc_cosmogenesis_world } }
 	}
-	
+
 	weight = {
 		weight = 90000
 	}
@@ -773,7 +774,7 @@ cyberdome_duelist = {
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
-	inline_script = "jobs/automodding_priority_amenities"
+	inline_script = "jobs/automodding_priority_charisma"
 
 	promotion = {
 		time = @standard_promotion_time
