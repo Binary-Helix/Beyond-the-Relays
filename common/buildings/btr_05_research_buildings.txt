@@ -115,7 +115,8 @@ building_research_lab_2 = {
 		upkeep = {
 			energy = @b2_upkeep
 			#exotic_gases = @b2_rare_upkeep
-			palladium = @b2_rare_upkeep
+			lithium = @b2_rare_upkeep
+
 		}
 	}
 
@@ -173,7 +174,7 @@ building_research_lab_3 = {
 		upkeep = {
 			energy = @b3_upkeep
 			#exotic_gases = @b3_rare_upkeep
-			palladium = @b3_rare_upkeep
+			lithium = @b3_rare_upkeep
 		}
 		# upkeep = {
 		# 	trigger = {
@@ -249,7 +250,7 @@ building_institute = {
 		upkeep = {
 			energy = @b2_upkeep
 			#exotic_gases = @b2_rare_upkeep
-			palladium = @b2_rare_upkeep
+			lithium = @b2_rare_upkeep
 		}
 	}
 
@@ -785,6 +786,7 @@ building_physics_lab_2 = {
 			energy = @b2_upkeep
 			#volatile_motes = @b2_rare_upkeep
 			iridium = @b2_rare_upkeep
+			lithium = @b2_rare_upkeep
 		}
 	}
 
@@ -858,6 +860,7 @@ building_physics_lab_3 = {
 			energy = @b3_upkeep
 			#volatile_motes = @b3_rare_upkeep
 			iridium = @b3_rare_upkeep
+			lithium = @b2_rare_upkeep
 			eezo = 1
 		}
 	}
@@ -1239,6 +1242,7 @@ building_engineering_facility_2 = {
 			minerals = @b2_minerals
 			#rare_crystals = @b2_rare_cost
 			platinum = @b2_rare_cost
+			beryllium = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b2_upkeep
@@ -1311,6 +1315,7 @@ building_engineering_facility_3 = {
 			minerals = @b3_minerals
 			#rare_crystals = @b3_rare_cost
 			platinum = @b3_rare_cost
+			beryllium = @b3_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep

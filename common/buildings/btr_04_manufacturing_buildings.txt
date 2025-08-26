@@ -130,6 +130,7 @@ building_foundry_2 = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
+			beryllium = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b2_upkeep
@@ -198,7 +199,7 @@ building_foundry_3 = {
 				has_ringworld_output_boost = no
 			}
 			minerals = @b3_minerals
-			iridium = @b3_rare_cost
+			beryllium = @b3_rare_cost
 			#volatile_motes = @b4_rare_cost
 		}
 		cost = {
@@ -207,7 +208,7 @@ building_foundry_3 = {
 			}
 			minerals = 1500
 			#volatile_motes = 600
-			iridium = @b3_rare_cost
+			beryllium = @b3_rare_cost
 		}
 		upkeep = {
 			trigger = {
@@ -396,7 +397,7 @@ building_factory_2 = {
 		upkeep = {
 			energy = @b2_upkeep
 			#rare_crystals = @b3_rare_upkeep
-			palladium = @b3_rare_upkeep
+			lithium = @b3_rare_upkeep
 		}
 	}
 
@@ -484,7 +485,7 @@ building_factory_3 = {
 				has_ringworld_output_boost = no
 			}
 			energy = @b3_upkeep
-			palladium = @b3_rare_upkeep
+			lithium = @b3_rare_upkeep
 			#rare_crystals = @b4_rare_upkeep
 		}
 		upkeep = {
@@ -493,7 +494,7 @@ building_factory_3 = {
 			}
 			energy = 15
 			#rare_crystals = 8
-			palladium = @b3_rare_upkeep
+			lithium = @b3_rare_upkeep
 		}
 	}
 
