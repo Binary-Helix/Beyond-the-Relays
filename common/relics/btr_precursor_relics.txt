@@ -1,4 +1,4 @@
-r_ancient_generator = {
+r_btr_ancient_generator = {
     activation_duration = @triumph_duration
     portrait = "#TODO"
     sound = "relic_activation_ether_drake_trophy"
@@ -47,7 +47,7 @@ r_ancient_generator = {
     }
 }
 
-r_precursor_shadow = {
+r_btr_precursor_shadow = {
     activation_duration = @triumph_duration
     portrait = "#TODO"
     sound = "relic_activation_ether_drake_trophy"
@@ -82,7 +82,7 @@ r_precursor_shadow = {
         hidden_effect = {
             add_modifier = {
                 modifier = "relic_activation_cooldown"
-                days = 150
+                days = @triumph_duration
             }
         }
     }
@@ -91,7 +91,448 @@ r_precursor_shadow = {
     possible = {
         inline_script = {
             script = relics/activation_checks
-            RELIC = r_precursor_shadow
+            RELIC = r_btr_precursor_shadow
+        }
+    }
+}
+
+r_btr_prothean_beacon_all = {
+    activation_duration = @triumph_duration
+    portrait = "#TODO"
+    sound = "relic_activation_ether_drake_trophy"
+
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            energy = @activation_cost
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        all_technology_research_speed = 0.15
+    }
+
+    score = 1000
+
+    active_effect = {
+        add_modifier = {
+            modifier = "prothean_beacon_all"
+            days = 150
+        }
+        #custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+
+    # Possible check for activation
+    possible = {
+        inline_script = {
+            script = relics/activation_checks
+            RELIC = r_btr_prothean_beacon_all
+        }
+    }
+}
+
+r_btr_prothean_beacon_asari = {
+    activation_duration = @triumph_duration
+    portrait = "#TODO"
+    sound = "relic_activation_ether_drake_trophy"
+
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            energy = @activation_cost
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        all_technology_research_speed = 0.15
+    }
+
+    score = 1000
+
+    active_effect = {
+        add_modifier = {
+            modifier = "prothean_beacon_asari"
+            days = @triumph_duration
+        }
+        #custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+
+    # Possible check for activation
+    possible = {
+        inline_script = {
+            script = relics/activation_checks
+            RELIC = r_prothean_beacon_asari
+        }
+    }
+}
+
+r_btr_prothean_beacon_batarian = {
+    activation_duration = @triumph_duration
+    portrait = "#TODO"
+    sound = "relic_activation_ether_drake_trophy"
+
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            energy = @activation_cost
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        all_technology_research_speed = 0.15
+    }
+
+    score = 1000
+
+    active_effect = {
+        add_modifier = {
+            modifier = "prothean_beacon_batarian"
+            days = @triumph_duration
+        }
+        #custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+
+    # Possible check for activation
+    possible = {
+        inline_script = {
+            script = relics/activation_checks
+            RELIC = r_btr_prothean_beacon_batarian
+        }
+    }
+}
+
+r_btr_prothean_beacon_batarian = {
+    activation_duration = @triumph_duration
+    portrait = "#TODO"
+    sound = "relic_activation_ether_drake_trophy"
+
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            energy = @activation_cost
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        all_technology_research_speed = 0.15
+    }
+
+    score = 1000
+
+    active_effect = {
+        add_modifier = {
+            modifier = "prothean_beacon_batarian"
+            days = @triumph_duration
+        }
+        #custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+
+    # Possible check for activation
+    possible = {
+        inline_script = {
+            script = relics/activation_checks
+            RELIC = r_btr_prothean_beacon_batarian
+        }
+    }
+}
+
+r_btr_prothean_beacon_elcor = {
+    activation_duration = @triumph_duration
+    portrait = "#TODO"
+    sound = "relic_activation_ether_drake_trophy"
+
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            energy = @activation_cost
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        all_technology_research_speed = 0.15
+    }
+
+    score = 1000
+
+    active_effect = {
+        add_modifier = {
+            modifier = "prothean_beacon_elcor"
+            days = @triumph_duration
+        }
+        #custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+
+    # Possible check for activation
+    possible = {
+        inline_script = {
+            script = relics/activation_checks
+            RELIC = r_btr_prothean_beacon_elcor
+        }
+    }
+}
+
+r_btr_prothean_beacon_hanar = {
+    activation_duration = @triumph_duration
+    portrait = "#TODO"
+    sound = "relic_activation_ether_drake_trophy"
+
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            energy = @activation_cost
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        all_technology_research_speed = 0.15
+    }
+
+    score = 1000
+
+    active_effect = {
+        add_modifier = {
+            modifier = "prothean_beacon_hanar"
+            days = @triumph_duration
+        }
+        #custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+
+    # Possible check for activation
+    possible = {
+        inline_script = {
+            script = relics/activation_checks
+            RELIC = r_btr_prothean_beacon_hanar
+        }
+    }
+}
+
+r_btr_prothean_beacon_salarian = {
+    activation_duration = @triumph_duration
+    portrait = "#TODO"
+    sound = "relic_activation_ether_drake_trophy"
+
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            energy = @activation_cost
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        all_technology_research_speed = 0.15
+    }
+
+    score = 1000
+
+    active_effect = {
+        add_modifier = {
+            modifier = "prothean_beacon_salarian"
+            days = @triumph_duration
+        }
+        #custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+
+    # Possible check for activation
+    possible = {
+        inline_script = {
+            script = relics/activation_checks
+            RELIC = r_btr_prothean_beacon_salarian
+        }
+    }
+}
+
+r_btr_prothean_beacon_turian = {
+    activation_duration = @triumph_duration
+    portrait = "#TODO"
+    sound = "relic_activation_ether_drake_trophy"
+
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            energy = @activation_cost
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        all_technology_research_speed = 0.15
+    }
+
+    score = 1000
+
+    active_effect = {
+        add_modifier = {
+            modifier = "prothean_beacon_turian"
+            days = @triumph_duration
+        }
+        #custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+
+    # Possible check for activation
+    possible = {
+        inline_script = {
+            script = relics/activation_checks
+            RELIC = r_btr_prothean_beacon_turian
+        }
+    }
+}
+
+r_btr_prothean_beacon_volus = {
+    activation_duration = @triumph_duration
+    portrait = "#TODO"
+    sound = "relic_activation_ether_drake_trophy"
+
+    resources = {
+        category = relics
+        # Activation cost
+        cost = {
+            energy = @activation_cost
+        }
+    }
+
+    ai_weight = {
+        weight = 100
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            always = yes
+        }
+        all_technology_research_speed = 0.15
+    }
+
+    score = 1000
+
+    active_effect = {
+        add_modifier = {
+            modifier = "prothean_beacon_volus"
+            days = @triumph_duration
+        }
+        #custom_tooltip = relic_triumph_cooldown
+        hidden_effect = {
+            add_modifier = {
+                modifier = "relic_activation_cooldown"
+                days = @triumph_duration
+            }
+        }
+    }
+
+    # Possible check for activation
+    possible = {
+        inline_script = {
+            script = relics/activation_checks
+            RELIC = r_btr_prothean_beacon_volus
         }
     }
 }

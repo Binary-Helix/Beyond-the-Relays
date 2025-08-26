@@ -175,5 +175,40 @@ fleet_event = {
                 max = @tier2researchmax
             }
         }
+        owner = {
+            add_relic = r_btr_prothean_beacon_batarian
+        }
+        ai_chance = {
+            weight = 0
+        }
+
+    }
+    option = {
+        name = btr_precursor_hegemony.6.b
+        small_artifact_reward = yes
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = @tier2researchreward
+                min = @tier2researchmin
+                max = @tier2researchmax
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = @tier2unityreward
+                min = @tier2unitymin
+                max = @tier2unitymax
+            }
+        }
+        owner = {
+            add_resource = {
+                influence = 500
+            }
+        }
+        ai_chance = {
+            weight = 100
+        }
     }
 }
