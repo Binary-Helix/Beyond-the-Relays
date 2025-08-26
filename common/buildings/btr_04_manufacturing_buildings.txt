@@ -47,6 +47,18 @@ building_foundry_1 = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_btr_laisez_towns
+			}
+		}
+		modifier = {
+			planet_housing_add = 1200
+		}
+	}
+
 	prerequisites = {
 		tech_basic_industry
 	}
@@ -102,6 +114,18 @@ building_foundry_2 = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_btr_laisez_towns
+			}
+		}
+		modifier = {
+			planet_housing_add = 800
+		}
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -152,6 +176,18 @@ building_foundry_3 = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
 			owner = { is_wilderness_empire = yes }
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_btr_laisez_towns
+			}
+		}
+		modifier = {
+			planet_housing_add = 1200
 		}
 	}
 
@@ -265,6 +301,18 @@ building_factory_1 = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_btr_laisez_towns
+			}
+		}
+		modifier = {
+			planet_housing_add = 400
+		}
+	}
+
 	allow = {
 	}
 
@@ -323,6 +371,18 @@ building_factory_2 = {
 				exists = owner
 				owner = { country_uses_consumer_goods = no }
 			}
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_btr_laisez_towns
+			}
+		}
+		modifier = {
+			planet_housing_add = 800
 		}
 	}
 
@@ -386,6 +446,18 @@ building_factory_3 = {
 				exists = owner
 				owner = { country_uses_consumer_goods = no }
 			}
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_btr_laisez_towns
+			}
+		}
+		modifier = {
+			planet_housing_add = 1200
 		}
 	}
 

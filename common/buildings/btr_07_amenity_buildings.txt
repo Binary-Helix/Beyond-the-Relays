@@ -685,12 +685,24 @@ building_holo_theatres = {
 		}
 		upkeep = {
 			energy = @b1_upkeep
+			hydrogen = 1
 		}
 	}
 
 	inline_script = {
 		script = jobs/entertainers_add
 		AMOUNT = @building_static_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				has_tradition = tr_btr_entertainment_bread_circus
+			}
+		}
+		modifier = {
+			planet_amenities_add = 100
+		}
 	}
 
 	prerequisites = {
@@ -730,6 +742,17 @@ building_hyper_entertainment_forum = {
 	inline_script = {
 		script = jobs/entertainers_add
 		AMOUNT = @building_static_jobs_high
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				has_tradition = tr_btr_entertainment_bread_circus
+			}
+		}
+		modifier = {
+			planet_amenities_add = 200
+		}
 	}
 
 	resources = {
