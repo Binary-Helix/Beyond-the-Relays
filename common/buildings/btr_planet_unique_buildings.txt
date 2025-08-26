@@ -1,0 +1,2045 @@
+### DUNE ###
+building_ammos_aegis = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+
+    is_capped_by_modifier = yes
+
+    icon = building_organic_sanctuary
+    category = resource
+    
+    potential = {
+        has_modifier = dune_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+            district_mining_max = 1
+			habitability_floor_mult = 0.1
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+            district_mining_max = 1
+			habitability_floor_mult = 0.1
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+			energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### DUST ###
+building_atmospheric_hydrator = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_bio_reactor
+    potential = {
+        has_modifier = dust_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_jobs_food_produces_mult = 0.2
+            planet_amenities_add = 5
+			habitability_floor_mult = 0.15
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_jobs_food_produces_mult = 0.2
+			planet_amenities_add = 5
+			habitability_floor_mult = 0.15
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### BADLANDS ###
+building_roughneck_barracks = {
+    base_buildtime = @btr_mili_b3_time
+	base_cap_amount = 1
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_military_academy
+    potential = {
+        has_modifier = badlands_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			job_soldier_add = 3
+            job_enforcer_add = 1
+			planet_orbital_bombardment_damage = -0.1
+			pop_government_ethic_attraction = 0.05
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			job_soldier_add = 3
+			job_enforcer_add = 1
+			planet_orbital_bombardment_damage = -0.1
+			pop_government_ethic_attraction = 0.05
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_mili_b3_mineral_cost
+            light_alloys = @btr_mili_b3_light_alloys_cost
+            heavy_alloys = @btr_mili_b3_heavy_alloys_cost
+        }
+        upkeep = {
+			energy = @btr_mili_b3_energy_upkeep
+            eezo = @btr_mili_b3_eezo_upkeep
+        }
+    }     
+}
+
+### AQUIFER ###
+building_groundwater_reclamation_complex = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_colony_shelter
+    potential = {
+        has_modifier = aquifer_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_jobs_food_produces_mult = 0.1
+            job_technician_add = 2
+			habitability_floor_mult = 0.05
+			planet_amenities_add = 10
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_jobs_food_produces_mult = 0.1
+			job_technician_add = 2
+			habitability_floor_mult = 0.05
+			planet_amenities_add = 10
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+			energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### MESA ###
+building_urban_canyon = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 3
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_residence
+    potential = {
+        has_modifier = mesa_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_housing_add = 15
+			job_clerk_add = 5
+			habitability_floor_mult = 0.1
+			planet_amenities_add = 15
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_housing_add = 15
+			job_clerk_add = 5
+			habitability_floor_mult = 0.1
+			planet_amenities_add = 15
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### CENOTE ###
+building_sinkhole_mining_infrastructure = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_primitive_mine
+    potential = {
+        has_modifier = cenote_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_jobs_minerals_produces_mult = 0.15
+            planet_jobs_beryllium_produces_mult = 0.15
+            planet_jobs_lithium_produces_mult = 0.15
+            planet_jobs_titanium_produces_mult = 0.15
+            planet_jobs_iridium_produces_mult = 0.15
+            planet_jobs_platinum_produces_mult = 0.15
+            planet_jobs_palladium_produces_mult = 0.15
+			job_miner_add = 3
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_jobs_minerals_produces_mult = 0.15
+            planet_jobs_beryllium_produces_mult = 0.15
+            planet_jobs_lithium_produces_mult = 0.15
+            planet_jobs_titanium_produces_mult = 0.15
+            planet_jobs_iridium_produces_mult = 0.15
+            planet_jobs_platinum_produces_mult = 0.15
+            planet_jobs_palladium_produces_mult = 0.15
+			job_miner_add = 3
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### OUTBACK ###
+building_hydro_mining_station = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_primitive_mine
+    potential = {
+        has_modifier = outback_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_jobs_food_produces_mult = 0.1
+            habitability_floor_mult = 0.1
+			pop_happiness = 0.05
+            planet_max_districts_add = 2
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_jobs_food_produces_mult = 0.1
+            habitability_floor_mult = 0.1
+			pop_happiness = 0.05
+            planet_max_districts_add = 2
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### OASIS ###
+building_planetary_canal_system = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_organic_sanctuary
+    potential = {
+        has_modifier = oasis_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_amenities_add = 10
+            planet_max_districts_add = 2
+            district_farming_max = 2
+			planet_jobs_energy_produces_mult = 0.1
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_amenities_add = 10
+            planet_max_districts_add = 2
+            district_farming_max = 2
+			planet_jobs_energy_produces_mult = 0.1
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### STEPPE ###
+building_galactic_retreat = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_organic_sanctuary
+    potential = {
+        has_modifier = steppe_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_immigration_pull_mult = 1.5
+            pop_happiness = 0.2
+            planet_stability_add = 5
+            planet_amenities_add = 30
+			job_entertainer_add = 3
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_immigration_pull_mult = 1.5
+            pop_happiness = 0.2
+            planet_stability_add = 5
+            planet_amenities_add = 30
+			job_entertainer_add = 3
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### VELD ###
+building_ground_taming_operations = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_food_processing_facility
+    potential = {
+        has_modifier = veld_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_farmers_produces_mult = 0.05
+            district_farming_max = 3
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_farmers_produces_mult = 0.05
+            district_farming_max = 3
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### MEDITERRANEAN ###
+building_aqueduct_system = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_colony_shelter
+    potential = {
+        has_modifier = medit_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			habitability_floor_mult = 0.2
+            planet_max_districts_add = 2
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			habitability_floor_mult = 0.2
+            planet_max_districts_add = 2
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### RETINAL ###
+building_retinal_power_plant = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_primitive_power_plant
+    potential = {
+        has_modifier = retinal_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			job_technician_add = 5
+            planet_technician_produces_mult = 0.1
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			job_technician_add = 5
+            planet_technician_produces_mult = 0.1
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+            uranium = @btr_energy_b0_uranium_upkeep
+        }
+    }     
+}
+
+### ATOLL ###
+building_island_hoppers = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_commercial_zone
+    potential = {
+        has_modifier = atoll_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_amenities_add = 10
+            habitability_floor_mult = 0.05
+            pop_happiness = 0.05
+            planet_building_build_speed_mult = 0.1
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_amenities_add = 10
+            habitability_floor_mult = 0.05
+            pop_happiness = 0.05
+            planet_building_build_speed_mult = 0.1
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### COASTAL ###
+building_luxury_resort = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_heritage_site
+    potential = {
+        has_modifier = coastal_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_amenities_add = 15
+            planet_immigration_pull_mult = 0.25
+            pop_happiness = 0.05
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_amenities_add = 15
+            planet_immigration_pull_mult = 0.25
+            pop_happiness = 0.05
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### JUNGLE ###
+building_sustainable_agriculture_plant = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_food_processing_facility
+    potential = {
+        has_modifier = jungle_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_jobs_food_produces_mult = 0.1
+            district_farming_max = 3
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_jobs_food_produces_mult = 0.1
+            district_farming_max = 3
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### BIOLUMINESCENT ###
+building_exotic_hunting_lodge = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_food_processing_facility
+    potential = {
+        has_modifier = biolum_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_jobs_food_produces_mult = 0.15
+            pop_happiness = -0.05
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_jobs_food_produces_mult = 0.15
+            pop_happiness = -0.05
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### MARSH ###
+building_water_drainage_system = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_food_processing_facility
+
+    potential = {
+        has_modifier = marsh_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_jobs_food_produces_mult = -0.05
+            pop_happiness = 0.05
+            habitability_floor_mult = 0.1
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_jobs_food_produces_mult = 0.15
+            pop_happiness = -0.05
+            habitability_floor_mult = 0.1
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### MANGROVE ###
+building_stilted_community = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_residence   
+    potential = {
+        has_modifier = mangrove_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+            planet_housing_add = 10
+			planet_max_districts_add = 1
+            planet_immigration_pull_mult = 0.1
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+            planet_housing_add = 10
+			planet_max_districts_add = 1
+            planet_immigration_pull_mult = 0.1
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### BOG ###
+building_hydroponics_platforms = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_food_processing_facility
+
+    potential = {
+        has_modifier = bog_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_housing_add = 10
+            habitability_floor_mult = 0.05
+            planet_jobs_food_produces_mult = 0.1
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_housing_add = 10
+            habitability_floor_mult = 0.05
+            planet_jobs_food_produces_mult = 0.1
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### LAKE ###
+building_maraetropian_dams = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_primitive_capital
+    potential = {
+        has_modifier = lake_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			job_technician_add = 6
+            habitability_floor_add = 0.05
+            planet_jobs_food_produces_mult = 0.1
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			job_technician_add = 6
+            habitability_floor_add = 0.05
+            planet_jobs_food_produces_mult = 0.1
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### PRAIRIE ###
+building_wilderness_retreat = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = holding_tree_of_life_sapling
+    potential = {
+        has_modifier = prairie_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_amenities_add = 15
+            pop_happiness = 0.05
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_amenities_add = 15
+            pop_happiness = 0.05
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### TEMPERATE ###
+building_wind_farm = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_energy_grid
+    potential = {
+        has_modifier = temperate_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_jobs_energy_produces_mult = 0.1
+            job_technician_add = 3
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_jobs_energy_produces_mult = 0.1
+            job_technician_add = 3
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### FOREST ###
+building_athsean_lumber_yard = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_primitive_dwellings
+    potential = {
+        has_modifier = forest_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_jobs_slave_produces_mult = 0.15
+            planet_jobs_consumer_goods_produces_mult = 0.1
+            planet_buildings_cost_mult = -0.1
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_jobs_slave_produces_mult = 0.15
+            planet_jobs_consumer_goods_produces_mult = 0.1
+            planet_buildings_cost_mult = -0.1
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### SUPERCONTINENT ###
+building_transcontinental_monorail_system = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_residence
+    potential = {
+        has_modifier = supercon_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_building_build_speed_mult = 0.15
+            planet_immigration_pull_mult = 0.05
+            pop_demotion_time_mult = -0.1
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_building_build_speed_mult = 0.15
+            planet_immigration_pull_mult = 0.05
+            pop_demotion_time_mult = -0.1
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### HOT OCEAN ###
+building_hydrothermal_generator_system = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_energy_grid
+    potential = {
+        has_modifier = hotocean_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_jobs_energy_produces_mult = 0.35
+            job_technician_add = 3
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_jobs_energy_produces_mult = 0.35
+            job_technician_add = 3
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### COLD OCEAN ###
+building_subsurface_infrastructure = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_hypercomms_forum
+    potential = {
+        has_modifier = coldocean_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_max_districts_add = 2
+            planet_housing_add = 5
+            planet_amenities_add = 5
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_max_districts_add = 2
+            planet_housing_add = 5
+            planet_amenities_add = 5
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### STORM ###
+building_tempests_demise = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_hypercomms_forum
+    potential = {
+        has_modifier = storm_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			habitability_floor_add = 0.1
+            planet_housing_add = 5
+            planet_amenities_add = 5
+            job_soldier_add = 1
+            planet_orbital_bombardment_damage = -0.15
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			habitability_floor_add = 0.1
+            planet_housing_add = 5
+            planet_amenities_add = 5
+            job_soldier_add = 1
+            planet_orbital_bombardment_damage = -0.15
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+            iridium = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### BOREAL ###
+building_geothermal_station = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_resource_silo
+    potential = {
+        has_modifier = boreal_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			job_technician_add = 6
+            planet_jobs_energy_produces_mult = 0.15
+            habitability_floor_add = 0.1
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			job_technician_add = 6
+            planet_jobs_energy_produces_mult = 0.15
+            habitability_floor_add = 0.1
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### HIGHLAND ###
+building_distillery_complex = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_resource_silo
+    potential = {
+        has_modifier = biolum_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			job_distiller_add = 3
+            pop_happiness = 0.2
+            planet_amenities_add = 5
+            pop_growth_speed = 0.05
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			job_distiller_add = 3
+            pop_happiness = 0.2
+            planet_amenities_add = 5
+            pop_growth_speed = 0.05
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### CASCADIAN ###
+building_mountain_compounds = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_residence
+    potential = {
+        has_modifier = cascadian_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_max_districts_add = 1
+            planet_orbital_bombardment_damage = -0.3
+            job_soldier_add = 2
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_max_districts_add = 1
+            planet_orbital_bombardment_damage = -0.3
+            job_soldier_add = 2
+        }
+    }
+
+    triggered_country_modifier = {
+        modifier = {
+            country_resource_max_add = 5000
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+            iridium = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### CRAG ###
+building_aero_mining_base = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_primitive_mine
+    potential = {
+        has_modifier = crag_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			job_miner_add = 4
+            planet_jobs_minerals_produces_mult = 0.1
+            planet_jobs_beryllium_produces_mult = 0.1
+            planet_jobs_lithium_produces_mult = 0.1
+            planet_jobs_titanium_produces_mult = 0.1
+            planet_jobs_iridium_produces_mult = 0.1
+            planet_jobs_platinum_produces_mult = 0.1
+            planet_jobs_palladium_produces_mult = 0.1
+            trade_value_add = 4
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			job_miner_add = 4
+            planet_jobs_minerals_produces_mult = 0.1
+            planet_jobs_beryllium_produces_mult = 0.1
+            planet_jobs_lithium_produces_mult = 0.1
+            planet_jobs_titanium_produces_mult = 0.1
+            planet_jobs_iridium_produces_mult = 0.1
+            planet_jobs_platinum_produces_mult = 0.1
+            planet_jobs_palladium_produces_mult = 0.1
+            trade_value_add = 4
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### BASALT ###
+building_construction_industrial_complex = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_foundry_1
+    potential = {
+        has_modifier = basalt_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_building_build_speed_mult = 0.1
+           #planet_jobs_alloys_produces_mult = 0.1
+            planet_buildings_cost_mult = -0.05
+            planet_jobs_light_alloys_produces_mult = 0.1
+            planet_jobs_heavy_alloys_produces_mult = 0.1
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_building_build_speed_mult = 0.1
+            #planet_jobs_alloys_produces_mult = 0.1
+            planet_buildings_cost_mult = -0.05
+            planet_jobs_light_alloys_produces_mult = 0.1
+            planet_jobs_heavy_alloys_produces_mult = 0.1
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### LICHEN ###
+building_lichen_harvesting_facility = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_toxic_bath
+    potential = {
+        has_modifier = lichen_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			habitability_floor_add = 0.05
+            trade_value_add = 3
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			habitability_floor_add = 0.05
+            trade_value_add = 3
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### MIRE ###
+building_mudslide_barriers = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_organic_sanctuary
+    potential = {
+        has_modifier = mire_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_max_districts_add = 2
+            planet_housing_add = 5
+            habitability_floor_mult = 0.05
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_max_districts_add = 2
+            planet_housing_add = 5
+            habitability_floor_mult = 0.05
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### Fungal ###
+building_green_zone = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_paradise_dome
+    potential = {
+        has_modifier = fungal_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			habitability_floor_mult = 0.05
+            planet_housing_add = 5
+            planet_amenities_add = 5
+            job_soldier_add = 1
+            job_researcher_add = 1
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			habitability_floor_mult = 0.05
+            planet_housing_add = 5
+            planet_amenities_add = 5
+            job_soldier_add = 1
+            job_researcher_add = 1
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### SNOW ###
+building_planetary_train = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_imperial_concession_port
+    potential = {
+        has_modifier = snow_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_housing_add = 10
+            planet_amenities_add = 5
+            job_clerk_add = 2
+            job_enforcer_add = 2
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_housing_add = 10
+            planet_amenities_add = 5
+            job_clerk_add = 2
+            job_enforcer_add = 2
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### GLACIAL ###
+building_the_generator = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_energy_nexus
+    potential = {
+        has_modifier = glacial_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			planet_jobs_energy_produces_mult = 0.15
+            habitability_floor_mult = 0.1
+            planet_amenities_add = 10
+            job_technician_add = 4
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			planet_jobs_energy_produces_mult = 0.15
+            habitability_floor_mult = 0.1
+            planet_amenities_add = 10
+            job_technician_add = 4
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+            uranium = @btr_energy_b3_uranium_upkeep
+        }
+    }     
+}
+
+### ANTARCTIC ###
+building_underground_vault = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_wildcat_miners
+    potential = {
+        has_modifier = antar_world
+		has_building = building_capital
+    }
+
+    triggered_country_modifier = {
+        modifier = {
+            category_biology_research_speed_mult = 0.1
+            pop_happiness = 0.05
+        }
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			job_researcher_add = 4
+            job_clerk_add = 2
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			job_researcher_add = 4
+            job_clerk_add = 2
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
+
+### GLACIAL VOLCANIC ###
+building_magmatic_forge = {
+    base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 2
+
+    is_capped_by_modifier = yes
+
+    category = resource
+    icon = building_private_shipyards
+    potential = {
+        has_modifier = cryovolcanic_world
+		has_building = building_capital
+    }
+
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        modifier = {
+			#planet_jobs_alloys_produces_mult = 0.1
+            planet_jobs_light_alloys_produces_mult = 0.1
+            planet_jobs_heavy_alloys_produces_mult = 0.1
+            job_foundry_add = 2
+        }
+    }
+    
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        modifier = {
+			#planet_jobs_alloys_produces_mult = 0.1
+            planet_jobs_light_alloys_produces_mult = 0.1
+            planet_jobs_heavy_alloys_produces_mult = 0.1
+            job_foundry_add = 2
+        }
+    }
+    
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b3_mineral_cost
+            light_alloys = @btr_civil_b3_light_alloys_cost
+            heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b3_energy_upkeep
+        }
+    }     
+}
