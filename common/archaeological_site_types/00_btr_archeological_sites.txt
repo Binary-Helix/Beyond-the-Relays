@@ -1,0 +1,39 @@
+btr_archeology_lost_regiment = {
+    desc = btr_archeology_lost_regiment_site_desc
+    picture = #TODO
+    stages = 3
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        owner = {
+            has_origin = turian_hier_origin
+        }
+    }
+    visible = {
+        default_site_visible_trigger = yes
+        has_origin = turian_hier_origin
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_archeology_lost_regiment.2
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = btr_archeology_lost_regiment.3
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_archeology_lost_regiment.4
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
