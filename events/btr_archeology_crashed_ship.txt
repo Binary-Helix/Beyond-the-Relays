@@ -1,0 +1,237 @@
+################################
+#
+# Beyond the Relays Lost Regiment
+#
+# Written by John Giallorenzo,
+#
+#
+################################
+
+namespace = btr_archeology_crashed_ship
+
+# Zroni Introduction
+# via on_survey = {} | this = surveying vessel
+ship_event = {
+    id = btr_archeology_crashed_ship.1
+    title = "btr_archeology_crashed_ship.name"
+    desc = "btr_archeology_crashed_ship.desc"
+    picture = #TODO
+    location = from
+    show_sound = event_wind_ruins
+    fire_only_once = yes
+    #   is_triggered_only = yes
+
+    trigger = {
+        host_has_dlc = "Ancient Relics Story Pack"
+        FROM = {
+            has_anomaly = no
+            NOT = { exists = archaeological_site }
+            NOT = { has_planet_flag = suppress_archaeological_sites }
+        }
+    }
+
+    immediate = {
+        from = { prevent_anomaly = yes }
+    }
+
+    option = {
+        name = btr_archeology_crashed_ship.a
+    }
+}
+
+#zroni_digsite_1
+fleet_event = {
+    id = btr_archeology_crashed_ship.2
+    title = "btr_archeology_crashed_ship.1.name"
+    desc = btr_archeology_crashed_ship.1.desc
+    picture = #TODO
+    show_sound = event_wind_ruins
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_archeology_crashed_ship.1.a
+    }
+}
+
+fleet_event = {
+    id = btr_archeology_crashed_ship.3
+    title = "btr_archeology_crashed_ship.2.name"
+    desc = btr_archeology_crashed_ship.2.desc
+    picture = #TODO
+    show_sound = event_whispering
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_archeology_crashed_ship.2.a
+        small_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = btr_archeology_crashed_ship.4
+    title = "btr_archeology_crashed_ship.3.name"
+    desc = btr_archeology_crashed_ship.3.desc
+    picture = #TODO
+    show_sound = event_whispering
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_archeology_crashed_ship.3.a
+        small_artifact_reward = yes
+        owner = {
+            add_monthly_resource_mult = {
+                resource = energy
+                value = @tier1materialreward
+                min = @tier1materialmin
+                max = @tier1materialmax
+            }
+        }
+    }
+}
+
+fleet_event = {
+    id = btr_archeology_crashed_ship.5
+    title = btr_archeology_crashed_ship.4.name
+    desc = btr_archeology_crashed_ship.4.desc
+    picture = GFX_evt_zro_1
+    show_sound = event_energy_field
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+
+    option = {
+        name = btr_archeology_crashed_ship.4.a
+        large_artifact_reward = yes
+        owner = {
+            random_list = {
+                30 = {
+                    add_monthly_resource_mult = {
+                        resource = minerals
+                        value = @tier3materialreward
+                        min = @tier3materialmin
+                        max = @tier3materialmax
+                    }
+                }
+                30 = {
+                    add_monthly_resource_mult = {
+                        resource = beryllium
+                        value = @tier2materialreward
+                        min = @tier2materialmin
+                        max = @tier2materialmax
+                    }
+                    add_monthly_resource_mult = {
+                        resource = lithium
+                        value = @tier2materialreward
+                        min = @tier2materialmin
+                        max = @tier2materialmax
+                    }
+                    add_monthly_resource_mult = {
+                        resource = titanium
+                        value = @tier2materialreward
+                        min = @tier2materialmin
+                        max = @tier2materialmax
+                    }
+                }
+                30 = {
+                    add_monthly_resource_mult = {
+                        resource = iridium
+                        value = @tier2materialreward
+                        min = @tier2materialmin
+                        max = @tier2materialmax
+                    }
+                    add_monthly_resource_mult = {
+                        resource = platinum
+                        value = @tier2materialreward
+                        min = @tier2materialmin
+                        max = @tier2materialmax
+                    }
+                    add_monthly_resource_mult = {
+                        resource = palladium
+                        value = @tier2materialreward
+                        min = @tier2materialmin
+                        max = @tier2materialmax
+                    }
+                }
+                30 = {
+                    add_monthly_resource_mult = {
+                        resource = consumer_goods
+                        value = @tier2materialreward
+                        min = @tier2materialmin
+                        max = @tier2materialmax
+                    }
+                }
+                20 = {
+                    add_monthly_resource_mult = {
+                        resource = uranium
+                        value = @tier3materialreward
+                        min = @tier3materialmin
+                        max = @tier3materialmax
+                    }
+                }
+                20 = {
+                    add_monthly_resource_mult = {
+                        resource = heavy_alloys
+                        value = @tier3materialreward
+                        min = @tier3materialmin
+                        max = @tier3materialmax
+                    }
+                }
+                20 = {
+                    add_monthly_resource_mult = {
+                        resource = light_alloys
+                        value = @tier3materialreward
+                        min = @tier3materialmin
+                        max = @tier3materialmax
+                    }
+                }
+                20 = {
+                    add_monthly_resource_mult = {
+                        resource = helium_3
+                        value = @tier2materialreward
+                        min = @tier2materialmin
+                        max = @tier2materialmax
+                    }
+                }
+                20 = {
+                    add_monthly_resource_mult = {
+                        resource = hydrogen
+                        value = @tier2materialreward
+                        min = @tier2materialmin
+                        max = @tier2materialmax
+                    }
+                }
+                15 = {
+                    add_monthly_resource_mult = {
+                        resource = antimatter_fuel
+                        value = @tier2materialreward
+                        min = @tier2materialmin
+                        max = @tier2materialmax
+                    }
+                }
+                10 = {
+                    add_monthly_resource_mult = {
+                        resource = eezo
+                        value = @tier1materialreward
+                        min = @tier1materialmin
+                        max = @tier1materialmax
+                    }
+                }
+            }
+        }
+    }
+}
