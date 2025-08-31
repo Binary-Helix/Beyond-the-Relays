@@ -1054,7 +1054,7 @@ situation_event = {
 				}
 				ordered_owned_planet = {
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							OR = {
 								is_shackled_robot = yes
 								is_non_sapient_robot = yes
@@ -1073,8 +1073,8 @@ situation_event = {
 			else = {
 				ordered_owned_planet = {
 					limit = {
-						any_owned_pop = {
-							is_robot_pop = yes
+						any_owned_pop_group = {
+							is_robot_pop_group = yes
 						}
 					}
 					order_by = trigger:num_pops
@@ -1102,14 +1102,14 @@ situation_event = {
 		}
 		hidden_effect = {
 			event_target:robots_planet = {
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						OR = {
 							is_shackled_robot = yes
 							is_non_sapient_robot = yes
 						}
 					}
-					kill_pop = yes
+					kill_all_pop = yes
 				}
 			}
 			owner = {
@@ -1132,13 +1132,13 @@ situation_event = {
 		}
 		hidden_effect = {
 			event_target:robots_planet = {
-				while = {
-					count = recycled_robots
-					random_owned_pop = {
-						limit = {
-							is_robot_pop = yes
-						}
-						kill_pop = yes
+				every_owned_pop_group = {
+					limit = {
+						is_robot_pop_group = yes
+					}
+					kill_pop_group = {
+						pop_group = this
+						percentage = 0.5
 					}
 				}
 			}
@@ -1215,7 +1215,7 @@ situation_event = {
 				}
 				ordered_owned_planet = {
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							OR = {
 								is_shackled_robot = yes
 								is_non_sapient_robot = yes
@@ -1226,7 +1226,7 @@ situation_event = {
 					position = 0
 					save_event_target_as = robots_planet
 					event_target:robots_planet = {
-						count_robots_to_recycle_for_heavy_metals = { HEAVY_METALS = 100 }
+						count_robots_to_recycle_for_heavy_alloys = { HEAVY_ALLOYS = 100 }
 					}
 				}
 			}
@@ -1234,8 +1234,8 @@ situation_event = {
 			else = {
 				ordered_owned_planet = {
 					limit = {
-						any_owned_pop = {
-							is_robot_pop = yes
+						any_owned_pop_group = {
+							is_robot_pop_group = yes
 						}
 					}
 					order_by = trigger:num_pops
@@ -1243,7 +1243,7 @@ situation_event = {
 					save_event_target_as = robots_planet
 					event_target:robots_planet = {
 						# ...and halven the number of recycled bots here
-						count_robots_to_recycle_for_heavy_metals = { HEAVY_METALS = 100 }
+						count_robots_to_recycle_for_heavy_alloys = { HEAVY_ALLOYS = 100 }
 					}
 				}
 
@@ -1263,19 +1263,19 @@ situation_event = {
 		}
 		hidden_effect = {
 			event_target:robots_planet = {
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						OR = {
 							is_shackled_robot = yes
 							is_non_sapient_robot = yes
 						}
 					}
-					kill_pop = yes
+					kill_all_pop = yes
 				}
 			}
 			owner = {
 				add_resource = {
-					heavy_metals = 1
+					heavy_alloys = 1
 					mult = event_target:robots_planet.total_alloys_gained
 				}
 			}
@@ -1293,20 +1293,20 @@ situation_event = {
 		}
 		hidden_effect = {
 			event_target:robots_planet = {
-				while = {
-					count = recycled_robots
-					random_owned_pop = {
-						limit = {
-							is_robot_pop = yes
-						}
-						kill_pop = yes
+				every_owned_pop_group = {
+					limit = {
+						is_robot_pop_group = yes
+					}
+					kill_pop_group = {
+						pop_group = this
+						percentage = 0.5
 					}
 				}
 			}
 
 			owner = {
 				add_resource = {
-					heavy_metals = 1
+					heavy_alloys = 1
 					mult = event_target:robots_planet.total_alloys_gained
 				}
 			}
@@ -1333,7 +1333,7 @@ situation_event = {
 
 		owner = {
 			add_resource = {
-				heavy_metals = @bailout_alloys_base_amount
+				heavy_alloys = @bailout_alloys_base_amount
 				mult = value:bailout_scaling_factor
 			}
 			country_defaulted_effect = yes

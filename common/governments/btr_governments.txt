@@ -179,6 +179,78 @@ migrant_fle_gov = {
 	}
 }
 
+################
+### CERBERUS ###
+################
+
+cerberus_emp_gov = {
+	ruler_title  = RT_ILLUSIVE_MAN
+
+	should_force_rename = no
+
+	possible = {
+		has_origin = cerberus_emp_origin
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+#############
+### OMEGA ###
+#############
+
+omega_emp_gov = {
+	ruler_title  = RT_BOSS
+
+	should_force_rename = no
+
+	possible = {
+		has_origin = omega_emp_origin
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+##################################
+### ILLIUM CORPORATE INTERESTS ###
+##################################
+
+illium_cor_gov = {
+	ruler_title  = RT_CHIEF_EXECUTIVE
+
+	should_force_rename = no
+
+	possible = {
+		has_origin = illium_cor_origin
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+############################
+### CALESTON DIRECTORATE ###
+############################
+
+caleston_dir_gov = {
+	ruler_title  = RT_Magistratus_Praefectus
+
+	should_force_rename = no
+
+	possible = {
+		has_origin = caleston_dir_origin
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
 ###########################
 ### REMNANTS OF RAKHANA ###
 ###########################
@@ -208,6 +280,186 @@ vorcha_cla_gov = {
 
 	possible = {
 		has_origin = vorcha_cla_origin
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+#############################
+### SED'RIICAE COLLECTIVE ###
+#############################
+
+sedriicae_col_gov = {
+	ruler_title  = RT_Matriarch
+
+	should_force_rename = no
+
+	possible = {
+		has_origin = sedriicae_col_origin
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+######################
+### LYSTHENI ORDER ###
+######################
+
+lystheni_ord_gov = {
+	ruler_title  = RT_Highprophet
+
+	should_force_rename = no
+
+	possible = {
+		has_origin = lystheni_ord_origin
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+########################
+### GOTHONES REMNANT ###
+########################
+
+gothones_rem_gov = {
+	ruler_title  = RT_Speaker
+
+	should_force_rename = no
+
+	possible = {
+		has_origin = gothones_rem_origin
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+######################
+### PARNACK REGIME ###
+######################
+
+parnack_reg_gov = {
+	ruler_title  = RT_GreatAlpha
+
+	should_force_rename = no
+
+	possible = {
+		has_origin = parnack_reg_origin
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+######################
+### RALOI REPUBLIC ###
+######################
+
+raloi_rep_gov = {
+	ruler_title  = RT_AerieElect
+
+	should_force_rename = no
+
+	possible = {
+		has_origin = raloi_rep_origin
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+######################
+### GETH CONSENSUS ###
+######################
+
+geth_con_gov = {
+	ruler_title  = RT_Consensus
+
+	should_force_rename = no
+
+	possible = {
+		has_origin = geth_con_origin
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+###########################
+### DISCIPLES OF NAZARA ###
+###########################
+
+disciples_naz_gov = {
+	ruler_title  = RT_Voice_of_Nazara
+
+	should_force_rename = no
+
+	possible = {
+		has_origin = disciples_naz_origin
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+###################
+### RACHNI HIVE ###
+###################
+
+rachni_hive_gov = {
+	ruler_title  = RT_Queen
+
+	should_force_rename = no
+
+	possible = {
+		has_origin = rachni_hiv_origin
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+######################
+### THE COLLECTORS ###
+######################
+
+collectors_gov = {
+	ruler_title  = RT_GENERAL
+
+	should_force_rename = no
+
+	possible = {
+		has_origin = collectors_emp_origin
+	}
+
+	weight = {
+		base = 10000
+	}
+}
+
+###########################
+### THE CITADEL COUNCIL ###
+###########################
+
+cit_council_gov = {
+	ruler_title  = RT_COUNCILOR
+
+	should_force_rename = no
+
+	possible = {
+		has_origin = citadel_council_origin
 	}
 
 	weight = {

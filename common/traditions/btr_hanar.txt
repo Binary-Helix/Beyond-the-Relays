@@ -97,286 +97,287 @@ tr_btr_illumination_citizen = {
         pop_government_ethic_attraction = 0.1
         planet_bureaucrats_upkeep_mult = -0.2
         job_bureaucrat_per_pop = 0.0015
-        on_enabled = {
-            every_neighbor_country = {
+    }
+
+    on_enabled = {
+        every_neighbor_country = {
+            limit = {
+                NOT = {
+                    has_ethic = ethic_gestalt_consciousness
+                    has_country_flag = flag_btr_faith
+                }
+            }
+            if = {
                 limit = {
-                    NOT = {
-                        has_ethic = ethic_gestalt_consciousness
-                        has_country_flag = flag_btr_faith
+                    prev = {
+                        has_ethic = ethic_authoritarian
+                    }
+                }
+            }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = "mod_btr_faith_authoritarian"
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_authoritarian"
+                        days = -1
                     }
                 }
                 if = {
                     limit = {
                         prev = {
-                            has_ethic = ethic_authoritarian
+                            has_ethic = ethic_fanatic_authoritarian
                         }
                     }
-                }
                     if = {
                         limit = {
-                            NOT = {
-                                has_modifier = "mod_btr_faith_authoritarian"
+                            not = {
+                                has_modifier = "mod_btr_faith_fan_authoritarian"
                             }
                         }
                         add_modifier = {
-                            modifier = "mod_btr_faith_authoritarian"
-                            days = -1
-                        }
-                    }
-                    if = {
-                        limit = {
-                            prev = {
-                                has_ethic = ethic_fanatic_authoritarian
-                            }
-                        }
-                        if = {
-                            limit = {
-                                not = {
-                                    has_modifier = "mod_btr_faith_fan_authoritarian"
-                                }
-                            }
-                            add_modifier = {
-                                modifier = "mod_btr_faith_fan_authoritarian"
-                                days = -1
-                            }
-                        }
-                    }
-                if = {
-                    limit = {
-                        prev = {
-                            has_ethic = ethic_egalitarian
-                        }
-                    }
-                    if = {
-                        limit = {
-                            NOT = {
-                                has_modifier = mod_btr_faith_egalitarian
-                            }
-                        }
-                        add_modifier = {
-                            modifier = "mod_btr_faith_egalitarian"
-                            days = -1
-                        }
-                    }
-                    limit = {
-                        prev = {
-                            has_ethic = ethic_fanatic_egalitarian
-                        }
-                    }
-                    if = {
-                        limit = {
-                            NOT = {
-                                has_modifier = mod_btr_faith_fan_egalitarian
-                            }
-                        }
-                        add_modifier = {
-                            modifier = "mod_btr_faith_fan_egalitarian"
+                            modifier = "mod_btr_faith_fan_authoritarian"
                             days = -1
                         }
                     }
                 }
-                if = {
-                    limit = {
-                        prev = {
-                            has_ethic = ethic_xenophobe
-                        }
-                    }
-                    if = {
-                        limit = {
-                            NOT = {
-                                has_modifier = mod_btr_faith_xenophobe
-                            }
-                        }
-                        add_modifier = {
-                            modifier = "mod_btr_faith_xenophobe"
-                            days = -1
-                        }
-                    }
-                    limit = {
-                        prev = {
-                            has_ethic = ethic_fanatic_xenophobe
-                        }
-                    }
-                    if = {
-                        limit = {
-                            NOT = {
-                                has_modifier = mod_btr_faith_fan_xenophobe
-                            }
-                        }
-                        add_modifier = {
-                            modifier = "mod_btr_faith_fan_xenophobe"
-                            days = -1
-                        }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_egalitarian
                     }
                 }
                 if = {
                     limit = {
-                        prev = {
-                            has_ethic = ethic_xenophile
+                        NOT = {
+                            has_modifier = mod_btr_faith_egalitarian
                         }
                     }
-                    if = {
-                        limit = {
-                            NOT = {
-                                has_modifier = mod_btr_faith_xenophile
-                            }
-                        }
-                        add_modifier = {
-                            modifier = "mod_btr_faith_xenoophile"
-                            days = -1
-                        }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_egalitarian"
+                        days = -1
                     }
-                    limit = {
-                        prev = {
-                            has_ethic = ethic_fanatic_xenophile
-                        }
-                    }
-                    if = {
-                        limit = {
-                            NOT = {
-                                has_modifier = mod_btr_faith_fan_xenophile
-                            }
-                        }
-                        add_modifier = {
-                            modifier = "mod_btr_faith_fan_xenophile"
-                            days = -1
-                        }
+                }
+                limit = {
+                    prev = {
+                        has_ethic = ethic_fanatic_egalitarian
                     }
                 }
                 if = {
                     limit = {
-                        prev = {
-                            has_ethic = ethic_militarist
+                        NOT = {
+                            has_modifier = mod_btr_faith_fan_egalitarian
                         }
                     }
-                    if = {
-                        limit = {
-                            NOT = {
-                                has_modifier = mod_btr_faith_militarist
-                            }
-                        }
-                        add_modifier = {
-                            modifier = "mod_btr_faith_militarist"
-                            days = -1
-                        }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_fan_egalitarian"
+                        days = -1
                     }
-                    limit = {
-                        prev = {
-                            has_ethic = ethic_fanatic_militarist
-                        }
-                    }
-                    if = {
-                        limit = {
-                            NOT = {
-                                has_modifier = mod_btr_faith_fan_militarist
-                            }
-                        }
-                        add_modifier = {
-                            modifier = "mod_btr_faith_fan_militarist"
-                            days = -1
-                        }
+                }
+            }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_xenophobe
                     }
                 }
                 if = {
                     limit = {
-                        prev = {
-                            has_ethic = ethic_pacifist
+                        NOT = {
+                            has_modifier = mod_btr_faith_xenophobe
                         }
                     }
-                    if = {
-                        limit = {
-                            NOT = {
-                                has_modifier = mod_btr_faith_pacifist
-                            }
-                        }
-                        add_modifier = {
-                            modifier = "mod_btr_faith_pacifist"
-                            days = -1
-                        }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_xenophobe"
+                        days = -1
                     }
-                    limit = {
-                        prev = {
-                            has_ethic = ethic_fanatic_pacifist
-                        }
-                    }
-                    if = {
-                        limit = {
-                            NOT = {
-                                has_modifier = mod_btr_faith_fan_pacifist
-                            }
-                        }
-                        add_modifier = {
-                            modifier = "mod_btr_faith_fan_pacifist"
-                            days = -1
-                        }
+                }
+                limit = {
+                    prev = {
+                        has_ethic = ethic_fanatic_xenophobe
                     }
                 }
                 if = {
                     limit = {
-                        prev = {
-                            has_ethic = ethic_materialist
+                        NOT = {
+                            has_modifier = mod_btr_faith_fan_xenophobe
                         }
                     }
-                    if = {
-                        limit = {
-                            NOT = {
-                                has_modifier = mod_btr_faith_materialist
-                            }
-                        }
-                        add_modifier = {
-                            modifier = "mod_btr_faith_materialist"
-                            days = -1
-                        }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_fan_xenophobe"
+                        days = -1
                     }
-                    limit = {
-                        prev = {
-                            has_ethic = ethic_fanatic_materialist
-                        }
-                    }
-                    if = {
-                        limit = {
-                            NOT = {
-                                has_modifier = mod_btr_faith_fan_materialist
-                            }
-                        }
-                        add_modifier = {
-                            modifier = "mod_btr_faith_fan_materialist"
-                            days = -1
-                        }
+                }
+            }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_xenophile
                     }
                 }
                 if = {
                     limit = {
-                        prev = {
-                            has_ethic = ethic_spirtualist
+                        NOT = {
+                            has_modifier = mod_btr_faith_xenophile
                         }
                     }
-                    if = {
-                        limit = {
-                            NOT = {
-                                has_modifier = mod_btr_faith_spiritualist
-                            }
-                        }
-                        add_modifier = {
-                            modifier = "mod_btr_faith_spiritualist"
-                            days = -1
-                        }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_xenoophile"
+                        days = -1
                     }
+                }
+                limit = {
+                    prev = {
+                        has_ethic = ethic_fanatic_xenophile
+                    }
+                }
+                if = {
                     limit = {
-                        prev = {
-                            has_ethic = ethic_fanatic_spiritualist
+                        NOT = {
+                            has_modifier = mod_btr_faith_fan_xenophile
                         }
                     }
-                    if = {
-                        limit = {
-                            NOT = {
-                                has_modifier = mod_btr_faith_fan_spiritualist
-                            }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_fan_xenophile"
+                        days = -1
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_militarist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_militarist
                         }
-                        add_modifier = {
-                            modifier = "mod_btr_faith_fan_spiritualist"
-                            days = -1
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_militarist"
+                        days = -1
+                    }
+                }
+                limit = {
+                    prev = {
+                        has_ethic = ethic_fanatic_militarist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_fan_militarist
                         }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_fan_militarist"
+                        days = -1
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_pacifist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_pacifist
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_pacifist"
+                        days = -1
+                    }
+                }
+                limit = {
+                    prev = {
+                        has_ethic = ethic_fanatic_pacifist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_fan_pacifist
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_fan_pacifist"
+                        days = -1
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_materialist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_materialist
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_materialist"
+                        days = -1
+                    }
+                }
+                limit = {
+                    prev = {
+                        has_ethic = ethic_fanatic_materialist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_fan_materialist
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_fan_materialist"
+                        days = -1
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_spirtualist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_spiritualist
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_spiritualist"
+                        days = -1
+                    }
+                }
+                limit = {
+                    prev = {
+                        has_ethic = ethic_fanatic_spiritualist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_fan_spiritualist
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_fan_spiritualist"
+                        days = -1
                     }
                 }
             }

@@ -3537,7 +3537,7 @@ building_organic_paradise = {
 		upkeep = {
 			energy = @b2_upkeep
 			#exotic_gases = @b2_rare_upkeep
-			@b2_rare_upkeep
+			helium_3 = @b2_rare_upkeep
 		}
 	}
 
@@ -3553,7 +3553,7 @@ building_organic_paradise = {
 
 	ai_weight_coefficient = 1.2
 
-	# Here we try to adress the second issue that the AI cant evaluate the pop job output of the bio trophy given the happiness trigger that was put inplace to guard against players exploiting bio trophies
+	# Here we try to address the second issue that the AI cant evaluate the pop job output of the bio trophy given the happiness trigger that was put inplace to guard against players exploiting bio trophies
 
 	#science
 	ai_resource_production = {

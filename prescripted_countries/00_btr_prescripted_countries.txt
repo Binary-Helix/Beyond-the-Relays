@@ -34,26 +34,15 @@ asari_republics = {
 	ethic = "ethic_egalitarian"
 	civics = { "asari_rep_civic_thes_dip_corp" "asari_rep_civic_democracy" }
 
-	flags = { 
-		custom_start_screen 
-		asari_republics_player 
-		asari_republics
-		asari_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		council_race 
-	}
+	flag = asari_republics
 
 	planet_name = "Thessia"
 	planet_class = "pc_continental"
 	system_name = "Parnitha"
 	initializer = "sys_parnitha_init"
 	
-	graphical_culture = "mec_asari_01"
-	city_graphical_culture = "mec_asari_01"
+	graphical_culture = "btr_asari_01"
+	city_graphical_culture = "btr_asari_01"
 	advisor_voice_type = btr_asari_republics
 	
 	empire_flag = {
@@ -116,19 +105,7 @@ salarian_union={
 	ethic = "ethic_authoritarian"
 	civics = { "salarian_uni_hold_the_line" "salarian_uni_qual_tech_results" }
 
-	flags = { 
-		custom_start_screen 
-		salarian_union_player 
-		salarian_union
-		salarian_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		genophage_empire 
-		council_race 
-	}
+	flag = salarian_union
 
 	planet_name = "Sur'Kesh"
 	planet_class = "pc_tropical"
@@ -198,28 +175,16 @@ turian_hierarchy={
 	authority = "auth_oligarchic"
 	ethic = "ethic_fanatic_militarist"
 	ethic = "ethic_egalitarian"
-	civics = { "turian_hier_honor" "turian_hier_universal_service" }
+	civics = { "turian_hie_honor" "turian_hie_universal_service" }
 
-	flags = { 
-		custom_start_screen 
-		turian_hierarchy_player 
-		turian_hierarchy
-		turian_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		genophage_empire 
-		council_race 
-	}
+	flag = turian_hierarchy
 
 	planet_name = "Palaven"
 	planet_class = "pc_dextro_savannah"
 	system_name = "Trebia"
 	initializer = "sys_trebia_init" 
 
-	graphical_culture = tur_01
+	graphical_culture = btr_turian_01
 	city_graphical_culture = "mammalian_01"
 	advisor_voice_type = btr_turian_hierarchy	
 
@@ -286,18 +251,7 @@ systems_alliance={
 	ethic = "ethic_materialist"
     civics = { "systems_all_colonial_government" "systems_all_unfettered_ai" }
 
-	flags = { 
-		custom_start_screen 
-		systems_alliance_player 
-		systems_alliance
-		human_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		embassy_race
-	}
+	flag = systems_alliance
 
 	planet_name = "Earth"
 	planet_class = "pc_continental"
@@ -368,20 +322,9 @@ courts_of_dekunna = {
 	authority = "auth_oligarchic"
 	ethic = "ethic_fanatic_pacifist"
 	ethic = "ethic_xenophile"
-    civics = { "courts_of_dek_history_of_stability" "courts_of_dek_elders_of_dekuuna" }
+    civics = { "courts_dek_history_of_stability" "courts_dek_elders_of_dekuuna" }
 
-	flags = { 
-		custom_start_screen 
-		courts_of_dekuuna_player 
-		courts_of_dekuuna
-		elcor_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		embassy_race 
-	}
+	flag = courts_of_dekunna
 
 	planet_name = "Dekuuna"
 	planet_class = "pc_highgrav_continental"
@@ -456,18 +399,7 @@ vol_protectorate = {
 	ethic = "ethic_materialist"
     civics = { "vol_pro_galactic_regulators" "vol_pro_mercantile_supremacy" }
 
-	flags = { 
-		custom_start_screen 
-		vol_protectorate_player 
-		vol_protectorate
-		volus_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		embassy_race 
-	}
+	flag = vol_protectorate
 
 	planet_name = "Irune"
 	planet_class = "pc_ammonia"
@@ -539,18 +471,7 @@ illuminated_primacy ={
 	ethic = "ethic_pacifist"
     civics = { illuminated_pri_first_from_the_enkindlers illuminated_pri_enkindler_zealots }
 
-	flags = { 
-		custom_start_screen 
-		illuminated_primacy_player 
-		illuminated_primacy
-		hanar_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		embassy_race 
-	}
+	flag = illuminated_primacy
 
 	planet_name = "Kahje"
 	planet_class = "pc_ocean"
@@ -617,24 +538,13 @@ hegemony_of_kharshan={
 	}
 
 	origin= hegemony_kha_origin
-	government = "hegemony_khar_gov"
+	government = "hegemony_kha_gov"
 	authority = "auth_dictatorial"
 	ethic = "ethic_fanatic_authoritarian"
 	ethic = "ethic_xenophobe"
-    civics = { "hegemony_of_kha_all_mighty_state" "hegemony_of_kha_caste_system" }
+    civics = { "hegemony_kha_all_mighty_state" "hegemony_kha_caste_system" }
 
-	flags = { 
-		custom_start_screen 
-		hegemony_of_kharshan_player 
-		hegemony_of_kharshan
-		batarian_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		noncouncil_race 
-	}
+	flag = hegemony_of_kharshan
 
 	planet_name = "Khar'shan"
 	planet_class = "pc_savannah"
@@ -708,18 +618,7 @@ aralakh_kahmat={
 	ethic = "ethic_militarist"
     civics = { "aralakh_kah_blood_and_ash" "aralakh_kah_clans_of_tuchanka" }
 
-	flags = { 
-		custom_start_screen 
-		aralakh_kahmat_player
-		aralakh_kahmat 
-		krogan_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		noncouncil_race 
-	}
+	flag = aralakh_kahmat
 
 	planet_name = "Tuchanka"
 	planet_class = "pc_nuked"
@@ -955,24 +854,13 @@ omega = {
 	}
 
 	origin= omega_emp_origin
-	government = "omega_gov"
+	government = "omega_emp_gov"
 	authority = "auth_corporate"
 	ethic = "ethic_fanatic_militarist"
 	ethic = "ethic_authoritarian"
-    civics = { "omega_merc_enforcers" "omega_common_cause" }
+    civics = { "omega_emp_merc_enforcers" "omega_emp_common_cause" }
 
-	flags = { 
-		custom_start_screen 
-		omega_empire_player 
-		omega_empire
-		asari_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		noncouncil_race
-	}
+	flag = omega
 
 	planet_name = "Omega"
 	planet_class = "pc_omega"
@@ -1038,32 +926,21 @@ illium_corporate_interests ={
 	}
 		
 	origin = illium_cor_origin
-	government = "illium_corp_gov"
+	government = "illium_cor_gov"
 	authority = "auth_corporate"
 	ethic = "ethic_fanatic_materialist"
 	ethic = "ethic_egalitarian"
     civics = { "illium_cor_defense_force" "illium_cor_indentured_servitude" }
 
-	flags = { 
-		custom_start_screen 
-		illium_corporate_interests_player 
-		illium_corporate_interests
-		asari_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		noncouncil_race 
-	}
+	flag = illium_corporate_interests
 
 	planet_name = "Illium"
 	planet_class = "pc_continental"
 	system_name = "Tasale"
 	initializer = "sys_tasale_init"
 	
-	graphical_culture="mec_asari_01"
-	city_graphical_culture="mec_asari_01"	
+	graphical_culture="btr_asari_01"
+	city_graphical_culture="btr_asari_01"
 	#advisor_voice_type = illium_corporate_interests
 
 
@@ -1129,25 +1006,14 @@ caleston_directorate ={
 	ethic = "ethic_authoritarian"
     civics = { caleston_dir_miners_union caleston_dir_segmented_society }
 
-	flags = { 
-		custom_start_screen 
-		caleston_directorate_player
-		caleston_directorate
-		turian_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		noncouncil_race 
-	}
+	flag = caleston_directorate
 
 	planet_name = "Caleston"
 	planet_class = "pc_molten_station"
 	system_name = "Balor"
 	initializer = "sys_balor_init"
 
-	graphical_culture = tur_01
+	graphical_culture = btr_turian_01
 	city_graphical_culture = "mammalian_01"	
 	#advisor_voice_type = caleston_directorate
 
@@ -1213,18 +1079,7 @@ remnants_of_rakhana={
 	ethic="ethic_militarist"
 	civics={ remnants_rak_survival_of_the_fittest remnants_rak_liberty_of_the_sands }
 
-	flags = { 
-		custom_start_screen 
-		remnants_of_rakhana_player 
-		remnants_of_rakhana
-		drell_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		noncouncil_race 
-	}
+	flag = remnants_of_rakhana
 
 	planet_name = "Rakhana"
 	planet_class="pc_desert"
@@ -1289,24 +1144,13 @@ vorcha_clandom = {
 	}
 	
     origin = vorcha_cla_origin
-    government = "vorcha_clan_gov"
+    government = "vorcha_cla_gov"
 	authority = "auth_corporate"
 	ethic = "ethic_fanatic_militarist"
 	ethic = "ethic_xenophobe"
-    civics = { vorcha_aagh vorcha_we_take_now }
+    civics = { vorcha_cla_aagh vorcha_cla_we_take_now }
 
-	flags = { 
-		custom_start_screen 
-		vorcha_clandom_player 
-		vorcha_clandom
-		vorcha_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		noncouncil_race 
-	}
+	flag = vorcha_clandom
 
 	planet_name = "Heshtok"
 	planet_class = "pc_primal"
@@ -1376,20 +1220,9 @@ sedriicae_collective = {
 	authority = "auth_imperial"
 	ethic = "ethic_fanatic_authoritarian"
 	ethic = "ethic_pacifist"
-    civics = { sedriicae_collective_totalitarian_state sedriicae_collective_status_intellectus }
+    civics = { sedriicae_col_totalitarian_state sedriicae_col_status_intellectus }
 
-	flags = { 
-		custom_start_screen 
-		sedriicae_collective_player 
-		sedriicae_collective
-		sedriicae_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		noncouncil_race 
-	}
+	flag = sedriicae_collective
 
 	planet_name = "Sed'riicae"
 	planet_class = "pc_dextro_desert"
@@ -1460,20 +1293,9 @@ lystheni_order ={
 	authority = "auth_oligarchic"
 	ethic = "ethic_fanatic_spiritualist"
 	ethic = "ethic_militarist"
-    civics = { lystheni_order_thirteenth_promise "lystheni_order_divine" }
+    civics = { lystheni_ord_thirteenth_promise "lystheni_ord_divine" }
 
-	flags = { 
-		custom_start_screen 
-		lystheni_order_player 
-		lystheni_order
-		lystheni_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		noncouncil_race 
-	}
+	flag = lystheni_order
 
 	planet_name = "Sepkai"
 	planet_class = "pc_tropical"
@@ -1542,20 +1364,9 @@ gothones_remnant={
 	authority = "auth_democratic"
 	ethic = "ethic_fanatic_egalitarian"
 	ethic = "ethic_militarist"
-    civics = { gothones_cooperative_reciprocity gothones_warriors_of_the_green }
+    civics = { gothones_rem_cooperative_reciprocity gothones_rem_warriors_of_the_green }
 
-	flags = { 
-		custom_start_screen 
-		gothones_remnant_player 
-		gothones_remnant
-		gothones_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		noncouncil_race 
-	}
+	flag = gothones_remnant
 
 	planet_name = "Vindicta"
 	planet_class = "pc_tropical"
@@ -1627,20 +1438,9 @@ parnack_regime ={
 	authority = "auth_dictatorial"
 	ethic = "ethic_fanatic_xenophobe"
 	ethic = "ethic_militarist"
-    civics = { yahg_pack_mentality yahg_enforced_isolation }
+    civics = { parnack_reg_pack_mentality parnack_reg_enforced_isolation }
 
-	flags = { 
-		custom_start_screen 
-		parnack_regime_player 
-		parnack_regime 
-		yahg_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		primitive_race 
-	}
+	flag = parnack_regime
 
 	planet_name = "Parnack"
 	planet_class = "pc_desert"
@@ -1712,18 +1512,7 @@ raloi_republic = {
 	ethic = "ethic_militarist"
 	civics = { raloi_rep_spreading_our_wings raloi_rep_birds_of_a_feather }
 
-	flags = { 
-		custom_start_screen 
-		raloi_republic_player 
-		raloi_republic 
-		raloi_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		primitive_race 
-	}
+	flag = raloi_republic
 
 	planet_name = "Turvess"
 	planet_class = "pc_dextro_continental"
@@ -1766,7 +1555,7 @@ raloi_republic = {
 
 # Geth Consensus
 geth_consensus = {
-	playable = has_synthethic_dawn
+	playable = has_machine_age_dlc
     name = "EMPIRE_DESIGN_geth_consensus"
 	adjective = "PRESCRIPTED_adjective_geth_consensus"
 	ship_prefix = "PRESCRIPTED_ship_prefix_geth_consensus"
@@ -1795,18 +1584,7 @@ geth_consensus = {
 	ethic = "ethic_gestalt_consciousness"
     civics = { geth_con_civic_nebulous_pariahs geth_con_civic_collective_conscious }
 
-	flags = { 
-		custom_start_screen 
-		geth_consensus_player 
-		geth_consensus
-		geth_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		noncouncil_race 
-	}
+	flag = geth_consensus
 
 	planet_name = "Rannoch"
 	planet_class = "pc_dextro_arid"
@@ -1850,7 +1628,7 @@ geth_consensus = {
 
 # Disciples of Nazara
 disciples_of_nazara = {
-	playable = has_synthethic_dawn
+	playable = has_machine_age_dlc
     name = "EMPIRE_DESIGN_disciples_of_nazara"
 	adjective = "PRESCRIPTED_adjective_disciples_of_nazara"
 	ship_prefix = "PRESCRIPTED_ship_prefix_disciples_of_nazara"
@@ -1879,19 +1657,7 @@ disciples_of_nazara = {
 	ethic = "ethic_gestalt_consciousness"
     civics = { nazara_gifts_of_nazara nazara_the_schism }
     
-	flags = { 
-		custom_start_screen 
-		disciples_of_nazara_player 
-		disciples_of_nazara
-		geth_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		noncouncil_race 
-		crisis_race 
-	}
+	flag = disciples_of_nazara
 
 	planet_name = "Heretic Station"
 	planet_class = "pc_heretic_station"
@@ -1963,19 +1729,7 @@ rachni_hive = {
 	ethic = "ethic_gestalt_consciousness"
 	civics = { rachni_hiv_del_capo_al_fine rachni_hiv_crescendo }
 
-	flags = { 
-		custom_start_screen 
-		rachni_hive_player 
-		rachni_hive
-		rachni_empire
-		init_spawned 
-		btr_empire 
-		canon_map 
-		hybrid_map 
-		sandbox_map 
-		noncouncil_race 
-		crisis_race 
-	}
+	flag = rachni_hive
 
 	planet_name = "Utukku"
 	planet_class = "pc_arid"

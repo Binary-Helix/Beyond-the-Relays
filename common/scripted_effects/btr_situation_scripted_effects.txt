@@ -17,10 +17,10 @@ count_robots_to_recycle_for_light_alloys = {
 			owner = { is_machine_empire = yes }
 		}
 		export_trigger_value_to_variable = {
-			trigger = count_owned_pop
+			trigger = count_owned_pop_amount
 			parameters = {
 				limit = {
-					is_robot_pop = yes
+					is_robot_pop_group = yes
 				}
 			}
 			variable = recycled_robots
@@ -35,7 +35,7 @@ count_robots_to_recycle_for_light_alloys = {
 	# if normal empire, get all robots
 	else = {
 		export_trigger_value_to_variable = {
-			trigger = count_owned_pop
+			trigger = count_owned_pop_amount
 			parameters = {
 				limit = {
 					OR = {
@@ -59,11 +59,11 @@ count_robots_to_recycle_for_light_alloys = {
 	}
 }
 
-count_robots_to_recycle_for_heavy_metals = {
+count_robots_to_recycle_for_heavy_alloys = {
 
 	set_variable = {
-		which = heavy_metals_for_robot
-		value = $HEAVY_METALS$
+		which = heavy_alloys_for_robot
+		value = $heavy_alloys$
 	}
 
 	set_variable = {
@@ -77,10 +77,10 @@ count_robots_to_recycle_for_heavy_metals = {
 			owner = { is_machine_empire = yes }
 		}
 		export_trigger_value_to_variable = {
-			trigger = count_owned_pop
+			trigger = count_owned_pop_amount
 			parameters = {
 				limit = {
-					is_robot_pop = yes
+					is_robot_pop_group = yes
 				}
 			}
 			variable = recycled_robots
@@ -95,7 +95,7 @@ count_robots_to_recycle_for_heavy_metals = {
 	# if normal empire, get all robots
 	else = {
 		export_trigger_value_to_variable = {
-			trigger = count_owned_pop
+			trigger = count_owned_pop_amount
 			parameters = {
 				limit = {
 					OR = {
@@ -109,12 +109,12 @@ count_robots_to_recycle_for_heavy_metals = {
 	}
 
 	set_variable = {
-		which = total_heavy_metals_gained
+		which = total_heavy_alloys_gained
 		value = recycled_robots
 	}
 
 	multiply_variable = {
-		which = total_heavy_metals_gained
-		value = $HEAVY_METALS$
+		which = total_heavy_alloys_gained
+		value = $heavy_alloys$
 	}
 }
