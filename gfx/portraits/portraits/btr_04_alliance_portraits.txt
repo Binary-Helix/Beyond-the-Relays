@@ -17,7 +17,12 @@ portrait_groups = {
 		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
 			add = {
 				trigger = {
-					ruler = { gender = male }
+					ruler = {
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
 				}
 				portraits = {
 					btr_alliance_male_01
@@ -29,7 +34,12 @@ portrait_groups = {
 			}
 			add = {
 				trigger = {
-					ruler = { gender = female }
+					ruler = {
+						OR = {
+							gender = female
+							gender = indeterminable
+						}
+					}
 				}
 				portraits = {
 					btr_alliance_female_01
@@ -49,39 +59,61 @@ portrait_groups = {
 		#species scope
 		species = { #generic portrait for a species
 			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					btr_alliance_male_01
+					btr_alliance_male_02
+					btr_alliance_male_03
+					btr_alliance_male_04
+					btr_alliance_male_05
+				}
+			}
+			add = {
+				trigger = {
+					exists = species
+					NOT = { species = { species_gender = male } }
+				}
 				portraits = {
 					btr_alliance_female_01
 					btr_alliance_female_02
 					btr_alliance_female_03					
 					btr_alliance_female_04
 					btr_alliance_female_05
-					btr_alliance_male_01
-					btr_alliance_male_02
-					btr_alliance_male_03					
-					btr_alliance_male_04
-					btr_alliance_male_05
 				}
 			}
 		}		
 		
 		#pop scope
-		pop = { #for a specific pop
+		pop_group = { #for a specific pop
 			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
 				portraits = {
-					btr_alliance_female_01
-					btr_alliance_female_02
-					btr_alliance_female_03				
-					btr_alliance_female_04
-					btr_alliance_female_05
 					btr_alliance_male_01
 					btr_alliance_male_02
-					btr_alliance_male_03					
+					btr_alliance_male_03
 					btr_alliance_male_04
 					btr_alliance_male_05
 				}
 			}
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					btr_alliance_female_01
+					btr_alliance_female_02
+					btr_alliance_female_03
+					btr_alliance_female_04
+					btr_alliance_female_05
+				}
+			}
 		}
-		
+
 		#leader scope
 		leader = { #scientists, generals, admirals, governor
 			add = {

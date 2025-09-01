@@ -170,8 +170,8 @@ turian_hierarchy={
 		trait = turian_trait_op_discipline
 	}
 
-	origin = turian_hier_origin
-	government = "turian_hier_gov"
+	origin = turian_hie_origin
+	government = "turian_hie_gov"
 	authority = "auth_oligarchic"
 	ethic = "ethic_fanatic_militarist"
 	ethic = "ethic_egalitarian"
@@ -392,7 +392,7 @@ vol_protectorate = {
 	}
 
     origin = vol_pro_origin	
-	government = "vol_prot_gov"
+	government = "vol_pro_gov"
 	authority = "auth_corporate"
 	ethic = "ethic_egalitarian"
 	ethic = "ethic_pacifist"
@@ -598,7 +598,7 @@ aralakh_kahmat={
 
 	species = {
 		class = KRO
-		portrait = krogan
+		portrait = btr_krogan
 		name = PRESCRIPTED_species_name_aralakh_kahmat
 		plural = PRESCRIPTED_species_plural_aralakh_kahmat
 		adjective = PRESCRIPTED_species_adjective_aralakh_kahmat
@@ -1059,7 +1059,7 @@ remnants_of_rakhana={
 
 	species = {
 		class = DRE
-		portrait = drell
+		portrait = btr_drell
 		name = PRESCRIPTED_species_name_remnants_of_rakhana
 		plural = PRESCRIPTED_species_plural_remnants_of_rakhana
 		adjective = PRESCRIPTED_species_adjective_remnants_of_rakhana
@@ -1131,7 +1131,7 @@ vorcha_clandom = {
 
 	species = {
 		class = VOR
-		portrait = vorcha
+		portrait = btr_vorcha
 		name = PRESCRIPTED_species_name_vorcha_clandom
 		plural = PRESCRIPTED_species_plural_vorcha_clandom
 		adjective = PRESCRIPTED_species_adjective_vorcha_clandom
@@ -1276,7 +1276,7 @@ lystheni_order ={
 
 	species = {
 		class = LYS
-		portrait = lystheni
+		portrait = btr_lystheni
 		name = PRESCRIPTED_species_name_lystheni_order
 		plural = PRESCRIPTED_species_plural_lystheni_order
 		adjective = PRESCRIPTED_species_adjective_lystheni_order
@@ -1347,7 +1347,7 @@ gothones_remnant={
 
 	species = {
 		class = GOT
-		portrait = gothones
+		portrait = btr_gothones
 		name = PRESCRIPTED_species_name_gothones_remnant
 		plural = PRESCRIPTED_species_plural_gothones_remnant
 		adjective = PRESCRIPTED_species_adjective_gothones_remnant
@@ -1373,7 +1373,7 @@ gothones_remnant={
 	system_name = "Ultio"
 	initializer = "sys_ultio_init"
 
-	graphical_culture="tur_01"
+	graphical_culture="btr_turian_01"
 	city_graphical_culture="reptilian_01"	
 
 	empire_flag = {
@@ -1421,7 +1421,7 @@ parnack_regime ={
 
 	species = {
 		class = YAH
-		portrait = yahg
+		portrait = btr_yahg
 		name = PRESCRIPTED_species_name_parnack_regime
 		plural = PRESCRIPTED_species_plural_parnack_regime
 		adjective = PRESCRIPTED_species_adjective_parnack_regime
@@ -1565,7 +1565,7 @@ geth_consensus = {
 
 	species = {
 		class = GTH
-		portrait = geth
+		portrait = btr_geth
 		name = PRESCRIPTED_species_name_geth_consensus
 		plural = PRESCRIPTED_species_plural_geth_consensus
 		adjective = PRESCRIPTED_species_adjective_geth_consensus
@@ -1638,12 +1638,12 @@ disciples_of_nazara = {
 
 	species = {
 		class = GTH
-		portrait = geth
+		portrait = btr_geth
 		name = PRESCRIPTED_species_name_geth_consensus
 		plural = PRESCRIPTED_species_plural_geth_consensus
 		adjective = PRESCRIPTED_species_adjective_geth_consensus
 		name_list = btr_geth
-		species_bio = PRESCRIPTED_species_bio_geth_consensus
+		species_bio = PRESCRIPTED_species_bio_disciples_of_nazara
 		trait = geth_trait_core
 		trait = geth_trait_linked_consciousness
 		trait = geth_trait_purpose_built_models
@@ -1655,7 +1655,7 @@ disciples_of_nazara = {
 	government = "disciples_naz_gov"
 	authority = "auth_machine_intelligence"
 	ethic = "ethic_gestalt_consciousness"
-    civics = { nazara_gifts_of_nazara nazara_the_schism }
+    civics = { disciples_naz_gifts_of_nazara disciples_naz_the_schism }
     
 	flag = disciples_of_nazara
 
@@ -1710,7 +1710,7 @@ rachni_hive = {
 
 	species = {
 		class = RAC
-		portrait = rachni
+		portrait = btr_rachni
 		name = PRESCRIPTED_species_name_rachni_hive
 		plural = PRESCRIPTED_species_plural_rachni_hive
 		adjective = PRESCRIPTED_species_adjective_rachni_hive

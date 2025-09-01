@@ -1,3 +1,13 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
 portraits = {
 
 	# Asari
@@ -131,14 +141,14 @@ portrait_groups = {
 					#btr_asari_8	#green
 				}
 			}
-		
+
 			#set = {
 			#	trigger = { ... }
 			#	portraits = { ... }
 			#	#using "set =" instead of "add" will first clear any portraits already added
 			#}
-		}		
-		
+		}
+
 		#species scope
 		species = { #generic portrait for a species
 			add = {
@@ -153,10 +163,10 @@ portrait_groups = {
 					#btr_asari_8
 				}
 			}
-		}		
-		
+		}
+
 		#pop scope
-		pop = { #for a specific pop
+		pop_group = { #for a specific pop
 			add = {
 				portraits = {
 					btr_asari_1
@@ -170,7 +180,7 @@ portrait_groups = {
 				}
 			}
 		}
-		
+
 		#leader scope
 		leader = { #scientists, generals, admirals, governor
 			add = {
@@ -187,8 +197,8 @@ portrait_groups = {
 			}
 		}
 
-			
-		#leader scope 
+
+		#leader scope
 		ruler = {
 			add = {
 				portraits = {
@@ -202,6 +212,6 @@ portrait_groups = {
 					#btr_asari_8
 				}
 			}
-		}		
-	}		
+		}
+	}
 }

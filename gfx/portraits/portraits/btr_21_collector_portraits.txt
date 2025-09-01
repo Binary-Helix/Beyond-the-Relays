@@ -1,27 +1,27 @@
 portraits = {
-	btr_quarian_female_01 = {	entity = "portrait_btr_quarian_female_01_entity"	clothes_selector = "btr_quarian_female_clothes_01" attachment_selector = "btr_quarian_female_hair_01"	greeting_sound = "bta_quarian_greeting"
+	collector_female_01 = {	entity = "portrait_collector_female_01_entity"	clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "human_female_greetings_03"
 		character_textures = { 
-			"gfx/models/portraits/btr_10_quarian/btr_quarian_female_body_01.dds" 
+			"gfx/models/portraits/btr_21_collector/collector_reptilian_massive_11.dds"
 		}
 	}
-	btr_quarian_male_01 = {	entity = "portrait_btr_quarian_male_01_entity"	clothes_selector = "btr_quarian_male_clothes_01" attachment_selector = "btr_quarian_male_hair_01"	greeting_sound = "bta_quarian_greeting" 
+	collector_male_01 = {	entity = "portrait_collector_male_01_entity"	clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "human_male_greetings_03" 
 		character_textures = { 
-			"gfx/models/portraits/btr_10_quarian/btr_quarian_male_body_01.dds"
+			"gfx/models/portraits/btr_21_collector/collector_reptilian_massive_11.dds"
 		}
 	}		
 }
 
 portrait_groups = {
-	btr_quarian = {
+	btr_collectors = {
 		
-		default = btr_quarian_female_01
+		default = collector_female_01
 		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
 			add = {
 				trigger = {
 					ruler = { gender = male }
 				}
 				portraits = {
-					btr_quarian_male_01
+					collector_male_01
 				}
 			}
 			add = {
@@ -29,7 +29,7 @@ portrait_groups = {
 					ruler = { gender = female }
 				}
 				portraits = {
-					btr_quarian_female_01
+					collector_female_01
 				}
 			}
 		}		
@@ -38,8 +38,8 @@ portrait_groups = {
 		species = { #generic portrait for a species
 			add = {
 				portraits = {
-					btr_quarian_female_01
-					btr_quarian_male_01
+					collector_female_01
+					collector_male_01
 				}
 			}
 		}		
@@ -48,8 +48,8 @@ portrait_groups = {
 		pop_group = { #for a specific pop
 			add = {
 				portraits = {
-					btr_quarian_female_01
-					btr_quarian_male_01
+					collector_female_01
+					collector_male_01
 				}
 			}
 		}
@@ -61,7 +61,7 @@ portrait_groups = {
 					gender = female
 				}
 				portraits = {
-					btr_quarian_female_01
+					collector_female_01
 				}
 			}
 			add = {
@@ -69,10 +69,11 @@ portrait_groups = {
 					gender = male
 				}
 				portraits = {
-					btr_quarian_male_01
+					collector_male_01
 				}
 			}		
 		}
+
 			
 		#leader scope 
 		ruler = {
@@ -81,14 +82,15 @@ portrait_groups = {
 					gender = female
 				}
 				portraits = {
-					btr_quarian_female_01				}
+					collector_female_01
+				}
 			}
 			add = {
 				trigger = {
 					gender = male
 				}
 				portraits = {
-					btr_quarian_male_01
+					collector_male_01
 				}
 			}
 		}

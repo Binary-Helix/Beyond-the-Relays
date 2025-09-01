@@ -99,7 +99,7 @@ tr_btr_illumination_citizen = {
         job_bureaucrat_per_pop = 0.0015
     }
 
-    on_enabled = {
+      on_enabled = {
         every_neighbor_country = {
             limit = {
                 NOT = {
@@ -224,7 +224,7 @@ tr_btr_illumination_citizen = {
                         }
                     }
                     add_modifier = {
-                        modifier = "mod_btr_faith_xenoophile"
+                        modifier = "mod_btr_faith_xenophile"
                         days = -1
                     }
                 }
@@ -350,7 +350,7 @@ tr_btr_illumination_citizen = {
             if = {
                 limit = {
                     prev = {
-                        has_ethic = ethic_spirtualist
+                        has_ethic = ethic_spiritualist
                     }
                 }
                 if = {
