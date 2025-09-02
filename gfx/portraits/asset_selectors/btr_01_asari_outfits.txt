@@ -13,7 +13,7 @@ btr_asari_outfit = {
 	}
 	
 	#pop scope
-	pop = { #for a specific pop
+	pop_group = { #for a specific pop
 		default = "gfx/models/portraits/btr_01_asari/btr_asari_outfit_corporate_2.dds"
 		
 		#####################################################################
@@ -625,7 +625,7 @@ btr_asari_outfit = {
 	}
 
 	#leader scope
-	leader = { #scientists, generals, admirals, governor
+	leader = { #scientists, generals, admirals, official
 
 		random = {
 			trigger = { leader_class = envoy }
@@ -636,7 +636,7 @@ btr_asari_outfit = {
 		}
 		
 		random = {
-			trigger = { leader_class = admiral }
+			trigger = { leader_class = commander }
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_uniform_2.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_uniform_2a.dds"
@@ -656,7 +656,7 @@ btr_asari_outfit = {
 		}
 		
 		random = {
-			trigger = { leader_class = general }
+			trigger = { leader_class = commander }
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_armour_1.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_armour_1a.dds"
@@ -667,7 +667,7 @@ btr_asari_outfit = {
 		}
 		
 		random = {
-			trigger = { leader_class = governor }
+			trigger = { leader_class = official }
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_formal_1.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_formal_1a.dds"

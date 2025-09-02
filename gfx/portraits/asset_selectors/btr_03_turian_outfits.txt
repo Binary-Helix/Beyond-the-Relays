@@ -30,7 +30,7 @@ turian_clothes_01 = {
 	}
 	
 	#pop scope
-	pop = { #for a specific pop
+	pop_group = { #for a specific pop
 		default = "gfx/models/portraits/btr_03_turian/btr_turian_clothes_admiral4.dds"
 	
 		random = { 
@@ -106,10 +106,10 @@ turian_clothes_01 = {
 	}
 	
 	#leader scope
-	leader = { #scientists, generals, admirals, governor
+	leader = { #scientists, generals, admirals, official
 
 		random = {
-			trigger = { leader_class = admiral }
+			trigger = { leader_class = commander }
 			list = {
 				"gfx/models/portraits/btr_03_turian/btr_turian_clothes_admiral.dds"
 				"gfx/models/portraits/btr_03_turian/btr_turian_clothes_admiral2.dds"
@@ -124,7 +124,7 @@ turian_clothes_01 = {
 		}	
 
 		random = {
-			trigger = { leader_class = general }
+			trigger = { leader_class = commander }
 			list = {
 				"gfx/models/portraits/btr_03_turian/btr_turian_clothes_admiral.dds"
 				"gfx/models/portraits/btr_03_turian/btr_turian_clothes_admiral2.dds"
@@ -156,7 +156,7 @@ turian_clothes_01 = {
 		}			
 
 		random = {
-			trigger = { leader_class = governor }
+			trigger = { leader_class = official }
 			list = {
 				"gfx/models/portraits/btr_03_turian/btr_turian_clothes_robes.dds"
 				"gfx/models/portraits/btr_03_turian/btr_turian_clothes_robes2.dds"
@@ -213,7 +213,7 @@ turian_female_clothes_01 = {
 	}
 	
 	#pop scope
-	pop = { #for a specific pop
+	pop_group = { #for a specific pop
 		default = "gfx/models/portraits/btr_03_turian/btr_turian_female_clothes_1.dds"
 
 		random = { 
@@ -291,10 +291,10 @@ turian_female_clothes_01 = {
 	}
 
 	#leader scope
-	leader = { #scientists, generals, admirals, governor
+	leader = { #scientists, generals, admirals, official
 
 		random = {
-			trigger = { leader_class = admiral }
+			trigger = { leader_class = commander }
 			list = {
 				"gfx/models/portraits/btr_03_turian/btr_turian_clothes_admiral.dds"
 				"gfx/models/portraits/btr_03_turian/btr_turian_clothes_admiral2.dds"
@@ -311,7 +311,7 @@ turian_female_clothes_01 = {
 		}	
 
 		random = {
-			trigger = { leader_class = general }
+			trigger = { leader_class = commander }
 			list = {
 				"gfx/models/portraits/btr_03_turian/btr_turian_clothes_admiral.dds"
 				"gfx/models/portraits/btr_03_turian/btr_turian_clothes_admiral2.dds"
@@ -347,7 +347,7 @@ turian_female_clothes_01 = {
 		}			
 
 		random = {
-			trigger = { leader_class = governor }
+			trigger = { leader_class = official }
 			list = {
 				"gfx/models/portraits/btr_03_turian/btr_turian_clothes_robes.dds"
 				"gfx/models/portraits/btr_03_turian/btr_turian_clothes_robes2.dds"	

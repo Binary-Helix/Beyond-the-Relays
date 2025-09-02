@@ -13,7 +13,7 @@ btr_quarian_male_clothes_01 = {
 	}
 	
 	#pop scope
-	pop = { #for a specific pop
+	pop_group = { #for a specific pop
 #		default = "gfx/models/portraits/btr_10_quarian/btr_quarian_male_clothes.dds"
 		
 	#	"gfx/models/portraits/btr_10_quarian/btr_quarian_male_clothes.dds" 	= { tile = { has_building = building_power_plant_1 } }
@@ -32,7 +32,7 @@ btr_quarian_male_clothes_01 = {
 	}
 	
 	#leader scope
-	leader = { #scientists, generals, admirals, governor
+	leader = { #scientists, generals, admirals, official
 		random = {
 			list = {
 				"gfx/models/portraits/btr_10_quarian/btr_quarian_male_clothes.dds"

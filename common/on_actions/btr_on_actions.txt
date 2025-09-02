@@ -3,3 +3,15 @@ on_press_begin = {
 		btr_datapad_menu.0
 	}
 }
+
+on_game_start = {
+	events = {
+		btr_migrant_fleet_setup.1 	# Spawn Migrant Fleet System
+	}
+}
+
+on_entering_system_fleet = {
+	events = {
+		btr_migrant_fleet_mech.1
+	}
+}

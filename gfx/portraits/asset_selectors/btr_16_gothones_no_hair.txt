@@ -13,7 +13,7 @@ gothones_no_hair = {
 	}
 	
 	#pop scope
-	pop = { #for a specific pop
+	pop_group = { #for a specific pop
 	
 		default = "gfx/models/portraits/no_hair.dds"
 
@@ -28,17 +28,17 @@ gothones_no_hair = {
 	
 	
 	#leader scope
-	leader = { #scientists, generals, admirals, governor
+	leader = { #scientists, generals, admirals, official
 	
 		random = {
-			trigger = { leader_class = general }
+			trigger = { leader_class = commander }
 			list = {
 				"gfx/models/portraits/no_hair.dds"
 			}
 		}		
 		
 		random = {
-			trigger = { leader_class = admiral }
+			trigger = { leader_class = commander }
 			list = {
 				"gfx/models/portraits/no_hair.dds"	
 			}
@@ -52,7 +52,7 @@ gothones_no_hair = {
 		}		
 		
 		random = {
-			trigger = { leader_class = governor }
+			trigger = { leader_class = official }
 			list = {
 				"gfx/models/portraits/no_hair.dds"
 			}

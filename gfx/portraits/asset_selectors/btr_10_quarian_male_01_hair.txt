@@ -13,7 +13,7 @@ btr_quarian_male_hair_01 = {
 	}
 	
 	#pop scope
-	pop = { #for a specific pop
+	pop_group = { #for a specific pop
 	
 		default = "gfx/models/portraits/btr_10_quarian/btr_quarian_male_hair.dds"
 
@@ -33,10 +33,10 @@ btr_quarian_male_hair_01 = {
 	
 	
 	#leader scope
-	leader = { #scientists, generals, admirals, governor
+	leader = { #scientists, commanders, commanders, official
 	
 		random = {
-			trigger = { leader_class = general }
+			trigger = { leader_class = commander }
 			list = {
 				"gfx/models/portraits/btr_10_quarian/btr_quarian_male_hair.dds"
 				"gfx/models/portraits/btr_10_quarian/btr_quarian_male_hair_1.dds"
@@ -46,19 +46,7 @@ btr_quarian_male_hair_01 = {
 				"gfx/models/portraits/btr_10_quarian/btr_quarian_male_hair_5.dds"
 			}
 		}		
-		
-		random = {
-			trigger = { leader_class = admiral }
-			list = {
-				"gfx/models/portraits/btr_10_quarian/btr_quarian_male_hair.dds"
-				"gfx/models/portraits/btr_10_quarian/btr_quarian_male_hair_1.dds"
-				"gfx/models/portraits/btr_10_quarian/btr_quarian_male_hair_2.dds"
-				"gfx/models/portraits/btr_10_quarian/btr_quarian_male_hair_3.dds"
-				"gfx/models/portraits/btr_10_quarian/btr_quarian_male_hair_4.dds"
-				"gfx/models/portraits/btr_10_quarian/btr_quarian_male_hair_5.dds"
-			}
-		}	
-		
+
 		random = {
 			trigger = { leader_class = scientist }
 			list = {
@@ -72,7 +60,7 @@ btr_quarian_male_hair_01 = {
 		}		
 		
 		random = {
-			trigger = { leader_class = governor }
+			trigger = { leader_class = official }
 			list = {
 				"gfx/models/portraits/btr_10_quarian/btr_quarian_male_hair.dds"
 				"gfx/models/portraits/btr_10_quarian/btr_quarian_male_hair_1.dds"

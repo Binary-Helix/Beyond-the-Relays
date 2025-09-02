@@ -19,7 +19,7 @@ krogan_clothes_01 = {
 	}
 	
 	#pop scope
-	pop = { #for a specific pop
+	pop_group = { #for a specific pop
 		default = "gfx/models/portraits/btr_09_krogan/krogan_empty_clothes.dds"
 		random = {
 			list = {
@@ -29,16 +29,15 @@ krogan_clothes_01 = {
 	}
 
 	#leader scope
-	leader = { #scientists, generals, admirals, governor
+	leader = { #scientists, generals, admirals, official
 		default = "gfx/models/portraits/btr_09_krogan/krogan_empty_clothes.dds"
 
 		random = {
 			trigger = { 
 				OR = {
-					leader_class = admiral
-					leader_class = general
+					leader_class = commander
 					leader_class = scientist
-					leader_class = governor
+					leader_class = official
 				}
 			}
 			list = {
@@ -79,7 +78,7 @@ krogan_clothes_02 = {
 	}
 	
 	#pop scope
-	pop = { #for a specific pop
+	pop_group = { #for a specific pop
 		default = "gfx/models/portraits/btr_09_krogan/krogan_empty_clothes.dds"
 		random = {
 			list = {
@@ -90,16 +89,15 @@ krogan_clothes_02 = {
 	}
 
 	#leader scope
-	leader = { #scientists, generals, admirals, governor
+	leader = { #scientists, generals, admirals, official
 		default = "gfx/models/portraits/btr_09_krogan/krogan_empty_clothes.dds"
 
 		random = {
 			trigger = { 
 				OR = {
-					leader_class = admiral
-					leader_class = general
+					leader_class = commander
 					leader_class = scientist
-					leader_class = governor
+					leader_class = official
 				}
 			}
 			list = {

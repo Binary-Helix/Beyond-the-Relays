@@ -13,7 +13,7 @@ btr_batarian_male_outfit = {
 	}
 
 	#pop scope
-	pop = { #for a specific pop
+	pop_group = { #for a specific pop
 		default = "gfx/models/portraits/human/human_male_clothes_governor.dds"
 		
 		"gfx/models/portraits/human/human_male_clothes_admiral.dds" 	= { OR = { is_pop_category = worker is_pop_category = slave is_pop_category = simple_drone }  }
@@ -21,11 +21,11 @@ btr_batarian_male_outfit = {
 		"gfx/models/portraits/human/human_male_clothes_admiral.dds" 	= { is_pop_category = ruler }
 	}
 	#leader scope
-	leader = { #scientists, generals, admirals, governor
+	leader = { #scientists, generals, admirals, official
 		"gfx/models/portraits/human/human_male_clothes_scientist.dds" = { leader_class = scientist }
-		"gfx/models/portraits/human/human_male_clothes_general.dds" = { leader_class = general }
-		"gfx/models/portraits/human/human_male_clothes_admiral.dds" = { leader_class = admiral }
-		"gfx/models/portraits/human/human_male_clothes_governor.dds" = { leader_class = governor }
+		"gfx/models/portraits/human/human_male_clothes_general.dds" = { leader_class = commander }
+		"gfx/models/portraits/human/human_male_clothes_admiral.dds" = { leader_class = commander }
+		"gfx/models/portraits/human/human_male_clothes_governor.dds" = { leader_class = official }
 	}
 
 	#leader scope 
@@ -55,7 +55,7 @@ btr_batarian_female_outfit = {
 	}
 	
 	#pop scope
-	pop = { #for a specific pop
+	pop_group = { #for a specific pop
 		default = "gfx/models/portraits/human/human_female_clothes_governor.dds"
 		
 		"gfx/models/portraits/human/human_female_clothes_admiral.dds" 	= { OR = { is_pop_category = worker is_pop_category = slave is_pop_category = simple_drone }  }
@@ -63,11 +63,11 @@ btr_batarian_female_outfit = {
 		"gfx/models/portraits/human/human_female_clothes_admiral.dds" 	= { is_pop_category = ruler }
 	}
 	#leader scope
-	leader = { #scientists, generals, admirals, governor
+	leader = { #scientists, generals, admirals, official
 		"gfx/models/portraits/human/human_female_outfit_scientist.dds" = { leader_class = scientist }
-		"gfx/models/portraits/human/human_female_clothes_general.dds" = { leader_class = general }
-		"gfx/models/portraits/human/human_female_clothes_admiral.dds" = { leader_class = admiral }
-		"gfx/models/portraits/human/human_female_clothes_governor.dds" = { leader_class = governor }
+		"gfx/models/portraits/human/human_female_clothes_general.dds" = { leader_class = commander }
+		"gfx/models/portraits/human/human_female_clothes_admiral.dds" = { leader_class = commander }
+		"gfx/models/portraits/human/human_female_clothes_governor.dds" = { leader_class = official }
 	}
 
 	#leader scope 
