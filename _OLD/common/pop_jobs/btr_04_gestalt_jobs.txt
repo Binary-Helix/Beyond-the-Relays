@@ -211,7 +211,7 @@ cyber_drone = {
 		upkeep = {
 			#alloys = 1
 			light_alloys = 0.7
-			heavy_metals = 0.3
+			heavy_alloys = 0.3
 		}
 	}
 
@@ -264,7 +264,7 @@ replicator = {
 		upkeep = {
 			#alloys = 1
 			light_alloys = 0.7
-			heavy_metals = 0.3
+			heavy_alloys = 0.3
 		}
 	}
 
@@ -319,7 +319,7 @@ crucible_drone = {
 		upkeep = {
 			#alloys = 2
 			light_alloys = 1.4
-			heavy_metals = 0.6
+			heavy_alloys = 0.6
 		}
 		upkeep = {
 			trigger = {
@@ -790,7 +790,7 @@ fabricator = {
 		produces = {
 			#alloys = 4
 			light_alloys = 2
-			heavy_metals = 1
+			heavy_alloys = 1
 		}
 		upkeep = {
 			lithium = 0.7
@@ -808,7 +808,7 @@ fabricator = {
 			}
 			#alloys = @requisitorium_alloys_reduction
 			light_alloys = @requisitorium_alloys_reduction
-			heavy_metals = @requisitorium_alloys_reduction
+			heavy_alloys = @requisitorium_alloys_reduction
 		}
 
 		upkeep = {
@@ -831,7 +831,7 @@ fabricator = {
 			}
 			#alloys = @requisitorium_alloys_overlord
 			light_alloys = @requisitorium_alloys_overlord
-			heavy_metals = @requisitorium_alloys_overlord
+			heavy_alloys = @requisitorium_alloys_overlord
 		}
 	}
 
@@ -870,7 +870,7 @@ alloy_drone = {
 		produces = {
 			#alloys = 4
 			light_alloys = 2
-			heavy_metals = 1
+			heavy_alloys = 1
 		}
 		upkeep = {
 			lithium = 0.7
@@ -888,7 +888,7 @@ alloy_drone = {
 			}
 			#alloys = @requisitorium_alloys_reduction
 			light_alloys = @requisitorium_alloys_reduction
-			heavy_metals = @requisitorium_alloys_reduction
+			heavy_alloys = @requisitorium_alloys_reduction
 		}
 
 		upkeep = {
@@ -911,7 +911,7 @@ alloy_drone = {
 			}
 			#alloys = @requisitorium_alloys_overlord
 			light_alloys = @requisitorium_alloys_overlord
-			heavy_metals = @requisitorium_alloys_overlord
+			heavy_alloys = @requisitorium_alloys_overlord
 		}
 	}
 
@@ -1896,7 +1896,7 @@ bluelotus_drone = {
 		produces = {
 			#alloys = 4
 			light_alloys = 2
-			heavy_metals = 1
+			heavy_alloys = 1
 		}
 
 		upkeep = {
@@ -2067,7 +2067,7 @@ scrap_miner_drone = {
 			minerals = 2
 			#alloys = 1
 			light_alloys = 1
-			heavy_metals = 0.5
+			heavy_alloys = 0.5
 		}
 	}
 

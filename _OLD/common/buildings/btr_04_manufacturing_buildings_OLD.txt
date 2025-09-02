@@ -44,7 +44,7 @@ building_foundry_1 = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b1_energy_upkeep
@@ -89,7 +89,7 @@ building_foundry_2 = {
 		cost = {
 			minerals = @btr_civil_b2_mineral_cost
 			light_alloys = @btr_civil_b2_light_alloys_cost
-			heavy_metals = @btr_civil_b2_heavy_metals_cost
+			heavy_alloys = @btr_civil_b2_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b2_energy_upkeep
@@ -114,7 +114,7 @@ building_foundry_2 = {
 		modifier = {
 			#planet_metallurgists_alloys_produces_add = 1
 			planet_metallurgists_light_alloys_produces_add = 1
-			planet_metallurgists_heavy_metals_produces_add = 1
+			planet_metallurgists_heavy_alloys_produces_add = 1
 			planet_metallurgists_minerals_upkeep_add = 2
 		}
 	}
@@ -128,7 +128,7 @@ building_foundry_2 = {
 		}
 		modifier = {
 			planet_metallurgists_light_alloys_produces_add = 1.25
-			planet_metallurgists_heavy_metals_produces_add = 1.25
+			planet_metallurgists_heavy_alloys_produces_add = 1.25
 			planet_metallurgists_food_upkeep_add = 3
 		}
 	}
@@ -169,7 +169,7 @@ building_foundry_3 = {
 			}	
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		cost = {
 			trigger = {
@@ -177,7 +177,7 @@ building_foundry_3 = {
 			}
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}	
 		upkeep = {
 			trigger = {
@@ -214,7 +214,7 @@ building_foundry_3 = {
 			planet_metallurgists_platinum_upkeep_add = 0.25
 			planet_metallurgists_titanium_upkeep_add = 0.25
 			planet_miners_light_alloys_produces_add = 2
-			planet_miners_heavy_metals_produces_add = 2
+			planet_miners_heavy_alloys_produces_add = 2
 		}
 	}
 
@@ -229,7 +229,7 @@ building_foundry_3 = {
 			#planet_metallurgists_alloys_produces_add = 2.5
 			planet_metallurgists_food_upkeep_add = 6
 			planet_miners_light_alloys_produces_add = 2.5
-			planet_miners_heavy_metals_produces_add = 2.5		
+			planet_miners_heavy_alloys_produces_add = 2.5
 		}
 	}
 
@@ -251,7 +251,7 @@ building_foundry_3 = {
 			planet_metallurgists_platinum_upkeep_add = 0.25
 			planet_metallurgists_titanium_upkeep_add = 0.25
 			planet_miners_light_alloys_produces_add = 2
-			planet_miners_heavy_metals_produces_add = 2
+			planet_miners_heavy_alloys_produces_add = 2
 		}
 	}
 
@@ -267,7 +267,7 @@ building_foundry_3 = {
 			#planet_metallurgists_alloys_produces_add = 1.25
 			planet_metallurgists_food_upkeep_add = 3
 			planet_miners_light_alloys_produces_add = 1.25
-			planet_miners_heavy_metals_produces_add = 1.25
+			planet_miners_heavy_alloys_produces_add = 1.25
 		}
 	}
 
@@ -349,7 +349,7 @@ building_factory_1 = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b1_energy_upkeep
@@ -409,7 +409,7 @@ building_factory_2 = {
 		planet_artisans_consumer_goods_produces_add = 1
 		#planet_artisans_minerals_upkeep_add = 1
 		planet_artisans_light_alloys_upkeep_add = 0.25
-		planet_artisans_heavy_metals_upkeep_add = 0.25
+		planet_artisans_heavy_alloys_upkeep_add = 0.25
 	}
 
 	inline_script = {
@@ -422,7 +422,7 @@ building_factory_2 = {
 		cost = {
 			minerals = @btr_civil_b2_mineral_cost
 			light_alloys = @btr_civil_b2_light_alloys_cost
-			heavy_metals = @btr_civil_b2_heavy_metals_cost
+			heavy_alloys = @btr_civil_b2_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b2_energy_upkeep
@@ -484,7 +484,7 @@ building_factory_3 = {
 		planet_artisans_consumer_goods_produces_add = 2
 		#planet_artisans_minerals_upkeep_add = 2
 		planet_artisans_light_alloys_upkeep_add = 0.5
-		planet_artisans_heavy_metals_upkeep_add = 0.5
+		planet_artisans_heavy_alloys_upkeep_add = 0.5
 	}
 
 	triggered_planet_modifier = {
@@ -495,7 +495,7 @@ building_factory_3 = {
 			planet_artisans_consumer_goods_produces_add = 1
 			#planet_artisans_minerals_upkeep_add = 2
 			planet_artisans_light_alloys_upkeep_add = 0.5
-			planet_artisans_heavy_metals_upkeep_add = 0.5
+			planet_artisans_heavy_alloys_upkeep_add = 0.5
 		}
 	}
 
@@ -543,7 +543,7 @@ building_factory_3 = {
 			}
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		cost = {
 			trigger = {
@@ -551,7 +551,7 @@ building_factory_3 = {
 			}
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		upkeep = {
 			trigger = {
@@ -596,7 +596,7 @@ building_refinery = {
 		cost = {
 			minerals = @btr_civil_b2_mineral_cost
 			light_alloys = @btr_civil_b2_light_alloys_cost
-			heavy_metals = @btr_civil_b2_heavy_metals_cost
+			heavy_alloys = @btr_civil_b2_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b2_energy_upkeep
@@ -632,7 +632,7 @@ building_chemical_plant = {
 		cost = {
 			minerals = @btr_civil_b2_mineral_cost
 			light_alloys = @btr_civil_b2_light_alloys_cost
-			heavy_metals = @btr_civil_b2_heavy_metals_cost
+			heavy_alloys = @btr_civil_b2_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b2_energy_upkeep
@@ -668,7 +668,7 @@ building_crystal_plant = {
 		cost = {
 			minerals = @btr_civil_b2_mineral_cost
 			light_alloys = @btr_civil_b2_light_alloys_cost
-			heavy_metals = @btr_civil_b2_heavy_metals_cost
+			heavy_alloys = @btr_civil_b2_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b2_energy_upkeep
@@ -722,7 +722,7 @@ building_nanite_transmuter = {
 		cost = {
 			minerals = @btr_civil_b4_mineral_cost
 			light_alloys = @btr_civil_b4_light_alloys_cost
-			heavy_metals = @btr_civil_b4_heavy_metals_cost
+			heavy_alloys = @btr_civil_b4_heavy_alloys_cost
 		}
 		# produces = {
 		# 	trigger = {
@@ -747,7 +747,7 @@ building_nanite_transmuter = {
 
 	ai_resource_production = {
 		light_alloys = @b3_rare_upkeep
-		heavy_metals = @b3_rare_upkeep
+		heavy_alloys = @b3_rare_upkeep
 		antimatter_fuel = @b3_rare_upkeep
 		trigger = {
 			always = yes
@@ -808,7 +808,7 @@ building_ministry_production = {
 		cost = {
 			minerals = @btr_civil_b2_mineral_cost
 			light_alloys = @btr_civil_b2_light_alloys_cost
-			heavy_metals = @btr_civil_b2_heavy_metals_cost
+			heavy_alloys = @btr_civil_b2_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b2_energy_upkeep
@@ -830,7 +830,7 @@ building_ministry_production = {
 	ai_resource_production = {
 		#alloys = 6
 		light_alloys = 4.2
-		heavy_metals = 1.8
+		heavy_alloys = 1.8
 		trigger = {
 			planet_resource_compare = {
 				resource = light_alloys
@@ -892,7 +892,7 @@ building_production_center = {
 		cost = {
 			minerals = @btr_civil_b2_mineral_cost
 			light_alloys = @btr_civil_b2_light_alloys_cost
-			heavy_metals = @btr_civil_b2_heavy_metals_cost
+			heavy_alloys = @btr_civil_b2_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b2_energy_upkeep
@@ -987,7 +987,7 @@ building_production_center = {
 	ai_resource_production = {
 		#alloys = 6
 		light_alloys = 4.2
-		heavy_metals = 1.8
+		heavy_alloys = 1.8
 		trigger = {
 			planet_resource_compare = {
 				resource = light_alloys
@@ -1143,7 +1143,7 @@ building_coordinated_fulfillment_center_1 = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b1_energy_upkeep
@@ -1159,7 +1159,7 @@ building_coordinated_fulfillment_center_1 = {
 	ai_resource_production = {
 		#alloys = 6
 		light_alloys = 4.2
-		heavy_metals = 1.8
+		heavy_alloys = 1.8
 		trigger = {
 			planet_resource_compare = {
 				resource = light_alloys
@@ -1286,7 +1286,7 @@ building_coordinated_fulfillment_center_2 = {
 		cost = {
 			minerals = @btr_civil_b2_mineral_cost
 			light_alloys = @btr_civil_b2_light_alloys_cost
-			heavy_metals = @btr_civil_b2_heavy_metals_cost
+			heavy_alloys = @btr_civil_b2_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b2_energy_upkeep
@@ -1310,7 +1310,7 @@ building_coordinated_fulfillment_center_2 = {
 	ai_resource_production = {
 		#alloys = 6
 		light_alloys = 4.2
-		heavy_metals = 1.8
+		heavy_alloys = 1.8
 		trigger = {
 			planet_resource_compare = {
 				resource = light_alloys
@@ -1366,7 +1366,7 @@ building_archaeo_refinery = {
 		#planet_jobs_volatile_motes_produces_mult = 0.25
 		planet_jobs_antimatter_fuel_produces_mult = 0.25
 		planet_jobs_light_alloys_produces_mult = 0.25
-		planet_jobs_heavy_metals_produces_mult = 0.25
+		planet_jobs_heavy_alloys_produces_mult = 0.25
 	}
 
 	triggered_planet_modifier = {
@@ -1380,7 +1380,7 @@ building_archaeo_refinery = {
 		#planet_jobs_volatile_motes_produces_mult = 0.15
 		planet_jobs_antimatter_fuel_produces_mult = 0.15
 		planet_jobs_light_alloys_produces_mult = 0.15
-		planet_jobs_heavy_metals_produces_mult = 0.15
+		planet_jobs_heavy_alloys_produces_mult = 0.15
 	}
 
 	resources = {

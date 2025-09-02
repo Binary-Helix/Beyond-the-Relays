@@ -76,6 +76,7 @@ country_event = {
 	fire_only_once = yes
 
 	immediate = {
+		log = "Derpllector Hunts"
 		#Check for only custom_empire_used.
 		if = {
 			limit = {
@@ -146,7 +147,7 @@ country_event = {
 			}
 			country_event = { id = btr_datapad_menu.008 }
 		}
-		#If custom_empire_used flag missing (indicating Custom Empire) and has BOTH integrated and  incompatible mods flag, trigger Derpllector Sees All view.
+		#If custom_empire_used flag missing (indicating Custom Empire) and has BOTH integrated and incompatible mods flag, trigger Derpllector Sees All view.
 		if = {
 			limit = {
 				AND = {

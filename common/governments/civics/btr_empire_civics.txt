@@ -1438,33 +1438,33 @@ rachni_hiv_symphonic_structure = {
 # THE COLLECTORS #
 ##################
 
-collectors_emp_machine_assimilator = {
-	potential = {
-		origin = {
-			value = collectors_emp_origin
-		}
-	}
-	modification = no
-	random_weight = {
-		base = 5
-		modifier = {
-			factor = 0
-			NOT = { host_has_dlc = "Synthetic Dawn Story Pack" }
-		}
-		modifier = {
-			# civic has no effect after galaxy generation, disable for random generation
-			factor = 0
-			has_global_flag = game_started
-		}
-	}
-	description = civic_tooltip_machine_assimilator_effects
-	has_secondary_species = {	# see game_start.11
-		title = civic_machine_assimilator_secondary_species
-		traits = {
-			trait = trait_cybernetic
-		}
-	}
-}
+# collectors_emp_machine_assimilator = {
+# 	potential = {
+# 		origin = {
+# 			value = collectors_emp_origin
+# 		}
+# 	}
+# 	modification = no
+# 	random_weight = {
+# 		base = 5
+# 		modifier = {
+# 			factor = 0
+# 			NOT = { host_has_dlc = "Synthetic Dawn Story Pack" }
+# 		}
+# 		modifier = {
+# 			# civic has no effect after galaxy generation, disable for random generation
+# 			factor = 0
+# 			has_global_flag = game_started
+# 		}
+# 	}
+# 	description = civic_tooltip_machine_assimilator_effects
+# 	has_secondary_species = {	# see game_start.11
+# 		title = civic_machine_assimilator_secondary_species
+# 		traits = {
+# 			trait = trait_cybernetic
+# 		}
+# 	}
+# }
 
 collectors_emp_voice_of_reapers = {
 	modification = no

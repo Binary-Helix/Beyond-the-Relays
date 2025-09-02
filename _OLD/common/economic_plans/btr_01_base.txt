@@ -230,8 +230,8 @@ basic_economy_plan = {
 			titanium = 10
 			helium_3 = 10
 			hydrogen = 10
-			light_metals = 10
-			heavy_metals = 10
+			light_alloys = 10
+			heavy_alloys = 10
 			antimatter_fuel = 10
 			minerals = 10
 			energy = 10
@@ -266,11 +266,11 @@ basic_economy_plan = {
 				# Alloys
 				AND = {
 					country_uses_bio_ships = no
-					resource_stockpile_compare = { resource = light_metals value >= 18000 }
+					resource_stockpile_compare = { resource = light_alloys value >= 18000 }
 				}
 				AND = {
 					country_uses_bio_ships = no
-					resource_stockpile_compare = { resource = light_metals value >= 12000 }
+					resource_stockpile_compare = { resource = light_alloys value >= 12000 }
 					check_modifier_value = { modifier = country_resource_max_add value < 5000 }
 				}
 				# Food
@@ -289,7 +289,7 @@ basic_economy_plan = {
 			OR = {
 				AND = {
 					country_uses_bio_ships = no
-					has_monthly_income = { resource = light_metals value > @economic_plan_fleet_cap_alloy_target }
+					has_monthly_income = { resource = light_alloys value > @economic_plan_fleet_cap_alloy_target }
 				}
 				AND = {
 					country_uses_bio_ships = yes
@@ -328,8 +328,8 @@ basic_economy_plan = {
 
 		income = {
 			#alloys = 10
-			light_metals = 15
-			heavy_metals = 15
+			light_alloys = 15
+			heavy_alloys = 15
 		}
 	}
 
@@ -349,8 +349,8 @@ basic_economy_plan = {
 
 		income = {
 			#alloys = 15
-			light_metals = 15
-			heavy_metals = 15
+			light_alloys = 15
+			heavy_alloys = 15
 		}
 	}
 	subplan = {
@@ -369,8 +369,8 @@ basic_economy_plan = {
 
 		income = {
 			#alloys = 10
-			light_metals = 20
-			heavy_metals = 20
+			light_alloys = 20
+			heavy_alloys = 20
 			food = 20
 		}
 	}

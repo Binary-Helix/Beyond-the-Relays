@@ -4,7 +4,498 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08664527-6757-472e-b0f6-9970e531260c" name="Changes" comment="" />
+    <list default="true" id="08664527-6757-472e-b0f6-9970e531260c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/common/buildings/btr_planetarystations_buildings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/colony_automation/00_energy_station_automation.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/colony_automation/00_factory_station_automation.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/colony_automation/00_fortress_station_automation.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/colony_automation/00_foundry_station_automation.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/colony_automation/00_mining_station_automation.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/colony_automation/00_planetary_stations_automation.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/colony_automation/00_prison_station_automation.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/colony_automation/00_research_stations_automation.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/colony_automation/00_resort_station_automation.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/colony_automation/00_trade_station_automation.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/colony_types/btr_planetarystations_colony_types.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/country_customization/00_country_customization.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/decisions/btr_planetarystations_decisions.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/deposits/btr_planetarystations_deposits.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/districts/btr_planetarystations_districts.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/economic_categories/btr_planetarystations_categories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/megastructures/btr_planetary_station.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/message_types/btr_planetarystations_message_types.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/on_actions/btr_planetarystations_on_actions.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/planet_classes/btr_planetarystations_planet_classes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/pop_categories/btr_planetarystations_categories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/pop_jobs/btr_planetarystations_jobs.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/script_values/btr_planetarystations_script_values.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_effects/btr_planetarystations_scripted_effects.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_loc/btr_planetarystations_scripted_loc.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_triggers/01_scripted_triggers_buildings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_triggers/btr_planetarystations_scripted_triggers.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/special_projects/btr_planetarystations_projects.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/static_modifiers/btr_planetarystations_static_modifiers.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/static_modifiers/btr_planetarystations_subclasses_modifiers.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/technology/btr_planetarystations_tech.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/terraform/btr_planetarystation_terraform_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/zone_slots/btr_planetarystations_zone_slots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/zones/btr_planetarystations_zones.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/btr_planetarystations_colony_events.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/btr_planetarystations_decision_event.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/btr_planetarystations_game_start.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/btr_planetarystations_on_action_events.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/btr_planetarystations_terraforming_events.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/event_pictures/crawler.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/event_pictures/planetary_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/event_pictures/station_invasion.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/event_pictures/station_wreckage.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/btr_game_start_event.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_hotel.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_monorail.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_prison_capital.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_prison_major_capital.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_prison_system_capital.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_station_capital.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_station_major_capital.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_station_system_capital.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_transit_network.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_confluence_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_deep_exploration.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_political_persecution.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_prison_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_resort_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_simulation_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_start_barren_cold_terraforming_project_1.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_start_barren_cold_terraforming_project_2.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_start_barren_terraforming_project_1.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_start_frozen_terraforming_project_1.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_start_greenhouse_terraforming_project_1.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_start_greenhouse_terraforming_project_2.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_start_methane_terraforming_project_1.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_start_methane_terraforming_project_2.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_start_toxic_terraforming_project_1.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_start_toxic_terraforming_project_2.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_station_close.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/decisions/decision_terraforming_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_abyssal_exofauna.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_alien_marks.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_ancient_remains.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_asteroid_life.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_atmospheric_ecosystem.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_derelict_structure.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_extremophile_life_forms.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_greenhouse_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_hot_giant_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_junkyard.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_organic_starship.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_precious_moon.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_rare_metal_deposits.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_scorched_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_scorched_plain.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_scrap_metal_graveyard.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/deposits/d_sulfur_blocker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_atmospheric_power_plant.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_biolaboratory.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_casino_level.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_cell_block.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_crystal_mining.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_dark_matter_extractor.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_docking_bay.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_experimental_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_fortified_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_foundry_plant.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_free_port.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_gas_refinery.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_geothermal_power_plant.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_habitable_dome.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_helium_extractor.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_helium_mining_facility.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_hive_sector.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_hunting_bay.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_leisure_sector.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_living_metal_processing.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_manufacturing_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_mining_bay.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_mining_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_mote_mine.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_nexus_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_observation_post.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_ore_processing_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_race_track.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_simulation_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_special_training_area.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_storage_yards.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_synaptic_node.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_terraforming_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_testing_site.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_zro_harvesting.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_atmospheric_power_plant.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_atmospheric_power_plant_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_atmospheric_power_plant_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_biolaboratory.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_biolaboratory_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_biolaboratory_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_casino_level.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_casino_level_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_casino_level_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_cell_block.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_cell_block_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_cell_block_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_commercial_wards.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_commercial_wards_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_commercial_wards_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_crystal_mining.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_crystal_mining_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_crystal_mining_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_dark_matter_extractor.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_dark_matter_extractor_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_dark_matter_extractor_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_docking_bay.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_docking_bay_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_docking_bay_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_experimental_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_experimental_complex_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_experimental_complex_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_fortified_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_fortified_complex_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_fortified_complex_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_foundry_plant.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_foundry_plant_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_foundry_plant_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_free_port.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_free_port_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_free_port_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_gas_refinery.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_gas_refinery_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_gas_refinery_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_geothermal_power_plant.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_geothermal_power_plant_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_geothermal_power_plant_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_habitable_dome.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_habitable_dome_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_habitable_dome_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_helium_extractor.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_helium_extractor_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_helium_extractor_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_helium_mining_facility.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_helium_mining_facility_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_helium_mining_facility_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_hive_sector.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_hive_sector_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_hive_sector_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_hunting_bay.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_hunting_bay_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_hunting_bay_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_hydrocarbon_power_plant.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_hydrocarbon_power_plant_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_hydrocarbon_power_plant_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_leisure_sector.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_leisure_sector_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_leisure_sector_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_living_metal_processing.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_living_metal_processing_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_living_metal_processing_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_manufacturing_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_manufacturing_complex_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_manufacturing_complex_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_mining_bay.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_mining_bay_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_mining_bay_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_mining_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_mining_complex_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_mining_complex_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_mote_mine.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_mote_mine_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_mote_mine_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_nexus_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_nexus_complex_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_nexus_complex_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_observation_post.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_observation_post_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_observation_post_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_ore_processing_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_ore_processing_complex_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_ore_processing_complex_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_race_track.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_race_track_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_race_track_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_residential_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_residential_complex_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_residential_complex_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_sanctuary_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_sanctuary_complex_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_sanctuary_complex_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_simulation_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_simulation_complex_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_simulation_complex_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_solar_power_plant.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_solar_power_plant_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_solar_power_plant_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_special_training_area.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_special_training_area_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_special_training_area_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_storage_yards.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_storage_yards_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_storage_yards_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_synaptic_node.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_synaptic_node_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_synaptic_node_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_terraforming_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_terraforming_complex_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_terraforming_complex_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_testing_site.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_testing_site_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_testing_site_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_zro_harvesting.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_zro_harvesting_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_zro_harvesting_rectangle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_adventurer.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_croupier.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_dark_matter_collector.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_dark_matter_collector_drone.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_docker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_docking_drone.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_driller.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_driller_drone.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_free_trader.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_gladiator.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_guard.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_helium_extraction_drone.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_helium_extractor.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_hunter.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_living_metal_caster.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_living_metal_drone.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_logistic_drone.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_logistic_worker.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_nuclear_drone.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_nuclear_employee.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_prison_warden.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_prospector.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_racer.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_regolith_miner.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_regolith_miner_drone.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_tourist.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_zro_harvester.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_zro_harvesting_drone.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/megastructures/megastructures_build_menu/build_menu_planetary_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/messages/message_felony_transport.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/messages/message_freed_transport.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/messages/message_planet_cracking.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/messages/message_planetary_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_foundry_plant_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_district_solar_power_plant_max.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_helium_extractor_produces_mult.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_hunter_add.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/modifiers/mod_job_hunter_upkeep_mult.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/origins/origin_expanse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_backgrounds/pc_cracking_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_backgrounds/pc_cracking_station_cold.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_backgrounds/pc_greenhouse_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_backgrounds/pc_hot_giant_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_backgrounds/pc_methane_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_backgrounds/pc_scorched_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_backgrounds/pc_sulfur_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_backgrounds/pc_toxic_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_barren_cold_terraformed.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_barren_terraformed.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_confluence_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_frozen_terraformed.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_greenhouse_planet.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_greenhouse_terraformed.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_hot_giant.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_ice_giant.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_mass_arrests.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_methane_planet.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_methane_terraformed.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_prison_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_resort_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_scorched_planet.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_simulation_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_sulfur_planet.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_terraforming_station.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planet_modifiers/pm_toxic_terraformed.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/planetarystations_planet_type_icons.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/pop_categories/pop_cat_prisoner.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/helium.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/helium_grey.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/resources/helium_large.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/technologies/tech_planet_meltification.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/planetview/planetarystations_colony_type.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/barren_cold_terraformed_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/barren_cold_terraformed_01_normal.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/barren_terraformed_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/barren_terraformed_01_normal.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/barren_terraformed_02_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/clouds_ammonia_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/clouds_carbon_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/frozen_ocean_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/frozen_ocean_01_normal.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/frozen_ocean_01_spec.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/frozen_terraformed_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/greenhouse_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/greenhouse_02_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/greenhouse_03_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/greenhouse_terraformed_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/greenhouse_terraformed_01_spec.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/greenhouse_terraformed_clouds_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/hot_barren_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/hot_barren_01_normal.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/hot_barren_01_spec.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/hot_giant_01_clouds_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/hot_giant_01_clouds_shadow_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/hot_giant_02_clouds_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/hot_giant_02_clouds_shadow_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/hot_giant_03_clouds_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/hot_giant_03_clouds_shadow_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/hot_giant_04_clouds_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/hot_giant_05_clouds_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/hot_giant_06_clouds_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/hot_giant_06_clouds_shadow_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/hot_giant_07_clouds_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/ice_planetoid_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/methane_01_spec.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/methane_cloud_shadow_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/methane_clouds_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/methane_clouds_01_normal.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/methane_terraformed_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/planetoid_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/planetoid_01_normal.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/poles_barren_3_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/poles_barren_4_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/poles_barren_5_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/ps_planetary_entities.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/scorched_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/scorched_01_normal.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/scorched_01_spec.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/sulfur_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/sulfur_01_normal.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/models/planets/toxic_terraformed_01_diffuse.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/planetarystations_particles.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/ps_cloud_1.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/ps_cloud_2.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/ps_cloud_3.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/stars_and_planets/hot_giant_01_effect.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/stars_and_planets/hot_giant_02_effect.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_barren_cold_terraformed_station_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_barren_cold_terraformed_station_sky02.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_barren_cold_terraformed_station_sky03.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_barren_terraformed_station_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_barren_terraformed_station_sky02.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_barren_terraformed_station_sky03.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_broken_cold_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_broken_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_cracking_station_cold_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_cracking_station_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_frozen_terraformed_station_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_frozen_terraformed_station_sky02.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_frozen_terraformed_station_sky03.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_greenhouse_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_greenhouse_station_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_greenhouse_terraformed_station_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_hot_giant_station_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_methane_terraformed_station_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_scorched_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_scorched_station_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_sulfur_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_sulfur_station_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_toxic_station_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/portraits/environments/pc_toxic_terraformed_station_sky.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/planetarystations_eventpictures.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/planetarystations_icons.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/planetarystations_origin_eventpictures.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/planetarystations_planet.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/planetarystations_planet_view.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/braz_por/planetarystations_events_l_braz_por.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/braz_por/planetarystations_l_braz_por.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/braz_por/planetarystations_modifiers_l_braz_por.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/btr_main_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/btr_species_traits_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/planetarystations_events_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/planetarystations_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/planetarystations_modifiers_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/french/planetarystations_events_l_french.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/french/planetarystations_l_french.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/french/planetarystations_modifiers_l_french.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/german/planetarystations_events_l_german.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/german/planetarystations_l_german.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/german/planetarystations_modifiers_l_german.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/polish/planetarystations_events_l_polish.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/polish/planetarystations_l_polish.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/polish/planetarystations_modifiers_l_polish.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/russian/planetarystations_events_l_russian.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/russian/planetarystations_l_russian.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/russian/planetarystations_modifiers_l_russian.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/simp_chinese/planetarystations_events_l_simp_chinese.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/simp_chinese/planetarystations_l_simp_chinese.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/simp_chinese/planetarystations_modifiers_l_simp_chinese.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/spanish/planetarystations_events_l_spanish.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/spanish/planetarystations_l_spanish.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/spanish/planetarystations_modifiers_l_spanish.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sound/planetarystations_category.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sound/planetarystations_soundeffects.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_00_capital_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_00_capital_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_01_pop_assembly_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_01_pop_assembly_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_02_government_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_02_government_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_03_resource_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_03_resource_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_04_manufacturing_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_04_manufacturing_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_04_manufacturing_buildings_OLD.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_04_manufacturing_buildings_OLD.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_05_research_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_05_research_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_06_trade_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_06_trade_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_07_amenity_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_07_amenity_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_08_unity_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_08_unity_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_09_army_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_09_army_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_10_deposit_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_10_deposit_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_14_branch_office_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_14_branch_office_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_15_overlord_holdings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_15_overlord_holdings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_17_paragon_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_17_paragon_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/buildings/btr_planet_unique_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/buildings/btr_planet_unique_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/defines/btr_econ_defines.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/defines/btr_econ_defines.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/economic_plans/btr_01_base.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/economic_plans/btr_01_base.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/economic_plans/btr_03_machine.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/economic_plans/btr_03_machine.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_00_other_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_00_other_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_01_ruler_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_01_ruler_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_02_specialist_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_02_specialist_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_03_worker_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_03_worker_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_04_gestalt_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_04_gestalt_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_05_primitive_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_05_primitive_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_06_event_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_06_event_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_08_overlord_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_08_overlord_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_09_first_contact_jobs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/pop_jobs/btr_09_first_contact_jobs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/ship_sizes/00_first_contact.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/ship_sizes/00_first_contact.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/ship_sizes/00_orbital_rings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/ship_sizes/00_orbital_rings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/ship_sizes/00_ship_sizes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/ship_sizes/00_ship_sizes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/ship_sizes/00_starbases.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/ship_sizes/00_starbases.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/ship_sizes/01_colossi.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/ship_sizes/01_colossi.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/ship_sizes/04_fallen_empires.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/ship_sizes/04_fallen_empires.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/ship_sizes/10_ai_ships.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/ship_sizes/10_ai_ships.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/ship_sizes/13_distant_stars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/ship_sizes/13_distant_stars.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/ship_sizes/18_juggernauts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/ship_sizes/18_juggernauts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/ship_sizes/21_overlord.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/ship_sizes/21_overlord.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/common/ship_sizes/99_habitats.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/ship_sizes/99_habitats.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/events/btr_situation_deficit_events.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/events/btr_situation_deficit_events.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/events/game_start.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/events/game_start.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/localisation/english/btr_custom_modifiers_l_english.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/localisation/english/btr_custom_modifiers_l_english.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/localisation/english/btr_deficit_events_l_english.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/localisation/english/btr_deficit_events_l_english.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_OLD/localisation/english/btr_strategic_resources_l_english.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/localisation/english/btr_strategic_resources_l_english.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/button_effects/btr_button_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/button_effects/btr_button_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/governments/civics/btr_empire_civics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/governments/civics/btr_empire_civics.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/governments/civics/btr_empire_origins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/governments/civics/btr_empire_origins.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/governments/councilors/00_councilors.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/governments/councilors/00_councilors.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/on_actions/btr_on_actions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/on_actions/btr_on_actions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/planet_classes/btr_spacestation_classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/planet_classes/btr_spacestation_classes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/portrait_categories/btr_portrait_categories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/portrait_categories/btr_portrait_categories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/species_classes/btr_species_classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/species_classes/btr_species_classes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/static_modifiers/btr_empire_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/static_modifiers/btr_empire_modifiers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/technology/btr_empire_technologies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/technology/btr_empire_technologies.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/traits/btr_species_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/btr_species_traits.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events/btr_datapad_menu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/btr_datapad_menu.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/btr_resources.gfx" beforeDir="false" afterPath="$PROJECT_DIR$/interface/btr_resources.gfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/english/btr_custom_modifiers_l_english.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/english/btr_custom_modifiers_l_english.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/english/btr_deficit_events_l_english.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/english/btr_deficit_events_l_english.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/english/btr_prescripted_l_english.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/english/btr_prescripted_l_english.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prescripted_countries/00_btr_prescripted_countries.txt" beforeDir="false" afterPath="$PROJECT_DIR$/prescripted_countries/00_btr_prescripted_countries.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,31 +523,31 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;features-resource-building-pop-integration&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Repositories/btr_skunkworks/localisation/english&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2954023&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "features-resource-building-pop-integration",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/Repositories/btr_skunkworks/localisation/english",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2954023",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Repositories\btr_skunkworks\localisation\english" />
       <recent name="E:\Repositories\btr_skunkworks\events" />
-      <recent name="E:\Repositories\btr_skunkworks\common\scripted_effects" />
-      <recent name="E:\Repositories\btr_skunkworks\common" />
-      <recent name="E:\Repositories\btr_skunkworks\common\species_names" />
+      <recent name="E:\Repositories\btr_skunkworks" />
+      <recent name="E:\Repositories\btr_skunkworks\localisation" />
+      <recent name="E:\Repositories\btr_skunkworks\gfx" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Repositories\btr_skunkworks\common\government\civics" />

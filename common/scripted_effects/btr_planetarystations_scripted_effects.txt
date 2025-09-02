@@ -1,0 +1,4463 @@
+
+set_deposit_flags = {
+	# Minerals
+	if = {
+		limit = { has_deposit = d_minerals_1 }
+		set_planet_flag = minerals_1
+	}
+	if = {
+		limit = { has_deposit = d_minerals_2 }
+		set_planet_flag = minerals_2
+	}
+	if = {
+		limit = { has_deposit = d_minerals_3 }
+		set_planet_flag = minerals_3
+	}
+	if = {
+		limit = { has_deposit = d_minerals_4 }
+		set_planet_flag = minerals_4
+	}
+	if = {
+		limit = { has_deposit = d_minerals_5 }
+		set_planet_flag = minerals_5
+	}
+	if = {
+		limit = {
+			OR = {
+				has_deposit = d_minerals_6
+				has_deposit = d_minerals_7
+				has_deposit = d_minerals_8
+				has_deposit = d_minerals_9
+				has_deposit = d_minerals_10
+			}
+		}
+		set_planet_flag = minerals_larg
+	}
+		
+	# Energy
+	if = {
+		limit = { has_deposit = d_energy_1 }
+		set_planet_flag = energy_1
+	}
+	if = {
+		limit = { has_deposit = d_energy_2 }
+		set_planet_flag = energy_2
+	}
+	if = {
+		limit = { has_deposit = d_energy_3 }
+		set_planet_flag = energy_3
+	}
+	if = {
+		limit = { has_deposit = d_energy_4 }
+		set_planet_flag = energy_4
+	}
+	if = {
+		limit = { has_deposit = d_energy_5 }
+		set_planet_flag = energy_5
+	}
+	if = {
+		limit = {
+			OR = {
+				has_deposit = d_energy_6
+				has_deposit = d_energy_7
+				has_deposit = d_energy_8
+				has_deposit = d_energy_9
+				has_deposit = d_energy_10
+			}
+		}
+		set_planet_flag = energy_larg
+	}
+	
+	# Society
+	if = {
+		limit = { has_deposit = d_society_1 }
+		set_planet_flag = society_1
+	}
+	if = {
+		limit = { has_deposit = d_society_2 }
+		set_planet_flag = society_2
+	}
+	if = {
+		limit = { has_deposit = d_society_3 }
+		set_planet_flag = society_3
+	}
+	if = {
+		limit = { has_deposit = d_society_4 }
+		set_planet_flag = society_4
+	}
+	if = {
+		limit = { has_deposit = d_society_5 }
+		set_planet_flag = society_5
+	}
+	if = {
+		limit = {
+			OR = {
+				has_deposit = d_society_6
+				has_deposit = d_society_7
+				has_deposit = d_society_8
+				has_deposit = d_society_9
+				has_deposit = d_society_10
+			}
+		}
+		set_planet_flag = society_larg
+	}
+	
+	# Physics
+	if = {
+		limit = { has_deposit = d_physics_1 }
+		set_planet_flag = physics_1
+	}
+	if = {
+		limit = { has_deposit = d_physics_2 }
+		set_planet_flag = physics_2
+	}
+	if = {
+		limit = { has_deposit = d_physics_3 }
+		set_planet_flag = physics_3
+	}
+	if = {
+		limit = { has_deposit = d_physics_4 }
+		set_planet_flag = physics_4
+	}
+	if = {
+		limit = { has_deposit = d_physics_5 }
+		set_planet_flag = physics_5
+	}
+	if = {
+		limit = {
+			OR = {
+				has_deposit = d_physics_6
+				has_deposit = d_physics_7
+				has_deposit = d_physics_8
+				has_deposit = d_physics_9
+				has_deposit = d_physics_10
+			}
+		}
+		set_planet_flag = physics_larg
+	}
+		
+	# Engineering
+	if = {
+		limit = { has_deposit = d_engineering_1 }
+		set_planet_flag = engineering_1
+	}
+	if = {
+		limit = { has_deposit = d_engineering_2 }
+		set_planet_flag = engineering_2
+	}
+	if = {
+		limit = { has_deposit = d_engineering_3 }
+		set_planet_flag = engineering_3
+	}
+	if = {
+		limit = { has_deposit = d_engineering_4 }
+		set_planet_flag = engineering_4
+	}
+	if = {
+		limit = { has_deposit = d_engineering_5 }
+		set_planet_flag = engineering_5
+	}
+	if = {
+		limit = {
+			OR = {
+				has_deposit = d_engineering_6
+				has_deposit = d_engineering_7
+				has_deposit = d_engineering_8
+				has_deposit = d_engineering_9
+				has_deposit = d_engineering_10
+			}
+		}
+		set_planet_flag = engineering_larg
+	}
+	
+	# Trade Value
+	if = {
+		limit = { has_deposit = d_trade_value_1 }
+		set_planet_flag = trade_value_1
+	}
+	if = {
+		limit = { has_deposit = d_trade_value_2 }
+		set_planet_flag = trade_value_2
+	}
+	if = {
+		limit = { has_deposit = d_trade_value_3 }
+		set_planet_flag = trade_value_3
+	}
+	if = {
+		limit = { has_deposit = d_trade_value_4 }
+		set_planet_flag = trade_value_4
+	}
+	if = {
+		limit = { has_deposit = d_trade_value_5 }
+		set_planet_flag = trade_value_5
+	}
+	if = {
+		limit = {
+			OR = {
+				has_deposit = d_trade_value_6
+				has_deposit = d_trade_value_7
+				has_deposit = d_trade_value_8
+				has_deposit = d_trade_value_9
+				has_deposit = d_trade_value_10
+			}
+		}
+		set_planet_flag = trade_value_larg
+	}
+		
+	# # Alloys
+	# if = {
+	# 	limit = { has_deposit = d_alloys_1 }
+	# 	set_planet_flag = alloys_1
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_alloys_2 }
+	# 	set_planet_flag = alloys_2
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_alloys_3 }
+	# 	set_planet_flag = alloys_3
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_alloys_4 }
+	# 	set_planet_flag = alloys_4
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_alloys_5 }
+	# 	set_planet_flag = alloys_5
+	# }
+	
+	# Food
+	if = {
+		limit = { has_deposit = d_food_3 }
+		set_planet_flag = food_3
+	}
+	if = {
+		limit = { has_deposit = d_food_10 }
+		set_planet_flag = food_10
+	}
+
+	# Hydrgoen
+	if = {
+		limit = { has_deposit = d_hydrogen_1 }
+		set_planet_flag = hydrogen_1
+	}
+	if = {
+		limit = { has_deposit = d_hydrogen_2 }
+		set_planet_flag = hydrogen_2
+	}
+	if = {
+		limit = { has_deposit = d_hydrogen_3 }
+		set_planet_flag = hydrogen_3
+	}
+	if = {
+		limit = { has_deposit = d_hydrogen_4 }
+		set_planet_flag = hydrogen_4
+	}
+	if = {
+		limit = { has_deposit = d_hydrogen_5 }
+		set_planet_flag = hydrogen_5
+	}
+
+	# Helium-3
+	if = {
+		limit = { has_deposit = d_helium_3_1 }
+		set_planet_flag = helium_3_1
+	}
+	if = {
+		limit = { has_deposit = d_helium_3_2 }
+		set_planet_flag = helium_3_2
+	}
+	if = {
+		limit = { has_deposit = d_helium_3_3 }
+		set_planet_flag = helium_3_3
+	}
+	if = {
+		limit = { has_deposit = d_helium_3_4 }
+		set_planet_flag = helium_3_4
+	}
+	if = {
+		limit = { has_deposit = d_helium_3_5 }
+		set_planet_flag = helium_3_5
+	}
+
+	# Beryllium
+	if = {
+		limit = { has_deposit = d_beryllium_1 }
+		set_planet_flag = beryllium_1
+	}
+	if = {
+		limit = { has_deposit = d_beryllium_2 }
+		set_planet_flag = beryllium_2
+	}
+	if = {
+		limit = { has_deposit = d_beryllium_3 }
+		set_planet_flag = beryllium_3
+	}
+	if = {
+		limit = { has_deposit = d_beryllium_4 }
+		set_planet_flag = beryllium_4
+	}
+	if = {
+		limit = { has_deposit = d_beryllium_5 }
+		set_planet_flag = beryllium_5
+	}
+
+	# Lithium
+	if = {
+		limit = { has_deposit = d_lithium_1 }
+		set_planet_flag = lithium_1
+	}
+	if = {
+		limit = { has_deposit = d_lithium_2 }
+		set_planet_flag = lithium_2
+	}
+	if = {
+		limit = { has_deposit = d_lithium_3 }
+		set_planet_flag = lithium_3
+	}
+	if = {
+		limit = { has_deposit = d_lithium_4 }
+		set_planet_flag = lithium_4
+	}
+	if = {
+		limit = { has_deposit = d_lithium_5 }
+		set_planet_flag = lithium_5
+	}
+
+	# Titanium
+	if = {
+		limit = { has_deposit = d_titanium_1 }
+		set_planet_flag = titanium_1
+	}
+	if = {
+		limit = { has_deposit = d_titanium_2 }
+		set_planet_flag = titanium_2
+	}
+	if = {
+		limit = { has_deposit = d_titanium_3 }
+		set_planet_flag = titanium_3
+	}
+	if = {
+		limit = { has_deposit = d_titanium_4 }
+		set_planet_flag = titanium_4
+	}
+	if = {
+		limit = { has_deposit = d_titanium_5 }
+		set_planet_flag = titanium_5
+	}
+
+	# Palladium
+	if = {
+		limit = { has_deposit = d_palladium_1 }
+		set_planet_flag = palladium_1
+	}
+	if = {
+		limit = { has_deposit = d_palladium_2 }
+		set_planet_flag = palladium_2
+	}
+	if = {
+		limit = { has_deposit = d_palladium_3 }
+		set_planet_flag = palladium_3
+	}
+	if = {
+		limit = { has_deposit = d_palladium_4 }
+		set_planet_flag = palladium_4
+	}
+	if = {
+		limit = { has_deposit = d_palladium_5 }
+		set_planet_flag = palladium_5
+	}
+
+	# Iridium
+	if = {
+		limit = { has_deposit = d_iridium_1 }
+		set_planet_flag = iridium_1
+	}
+	if = {
+		limit = { has_deposit = d_iridium_2 }
+		set_planet_flag = iridium_2
+	}
+	if = {
+		limit = { has_deposit = d_iridium_3 }
+		set_planet_flag = iridium_3
+	}
+	if = {
+		limit = { has_deposit = d_iridium_4 }
+		set_planet_flag = iridium_4
+	}
+	if = {
+		limit = { has_deposit = d_iridium_5 }
+		set_planet_flag = iridium_5
+	}
+
+	# Platinum
+	if = {
+		limit = { has_deposit = d_platinum_1 }
+		set_planet_flag = platinum_1
+	}
+	if = {
+		limit = { has_deposit = d_platinum_2 }
+		set_planet_flag = platinum_2
+	}
+	if = {
+		limit = { has_deposit = d_platinum_3 }
+		set_planet_flag = platinum_3
+	}
+	if = {
+		limit = { has_deposit = d_platinum_4 }
+		set_planet_flag = platinum_4
+	}
+	if = {
+		limit = { has_deposit = d_platinum_5 }
+		set_planet_flag = platinum_5
+	}
+
+	#Uranium
+	if = {
+		limit = { has_deposit = d_uranium_1 }
+		set_planet_flag = uranium_1
+	}
+	if = {
+		limit = { has_deposit = d_uranium_2 }
+		set_planet_flag = uranium_2
+	}
+	if = {
+		limit = { has_deposit = d_uranium_3 }
+		set_planet_flag = uranium_3
+	}
+	if = {
+		limit = { has_deposit = d_uranium_4 }
+		set_planet_flag = uranium_4
+	}
+	if = {
+		limit = { has_deposit = d_uranium_5 }
+		set_planet_flag = uranium_5
+	}
+
+	#Eezo
+	if = {
+		limit = { has_deposit = d_eezo_1 }
+		set_planet_flag = eezo_1
+	}
+	if = {
+		limit = { has_deposit = d_eezo_2 }
+		set_planet_flag = eezo_2
+	}
+	if = {
+		limit = { has_deposit = d_eezo_3 }
+		set_planet_flag = eezo_3
+	}
+	if = {
+		limit = { has_deposit = d_eezo_4 }
+		set_planet_flag = eezo_4
+	}
+	if = {
+		limit = { has_deposit = d_eezo_5 }
+		set_planet_flag = eezo_5
+	}
+	
+	# # Exotic Gases
+	# if = {
+	# 	limit = { has_deposit = d_exotic_gases_1 }
+	# 	set_planet_flag = exotic_gases_1
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_exotic_gases_2 }
+	# 	set_planet_flag = exotic_gases_2
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_exotic_gases_3 }
+	# 	set_planet_flag = exotic_gases_3
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_exotic_gases_4 }
+	# 	set_planet_flag = exotic_gases_4
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_exotic_gases_5 }
+	# 	set_planet_flag = exotic_gases_5
+	# }
+		
+	# # Rare Crystals
+	# if = {
+	# 	limit = { has_deposit = d_rare_crystals_1 }
+	# 	set_planet_flag = rare_crystals_1
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_rare_crystals_2 }
+	# 	set_planet_flag = rare_crystals_2
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_rare_crystals_3 }
+	# 	set_planet_flag = rare_crystals_3
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_rare_crystals_4 }
+	# 	set_planet_flag = rare_crystals_4
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_rare_crystals_5 }
+	# 	set_planet_flag = rare_crystals_5
+	# }
+	#
+	#
+	# # Volatile Motes
+	# if = {
+	# 	limit = { has_deposit = d_volatile_motes_1 }
+	# 	set_planet_flag = volatile_motes_1
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_volatile_motes_2 }
+	# 	set_planet_flag = volatile_motes_2
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_volatile_motes_3 }
+	# 	set_planet_flag = volatile_motes_3
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_volatile_motes_4 }
+	# 	set_planet_flag = volatile_motes_4
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_volatile_motes_5 }
+	# 	set_planet_flag = volatile_motes_5
+	# }
+	#
+	#
+	# # Zro Deposit
+	# if = {
+	# 	limit = { has_deposit = d_zro_deposit_1 }
+	# 	set_planet_flag = zro_deposit_1
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_zro_deposit_2 }
+	# 	set_planet_flag = zro_deposit_2
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_zro_deposit_3 }
+	# 	set_planet_flag = zro_deposit_3
+	# }
+	#
+	#
+	# # Dark Matter
+	# if = {
+	# 	limit = { has_deposit = d_dark_matter_deposit_1 }
+	# 	set_planet_flag = dark_matter_1
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_dark_matter_deposit_2 }
+	# 	set_planet_flag = dark_matter_2
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_dark_matter_deposit_3 }
+	# 	set_planet_flag = dark_matter_3
+	# }
+	# if = {
+	# 	limit = { has_deposit = d_dark_matter_deposit_10 }
+	# 	set_planet_flag = dark_matter_10
+	# }
+	#
+	#
+	# # Living Metal
+	# if = {
+	# 	limit = { has_deposit = d_living_metal_deposit }
+	# 	set_planet_flag = living_metal_deposit
+	# }
+	#
+	# # Nanites Deposit
+	# if = {
+	# 	limit = { has_deposit = d_nanites_deposit }
+	# 	set_planet_flag = nanites_deposit
+	# }
+}
+
+set_station_deposits = {
+		
+	# Mineral Deposits
+	
+	if = {
+		limit = {
+			OR = {
+				has_modifier = junkyard
+				has_modifier = ore_freighter
+			}
+		}
+		add_deposit = d_junkyard
+	}
+	else_if = {
+		limit = { has_planet_flag = minerals_1 }
+		if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+				}
+			}
+			add_deposit = d_ore_rich_rings
+		}
+		else = {
+			add_deposit = d_mineral_lodes
+		}
+	}
+	else_if = {
+		limit = { has_planet_flag = minerals_2 }
+		if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+				}
+			}
+			add_deposit = d_ore_rich_rings
+			add_deposit = d_ore_rich_rings
+		}
+		else = {
+			add_deposit = d_mineral_lodes
+			add_deposit = d_mineral_lodes
+		}
+	}
+	else_if = {
+		limit = { has_planet_flag = minerals_3 }
+		if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+				}
+			}
+			add_deposit = d_ore_rich_rings
+			add_deposit = d_ore_rich_rings
+			add_deposit = d_ore_rich_rings
+		}
+		else = {
+			add_deposit = d_mineral_lodes
+			add_deposit = d_mineral_lodes
+			add_deposit = d_mineral_lodes
+		}
+	}
+	else_if = {
+		limit = { has_planet_flag = minerals_4 }
+		if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+				}
+			}
+			add_deposit = d_ore_rich_rings
+			add_deposit = d_ore_rich_rings
+			add_deposit = d_ore_rich_rings
+			add_deposit = d_ore_rich_rings
+		}
+		else = {
+			add_deposit = d_mineral_lodes
+			add_deposit = d_mineral_lodes
+			add_deposit = d_mineral_lodes
+			add_deposit = d_mineral_lodes
+		}
+	}
+	else = {
+		limit = {
+			OR = {
+				has_planet_flag = minerals_5
+				has_planet_flag = minerals_larg
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+				}
+			}
+			add_deposit = d_ore_rich_rings
+			add_deposit = d_ore_rich_rings
+			add_deposit = d_ore_rich_rings
+			add_deposit = d_ore_rich_rings
+			add_deposit = d_ore_rich_rings
+		}
+		else = {
+			add_deposit = d_mineral_lodes
+			add_deposit = d_mineral_lodes
+			add_deposit = d_mineral_lodes
+			add_deposit = d_mineral_lodes
+			add_deposit = d_mineral_lodes
+		}
+	}
+	
+	# Energy Deposits
+	
+	if = {
+		limit = { has_modifier = precious_moon }
+		add_deposit = d_precious_moon
+	}
+	else_if = {
+		limit = { has_planet_flag = energy_1 }
+		if = {
+			limit = {
+				OR = {
+					is_planet_class = pc_molten_station
+					is_planet_class = pc_sulfur_station
+				}
+			}
+			add_deposit = d_geothermal_springs
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					is_barren_cold_station = yes
+					is_asteroid_station = yes
+				}
+			}
+			add_deposit = d_rich_regolith_formations
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_helium_clouds
+		}
+		else_if = {
+			limit = { is_planet_class = pc_greenhouse_station }
+			add_deposit = d_storm_area
+		}
+		else_if = {
+			limit = { is_planet_class = pc_scorched_station }
+			add_deposit = d_scorched_plain
+		}
+		else = {
+			add_deposit = d_hydrocarbon_deposits
+		}
+	}
+	else_if = {
+		limit = { has_planet_flag = energy_2 }
+		if = {
+			limit = {
+				OR = {
+					is_planet_class = pc_molten_station
+					is_planet_class = pc_sulfur_station
+				}
+			}
+			add_deposit = d_geothermal_springs
+			add_deposit = d_geothermal_springs
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					is_barren_cold_station = yes
+					is_asteroid_station = yes
+				}
+			}
+			add_deposit = d_rich_regolith_formations
+			add_deposit = d_rich_regolith_formations
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_helium_clouds
+			add_deposit = d_helium_clouds
+		}
+		else_if = {
+			limit = { is_planet_class = pc_greenhouse_station }
+			add_deposit = d_storm_area
+			add_deposit = d_storm_area
+		}
+		else_if = {
+			limit = { is_planet_class = pc_scorched_station }
+			add_deposit = d_scorched_plain
+			add_deposit = d_scorched_plain
+		}
+		else = {
+			add_deposit = d_hydrocarbon_deposits
+			add_deposit = d_hydrocarbon_deposits
+		}
+	}
+	else_if = {
+		limit = { has_planet_flag = energy_3 }
+		if = {
+			limit = {
+				OR = {
+					is_planet_class = pc_molten_station
+					is_planet_class = pc_sulfur_station
+				}
+			}
+			add_deposit = d_geothermal_springs
+			add_deposit = d_geothermal_springs
+			add_deposit = d_geothermal_springs
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					is_barren_cold_station = yes
+					is_asteroid_station = yes
+				}
+			}
+			add_deposit = d_rich_regolith_formations
+			add_deposit = d_rich_regolith_formations
+			add_deposit = d_rich_regolith_formations
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_helium_clouds
+			add_deposit = d_helium_clouds
+			add_deposit = d_helium_clouds
+		}
+		else_if = {
+			limit = { is_planet_class = pc_greenhouse_station }
+			add_deposit = d_storm_area
+			add_deposit = d_storm_area
+			add_deposit = d_storm_area
+		}
+		else_if = {
+			limit = { is_planet_class = pc_scorched_station }
+			add_deposit = d_scorched_plain
+			add_deposit = d_scorched_plain
+			add_deposit = d_scorched_plain
+		}
+		else = {
+			add_deposit = d_hydrocarbon_deposits
+			add_deposit = d_hydrocarbon_deposits
+			add_deposit = d_hydrocarbon_deposits
+		}
+	}
+	else_if = {
+		limit = { has_planet_flag = energy_4 }
+		if = {
+			limit = {
+				OR = {
+					is_planet_class = pc_molten_station
+					is_planet_class = pc_sulfur_station
+				}
+			}
+			add_deposit = d_geothermal_springs
+			add_deposit = d_geothermal_springs
+			add_deposit = d_geothermal_springs
+			add_deposit = d_geothermal_springs
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					is_barren_cold_station = yes
+					is_asteroid_station = yes
+				}
+			}
+			add_deposit = d_rich_regolith_formations
+			add_deposit = d_rich_regolith_formations
+			add_deposit = d_rich_regolith_formations
+			add_deposit = d_rich_regolith_formations
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_helium_clouds
+			add_deposit = d_helium_clouds
+			add_deposit = d_helium_clouds
+			add_deposit = d_helium_clouds
+		}
+		else_if = {
+			limit = { is_planet_class = pc_greenhouse_station }
+			add_deposit = d_storm_area
+			add_deposit = d_storm_area
+			add_deposit = d_storm_area
+			add_deposit = d_storm_area
+		}
+		else_if = {
+			limit = { is_planet_class = pc_scorched_station }
+			add_deposit = d_scorched_plain
+			add_deposit = d_scorched_plain
+			add_deposit = d_scorched_plain
+			add_deposit = d_scorched_plain
+		}
+		else = {
+			add_deposit = d_hydrocarbon_deposits
+			add_deposit = d_hydrocarbon_deposits
+			add_deposit = d_hydrocarbon_deposits
+			add_deposit = d_hydrocarbon_deposits
+		}
+	}
+	else = {
+		limit = {
+			OR = {
+				has_planet_flag = energy_5
+				has_planet_flag = energy_larg
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					is_planet_class = pc_molten_station
+					is_planet_class = pc_sulfur_station
+				}
+			}
+			add_deposit = d_geothermal_springs
+			add_deposit = d_geothermal_springs
+			add_deposit = d_geothermal_springs
+			add_deposit = d_geothermal_springs
+			add_deposit = d_geothermal_springs
+		}
+		else_if = {
+			limit = { 
+				OR = {
+					is_barren_cold_station = yes
+					is_asteroid_station = yes
+				}
+			}
+			add_deposit = d_rich_regolith_formations
+			add_deposit = d_rich_regolith_formations
+			add_deposit = d_rich_regolith_formations
+			add_deposit = d_rich_regolith_formations
+			add_deposit = d_rich_regolith_formations
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_helium_clouds
+			add_deposit = d_helium_clouds
+			add_deposit = d_helium_clouds
+			add_deposit = d_helium_clouds
+			add_deposit = d_helium_clouds
+		}
+		else_if = {
+			limit = { is_planet_class = pc_greenhouse_station }
+			add_deposit = d_storm_area
+			add_deposit = d_storm_area
+			add_deposit = d_storm_area
+			add_deposit = d_storm_area
+			add_deposit = d_storm_area
+		}
+		else_if = {
+			limit = { is_planet_class = pc_scorched_station }
+			add_deposit = d_scorched_plain
+			add_deposit = d_scorched_plain
+			add_deposit = d_scorched_plain
+			add_deposit = d_scorched_plain
+			add_deposit = d_scorched_plain
+		}
+		else = {
+			add_deposit = d_hydrocarbon_deposits
+			add_deposit = d_hydrocarbon_deposits
+			add_deposit = d_hydrocarbon_deposits
+			add_deposit = d_hydrocarbon_deposits
+			add_deposit = d_hydrocarbon_deposits
+		}
+	}
+	
+	# Physics Deposits
+	
+	if = {
+		limit = { 
+			OR = {
+				has_planet_flag = physics_1
+				has_planet_flag = physics_2
+				has_planet_flag = physics_3
+				has_planet_flag = physics_4
+				has_planet_flag = physics_5
+				has_planet_flag = physics_large
+			}
+		}
+		add_deposit = d_enigmatic_anomaly
+	}
+	
+	# Society Deposits
+	
+	if = {
+		limit = { has_modifier = atmospheric_ecosystem }
+		add_deposit = d_atmospheric_ecosystem
+	}
+	else_if = {
+		limit = { has_modifier = asteroid_life }
+		add_deposit = d_asteroid_life
+	}
+	else_if = {
+		limit = { has_modifier = extremophile_life_forms }
+		add_deposit = d_extremophile_life_forms
+	}
+	else_if = {
+		limit = { has_modifier = subterranean_ocean }
+		add_deposit = d_abyssal_exofauna
+	}
+	else_if = {
+		limit = { has_modifier = nuclear_devastation }
+		add_deposit = d_ancient_remains
+	}
+	else_if = {
+		limit = { has_modifier = greenhouse_effect }
+		add_deposit = d_mysterious_xenofacts
+	}
+	else_if = {
+		limit = { 
+			OR = {
+				has_planet_flag = society_1
+				has_planet_flag = society_2
+				has_planet_flag = society_3
+				has_planet_flag = society_4
+			}
+		}
+		add_deposit = d_odd_life_forms
+	}
+	else = {
+		limit = { 
+			OR = {
+				has_planet_flag = society_5
+				has_planet_flag = society_large
+			}
+		}
+		add_deposit = d_mysterious_xenofacts
+	}
+	
+	# Engineering Deposits
+	
+	if = {
+		limit = {
+			OR = {
+				has_modifier = derelict_shipyard
+				has_modifier = aerostat_colonies
+			}
+		}
+		add_deposit = d_derelict_structure
+	}
+	else_if = {
+		limit = {
+			has_modifier = alien_writing
+			has_modifier = towed_asteroid
+		}
+		add_deposit = d_alien_marks
+	}
+	else_if = {
+		limit = { has_modifier = nuclear_devastation }
+		#The action is repeated
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_planet_flag = engineering_1
+				has_planet_flag = engineering_2
+				has_planet_flag = engineering_3
+				has_planet_flag = engineering_4
+			}
+		}
+		if = {
+			limit = { has_modifier = starship_graveyard }
+			add_deposit = d_scrap_metal_graveyard
+		}
+		else_if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+				}
+			}
+			add_deposit = d_giant_vortex
+		}
+		else = {
+			add_deposit = d_cryogazers_valley
+		}
+	}
+	else = {
+		limit = { 
+			OR = {
+				has_planet_flag = engineering_5
+				has_planet_flag = engineering_large
+			}
+		}
+		add_deposit = d_alien_wreckage
+	}
+	
+	# Trade Value Deposits
+	
+	if = {
+		limit = { has_planet_flag = trade_value_1 }
+		add_trade_value_deposit = yes
+	}
+	
+	if = {
+		limit = { has_planet_flag = trade_value_2 }
+		add_trade_value_deposit = yes
+		add_trade_value_deposit = yes
+	}
+	
+	if = {
+		limit = { has_planet_flag = trade_value_3 }
+		add_trade_value_deposit = yes
+		add_trade_value_deposit = yes
+		add_trade_value_deposit = yes
+	}
+	
+	if = {
+		limit = { has_planet_flag = trade_value_4 }
+		add_trade_value_deposit = yes
+		add_trade_value_deposit = yes
+		add_trade_value_deposit = yes
+		add_trade_value_deposit = yes
+	}
+	
+	if = {
+		limit = {
+			OR = {
+				has_planet_flag = trade_value_5
+				has_planet_flag = trade_value_large
+			}
+		}
+		add_trade_value_deposit = yes
+		add_trade_value_deposit = yes
+		add_trade_value_deposit = yes
+		add_trade_value_deposit = yes
+		add_trade_value_deposit = yes
+	}
+	
+	# Alloys Deposits
+	
+	if = {
+		limit = { has_planet_flag = alloys_1 }
+		if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_scrap_metal_graveyard
+		}
+		else = {
+			add_deposit = d_rare_metal_deposits
+		}
+	}
+	
+	if = {
+		limit = { has_planet_flag = alloys_2 }
+		if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_scrap_metal_graveyard
+			add_deposit = d_scrap_metal_graveyard
+		}
+		else = {
+			add_deposit = d_rare_metal_deposits
+			add_deposit = d_rare_metal_deposits
+		}
+	}
+	
+	if = {
+		limit = { has_planet_flag = alloys_3 }
+		if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_scrap_metal_graveyard
+			add_deposit = d_scrap_metal_graveyard
+			add_deposit = d_scrap_metal_graveyard
+		}
+		else = {
+			add_deposit = d_rare_metal_deposits
+			add_deposit = d_rare_metal_deposits
+			add_deposit = d_rare_metal_deposits
+		}
+	}
+	
+	if = {
+		limit = { has_planet_flag = alloys_4 }
+		if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_scrap_metal_graveyard
+			add_deposit = d_scrap_metal_graveyard
+			add_deposit = d_scrap_metal_graveyard
+			add_deposit = d_scrap_metal_graveyard
+		}
+		else = {
+			add_deposit = d_rare_metal_deposits
+			add_deposit = d_rare_metal_deposits
+			add_deposit = d_rare_metal_deposits
+			add_deposit = d_rare_metal_deposits
+		}
+	}
+	
+	if = {
+		limit = { has_planet_flag = alloys_5 }
+		if = {
+			limit = {
+				OR = {
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_scrap_metal_graveyard
+			add_deposit = d_scrap_metal_graveyard
+			add_deposit = d_scrap_metal_graveyard
+			add_deposit = d_scrap_metal_graveyard
+			add_deposit = d_scrap_metal_graveyard
+		}
+		else = {
+			add_deposit = d_rare_metal_deposits
+			add_deposit = d_rare_metal_deposits
+			add_deposit = d_rare_metal_deposits
+			add_deposit = d_rare_metal_deposits
+			add_deposit = d_rare_metal_deposits
+		}
+	}
+	
+	# Exotic Gases Deposits
+	
+	if = {
+		limit = { has_planet_flag = exotic_gases_1 }
+		add_deposit = d_exotic_gases_vent
+	}
+	if = {
+		limit = { has_planet_flag = exotic_gases_2 }
+		add_deposit = d_exotic_gases_vent
+		add_deposit = d_exotic_gases_vent
+	}
+	if = {
+		limit = { has_planet_flag = exotic_gases_3 }
+		add_deposit = d_exotic_gases_vent
+		add_deposit = d_exotic_gases_vent
+		add_deposit = d_exotic_gases_vent
+	}
+	if = {
+		limit = { has_planet_flag = exotic_gases_4 }
+		add_deposit = d_exotic_gases_vent
+		add_deposit = d_exotic_gases_vent
+		add_deposit = d_exotic_gases_vent
+		add_deposit = d_exotic_gases_vent
+	}
+	if = {
+		limit = { has_planet_flag = exotic_gases_5 }
+		add_deposit = d_exotic_gases_vent
+		add_deposit = d_exotic_gases_vent
+		add_deposit = d_exotic_gases_vent
+		add_deposit = d_exotic_gases_vent
+		add_deposit = d_exotic_gases_vent
+	}
+	
+	# Rare Crystals Deposits
+	
+	if = {
+		limit = { has_planet_flag = rare_crystals_1 }
+		add_deposit = d_crystal_cavities
+	}
+	if = {
+		limit = { has_planet_flag = rare_crystals_2 }
+		add_deposit = d_crystal_cavities
+		add_deposit = d_crystal_cavities
+	}
+	if = {
+		limit = { has_planet_flag = rare_crystals_3 }
+		add_deposit = d_crystal_cavities
+		add_deposit = d_crystal_cavities
+		add_deposit = d_crystal_cavities
+	}
+	if = {
+		limit = { has_planet_flag = rare_crystals_4 }
+		add_deposit = d_crystal_cavities
+		add_deposit = d_crystal_cavities
+		add_deposit = d_crystal_cavities
+		add_deposit = d_crystal_cavities
+	}
+	if = {
+		limit = { has_planet_flag = rare_crystals_5 }
+		add_deposit = d_crystal_cavities
+		add_deposit = d_crystal_cavities
+		add_deposit = d_crystal_cavities
+		add_deposit = d_crystal_cavities
+		add_deposit = d_crystal_cavities
+	}
+	
+	# Volatile Motes Deposits
+	
+	if = {
+		limit = { has_planet_flag = volatile_motes_1 }
+		add_deposit = d_dust_cavities
+	}
+	if = {
+		limit = { has_planet_flag = volatile_motes_2 }
+		add_deposit = d_dust_cavities
+		add_deposit = d_dust_cavities
+	}
+	if = {
+		limit = { has_planet_flag = volatile_motes_3 }
+		add_deposit = d_dust_cavities
+		add_deposit = d_dust_cavities
+		add_deposit = d_dust_cavities
+	}
+	if = {
+		limit = { has_planet_flag = volatile_motes_4 }
+		add_deposit = d_dust_cavities
+		add_deposit = d_dust_cavities
+		add_deposit = d_dust_cavities
+		add_deposit = d_dust_cavities
+	}
+	if = {
+		limit = { has_planet_flag = volatile_motes_5 }
+		add_deposit = d_dust_cavities
+		add_deposit = d_dust_cavities
+		add_deposit = d_dust_cavities
+		add_deposit = d_dust_cavities
+		add_deposit = d_dust_cavities
+	}
+	
+	# Zro Deposits
+	
+	if = {
+		limit = { has_planet_flag = zro_deposit_1 }
+		add_deposit = d_zro_source
+	}
+	if = {
+		limit = { has_planet_flag = zro_deposit_2 }
+		add_deposit = d_zro_source
+		add_deposit = d_zro_source
+	}
+	if = {
+		limit = { has_planet_flag = zro_deposit_3 }
+		add_deposit = d_zro_source
+		add_deposit = d_zro_source
+		add_deposit = d_zro_source
+	}
+	
+	# Dark Matter Deposits
+	
+	if = {
+		limit = { has_planet_flag = dark_matter_1 }
+		add_deposit = d_dark_matter_formation
+	}
+	if = {
+		limit = { has_planet_flag = dark_matter_2 }
+		add_deposit = d_dark_matter_formation
+		add_deposit = d_dark_matter_formation
+	}
+	if = {
+		limit = {
+			OR = {
+				has_planet_flag = dark_matter_3
+				has_planet_flag = dark_matter_10
+			}
+		}
+		add_deposit = d_dark_matter_formation
+		add_deposit = d_dark_matter_formation
+		add_deposit = d_dark_matter_formation
+	}
+	
+	# Living Metal Deposits
+	
+	if = {
+		limit = { has_planet_flag = living_metal_deposit }
+		add_deposit = d_living_metal_source
+	}
+	
+	# Nanites Deposits
+	if = {
+		limit = { has_planet_flag = nanites_deposit }
+		add_deposit = d_nanites_source
+	}
+}
+
+set_orbital_deposits = {
+	# Minerals
+	if = {
+		limit = { has_planet_flag = minerals_1 }
+		add_deposit = d_minerals_1
+	}
+	else_if = {
+		limit = { has_planet_flag = minerals_2 }
+		add_deposit = d_minerals_2
+	}
+	else_if = {
+		limit = { has_planet_flag = minerals_3 }
+		add_deposit = d_minerals_3
+	}
+	else_if = {
+		limit = { has_planet_flag = minerals_4 }
+		add_deposit = d_minerals_4
+	}
+	else_if = {
+		limit = { has_planet_flag = minerals_5 }
+		add_deposit = d_minerals_5
+	}
+	else_if = {
+		limit = { has_planet_flag = minerals_larg }
+		add_deposit = d_minerals_6
+	}
+		
+	# Energy
+	else_if = {
+		limit = { has_planet_flag = energy_1 }
+		add_deposit = d_energy_1
+	}
+	else_if = {
+		limit = { has_planet_flag = energy_2 }
+		add_deposit = d_energy_2
+	}
+	else_if = {
+		limit = { has_planet_flag = energy_3 }
+		add_deposit = d_energy_3
+	}
+	else_if = {
+		limit = { has_planet_flag = energy_4 }
+		add_deposit = d_energy_4
+	}
+	else_if = {
+		limit = { has_planet_flag = energy_5 }
+		add_deposit = d_energy_5
+	}
+	else_if = {
+		limit = { has_planet_flag = energy_larg }
+		add_deposit = d_energy_6
+	}
+	
+	# Society
+	else_if = {
+		limit = { has_planet_flag = society_1 }
+		add_deposit = d_society_1
+	}
+	else_if = {
+		limit = { has_planet_flag = society_2 }
+		add_deposit = d_society_2
+	}
+	else_if = {
+		limit = { has_planet_flag = society_3 }
+		add_deposit = d_society_3
+	}
+	else_if = {
+		limit = { has_planet_flag = society_4 }
+		add_deposit = d_society_4
+	}
+	else_if = {
+		limit = { has_planet_flag = society_5 }
+		add_deposit = d_society_5
+	}
+	else_if = {
+		limit = { has_planet_flag = society_larg }
+		add_deposit = d_society_6
+	}
+	
+	# Physics
+	else_if = {
+		limit = { has_planet_flag = physics_1 }
+		add_deposit = d_physics_1
+	}
+	else_if = {
+		limit = { has_planet_flag = physics_2 }
+		add_deposit = d_physics_2
+	}
+	else_if = {
+		limit = { has_planet_flag = physics_3 }
+		add_deposit = d_physics_3
+	}
+	else_if = {
+		limit = { has_planet_flag = physics_4 }
+		add_deposit = d_physics_4
+	}
+	else_if = {
+		limit = { has_planet_flag = physics_5 }
+		add_deposit = d_physics_5
+	}
+	else_if = {
+		limit = { has_planet_flag = physics_larg }
+		add_deposit = d_physics_6
+	}
+		
+	# Engineering
+	else_if = {
+		limit = { has_planet_flag = engineering_1 }
+		add_deposit = d_engineering_1
+	}
+	else_if = {
+		limit = { has_planet_flag = engineering_2 }
+		add_deposit = d_engineering_2
+	}
+	else_if = {
+		limit = { has_planet_flag = engineering_3 }
+		add_deposit = d_engineering_3
+	}
+	else_if = {
+		limit = { has_planet_flag = engineering_4 }
+		add_deposit = d_engineering_4
+	}
+	else_if = {
+		limit = { has_planet_flag = engineering_5 }
+		add_deposit = d_engineering_5
+	}
+	else_if = {
+		limit = { has_planet_flag = engineering_larg }
+		add_deposit = d_engineering_6
+	}
+	
+	# Trade Value
+	else_if = {
+		limit = { has_planet_flag = trade_value_1 }
+		add_deposit = d_trade_value_1
+	}
+	else_if = {
+		limit = { has_planet_flag = trade_value_2 }
+		add_deposit = d_trade_value_2
+	}
+	else_if = {
+		limit = { has_planet_flag = trade_value_3 }
+		add_deposit = d_trade_value_3
+	}
+	else_if = {
+		limit = { has_planet_flag = trade_value_4 }
+		add_deposit = d_trade_value_4
+	}
+	else_if = {
+		limit = { has_planet_flag = trade_value_5 }
+		add_deposit = d_trade_value_5
+	}
+	else_if = {
+		limit = { has_planet_flag = trade_value_larg }
+		add_deposit = d_trade_value_6
+	}
+		
+	# # Alloys
+	# else_if = {
+	# 	limit = { has_planet_flag = alloys_1 }
+	# 	add_deposit = d_alloys_1
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = alloys_2 }
+	# 	add_deposit = d_alloys_2
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = alloys_3 }
+	# 	add_deposit = d_alloys_3
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = alloys_4 }
+	# 	add_deposit = d_alloys_4
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = alloys_5 }
+	# 	add_deposit = d_alloys_5
+	# }
+	
+	# Food
+	else_if = {
+		limit = { has_planet_flag = food_3 }
+		add_deposit = d_food_3
+	}
+	else_if = {
+		limit = { has_planet_flag = food_10 }
+		add_deposit = d_food_10
+	}
+
+	# Hydrogen
+	else_if = {
+		limit = { has_planet_flag = hydrogen_1 }
+		add_deposit = d_hydrogen_1
+	}
+	else_if = {
+		limit = { has_planet_flag = hydrogen_2 }
+		add_deposit = d_hydrogen_2
+	}
+	else_if = {
+		limit = { has_planet_flag = hydrogen_3 }
+		add_deposit = d_hydrogen_3
+	}
+	else_if = {
+		limit = { has_planet_flag = hydrogen_4 }
+		add_deposit = d_hydrogen_4
+	}
+	else_if = {
+		limit = { has_planet_flag = hydrogen_5 }
+		add_deposit = d_hydrogen_5
+	}
+
+	# Helium-3
+	else_if = {
+		limit = { has_planet_flag = helium_3_1 }
+		add_deposit = d_helium_3_1
+	}
+	else_if = {
+		limit = { has_planet_flag = helium_3_2 }
+		add_deposit = d_helium_3_2
+	}
+	else_if = {
+		limit = { has_planet_flag = helium_3_3 }
+		add_deposit = d_helium_3_3
+	}
+	else_if = {
+		limit = { has_planet_flag = helium_3_4 }
+		add_deposit = d_helium_3_4
+	}
+	else_if = {
+		limit = { has_planet_flag = helium_3_5 }
+		add_deposit = d_helium_3_5
+	}
+
+	# Beryllium
+	else_if = {
+		limit = { has_planet_flag = beryllium_1 }
+		add_deposit = d_beryllium_1
+	}
+	else_if = {
+		limit = { has_planet_flag = beryllium_2 }
+		add_deposit = d_beryllium_2
+	}
+	else_if = {
+		limit = { has_planet_flag = beryllium_3 }
+		add_deposit = d_beryllium_3
+	}
+	else_if = {
+		limit = { has_planet_flag = beryllium_4 }
+		add_deposit = d_beryllium_4
+	}
+	else_if = {
+		limit = { has_planet_flag = beryllium_5 }
+		add_deposit = d_beryllium_5
+	}
+
+	# Lithium
+	else_if = {
+		limit = { has_planet_flag = lithium_1 }
+		add_deposit = d_lithium_1
+	}
+	else_if = {
+		limit = { has_planet_flag = lithium_2 }
+		add_deposit = d_lithium_2
+	}
+	else_if = {
+		limit = { has_planet_flag = lithium_3 }
+		add_deposit = d_lithium_3
+	}
+	else_if = {
+		limit = { has_planet_flag = lithium_4 }
+		add_deposit = d_lithium_4
+	}
+	else_if = {
+		limit = { has_planet_flag = lithium_5 }
+		add_deposit = d_lithium_5
+	}
+
+	# Titanium
+	else_if = {
+		limit = { has_planet_flag = titanium_1 }
+		add_deposit = d_titanium_1
+	}
+	else_if = {
+		limit = { has_planet_flag = titanium_2 }
+		add_deposit = d_titanium_2
+	}
+	else_if = {
+		limit = { has_planet_flag = titanium_3 }
+		add_deposit = d_titanium_3
+	}
+	else_if = {
+		limit = { has_planet_flag = titanium_4 }
+		add_deposit = d_titanium_4
+	}
+	else_if = {
+		limit = { has_planet_flag = titanium_5 }
+		add_deposit = d_titanium_5
+	}
+
+	# Palladium
+	else_if = {
+		limit = { has_planet_flag = palladium_1 }
+		add_deposit = d_palladium_1
+	}
+	else_if = {
+		limit = { has_planet_flag = palladium_2 }
+		add_deposit = d_palladium_2
+	}
+	else_if = {
+		limit = { has_planet_flag = palladium_3 }
+		add_deposit = d_palladium_3
+	}
+	else_if = {
+		limit = { has_planet_flag = palladium_4 }
+		add_deposit = d_palladium_4
+	}
+	else_if = {
+		limit = { has_planet_flag = palladium_5 }
+		add_deposit = d_palladium_5
+	}
+
+	# Iridium
+	else_if = {
+		limit = { has_planet_flag = iridium_1 }
+		add_deposit = d_iridium_1
+	}
+	else_if = {
+		limit = { has_planet_flag = iridium_2 }
+		add_deposit = d_iridium_2
+	}
+	else_if = {
+		limit = { has_planet_flag = iridium_3 }
+		add_deposit = d_iridium_3
+	}
+	else_if = {
+		limit = { has_planet_flag = iridium_4 }
+		add_deposit = d_iridium_4
+	}
+	else_if = {
+		limit = { has_planet_flag = iridium_5 }
+		add_deposit = d_iridium_5
+	}
+
+	# Platinum
+	else_if = {
+		limit = { has_planet_flag = platinum_1 }
+		add_deposit = d_platinum_1
+	}
+	else_if = {
+		limit = { has_planet_flag = platinum_2 }
+		add_deposit = d_platinum_2
+	}
+	else_if = {
+		limit = { has_planet_flag = platinum_3 }
+		add_deposit = d_platinum_3
+	}
+	else_if = {
+		limit = { has_planet_flag = platinum_4 }
+		add_deposit = d_platinum_4
+	}
+	else_if = {
+		limit = { has_planet_flag = platinum_5 }
+		add_deposit = d_platinum_5
+	}
+
+	# Uranium
+	else_if = {
+		limit = { has_planet_flag = uranium_1 }
+		add_deposit = d_uranium_1
+	}
+	else_if = {
+		limit = { has_planet_flag = uranium_2 }
+		add_deposit = d_uranium_2
+	}
+	else_if = {
+		limit = { has_planet_flag = uranium_3 }
+		add_deposit = d_uranium_3
+	}
+	else_if = {
+		limit = { has_planet_flag = uranium_4 }
+		add_deposit = d_uranium_4
+	}
+	else_if = {
+		limit = { has_planet_flag = uranium_5 }
+		add_deposit = d_uranium_5
+	}
+
+	# # Exotic Gases
+	# else_if = {
+	# 	limit = { has_planet_flag = exotic_gases_1 }
+	# 	add_deposit = d_exotic_gases_1
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = exotic_gases_2 }
+	# 	add_deposit = d_exotic_gases_2
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = exotic_gases_3 }
+	# 	add_deposit = d_exotic_gases_3
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = exotic_gases_4 }
+	# 	add_deposit = d_exotic_gases_4
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = exotic_gases_5 }
+	# 	add_deposit = d_exotic_gases_5
+	# }
+	#
+	# # Rare Crystals
+	# else_if = {
+	# 	limit = { has_planet_flag = rare_crystals_1 }
+	# 	add_deposit = d_rare_crystals_1
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = rare_crystals_2 }
+	# 	add_deposit = d_rare_crystals_2
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = rare_crystals_3 }
+	# 	add_deposit = d_rare_crystals_3
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = rare_crystals_4 }
+	# 	add_deposit = d_rare_crystals_4
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = rare_crystals_5 }
+	# 	add_deposit = d_rare_crystals_5
+	# }
+	#
+	#
+	# # Volatile Motes
+	# else_if = {
+	# 	limit = { has_planet_flag = volatile_motes_1 }
+	# 	add_deposit = d_volatile_motes_1
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = volatile_motes_2 }
+	# 	add_deposit = d_volatile_motes_2
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = volatile_motes_3 }
+	# 	add_deposit = d_volatile_motes_3
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = volatile_motes_4 }
+	# 	add_deposit = d_volatile_motes_4
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = volatile_motes_5 }
+	# 	add_deposit = d_volatile_motes_5
+	# }
+	#
+	#
+	# # Zro Deposit
+	# else_if = {
+	# 	limit = { has_planet_flag = zro_deposit_1 }
+	# 	add_deposit = d_zro_deposit_1
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = zro_deposit_2 }
+	# 	add_deposit = d_zro_deposit_2
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = zro_deposit_3 }
+	# 	add_deposit = d_zro_deposit_3
+	# }
+	#
+	#
+	# # Dark Matter
+	# else_if = {
+	# 	limit = { has_planet_flag = dark_matter_1 }
+	# 	add_deposit = d_dark_matter_deposit_1
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = dark_matter_2 }
+	# 	add_deposit = d_dark_matter_deposit_2
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = dark_matter_3 }
+	# 	add_deposit = d_dark_matter_deposit_3
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = dark_matter_10 }
+	# 	add_deposit = d_dark_matter_deposit_10
+	# }
+	#
+	#
+	# # Living Metal
+	# else_if = {
+	# 	limit = { has_planet_flag = living_metal_deposit }
+	# 	add_deposit = d_living_metal_deposit
+	# }
+	#
+	# # Nanites Deposit
+	# else = {
+	# 	limit = { has_planet_flag = nanites_deposit }
+	# 	add_deposit = d_nanites_deposit
+	# }
+	
+	remove_planetary_station_flags = yes
+}
+
+destroy_planetary_station = {
+	remove_planet_flag = planetary_station
+	
+	destroy_colony = yes
+	
+	if = {
+		limit = { is_planet_class = pc_barren_station }
+		change_pc = { class = pc_barren inherit_entity = yes }
+	}	
+	if = {
+		limit = { is_barren_cold_station = yes }
+		change_pc = { class = pc_barren_cold inherit_entity = yes }
+	}
+	if = {
+		limit = { is_planet_class = pc_asteroid_station }
+		change_pc = { class = pc_asteroid inherit_entity = yes }
+	}
+	if = {
+		limit = { is_planet_class = pc_ice_asteroid_station }
+		change_pc = { class = pc_ice_asteroid inherit_entity = yes }
+	}
+	if = {
+		limit = { is_planet_class = pc_crystal_asteroid_station }
+		change_pc = { class = pc_rare_crystal_asteroid inherit_entity = yes }
+	}
+	if = {
+		limit = { is_frozen_station = yes }
+		change_pc = { class = pc_frozen inherit_entity = yes }
+	}
+	if = {
+		limit = { is_planet_class = pc_molten_station }
+		change_pc = { class = pc_molten inherit_entity = yes }
+	}
+	if = {
+		limit = { is_planet_class = pc_cracking_station }
+		change_pc = { class = pc_broken inherit_entity = yes }
+	}
+	if = {
+		limit = { is_planet_class = pc_toxic_station }
+		change_pc = { class = pc_toxic inherit_entity = yes }
+	}
+	if = {
+		limit = { is_planet_class = pc_methane_station }
+		change_pc = { class = pc_toxic inherit_entity = yes }
+		add_modifier = {
+			modifier = methane_planet
+			days = -1
+		}
+	}
+	if = {
+		limit = { is_gas_giant_station = yes }
+		change_pc = { class = pc_gas_giant inherit_entity = yes }
+	}
+	if = {
+		limit = { is_ice_giant_station = yes }
+		change_pc = { class = pc_gas_giant inherit_entity = yes }
+		add_modifier = {
+			modifier = ice_giant
+			days = -1
+		}
+	}
+	if = {
+		limit = { is_planet_class = pc_hot_giant_station }
+		change_pc = { class = pc_hot_giant inherit_entity = yes }
+	}
+	if = {
+		limit = { is_planet_class = pc_greenhouse_station }
+		change_pc = { class = pc_toxic inherit_entity = yes }
+		add_modifier = {
+			modifier = greenhouse_planet
+			days = -1
+		}
+	}
+	if = {
+		limit = { is_planet_class = pc_scorched_station }
+		change_pc = { class = pc_molten inherit_entity = yes }
+		add_modifier = {
+			modifier = scorched_planet
+			days = -1
+		}
+	}
+	if = {
+		limit = { is_planet_class = pc_sulfur_station }
+		change_pc = { class = pc_molten inherit_entity = yes }
+		add_modifier = {
+			modifier = sulfur_planet
+			days = -1
+		}
+	}
+	
+	#clear_planet_modifiers = yes
+	clear_deposits = yes
+	set_orbital_deposits = yes
+	remove_planetary_station_flags = yes
+	remove_planetary_station_modifiers = yes
+	
+	add_modifier = { modifier = "station_wreckage" days = -1 }
+}
+
+deploy_planetary_station = {
+	if = {
+		limit = { is_planet_class = pc_barren }
+		change_pc = { class = pc_barren_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_barren_blocker
+		}
+	}
+	
+	if = {
+		limit = { is_planet_class = pc_barren_cold }
+			if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_planet_class = pc_tropical }
+				}
+				change_pc = { class = pc_barren_cold_station_moon_1 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = {
+						OR = {
+							is_planet_class = pc_continental
+							is_planet_class = pc_ocean
+						}
+					}
+				}
+				change_pc = { class = pc_barren_cold_station_moon_2 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_dry = yes }
+				}
+				change_pc = { class = pc_barren_cold_station_moon_3 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_cold = yes }
+				}
+				change_pc = { class = pc_barren_cold_station_moon_4 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_planet_class = pc_barren }
+				}
+				change_pc = { class = pc_barren_cold_station_moon_5 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_planet_class = pc_barren_cold }
+				}
+				change_pc = { class = pc_barren_cold_station_moon_6 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_planet_class = pc_toxic }
+				}
+				change_pc = { class = pc_barren_cold_station_moon_7 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_planet_class = pc_molten }
+				}
+				change_pc = { class = pc_barren_cold_station_moon_8 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_planet_class = pc_frozen }
+				}
+				change_pc = { class = pc_barren_cold_station_moon_9 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_planet_class = pc_gas_giant }
+				}
+				change_pc = { class = pc_barren_cold_station_moon_10 inherit_entity = yes }
+			}
+			else = { change_pc = { class = pc_barren_cold_station inherit_entity = yes } }
+			
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_barren_cold_blocker
+		}
+	}
+	
+	if = {
+		limit = { is_planet_class = pc_asteroid }
+		change_pc = { class = pc_asteroid_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_asteroid_blocker
+		}
+	}
+	
+	if = {
+		limit = { is_planet_class = pc_ice_asteroid }
+		change_pc = { class = pc_ice_asteroid_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_ice_asteroid_blocker
+		}
+	}
+	
+	if = {
+		limit = { is_planet_class = pc_rare_crystal_asteroid }
+		change_pc = { class = pc_crystal_asteroid_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_crystal_asteroid_blocker
+		}
+	}
+	
+	if = {
+		limit = { is_planet_class = pc_frozen }
+			if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_planet_class = pc_tropical }
+				}
+				change_pc = { class = pc_frozen_station_moon_1 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = {
+						OR = {
+							is_planet_class = pc_continental
+							is_planet_class = pc_ocean
+						}
+					}
+				}
+				change_pc = { class = pc_frozen_station_moon_2 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_dry = yes }
+				}
+				change_pc = { class = pc_frozen_station_moon_3 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_cold = yes }
+				}
+				change_pc = { class = pc_frozen_station_moon_4 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_planet_class = pc_barren }
+				}
+				change_pc = { class = pc_frozen_station_moon_5 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_planet_class = pc_barren_cold }
+				}
+				change_pc = { class = pc_frozen_station_moon_6 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_planet_class = pc_toxic }
+				}
+				change_pc = { class = pc_frozen_station_moon_7 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_planet_class = pc_molten }
+				}
+				change_pc = { class = pc_frozen_station_moon_8 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_planet_class = pc_frozen }
+				}
+				change_pc = { class = pc_frozen_station_moon_9 inherit_entity = yes }
+			}
+			else_if = {
+				limit = {
+					is_moon = yes
+					is_scope_type = planet # safety check
+					exists = orbit
+					orbit = { is_planet_class = pc_gas_giant }
+				}
+				change_pc = { class = pc_frozen_station_moon_10 inherit_entity = yes }
+			}
+			else = { change_pc = { class = pc_frozen_station inherit_entity = yes } }
+			
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_frozen_blocker
+		}
+	}
+	
+	if = {
+		limit = { 
+			is_planet_class = pc_molten
+			NOR = {
+				has_modifier = scorched_planet
+				has_modifier = sulfur_planet
+			}
+		}
+		change_pc = { class = pc_molten_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_molten_blocker
+		}
+	}
+	
+	if = {
+		limit = { is_planet_class = pc_broken }
+		change_pc = { class = pc_cracking_station inherit_entity = yes }
+		set_planet_flag = cracking_station
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_broken_blocker
+		}
+	}
+	
+	if = {
+		limit = { 
+			is_planet_class = pc_toxic
+			NOR = {
+				has_modifier = methane_planet
+				has_modifier = greenhouse_planet
+			}
+		}
+		change_pc = { class = pc_toxic_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_toxic_blocker
+		}
+	}
+	
+	if = {
+		limit = { has_modifier = methane_planet }
+		remove_modifier = methane_planet
+		change_pc = { class = pc_methane_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_methane_blocker
+		}
+	}
+	
+	if = {
+		limit = { 
+			is_planet_class = pc_gas_giant 
+			NOT = { has_modifier = ice_giant }
+		}
+		if = {
+			limit = { has_planet_flag = blue_gas_giant }
+			if = {
+				limit = { has_ring = yes }
+				change_pc = { class = pc_gas_giant_station_blue_ring inherit_entity = yes }
+			}
+			else = {
+				change_pc = { class = pc_gas_giant_station_blue inherit_entity = yes }
+			}
+		}
+		else_if = {
+			limit = { has_planet_flag = green_gas_giant }
+			if = {
+				limit = { has_ring = yes }
+				change_pc = { class = pc_gas_giant_station_green_ring inherit_entity = yes }
+			}
+			else = {
+				change_pc = { class = pc_gas_giant_station_green inherit_entity = yes }
+			}
+		}
+		else_if = {
+			limit = { has_planet_flag = bright_gas_giant }
+			if = {
+				limit = { has_ring = yes }
+				change_pc = { class = pc_gas_giant_station_bright_ring inherit_entity = yes }
+			}
+			else = {
+				change_pc = { class = pc_gas_giant_station_bright inherit_entity = yes }
+			}
+		}
+		else = {
+			if = {
+				limit = { has_ring = yes }
+				change_pc = { class = pc_gas_giant_station_ring inherit_entity = yes }
+			}
+			else = {
+				change_pc = { class = pc_gas_giant_station inherit_entity = yes }
+			}
+		}
+
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_gas_giant_blocker
+		}
+	}
+	
+	if = {
+		limit = { has_modifier = ice_giant }
+		remove_modifier = ice_giant
+		if = {
+			limit = { has_ring = yes }
+			change_pc = { class = pc_ice_giant_station_ring inherit_entity = yes }
+		}
+		else = {
+			change_pc = { class = pc_ice_giant_station inherit_entity = yes }
+		}
+
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_ice_giant_blocker
+		}
+	}
+	
+	if = {
+		limit = { is_planet_class = pc_hot_giant  }
+		change_pc = { class = pc_hot_giant_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_hot_giant_blocker
+		}
+	}
+	
+	if = {
+		limit = { has_modifier = greenhouse_planet }
+		remove_modifier = greenhouse_planet
+		change_pc = { class = pc_greenhouse_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_greenhouse_blocker
+		}
+	}
+	
+	if = {
+		limit = { has_modifier = scorched_planet }
+		remove_modifier = scorched_planet
+		change_pc = { class = pc_scorched_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_scorched_blocker
+		}
+	}
+	
+	if = {
+		limit = { has_modifier = sulfur_planet }
+		remove_modifier = sulfur_planet
+		change_pc = { class = pc_sulfur_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_sulfur_blocker
+		}
+	}
+	
+	if = {
+		limit = { has_orbital_station = yes }
+		orbital_station = {
+			dismantle = yes
+		}
+	}
+	
+	if = {
+		limit = { has_modifier = station_wreckage }
+		remove_modifier = station_wreckage
+	}
+}
+
+#set_hot_giant_entity = {
+	#set_planet_entity = { entity = "hot_giant_01_entity" picture = pc_hot_giant atmosphere_color = hsv { 0.1 0.45 1.1 } atmosphere_intensity = 1.1 atmosphere_width = 1.0 }
+#}
+
+# set_puffy_planet_entity = {
+	# random_list = {
+		# 10 = { set_planet_entity = { entity = "gas_giant_10_entity" picture = pc_gas_supergiant } }
+		# 10 = { set_planet_entity = { entity = "gas_giant_12_entity" picture = pc_gas_supergiant } }
+		# 20 = { set_planet_entity = { entity = "gas_giant_13_entity" picture = pc_gas_supergiant } }
+		# 20 = { set_planet_entity = { entity = "gas_giant_18_entity" picture = pc_gas_supergiant } }
+		# 20 = { set_planet_entity = { entity = "gas_giant_26_entity" picture = pc_gas_supergiant } }
+		# 20 = { set_planet_entity = { entity = "gas_giant_53_entity" picture = pc_gas_supergiant } }
+	# }
+	# change_planet_size = +8
+# }
+
+set_ice_giant_entity = {
+	random_list = {
+		10 = { set_planet_entity = { entity = "gas_giant_14_entity" picture = pc_ice_giant atmosphere_color = hsv { 0.61 0.51 0.65 } atmosphere_intensity = 0.1 atmosphere_width = 1.0 } }
+		10 = { set_planet_entity = { entity = "gas_giant_23_entity" picture = pc_ice_giant atmosphere_color = hsv { 0.555 0.5 0.9 } atmosphere_intensity = 0.1 atmosphere_width = 1.0 } }
+		10 = { set_planet_entity = { entity = "gas_giant_48_entity" picture = pc_ice_giant atmosphere_color = hsv { 0.55 0.46 0.9 } atmosphere_intensity = 0.1 atmosphere_width = 1.0 } }
+		10 = { set_planet_entity = { entity = "gas_giant_49_entity" picture = pc_ice_giant atmosphere_color = hsv { 0.51 0.51 0.9 } atmosphere_intensity = 0.1 atmosphere_width = 1.0 } }
+		10 = { set_planet_entity = { entity = "gas_giant_51_entity" picture = pc_ice_giant atmosphere_color = hsv { 0.66 0.46 0.9 } atmosphere_intensity = 0.1 atmosphere_width = 1.0 } }
+		10 = { set_planet_entity = { entity = "gas_giant_52_entity" picture = pc_ice_giant atmosphere_color = hsv { 0.55 0.46 0.9 } atmosphere_intensity = 0.1 atmosphere_width = 1.0 } }
+		10 = { set_planet_entity = { entity = "gas_giant_53_entity" picture = pc_ice_giant atmosphere_color = hsv { 0.66 0.46 0.9 } atmosphere_intensity = 0.1 atmosphere_width = 1.0 } }
+		10 = { set_planet_entity = { entity = "gas_giant_60_entity" picture = pc_ice_giant atmosphere_color = hsv { 0.58 0.68 0.9 } atmosphere_intensity = 0.1 atmosphere_width = 1.0 } }
+		10 = { set_planet_entity = { entity = "gas_giant_61_entity" picture = pc_ice_giant atmosphere_color = hsv { 0.55 0.51 0.9 } atmosphere_intensity = 0.1 atmosphere_width = 1.0 } }
+		10 = { set_planet_entity = { entity = "gas_giant_62_entity" picture = pc_ice_giant atmosphere_color = hsv { 0.58 0.68 0.9 } atmosphere_intensity = 0.1 atmosphere_width = 1.0 } }
+	}
+}
+
+set_warm_giant_entity = {
+	random_list = {
+		2.3 = { set_planet_entity = { entity = "gas_giant_01_entity" } }
+		2.2 = { set_planet_entity = { entity = "gas_giant_02_entity" } set_planet_flag = blue_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_03_entity" } set_planet_flag = green_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_04_entity" } set_planet_flag = green_gas_giant }
+		2.3 = { set_planet_entity = { entity = "gas_giant_05_entity" } }
+		2.2 = { set_planet_entity = { entity = "gas_giant_06_entity" } set_planet_flag = blue_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_07_entity" } set_planet_flag = green_gas_giant }
+		2.3 = { set_planet_entity = { entity = "gas_giant_08_entity" } }
+		2.3 = { set_planet_entity = { entity = "gas_giant_09_entity" } }
+		2.2 = { set_planet_entity = { entity = "gas_giant_10_entity"  } set_planet_flag = blue_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_11_entity" } set_planet_flag = blue_gas_giant }
+		2.3 = { set_planet_entity = { entity = "gas_giant_12_entity"  } set_planet_flag = bright_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_13_entity"  } set_planet_flag = green_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_15_entity" } set_planet_flag = blue_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_16_entity" } set_planet_flag = blue_gas_giant }
+		2.3 = { set_planet_entity = { entity = "gas_giant_17_entity" } }
+		2.3 = { set_planet_entity = { entity = "gas_giant_18_entity" } }
+		2.2 = { set_planet_entity = { entity = "gas_giant_19_entity" } set_planet_flag = green_gas_giant }
+		2.3 = { set_planet_entity = { entity = "gas_giant_20_entity" } }
+		2.2 = { set_planet_entity = { entity = "gas_giant_24_entity" } set_planet_flag = blue_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_25_entity" } set_planet_flag = green_gas_giant }
+		2.3 = { set_planet_entity = { entity = "gas_giant_26_entity" } }
+		2.2 = { set_planet_entity = { entity = "gas_giant_28_entity" } set_planet_flag = blue_gas_giant }
+		2.3 = { set_planet_entity = { entity = "gas_giant_29_entity" } set_planet_flag = bright_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_31_entity" } set_planet_flag = blue_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_32_entity" } }
+		2.2 = { set_planet_entity = { entity = "gas_giant_33_entity" } }
+		2.2 = { set_planet_entity = { entity = "gas_giant_34_entity" } }
+		2.2 = { set_planet_entity = { entity = "gas_giant_35_entity" } set_planet_flag = blue_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_36_entity" } set_planet_flag = bright_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_37_entity" } set_planet_flag = blue_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_38_entity" } set_planet_flag = blue_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_40_entity" } set_planet_flag = bright_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_41_entity" } set_planet_flag = bright_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_42_entity" } }
+		2.2 = { set_planet_entity = { entity = "gas_giant_43_entity" } set_planet_flag = blue_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_45_entity" } set_planet_flag = bright_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_46_entity" } set_planet_flag = bright_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_47_entity" } set_planet_flag = green_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_54_entity" } }
+		2.2 = { set_planet_entity = { entity = "gas_giant_55_entity" } set_planet_flag = blue_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_56_entity" } set_planet_flag = bright_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_57_entity" } set_planet_flag = green_gas_giant }
+		2.2 = { set_planet_entity = { entity = "gas_giant_58_entity" } }
+		2.2 = { set_planet_entity = { entity = "gas_giant_59_entity" } }
+	}
+}
+
+set_methane_entity = {
+	set_planet_entity = { 
+		entity = "methane_planet_01_entity"
+		picture = pc_methane
+		atmosphere_color = hsv { 0.36 0.45 0.9 }
+		atmosphere_intensity = 0.1
+		atmosphere_width = 1.2 
+	}
+}
+
+set_greenhouse_entity = {
+	random_list = {
+		34 = { set_planet_entity = { entity = "greenhouse_planet_01_entity" picture = pc_greenhouse atmosphere_color = hsv { 0.854 0.072 0.7 } atmosphere_intensity = 0.2 atmosphere_width = 1.0 } }
+		33 = { set_planet_entity = { entity = "greenhouse_planet_02_entity" picture = pc_greenhouse atmosphere_color = hsv { 0.854 0.072 0.7 } atmosphere_intensity = 0.2 atmosphere_width = 1.0 } }
+		33 = { set_planet_entity = { entity = "greenhouse_planet_03_entity" picture = pc_greenhouse atmosphere_color = hsv { 0.854 0.072 0.7 } atmosphere_intensity = 0.2 atmosphere_width = 1.0 } }
+	}
+}
+
+set_scorched_entity = {
+	set_planet_entity = { 
+		entity = "scorched_planet_01_entity"
+		picture = pc_scorched
+		atmosphere_color = hsv { 0.8 0.15 0.6 }
+		atmosphere_intensity = 0.1
+		atmosphere_width = 1.0 
+	}
+}
+
+set_sulfur_entity = {
+	set_planet_entity = { 
+		entity = "sulfur_planet_01_entity"
+		picture = pc_sulfur
+		atmosphere_color = hsv { 0.097 0.45 1.4 }
+		atmosphere_intensity = 0.05
+		atmosphere_width = 1.0 
+	}
+}
+
+add_trade_value_deposit = {
+	random_list = {
+		33 = {
+			#Tourist Deposit
+			modifier = {
+				factor = 0.25
+				is_asteroid_station = yes
+			}
+			add_tourist_deposit = yes
+		}
+		33 = {
+			#Prospector Deposit
+			modifier = {
+				factor = 0
+				AND = {
+					OR = { 
+						is_gas_giant_station = yes
+						is_ice_giant_station = yes
+					}
+					has_ring = no
+				}
+			}
+			add_prospector_deposit = yes
+		}
+		34 = {
+			#Trade Deposit
+			modifier = {
+				factor = 1.5
+				is_asteroid_station = yes
+			}
+			add_deposit = d_trading_route
+		}
+	}
+
+}
+
+add_tourist_deposit = {
+	random_list = {
+		5 = {
+			modifier = {
+				factor = 0
+				NOR = { 
+					is_planet_class = pc_molten_station
+					is_planet_class = pc_sulfur_station
+				}
+			}
+			add_deposit = d_hells_gate
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				NOR = { 
+					is_planet_class = pc_molten_station
+					is_planet_class = pc_sulfur_station
+				}
+			}
+			add_deposit = d_fire_rivers
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				NOR = { 
+					is_planet_class = pc_molten_station
+					is_planet_class = pc_sulfur_station
+				}
+			}
+			add_deposit = d_sea_of_flames
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				NOR = { 
+					is_planet_class = pc_molten_station
+					is_planet_class = pc_sulfur_station
+				}
+			}
+			add_deposit = d_valley_of_100_volcanoes
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				NOR = { 
+					is_planet_class = pc_molten_station
+					is_planet_class = pc_sulfur_station
+				}
+			}
+			add_deposit = d_magma_lakes
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				NOT = { is_planet_class = pc_toxic_station }
+			}
+			add_deposit = d_misty_valley
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				NOT = { is_planet_class = pc_toxic_station }
+			}
+			add_deposit = d_rainbow_lakes
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				NOT = { is_planet_class = pc_toxic_station }
+			}
+			add_deposit = d_vailing_arches
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				NOT = { is_asteroid_station = yes }
+			}
+			add_deposit = d_bubbling_sea
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				NOT = { is_asteroid_station = yes }
+			}
+			add_deposit = d_bumping_rocks
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				NOR = { 
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_sky_pillars
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				NOR = { 
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_giants_eye
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				NOR = { 
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_eternal_storm
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				NOR = { 
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_cumulus_plains
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				NOR = { 
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_angels_valley
+		}
+		5 = {
+			add_deposit = d_ghosts
+		}
+		5 = {
+			add_deposit = d_restricted_area
+		}
+		5 = {
+			add_deposit = d_mysterious_site
+		}
+		5 = {
+			modifier = {
+				factor = 0
+				OR = { 
+					is_gas_giant_station = yes
+					is_ice_giant_station = yes
+					is_planet_class = pc_hot_giant_station
+				}
+			}
+			add_deposit = d_buried_ruins
+		}
+		5 = {
+			add_deposit = d_great_place
+		}
+	}
+}
+
+add_prospector_deposit = {
+	if = {
+		limit = { is_planet_class = pc_molten_station }
+		add_deposit = d_relic_valley
+	}
+	else_if = {
+		limit = { is_planet_class = pc_toxic_station }
+		add_deposit = d_unusual_formations
+	}
+	else_if = {
+		limit = { is_asteroid_station = yes }
+		add_deposit = d_rich_stones_area
+	}
+	else_if = {
+		limit = { 
+			OR = { 
+				is_gas_giant_station = yes
+				is_ice_giant_station = yes
+			}
+		}
+		add_deposit = d_precious_rings
+	}
+	else = {
+		add_deposit = d_treasury
+	}
+}
+
+set_pop_convicted = {
+	random_list = {
+		10 = { add_modifier = { modifier = pop_convicted days = 1800 } }
+		20 = { add_modifier = { modifier = pop_convicted days = 3600 } }
+		20 = { add_modifier = { modifier = pop_convicted days = 7200 } }
+		20 = { add_modifier = { modifier = pop_convicted days = 18000 } }
+		20 = { add_modifier = { modifier = pop_convicted days = 36000 } }
+		10 = { add_modifier = { modifier = pop_convicted days = -1 } }
+	}
+	
+	if = {
+		limit = {
+			NOT = { is_pop_category = robot_servant }
+		}
+		set_pop_group_flag = prisoners_flag
+	}
+}
+
+remove_planetary_station_flags = {
+	# Minerals
+	if = {
+		limit = { has_planet_flag = minerals_1 }
+		remove_planet_flag = minerals_1
+	}
+	else_if = {
+		limit = { has_planet_flag = minerals_2 }
+		remove_planet_flag = minerals_2
+	}
+	else_if = {
+		limit = { has_planet_flag = minerals_3 }
+		remove_planet_flag = minerals_3
+	}
+	else_if = {
+		limit = { has_planet_flag = minerals_4 }
+		remove_planet_flag = minerals_4
+	}
+	else_if = {
+		limit = { has_planet_flag = minerals_5 }
+		remove_planet_flag = minerals_5
+	}
+	else_if = {
+		limit = { has_planet_flag = minerals_larg }
+		remove_planet_flag = minerals_larg
+	}
+		
+	# Energy
+	else_if = {
+		limit = { has_planet_flag = energy_1 }
+		remove_planet_flag = energy_1
+	}
+	else_if = {
+		limit = { has_planet_flag = energy_2 }
+		remove_planet_flag = energy_2
+	}
+	else_if = {
+		limit = { has_planet_flag = energy_3 }
+		remove_planet_flag = energy_3
+	}
+	else_if = {
+		limit = { has_planet_flag = energy_4 }
+		remove_planet_flag = energy_4
+	}
+	else_if = {
+		limit = { has_planet_flag = energy_5 }
+		remove_planet_flag = energy_5
+	}
+	else_if = {
+		limit = { has_planet_flag = energy_larg }
+		remove_planet_flag = energy_larg
+	}
+	
+	# Society
+	else_if = {
+		limit = { has_planet_flag = society_1 }
+		remove_planet_flag = society_1
+	}
+	else_if = {
+		limit = { has_planet_flag = society_2 }
+		remove_planet_flag = society_2
+	}
+	else_if = {
+		limit = { has_planet_flag = society_3 }
+		remove_planet_flag = society_3
+	}
+	else_if = {
+		limit = { has_planet_flag = society_4 }
+		remove_planet_flag = society_4
+	}
+	else_if = {
+		limit = { has_planet_flag = society_5 }
+		remove_planet_flag = society_5
+	}
+	else_if = {
+		limit = { has_planet_flag = society_larg }
+		remove_planet_flag = society_larg
+	}
+	
+	# Physics
+	else_if = {
+		limit = { has_planet_flag = physics_1 }
+		remove_planet_flag = physics_1
+	}
+	else_if = {
+		limit = { has_planet_flag = physics_2 }
+		remove_planet_flag = physics_2
+	}
+	else_if = {
+		limit = { has_planet_flag = physics_3 }
+		remove_planet_flag = physics_3
+	}
+	else_if = {
+		limit = { has_planet_flag = physics_4 }
+		remove_planet_flag = physics_4
+	}
+	else_if = {
+		limit = { has_planet_flag = physics_5 }
+		remove_planet_flag = physics_5
+	}
+	else_if = {
+		limit = { has_planet_flag = physics_larg }
+		remove_planet_flag = physics_larg
+	}
+		
+	# Engineering
+	else_if = {
+		limit = { has_planet_flag = engineering_1 }
+		remove_planet_flag = engineering_1
+	}
+	else_if = {
+		limit = { has_planet_flag = engineering_2 }
+		remove_planet_flag = engineering_2
+	}
+	else_if = {
+		limit = { has_planet_flag = engineering_3 }
+		remove_planet_flag = engineering_3
+	}
+	else_if = {
+		limit = { has_planet_flag = engineering_4 }
+		remove_planet_flag = engineering_4
+	}
+	else_if = {
+		limit = { has_planet_flag = engineering_5 }
+		remove_planet_flag = engineering_5
+	}
+	else_if = {
+		limit = { has_planet_flag = engineering_larg }
+		remove_planet_flag = engineering_larg
+	}
+	
+	# Trade Value
+	else_if = {
+		limit = { has_planet_flag = trade_value_1 }
+		remove_planet_flag = trade_value_1
+	}
+	else_if = {
+		limit = { has_planet_flag = trade_value_2 }
+		remove_planet_flag = trade_value_2
+	}
+	else_if = {
+		limit = { has_planet_flag = trade_value_3 }
+		remove_planet_flag = trade_value_3
+	}
+	else_if = {
+		limit = { has_planet_flag = trade_value_4 }
+		remove_planet_flag = trade_value_4
+	}
+	else_if = {
+		limit = { has_planet_flag = trade_value_5 }
+		remove_planet_flag = trade_value_5
+	}
+	else_if = {
+		limit = { has_planet_flag = trade_value_larg }
+		remove_planet_flag = trade_value_larg
+	}
+	#
+	# # Alloys
+	# else_if = {
+	# 	limit = { has_planet_flag = alloys_1 }
+	# 	remove_planet_flag = alloys_1
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = alloys_2 }
+	# 	remove_planet_flag = alloys_2
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = alloys_3 }
+	# 	remove_planet_flag = alloys_3
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = alloys_4 }
+	# 	remove_planet_flag = alloys_4
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = alloys_5 }
+	# 	remove_planet_flag = alloys_5
+	# }
+	
+	# Food
+	else_if = {
+		limit = { has_planet_flag = food_3 }
+		remove_planet_flag = food_3
+	}
+	else_if = {
+		limit = { has_planet_flag = food_10 }
+		remove_planet_flag = food_10
+	}
+	#
+	# # Exotic Gases
+	# else_if = {
+	# 	limit = { has_planet_flag = exotic_gases_1 }
+	# 	remove_planet_flag = exotic_gases_1
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = exotic_gases_2 }
+	# 	remove_planet_flag = exotic_gases_2
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = exotic_gases_3 }
+	# 	remove_planet_flag = exotic_gases_3
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = exotic_gases_4 }
+	# 	remove_planet_flag = exotic_gases_4
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = exotic_gases_5 }
+	# 	remove_planet_flag = exotic_gases_5
+	# }
+	#
+	# # Rare Crystals
+	# else_if = {
+	# 	limit = { has_planet_flag = rare_crystals_1 }
+	# 	remove_planet_flag = rare_crystals_1
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = rare_crystals_2 }
+	# 	remove_planet_flag = rare_crystals_2
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = rare_crystals_3 }
+	# 	remove_planet_flag = rare_crystals_3
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = rare_crystals_4 }
+	# 	remove_planet_flag = rare_crystals_4
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = rare_crystals_5 }
+	# 	remove_planet_flag = rare_crystals_5
+	# }
+	#
+	#
+	# # Volatile Motes
+	# else_if = {
+	# 	limit = { has_planet_flag = volatile_motes_1 }
+	# 	remove_planet_flag = volatile_motes_1
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = volatile_motes_2 }
+	# 	remove_planet_flag = volatile_motes_2
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = volatile_motes_3 }
+	# 	remove_planet_flag = volatile_motes_3
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = volatile_motes_4 }
+	# 	remove_planet_flag = volatile_motes_4
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = volatile_motes_5 }
+	# 	remove_planet_flag = volatile_motes_5
+	# }
+	#
+	#
+	# # Zro Deposit
+	# else_if = {
+	# 	limit = { has_planet_flag = zro_deposit_1 }
+	# 	remove_planet_flag = zro_deposit_1
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = zro_deposit_2 }
+	# 	remove_planet_flag = zro_deposit_2
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = zro_deposit_3 }
+	# 	remove_planet_flag = zro_deposit_3
+	# }
+	#
+	#
+	# # Dark Matter
+	# else_if = {
+	# 	limit = { has_planet_flag = dark_matter_1 }
+	# 	remove_planet_flag = dark_matter_deposit_1
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = dark_matter_2 }
+	# 	remove_planet_flag = dark_matter_deposit_2
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = dark_matter_3 }
+	# 	remove_planet_flag = dark_matter_deposit_3
+	# }
+	# else_if = {
+	# 	limit = { has_planet_flag = dark_matter_10 }
+	# 	remove_planet_flag = dark_matter_deposit_10
+	# }
+	#
+	#
+	# # Living Metal
+	# else_if = {
+	# 	limit = { has_planet_flag = living_metal_deposit }
+	# 	remove_planet_flag = living_metal_deposit
+	# }
+	#
+	# # Nanites Deposit
+	# else = {
+	# 	limit = { has_planet_flag = nanites_deposit }
+	# 	remove_planet_flag = nanites_deposit
+	# }
+
+	# Hydrogen
+	else_if = {
+		limit = { has_planet_flag = hydrogen_1 }
+		remove_planet_flag = hydrogen_1
+	}
+	else_if = {
+		limit = { has_planet_flag = hydrogen_2 }
+		remove_planet_flag = hydrogen_2
+	}
+	else_if = {
+		limit = { has_planet_flag = hydrogen_3 }
+		remove_planet_flag = hydrogen_3
+	}
+	else_if = {
+		limit = { has_planet_flag = hydrogen_4 }
+		remove_planet_flag = hydrogen_4
+	}
+	else_if = {
+		limit = { has_planet_flag = hydrogen_5 }
+		remove_planet_flag = hydrogen_5
+	}
+	else_if = {
+		limit = { has_planet_flag = hydrogen_larg }
+		remove_planet_flag = hydrogen_larg
+	}
+
+	# Helium-3
+	else_if = {
+		limit = { has_planet_flag = helium_3_1 }
+		remove_planet_flag = helium_3_1
+	}
+	else_if = {
+		limit = { has_planet_flag = helium_3_2 }
+		remove_planet_flag = helium_3_2
+	}
+	else_if = {
+		limit = { has_planet_flag = helium_3_3 }
+		remove_planet_flag = helium_3_3
+	}
+	else_if = {
+		limit = { has_planet_flag = helium_3_4 }
+		remove_planet_flag = helium_3_4
+	}
+	else_if = {
+		limit = { has_planet_flag = helium_3_5 }
+		remove_planet_flag = helium_3_5
+	}
+	else_if = {
+		limit = { has_planet_flag = helium_3_larg }
+		remove_planet_flag = helium_3_larg
+	}
+
+	# Beryllium
+	else_if = {
+		limit = { has_planet_flag = beryllium_1 }
+		remove_planet_flag = beryllium_1
+	}
+	else_if = {
+		limit = { has_planet_flag = beryllium_2 }
+		remove_planet_flag = beryllium_2
+	}
+	else_if = {
+		limit = { has_planet_flag = beryllium_3 }
+		remove_planet_flag = beryllium_3
+	}
+	else_if = {
+		limit = { has_planet_flag = beryllium_4 }
+		remove_planet_flag = beryllium_4
+	}
+	else_if = {
+		limit = { has_planet_flag = beryllium_5 }
+		remove_planet_flag = beryllium_5
+	}
+	else_if = {
+		limit = { has_planet_flag = beryllium_larg }
+		remove_planet_flag = beryllium_larg
+	}
+
+	# Lithium
+	else_if = {
+		limit = { has_planet_flag = lithium_1 }
+		remove_planet_flag = lithium_1
+	}
+	else_if = {
+		limit = { has_planet_flag = lithium_2 }
+		remove_planet_flag = lithium_2
+	}
+	else_if = {
+		limit = { has_planet_flag = lithium_3 }
+		remove_planet_flag = lithium_3
+	}
+	else_if = {
+		limit = { has_planet_flag = lithium_4 }
+		remove_planet_flag = lithium_4
+	}
+	else_if = {
+		limit = { has_planet_flag = lithium_5 }
+		remove_planet_flag = lithium_5
+	}
+	else_if = {
+		limit = { has_planet_flag = lithium_larg }
+		remove_planet_flag = lithium_larg
+	}
+
+	# Titanium
+	else_if = {
+		limit = { has_planet_flag = titanium_1 }
+		remove_planet_flag = titanium_1
+	}
+	else_if = {
+		limit = { has_planet_flag = titanium_2 }
+		remove_planet_flag = titanium_2
+	}
+	else_if = {
+		limit = { has_planet_flag = titanium_3 }
+		remove_planet_flag = titanium_3
+	}
+	else_if = {
+		limit = { has_planet_flag = titanium_4 }
+		remove_planet_flag = titanium_4
+	}
+	else_if = {
+		limit = { has_planet_flag = titanium_5 }
+		remove_planet_flag = titanium_5
+	}
+	else_if = {
+		limit = { has_planet_flag = titanium_larg }
+		remove_planet_flag = titanium_larg
+	}
+
+	# Palladium
+	else_if = {
+		limit = { has_planet_flag = palladium_1 }
+		remove_planet_flag = palladium_1
+	}
+	else_if = {
+		limit = { has_planet_flag = palladium_2 }
+		remove_planet_flag = palladium_2
+	}
+	else_if = {
+		limit = { has_planet_flag = palladium_3 }
+		remove_planet_flag = palladium_3
+	}
+	else_if = {
+		limit = { has_planet_flag = palladium_4 }
+		remove_planet_flag = palladium_4
+	}
+	else_if = {
+		limit = { has_planet_flag = palladium_5 }
+		remove_planet_flag = palladium_5
+	}
+	else_if = {
+		limit = { has_planet_flag = palladium_larg }
+		remove_planet_flag = palladium_larg
+	}
+
+	# Iridium
+	else_if = {
+		limit = { has_planet_flag = iridium_1 }
+		remove_planet_flag = iridium_1
+	}
+	else_if = {
+		limit = { has_planet_flag = iridium_2 }
+		remove_planet_flag = iridium_2
+	}
+	else_if = {
+		limit = { has_planet_flag = iridium_3 }
+		remove_planet_flag = iridium_3
+	}
+	else_if = {
+		limit = { has_planet_flag = iridium_4 }
+		remove_planet_flag = iridium_4
+	}
+	else_if = {
+		limit = { has_planet_flag = iridium_5 }
+		remove_planet_flag = iridium_5
+	}
+	else_if = {
+		limit = { has_planet_flag = iridium_larg }
+		remove_planet_flag = iridium_larg
+	}
+
+	# Platinum
+	else_if = {
+		limit = { has_planet_flag = platinum_1 }
+		remove_planet_flag = platinum_1
+	}
+	else_if = {
+		limit = { has_planet_flag = platinum_2 }
+		remove_planet_flag = platinum_2
+	}
+	else_if = {
+		limit = { has_planet_flag = platinum_3 }
+		remove_planet_flag = platinum_3
+	}
+	else_if = {
+		limit = { has_planet_flag = platinum_4 }
+		remove_planet_flag = platinum_4
+	}
+	else_if = {
+		limit = { has_planet_flag = platinum_5 }
+		remove_planet_flag = platinum_5
+	}
+	else_if = {
+		limit = { has_planet_flag = platinum_larg }
+		remove_planet_flag = platinum_larg
+	}
+
+	#Uranium
+	else_if = {
+		limit = { has_planet_flag = uranium_1 }
+		remove_planet_flag = uranium_1
+	}
+	else_if = {
+		limit = { has_planet_flag = uranium_2 }
+		remove_planet_flag = uranium_2
+	}
+	else_if = {
+		limit = { has_planet_flag = uranium_3 }
+		remove_planet_flag = uranium_3
+	}
+	else_if = {
+		limit = { has_planet_flag = uranium_4 }
+		remove_planet_flag = uranium_4
+	}
+	else_if = {
+		limit = { has_planet_flag = uranium_5 }
+		remove_planet_flag = uranium_5
+	}
+	else_if = {
+		limit = { has_planet_flag = uranium_larg }
+		remove_planet_flag = uranium_larg
+	}
+
+	# Eezo
+	else_if = {
+		limit = { has_planet_flag = eezo_1 }
+		remove_planet_flag = eezo_1
+	}
+	else_if = {
+		limit = { has_planet_flag = eezo_2 }
+		remove_planet_flag = eezo_2
+	}
+	else_if = {
+		limit = { has_planet_flag = eezo_3 }
+		remove_planet_flag = eezo_3
+	}
+	else_if = {
+		limit = { has_planet_flag = eezo_4 }
+		remove_planet_flag = eezo_4
+	}
+	else_if = {
+		limit = { has_planet_flag = eezo_5 }
+		remove_planet_flag = eezo_5
+	}
+	else_if = {
+		limit = { has_planet_flag = eezo_larg }
+		remove_planet_flag = eezo_larg
+	}
+}
+
+remove_planetary_station_modifiers = {
+	if = {
+		limit = { has_modifier = prison_station }
+		remove_modifier = prison_station
+	}
+	if = {
+		limit = { has_modifier = military_outpost }
+		remove_modifier = military_outpost
+	}
+	if = {
+		limit = { has_modifier = resort_station }
+		remove_modifier = resort_station
+	}
+	if = {
+		limit = { has_modifier = confluence_station }
+		remove_modifier = confluence_station
+	}
+	if = {
+		limit = { has_modifier = simulation_station }
+		remove_modifier = simulation_station
+	}
+	if = {
+		limit = { has_modifier = terraforming_station }
+		remove_modifier = terraforming_station
+	}
+	
+	if = {
+		limit = { has_modifier = aura_of_fear }
+		remove_modifier = aura_of_fear
+	}
+	if = {
+		limit = { has_modifier = unidentified_intruder }
+		remove_modifier = unidentified_intruder
+	}
+	if = {
+		limit = { has_modifier = staff_recruitment }
+		remove_modifier = staff_recruitment
+	}
+	if = {
+		limit = { has_modifier = station_close }
+		remove_modifier = station_close
+	}
+	if = {
+		limit = { has_modifier = station_close_gestalt }
+		remove_modifier = station_close_gestalt
+	}
+	
+	if = {
+		limit = { has_modifier = barren_terraformed }
+		remove_modifier = barren_terraformed
+	}
+	if = {
+		limit = { has_modifier = barren_cold_terraformed }
+		remove_modifier = barren_cold_terraformed
+	}
+	if = {
+		limit = { has_modifier = frozen_terraformed }
+		remove_modifier = frozen_terraformed
+	}
+	if = {
+		limit = { has_modifier = toxic_terraformed }
+		remove_modifier = toxic_terraformed
+	}
+	if = {
+		limit = { has_modifier = greenhouse_terraformed }
+		remove_modifier = greenhouse_terraformed
+	}
+	if = {
+		limit = { has_modifier = methane_terraformed }
+		remove_modifier = methane_terraformed
+	}
+}
+
+terraform_deposits_to_arid = {
+	reroll_deposits = yes
+	
+	if = {
+		limit = {
+			OR = {
+				has_planet_flag = minerals_1
+				has_planet_flag = minerals_2
+				has_planet_flag = minerals_3
+			}
+		}
+		random_deposit = {
+			limit = { has_deposit_category = deposit_cat_food }
+			remove_deposit = yes
+		}
+		random_list = {
+			60 = { add_deposit = d_veiny_cliffs }
+			30 = { add_deposit = d_ore_rich_caverns }
+			10 = { add_deposit = d_rich_mountain }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_planet_flag = minerals_4
+				has_planet_flag = minerals_5
+			}
+		}
+		while = {
+			count = 2
+			random_deposit = {
+				limit = { has_deposit_category = deposit_cat_food }
+				remove_deposit = yes
+			}
+			random_list = {
+				60 = { add_deposit = d_veiny_cliffs }
+				30 = { add_deposit = d_ore_rich_caverns }
+				10 = { add_deposit = d_rich_mountain }
+			}
+		}
+	}
+	else = {
+		limit = { has_planet_flag = minerals_larg }
+		while = {
+			count = 3
+			random_deposit = {
+				limit = { has_deposit_category = deposit_cat_food }
+				remove_deposit = yes
+			}
+			random_list = {
+				60 = { add_deposit = d_veiny_cliffs }
+				30 = { add_deposit = d_ore_rich_caverns }
+				10 = { add_deposit = d_rich_mountain }
+			}
+		}
+	}
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = exotic_gases_1
+	# 			has_planet_flag = exotic_gases_2
+	# 			has_planet_flag = exotic_gases_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_bubbling_swamp
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = exotic_gases_4
+	# 			has_planet_flag = exotic_gases_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_fuming_bog
+	# }
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = rare_crystals_1
+	# 			has_planet_flag = rare_crystals_2
+	# 			has_planet_flag = rare_crystals_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_crystalline_caverns
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = rare_crystals_4
+	# 			has_planet_flag = rare_crystals_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_crystal_forest
+	# }
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = volatile_motes_1
+	# 			has_planet_flag = volatile_motes_2
+	# 			has_planet_flag = volatile_motes_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_dust_caverns
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = volatile_motes_4
+	# 			has_planet_flag = volatile_motes_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_dust_desert
+	# }
+	
+	remove_planetary_station_flags = yes
+}
+
+terraform_deposits_to_tundra = {
+	reroll_deposits = yes
+	
+	if = {
+		limit = {
+			OR = {
+				has_planet_flag = minerals_1
+				has_planet_flag = minerals_2
+				has_planet_flag = minerals_3
+			}
+		}
+		random_deposit = {
+			limit = { has_deposit_category = deposit_cat_food }
+			remove_deposit = yes
+		}
+		random_list = {
+			60 = { add_deposit = d_mineral_fields }
+			30 = { add_deposit = d_ore_rich_caverns }
+			10 = { add_deposit = d_rich_mountain }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_planet_flag = minerals_4
+				has_planet_flag = minerals_5
+			}
+		}
+		while = {
+			count = 2
+			random_deposit = {
+				limit = { has_deposit_category = deposit_cat_food }
+				remove_deposit = yes
+			}
+			random_list = {
+				60 = { add_deposit = d_mineral_fields }
+				30 = { add_deposit = d_ore_rich_caverns }
+				10 = { add_deposit = d_rich_mountain }
+			}
+		}
+	}
+	else = {
+		limit = { has_planet_flag = minerals_larg }
+		while = {
+			count = 3
+			random_deposit = {
+				limit = { has_deposit_category = deposit_cat_food }
+				remove_deposit = yes
+			}
+			random_list = {
+				60 = { add_deposit = d_mineral_fields }
+				30 = { add_deposit = d_ore_rich_caverns }
+				10 = { add_deposit = d_rich_mountain }
+			}
+		}
+	}
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = exotic_gases_1
+	# 			has_planet_flag = exotic_gases_2
+	# 			has_planet_flag = exotic_gases_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_bubbling_swamp
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = exotic_gases_4
+	# 			has_planet_flag = exotic_gases_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_fuming_bog
+	# }
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = rare_crystals_1
+	# 			has_planet_flag = rare_crystals_2
+	# 			has_planet_flag = rare_crystals_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_crystalline_caverns
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = rare_crystals_4
+	# 			has_planet_flag = rare_crystals_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_crystal_forest
+	# }
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = volatile_motes_1
+	# 			has_planet_flag = volatile_motes_2
+	# 			has_planet_flag = volatile_motes_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_dust_caverns
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = volatile_motes_4
+	# 			has_planet_flag = volatile_motes_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_dust_desert
+	# }
+	#
+	remove_planetary_station_flags = yes
+}
+
+terraform_deposits_to_arctic = {
+	reroll_deposits = yes
+	
+	if = {
+		limit = {
+			OR = {
+				has_planet_flag = minerals_1
+				has_planet_flag = minerals_2
+				has_planet_flag = minerals_3
+			}
+		}
+		random_deposit = {
+			limit = { has_deposit_category = deposit_cat_food }
+			remove_deposit = yes
+		}
+		random_list = {
+			60 = { add_deposit = d_veiny_cliffs }
+			30 = { add_deposit = d_ore_rich_caverns }
+			10 = { add_deposit = d_rich_mountain }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_planet_flag = minerals_4
+				has_planet_flag = minerals_5
+			}
+		}
+		while = {
+			count = 2
+			random_deposit = {
+				limit = { has_deposit_category = deposit_cat_food }
+				remove_deposit = yes
+			}
+			random_list = {
+				60 = { add_deposit = d_veiny_cliffs }
+				30 = { add_deposit = d_ore_rich_caverns }
+				10 = { add_deposit = d_rich_mountain }
+			}
+		}
+	}
+	else = {
+		limit = { has_planet_flag = minerals_larg }
+		while = {
+			count = 3
+			random_deposit = {
+				limit = { has_deposit_category = deposit_cat_food }
+				remove_deposit = yes
+			}
+			random_list = {
+				60 = { add_deposit = d_veiny_cliffs }
+				30 = { add_deposit = d_ore_rich_caverns }
+				10 = { add_deposit = d_rich_mountain }
+			}
+		}
+	}
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = exotic_gases_1
+	# 			has_planet_flag = exotic_gases_2
+	# 			has_planet_flag = exotic_gases_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_bubbling_swamp
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = exotic_gases_4
+	# 			has_planet_flag = exotic_gases_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_fuming_bog
+	# }
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = rare_crystals_1
+	# 			has_planet_flag = rare_crystals_2
+	# 			has_planet_flag = rare_crystals_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_crystalline_caverns
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = rare_crystals_4
+	# 			has_planet_flag = rare_crystals_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_crystal_forest
+	# }
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = volatile_motes_1
+	# 			has_planet_flag = volatile_motes_2
+	# 			has_planet_flag = volatile_motes_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_dust_caverns
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = volatile_motes_4
+	# 			has_planet_flag = volatile_motes_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_dust_desert
+	# }
+	#
+	remove_planetary_station_flags = yes
+}
+
+terraform_deposits_to_savannah = {
+	reroll_deposits = yes
+	
+	if = {
+		limit = {
+			OR = {
+				has_planet_flag = minerals_1
+				has_planet_flag = minerals_2
+				has_planet_flag = minerals_3
+			}
+		}
+		random_deposit = {
+			limit = { has_deposit_category = deposit_cat_food }
+			remove_deposit = yes
+		}
+		random_list = {
+			60 = { add_deposit = d_mineral_fields }
+			30 = { add_deposit = d_prosperous_mesa }
+			10 = { add_deposit = d_submerged_ore_veins }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_planet_flag = minerals_4
+				has_planet_flag = minerals_5
+			}
+		}
+		while = {
+			count = 2
+			random_deposit = {
+				limit = { has_deposit_category = deposit_cat_food }
+				remove_deposit = yes
+			}
+			random_list = {
+				60 = { add_deposit = d_mineral_fields }
+				30 = { add_deposit = d_prosperous_mesa }
+				10 = { add_deposit = d_submerged_ore_veins }
+			}
+		}
+	}
+	else = {
+		limit = { has_planet_flag = minerals_larg }
+		while = {
+			count = 3
+			random_deposit = {
+				limit = { has_deposit_category = deposit_cat_food }
+				remove_deposit = yes
+			}
+			random_list = {
+				60 = { add_deposit = d_mineral_fields }
+				30 = { add_deposit = d_prosperous_mesa }
+				10 = { add_deposit = d_submerged_ore_veins }
+			}
+		}
+	}
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = exotic_gases_1
+	# 			has_planet_flag = exotic_gases_2
+	# 			has_planet_flag = exotic_gases_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_bubbling_swamp
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = exotic_gases_4
+	# 			has_planet_flag = exotic_gases_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_fuming_bog
+	# }
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = rare_crystals_1
+	# 			has_planet_flag = rare_crystals_2
+	# 			has_planet_flag = rare_crystals_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_crystalline_caverns
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = rare_crystals_4
+	# 			has_planet_flag = rare_crystals_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_crystal_forest
+	# }
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = volatile_motes_1
+	# 			has_planet_flag = volatile_motes_2
+	# 			has_planet_flag = volatile_motes_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_dust_caverns
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = volatile_motes_4
+	# 			has_planet_flag = volatile_motes_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_dust_desert
+	# }
+	#
+	remove_planetary_station_flags = yes
+}
+
+terraform_deposits_to_desert = {
+	reroll_deposits = yes
+	
+	if = {
+		limit = {
+			OR = {
+				has_planet_flag = minerals_1
+				has_planet_flag = minerals_2
+				has_planet_flag = minerals_3
+			}
+		}
+		random_deposit = {
+			limit = { has_deposit_category = deposit_cat_food }
+			remove_deposit = yes
+		}
+		random_list = {
+			60 = { add_deposit = d_mineral_fields }
+			30 = { add_deposit = d_prosperous_mesa }
+			10 = { add_deposit = d_rich_mountain }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_planet_flag = minerals_4
+				has_planet_flag = minerals_5
+			}
+		}
+		while = {
+			count = 2
+			random_deposit = {
+				limit = { has_deposit_category = deposit_cat_food }
+				remove_deposit = yes
+			}
+			random_list = {
+				60 = { add_deposit = d_mineral_fields }
+				30 = { add_deposit = d_prosperous_mesa }
+				10 = { add_deposit = d_rich_mountain }
+			}
+		}
+	}
+	else = {
+		limit = { has_planet_flag = minerals_larg }
+		while = {
+			count = 3
+			random_deposit = {
+				limit = { has_deposit_category = deposit_cat_food }
+				remove_deposit = yes
+			}
+			random_list = {
+				60 = { add_deposit = d_mineral_fields }
+				30 = { add_deposit = d_prosperous_mesa }
+				10 = { add_deposit = d_rich_mountain }
+			}
+		}
+	}
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = exotic_gases_1
+	# 			has_planet_flag = exotic_gases_2
+	# 			has_planet_flag = exotic_gases_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_bubbling_swamp
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = exotic_gases_4
+	# 			has_planet_flag = exotic_gases_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_fuming_bog
+	# }
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = rare_crystals_1
+	# 			has_planet_flag = rare_crystals_2
+	# 			has_planet_flag = rare_crystals_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_crystalline_caverns
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = rare_crystals_4
+	# 			has_planet_flag = rare_crystals_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_crystal_forest
+	# }
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = volatile_motes_1
+	# 			has_planet_flag = volatile_motes_2
+	# 			has_planet_flag = volatile_motes_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_dust_caverns
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = volatile_motes_4
+	# 			has_planet_flag = volatile_motes_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_dust_desert
+	# }
+	#
+	remove_planetary_station_flags = yes
+}
+
+terraform_deposits_to_alpine = {
+	reroll_deposits = yes
+	
+	if = {
+		limit = {
+			OR = {
+				has_planet_flag = minerals_1
+				has_planet_flag = minerals_2
+				has_planet_flag = minerals_3
+			}
+		}
+		random_deposit = {
+			limit = { has_deposit_category = deposit_cat_food }
+			remove_deposit = yes
+		}
+		random_list = {
+			60 = { add_deposit = d_veiny_cliffs }
+			30 = { add_deposit = d_ore_rich_caverns }
+			10 = { add_deposit = d_rich_mountain }
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_planet_flag = minerals_4
+				has_planet_flag = minerals_5
+			}
+		}
+		while = {
+			count = 2
+			random_deposit = {
+				limit = { has_deposit_category = deposit_cat_food }
+				remove_deposit = yes
+			}
+			random_list = {
+				60 = { add_deposit = d_veiny_cliffs }
+				30 = { add_deposit = d_ore_rich_caverns }
+				10 = { add_deposit = d_rich_mountain }
+			}
+		}
+	}
+	else = {
+		limit = { has_planet_flag = minerals_larg }
+		while = {
+			count = 3
+			random_deposit = {
+				limit = { has_deposit_category = deposit_cat_food }
+				remove_deposit = yes
+			}
+			random_list = {
+				60 = { add_deposit = d_veiny_cliffs }
+				30 = { add_deposit = d_ore_rich_caverns }
+				10 = { add_deposit = d_rich_mountain }
+			}
+		}
+	}
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = exotic_gases_1
+	# 			has_planet_flag = exotic_gases_2
+	# 			has_planet_flag = exotic_gases_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_bubbling_swamp
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = exotic_gases_4
+	# 			has_planet_flag = exotic_gases_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_fuming_bog
+	# }
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = rare_crystals_1
+	# 			has_planet_flag = rare_crystals_2
+	# 			has_planet_flag = rare_crystals_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_crystalline_caverns
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = rare_crystals_4
+	# 			has_planet_flag = rare_crystals_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_crystal_forest
+	# }
+	#
+	# if = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = volatile_motes_1
+	# 			has_planet_flag = volatile_motes_2
+	# 			has_planet_flag = volatile_motes_3
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_dust_caverns
+	# }
+	# else = {
+	# 	limit = {
+	# 		OR = {
+	# 			has_planet_flag = volatile_motes_4
+	# 			has_planet_flag = volatile_motes_5
+	# 		}
+	# 	}
+	# 	random_deposit = {
+	# 		limit = { has_deposit_category = deposit_cat_food }
+	# 		remove_deposit = yes
+	# 	}
+	# 	add_deposit = d_dust_desert
+	# }
+	#
+	remove_planetary_station_flags = yes
+}
+
+terraform_planetary_station = {
+	remove_planet_flag = planetary_station
+	remove_planetary_station_modifiers = yes
+	
+	if = {
+		limit = { has_district = district_habitable_dome }
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_habitable_dome
+			}
+			variable = num_housing_districts
+		}
+	}
+	if = {
+		limit = { has_district = district_habitable_complex }
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_habitable_complex
+			}
+			variable = num_housing_districts
+		}
+	}
+	if = {
+		limit = { has_district = district_cell_block }
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_cell_block
+			}
+			variable = num_housing_districts
+		}
+	}
+	if = {
+		limit = { has_district = district_fortified_complex }
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_fortified_complex
+			}
+			variable = num_housing_districts
+		}
+	}
+	if = {
+		limit = { has_district = district_leisure_sector }
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_leisure_sector
+			}
+			variable = num_housing_districts
+		}
+	}
+	if = {
+		limit = { has_district = district_hive_sector }
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_hive_sector
+			}
+			variable = num_housing_districts
+		}
+	}
+	if = {
+		limit = { has_district = district_nexus_complex }
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_nexus_complex
+			}
+			variable = num_housing_districts
+		}
+	}
+	if = {
+		limit = { has_district = district_sanctuary_complex }
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_sanctuary_complex
+			}
+			variable = num_housing_districts
+		}
+	}
+	
+	if = {
+		limit = { has_district = district_mining_complex }
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_mining_complex
+			}
+			variable = num_mining_districts
+		}
+	}
+	if = {
+		limit = { has_district = district_ore_processing_complex }
+		export_trigger_value_to_variable = {
+			trigger = num_districts
+			parameters = {
+				type = district_ore_processing_complex
+			}
+			variable = num_mining_districts
+		}
+	}
+	
+	remove_all_districts = yes
+	
+	if = {
+		limit = { is_planet_class = pc_barren_station }
+		change_pc = { class = pc_arid }
+		terraform_deposits_to_arid = yes
+	}
+	if = {
+		limit = { is_barren_cold_station = yes }
+		change_pc = { class = pc_tundra }
+		terraform_deposits_to_tundra = yes
+	}
+	if = {
+		limit = { is_frozen_station = yes }
+		change_pc = { class = pc_arctic }
+		terraform_deposits_to_arctic = yes
+	}
+	if = {
+		limit = { is_planet_class = pc_toxic_station }
+		change_pc = { class = pc_savannah }
+		terraform_deposits_to_savannah = yes
+	}
+	if = {
+		limit = { is_planet_class = pc_greenhouse_station }
+		change_pc = { class = pc_desert }
+		terraform_deposits_to_desert = yes
+	}
+	if = {
+		limit = { is_planet_class = pc_methane_station }
+		change_pc = { class = pc_alpine }
+		terraform_deposits_to_alpine = yes
+	}
+	
+	validate_planet_buildings_and_districts = yes	
+	
+	if = {
+		limit = { owner = { is_regular_empire = yes } }
+		while = {
+			count = num_housing_districts
+			add_district_if_possible_effect = {
+				district = district_city
+			}
+		}
+	}
+	
+	if = {
+		limit = { owner = { is_hive_empire = yes } }
+		while = {
+			count = num_housing_districts
+			add_district_if_possible_effect = {
+				district = district_hive
+			}
+		}
+	}
+	
+	if = {
+		limit = { owner = { is_machine_empire = yes } }
+		while = {
+			count = num_housing_districts
+			add_district_if_possible_effect = {
+				district = district_nexus
+			}
+		}
+	}
+	
+	while = {
+		count = num_mining_districts
+		add_district_if_possible_effect = {
+			district = district_mining
+		}
+	}
+	
+	clear_variable = num_housing_districts
+	clear_variable = num_mining_districts
+}

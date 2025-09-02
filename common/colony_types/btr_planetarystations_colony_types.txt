@@ -1,0 +1,970 @@
+Evaluate BtR Resource Applications and Lore compatibility#root = planet
+
+@stickiness = 10
+@stickiness_low = 5
+@zone_urban = 25
+@zone_rural = 10
+@rural_max_size = 15
+@rural_over_max_size = -20
+
+@small_planet_threshold = 18
+@free_districts_verylow_threshold = 3
+@free_districts_low_threshold = 5
+@free_districts_medium_threshold = 10
+@free_districts_high_threshold = 15
+@built_districts_low_threshold = 3
+@built_districts_medium_threshold = 4
+@built_districts_high_threshold = 8
+
+# Planetary Station
+col_planetary_station = {
+	icon = GFX_colony_type_planetary_station
+	
+	potential = {
+		uses_district_set = planetary_station
+		NOT = {
+			has_modifier = prison_station
+			has_modifier = resort_station
+			has_modifier = confluence_station
+			has_modifier = simulation_station
+		}
+		is_capital = no
+	}
+
+	planet_modifier = {
+		planet_stability_add = 3
+		planet_amenities_add = 500
+	}
+
+	weight_modifier = {
+		base = 4
+	}
+}
+
+# Energy Station
+col_planetary_station_energy = {
+	icon = GFX_colony_type_station_energy
+
+	potential = {
+		uses_district_set = planetary_station
+		NOT = {
+			has_modifier = prison_station
+			has_modifier = resort_station
+			has_modifier = confluence_station
+			has_modifier = simulation_station
+		}
+		exists = owner
+		OR = {
+			num_districts = { type = district_geothermal_power_plant value > 0 }
+			num_districts = { type = district_hydrocarbon_power_plant value > 0 }
+			num_districts = { type = district_solar_power_plant value > 0 }
+			num_districts = { type = district_atmospheric_power_plant value > 0 }
+		}
+		is_capital = no
+	}
+	planet_modifier = {
+		planet_technician_produces_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = no
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_simple_drone_produces_mult = 0.1
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_planetary_station_energy
+		}
+		modifier = {
+			add = 5
+			OR = {
+				num_districts = { type = district_geothermal_power_plant value > 0 }
+				num_districts = { type = district_hydrocarbon_power_plant value > 0 }
+				num_districts = { type = district_solar_power_plant value > 0 }
+				num_districts = { type = district_atmospheric_power_plant value > 0 }
+			}
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_geothermal_power_plant
+			}
+			mode = add
+			mult = 3
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_hydrocarbon_power_plant
+			}
+			mode = add
+			mult = 3
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_solar_power_plant
+			}
+			mode = add
+			mult = 3
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_atmospheric_power_plant
+			}
+			mode = add
+			mult = 3
+		}
+		modifier = {
+			num_zones = {
+				type = zone_station_energy
+				value > 0
+			}
+			add = @zone_rural
+		}
+	}
+}
+
+# Mining Station
+col_planetary_station_mining = {
+	icon = GFX_colony_type_station_mine
+
+	potential = {
+		uses_district_set = planetary_station
+		NOT = {
+			has_modifier = prison_station
+			has_modifier = resort_station
+			has_modifier = confluence_station
+			has_modifier = simulation_station
+		}
+		exists = owner
+		OR = {
+			num_districts = { type = district_mining_complex value > 0 }
+			num_districts = { type = district_ore_processing_complex value > 0 }
+		}
+		is_capital = no
+	}
+	planet_modifier = {
+		planet_miners_produces_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = no
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_simple_drone_produces_mult = 0.1
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_planetary_station_mining
+		}
+		modifier = {
+			add = 5
+			OR = {
+				num_districts = { type = district_mining_complex value > 0 }
+				num_districts = { type = district_ore_processing_complex value > 0 }
+			}
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_mining_complex
+			}
+			mode = add
+			mult = 3
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_ore_processing_complex
+			}
+			mode = add
+			mult = 3
+		}
+		modifier = {
+			num_zones = {
+				type = zone_station_minerals
+				value > 0
+			}
+			add = @zone_rural
+		}
+	}
+}
+
+# Helium-3 Station
+col_planetary_station_helium = {
+	icon = GFX_colony_type_station_helium
+
+	potential = {
+		uses_district_set = planetary_station
+		NOT = {
+			has_modifier = prison_station
+			has_modifier = resort_station
+			has_modifier = confluence_station
+			has_modifier = simulation_station
+		}
+		exists = owner
+		OR = {
+			num_districts = { type = district_helium_extractor value > 0 }
+			num_districts = { type = district_helium_mining_facility value > 0 }
+		}
+		is_capital = no
+	}
+	planet_modifier = {
+		planet_helium_extractors_produces_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = no
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_helium_extractors_produces_mult = 0.1
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_planetary_station_helium
+		}
+		modifier = {
+			add = 10
+			OR = {
+				num_districts = { type = district_helium_extractor value > 0 }
+				num_districts = { type = district_helium_mining_facility value > 0 }
+			}
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_helium_extractor
+			}
+			mode = add
+			mult = 3
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_helium_mining_facility
+			}
+			mode = add
+			mult = 3
+		}
+	}
+}
+
+# Research Base
+col_planetary_station_research = {
+	icon = GFX_colony_type_station_research
+
+	potential = {
+		uses_district_set = planetary_station
+		NOT = {
+			has_modifier = prison_station
+			has_modifier = resort_station
+			has_modifier = confluence_station
+			has_modifier = simulation_station
+		}
+		exists = owner
+		OR = {
+			num_districts = { type = district_experimental_complex value > 0 }
+			num_districts = { type = district_biolaboratory value > 0 }
+			num_districts = { type = district_testing_site value > 0 }
+		}
+		is_capital = no
+	}
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.1
+	}
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_planetary_station_research
+		}
+		modifier = {
+			add = 5
+			OR = {
+				num_districts = { type = district_experimental_complex value > 0 }
+				num_districts = { type = district_biolaboratory value > 0 }
+				num_districts = { type = district_testing_site value > 0 }
+			}
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_experimental_complex
+			}
+			mode = add
+			mult = 3
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_biolaboratory
+			}
+			mode = add
+			mult = 3
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_testing_site
+			}
+			mode = add
+			mult = 3
+		}
+		modifier = {
+			OR = {
+				num_zones = {
+					type = zone_station_research
+					value > 0
+				}
+				num_zones = {
+					type = zone_station_research_physics
+					value > 0
+				}
+				num_zones = {
+					type = zone_station_research_society
+					value > 0
+				}
+				num_zones = {
+					type = zone_station_research_engineering
+					value > 0
+				}
+			}
+			add = @zone_rural
+		}
+	}
+}
+
+# Hunting Station
+col_planetary_station_hunting = {
+	icon = GFX_colony_type_station_hunting
+
+	potential = {
+		uses_district_set = planetary_station
+		NOT = {
+			has_modifier = prison_station
+			has_modifier = resort_station
+		}
+		exists = owner
+		num_districts = { type = district_hunting_bay value > 0 }
+		is_capital = no
+	}
+	planet_modifier = {
+		planet_hunters_upkeep_mult = -0.2
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_planetary_station_hunting
+		}
+		modifier = {
+			add = 10
+			num_districts = { type = district_hunting_bay value > 0 }
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_hunting_bay
+			}
+			mode = add
+			mult = 3
+		}
+	}
+}
+
+# Trade Hub
+col_planetary_station_trade = {
+	icon = GFX_colony_type_station_trade
+	
+	potential = {
+		uses_district_set = planetary_station
+		NOT = {
+			has_modifier = prison_station
+			has_modifier = resort_station
+			has_modifier = confluence_station
+			has_modifier = simulation_station
+		}
+		exists = owner
+		num_districts = { type = district_commercial_wards value > 0 }
+		is_capital = no
+	}
+
+	planet_modifier = {
+		pop_government_ethic_attraction = 1
+		planet_resettlement_unemployed_destination_mult = 0.1
+		planet_jobs_trade_produces_mult = 0.20
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_planetary_station_trade
+		}
+		modifier = {
+			add = 5
+			num_districts = { type = district_commercial_wards value > 0 }
+		}
+		complex_trigger_modifier = {
+			trigger = num_assigned_jobs
+			parameters = {
+				job = merchant
+			}
+			mode = add
+			mult = 0.02
+		}
+		complex_trigger_modifier = {
+			trigger = num_assigned_jobs
+			parameters = {
+				job = trader
+			}
+			mode = add
+			mult = 0.01
+		}
+		complex_trigger_modifier = {
+			trigger = num_assigned_jobs
+			parameters = {
+				job = numistic_priest
+			}
+			mode = add
+			mult = 0.01
+		}
+	}
+}
+
+# Production Plant
+col_planetary_station_factory = {
+	icon = GFX_colony_type_station_factory
+	
+	# used by AI to estimate what will happen when we change the designation
+	ai_resource_conversion = {
+		consumer_goods = 2
+		alloys = 0
+
+		trigger = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+	}
+
+	# Used by AI to estimate the current effects of this designation
+	ai_resource_current_conversion = {
+		consumer_goods = 0.5
+		alloys = -0.5
+
+		trigger = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+	}
+
+	potential = {
+		uses_district_set = planetary_station
+		NOT = {
+			has_modifier = prison_station
+			has_modifier = resort_station
+			has_modifier = confluence_station
+			has_modifier = simulation_station
+		}
+		exists = owner
+		num_districts = { type = district_manufacturing_complex value > 0 }
+		is_capital = no
+	}
+	
+	custom_tooltip = col_habitat_factory_custom
+	planet_modifier = {
+		planet_artisans_upkeep_mult = -0.2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_artisans_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_planetary_station_factory
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_manufacturing_complex
+			}
+			mode = add
+			mult = 3
+		}
+		modifier = {
+			OR = {
+				num_zones = {
+					type = zone_station_industrial
+					value > 0
+				}
+				AND = {
+					num_zones = {
+						type = zone_station_foundry
+						value > 0
+					}
+					num_zones = {
+						type = zone_station_factory
+						value > 0
+					}
+				}
+			}
+			add = @zone_urban
+		}
+	}
+}
+
+# Industrial Facility
+col_planetary_station_foundry = {
+	icon = GFX_colony_type_station_foundry
+	
+	# used by AI to estimate what will happen when we change the designation
+	ai_resource_conversion = {
+		consumer_goods = 0
+		alloys = 2
+
+		trigger = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+	}
+
+	ai_resource_current_conversion = {
+		alloys = 0.5
+		consumer_goods = -2
+
+		trigger = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+	}
+
+	potential = {
+		uses_district_set = planetary_station
+		NOT = {
+			has_modifier = prison_station
+			has_modifier = resort_station
+			has_modifier = confluence_station
+			has_modifier = simulation_station
+		}
+		exists = owner
+		num_districts = { type = district_foundry_plant value > 0 }
+		is_capital = no
+	}
+	
+	custom_tooltip = col_habitat_foundry_custom
+	planet_modifier = {
+		planet_metallurgists_upkeep_mult = -0.2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+				is_active_resolution = "resolution_industry_project_cornucopia"
+			}
+		}
+		modifier = {
+			planet_metallurgists_produces_mult = 0.05
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_planetary_station_foundry
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_foundry_plant
+			}
+			mode = add
+			mult = 3
+		}
+		modifier = {
+			num_zones = {
+				type = zone_station_foundry
+				value > 0
+			}
+			num_zones = {
+				type = zone_station_factory
+				value = 0
+			}
+
+			add = @zone_urban
+		}
+	}
+}
+
+# Military Outpost
+col_planetary_station_fortress = {
+	icon = GFX_colony_type_station_fortress
+
+	potential = {
+		uses_district_set = planetary_station
+		has_modifier = military_outpost
+	}
+	
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.10
+		army_defense_damage_mult = 0.20
+	}
+	
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_planetary_station_fortress
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_stronghold
+			}
+			mode = add
+			mult = 2
+		}
+		complex_trigger_modifier = {
+			trigger = num_buildings
+			parameters = {
+				type = building_fortress
+			}
+			mode = add
+			mult = 4
+		}
+	}
+}
+
+# Resort Station
+col_planetary_station_leisure = {
+	icon = GFX_colony_type_station_leisure
+
+	potential = {
+		uses_district_set = planetary_station
+		has_modifier = resort_station
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.10
+		planet_housing_add = 1000
+		planet_resettlement_unemployed_destination_mult = 0.25
+	}
+	
+	weight_modifier = {
+		base = 1000
+	}
+}
+
+# Confluence Station
+col_planetary_station_confluence = {
+	icon = GFX_colony_type_station_confluence
+
+	potential = {
+		uses_district_set = planetary_station
+		has_modifier = confluence_station
+	}
+	
+	planet_modifier = {
+		planet_jobs_complex_drone_produces_mult = 0.10
+		planet_housing_add = 200
+	}
+	
+	weight_modifier = {
+		base = 1000
+	}
+}
+
+# Simulation Station
+col_planetary_station_simulation = {
+	icon = GFX_colony_type_station_simulation
+
+	potential = {
+		uses_district_set = planetary_station
+		has_modifier = simulation_station
+	}
+	
+	planet_modifier = {
+		planet_jobs_complex_drone_produces_mult = 0.10
+		planet_housing_add = 200
+	}
+	
+	weight_modifier = {
+		base = 1000
+	}
+}
+
+# Prison Station
+col_planetary_station_prison = {
+	icon = GFX_colony_type_station_prison
+
+	potential = {
+		uses_district_set = planetary_station
+		has_modifier = prison_station
+	}
+	
+	planet_modifier = {
+		planet_stability_add = 5
+	}
+	
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_planetary_station_prison
+		}
+		modifier = {
+			add = 10
+			AND = {
+				num_districts = { type = district_mining_complex value = 0 }
+				num_districts = { type = district_ore_processing_complex value = 0 }
+				num_districts = { type = district_helium_extractor value = 0 }
+				num_districts = { type = district_helium_mining_facility value = 0 }
+				num_districts = { type = district_mote_mine value = 0 }
+				num_districts = { type = district_gas_refinery value = 0 }
+				num_districts = { type = district_crystal_mining value = 0 }
+				num_districts = { type = district_zro_harvesting value = 0 }
+			}
+		}
+	}
+}
+
+# Correctional Facility
+col_planetary_station_penal = {
+	icon = GFX_colony_type_station_penal
+
+	potential = {
+		uses_district_set = planetary_station
+		has_modifier = prison_station
+	}
+	
+	planet_modifier = {
+		planet_jobs_worker_produces_mult = 0.1
+		planet_stability_add = -10
+	}
+	
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_planetary_station_penal
+		}
+		modifier = {
+			add = 10
+			OR = {
+				num_districts = { type = district_mining_complex value > 0 }
+				num_districts = { type = district_ore_processing_complex value > 0 }
+				num_districts = { type = district_helium_extractor value > 0 }
+				num_districts = { type = district_helium_mining_facility value > 0 }
+				num_districts = { type = district_mote_mine value > 0 }
+				num_districts = { type = district_gas_refinery value > 0 }
+				num_districts = { type = district_crystal_mining value > 0 }
+				num_districts = { type = district_zro_harvesting value > 0 }
+			}
+		}
+		modifier = {
+			num_zones = {
+				type = zone_station_minerals
+				value > 0
+			}
+			add = @zone_rural
+		}
+	}
+}
+
+# Cracking Station
+col_planetary_station_cracking = {
+	icon = GFX_colony_type_station_cracking
+
+	potential = {
+		uses_district_set = planetary_station
+		NOT = {
+			has_modifier = prison_station
+			has_modifier = resort_station
+			has_modifier = confluence_station
+			has_modifier = simulation_station
+		}
+		exists = owner
+		num_districts = { type = district_mining_bay value > 0 }
+		is_capital = no
+	}
+	
+	planet_modifier = {
+		planet_miners_produces_mult = 0.15
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = no
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_galactic_community_member = yes
+				is_gestalt = yes
+			}
+			OR = {
+				is_active_resolution = "resolution_greatergood_five_year_plans"
+				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
+				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			planet_jobs_simple_drone_produces_mult = 0.1
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_planetary_station_cracking
+		}
+		modifier = {
+			add = 5
+			num_districts = { type = district_mining_bay value > 0 }
+		}
+		complex_trigger_modifier = {
+			trigger = num_districts
+			parameters = {
+				type = district_mining_bay
+			}
+			mode = add
+			mult = 3
+		}
+		modifier = {
+			num_zones = {
+				type = zone_station_minerals
+				value > 0
+			}
+			add = @zone_rural
+		}
+	}
+}
+
+# Terraforming Station
+col_planetary_station_terraforming = {
+	icon = GFX_colony_type_station_terraforming
+
+	potential = {
+		uses_district_set = planetary_station
+		has_modifier = terraforming_station
+	}
+	
+	planet_modifier = {
+		planet_resettlement_unemployed_destination_mult = 0.1
+		planet_housing_add = 200
+		planet_amenities_add = 300
+	}
+	
+	weight_modifier = {
+		base = 1000
+	}
+}

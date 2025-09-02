@@ -35,7 +35,7 @@ building_private_mining_consortium = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		produces = {
 			minerals = 10
@@ -106,7 +106,7 @@ building_food_conglomerate = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		produces = {
 			food = 10
@@ -142,7 +142,7 @@ building_virtual_entertainment_studios = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		produces = {
 			consumer_goods = 6
@@ -199,12 +199,12 @@ building_private_shipyards = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		produces = {
 			#alloys = 3
 			light_alloys = 2.1
-			heavy_metals = 0.9
+			heavy_alloys = 0.9
 		}
 		upkeep = {
 			energy = @btr_civil_b1_energy_upkeep
@@ -245,7 +245,7 @@ building_military_contractors = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b1_energy_upkeep
@@ -279,7 +279,7 @@ building_public_relations_office = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		produces = {
 			unity = 6
@@ -316,7 +316,7 @@ building_private_research_initiative = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		produces = {
 			physics_research = 6
@@ -356,7 +356,7 @@ building_amusement_megaplex = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		produces = {
 			energy = 10
@@ -401,7 +401,7 @@ building_commercial_forum = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b2_energy_upkeep
@@ -459,7 +459,7 @@ building_corporate_embassy = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b2_energy_upkeep
@@ -513,7 +513,7 @@ building_wildcat_miners = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		produces = {
 			minerals = 10
@@ -562,7 +562,7 @@ building_bio_reprocessing_facilities = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		produces = {
 			food = 10
@@ -603,7 +603,7 @@ building_underground_chemists = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		produces = {
 			consumer_goods = 6
@@ -665,12 +665,12 @@ building_wrecking_yards = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		produces = {
 			#alloys = 3
 			light_alloys = 2.1
-			heavy_metals = 0.9
+			heavy_alloys = 0.9
 		}
 		upkeep = {
 			energy = @btr_civil_b1_energy_upkeep
@@ -719,7 +719,7 @@ building_pirate_haven = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b1_energy_upkeep
@@ -758,7 +758,7 @@ building_underground_clubs = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		produces = {
 			energy = 10
@@ -816,7 +816,7 @@ building_syndicate_outreach_office = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		produces = {
 			unity = 6
@@ -858,7 +858,7 @@ building_illicit_research_labs = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		produces = {
 			physics_research = 6
@@ -904,7 +904,7 @@ building_smuggling_rings = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b2_energy_upkeep
@@ -968,7 +968,7 @@ building_disinformation_center = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b2_energy_upkeep
@@ -1019,7 +1019,7 @@ building_subversive_shrine = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b1_energy_upkeep
@@ -1068,7 +1068,7 @@ building_temple_of_prosperity = {
 		cost = {
 			minerals = @btr_civil_b1_mineral_cost
 			light_alloys = @btr_civil_b1_light_alloys_cost
-			heavy_metals = @btr_civil_b1_heavy_metals_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b1_energy_upkeep
@@ -1116,7 +1116,7 @@ building_executive_retreat = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b3_energy_upkeep
@@ -1162,7 +1162,7 @@ building_xeno_tourism_agency = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		upkeep = {
 			energy = @btr_civil_b3_energy_upkeep
@@ -1205,7 +1205,7 @@ building_imperial_concession_port = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		produces = {
 			energy = 8
@@ -1249,7 +1249,7 @@ building_knightly_theme_park = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		produces = {
 			energy = 10
@@ -1310,7 +1310,7 @@ building_corporate_clinics = {
 		cost = {
 			minerals = @btr_civil_b3_mineral_cost
 			light_alloys = @btr_civil_b3_light_alloys_cost
-			heavy_metals = @btr_civil_b3_heavy_metals_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
 		}
 		produces = {
 			energy = 8

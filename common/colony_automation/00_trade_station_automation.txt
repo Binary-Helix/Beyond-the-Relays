@@ -1,0 +1,28 @@
+automate_trade_station = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_planetary_station_trade
+	}
+
+	prio_districts = {
+		district_commercial_wards
+		district_storage_yards
+		district_docking_bay
+		district_free_port
+	}
+
+	buildings = {
+		1 = {
+			building = building_station_capital
+		}
+		
+		2 = {
+			building = building_galactic_stock_exchange
+		}
+
+		3 = {
+			building = building_commercial_zone
+		}
+	}
+}

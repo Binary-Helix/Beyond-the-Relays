@@ -361,72 +361,19 @@ RAC = {
 }
 
 COL = {
-	archetype = MACHINE
+	archetype = BIOLOGICAL
 
 	possible = {
-		OR = {
-			AND = {
-				host_has_dlc = "The Machine Age"
-				authority = {
-					NOT = {
-						value = auth_hive_mind
-					}
-				}
-			}
-			authority = {
-				OR = {
-					value = auth_machine_intelligence
-					text = SPECIES_CLASS_MUST_USE_MACHINE_INTELLIGENCE
-				}
+		authority = {
+			NOT = {
+				value = auth_machine_intelligence
+				text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE
 			}
 		}
 	}
-	possible_secondary = {
-		OR = {
-			AND = {
-				host_has_dlc = "The Machine Age"
-				civics = {
-					NOT = {
-						value = civic_machine_servitor
-					}
-				}
-			}
-			OR = {
-				always = no
-				text = SECONDARY_SPECIES_CLASS_INVALID
-			}
-		}
-	}
-
-	playable = {
-		OR = {
-			host_has_dlc = "Synthetic Dawn Story Pack"
-			has_machine_age_dlc = yes
-		}
-	}
-	randomized = {
-		OR = {
-			host_has_dlc = "Synthetic Dawn Story Pack"
-			has_machine_age_dlc = yes
-		}
-		# The create_species effect can't properly take the possible trigger below into account.
-		# Work around this by disabling this class for species randomization after game start.
-		NOT = {
-			has_global_flag = game_started
-		}
-	}
-
-	trait = trait_machine_unit
-	gender = no
-	use_climate_preference = no
-	portrait_modding = yes
-
-	leader_age_min = 5
-	leader_age_max = 10
 
 	graphical_culture = btr_collector_01
-	move_pop_sound_effect = "robot_pops_move"
-	resources = {}
+	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
 

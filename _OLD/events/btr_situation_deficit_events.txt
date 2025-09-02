@@ -1226,7 +1226,7 @@ situation_event = {
 					position = 0
 					save_event_target_as = robots_planet
 					event_target:robots_planet = {
-						count_robots_to_recycle_for_heavy_metals = { HEAVY_METALS = 100 }
+						count_robots_to_recycle_for_heavy_alloys = { heavy_alloys = 100 }
 					}
 				}
 			}
@@ -1243,7 +1243,7 @@ situation_event = {
 					save_event_target_as = robots_planet
 					event_target:robots_planet = {
 						# ...and halven the number of recycled bots here
-						count_robots_to_recycle_for_heavy_metals = { HEAVY_METALS = 100 }
+						count_robots_to_recycle_for_heavy_alloys = { heavy_alloys = 100 }
 					}
 				}
 
@@ -1275,7 +1275,7 @@ situation_event = {
 			}
 			owner = {
 				add_resource = {
-					heavy_metals = 1
+					heavy_alloys = 1
 					mult = event_target:robots_planet.total_alloys_gained
 				}
 			}
@@ -1306,7 +1306,7 @@ situation_event = {
 
 			owner = {
 				add_resource = {
-					heavy_metals = 1
+					heavy_alloys = 1
 					mult = event_target:robots_planet.total_alloys_gained
 				}
 			}
@@ -1333,7 +1333,7 @@ situation_event = {
 
 		owner = {
 			add_resource = {
-				heavy_metals = @bailout_alloys_base_amount
+				heavy_alloys = @bailout_alloys_base_amount
 				mult = value:bailout_scaling_factor
 			}
 			country_defaulted_effect = yes

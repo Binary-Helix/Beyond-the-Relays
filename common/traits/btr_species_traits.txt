@@ -386,7 +386,7 @@ volus_trait_economic_mindset = {
 		planet_pops_consumer_goods_upkeep_mult = 0.2
 		pop_amenities_usage_mult = 0.1
 		country_light_alloys_produces_mult = -0.15
-		country_heavy_metals_produces_mult = -0.15
+		country_heavy_alloys_produces_mult = -0.15
 		#country_alloys_produces_mult = -0.15
 	}
 }
@@ -1399,7 +1399,7 @@ rachni_trait_wrath_of_the_swarm = {
 collector_trait_core = {
 	icon = "gfx/interface/icons/traits/collector_trait_core.dds"
 	cost = 0
-	allowed_archetypes = { MACHINE }
+	allowed_archetypes = { BIOLOGICAL }
 	species_potential_add = {
 		is_species = COL
 	}
@@ -1408,12 +1408,22 @@ collector_trait_core = {
 	leader_age_min = 50000
 
 	immortal_leaders = yes
+
+	modifier = {
+		pop_environment_tolerance = 1.0
+		army_damage_mult = 0.1
+		species_empire_size_mult = -0.50
+	}
+
+	immortal_leaders = yes
+	forced_happiness = yes
+
 }
 
 collector_trait_lovecraftian = {
 	icon = "gfx/interface/icons/traits/collector_trait_lovecraftian.dds"
 	cost = 0
-	allowed_archetypes = { MACHINE }
+	allowed_archetypes = { BIOLOGICAL }
 	species_potential_add = {
 		is_species = COL
 	}
@@ -1428,7 +1438,7 @@ collector_trait_lovecraftian = {
 collector_trait_drones = {
 	icon = "gfx/interface/icons/traits/collector_trait_drones.dds"
 	cost = 0
-	allowed_archetypes = { MACHINE }
+	allowed_archetypes = { BIOLOGICAL }
 	species_potential_add = {
 		is_species = COL
 	}
@@ -1444,7 +1454,7 @@ collector_trait_drones = {
 collector_trait_instruments = {
 	icon = "gfx/interface/icons/traits/collector_trait_instruments.dds"
 	cost = 0
-	allowed_archetypes = { MACHINE }
+	allowed_archetypes = { BIOLOGICAL }
 	species_potential_add = {
 		is_species = COL
 	}
