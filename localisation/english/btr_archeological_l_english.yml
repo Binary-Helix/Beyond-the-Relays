@@ -417,3 +417,28 @@ ancient_generator:0 "Ancient Generator Surplus"
   btr_archeology_crashed_ship.4.name:0 "Retreveal"
   btr_archeology_crashed_ship.4.desc:0 "From what we can gather, the ship was old, poorly maintained, and likely should not have left the spaceport. A mechanical issue spiraled out of control, and the ship was pulled into [planet.GetName]’s orbit. What that issue was will probably never be known, as we cannot identify the ship. We cannot pull up a crew manifest, so we are not sure if anyone escaped, but we did uncover three more sets of skeletal remains as we searched the rest of the ship. Others may be trapped in areas that we cannot reach, or laying outside damaged escape pods elsewhere on the planet. Unless someone comes forward, we likely won’t be able to discover much more."
   btr_archeology_crashed_ship.4.a:0 "At least we can recover the cargo."
+
+  ### Site ###
+  btr_archeology_space_hulk:0 "Space Hulk"
+  btr_archeology_space_hulk_site_desc:0 "Tramp freighters, criminals, and less scrupulous scrapyards have a habit of filling shipping lanes with derelict vessels that endanger legitimate travel and functioning members of society. By law they are obligated to alert us when a vessel is abandoned and to mark the ship so others can easily identify it and its status but that would then hold them responsible so they typically avoid it leaving these hulks as hazards we must clear."
+
+  ### Stage 0 ###
+  btr_archeology_space_hulk.name:0 "Floating Derelict"
+  btr_archeology_space_hulk.desc:0 "We’ve received reports of a vessel floating adrift on the outskirts of shipping districts in [system.getname]. While operators are legally compelled to register shipping incidents and mark their vessels after abandoning some, especially the less savory sort, ignore these rules and hope that the law doesn’t catch up with them. We’ll need to safely remove it and check if there is any evidence of who left it there as well see if any cargo is left."
+  btr_archeology_space_hulk.a:0 "Another day of governing."
+  ### Stage 1 ###
+  btr_archeology_space_hulk.1.name:0 "The Approach"
+  btr_archeology_space_hulk.1.desc:0 "We have arrived on scene and located the vessel, it is floating not far from where reports indicated it would be. Our scan indicates that it is void cold with no life signs, no immediate signs of damage but it is hard to tell on a ship so similar to the background of space. We will be approaching and boarding as soon as it is safe to do so."
+  btr_archeology_space_hulk.1.a:0 "Understood"
+  ### Stage 2 ###
+  btr_archeology_space_hulk.2.name:0 "Eulogy"
+  btr_archeology_space_hulk.2.desc:0 "The rescue ship CRV Sultara responded to reports of a massive explosion in the [system.getname] and found the remnants of [ship.getname] along with additional debris inline with a standard size freighter. They found no survivors but were able to recover the [ship.getname]’s logs which recorded up to the moment of the explosion. Apparently the ship had a team working to restore power on the vessel, as soon as they did the ship went into some sort of emergency lockdown. They still had contact with the away team but could not get them off of the vessel, before they could even fully understand what had happened a prerecorded message began to play.“Well, well, well. I knew you hated me Ferik, if i had known you were so stupid i would’ve gotten rid of you years ago. You just can’t help yourself can you? Doesn’t matter now, I'll see you in hell.” Our initial analysis points to the freighter overloading its engine core and exploding so violently that it ripped both ships to pieces."
+  btr_archeology_space_hulk.2.a:0 "Brave lives lost to someone else’s grudge."
+  ### Stage 3 ###
+  btr_archeology_space_hulk.3.name:0 "Drop Coordinates"
+  btr_archeology_space_hulk.3.desc:0 "The ship is old and not particularly well maintained so finding all of the reasons for the power failure and fixing them was proving overly tedious. Instead, we used portable generators to power the bridge so we could at least continue our investigation. What we uncovered was far more interesting than anything we’d anticipated. It seems this ship was a sacrifice, intended to give someone the coordinates to a payment stash without either party being physically present. No names are used but we have some clues as to who the parties are and are tracking those leads down. In the meantime our agents have retrieved the stash and removed the vessel from the shipping lanes."
+  btr_archeology_space_hulk.3.a:0 "A bad combination."
+  ### Stage 4 ###
+  btr_archeology_space_hulk.4.name:0 "Penny Crimes"
+  btr_archeology_space_hulk.4.desc:0 "Restoring power to the ship took longer than we had anticipated as the ship's systems were far more degraded than initial scans predicted. Apparently the ship was owned by an individual who had attempted to enter the shipping industry, offering both freight and personal trips to anywhere people with money wanted to go. Unfortunately for him, people with money weren’t interested in his old run down vessel and his business was barely breaking even. As the ship continued to degrade he decided to abandon it out here rather than go through the official channels, and spend the time and money to dispose of the ship safely. He meticulously pulled everything off of it to either sell or use personally."
+  btr_archeology_space_hulk.4.a:0 "Consider this reimbursement for administrative expenses."

@@ -72,3 +72,75 @@ btr_archeology_crashed_ship = {
         }
     }
 }
+btr_archeology_space_hulk = {
+    desc = btr_archeology_space_hulk_site_desc
+    picture = #TODO
+    stages = 3
+    max_instances = 1
+    allow = {
+        is_a_planet = no
+        exists = owner
+    }
+    visible = {
+        default_site_visible_trigger = yes
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_archeology_crashed_ship.2
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = btr_archeology_crashed_ship.3
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_archeology_crashed_ship.4
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+btr_archeology_krogan_warlord = {
+    desc = btr_archeology_krogan_warlord_site_desc
+    picture = #TODO
+    stages = 3
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        #TODO Not in human space
+    }
+    visible = {
+        default_site_visible_trigger = yes
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_archeology_krogan_warlord.2
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = btr_archeology_krogan_warlord.3
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_archeology_krogan_warlord.4
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
