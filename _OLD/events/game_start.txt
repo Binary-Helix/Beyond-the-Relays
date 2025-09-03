@@ -1739,14 +1739,14 @@ planet_event = {
 				limit = { owner = { has_authority = auth_machine_intelligence } }
 				while = {
 					count = 13
-					create_pop = { species = owner_main_species }
+					create_pop_group = {  species = owner_main_species }
 				}
 			}
 			else_if = {
 				limit = { owner = { has_authority = auth_hive_mind } }
 				while = {
 					count = 16
-					create_pop = { species = owner_main_species }
+					create_pop_group = {  species = owner_main_species }
 				}
 			}
 			else_if = {
@@ -1759,13 +1759,13 @@ planet_event = {
 				}
 				while = {
 					count = 6
-					create_pop = {
+					create_pop_group = {
 						species = event_target:mechanical_species
 					}
 				}
 				while = {
 					count = 12
-					create_pop = { species = owner_main_species }
+					create_pop_group = {  species = owner_main_species }
 				}
 			}
 			else_if = {
@@ -1785,17 +1785,17 @@ planet_event = {
 				}
 				while = {
 					count = 8
-					create_pop = { species = event_target:syncretic_species }
+					create_pop_group = {  species = event_target:syncretic_species }
 				}
 				while = {
 					count = 10
-					create_pop = { species = owner_main_species }
+					create_pop_group = {  species = owner_main_species }
 				}
 			}
 			else = {
 				while = {
 					count = 18
-					create_pop = { species = owner_main_species }
+					create_pop_group = {  species = owner_main_species }
 				}
 			}
 		}
@@ -1804,14 +1804,14 @@ planet_event = {
 				limit = { owner = { has_authority = auth_machine_intelligence } }
 				while = {
 					count = 15
-					create_pop = { species = owner_main_species }
+					create_pop_group = {  species = owner_main_species }
 				}
 			}
 			else_if = {
 				limit = { owner = { has_authority = auth_hive_mind } }
 				while = {
 					count = 18
-					create_pop = { species = owner_main_species }
+					create_pop_group = {  species = owner_main_species }
 				}
 			}
 			else_if = {
@@ -1824,13 +1824,13 @@ planet_event = {
 				}
 				while = {
 					count = 4
-					create_pop = {
+					create_pop_group = {
 						species = event_target:mechanical_species
 					}
 				}
 				while = {
 					count = 7
-					create_pop = { species = owner_main_species }
+					create_pop_group = {  species = owner_main_species }
 				}
 			}
 			else_if = {
@@ -1850,17 +1850,17 @@ planet_event = {
 				}
 				while = {
 					count = 4
-					create_pop = { species = event_target:syncretic_species }
+					create_pop_group = {  species = event_target:syncretic_species }
 				}
 				while = {
 					count = 6
-					create_pop = { species = owner_main_species }
+					create_pop_group = {  species = owner_main_species }
 				}
 			}
 			else = {
 				while = {
 					count = 10
-					create_pop = { species = owner_main_species }
+					create_pop_group = {  species = owner_main_species }
 				}
 			}
 		}
@@ -2220,7 +2220,7 @@ country_event = {
 					NOT = { is_same_species = owner_species }
 				}
 				planet = {
-					create_pop = {
+					create_pop_group = {
 						species = event_target:correct_prepatent_species
 					}
 				}

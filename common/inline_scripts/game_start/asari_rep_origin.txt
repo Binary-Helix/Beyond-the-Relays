@@ -1,0 +1,70 @@
+# Initial district counts
+#	* 2× Generator Districts
+#	* 2× Mining Districts
+#	* 3× Agriculture Districts
+# Urban Districts:
+#	- 2× City Districts
+# Buildings Added:
+#	* Planetary Administration
+# Zones:
+#	* Archive Specialization
+#	* Industrial Specialization
+
+if = {
+    limit = {
+        exists = owner
+        owner = {
+            has_origin = asari_rep_origin
+        }
+    }
+    change_variable = {
+        which = farming_districts
+        value = 1
+    }
+
+    remove_building = building_capital
+    remove_building = building_factory_1
+    remove_zone = {
+        district = district_city
+        zone = zone_research_unity
+        zone_slot = 1
+    }
+
+    add_zone = {
+        district = district_city
+        zone = zone_research_society
+    }
+    add_building = building_system_capital
+    add_building = {
+        building = building_fortress
+        zone = zone_urban
+    }
+    add_building = {
+        building = building_bureaucratic_1
+        zone = zone_urban
+    }
+    add_building = {
+        building = building_embassy
+        zone = zone_urban
+    }
+    add_building = {
+        building = building_commercial_zone
+        zone = zone_urban
+    }
+    add_building = {
+        building = building_asari_rep_comm_center
+        zone = zone_urban
+    }
+    add_building = {
+        building = building_asari_rep_comm_center
+        zone = zone_urban
+    }
+    add_building = {
+        building = building_research_lab_2
+        zone = zone_research_society
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+}

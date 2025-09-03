@@ -1,0 +1,5061 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		timeline.0 # Initial Timeline Event. Gives for example the starting origin
+		#game_start.1 # Spawn special/hidden countries
+		#game_start.2 # removes random planet modifiers from homeworlds and spawns terraforming candidates
+		#game_start.3 # Hidden Game Start Event that resets tutorial for advisor trigger purposes
+		game_start.5 # Countdown to Nomad Fleet
+		game_start.31 # Create wormhole pairs
+		distar.290 # Spawn Sealed System
+		distar.252 # Phaseshifting Planet
+		distar.295 # Connect Ratling Systems to one another
+		distar.8000 # Randomize L-Cluster outcome
+		colony_mod.100 #titanic life blocker setup
+		game_start.50 # Set up Nebula system art
+		galactic_features.420 # Spawn VLUUR
+		clones.1 # Clone Army Origin, fix species before Leaders are generated
+		central.1 # Central Crystal event
+		ancrel.12050 # Surveillance Supercomputer system spawn
+		astral_planes.1 # Spawn Astral Rifts
+		grand_archive.3000 # Spawn Cutholoids
+		situation.1999 # Randomize Kaleidoscope spawning
+		cstorms.900 # Queue storm spawning
+	}
+	random_events = {
+		16 = 0
+		4 = akx.8000
+	}
+}
+
+on_game_start_country = {
+	events = {
+		action.501			# Give Imperial Ruler trait if ruler does not have it for some reason
+		game_start.33		# populate system with stations
+		game_start.10
+		necroids.4			# flip guaranteed planets to guaranteed primitives for Necrophage
+		clones.2			# Clone Army Origin
+		clones.3			# Clone Army Origin pop creation
+		necroids.255		# Paid of Debt event
+		origin.5605			# Teachers of the Shroud Origin - Shroudwalker's Contact
+		toxoids.7000		# Knights of the Toxic God - Start Quest
+		origin.4005			# Payback Origin
+		game_start.60		# Misc Paragon
+		game_start.63		# Change Ethic of first Ruler to empire's fanatic ethic.
+		game_start.64		# Add techs for Pharma State
+		game_start.66
+		paragon_2.2125		# UTILITY - handle out previous jobs to rulers
+		astral_planes.5		# Fill Astral Rift pool
+		astral_planes.2000	# Dimensional Worship astral thread reward modifier computing
+		astral_planes.2100	# Riftworld Origin
+		astral_planes.2200	# Hyperspace Specialty giving research
+		astral_planes.2205	# Dark Consortium giving research
+		game_start.70		# Council Generation
+		game_start.71		# Set starting planet governors
+		game_start.72		# Council Generation
+		leader.110			# Additional traits from civics
+		cyber.5000			# Start Obsessional Directive Situation
+		cstorms.3101		# Storm Chasers Origin chain
+		grand_archive.1000	# Primal Calling Origin
+		grand_archive.2210	# Voidworm immunity
+		grand_archive.2220  # Treasure Hunters Origin
+		grand_archive.7100	# Galactic Curators civic
+		grand_archive.7200	# Beastmasters civic
+		grand_archive.7999	# Treasure Hunters origin starting event
+		focus.5				# Set up variables for Empire Focuses
+		unplugged.199		# Unplugged Origin Setup
+		wilderness.100		# Wilderness Origin setup
+		game_start.75		# Force reset slaves
+	}
+}
+
+# No scope, like on_game_start
+# Does not run when loading MP saves due to OOS concerns
+on_single_player_save_game_load = {
+}
+
+# No scope, like on_game_start
+on_monthly_pulse = {
+	events = {
+		marauder.511			# Great Khan Dies
+		#marauder.11			# Marauder infighting - commented out for now
+		crisis.120				# Feral Prethoryn
+		crisis.123				# Feral Prethoryn infighting
+		marauder.113
+		leviathans.170			# no more energy; Trader Enclave deal canceled
+		action.85				# flip planets to starbase owner
+		marauder.150			# AI hires Marauder raids
+		marauder.151			# AI hires Marauder mercs
+		action.92				# make sure the swarm infests
+		action.93				# make sure extradimensionals have no planets
+		action.90				# rebuild outpost for orphaned colonies
+		apoc.301
+		distar.1082
+		distar.5014
+		distar.5001
+		distar.301
+		graygoo.183
+		graygoo.510
+		distar.10955
+		action.116				# enable resources for galactic market
+	#	paragon_2.1145			# Aptitude - Champions of the Empire Tradition effect
+		pirate.48
+		pirate.4
+		crime.1000
+		origin.50				# "Scion": FE lends a fleet
+		origin.30				# "Scion": FE reclaims fleet
+		galcom.105
+		galcom.108
+		galactic_features.365	# Tiyanki Respawning
+		enclave.2055 			# If Khan dead, merc fleets break contract
+		enclave.2065 			# Unemployed mercs return to merc station
+		fircon.10				# Adds pre-FTL insights
+		crisis.7017 			# Cosmogenesis Neural Chip Objective
+		crisis.24000			# Synth Queen rebuilds her capital if possible
+		crisis.8049				# Synth Queen - spawns convoys and history sites
+		cstorms.1000			# Cosmic Storms unity per system/planet
+		cstorms.1050			# Particle Storms unity per ships
+		cstorms.1100			# Cosmic Storms monthly affects
+        grand_archive.2104      # Voidworms Inside Borders - Monthly Clean Up
+		grand_archive.2106      # Voidworms Inside Borders - Monthly Check
+		grand_archive.3104      # Cutholoids Inside Borders - Monthly Clean Up
+		grand_archive.3106      # Cutholoids Inside Borders - Monthly Check
+		assimilation.50			# sub-species integration
+		assimilation.100		# species assimilation
+		assimilation.150		# similar sub-species merge
+	}
+}
+
+# Via pre_ftl_tech_progress_situation / preftl.50
+# See also: on_monthly_pulse_pre_ftl_observation_broken_shackles (below)
+on_monthly_pulse_pre_ftl_observation = {
+	random_events = {
+		# Neolithic Observation Events
+		100 = fircon.1255		# Tractable and Fertile
+		100 = fircon.1260		# Famine!
+		100 = fircon.1270		# Cave Paintings
+		# Bronze and Iron Age Events
+		100 = fircon.1280		# Written in the Stars!
+		100 = fircon.1295		# Pictorial Descent!
+		100 = fircon.1305		# All Hail Us!
+		# Medieval and Renaissance Age Events
+		100 = fircon.1325		# Art Finds a Way!
+		100 = fircon.1335		# The Journey Begins
+		100 = fircon.1355		# Ignorance is Contagious
+		# Steam, Industrial, and Machine Events
+		100 = fircon.1375		# Industrial Advancement!
+		100 = fircon.1405		# Peace and Prosperity!
+		100 = fircon.1440		# Conflict! What is it Good For!
+		# Atomic and Early Space Age Events
+		100 = fircon.1465		# Seeking Spacemen
+		25 = fircon.1495		# Propulsion Proponent Proclamation
+		# Early Space Age
+		5 = preftl.1010			# Early Space Age Robot Uprising
+		20 = fircon.2600		# First Interplanetary Flight
+		# Non-era related Observation Events
+		50 = fircon.2000		# Medical Side-Effects
+		50 = fircon.2010		# It's Raining Aliens!
+		# Situation Events
+		10 = preftl.2000		# Plague Situation
+		10 = preftl.2100		# Organic Singularity Situation
+		10 = preftl.2166		# New World Order Situation
+		# Hive Observation Events
+		100 = fircon.2500		# Phagocyted
+		100 = fircon.2510		# Ecosystem Takeover
+		100 = fircon.2520		# Fires of Industry
+		100 = fircon.2530		# Requiem for a Drone
+		100 = fircon.2540		# Nascent Collective
+		100 = fircon.2550		# The Right to Leave
+		# Pre-3.7 Observation Events
+		# Non-Era Related Observation Events
+		50 = observation.0		# Incoming Asteroid
+		50 = observation.1200	# Malfunctioning Implants
+		25 = observation.1300	# Aggressive Observation causes ethics change
+		5 = observation.1400	# Nuclear War Warning
+		# Medieval or Victorian Era Events
+		50 = observation.300	# Smuggler Outpost
+		# Pre-Industrial Events
+		50 = observation.100	# Rogue Scientist
+		# # Post-Industrial Events
+		50 = observation.1000	# Scientist Abduction
+		50 = observation.1100	# Defense Force
+		50 = observation.1500	# Research Proposal
+		# Atomic and Early Space Age Events
+		50 = observation.200	# Shuttle Intercepted
+		#Strange Worlds Events
+		100 = strange_worlds.3000 # Suspicious Prophet
+		100 = strange_worlds.3035 # Crate Expectation
+		100 = strange_worlds.3065 # Ladders to Heaven
+	}
+}
+
+# The following are considered valid for "Broken Shackles" empires observing their original civilizations; see also on_monthly_pulse_pre_ftl_observation (above)
+# Via pre_ftl_tech_progress_situation / preftl.50
+on_monthly_pulse_pre_ftl_observation_broken_shackles = {
+	random_events = {
+		# "First Contact" Observation events
+		100 = fircon.1255		# Tractable and Fertile
+		100 = fircon.1280		# Written in the Stars!
+		100 = fircon.1325		# Art Finds a Way!
+		100 = fircon.1335		# The Journey Begins
+		# Pre-3.7 Observation Events
+		50 = observation.0		# Incoming Asteroid
+		50 = observation.1200	# Malfunctioning Implants
+		25 = observation.1300	# Aggressive Observation causes ethics change
+		5 = observation.1400	# Nuclear War
+		50 = observation.300	# Smuggler Outpost
+		50 = observation.100	# Rogue Scientist
+		50 = observation.1000	# Scientist Abduction
+		50 = observation.1100	# Defense Force
+		50 = observation.1500	# Research Proposal
+		50 = observation.200	# Shuttle Intercepted
+	}
+}
+
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		leviathans.10	# Opinion increase with Enclaves
+		crisis.204
+		crisis.205
+		crisis.208
+		crisis.240		# Prethoryn Army reinforcements
+		crisis.1254
+		crisis.2080
+		crisis.2310
+		crisis.122
+		marauder.85		# Marauder mercenary Fleet available for hire (mid-game)
+		marauder.100	# Marauder raid
+		marauder.160
+		marauder.699
+		crime.50		# Crime Events
+		action.105		# Catch those outside of the Market - now requires you to be part of Galactic Community
+		ancrel.6098
+		galcom.1		# Galactic Community
+		origin.200		# "Scion": tasks from the Fallen Empire
+		crisis.5000
+		crisis.5005
+		custodian.33	# Independent GDF Reinforcements
+		custodian.34	# GDF resurrection if destroyed
+		origin.6245		# "Fear of the Dark": Haven Progress
+		awareness.110	# Uncloaked observation outpost awareness gain
+		awareness.175	# Branch office on pre-ftl planet awareness gain
+		astral_planes.2 # Progressive Astral Rifts spawn
+		astral_planes.10	# Crystal Sphere - Formless event chain
+		crisis.7010 	# Cosmogenesis Scholarium Subjects Objective
+		crisis.7015 	# Cosmogenesis Galcom Research Resolutions Objective
+		crisis.7020		# Cosmogenesis Science Nexuses Objective
+		crisis.8135		# Synth Queen Convoy Spawner
+		crisis.8043		# Synth Queen Speech 2 setup
+		grand_archive.3001	# Cutholoid Respawn
+	}
+}
+
+# No scope, like on_game_start
+on_bi_yearly_pulse = {
+	events = {
+		crisis.206
+		distar.5060
+		cara.960 # Galatron pulse
+		enclave.2045 #Khan hires mercenaries
+		machine_age.2200 #Cyber Creed Starting Events
+	}
+}
+
+# No scope, like on_game_start
+on_five_year_pulse = {
+	events = {
+		crisis_trigger.1
+		colony.3029 #Mirror portal followup event gatekeeper
+		origin.1334
+		cybernetics.5053 #Nanite ascension - orbital deposit handler
+	}
+	random_events = {
+		150 = 0
+		50 = situation.2000 # Situation - The Kaleidoscope
+	}
+}
+
+# No scope, like on_game_start
+on_decade_pulse = {
+	events = {
+		galactic_features.362 # Space fauna respawn
+		utopia.50		# Science Nexus (Think Tank) events
+#		syndaw.10		# machine leader malfunction chance
+		syndaw.400		# machine uprising + warning events
+		galcom.14		# check if anyone's missing an invite to the Galactic Community
+		drones.100		# Ancient Mining Drone Expansion Fleet setup (unclaimed systems)
+		drones.120		# Ancient Mining Drone Expansion Fleet setup (claimed systems too)
+		drones.200		# triggers a possible Space Crystal Splitter expansion (any system)
+		paragon_2.1140	# Shroud Preacher trait effect
+		pirate.100		# assorted late-game pirates
+		fedev.600		# Federation Joint Operation - Trade League
+	}
+}
+
+# No scope, like on_game_start
+on_mid_game_pulse = {
+	events = {
+		leviathans.2011 # spawn wraith
+		leviathans.20101 # remove too-late wraith discovery
+		distar.2050
+		central.2
+		origin.6140 # fotd resolution
+		origin.5045 # Broken Shackles - The Cost of Freedom
+	}
+}
+
+# No scope, like on_game_start
+on_late_game_pulse = {
+	events = {
+	}
+}
+
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		tutorial.1337		# Artifact tutorial
+		tutorial.1340		# Astral Threads tutorial
+		tutorial.2110		# Tutorial: Creating a Mercenary Enclave
+		cara.333			# ai checks if it can/wants to play with the caravaneers
+		clones.3			# Clone Army Origin pop creation
+		origin.3230			# Adds or Removes Modifier for Progenitor Hive
+		origin.3235			# Warns Progenitor Hive about Modifier
+		origin.3200			# Progenitor Hive leader XP Gain
+		action.325			# Eminent Diplomats tradition
+		enclave.4239		# Teachers of the Shroud origin - Shroudwalkers departure
+		enclave.4243		# Teachers of the Shroud origin - Become the Crisis - Warning
+		enclave.4244		# Teachers of the Shroud origin - Become the Crisis - Shroudwalkers departure
+		galcom.210			# Monthly Ethics Check for GalCom
+		toxoids.8014		# Check if toxic knights lost their keep
+		origin.5048			# Broken Shackles - Diverse Design
+		origin.5094			# Broken Shackles - Resolution Proposed
+		origin.5104			# Broken Shackles - Resolution Proposed
+		origin.5114			# Broken Shackles - Resolution Proposed
+		origin.5124			# Broken Shackles - Resolution Proposed
+		paragon.5034
+		paragon.5037
+		utopia.2665			# Monthly covenant progress
+		utopia.2670			# Covenant Rank 1 check
+		utopia.2675			# Covenant Rank 2 check
+		utopia.2680			# Covenant Rank 3 check
+		utopia.2685			# Covenant Rank 4 check
+		enclave.2075		# Find admiralless merc fleets and give them one.
+		ancrel.9902			# Archaoetech - Zro deficit ends - enable storm casters
+		ancrel.9906			# Archaoetech - Zro deficit starts - disable storm casters
+		paragon.6030		# Checks if your leader has enough zro to eat
+		action.720			# Void Hive Build Station
+		astral_planes.1690	# Mirrored Empire setup
+		leader.300			# Favor Maker Councilor Trait
+		paragon.605			# Spawn Gestalt Nodes if any are missing
+		cyber.1570			# Remove Clear Thought Clinic modifiers
+		machine_age.2105	# Monthly Pulse to ensure that no spiritualist cybercreed pops have fallen between the cracks
+		crisis.7540			# Cosmogenesis - Empty lathe alert
+		cybernetics.5025	# Virtual Machine pop creation
+		cybernetics.5030	# Virtual Machine pop destruction
+		focus.560			# Set Relations Flag for Tasks
+		focus.80			# Empire Focus
+		focus.95			# Empire Focus
+		timeline.9          # Milestone Precursor Found
+		timeline.29			# Milestone Breached the Shroud
+		bio.5108			# Assign Purity Authority trait variable
+		bio.5118			# Assign EvoPred trait variable
+		biocrisis.205 		# Behemoth Growth Factor decrease
+		biocrisis.285 		# Behemoth
+		bio.1075			# EvoPred Faction Tracker
+	}
+	random_events = {
+		75 = 0
+		25 = origin.7300			# Fruitful origin - luring space fauna to feeding stations
+	}
+}
+
+# this = country
+on_yearly_pulse_country = {
+	events = {
+		timeline.2				# Timeline event for the start of the year
+		cara.4101 				# Caravan neighbor gatekeeper
+		anomaly.6793 			# Ghost Ship follow-up event for psionic ascension
+		specialist.500 			# Scholarium Planetary Sensor
+		specialist.1100 		# Prospectorium Resource Discovery
+		leviathans.121 			# Trader Enclave Opinion gain for resource deals
+		origin.6000 			# Fear of the Dark Random Events
+		origin.5047		 		# Broken Shackles - Complimentary Thinking
+		origin.5041				# Broken Shackles - Factions Founded
+		origin.5011 			# Broken Shackles - Homesick Alternate
+		paragon_2.1020 			# Galactic Paragons negative leader trait event.
+		paragon.5955 			# Luminary Age Check
+		paragon.5960 			# Utility event for players continuing their old save
+		action.2000				# Caravaneers random events gatekeeper
+		fallen_empires_tasks.10 # Fallen Empire task Failure - timer ran out (previously: MTTH 12 months)
+		grand_archive.1100 		# Primal Calling origin - Revealing the Voidworm Nests
+		timeline.33				# Milestone Game End
+		bio.700 # Update Shared Genetics modifiers
+		biocrisis.115 #Make sure Behemoths are angry
+		unplugged.4000 # Gatekeeper event for early Pop Factions
+		biocrisis.190 	# Behemoth Victory
+	}
+}
+
+# this = country, fired via action.2001 from on_yearly_pulse_country
+on_yearly_random_pulse_country_caravaneers_list = {
+	random_events = {
+		1 = cara.4000 # Pops join Caravan (previously: MTTH 2 years)
+		1 = cara.4010 # Caravan pops join colony (previously: MTTH 2 years)
+		1 = cara.4020 # Caravan leaves hulk behind (previously: MTTH 2 years)
+		2 = cara.4030 # Xenophobes dislike Caravan (previously: MTTH 1 year)
+		2 = cara.4040 # Xenophiles like Caravan (previously: MTTH 1 year)
+		2 = cara.4050 # Caravaneers steal stuff (previously: MTTH 1 year)
+	}
+}
+
+# this = country
+on_bi_yearly_pulse_country = {
+	events = {
+		espionage.2 # Random Spy Network events (targeting default empires)
+		preftl_espionage.2 # Random Spy Network events (targeting pre-FTL societies)
+	}
+}
+
+# this = country
+on_five_year_pulse_country = {
+	events = {
+		action.220
+		action.250	# communication spread
+		action.420
+		action.620 # pre-FTL diplo events
+		action.630 # pre-FTL tech events
+		origin.5715	# Imperial Vassal - Dissolution event chain
+		preftl.10050 # In breach of Equal Standing - get a fine.
+		preftl.10150 # In breach of Non-Interference - get a fine.
+		preftl.10250 # In breach of Exploitation - get a fine.
+		fircon.5050 # Solarpunk trade ending
+		origin.4109 # Payback - meeting Broken Shackles
+		paragon.200	# Astrocreator Azaryn encounter chance
+		action.2213		# on_five_year_random_pulse_country_fe_list
+		grand_archive.1005	# Primal Calling Space Fauna spawn for communication
+		grand_archive.4110	# Curators contact related to specimens
+		grand_archive.6000	# Treasure Troves - Treasure Hunter Origin
+		pirate.1 #Birth of Piracy gatekeeper here
+		bio.5001			# Chance for leaders to regain backup clones
+	}
+	# See also: on_five_year_random_pulse_country = {}
+	random_events = {
+		75 = 0
+		25 = precursor.301	# Precursor Anomaly found (previously: MTTH 20 years)
+		25 = precursor.310	# Private Collector has an artifact (previously: MTTH 20 years)
+		25 = precursor.311	# Neighbor offers to sell an artifact (previously: MTTH 20 years)
+		25 = precursor.314	# Neighbor gifts an artifact (previously: MTTH 20 years)
+	}
+}
+
+# this = country, fired via action.220 from on_five_year_pulse_country
+on_five_year_random_pulse_country = {
+	random_events = {
+		100 = federations2.50	# Federation hegemony challenge
+		100 = federations2.100	# Federation military challenge
+		50 = envoy_events.4		# Respected Envoy to Galactic Community
+		25 = envoy_events.5		# Irritating Envoy Must Die
+		5 = envoy_events.15		# Galactic Community Wildlife
+		25 = envoy_events.1		# Insulting envoy software event
+		100 = action.2211		# on_five_year_random_pulse_country_negative_list
+		25 = situation.500		# Gravity Well situation
+		5 = fircon.1200			# Jaunting Traveler
+		1900 = 0
+	}
+}
+
+# this = country, fired via action.220 from on_five_year_pulse_country
+on_five_years_communication_spread_country = {
+	random_events = {
+		75 = 0
+		35 = communications_spread.1	# Communications - neighbor (previously: MTTH 120 months)
+		25 = communications_spread.3	# Communications - neighbor (previously: MTTH 240 months)
+	}
+}
+
+
+# this = country, fired via action.420
+on_five_year_random_pulse_overlord = {
+	random_events = {
+		200 = 0
+		10 = subject.1		# Bulwark/Militarist - Veterans
+		10 = subject.50		# Bulwark - Starbase Upgrade
+		10 = subject.100	# Bulwark - Occupation
+		10 = subject.1001	# Bulwark/Militarist - War Fever
+		10 = subject.1050	# Bulwark/Pacifist - War Exhaustion
+		10 = subject.1100	# Bulwark - Admirals Bickering
+		10 = subject.2001	# Scholarium - Technological Advancement
+		10 = subject.2050	# Scholarium - Destructive Research
+		10 = subject.2100	# Scholarium - Experiments!
+		10 = subject.3001	# Spiritualist - Overlord Tourist Disagreements
+		10 = subject.3050	# Spiritualist - Pilgrimages
+	}
+}
+
+# this = country, fired via action.620
+on_five_year_random_pulse_pre_ftl = {
+	random_events = {
+		200 = 0
+		10 = fircon.6000	# I'm a (non) believer
+		10 = fircon.7500	# We are NOT cute
+		10 = fircon.7505	# All is one
+		10 = fircon.7510	# Teach a Hive How to Craft
+		10 = fircon.8000	# Xenophiliacs, AKA Space Otaku
+		10 = fircon.8025	# Freeport
+		10 = fircon.8030	# Sweet Tooth
+		10 = fircon.8035	# Land Grabs
+		10 = fircon.8040	# Fruitful Cooperation
+		10 = fircon.8045	# Slavers - Us
+		10 = fircon.8050	# Slavers - Them
+		10 = fircon.8055	# Miracle Hagglers
+		10 = fircon.8060	# Market Fluctuations
+		10 = fircon.8500	# Misuse of Technology
+		10 = fircon.8515	# The Lone Drone (I, Drone)
+		10 = fircon.8565	# Invasive Species
+		10 = fircon.8530	# Different Flavors of Government
+	}
+}
+
+# this = country, fired via action.630
+on_five_year_random_pulse_pre_ftl_tech_events = {
+	random_events = {
+		200 = 0
+		10 = observation.2011 # Xenophobe Learners
+		10 = observation.2014 # Quick Learners
+		10 = observation.2016 # Slow Learners
+		10 = observation.2018 # Repugnant Learners
+		10 = observation.2020 # Natural Scientist Learners
+		10 = observation.2022 # Intelligent Learners
+		10 = observation.2029 # Gatekeeper for Ethical Considerations
+	}
+}
+
+# Why do this, you might ask, and not just use a random_list? Because on_actions check the triggers of the event before they try to fire them and exclude them from the list if they are false, so a list with no 0 weight will always fire an event so long as any of them are able to be fired
+# Used in operation_diplomatic_incident. Beware when changing.
+# this = country, fired via action.2211 from on_five_year_random_pulse_country
+on_five_year_random_pulse_country_negative_list = {
+	random_events = {
+		10 = envoy_events.1001	# Insulting envoy software event (operation_diplomatic_incident-safe)
+		20 = envoy_events.3		# A Contribution to Galactic Comedy
+		10 = envoy_events.100	# Scandalous Insult
+		20 = envoy_events.7		# Xenophobe Envoy Elopes
+		20 = envoy_events.225	# Salacious Affair
+		20 = envoy_events.200	# Galcom Lobbying
+		10 = envoy_events.205	# Violating Local Norms
+		20 = envoy_events.210	# Straying from own Norms
+		20 = envoy_events.215	# Substance Abuse
+		10 = envoy_events.220	# Offense Taken
+		20 = action.2212		# Nothing, done differently because of operation_diplomatic_incident
+	}
+}
+
+on_five_year_random_pulse_country_fe_list = {
+	random_events = {
+		30 = fallen_empires_tasks.1 # Patronizing Fallen Empire gives a gift (previously: MTTH 100 years)
+		100 = fallen_empires_tasks.3 # Xenophile Fallen Empire asks for a pop (previously: MTTH 20 years)
+		40 = fallen_empires_tasks.7 # Xenophile Fallen Empire asks for a pop (previously: MTTH 200 years)
+		10 = fallen_empires_tasks.14 # Xenophile Fallen Empire asks for a pop (previously: MTTH 500 years)
+		50 = fallen_empires_tasks.21 # Materialist Fallen Empire asks for scientist (previously: MTTH 50 years)
+		200 = fallen_empires_tasks.23 # Xenophile Fallen Empire asks for brain scans found in anomaly (previously: MTTH 10 years)
+		30 = bio.3100 # Survival of the Strongest - War Fragment
+		30 = bio.3125 # Too Quiet - War Fragment
+		30 = bio.3145 # Give Peace a Chance - War Fragment
+		30 = bio.3200 # Ecosystem Upgrade - Growth Fragment
+		30 = bio.3215 # Genetic Entertainment - Growth Fragment
+		30 = bio.3225 # Rare Trait - Growth Fragment
+		#50 = bio.3235 # Eternal Harvest - Growth Fragment
+		30 = bio.3300 # A Complete Collection - Control Fragment
+		30 = bio.3320 # Vital Agenda - Control Fragment
+		30 = bio.3345 # Eyesore - Control Fragment
+		280 = 0
+	}
+}
+
+# this = country
+on_decade_pulse_country = {
+	events = {
+		federations.10400	# Fix issues we are in breach of (GalCom)
+		action.240			# Misc error checking
+		leviathans.560		# Enclave communications spread
+		paragon.5905		# Upkeep for Ascended Leader
+		action.632			# Payback - Broken Shackles interactions
+		paragon.998			# Random leader events
+		paragon.41234		# Renowned leader events
+		paragon.40000		# Galactic Paragons related pulses - check possibility to hire an ethic leader
+		grand_archive.6005	# Treasure Troves - NOT Treasure Hunter Origin
+		unplugged.3000		# Unplugged - Embodied Identity Situation
+	}
+	random_events = {
+		50 = 0
+		50 = origin.4300 # Payback Origin - Out of Warranty event chain
+	}
+}
+
+on_decade_pulse_skrand_country = {
+	random_events = {
+		1 = paragon.3010
+		3 = paragon.3020
+		1 = paragon.3030
+		1 = paragon.3040
+		1 = paragon.3050
+		1 = paragon.3060
+		1 = paragon.3080
+		1 = paragon.3090
+	}
+}
+
+on_decade_random_pulse_country_payback_broken_shackles = {
+	random_events = {
+		70 = 0
+		10 = origin.4120	# Sharing Espionage Intel
+		10 = origin.4130	# Help on the senate floor
+		10 = origin.4140	# Help during the war
+	}
+}
+
+# this = country
+on_mid_game_pulse_country = {
+	events = {
+		cstorms.3200
+	}
+}
+
+# this = country
+on_late_game_pulse_country = {
+	events = {
+	}
+}
+
+# setup advanced colony. So far it has a pop on the capital and a colony shelter building matching the is_colony trigger
+# scope: planet
+# from: country
+on_initialize_advanced_colony = {
+	events = {
+		game_start.20	# remove blockers on capital
+		game_start.21	# upgrade colony shelter on additional colonies
+		game_start.22	# set up additional buildings (mines, farms, power plants)
+		game_start.23	# add additional pops
+	}
+}
+
+on_become_advanced_empire = {
+	events = {
+		game_start.6
+	}
+}
+
+# Triggers when pressing begin in the intro window
+# This = country to press begin
+on_press_begin = {
+	events = {
+		tutorial.104
+		advisor.1
+	}
+}
+
+# Triggers when trying to open the diplomacy view for countries with custom diplomacy.
+# Country scope
+# This = target country (player)
+# From = source country
+on_custom_diplomacy = {
+	events = {
+		crisis.30
+		crisis.55
+		crisis.1050
+		crisis.1051
+		crisis.1052
+		nomad.30
+		leviathans.100 # Trader Enclaves (all)
+		leviathans.157 # XuraCorp (refusing comms.)
+		leviathans.160 # Riggans (refusing comms.)
+		leviathans.163 # Muutagans (refusing comms.)
+		leviathans.285 # Artisan Enclave
+		leviathans.301 # Artisan Enclave (refusing comms.)
+		leviathans.499 # Curator Enclave
+		leviathans.597 # Curator Enclave (refusing comms.)
+		utopia.3000
+		utopia.3010
+		crisis.2300
+		crisis.2403
+		marauder.1 # Marauder/Horde (gatekeeper)
+		graygoo.120
+		cara.100 # Caravaneer Home Base
+		cara.101 # Hostile Caravaneers
+		graygoo.130
+		graygoo.500
+		graygoo.501
+		graygoo.502
+		graygoo.503
+		graygoo.504
+		central.19 # Crystalline Empire
+		enclave.200 # Mercenary Enclave
+		enclave.300 # Salvager Enclave
+		enclave.400 # Shroudwalker Enclave
+		astral_planes.3050 # Formless during The Seal
+		astral_planes.3100 # Formless if The Seal Situation is a success
+		astral_planes.3110 # Formless reward as allies
+		astral_planes.3170 # Formless encounter from any country out of event chain
+		crisis.8055 # Synth Queen
+	}
+}
+
+# Triggered when two empires discover each other
+# This = Empire 1
+# From = Empire 2
+# Fromfromfrom = System where contact occurred
+on_first_contact = {
+	events = {
+		tutorial.59 #Tutorial: First Contact
+		leviathans.9 #Leviathans
+		galactic_features.421 #VLUUR
+		pirate.155 #Thalassocracy pirates
+		first_contact_critters.1000 #Establish comms for most cases
+		fircon.3515 #The Chosen (you breached the wormhole)
+
+	}
+}
+
+# Triggered when a first contact process is finished
+# This = first contact scope
+# From = other country
+on_first_contact_finished = {
+	events = {
+		tutorial.2004 #First Contact Established (setup)
+		origin.6044 #Fear of the Dark
+		paragon_2.2100 #Gives progress to Xenolinguistics
+		grand_archive.7015	# Primal Calling Tiyanki Voidlure worked
+		focus.500 #Set First contact Flag for Focus
+	}
+}
+
+# Triggered when an Empire has fleets within another Empire's borders.
+# This = receiver
+# From = sender
+# FromFrom = fleet
+# FromFromFrom = system
+on_enforce_borders = {
+	events = {
+	}
+}
+
+# Triggers when ground combat starts
+# This = planet
+# From = country attacking
+on_ground_combat_started = {
+	events = {
+		action.485 # Prevents With Great Power achievement
+		awareness.125 # Pre-ftl planet invaded, sets awareness to 100.
+		preftl.10156 # Violation of Non-Interference Act by Invasion.
+		fircon.5034 # Invading Solarpunks
+		paragon_2.2085
+	}
+}
+
+# Triggers country_event for the attacker upon victory (before controller is switched)
+# This = country, lead attacker
+# From = country, planet owner
+# FromFrom = planet
+# 'Attacker' is the side that "IsHostile" to the planet controller. For example: spawned monster armies are attackers, but if they win and the player attempts to retake the planet, the player is the attacker
+on_planet_attackers_win = {
+	events = {
+		# Utility
+		action.8		# (Hidden) Establish communications after conquest
+		action.14		# (Hidden) Conquer pre-FTL species/planet (see also: action.140)
+		factions.12		# (Hidden) Set 'recent_primitive_invasion' flag
+		action.51		# (Hidden) 'Outside Context' achievement
+		ancrel.6499		# (Hidden) Relic seized (see also: ancrel.6500)
+		# Crisis
+		crisis.201		# (Hidden) Prethoryn invades; purge begins
+		crisis.219		# (Hidden) Prethoryn invaded; purge ends
+		crisis.2041		# (Hidden) Contingency invades world
+		crisis.2042		# World liberated from the Contingency
+		marauder.503	# (Hidden) Horde invades
+		marauder.515	# (Hidden) Liberated from the Horde
+		graygoo.150		# Gray: "[Planet] Turns to Dust"
+		# Leader effects
+		paragon_2.1015	# (Hidden) Generals' Trait effects
+		# Event chains, etc.
+		paragon_2.2130	# (Hidden) 'Tzrynn Tithe' Trait effects
+		colony.114		# "Abandoned Terraforming Equipment": planet liberated from mutants
+		colony.158		# "Underground Vault": liberated from mutants
+		colony.9889		# (Hidden) "Negative Mass": lost to rebels (see also colony.9890)
+		distar.37		# Rudimentary Robots: "Planetside Violence Suppressed"
+		distar.81		# (Hidden) "Silent Behemoth": defenses crushed
+		distar.235		# "Ketling PLanet Subdued"
+		distar.5077		# (Hidden) Enigmatic Cache: abort Enigmatic Ascension
+		ancrel.2068		# C.A.R.E Interactive Interface: destroy Mega-Warforms
+		ancrel.4064		# Sentinels: "[Planet] Liberated"
+		biocrisis.85 	# Behemoth takes over a planet
+	}
+}
+
+# Triggers country_event for the attacker upon defeat
+# This = country, attack leader
+# From = country, planet owner
+# FromFrom = planet
+on_planet_attackers_lose = {
+	events = {
+	}
+}
+
+# Triggers country_event for the defender upon victory
+# Root = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+on_planet_defenders_win = {
+	events = {
+		colony.5
+		colony.56
+		colony.108
+		distar.34
+		ancrel.4057
+		preftl.1030		# Pre-FTL Robot Uprising Lost
+		colony.9885		# Negative mass, defended against rebels
+		fircon.6034		# I'm a (non) believer - pre-FTLs defeat subterraneans
+	}
+}
+
+# Triggers country_event for the defender upon defeat
+# This = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+on_planet_defenders_lose = {
+	events = {
+		colony.57
+		colony.113
+		colony.154
+		ancrel.4063
+		origin.3210
+		situation.190 # living snow
+		colony.3051
+		preftl.1025		# Pre-FTL Robot Uprising Won
+		fircon.6036		# I'm a (non) believer - pre-FTLs wiped out by subterraneans
+	}
+}
+
+# Fires when you first get intel (_low and up) on a new system
+# Scope = Country
+# From = System
+on_system_first_visited = {
+	events = {
+	}
+}
+
+# Triggers event when each country first sends a ship into the system (once per country)
+# Scope = Ship
+# From = System
+# FromFrom = Country
+on_entering_system_first_time = {
+	events = {
+		graygoo.160
+		graygoo.550
+		federations2.20
+		galactic_features.2
+		galactic_features.350
+		leviathans.3000
+		leviathans.3100
+		leviathans.3202
+		leviathans.2105
+		utopia.2010
+		utopia.2012
+		utopia.2014
+		utopia.2016
+		apoc.1
+		apoc.3
+		apoc.5
+		mega.9100
+		mega.9110
+		mega.9120
+		mega.9130
+		feda.5
+		galactic_features.500
+		aquatics.305 #first sight of Aquatic dragon during first contact
+		over.20
+		enclave.100 #First Shroud Tunnel Encounter
+		origin.5615 #Teachers of the Shroud origin - enter Shroudwalker system
+		ancrel.12060 #Surveillance Supercomputer system
+		origin.6155 #Fear of the Dark entering hunter system
+		paragon.3100 # Legendary Paragon - Exakeides
+		paragon.3144
+		origin.4997 #Broken Shackles - Homeworld Found Gatekeeper 1
+		origin.4998 #Broken Shackles - Homeworld Found Gatekeeper 2
+		origin.4999 #Broken Shackles - Homeworld Found Gatekeeper 3
+		unique.130 #Lone Defender system
+		unique.140 #Star Mall System
+		grand_archive.8020		# Treasure Hunters - Hidden System POI entered
+		grand_archive.8300		# Treasure Hunters - Gateway Voidworm System
+		grand_archive.8405		# Treasure Hunters - Ness system POI entered
+		timeline.43 # Timeline First Wormhole
+		timeline.44 # Timeline First Gateway
+		unplugged.2204 # Unplugged Machine Legacy entering the creators system
+	}
+	random_events = {
+		200 = 0
+		10 = leader.19
+	}
+}
+
+# Triggers event when ship enters a system. It's usually better to use on_entering_system_first_time or on_entering_system_fleet
+# Scope = Ship
+# From = System
+# FromFrom = Country
+on_entering_system = {
+	events = {
+		paragon.3120
+		paragon.3125
+		paragon.3130
+	}
+	random_events = {
+	}
+}
+
+# A fleet has entered a system | See also: on_fleet_auto_move_arrival
+# Scope = Fleet
+# From = System
+on_entering_system_fleet = {
+	events = {
+		paragon.3901
+		action.40
+		country.211
+		country.1002
+		anomaly.3095
+		country.204
+		country.205
+		country.206
+		#story.218
+		story.220
+		story.330
+		#story.408
+		anomaly.3114
+		anomaly.3115
+		nomad.3
+		nomad.7
+		nomad.8
+		leviathans.1005
+		pirate.10
+		leviathans.610
+		leviathans.1030
+		akx.9200
+		akx.9300
+		akx.9600
+		akx.9610
+		distar.135
+		distar.211
+		distar.5011
+		distar.1002
+		distar.230
+		distar.240
+		distar.242
+		ancrel.4012
+		leviathans.999
+		leviathans.1001
+		country.6
+		anomaly.142
+		anomaly.143
+		anomaly.144
+		country.1030
+		country.1050
+		anomaly.96
+		anomaly.106
+		country.1102
+		anomaly.4036
+		country.254
+		leviathans.2061
+		distar.13030
+		graygoo.162
+		ancrel.4024
+		origin.1345
+		origin.1351
+		origin.1390
+		origin.1400
+		country.2
+		galcom.102				# Tiyanki Entering Sytem
+		galactic_features.425	# VLUUR
+		galactic_features.501	# Amoeba wave
+		drones.105				#Mining Drone Expansion Fleet
+		drones.125				#Mining Drone Expansion Fleet (Aggressive)
+		drones.205				#Crystal Splitters
+		akx.9000
+		anomaly.6775
+		aquatics.180			# Enemy enters system with Dragon
+		toxoids.7310			# Knights enter the Toxic God's system
+		toxoids.7311			# Non knights enter the Toxic God's system
+		toxoids.7312			# Knights enter empty Toxic God's system
+		origin.6255				# Fear of the Dark Seperatists attacking hostile fleet
+		astral_planes.45		# Strange Wormhole encounter
+		astral_rift.3290		# Space Storm immunity
+		awareness.100			# Fleet enters a pre-FTL system.
+		fircon.5000				# Entering Solarpunk Borders
+		fircon.5005				# Entering after Solarpunk has been discovered
+		fircon.5015				# Entering actual Solarpunk system
+		fircon.5040				# Entering angered Solarpunk System
+		origin.7302				# Fruitful origin - Space critters see a feeding station and approach it. om nom.
+		origin.7310				# Fruitful origin - Critters leave seed on Planet
+		crisis.8024             # Synth Queen - Entering a Queen's Storm system
+		crisis.8155 			# Synth Queen - Other SQ ships enter a system where a SQ fleet is fighting
+		crisis.8157 			# Synth Queen - Convoys reaches Synth Queen territory
+		crisis.24200 			# Disables the Titan if you have taken the deal with the Animator
+		cstorms.310				# Storm Chasers origin - Reach far edge of galaxy
+		grand_archive.1110		# Frenzied Voidworms home modifier handling
+		grand_archive.2080		# Voidworms In Home Sytem
+		grand_archive.2101		# Voidworms Entering Sytem
+		grand_archive.3030		# Cutholoid Revealed after contact
+		grand_archive.3101		# Cutholoids Entering Sytem
+		grand_archive.6020		# Treasure Troves pirates
+		grand_archive.8240		# Treasure Hunters - Smeegibb system POI entered
+		bio.3005				# Entering Last Thought for the second time
+		bio.3000				# Entering Last Thought for the first time. Intentional order so both don't fire at the same time.
+		biocrisis.160 			# Elder Voidspawn crosses border
+		unplugged.2300			# Unplugged: entering homeworld system
+		unplugged.2495			# Unplugged: encountering the Opus Sentinel
+		biocrisis.90 			# Kaijus play with each other
+		biocrisis.270 			# Raging Behemoths crosses into foreign border
+		biocrisis.151			# Voidspawn System and Colony Effects
+	}
+}
+
+# A fleet executes a move order to exit borders
+# Scope = Fleet
+# From = Origin System
+# FromFrom = Destination System
+on_crossing_border = {
+	events = {
+		cara.1010 # Caravaneer Fleet 1 intro
+		cara.2010 # Caravaneer Fleet 2 intro
+		cara.3010 # Caravaneer Fleet 3 intro
+		cara.1250 # Caravaneer Fleet 1 Re-Deal
+		cara.2250 # Caravaneer Fleet 2 Re-Deal
+		cara.3250 # Caravaneer Fleet 3 Re-Deal
+	}
+}
+
+# A ship has surveyed a planet.
+# Scope = Ship
+# From = Planet
+on_survey_planet = {
+	events = {
+		anomaly.2574	# Terraforming Candidates
+		toxoids.499		# (Notification) "Toxic Terraforming Candidate Discovered"
+		aquatics.4		# (Notification) "Frozen Terraforming Candidate Discovered"
+		advisor.10		# Advisor: Anomalies
+		advisor.25		# Advisor: Surveying (Reminder)
+		country.52		# (Hidden) Habitable World surveyed
+		progress.2		# "The Discovery of Alien Life"
+		fallen_empires.100 # Holy World
+		origin.11		# Holy World ("Scion" version)
+		galactic_features.300 # "Shielded World" (Fallen Empire)
+		anomaly.6660	# "Abnormal Conditions" (regular & Hive version)
+		anomaly.6661	# "Abnormal Conditions" (Machine Intelligence version)
+		anomaly.6662	# (Hidden) add deposits for Mineral Modifiers
+		action.12		# (Hidden) Pre-FTL planet surveyed (see also: action.5)
+		tutorial.2140	# Tutorial: Observation Posts
+		tutorial.55		# Tutorial: Strategic Resources
+		leviathans.2010	# "The Spectral Clockwork" (Wraith)
+		distar.130		# (Hidden) "Old Foes"/"Pyorun–Czyrni" gatekeeper
+		action.941		# Strategic resource discovered
+		distar.256		# Phaseshifting Planet
+		ancrel.2050		# Planetary Mechanocalibrator
+		ancrel.6150		# "Shielded Planet" ("Moon Base"/"Abandoned Ecumenopolis", planet first)
+		ancrel.6151		# "Shielded Planet" ("Moon Base"/"Abandoned Ecumenopolis", moon first)
+		ancrel.9999		# (Hidden) Spawn Archaeology Sites
+		galactic_features.368 # Tiyanki Home System
+		galactic_features.386 # Tiyanki Graveyard System
+		origin.6160		# Fear of the Dark: "The Hunters"
+		uplift.6000		# "Upliftable/Pre-Sapient Species Found"
+		paragon_2.2000	# Prospector trait effects
+		awareness.115	# Uncloaked science ship surveys pre-ftl planet
+		fircon.5020		# "Habinte Unified Worlds Encountered" (Solarpunk)
+		origin.5000		# Broken Shackles: Encountering Main Pop Homeworld
+		origin.5001		# Broken Shackles: 1st Encounter w/Other Pop Homeworld
+		origin.5009		# Broken Shackles: 2nd Encounter w/Other Pop Homeworld
+		astral_planes.6005
+		grand_archive.1015	# Chance to spawn Titanic Life if Primal Calling
+		grand_archive.2240	# Treasure Hoarder Council position effect
+		grand_archive.3010	# Cutholoid surveyed
+		grand_archive.8051	# Shattered world surveyed
+		grand_archive.8101	# Black Needle Base surveyed
+		grand_archive.8201	# Smeegibb shelter surveyed
+		timeline.12         # Milestone First Arc Site
+		unplugged.198 # Machine legacy planet surveyed as unplugged origin
+	}
+
+	random_events = {
+		100 = 0
+		# The following feature weight multipliers which allow On the Shoulders of Giants players to catch up. See '@origin_shoulders_multiplier'.
+		6 = precursor.1		# Vultaum Assembly
+		6 = precursor.500	# Yuht Empire
+		6 = precursor.1000	# First League
+		6 = precursor.1500	# Irassian Concordat
+		6 = precursor.2000	# Cybrex
+		35 = ancrel.1		# Zroni
+		15 = ancrel.2000	# Grunur/Baol
+		25 = cstorms.100	# Inetian
+		25 = cstorms.200	# adAkkaria
+	}
+}
+
+# A ship has surveyed an Astral Rift.
+# Scope = Ship
+# From = Astral Rift
+on_survey_astral_rift = {
+}
+
+# A country has gained a surveyed status on a planet. Happens after "on_survey_planet" if a science ship surveyed a planet. (Can also happen without a ship through changes in intel levels)
+# Root = Planet
+# From = Country
+# FromFrom = Fleet of the science ship that surveyed it, if any
+on_planet_surveyed = {
+	events = {
+		action.46
+		country.259
+		distar.13050 # strategic resource alert
+	}
+}
+
+# A country has gained a surveyed status on an astral rift. Happens after "on_survey_astral_rift" if a science ship surveyed an astral rift. (Can also happen without a ship through changes in intel levels)
+# Root = Astral Rift
+# From = Country
+# FromFrom = Fleet of the science ship that surveyed it, if any
+on_astral_rift_surveyed = {
+	events = {
+	}
+}
+
+# A country has gained a surveyed status on a planet.
+# Happens after "on_survey_planet" or "on_survey_astral_rift" if a science ship surveyed a planet or an Astral Rift.
+# Root = Country
+# From = system
+# FromFrom = Fleet of the science ship that surveyed it, if any
+on_system_survey = {
+	events = {
+		tutorial.18
+		distar.13060 # first wormhole is in foreign territory - apoc.5 duplicate
+		distar.13070 # first gateway is in foreign territory - apoc.1 duplicate
+		distar.13080 # first l-gate is in foreign territory - apoc.3 duplicate
+	}
+}
+
+# A ship is done surveying the last unsurveyed planet in a system
+# Scope = ship
+# From = system
+on_system_survey_ship = {
+	events = {
+		tutorial.2
+		tutorial.299
+		tutorial.74
+		tutorial.170
+		country.251
+		country.252
+		country.253
+		machine_age.3400	# Arc Welders discover an ideal system
+		focus.25			# Empire Focus
+		advisor.15			# Advisor: Potential Colony
+	}
+}
+
+# A planet has begun the colonization process.
+# Scope = Planet
+on_colonization_started = {
+	events = {
+		advisor.17
+		progress.3
+		progress.7
+		paragon.5005 # First planet start colonization
+		distar.300 # Change junkheap planetview image
+		mega.110 # Colonization unconsecration
+		origin.3010 #Lithoid origin deposit/modifier
+		origin.3101 #Remnants colonial goodies
+		federations3.120 #Kept Grounds, if Wenkwort Artem has been colonised
+		origin.5510 #Broken Shackles - First Colony
+		origin.7326	# Fruitful Origin - someone else colonizes the planet
+		origin.7328	# Fruitful Origin - colonizing a planet without opening the seeds
+		astral_rift.2698 # Randomly adds certain blockers if owner has colonization drones
+		cyber.7005 # Check for Guided Sapience Ship
+		cstorms.20	# Give clear blocker tech as research option
+	}
+	random_events = {
+		190 = 0
+
+		#10 = diplomatic.21
+	}
+}
+
+# A planet has been colonized.
+# Scope = Planet
+on_colonized = {
+	events = {
+		action.360		# Get extra urban districts from modifiers
+		crisis.203
+		anomaly.4171
+		tutorial.27
+		#factions.105 # Colonialists New Colony
+		akx.9499
+		distar.5
+		distar.2599
+		distar.1014
+		distar.72
+		distar.73
+		distar.5000
+		distar.262
+		tutorial.9000
+		origin.3001 #ToL Tree add
+		origin.84
+		clones.5 			# Clone Army (make sure pops don't migrate to die)
+		origin.3225 		# Progenitor Hive Missing
+		paragon.5010		# First planet finished colonization
+		paragon.403			# Give boost if "Superior Colonies" Agenda
+		awareness.135		# Planet colonised in pre-ftl system
+		paragon.100 		# Potentially abort Beholder chain
+
+		astral_planes.3080 	# Formless Haven reward
+		cyber.7000			# Create pre-sapient species for Genesis Guides
+		cyber.7001			# Create preserves for pre-sapients already there for Genesis Guides
+		cybernetics.5045	# Virtualize the colony ship stragglers
+		cstorms.2351		# Replace patriotic institute planetary modifier with building
+		focus.100			# Focus card
+		focus.10			# Empire Focus
+		timeline.3          # Milestone First Colony
+		timeline.22         # Milestone First Holy World Colonized
+		bio.1010			# Evolutionary Predators modifier added to planet
+	}
+}
+
+# A colony has been destroyed. Called just before owner and controller is cleared
+# Scope = Planet
+on_colony_destroyed = {
+	events = {
+		colony.2002
+		origin.3002 #ToL Tree death
+		colony.9895 #Remove 'Sprawling Slums' blockers
+		cyber.7015	#Genesis Guide remove deposit on colony destroyed
+	}
+}
+
+# A colony has been destroyed by bombardment. Called after the planet's colony status has been cleared
+# This = Planet
+# From = Bombarder
+on_colony_destroyed_by_bombardment = {
+	events = {
+	}
+}
+
+# This = owner of fleet 1
+# From = owner of fleet 2
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_entering_battle = {
+	events = {
+		paragon.3900
+		nomad.96
+		nomad.98
+		nomad.99
+		leviathans.155 		# Attacked Trader Enclave (any)
+		leviathans.350 		# Attacked Artisan Enclave
+		leviathans.595
+		graygoo.155
+		enclave.7200		# Shroudwalker Teacher leaves after being attacked.
+		enclave.390			# Master Salvager leaves after being attacked.
+		leviathans.605		# Curator Archivist leaves after being attacked.
+		enclave.27
+		astral_planes.3120	# Formless leader fights Extradimensionals
+		crisis.8065			# Try to fight the Synth Queen before you're ready
+		crisis.8150			# Attacking Synth Queen Convoy, nearby fleets join fight
+		biocrisis.375		# Behemoth enters Frenzy
+		biocrisis.380		# Behemoth inspires friendly bioships
+	}
+}
+
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_victim = {
+	events = {
+		paragon.3903
+	#	syndaw.30
+		nomad.95
+		leviathans.3002
+		leviathans.3101
+		leviathans.592
+		leviathans.140	# Trader Enclave destroyed
+		crisis.1281
+		crisis.1282
+		crisis.10000 # Synth Queen Hidden Counter Events
+		crisis.217
+		crisis.2070
+		crisis.1012
+		crisis.1115
+		crisis.1215
+		marauder.4		# (Any) Marauders destroyed
+		marauder.14		# Marauders destroyed after vowing vengeance
+		crisis.80
+		marauder.525	# may trigger Horde Crisis
+		marauder.505	# Great Khan defeated (1st time)
+		marauder.509	# Great Khan defeated (2nd time)
+		graygoo.6
+		cara.900		# Tradestation destroyed
+		graygoo.180
+		crisis.251		# Prethoryn Brood-Queen captured
+		crisis.261		# remove Swarm system
+		crisis.1311		# remove Extradimensional system
+		crisis.2601		# remove Contingency system
+		ancrel.11040
+		enclave.23		# destroy Mercenary Enclave
+		enclave.370		# destroy Salvager Enclave
+		enclave.430		# destroy Shroudwalker Enclave
+		origin.3260		# destroy Offspring ships
+		paragon.3070
+		paragon.285
+		grand_archive.1031	# Space Fauna Ships size decrease
+		grand_archive.3014	# Spotted Cutholoid killed
+		grand_archive.3025	# Spawn special debris for Cutholoids
+		grand_archive.10065	# Restorative Enzymes unique mutation healing
+		grand_archive.10090 # Catalytic Bladder unique mutation
+		crisis.7525		# Cosmogenesis Needle Destroyed
+		grand_archive.1160	# Frenzied Voidworms starbase destroyed
+		grand_archive.10100	# Fissile Cores Unique Mutation
+		grand_archive.2095	# Voidworm Nest destruction
+		biocrisis.170 		# Elder Voidspawn dies
+		biocrisis.265 		# Mindlinked Behemoth dies
+	}
+}
+
+# This = owner of ship 1 (combatant)
+# From = owner of ship 2 (destroyed)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_perp = {
+	events = {
+		leviathans.1016
+		leviathans.2099
+		crisis.1283
+		crisis.10005 #Victims of the Synth Queen
+		crisis.218
+		crisis.2071
+		story.222
+		achievement.2
+		distar.137
+		distar.212
+		distar.243
+		distar.13020
+		galactic_features.380 # Tiyanki Counter
+		crisis.4025 # Crisis Objective: count ships destroyed
+		necroids.300 # Cordyceptic Drones killing space fauna
+		necroids.310 # Cordyceptic Drones killing Prethoryn
+		toxoids.7315 # Fate of the Toxic Entity
+		paragon_2.1005 # On ship destroyed leader traits.
+		crisis.23015	# Synth Queen Titan Down
+		grand_archive.1050 # Primal Calling effects when killing space fauna
+		grand_archive.2230 # Buccaneer Council position effect
+		grand_archive.2320 # Voidworms killed during crisis situation
+		grand_archive.2051 # Voidworm starbase destroyed in home system
+		grand_archive.10055 # Tiyanki Matriarch unique mutation special project
+		grand_archive.10075 # Voidspawn unique mutation special project
+		bio.2026 # Starlit Citadel - Twilight of Fear
+		biocrisis.195 # behemoths kills a ship made of meat
+		biocrisis.505 # Behemoth Fury Crisis Objective: Capture or Destroy Space Fauna or Bioships
+	}
+	random_events = {
+	}
+}
+
+# This = damaged ship
+# From = attacker ship
+on_damage_taken = {
+	events = {
+		grand_archive.10095 # Berserker Glands unique mutation
+	}
+}
+
+# This = starbase being destroyed (not ship!)
+# From = fleet that destroyed the starbase
+on_starbase_destroyed = {
+	events = {
+		crisis.4010 # Menace Objective - Destroy Starbases
+		crisis.265
+		crisis.1320
+		crisis.2610
+		crisis.6099
+		action.225 # Cleanup
+		distar.1999 # Special Project Gatekeeper for Living Planet event chain
+		grand_archive.4500	# Grand Archive Destroyed after system is destroyed
+	}
+}
+
+# This = starbase being disabled (not ship!)
+# From = fleet that disabled the starbase
+on_starbase_disabled = {
+	events = {
+		grand_archive.4530	# Grand Archive Destroyed for losing system
+	}
+}
+
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_disengaged_victim = {
+	events = {
+	}
+}
+
+# This = owner of ship 1 (combatant)
+# From = owner of ship 2 (destroyed)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_disengaged_perp = {
+	events = {
+	}
+}
+
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_victim = {
+	events = {
+		country.16
+		country.18
+		country.20
+		country.220
+		galactic_features.3
+		country.1021
+		country.1060
+		anomaly.3097
+		leviathans.351		# Artisan Enclave starbase destroyed
+		leviathans.3203
+		marauder.51
+		crisis.108
+		crisis.125
+		marauder.115
+		origin.52			# "Scion": FE loaned fleet lost
+		galactic_features.366
+		galactic_features.369
+		galactic_features.422
+		crisis.6152
+		drones.130
+		cara.945			# Check if Caravaneers are dead.
+		astral_planes.3010
+		astral_planes.3025
+		astral_planes.3065 	# Formless Anchor Destroyed
+		cstorms.1417
+		grand_archive.6050  # Trophy Hunter fauna kill resources message
+		grand_archive.8516	# Black Needle Sabotage fleet destroyed during Sabotage situation
+		bio.3115			# Experimental Fleet Killed
+		unplugged.2035 # Machine legacy maker fleet destroyed
+		unplugged.197  # Machine legacy clean up after fleet destroyed
+	}
+}
+
+# This = owner of fleet 1 (combatant)
+# From = owner of fleet 2 (destroyed)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_perp = {
+	events = {
+		country.9
+		country.11
+		country.14
+		country.215
+		country.216
+		country.1020
+		country.1043
+		colony.181
+		observation.6
+		story.109
+		#story.114
+		#story.209
+		#story.309
+		#story.311
+		#story.214
+		story.216
+		story.332
+		#story.409
+		anomaly.3101
+		anomaly.3120
+		anomaly.3121
+		galactic_features.360
+		crisis.1111
+		crisis.70
+		leviathans.1009
+		leviathans.1012
+		leviathans.1015
+		leviathans.1032
+		leviathans.1040
+		leviathans.648
+		leviathans.655
+		leviathans.670
+		leviathans.354 # Artisan Enclave Starbase
+		leviathans.2014
+		leviathans.4
+		origin.4149	# Payback | Leviathan slain
+		pirate.13
+		pirate.24
+		akx.9318
+		akx.10030
+#		factions.330
+		factions.10
+		crisis.2472
+		distar.5009
+		cara.1002 # Destroyed Caravaneer Fleet 1
+		cara.2002 # Destroyed Caravaneer Fleet 2
+		cara.3002 # Destroyed Caravaneer Fleet 3
+		ancrel.4120 # Killed Shard (Rubricator Dragon)
+		origin.1030
+		aquatics.105 # Killed Origin Dragon
+		toxoids.7515 # Killed Toxic God
+		galcom.101 # Killed Tiyanki Inside Borders
+		galactic_features.381 # Tiyanki Counter
+		galactic_features.388 # Tiyanki Graveyard System Destroyed
+		federations2.112 # Destroyed training targets in militarist federation challenge
+		ancrel.13000 #Destroyed Polaris fleet
+		colony.9820 #Negative Mass defeated fleet
+		ancrel.12065 #Destroyed Surveillance Bot fleet
+		paragon.3149 # Exakeides drones manually destroyed
+		unique.135 # Destroyed Lone Defender fleet
+		grand_archive.1125	# Frenzied Voidworms killed
+		grand_archive.2010	# Voidworms hunt reward
+		grand_archive.2040	# Voidworm Troika killed during special project
+		grand_archive.2050	# Voidworm fleet destroyed in home system
+		grand_archive.2100 # Killed Voidworms Inside Borders
+		grand_archive.3100 # Killed Cutholoids Inside Borders
+		grand_archive.2910 # Cutholoids hunt reward
+		cstorms.305 # Ship destroyed in storm
+		grand_archive.6030	# Treasure Trove pirate fleet defeated
+		grand_archive.6050	# Trophy Hunter fauna kill resources message
+		grand_archive.8104	# Black Needle reinforcement fleet defeated
+		grand_archive.8305	# Treasure Hunter gateway voidworms defeated
+		grand_archive.8540	# Black Needle Fleet destroyed during Sabotage situation
+		timeline.38 		# Timeline Enclave Destroyed
+		bio.2015 # Starlit Citadel - Attacking bioships destroyed
+		bio.2036 # Starlit Citadel - Second wave destroyed
+		unplugged.100 # Unplugged civil war ships destroyed
+		unplugged.2390 # Unplugged machine legacy homeworld intercept fleet destroyed
+		unplugged.2400 # Unplugged machine legacy boss destroyed
+	}
+	random_events = {
+		300 = 0
+		2 = leader.1
+		2 = leader.5
+		2 = leader.6
+		2 = leader.7
+		2 = leader.8
+		2 = leader.9
+		2 = leader.17
+	}
+}
+
+# This = owner of fleet 1 (winner)
+# From = owner of fleet 2 (loser)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+# This fires whenever a fleet is finished with a combat through any means (emergency ftl, destroyed, disabled)
+on_space_battle_won = {
+	events = {
+		achievement.1
+		awareness.105 # Ship disengaged in pre-ftl system.
+		origin.4020 #Payback debt collectors chain | won battle against the debt collectors
+		origin.4022 #Payback debt collectors chain | fallback - another empire destroys the debt collectors
+		focus.610
+	}
+}
+
+# This = owner of fleet 1 (loser)
+# From = owner of fleet 2 (winner)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+# This fires whenever a fleet is finished with a combat through any means (emergency ftl, destroyed, disabled)
+on_space_battle_lost = {
+	events = {
+	}
+}
+
+# This = owner of fleet 1 (winner)
+# From = owner of fleet 2 (loser)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+# Fires when a combat is finished from a lack of enemies
+on_space_battle_over = {
+	events = {
+		crisis.8145 #Synth Queen Convoy raid ends
+		crisis.8170 #Synth Queen Outpost fight ends
+		focus.650 # Flags for Fight the Khan Task
+		focus.655 # Flags for Fight the Tempest Task
+	}
+}
+
+# This = fleet
+# Fires when a fleet exits combat (either because it won, lost, or any reason)
+# This is fired once for every fleet that was in combat (which is not the case for on_space_battle_won/lost)
+on_fleet_exit_battle = {
+	events = {
+		grand_archive.7300	# Bio-repurposing creating debris with lost space fauna
+		grand_archive.7305	# Reanimator creating debris with lost space fauna
+		grand_archive.10105	# Cleanup ships that should be destroyed at combat end
+	}
+}
+
+# This = owner of fleet
+# From = disbanded fleet
+on_fleet_disbanded = {
+	events = {
+	}
+}
+
+# This = owner of ship
+# From = disbanded ship
+on_ship_disbanded = {
+	events = {
+	}
+}
+
+# This = owner of army
+# From = disbanded army
+on_army_disbanded = {
+}
+
+
+# This = owner of fleet
+# From = fleet
+# FromFrom = planet (if any)
+on_fleet_auto_move_arrival = {
+	events = {
+		distar.5008
+		distar.136
+		distar.210
+		distar.5054
+		distar.1017
+		distar.5061
+		drones.106 #Mining Drone Expansion (establish a new mining base)
+		drones.126 #Aggressive Mining Drone Expansion (establish a new mining base)
+		drones.206 #Space Crystal Splitter (form Shardlings)
+		origin.7301	# Fruitful Origin - Lured critters eat the seed
+		crisis.8140 #Synth Queen convoy reaches destination
+		crisis.8160 #Synth Queen War Fleets return to capital
+		crisis.8165 #Synth Queen Patrol reaches destination
+		biocrisis.82 #Raging Kaiju eats Kaiju egg
+	}
+}
+
+# This = fleet
+# From = country that borrowed the fleet
+# FromFrom = country that owns the fleet
+# Is fired immediately after fleet is leased out
+on_fleet_contract_started = {
+	events = {
+		enclave.2085 #Lock Admiral Into Merc Fleet
+	}
+}
+
+# This = fleet
+# From = country that borrowed the fleet
+# FromFrom = country that owns the fleet
+# FromFromFrom = country that initiated the ending (the same as owner in a case of expiration)
+# Is fired immediately after fleet contract is expired
+on_fleet_contract_expired = {
+	events = {
+		enclave.2058 # Delay before AIs can hire the fleet again
+		enclave.2059 # Merc fleet contract expired. Renew?
+		enclave.2080 #Take your admiral back, AI enclave!
+	}
+}
+
+# This = fleet
+# From = country that borrowed the fleet
+# FromFrom = country that owns the fleet
+# FromFromFrom = country that initiated the ending (trade deal actor when the contract cancellation is a part of trade deal)
+# Is fired immediately after fleet contract is cancelled (when controller prematurely finishes the contract or when the contract cancellation is a part of trade deal)
+on_fleet_contract_cancelled = {
+	events = {
+		enclave.2058 # Delay before AIs can hire the fleet again
+		enclave.2080 #Take your admiral back, AI enclave!
+	}
+}
+
+# This = fleet
+# From = country that borrowed the fleet
+# FromFrom = country that owns the fleet
+# FromFromFrom = country that initiated the ending (main attacker in a case of war)
+# Is fired immediately after fleet contract is broken (when country is attacked by someone of when a war is started)
+on_fleet_contract_broken = {
+	events = {
+		enclave.2058 # Delay before AIs can hire the fleet again
+		enclave.2080 #Take your admiral back, AI enclave!
+	}
+}
+
+# The game will generate one on_building_X on_action for every station ship-size
+# Orbital stations will get the planet in FROM, space stations only get they building ship
+
+# This = construction ship
+# From = planet OR Astral Rift it is built on
+# Fires when construction is complete,
+# immediately before station is created
+on_building_mining_station = {
+	events = {
+		tutorial.10
+		tutorial.1000
+		tutorial.56
+		pirate.3
+		leviathans.3200
+		anomaly.6830	# Mining for Food
+		anomaly.6880	# Sleeping Crystal
+		anomaly.6885	# Angry Crystal
+		awareness.120	# Outpost, mining or research station built in pre-ftl system
+		leviathans.660	# Dragon Hoard system - eggs and bones (previously: MTTH 50 years)
+		focus.85		# Empire Focus
+	}
+}
+
+# This = construction ship
+# From = planet OR Astral Rift it is built on
+# Fires when construction is complete,
+# immediately before station is created
+on_building_research_station = {
+	events = {
+		tutorial.12
+		tutorial.1200
+		tutorial.56
+		awareness.120 # Outpost, mining or research station built in pre-ftl system
+		astral_planes.115 # A Rift in Space flow start
+	}
+	random_events = {
+		100 = 0
+		5 = federations3.2000
+	}
+}
+
+# This = construction ship
+# From = planet it is built on
+# Fires when construction is complete,
+# immediately before station is created
+on_building_outpost_station = {
+	events = {
+		tutorial.750
+		tutorial.56
+		#factions.220
+	}
+}
+
+# This = construction ship
+# Fires when construction is complete,
+# immediately before station is created
+on_building_wormhole_station = {
+	events = {
+	}
+}
+
+#This = ship (starbase)
+#From = owner country
+on_building_starbase_outpost = {
+	events = {
+		tutorial.76
+		distar.199 # Special Project Gatekeeper for Living Planet event chain
+		distar.254
+		distar.1007
+		distar.2036
+		origin.3505 # Slingshot to the Stars
+		origin.5010 # Broken Shackles - First Station
+		awareness.120 # Outpost, mining or research station built in pre-ftl system
+	}
+}
+
+on_building_starbase_fe_outpost = {}
+
+# This = construction ship
+# From = planet it is built on
+on_building_observation_station = {
+	events = {
+		fircon.5				# Sets a flag so that we don't iterate through countries unnecessarily
+		communications_spread.4	# establish communication with pre-ftl civilization
+		awareness.115			# Observation post built in orbit of pre-ftl planet.
+		tutorial.2145			# Observation Station Tutorial
+		preftl.40				# Sets flag to delay observation event
+		preftl.41				# Establish diplo communications if they have max awareness
+		fircon.5025				# Built Solar Punk Observation Station
+		fircon.25				# Cloak Observation Outpost if owner has Cloaking tech.
+		origin.5515				# Broken Shackles - Uplift Main Homeworld Decision
+		origin.5520				# Broken Shackles - Uplift Secondary Homeworld Decision
+		focus.115				# Empire Focus
+	}
+}
+
+on_building_starbase_ai = {
+	events = {
+		crisis.2600
+	}
+}
+
+# This = construction ship
+# Fires when construction is complete,
+# immediately before station is created
+
+on_building_starbase_exd_0 = {
+	events = {
+		crisis.1300
+		crisis.1310
+	}
+}
+
+on_building_starbase_exd = {
+	events = {
+	}
+}
+
+on_building_starbase_swarm = {
+	events = {
+		crisis.260
+	}
+}
+
+on_building_starbase_marauder = {
+	events = {
+	}
+}
+
+# This = station
+# From = planet/astral_rift it was built on
+on_destroying_station = {
+	events = {
+		communications_spread.6 # remove communication with pre-ftl civilization
+	}
+}
+
+# This = station
+# From = planet it was built on
+on_losing_station_control = {
+	events = {
+		communications_spread.6 # remove communication with pre-ftl civilization
+	}
+}
+
+# This = station
+# From = planet it was built on
+on_gaining_station_control = {
+	events = {
+		fircon.30 # If Obs station, add communications etc
+	}
+}
+
+# This = country
+# From = opponent war leader
+on_entering_war = {
+	events = {
+	}
+}
+
+# This = Country
+# From = Fleet
+on_fleet_detected = {
+	events = {
+	}
+}
+
+# This = Ship
+# From = Disabler Ship
+on_ship_disabled = {
+	events = {
+		country.201
+		country.212
+		country.217
+		country.222
+		distar.58
+		leviathans.2100
+		distar.5053
+		pirate.70
+		grand_archive.8040	# Black Needle (Captain Hoo) disabled
+		grand_archive.8260	# Black Needle (Captain Inax) disabled
+		biocrisis.99 		# Behemoth Disabled
+	}
+}
+
+# This = Ship
+on_ship_enabled = {
+	events = {
+	}
+}
+
+# Triggers when a Special Project to uplift a pre-sapient species is completed.
+# Note that this will trigger once for each combination of planet & original
+# species (but for uplifting this should be only once).
+#
+# Scope = planet_event
+# This = planet scope
+# From = uplifted species (pre-modification)
+on_uplift_completion = {
+	events = {
+		uplift.6010
+		factions.1005
+		paragon.101 # Potentially abort Beholder chain
+		cyber.7020
+		cybernetics.5085
+		timeline.55 # Timeline Uplifted Species
+		bio.5105		# Assign Purity Authority trait variable
+		bio.5115		# Assign EvoPred trait variable
+	}
+}
+
+# Planets starts being terraformed
+# This = Planet
+# From = Terraforming country
+on_terraforming_begun = {
+	events = {
+		wilderness.1005 # First Colony Event Wilderness
+		terra.5 # Remembers original Planet Class
+		wilderness.1999 # the Wilderness terraforming a barren world
+	}
+}
+
+# Planets terraforming is 25% completed
+# This = Planet
+# From = Terraforming country
+on_terraforming_progress_25 = {
+	random_events = {
+		150 = 0
+		30 = strange_worlds.1045
+	}
+}
+
+# Planet has been terraformed
+# This = Planet
+# From = Terraforming country
+on_terraforming_complete = {
+	events = {
+		achievement.7		#Terraform and Paradise Found achievement check
+		action.68
+		syndaw.1320			# Planet of the Mechs achievement check
+		distar.197
+		terra.10			# Terraforming random events
+		toxoids.50
+		paragon.253			# Astrocreator Azaryn's terraformation
+		awareness.150		# Planet cracker used OR planet terraformed, chance to gain 20 awareness.
+		astral_planes.5010	# Celestial Tear Modifier Effect
+		focus.130			# Empire Focus
+		timeline.42			# Timeline First Terraform
+		strange_worlds.1055 # Junk Moon Event 2
+		wilderness.5 		# Wilderness Colonizing Planets
+		terra.200			# Hive World District assignment
+		terra.210			# Machine World District assignment
+	}
+}
+
+# Planet has changed planet class in whatever way. Note that this is also called during galaxy creation in some places.
+# This = Planet
+on_planet_class_changed = {
+	events = {
+		aquatics.1005
+		action.490
+		terra.0
+		astral_planes.5030 # Celestial Tear Modifier Effect
+		timeline.26         # Milestone First City Planet
+		timeline.57 # Timeline Origin Event Machine World Created
+		timeline.58 # Timeline Origin Event Ecumenopolis Restored
+	}
+}
+
+# Planet has taken damage from orbital bombardment - Damage is applied daily
+# This = Planet
+# From = Bombarder (country)
+on_planet_bombarded = {
+	events = {
+		crisis.200
+		crisis.1011
+		crisis.10010		# Synth Queen Digitizes Colony
+		crisis.2040
+		crisis.2043
+		crisis.2475
+		crisis.2476
+		marauder.103		# Marauder raid
+		graygoo.2
+		graygoo.555
+		action.601			# Orbital bombardment surrender policy
+		origin.3003			# Tree of Life: Tree death
+		awareness.125		# Pre-ftl world bombarded.
+		origin.4025 		# Payback debt collectors chain | lost battle against the debt collectors
+		preftl.10160		# Violation of Non-Interference Act by Bombardment.
+		fircon.5034			# Bombarding Solarpunk
+		preftl.10300		# Bombarding Pre-FTLs
+		refugees.5			# Crisis faction creates refugees (previously: MTTH 3 months)
+		origin.7200			# Fruitful Origin: Seed Bombing stance creates blockers
+		grand_archive.1205	# Planet destroyed by Frenzied Voidworms
+		grand_archive.2190	# Planet bombarded by Voidworms
+		focus.145			# Empire Focus
+		biocrisis.80 	# Planet Bombarded by Behemoth
+		action.81 		# Turns planet into tombworld if using armageddon or pox stance
+	}
+}
+
+# Planet has reached 0 pops from orbital bombardment
+# This = Planet
+# From = Bombarder
+on_planet_zero_pops = {
+	events = {
+		action.81
+		distar.1015
+		preftl.201
+	}
+}
+
+# Planet has reached 0 pops from collateral damage
+# This = Planet
+# From = Army owner
+on_planet_zero_pops_ground_combat = {
+}
+
+# Pop Group is abducted by raiding stance
+# This = Pop Group scope
+# From = planet abducted from
+on_pop_group_abducted = {
+	events = {
+		action.121
+		action.122
+	}
+}
+
+# Pop Group is resettled
+# From is previous planet
+# planet = { } is new planet
+on_pop_group_resettled = {
+	events = {
+		unrest.4350
+		crisis.7530 	#Last pop resettled away from Synaptic Lathe
+		crisis.7531 	# Pops resettled to Synaptic Lathe
+		bio.751 		# Moving the presapient pops to the new planet
+	}
+}
+
+# Executed right before a country has established communications with another country. Does not fire if comms are established with establish_communications_no_message
+# This = Country which established the communications
+# From = Country which communications were established with
+on_pre_communications_established = {
+	events = {
+		action.7
+		action.19
+	}
+}
+
+# Executed right after country has established communications with another country. Does not fire if comms are established with establish_communications_no_message
+# This = Country which established the communications
+# From = Country which communications were established with
+on_post_communications_established = {
+	events = {
+		action.11
+		first_contact.1050 #establish comms via first contact process
+		anomaly.4016
+		#anomaly.4092
+		factions.11
+		action.110 # get Galactic Community invitation
+		astral_rift.3190	# Tropical Habitat astral rift - Formula pink opinion modifier
+		grand_archive.3995	# Galactic Curators / Curators fast forward communication
+		unplugged.3200 # Unplugged: A Legacy of Terror
+		unplugged.3249 # Unplugged: Fear of the Machine/Past
+	}
+}
+
+# Executed right after country has established communications with another country. Always fires, even if comms are established with establish_communications_no_message
+# This = Country which established the communications
+# From = Country which communications were established with
+on_post_communications_established_always_fire = {
+	events = {
+		grand_archive.4120		# Curator Grand Archive Collection contact
+		grand_archive.4130		# Collection Curators rewards - Homicidal considerations
+		timeline.56 # Timeline Origin Event Lost Colony
+		timeline.37 # Timeline Meet Fallen Empire
+	}
+}
+
+# Serves to reveal presence to pre-ftl country
+# This = Country which is revealing its presence
+# From = Pre-ftl country
+on_presence_revealed = {
+	events = {
+	}
+}
+
+# Executed whenever a pop is killed due to bombardment damages
+# This = Planet where the pop was bombed to death
+# From = Country which is raining down fire and brimstone
+# FromFrom = Biggest fleet bombarding the planet (the one we used the bombardment stance from)
+# local_kill_pop_amount = amount of pop killed
+on_pop_bombed_to_death = {
+	events = {
+		action.100
+		grand_archive.2200		# Pop killed by a voidworm
+	}
+}
+
+# Executed when a new heir is appointed
+# This = Heir
+on_new_heir = {
+	events = {
+		leader.200		# New Heir appointed, grant traits and select class.
+	}
+}
+
+# Executed when an heir is promoted to ruler
+# This = Heir
+on_heir_promoted_to_ruler = {
+	events = {
+	}
+}
+
+# Executed when a ruler is created. Called after the leader is set as ruler of the country
+# This = Country
+# FROM = Leader
+on_ruler_created = {
+	events = {
+		utopia.6000 # hive mind ruler gets hive mind trait to make them immortal
+		syndaw.1050 # Machine Intelligence ruler gets trait
+		bio.1095	# EvoPred Apex Predator Trait Giver
+	}
+}
+
+# Executed just before on_leader_death if show_notification = yes (default)
+# This = Country
+# From = Leader
+on_leader_death_notify = {
+	events = {
+		bio.5000
+		bio.765			# Spare Organs
+		paragon.549 	# Leader Funeral Events
+	}
+}
+
+# Executed just before on_leader_death if show_notification = no (explicitly set)
+# This = Country
+# From = Leader
+on_leader_death_no_notify = {
+}
+
+# Executed as a leader has died
+# This = Country
+# From = Leader
+on_leader_death = {
+	events = {
+		akx.9330
+		marauder.70
+		marauder.711
+		paragon.590			# Randomize if leader retires or dies by default
+		paragon.3904
+		paragon.2
+		paragon.5900
+		paragon.3906
+		distar.168			# Remove Event Node Traits
+		paragon.600			# Generate new nodes for a gestalt empire if a node dies.
+		astral_rift.695		# Death of the Tower Rift Scientist Leader
+		astral_planes.3119	# Formless Leader death
+		cyber.1521 			# RulerChip adding variables event
+		synth.1555          # Synth Imperial physical swap
+		cybernetics.5095	# No exploiting Tactical Algorithms
+		cstorms.330			# Storm-Rider died in storm
+		timeline.39         # Timeline Emperor Dies
+	}
+}
+
+# Executed as a leader is hired
+# This = Leader
+on_leader_hired = {
+	events = {
+		focus.510 			# Set flag for Hire Official Focus
+		paragon.450			# On leader hired toast
+		astral_planes.5110	# Eternal Throne event
+		focus.46			# Empire Focus
+	}
+}
+
+# Executed as a leader has been fired
+# This = Country
+# From = Leader
+on_leader_fired = {
+	events = {
+		marauder.70
+		paragon.3904
+		paragon.2
+		paragon.290
+		paragon.3906
+		distar.168 # Remove Event Node Traits
+	}
+}
+
+# A leader leveled up.
+# Scope = Country
+# From = Leader
+on_leader_level_up = {
+	events = {
+		paragon_2.2045
+		paragon_2.2096		# Update Gestalt node portraits.
+		grand_archive.8295	# Prospect of treasure modifier update
+		focus.630			# Set up flag for Level 4 Commander Focus
+		focus.45			# Empire Focus
+		focus.685			# Empire Focus - Scientist
+		focus.690			# Empire Focus - Commander
+		focus.695			# Empire Focus - Official
+	}
+}
+
+# Scope: Leader (after assignment)
+on_leader_assigned = {
+	events = {
+		envoy_events.230
+		focus.50			# Empire focus - Scientist
+		focus.160			# Empire focus - Official
+		focus.680			# Empire focus - Commander
+		bio.505 	# Familiar Face Leader Portrait Swapback
+		bio.500 	# Familiar Face Leader Portrait Swap
+		bio.1115	# Evopred Oligarch Immortalilty
+	}
+}
+
+# Scope: Leader (just before unassignment)
+# Fires if a leader is unassigned from their position for any reason (including being assigned elsewhere)
+on_leader_unassigned = {
+	events = {
+		bio.505 	# Familiar Face Leader Portrait Swapback
+		bio.1120	# Evopred Oligarch Immortality Removal
+	}
+}
+
+# Executed as new ruler has been set
+# This = Country
+on_ruler_set = {
+	events = {
+		action.47	# Remove election-filler leaders when ruler is set
+		grand_archive.8296	# Prospect of treasure modifier update
+		bio.1095	# EvoPred Apex Predator Trait Giver
+	}
+}
+
+# Executed when a ruler has been removed
+# From = Previous Ruler
+# This = Country
+on_ruler_removed = {
+	events = {
+		grand_archive.8296	# Prospect of treasure modifier update
+	}
+}
+
+# This = Planet
+on_blocker_cleared = {
+	events = {
+		tutorial.16
+		tutorial.160
+		ancrel.4030
+		terra.30		# Clear the Terraforming Blocker form terra.25
+		action.495		# Sets flag if blockers have been cleared on Wenkwort Artem.
+		astral_rift.2699 # Colonization Drones society bonus
+		synth.311		# Biological Enclaves is cleared
+	}
+}
+
+# A ship has started a new order
+# Root = Ship
+# From = Country
+on_ship_order = {
+	events = {
+		tutorial.500
+	}
+}
+
+# Executes after a policy has been changed
+# use last_changed_policy to identify which policy it was
+# This = Country
+on_policy_changed = {
+	events = {
+		action.35
+		syndaw.1300 # banning AI can cause Uprising
+		syndaw.1305 # banning bot workers can cause Uprising
+		leader.30 # banning AI will remove AI-dependent traits from leaders
+		action.80 # banning AI will remove existing Synthetic Armies
+		preftl.55 # Changing interferance policy with pre-FTLs should remove certain actions
+		preftl.60 # Changing enlightenment policy with pre-FTLs should remove certain actions
+	}
+}
+
+# Scope: Ship Event
+#A ship has been built
+# Root = Ship
+# From = Planet
+on_ship_built = {
+	events = {
+		tutorial.40
+		tutorial.8
+		tutorial.21
+		tutorial.25
+		crisis.2056
+		fedev.9500
+		origin.5060			# Broken Shackles - Built 1st Science Ship
+		origin.7305			# Fruitful Partnership Origin - cloned ships get seeds
+		astral_rift.3292
+		grand_archive.1		# Beastmaster achievement
+		grand_archive.1030	# Space Fauna Ships size increase
+		grand_archive.3024	# Cutholoid built from code
+		grand_archive.10000	# Unique Mutations for space fauna counter
+		grand_archive.9970	# Primal Calling first cloning tech insight
+		focus.15			# Empire Focus - Clone 5 Space Amoebas
+		focus.16			# Empire Focus - Produce 5 Maulers
+		focus.605			# Set up flags for corvette building Focus 2/2
+		focus.625			# Set up flags for platform building focus 2/2
+		focus.626			# Empire Focus - Produce 20 Weavers
+		timeline.45			# Timeline First 100K Fleet
+		timeline.48			# Timeline First Titan/Juggernaut/BioTitan/BioJuggernaut
+		biocrisis.500 # Behemoth Crisis Objective: Building Bioships and Breeding Space Fauna
+	}
+}
+
+# A ship design has been finished
+# Root = Country
+on_ship_designed = {
+	events = {
+		tutorial.49
+		tutorial.480
+	}
+}
+
+# A ship has been upgraded
+# Root = Ship
+on_ship_upgraded = {
+	events = {
+		crisis.2057
+	}
+}
+
+# A war is beginning, executed for every country in the war.
+# Root = Country
+# From = War
+on_war_beginning = {
+	events = {
+		action.41
+		#diplomatic.1002
+		factions.13
+		origin.29	# "Scion": FE reclaims its gifted fleet
+		emperor.370
+		origin.6080	# Fear of the Dark
+		origin.5135	# Broken Shackles - War vs MSI
+		origin.5146	# Broken Shackles - Second War vs MSI
+		origin.5147	# Broken Shackles - War vs Slavers
+		utopia.2661
+		origin.4141	# Payback - BS joins war vs MSI
+		action.640	# Nothing to See Here achievement
+		fircon.5052	# War on Solarpunk
+		origin.7600 # Fruitful Partnership - Seeds of War
+		timeline.4 #  Milestone War Declared
+		bio.3160	# War declared when tasked with peace
+		bio.819		# Bodysnatchers declaring war
+	}
+}
+
+# A war has ended
+# Root = Loser
+# From = Main Winner
+on_war_ended = {
+	events = {
+		fallen_empires.14
+		utopia.2660
+		origin.6256			# Fear of the Dark Seperatists made neutral
+		paragon.5213
+		paragon.5223
+		focus.140			# Empire Focus
+		focus.660			# Set Flags for Defeat Fallen Empire Task
+	}
+}
+
+# A country has been released through a peace deal in a war
+# Root = new country
+# From = country forcing the release
+# FromFrom = country they are released from
+# FromFromFrom = war
+on_country_released_in_war = {
+	events = {
+		action.320
+	}
+}
+
+# A country has increased the level of a tech, use last_increased_tech trigger to check tech and level.
+# This = Country
+on_tech_increased = {
+	events = {
+		tutorial.6 #any tech research
+		tutorial.64 #Species modification
+		tutorial.73 #Uplift
+		tutorial.2115 #Mega-engineering
+		tutorial.2120 #Orbital Ring
+		tutorial.2125 #Quantum Catapult
+		tutorial.2130 #Hyper Relay
+		anomaly.1193
+		action.56
+		apoc.300
+		distar.12000
+		distar.1085
+		distar.10903
+		ancrel.4008
+		aquatics.190 #Dragon Material Study
+		aquatics.250 #Dragon Communications Study
+		action.400 #Planetary Unification
+		enclave.7005 # Salvager Introduction
+		origin.4306 # Payback Out of Warranty chain - Genetic Healthcare
+		origin.5500 # Broken Shackles - Upgrade Research Labs
+		origin.5505 # Broken Shackles - Upgrade Admin Hub
+		astral_planes.35 # Rift Sphere + Crystal Sphere
+		origin.4936 # Payback - Upgrade flagship
+		tutorial.2500 # Tutorial - Cloaking Fields
+		tutorial.2550 # Tutorial - Cloaking Detection
+		fircon.26		# Cloak Observation Outposts upon researching cloaking.
+		ancrel.9915 # Archaeotech - faking AI building faculty of archaeostudies
+		ancrel.9920 # Archaeotech - faking AI building archaeo refinery
+		paragon_2.2105	# Xeno-Linguistics researched
+		paragon_2.2135	# Galactic Administration researched - reset government reform cooldown
+		action.730 # Void Hive Clearing Modifier on Tech Increase
+		astral_planes.110	#Astral Thread Explanation
+		astral_planes.2005
+		anomaly.6710 # Nanite Swarm Anomaly follow-up
+		crisis.7000 # Gain Advanced Logic for cosmogenesis Crisis
+		crisis.7125 # Horizon Needle tutorial event
+		crisis.7200 # Cosmogenesis Infinity Thesis Randomizer
+		crisis.7275 # FE research upsets FEs
+		crisis.7280 # Scion instead gets praised by their overlord
+		machine_age.3110	#Synthetic Fertility Robots
+		machine_age.3115	#Synthetic Fertility Droids
+		machine_age.3120	#Synthetic Fertility Synths
+		machine_age.90	#Synthetic Fertility Synths
+		cybernetics.5065 # dyson swarm limit
+		cybernetics.5070 # arc furnace limit
+		cstorms_tutorial.1 #Cosmic Storm Manipulation Tutorial
+		grand_archive.105	# Gravity Snare Ship Designs Unlock
+		grand_archive.2315	# Voidworm Immunity acquired during Voidworm Plague situation
+		grand_archive.8085	# Treasure Hunters researching Galactic Archivism
+		grand_archive.8320	# Treasure Hunters researching Gateway Activation
+		grand_archive.4199	# Archivism handle edge case
+		grand_archive.7401	# Fauna Core Ship Component Insights - getting insight after tech_controlled_mutations
+		grand_archive.7400	# Fauna Core Ship Component Insights - getting tech_controlled_mutations
+		strange_worlds.2020 # Fatal Mutations
+		focus.615
+		timeline.25         # Milestone First Rare Tech
+		timeline.51         # Milestone First Repeatable Tech
+		bio.2024			# Starlit Citadel - Wormhole Exploration
+	}
+}
+
+# Triggers when a Special Project to apply a species modification template has completed.
+# Note that this will trigger once for each combination of planet & original species.
+#
+# This = Country
+# From = Species ( Post Modification )
+# FromFrom = Species ( Original )
+# Prev = Planet
+on_modification_complete = {
+	events = {
+		tutorial.65
+		utopia.2508 # Handle leader traits after species modification
+		utopia.6001 # Hive Mind species integration
+		astral_planes.5120 # Eternal Throne passive immortality
+		timeline.20 # Milestone First Modifiation
+		bio.700 			# Update Shared Genetics modifiers
+		bio.5107			# Assign Purity Authority trait variable
+		bio.5117			# Assign EvoPred trait variable
+	}
+}
+
+# Triggers when a Sub-Species Integration performs a single step.
+# Note that this will trigger once for each combination of planet & original species.
+#
+# This = Country
+# From = Species ( Post Modification )
+# FromFrom = Species ( Original )
+# Prev = Planet
+on_subspecies_integration_step = {
+	events = {
+		utopia.2508 # Handle leader traits after species modification
+		utopia.6001 # Hive Mind species integration
+		astral_planes.5120 # Eternal Throne passive immortality
+	}
+}
+
+# Triggers when a Sub-Species Integration fully finishes upgrading a species template.
+# Note that this will trigger once for each combination of planet & original species.
+#
+# This = Country
+# From = Species ( Post Modification )
+# FromFrom = Species ( Original )
+# Prev = Planet
+on_subspecies_integration_complete = {
+	events = {
+		utopia.2508 # Handle leader traits after species modification
+		utopia.6001 # Hive Mind species integration
+		astral_planes.5120 # Eternal Throne passive immortality
+	}
+}
+
+# Triggers when a Country gets a new always available tech as a research option.
+#
+# This = Country
+on_research_option_added = {
+	events = {
+		focus.70	# Empire Focus
+	}
+}
+
+# Triggers when a Country gains a favor.
+#
+# This = Country that receives a favor
+# From = Country a favor is from
+on_favor_gained = {
+	events = {
+		focus.155 # Empire Focus
+	}
+}
+
+# A planets controller becomes a country not the same as the owner.
+# Root = Planet
+# From = Planet Owner
+# FromFrom = Planet Controller (the one occupying)
+on_planet_occupied = {
+	events = {
+		colony.9095
+		paragon.5930	# "Under One Rule": remove "Sustaining Apparatus" modifier
+		astral_planes.5020 # Celestial Tear Modifier Event removed
+		crisis.300		# Swarm gains control of a planet and starts purging it
+	}
+}
+
+# A planets controller becomes the owner of the planet.
+# Root = Planet
+# From = Planet Owner
+# FromFrom = Previous Planet Controller (the one who was occupying)
+on_planet_returned = {
+	events = {
+		astral_planes.5010 # Celestial Tear Modifier Event
+		crisis.301			# Swarm loses control of a planet and stops purging it
+	}
+}
+
+# A planet decision is enacted.
+# Root = Planet
+# From = Planet Owner
+on_decision_enacted = {
+	events = {
+		focus.110	# Empire Focus
+		timeline.59 # Timeline Origin Event Shattered Ring Repaired
+	}
+}
+
+# An edict is enacted.
+# Root = Country
+on_edict_activated = {
+	events = {
+		focus.165	# Empire Focus - Edict
+	}
+}
+
+# A fleet has successfully escaped from combat, executed right before the fleet enters FTL
+# This = escaping fleet
+# From = system escaped from
+# FromFrom = system escaping to
+on_emergency_ftl = {
+	events = {
+		nomad.97
+		leviathans.1010
+		leviathans.1013
+		leviathans.1014
+		leviathans.1020
+		leviathans.1031
+		leviathans.650
+		leviathans.654
+		awareness.130	# Fleets engages emergency FTL in pre-ftl system.
+		cstorms.331
+		grand_archive.6055  # Trophy Hunter fauna kill resources message
+	}
+	random_events = {
+		310 = 0
+		10 = leader.10
+		10 = leader.12
+		10 = leader.13
+		10 = leader.14
+		10 = leader.11
+	}
+}
+
+#An army construction has been completed.
+# This = Planet
+# From = Army
+on_army_recruited = {
+	events = {
+		focus.645 	# Set Flags for Build Armies Task 2/2
+	}
+}
+
+#An army has been killed in ground combat
+# This = owner
+# From = army
+# FromFrom = opponent
+# FromFromFrom = planet
+on_army_killed_in_combat = {
+	events = {
+		emperor.450
+		necroids.15
+		colony.9080
+		paragon_2.1040
+		synth.1550 			# Synthetic Imperial virtual
+		bio.750 			# Acidic Vascularity
+		bio.770 			# Spare Organs
+	}
+}
+
+#An army has ceased to exist for any other reason
+# This = country
+# From = army
+on_army_killed_no_combat = {
+	events = {
+		emperor.450
+		colony.9082
+	}
+}
+
+#A building construction has been completed.
+# This = Planet
+on_building_complete = {
+	events = {
+		tutorial.14
+		tutorial.140
+		akx.10000
+		federations3.1000
+		emperor.61
+		plant.101
+		cyber.201			# First Augmentation Center built during Cyberization situation
+		cybernetics.2026	# Virtual Machine pop creation
+		cybernetics.2031	# Virtual Machine pop destruction
+		focus.90			# Empire Focus
+	}
+}
+
+# A building construction has been queued.
+# This = Planet
+on_building_queued = {
+	events = {
+	}
+}
+
+# A building construction has been unqueued.
+# This = Planet
+on_building_unqueued = {
+	events = {
+	}
+}
+
+# A building construction has been completed, which is an upgrade of previous building.
+# This = Planet
+on_building_upgraded = {
+	events = {
+		plant.100
+		megastructures.20	# Habitat Major Capital
+		megastructures.30	# Habitat System Capital
+		cybernetics.2026 # Virtual Machine pop creation
+		cybernetics.2031 # Virtual Machine pop destruction
+	}
+}
+
+# A building construction has demolished.
+# This = Planet
+on_building_demolished = {
+	events = {
+		emperor.62
+		cybernetics.2026 # Virtual Machine pop creation
+		cybernetics.2031 # Virtual Machine pop destruction
+	}
+}
+# A building repair has finished
+# This = Planet
+on_building_repaired = {
+	events = {
+		cybernetics.2026 # Virtual Machine pop creation
+		cybernetics.2031 # Virtual Machine pop destruction
+	}
+}
+
+#A district construction has been completed.
+# This = Planet
+on_district_complete = {
+	events = {
+		cybernetics.2026	# Virtual Machine pop creation
+		cybernetics.2031	# Virtual Machine pop destruction
+		focus.100			# Empire Focus
+	}
+}
+
+# A building construction has finished, replacing another building.
+# This = Planet
+on_building_replaced = {
+	events = {
+		akx.10000
+		emperor.62
+		cybernetics.2026 # Virtual Machine pop creation
+		cybernetics.2031 # Virtual Machine pop destruction
+	}
+}
+
+# A building construction has been downgraded and replaced.
+# This = Planet
+on_building_downgraded = {
+	events = {
+		cybernetics.2026 # Virtual Machine pop creation
+		cybernetics.2031 # Virtual Machine pop destruction
+	}
+}
+
+# A district construction has been queued.
+# This = Planet
+on_district_queued = {
+	events = {
+	}
+}
+
+# A district construction has been unqueued.
+# This = Planet
+on_district_unqueued = {
+	events = {
+	}
+}
+
+# A district construction has demolished.
+# This = Planet
+on_district_demolished = {
+	events = {
+		cybernetics.2026 # Virtual Machine pop creation
+		cybernetics.2031 # Virtual Machine pop destruction
+	}
+}
+
+# Auto-designation has changed the planet's designation.
+# This = Planet
+on_auto_colony_type_changed = {
+}
+
+# Tutorial level for a country has changed
+# This = Country
+on_tutorial_level_changed = {
+	events = {
+		tutorial.100 # Show what has been enabled / disabled
+		tutorial.101 # Show what has been enabled / disabled
+		tutorial.102 # Show what has been enabled / disabled
+		tutorial.103 # Disable irrelevant tutorial stuff
+	}
+}
+
+# A war has been won
+# Root = Winner Warleader
+# From = Loser Warleader
+# FromFrom = War
+on_war_won = {
+	events = {
+		action.37 		# Default victory message
+		action.48 		# Country destroyed victory message
+		action.32
+		action.44
+		#factions.205 	# Imperialist Conquest
+		action.150
+		action.152
+		action.154
+		#action.156
+		action.158
+		syndaw.1200
+		syndaw.1205
+		syndaw.2000 	# exterminator achievement
+		action.475 		# Fishing for Trouble achievement
+		origin.5145 	# Broken Shackles - War vs Slavers
+		paragon.5026
+		paragon.5213
+		paragon.5223
+		origin.4060 # Payback - defeated MSI
+		origin.4071 # Payback - defeated the people who defeated the MSI
+		timeline.14 # Timeline Won War
+		timeline.28 # Milestone Won War in Heaven
+		bio.3140		# Hive Fallen Empire War Fragment War Task
+		bio.1080		# EvoPred Apex Predator Trait Tracker
+	}
+}
+
+# A war has been lost
+# Root = Loser Warleader
+# From = Winner Warleader
+# FromFrom = War
+on_war_lost = {
+	events = {
+		action.38 # Default defeat message
+		action.151
+		action.153
+		action.155
+		#action.157
+		fallen_empires.2
+		fallen_empires.12
+		origin.5140 # Broken Shackles - War vs Slavers
+		paragon.5028
+		timeline.15 # Timeline Lost War
+	}
+}
+
+# A status quo has been signed
+# Root = Actor
+# From = Recipient
+# FromFrom = Main Attacker
+# FromFromFrom = Main Defender
+# FromFromFromFrom = War
+on_status_quo = {
+	events = {
+		action.39
+		action.45
+		origin.5141 #Broken Shackles vs MSI
+	}
+}
+
+# A status quo has been signed, by force
+# Root = Recipient
+# From = Actor
+# FromFrom = Main Attacker
+# FromFromFrom = Main Defender
+# FromFromFromFrom = War
+on_status_quo_forced = {
+	events = {
+		action.39
+		origin.5141 #Broken Shackles vs MSI
+	}
+}
+
+# A pop has been added to the planet
+# Root = pop
+# From = planet
+on_pop_group_added = {
+	events = {
+#		origin.1
+	}
+}
+
+# We changed a species right
+# This = pop group
+on_pop_group_rights_change = {
+	events = {
+		utopia.90 # remove withdrawal when blissed
+		utopia.91 # add withdrawal after bliss
+	}
+}
+
+# A pop amount has been grown
+# This = Planet scope
+# From = Country
+# FromFrom = Pop group
+# local_pop_amount = variable of how much was grown
+on_pop_growth = {
+	events = {
+		bio.755				# Nascent Stage Logic
+		assimilation.40 	# Replace assimilated growth for assimilation target growth
+	}
+}
+
+# A pop amount has been assembled
+# This = Planet scope
+# From = Country
+# FromFrom = Pop group
+# local_pop_amount = variable of how much was assembled
+on_pop_assembly = {
+	events = {
+		crisis.2055
+		crisis.2312
+		timeline.46 		# Timeline First Pop
+		assimilation.41 	# Replace assimilated assembly for assimilation target assembly
+	}
+}
+
+# A pop has finished purging
+# This = Planet scope
+# From = Country
+# FromFrom = Pop group
+# local_pop_amount = variable of how many pops were purged
+on_pop_purged = {
+	events = {
+		crisis.202
+		crisis.2044
+		action.21 # Opinion effect on other empires
+		action.22 # Resources from Forced Labor/Processing/Chemical Processing
+		action.95 # Purging the last Primitive Pop removes Culture Shock from the planet
+		utopia.180 # Gain resources for fanatic purifiers civic
+		utopia.181 # Gain resources for devouring swarm
+		syndaw.1310 # Purging a bot can worsen AI Uprising situation.
+		syndaw.1330 # Gain resources for exterminators
+		ancrel.4075
+		necroids.5 # Necrophage Purge
+		cybernetics.5090 # Synaptic Service Purge
+		crisis.4030 # Menace Objective - Purge Pops
+		clones.30 #Clone Army Cleanup
+		necroids.25	# Mechromantic Cyber-Zombies
+		timeline.23 # Milestone First Purge
+		bio.1070 # EvoPred Gene Harvesting
+	}
+}
+
+# A pop has been displaced
+# This = Planet scope
+# From = Country
+# FromFrom = Pop group
+# local_pop_amount = variable of how many pops were displaced
+on_pop_displaced = {
+	events = {
+		crisis.4030 # Menace Objective - Purge Pops
+		syndaw.1311
+		refugees.3 # Should be LAST as it sometimes kills/invalidates the pop.
+	}
+}
+
+# Initial rebels manage to take control of the planet, happens before the new owner is set, after the war is created.
+# This = Rebel Country
+# From = Planet
+# FromFrom = War
+on_rebels_take_planet = {
+	events = {
+		action.30
+	}
+}
+
+# Initial rebels manage to take control of the planet, happens after the new owner is set, after the war is created.
+# This = Rebel Country
+# From = Planet
+# FromFrom = War
+on_rebels_take_planet_owner_switched = {
+	events = {
+		action.36
+	}
+}
+
+#FromFrom = Former Owner
+#From = Country scope (new owner, so invalid)
+#This = Planet scope
+on_planet_ownerless = {
+	events = {
+		action.85
+		action.89
+		clones.30 #Clone Army cleanup
+		terra.110 #Removes second home modifier
+		origin.3255 #Progenitor Hive cleanup
+		crisis.7520 # Cosmogenesis Colony pickup flag
+		cyber.7015		# Genesis Guide remove deposit on owner change
+		bio.1025		# Removes Biosphere Modifiers when Abandoning Planets as Evolutionary Predators
+	}
+}
+
+# Fired whenever a new owner is set for a planet, following a war or through trade
+# This = Planet scope
+# From = Country scope (new owner)
+# FromFrom = Country scope (previous owner, if any)
+on_planet_transfer = {
+	events = {
+		mega.205			# remove invalid political Decisions
+		origin.3002			# "Tree of Life": Tree death
+		origin.3004			# "Tree of Life": update modifier
+		clones.30			# "Clone Army": modifier & variable cleanup
+		terra.110			# Terraforming: remove "Second Home" modifier
+		terra.115			# Terraforming: restore "Second Home" modifier if the planet is the same planet class
+		action.350			# reset Ascension Tier to 0
+		origin.3225			# "Progenitor Hive": apply "Missing Offspring" modifier
+		origin.3240			# "Progenitor Hive": remove "Missing Offspring" modifier
+		toxoids.8024			# "Knights of the Toxic God": fire "Reconquering the Order's Keep"
+		preftl.2171			# "Organic Singularity": remove "Slaves to the Machine" modifier
+		factions.15			# remove Factions-specific modifiers
+		necroids.10			# "Necrophage": prevent Hive Minds from purging their own Pops
+		paragon.5930			# "Under One Rule": remove "Sustaining Apparatus" modifier
+		paragon.5931			# "Under One Rule": remove invalid Monument modifiers
+		colony.9385			# "Myrmeku": modifier cleanup
+		cyber.1025			# For Sale: The Sky cleanup
+		crisis.7520			# Cosmogenesis Colony pickup flag
+		cyber.7015			# Genesis Guide remove deposit on owner change
+		cybernetics.5048		# Virtual Pops Destroyed
+		cybernetics.2026		# Virtual Machine pop creation
+		strange_worlds.205 		# Remove "Something in the water" modifiers
+		focus.555 			# Set a Ringworld flag for Tasks
+		focus.65			# Empire Focus Take Fallen Empire World
+		bio.1015			# Evolutionary Predator Planet Modifier Cleanup 15 needs to be before 10 else you will gain a new planet and instantly remove the good modifier
+		bio.1010			# Evolutionary Predator Gained Planet
+		bio.5106			# Assign Purity Authority trait variable
+		bio.5116			# Assign EvoPred Authority trait variable
+		bio.1110			# Removes EvoPred Hive World Flag
+		wilderness.300 		# Convert wilderness disctricts
+		wilderness.310		# Wilderness Planet Converter
+	}
+}
+
+# Fired whenever a new owner is set for a planet, and the planet was aggressively conquered
+# NOTE: fired in ADDITION to on_planet_transfer
+# This = Planet scope
+# From = Country scope (new owner)
+# FromFrom = Former Owner
+on_planet_conquer = {
+	events = {
+		action.42		# Land appropriation
+		action.84
+		action.89
+		crisis.5010		# Crisis Menace Objective: Conquer a Colony
+		cstorms.8100	# give special project to get rid of modifier
+		focus.150		# Empire Focus
+		focus.675		# Empire Focus - Sets Flag for Conquer Worlds focus 2/2
+	}
+}
+
+#You have changed the location of your capital. Also called when a country's capital is first set e.g. during galaxy creation (but then FROM is not set)
+#this/root = new capital
+#from = old capital
+on_capital_changed = {
+	events = {
+		origin.3205
+		situation.2050	# Kaleidoscope situation: Move Kaleidoscope when changing capital
+		crisis.7502 # Cosmogenesis pickup chain handling
+		timeline.52 # Timeline Changed Capital
+		biocrisis.260	# Validate planet buildings after moving the Mindlink districts
+		biocrisis.290 # Move Mind Meld project to new capital
+	}
+}
+
+#From = Planet/Starbase/Megastructure/Astral Rift scope
+#This = Fleet scope
+on_fleet_enter_orbit = {
+	events = {
+		fircon.2610 # Pre-FTL Observation Inteplanetary Flight
+		origin.7303 # Fruitful Partnership Origin - Space fauna get seeds
+		origin.7315 # Fruitful Partnership Origin - drop seeds when player-controlled
+		bio.600 	# Aerospace Adaptation - Fleet enters orbit of friendly planet
+		bio.610 	# Aerospace Adaptation - Fleet enters orbit of hostile planet
+		biocrisis.275
+	}
+	random_events = {
+		90 = 0
+		10 = origin.7303 # Fruitful Partnership - Space fauna you own can get a seed!
+	}
+}
+
+#This = Fleet scope
+#From = Planet/Starbase/Megastructure/Astral Rift scope
+on_fleet_leave_orbit = {
+	events = {
+		bio.605
+		bio.615
+	}
+}
+
+# Called when a ship is added to a fleet (for any reason)
+# this/root = fleet
+# from = ship
+on_ship_enter_fleet = {
+	events = {
+		bio.620
+	}
+}
+
+# Called when a ship is removed from a fleet (for any reason including it being destroyed, but the event fires before it completely dies)
+# this/root = fleet
+# from = ship
+on_ship_leave_fleet = {
+	events = {
+		bio.620
+	}
+}
+
+#This = Federation leader
+#From = Joining member
+on_join_federation = {
+	events = {
+		fedev.499 # First Federation event
+		origin.6050 # Fear of the Dark
+		origin.5150 # Broken Shackles - Federation formed with MSI
+		origin.5151 # Broken Shackles - Federation formed with generic slavers
+		focus.545 # Set up Flags for Form Federation Focus
+		timeline.18 # Timeline Form/Join Federation
+	}
+}
+
+#This = Federation leader
+#From = Leaving member
+on_leave_federation = {
+	events = {
+		action.201 # achievement flagging and various cleanups
+		federations3.2270 # modifier cleanup for spifed jointop
+		timeline.36 # Timeline Leave Federation
+	}
+}
+
+#This = Country scope, federation leader
+#From = Country to initiate the vote
+on_federation_law_vote_succeed = {
+	events = {
+		fedvote.1
+		federations3.2200 # Spiritualist Joint Operation start
+	}
+}
+
+#This = Country scope, federation leader
+#From = Country to initiate the vote
+on_federation_law_vote_failed = {
+	events = {
+		fedvote.2
+	}
+}
+
+#This = Country scope, federation leader
+#From = Country to exclude from the federation elections
+on_federation_leader_elections = {
+	events = {
+	}
+}
+
+#This = Country scope, new federation leader
+#From = Previous leader (if still existing)
+on_federation_new_leader = {
+	events = {
+		action.310
+	}
+}
+
+#This = Country scope, federation leader
+#From = Country to exclude from the federation psionicbattle
+on_federation_leader_challenge = {
+	events = {
+		fedel.1	# Arena Combat
+		fedel.500	# Psionc Battle
+		fedel.900	# Bidding War (Golden Rule)
+		fedel.1500	# Thesis Defense
+		fedel.1800  # Conclave
+	}
+}
+
+# A country is created via create_country or create_rebels
+# This = created country
+# From = root of context where create_country/create_rebels happens
+on_country_created = {
+	events = {
+		action.501 # Give Imperial Ruler trait if ruler does not have it for some reason
+		game_start.60
+		preftl.30	# Add technological progression situation to pre-FTLs if the situation was not already created.
+		astral_planes.5		# Fill Astral Rift pool
+		astral_planes.2000	# Dimensional Worship astral thread reward modifier computing
+		game_start.70		# Council Generation
+		game_start.71		# Set starting planet governors
+		game_start.72		# Council Generation
+		grand_archive.2210	# Voidworm immunity
+		grand_archive.2350	# Voidworms Crisis immunity
+		timeline.1          # Add origin to timeline
+		biocrisis.165 		# Elder Voidspawn debuff
+		focus.5				# Set up variables for Empire Focuses
+	}
+}
+
+#This = destroyed country
+#From = optional, destroyer (country)
+on_country_destroyed = {
+	events = {
+		custodian.100 # Custodian destroyed
+		emperor.400 # Galactic Empire destroyed
+		crisis.210
+		crisis.1270
+		action.61
+		crisis.2404
+		war_in_heaven.17 #WiH - both AFEs dead - do not flip the order here!
+		war_in_heaven.10 #WiH - first AFE dead by NAL - do not flip the order here
+		crisis.4020	# Menace Objective: Destroy Empire.
+		emperor.63
+		origin.3250 # Remove Progenitor Deposit
+		action.465 # Directive 67 achievement
+		action.470 # Destroy People of Earth achievement
+		action.480 # Zombie on my Lawn achievement
+		paragon.5935
+		paragon.5950
+		situation.2060 # Kaleidoscope - pass it to country destroyer
+		astral_planes.3160		# Formless defeated their enemies
+		astral_planes.5006		# Remove Celestial Tear Modifier Event
+		grand_archive.500		# Curator destroyed
+	}
+}
+
+# A country sees its type changed during the game via set_country_type
+# This = country
+on_country_type_changed = {
+	events = {
+		grand_archive.2350	# Voidworms Crisis immunity
+	}
+}
+
+# A Megastructure has been built
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+# FromFromFrom = Fleet
+on_megastructure_built = {
+	events = {
+		utopia.2000
+		utopia.4000
+		utopia.4100
+		utopia.80
+		utopia.4007			# alert message
+		awareness.145		# Megastructure built or upgraded in pre-ftl system
+		grand_archive.8090	# Treasure Hunters Grand Archive built
+		grand_archive.4120	# Curator Grand Archive Collection contact
+		grand_archive.4199	# Archivism handle edge case
+		focus.40			# Empire Focus
+		timeline.8          # Timeline Megastructure
+		timeline.61			# Timeline Origin Event Built Second Habitat
+	}
+}
+
+# A Megastructure has begun to be upgraded
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+on_megastructure_upgrade_begin = {
+	events = {
+		utopia.2001
+		utopia.29
+	}
+}
+
+# A Megastructure has been upgraded
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+on_megastructure_upgraded = {
+	events = {
+		utopia.2003
+		utopia.2004
+		utopia.4001
+		utopia.4003
+		utopia.4004
+		utopia.4005
+		utopia.4006		# alert message
+		utopia.4101
+		utopia.4103
+		utopia.4104
+		utopia.81
+		utopia.83
+		utopia.84
+		utopia.85
+		focus.530		# Set Flag for Dyson Swarm Task
+		action.120		# alert message for contacts
+		action.460		# Strange Mood achievement
+		awareness.145	# Megastructure built or upgraded in pre-ftl system
+		focus.40		# Empire Focus
+	}
+}
+
+# X years has passed since a planet was colonized (won't trigger on empire homeworld)
+on_colony_1_year_old = {
+	events = {
+		colony_mod.161 # Gatekeeper for modifier colony events
+		colony_mod.30 #Eruption event for Obsidian Lakes
+		cstorms.1200 # Collided planet colony event
+	}
+
+	random_events = {
+		300 = 0
+		30 = factions.3000 # The Political Frontier
+		# Strange Worlds Colony Events
+		20 = strange_worlds.50 # Shocking Developments
+		20 = strange_worlds.70 # Strange Sands
+		20 = strange_worlds.100 # Bogplants
+		20 = strange_worlds.125 # Dark Matter Eruption
+		20 = strange_worlds.150 # Revolting Pests
+		20 = strange_worlds.175 # Something in the water
+	}
+}
+
+on_colony_2_years_old = {
+	events = {
+		colony.5000 # The Lonely Bot (randomisation set in deposit placement)
+	}
+	random_events = {
+		150 = 0
+
+		30 = factions.3000 # The Political Frontier
+
+		### Colony Events & Chains - 14
+		3 = colony.1 # Migrating Forests
+		3 = colony.50 # Subterranean Aliens
+		3 = colony.1500 # Helpful Drones
+		3 = colony.1520 # Mharin Kharin
+
+		15 = colony.100 # Abandoned Terraforming
+		6 = colony.180 # Asteroid Sighted
+		3 = colony.2001 # Trouble in Paradise
+		15 = colony.2005 # Submerged Cruiser
+
+		15 = colony.2015 # Odd Factory
+		15 = colony.2025 # What Separates Us
+		10 = colony.3001 # Rogue Moon
+		8 = colony.3005 # Dimensional Portal
+
+		8 = colony.9000 #Turtle World
+		8 = colony.9050 #Crystal Kraken
+		8 = colony.9295 #Metallic Puddles
+		8 = colony.9950 #Stratospheric Vents
+
+		15 = colony.2060 # Strange Mushrooms
+		8 = colony.7229 # Glacial Crisis, flag only
+		# 0 = colony.8099 # Insidious Ophidians
+
+		### Archaeology Colony Sites
+		3 = ancrel.6049 # Blade of the Huntress
+		3 = ancrel.15010 # Mask of Transformation
+
+		### Tomb Worlds - 8
+		75 = colony.150 # Underground Vault
+		75 = colony.155 # Nuclear Bomb
+		75 = colony.160 # Particle Accelerator
+		75 = colony.161 # Surviving Infrastructure
+		75 = colony.162 # Space Station
+		75 = colony.163 # Wasteland Radiation
+		75 = colony.164 # Pacifist Movement
+		75 = colony.170 # Orbital Debris
+
+		### Federations
+		3 = colony_fed.100 #Impossible Corrie
+	}
+}
+
+on_colony_3_years_old = {
+	events = {
+	}
+	random_events = {
+		150 = 0
+
+		### Colony Events & Chains - 14
+		2 = colony.1 # Migrating Forests
+		2 = colony.50 # Subterranean Aliens
+		2 = colony.1500 # Helpful Drones
+		2 = colony.1520 # Mharin Kharin
+		10 = colony.8001 # Feral Overload
+
+		10 = colony.100 # Abandoned Terraforming
+		6 = colony.180 # Asteroid Sighted
+		10 = colony.2001 # Trouble in Paradise
+		10 = colony.2005 # Submerged Cruiser
+		10 = colony.2010 # A Change of Heart
+		10 = colony.2015 # Odd Factory
+		10 = colony.2025 # What Separates Us
+		10 = colony.2050 # Clerical Errors
+		10 = colony.3001 # Rogue Moon
+		5 = colony.3005 # Dimensional Portal
+		3 = colony.9050 #Crystal Kraken
+		10 = colony.9350 # Myrmeku Colonies
+
+		### Archaeology Colony Sites
+		3 = ancrel.6049 # Blade of the Huntress
+
+		### Tomb Worlds - 8
+		50 = colony.150 # Underground Vault
+		50 = colony.155 # Nuclear Bomb
+		50 = colony.160 # Particle Accelerator
+		50 = colony.161 # Surviving Infrastructure
+		50 = colony.162 # Space Station
+		50 = colony.163 # Wasteland Radiation
+		50 = colony.164 # Pacifist Movement
+		50 = colony.170 # Orbital Debris
+
+
+		### Strange Worlds
+		20 = strange_worlds.1 # The World is Bleeding
+		20 = strange_worlds.30 # Shimmering Structure
+
+		### Federations
+		4 = colony_fed.100 #Impossible Corrie
+
+		### Astral Rifts anomalies
+		20 = astral_planes.6029 # Astralnomical Marvel
+	}
+}
+
+on_colony_4_years_old = {
+	random_events = {
+		150 = 0
+
+		### Colony Events & Chains - 14
+		1 = colony.2001 # Trouble in Paradise
+		1 = colony.2010 # A Change of Heart
+		2 = colony.9200 # Ancient Manufactorium
+		3 = federations2.8 # Dancing Plague
+		3 = situation.5 # Mysterious Labyrinth
+		6 = situation.150 # Living Snow, higher weight because only for deserts
+
+		### Archaeology Colony Sites
+		3 = ancrel.6049 # Blade of the Huntress
+
+		### Astral Rifts anomalies
+		20 = astral_planes.6029 # Astralnomical Marvel
+	}
+}
+
+on_colony_5_years_old = {
+	events = {
+		necroids.3
+	}
+	random_events = {
+		150 = 0
+
+		# Colony Events
+		3 = colony.2010 # A Change of Heart
+		3 = federations2.8 # Dancing Plague
+		3 = situation.5 # Mysterious Labyrinth
+		3 = colony.9310 # Junkyard Orbit
+		6 = situation.150 # Living Snow, higher weight because only for deserts
+		3 = colony.9900 #Dimensional Prison
+
+		### Archaeology Colony Sites
+		3 = ancrel.6049 # Blade of the Huntress
+
+		### Astral Rifts anomalies
+		20 = astral_planes.6029 # Astralnomical Marvel
+	}
+}
+
+
+on_colony_6_years_old = {
+}
+
+on_colony_7_years_old = {
+}
+
+on_colony_8_years_old = {
+}
+
+on_colony_9_years_old = {
+}
+
+on_colony_10_years_old = {
+	random_events = {
+		150 = 0
+
+	# Colony Events
+		10 = colony.7165 # Troublesome Critters, higher weight because it requires specific flag
+	}
+}
+
+on_colony_25_years_old = {
+	random_events = {
+		95 = 0
+		5 = situation.200 # Geomagnetic Storm
+	}
+}
+
+# Fires for each planet every month (counting up from colonisation date, includes home planet)
+on_colony_monthly_pulse = {
+	events = {
+		necroids.250 	# makes zombie pops
+	}
+}
+
+# Fires for each planet every year (counting up from colonisation date, includes home planet)
+on_colony_yearly_pulse = {
+	events = {
+		unrest.50 	#Start of Revolt Situation
+		toxoids.1 	#Increment pollution from Relentless Industrialists
+		awareness.140 # Colony in pre-ftl system
+	}
+	random_events = {
+		25 = crime.1 # Criminal Underworld Appears (Unemployment)
+		25 = crime.40 # Criminal Underworld Appears (High Crime)
+		25 = crime.41 # Criminal Underworld Disappears (Low Crime)
+		25 = 0
+	}
+}
+
+# Fires for each planet every 5 years (counting up from colonisation date, includes home planet)
+on_colony_5_year_pulse = {
+	events = {
+		action.222 #Help for AI with Doomsday
+		necroids.275 #Permanent Employment holding
+	}
+	random_events = {
+		10 = manifesti.1
+		90 = 0
+	}
+}
+
+on_colony_10_year_pulse = {
+	events = {
+		necroids.1 #Apotheosis for non-necrophage pops to necrophage
+		astral_planes.3080 #Formless Haven reward
+		#action.2020	# Pops random events gatekeeper
+	}
+}
+
+# this = pop, fired via action.2021
+on_colony_10_year_pulse_random_pop_events_list = {
+	#random_events = {
+	#	50 = 0
+	#	50 = pop.1 # (previously: MTTH 200 months)
+	#	50 = pop.2 # (previously: MTTH 220 months)
+	#	50 = pop.5 # (previously: MTTH 220 months)
+	#	50 = pop.7 # (previously: MTTH 220 months)
+	#	50 = pop.9 # (previously: MTTH 220 months)
+	#	50 = pop.11 # (previously: MTTH 220 months)
+	#	50 = pop.13 # (previously: MTTH 220 months)
+	#}
+}
+
+# a new leader is created
+# scope: country, from: leader
+on_leader_spawned = {
+	events = {
+		utopia.2509			# New Leaders Get Erudite Trait
+		utopia.2510			# New Leaders Get Cyborg Trait
+		utopia.2560			# New Leaders Get Synthetic Trait
+		utopia.2651			# New Leaders Get Psionic Trait
+		cybernetics.5047	# New Leaders Get Virtual Trait
+		distar.173 			# New Leaders Get Brainslug Trait
+		clones.24 			# New Leaders gain Clone Army Admiral traits
+		specialist.400
+		paragon_2.2065 		# Change admiral/general background class.
+		origin.6265 		# Fear of the Dark Leader Spawned after Merge
+		paragon_2.2200 		# Randomize "leader_pending_negative_traits" for new Leader.
+		machine_age.2235	# Cybernetic Creed Leaders Get Cybrog Traits with special traits
+		cyber.22            # Spiritualist leaders
+	}
+	random_events = {
+		80 = 0
+		20 = utopia.2601
+	}
+}
+
+# A leader is added to the leader pool, available for recruitment
+# scope: country, from: leader
+on_added_to_leader_pool = {
+	events = {
+		action.406 # Randomize Leader Pool Variations of skill and age
+		leader.100		# Additional traits from civics
+	}
+}
+
+# called during empire initialization when starting a new game
+# scope: country
+empire_init_add_technologies = {
+	events = {
+		game_start.8
+	}
+}
+
+# Called during empire initialization when starting a new game if has_secondary_species game rule is true.
+# Called before empire_init_create_capital_pops.
+# scope: planet
+# from: founder species
+# fromfrom: secondary species (if exists)
+empire_init_capital_planet = {
+	events = {
+		game_start.12 # starting buildings, districts & pops
+		# at this point the species might have changed (because we added traits), so FROMFROM might not be the secondary species anymore
+	}
+}
+
+# called during empire initialization when starting a new game
+# scope: country
+empire_init_create_ships = {
+	events = {
+		game_start.9
+	}
+}
+
+# Called when an election starts
+# scope: country
+on_election_started = {
+	events = {
+		paragon.500 # Flags Leaders that are on the Council.
+	}
+}
+
+# Called when an election ends
+# scope: country
+on_election_ended = {
+	events = {
+		paragon.501 # Clean up Flags about being on Council at Election start.
+		timeline.40 # Timeline Elections
+		bio.1095	# EvoPred Apex Predator Trait Giver
+	}
+}
+
+# Called upon entering FTL (on-action name scripted on the Bypass type)
+# THIS = Fleet
+# FROM = System jumping to
+# FROMFROM = System jumped from
+on_entering_gateway = {
+
+}
+
+# Called upon entering FTL (on-action name scripted on the Bypass type)
+# THIS = Fleet
+# FROM = System jumping to
+# FROMFROM = System jumped from
+on_entering_wormhole = {
+	events = {
+		achievement.4
+		fircon.3505
+		focus.120		# Empire Focus
+	}
+}
+
+# Called upon entering FTL (on-action name scripted on the Bypass type)
+# THIS = Fleet
+# FROM = System jumping to
+# FROMFROM = System jumped from
+on_entering_shroud_tunnel = {
+	events = {
+		origin.5610 # Teachers Origin - not player-facing
+		origin.5620 #Teachers of the Shroud origin - enter Shroudwalker system
+	}
+	random_events = {
+		74 = 0
+		10 = enclave.6000 # Strange Manifestations - Leader Portrait change
+		10 = enclave.6005 # Mind Wipe - Leader Trait addition
+		5 = enclave.6020 # Dreamer's Wake
+		1 = enclave.4250 #Psionic Breach - Psionic Avatar Appears
+	}
+}
+
+# Called upon entering FTL (on-action name scripted on the Bypass type)
+# THIS = Fleet
+# FROM = System jumping to
+# FROMFROM = System jumped from
+on_entering_strange_wormhole = {
+	events = {
+		astral_planes.3000
+		astral_planes.3030
+	}
+}
+
+# THIS = Ship
+on_jump_drive = {
+}
+
+# Called upon a catapult jump being finished, per ship in catapulted fleet
+# THIS = Ship
+# FROM = System jumping to
+# FROMFROM = System jumped from
+on_ship_quantum_catapult = {
+}
+
+# Called upon a catapult jump being finished, per fleet
+# THIS = Fleet
+# FROM = System jumping to
+# FROMFROM = System jumped from
+on_fleet_quantum_catapult = {
+	events = {
+		action.425 # Yeet the Fleet
+		action.430 # Into the Unknown
+		over.30 # Quantic Ambush modifier
+	}
+}
+
+# this = country
+on_pirate_spawn = {
+	events = {
+		pirate.49
+	}
+}
+
+# Called when a Starbase changes owner
+# THIS = Ship (Starbase)
+# FROM = Former Owner (Country)
+on_starbase_transfer = {
+	events = {
+		action.223
+		distar.199 # Special Project Gatekeeper for Living Planet event chain
+		distar.254
+	}
+}
+
+
+#
+# Both the following on_action are called when fleet joined combat
+# (The first one is called for the attacker fleet, the second one is called for the defending fleet)
+#
+
+
+# This = Aggressor Fleet
+# From = Attacked Fleet
+# FromFrom = Additional Attacked Fleet (if part of ongoing combat)
+# FromFromFrom = Additional Attacked Fleet (if part of ongoing combat)
+on_fleet_combat_joined_attacker = {
+	events = {
+		aquatics.300 # You attacked the Aquatic Dragon in first contact
+		aquatics.310 # You attacked it while establishing comms with it (origin endgame)
+	}
+}
+
+# This = Attacked Fleet
+# From = Aggressor Fleet
+# FromFrom = Additional Attacked Fleet (if joining ongoing combat)
+# FromFromFrom = Additional Attacked Fleet (if joining ongoing combat)
+on_fleet_combat_joined_defender = {
+	events = {
+		cara.1001 # Caravaneer Fleet 1
+		cara.2001 # Caravaneer Fleet 2
+		cara.3001 # Caravaneer Fleet 3
+		ancrel.4025
+		galactic_features.550 # Factions set to hostile
+	}
+}
+
+# From = system
+# FromFrom = country (new owner)
+# This = country (previous owner)
+on_system_lost = {
+	events = {
+		mega.100 			# Lost Consecrated World
+		action.102 			# Move Market Station
+		action.200			# recalc strategic war data
+		action.226 			# remove mining/science/observation
+		specialist.300
+		origin.6280 		# Seperatist Planet destroy themselves
+		astral_planes.20 	# Crystal Sphere Lost
+		astral_planes.5050 	# Remove Celestial Tear Modifier Event
+		astral_planes.119 	# A Rift In Space situation paused
+		bio.3365			# Appeased the Control Fragment and abanonded a system
+	}
+}
+
+# From = system
+# FromFrom = country (previous owner)
+# This = country (new owner)
+on_system_gained = {
+	events = {
+		galactic_features.298 	# Shielded World (Fallen Empire)
+		action.200				# recalc strategic war data
+		communications_spread.5 # Establish comms with any other countries in the system
+		leviathans.662  # Dragon Hoard system - eggs and bones (previously: MTTH 50 years)
+		specialist.200 # Add Bulwark Arrays to Bulwark subjects' starbases
+		astral_planes.25 # Crystal Sphere Gained from another country
+		astral_planes.5040 # Celestial Tear Modifier Event
+		astral_planes.117 # A Rift in Space situation trigger backup
+		astral_planes.118 # A Rift in Space situation trigger speedup
+		grand_archive.8052 # Shattered world system gained
+		grand_archive.8102 # Black Needle Base system gained
+		grand_archive.8202 # Smeegibb shelter system gained
+		timeline.35		   # Milestone First Unique System
+		bio.3370			# Angered the Control Fragment by rebuilding the system too soon
+		wilderness.100			# Nudge to colonize worlds (after time delay)
+	}
+}
+
+# This = Pop group
+# From = Country (buyer)
+# Fromfrom = Country (seller)
+on_slave_sold_on_market = {
+}
+
+# This = Country
+on_relic_received = {
+	events = {
+		astral_planes.5000	# Celestial Tear Modifier Event
+		astral_planes.5100	# Eternal Throne Event
+		cyber.1522			# Initialize variables for the Rulerchip
+		timeline.21         # Milestone First Relic
+		timeline.31         # Milestone Obtained Galatron
+	}
+}
+
+# This = Country
+on_relic_activated = {
+	events = {
+		achievement.5		# Unlimited Power achievement
+		astral_planes.1040	# Lateral Artifacting astral action
+		focus.135			# Empire Focus
+	}
+}
+
+# This = Country
+on_relic_lost = {
+	events = {
+		astral_planes.5005 # Remove Celestial Tear Modifier Event
+		timeline.32        # Milestone Lost Galatron
+	}
+}
+
+# This = Fleet ( science vessel )
+# From = Archaeological Site
+on_arch_stage_finished = {
+
+}
+
+on_arch_site_finished = {
+	events = {
+		achievement.6		# Archaeologist achievement
+		ancrel.15050		# Generate Minor Artifacts deposits
+		grand_archive.4150	# Galactic Curators rewards
+		focus.35			# Empire Focus
+	}
+	random_events = {
+		90 = 0
+		10 = federations3.2100 # Joint Operation: Genius Caeli
+	}
+}
+
+# A galcom resolution is moved to the senate floor
+# this/root = proposer
+# from = target if valid
+on_resolution_put_to_vote = {
+	events = {
+		bio.3325		# Fallen Empire Control Fragment Demand checker
+	}
+}
+
+# A galcom resolution is moved to the senate floor
+# this/root = vetoer
+# from = proposer
+on_resolution_vetoed = {
+	events = {
+		bio.3405		# Awakened Empire Control Gets Vetoed
+	}
+}
+
+# A galcom resolution passed
+# this/root = proposer
+# from = target if valid
+# To find out which resolution it was, use last_resolution_changed trigger
+on_resolution_passed = {
+	events = {
+		galcom.300 			# Quid Pro Quo Tradition event
+		galcom.305 			# National Agenda Tradition event
+		galcom.310 			# Persistent Petitioners Tradition event
+		galcom.315 			# Persistent Petitioners Tradition event cleanup
+		origin.4051 			# Payback - Even The Score - Passed sanction
+		origin.4053 			# Payback - Even The Score - Passed Equal Standing or Non-Interference
+		origin.4057 			# Payback - Even The Score - Repealed a sanction
+		origin.4058 			# Payback - Even The Score - Repealed Equal Standing
+		origin.4059 			# Payback - Even The Score - Repealed Non-Interference
+		origin.7500 			# Fruitful Partnership - People voting to help space fauna
+		origin.7510 			# Fruitful Partnership - People voting to hurt space fauna
+		leader.310			# Mutual Support event
+		leader.320			# Delegate Focus Traits
+		grand_archive.5005		# Gavel of the Tribunal effect ends
+		timeline.75 			# Timeline Galactic Community Resolution Passed
+		bio.3335			# Fallen Empire Control Fragment Demand checker
+	}
+}
+
+# A galcom resolution failed to pass
+# this/root = proposer
+# from = target if valid
+# To find out which resolution it was, use last_resolution_changed trigger
+on_resolution_failed = {
+	events = {
+		bio.3340		# Fallen Empire Control Fragment Demand checker
+		bio.1085			# EvoPred Apex Predator Opposing Resolutions
+	}
+}
+
+# This = Country, first member added
+on_galactic_community_formed = {
+	events = {
+		galcom.60
+		timeline.74 # Timeline Galactic Community Formed
+	}
+}
+
+on_galactic_council_established = {
+	events = {
+		galcom.50
+		focus.550
+	}
+}
+
+# This = Country
+on_add_community_member = {
+	events = {
+		galcom.60
+		crisis.4116
+		galcom.200
+		origin.5079 #Communications between MSI and Broken Shackles through Galcom
+		origin.4050  # Payback - Make Them Pay chain - Joined the galcom
+	}
+}
+
+on_remove_community_member = {
+	events = {
+		galcom.61
+		galcom.62
+		crisis.4115
+		galcom.205
+	}
+}
+
+on_add_to_council = {
+	events = {
+		emperor.95
+		focus.550
+	}
+}
+
+on_remove_from_council = {
+}
+
+on_join_alliance = {
+}
+
+on_leave_alliance = {
+}
+
+# This = Country who accepted the proposal
+# From = Country who proposed the commercial pact
+on_sign_commercial_pact = {
+	events = {
+		origin.5275 # Broken Shackles and MSI
+		timeline.41 # Timeline First Trade Deal
+	}
+}
+
+# This = Country who accepted the proposal
+# From = Country who proposed the defensive pact
+on_sign_defensive_pact = {
+	events = {
+		origin.5275 # Broken Shackles and MSI
+		focus.520 # Set flag for Focus Check Defensive Pact
+	}
+}
+
+# This = Country who accepted the proposal
+# From = Country who proposed the migration treaty
+on_sign_migration_pact = {
+	events = {
+		origin.6200 # Fear of the Dark
+		origin.5275 # Broken Shackles and MSI
+	}
+}
+
+# This = Country who accepted the proposal
+# From = Country who proposed the non-aggression pact
+on_sign_non_aggression_pact = {
+	events = {
+		origin.5275 # Broken Shackles and MSI
+		focus.515 # Set flag for Focus Check Aggression Pact
+	}
+}
+
+# This = Country who accepted the proposal
+# From = Country who proposed the research agreement
+on_sign_research_pact = {
+	events = {
+		origin.5275 # Broken Shackles and MSI
+		focus.125	# Empire Focus
+	}
+}
+
+# This = subject
+# From = subject's overlord
+on_becoming_subject = {
+	events = {
+		action.214		# Join Overlord's Federation if laws permit
+		crisis.5020		# Menace Objective - Vassalise Empires
+		emperor.80		# New vassal joins Imperium
+		action.441		# Force Subjects to join GalCom
+		origin.6064		# Fear of the Dark became a subject
+		origin.6070		# Fear of the Dark got a subject
+		paragon.5024		# Leader speech about getting subject
+		paragon.5032		# Leader speech on becoming a vassal
+		focus.700		# Empire focus
+		timeline.5		# Milestone First Vassal
+		bio.1090		# EvoPred Apex Predator Tracker
+	}
+}
+
+# fires when a country finishes being integrated
+# This = overlord
+# From = subject
+on_subject_integrated = {
+	events = {
+		crisis.2620 # BtC vassal integrated
+		action.500 	# Integrating Vassal gaining relic
+		cyber.7035 	# Intregrating Vassals with Pre-Sapient Preserves as a Genesis Guide Empire
+		grand_archive.4570	# Grand Archive Dismantled from subject integration
+	}
+}
+
+# fires when a country releases a sector as a vassal
+# This = released vassal
+# From = overlord
+on_released_as_vassal = {
+	events = {
+		action.229 			# Sort out their origin
+		action.230 			# Convert released megacorps into oligarchies
+		action.231 			# Give Advanced Authority to new vassals
+		specialist.700
+		origin.3270 		# Progenitor hive
+		paragon.5940
+		astral_planes.5		# Fill Astral Rift pool
+		astral_planes.2000	# Dimensional Worship astral thread reward modifier computing
+		grand_archive.2210	# Voidworm immunity
+		cyber.7030			# Removes Genesis Guide value if you give away vassals
+		game_start.70		# Council Generation
+		game_start.71		# Set starting planet governors
+		game_start.72		# Council Generation
+	}
+}
+
+# This = empire trying to leave federation
+# From = empire who declined (federation leader)
+on_ask_to_leave_federation_declined = {
+	events = {
+		action.205
+	}
+}
+
+#this = owner country, from = spynetwork scope
+on_spynetwork_formed = {
+	events = {
+		espionage.1 #First Spy Network founded - regular empires
+		espionage.20 #First Spy Network founded - pre-FTL empires
+		timeline.10  #  Milestone First Espionage Action
+	}
+}
+
+# THIS = Country: Emperor
+# FROM = Country added to council
+on_add_to_imperial_council = {
+}
+
+# THIS = Country: Emperor
+# FROM = Country removed from council
+on_remove_from_imperial_council = {
+}
+
+#these three are fired from script, basically for modders who want to change how first contact works or add some extra flavour stories in without overwriting things
+# THIS = first_contact
+on_first_contact_started = {
+	events = {
+		action.635 #First aliens discovered
+		timeline.6 # Milestone First Intelligent Life
+	}
+}
+
+#use for custom country types that need first contact paths
+# THIS = first_contact
+on_first_contact_stage_1_no_path = {
+}
+
+# THIS = first_contact
+on_first_contact_generic_stage_2 = {
+	events = {
+		tutorial.2000 #"Conducting First Contact"
+	}
+}
+
+# THIS = Planet: Branch office planet
+# FROM = Country: Branch office owner
+on_branch_office_established = {
+	events = {
+		timeline.30         # Milestone First Branch Office
+		focus.175			# Focus Task 10th Branch Office
+	}
+}
+
+# THIS = Planet: Branch office planet
+# FROM = Country: Branch office owner
+on_branch_office_closed = {
+	events = {
+		emperor.62
+		focus.180			# Focus Task 10th Branch Office
+	}
+}
+
+# THIS = System: system being occupied
+# FROM = Country: Conqueror of the system
+# FROMFROM = Country: Original owner of the system
+on_system_occupied = {
+	events = {
+		crisis.6100
+	}
+}
+
+# THIS = System: system whos controller has changed
+# FROM = Country: New controller of the system
+# FROMFROM = Country: Old controller of the system
+on_system_controller_changed = {
+	events = {
+		action.300
+		astral_planes.5035	# Add/Remove Celestial Tear Modifier Event
+		grand_archive.4550	# Grand Archive Dismantled from giving system
+		grand_archive.8508	# Black Needle Sabotage: losing sabotaged system
+	}
+}
+
+# THIS = System: system being returned from occupation
+# FROM = Country: Previous owner of the system
+# FROMFROM = Country: Occupier of the system
+on_system_returned = {
+	events = {
+		action.301
+	}
+}
+
+# A planet has been rendered ownerless, it has an orbital ring or similar, though. The orbital ring is still there, but is about to be deleted
+# this = starbase
+# from = planet
+# fromfrom = old owner
+on_orbital_defense_planet_ownerless = {
+	events = {
+		action.503
+	}
+}
+
+# THIS = Espionage operation
+# FROM = Operation target
+on_operation_chapter_finished = {
+}
+
+# THIS = Espionage operation
+# FROM = Operation target
+on_operation_finished = {
+	events = {
+	}
+}
+
+# THIS = Espionage operation
+on_operation_cancelled = {
+	events = {
+		action.330
+	}
+}
+
+# Executed just as country is changing its government, before the new one is applied
+# THIS = country
+on_pre_government_changed = {
+	events = {
+		cyber.30 # Remove old effects before reforming cyber swap government
+	}
+}
+
+# Executed just as country is changing its government, after the new one is applied
+# THIS = country
+on_post_government_changed = {
+	events = {
+		specialist.1000
+		action.445 # Recalculate divided patronage modifier on government reform.
+		action.455 # Unlock Memorialist buildings for hive-minds that reform into the civic.
+		action.502 # Remove Imperial Heir trait on changing away from Imperial authority.
+		leader.201 # Add Imperial Ruler trait on changing to Imperial authority.
+		action.735 # Remove Void Hive modifiers
+		astral_planes.2000 # Dimensional Worship astral thread reward modifier computing
+		astral_planes.2200 # Hyperspace Specialty giving research
+		cyber.40 #  # Add new effects after reforming cyber swap government
+		bio.1100	# EvoPred Apex Predator remove trait on leaving dictatorial
+		bio.1095	# EvoPred Apex Predator add trait on enter dictatorial
+		bio.1130	# EvoPred Oligarch Immortality Removal
+		bio.1131	# EvoPred Oligarch Immortality Addition
+		bio.171		# Purity Authority trait handling - give trait
+		bio.172		# Purity Authority trait handling - remove trait
+		cyber.7040	# Ensuring that you can still build a colony ship after changing your civics and become a guided sapience empire
+		cyber.7045	# Ensuring that you can still build a colony ship after changing your civics and stop being a guided sapience empire
+	}
+}
+
+# Executed when the Custodian's term ends
+# THIS = country
+on_custodian_term_ends = {
+	events = {
+		custodian.10
+	}
+}
+
+# Executed when a country picks any tradition (including starters and finishers)
+# THIS = country
+on_tradition_picked = {
+	events = {
+		specialist.800
+		paragon.405
+	}
+}
+
+# Executed when a country picks an ascension perk
+# THIS = country
+on_ascension_perk_picked = {
+	events = {
+		aquatics.120
+		timeline.62 # Timeline Origin Events Acquired Hydrocentric Ascension Perk
+		timeline.13 # Milestone First Ascension Perk
+	}
+}
+
+# Executed when a megastructure has a new owner
+# this = new owner
+# from = megastructure
+# fromfrom = old owner (if existing)
+on_megastructure_change_owner = {
+	events = {
+		crisis.6200	#Aetherophasic Engine captured by non-crisis
+	}
+}
+
+# Executed when a megastructure is rendered ownerless
+# this = solar system containing megastructure
+# from = megastructure
+# fromfrom = old owner (if existing)
+on_megastructure_ownerless = {
+}
+
+on_crystalline_empire_task = {
+	random_events = {
+		10 = central.50 # Refugees from the Empire
+		10 = central.60 # Secret Techniques
+		10 = central.70 # Curious Scientist
+	}
+}
+
+#Fired from destroy_star_system scripted effect
+#This = system
+#From = destroyer (if using a star cracker)
+on_destroy_star_system = {
+	events = {
+		crisis.220
+		awareness.155 # Neighbouring system has pre-ftls
+	}
+}
+
+on_admirals_bickering_event_chain = {
+	random_events = {
+		10 = subject.1120
+		10 = subject.1125
+		10 = subject.1130
+		10 = subject.1135
+		10 = subject.1140
+	}
+}
+
+#Executed when an empire wishes to turn a mercenary fleet into a Mercenary enclave
+#This = fleet
+on_establish_mercenary_enclave = {
+	events = {
+		enclave.2
+	}
+}
+
+# Fired when a science ship succesfully analyzed or scavenged debris
+# this = country
+# from = debris
+# fromfrom = controller of destroyed ship
+# fromfromfrom = science ship
+on_debris_researched = {
+	events = {
+		paragon_2.1110	# Salvager trait
+		focus.60		# Empire Focus
+	}
+}
+
+# Fired when a science ship succesfully analyzed or scavenged debris
+# this = country
+# from = debris
+# fromfrom = controller of destroyed ship
+# fromfromfrom = science ship
+on_debris_scavenged = {
+	events = {
+		paragon_2.1110 # Salvager trait
+	}
+}
+
+# Fired when a science ship succesfully analyzed or scavenged debris
+# this = country
+# from = debris
+# fromfrom = controller of destroyed ship
+# fromfromfrom = science ship
+on_debris_reanimated = {
+	events = {
+		grand_archive.7310 # Reanimate fauna
+	}
+}
+
+# Fired when a science ship succesfully analyzed or scavenged debris
+# this = country
+# from = debris
+# fromfrom = controller of destroyed ship
+# fromfromfrom = science ship
+on_debris_scavenged_and_researched = {
+	events = {
+		toxoids.700 # Scavengers civic and Salvager trait
+	}
+}
+
+# Fired when a ship completes a special project.
+# this = country
+# fromfromfrom = ship
+special_project_success = {
+	events = {
+		focus.30	# Empire Focus
+	}
+}
+
+# Fired when a ship finishes researching an anomaly.
+# this = ship
+# from = planet
+anomaly_success = {
+	events = {
+		paragon_2.2003		# leader_trait_midas_touch/Vibrant Storyteller rewards XP
+		cybernetics.1017	# Update Arc Furnace deposits
+		focus.20			# Empire Focus
+	}
+}
+
+# Fired when a subject has started converting to a specialist type
+# This = agreement
+# owner = overlord
+# target = subject
+on_specialist_subject_conversion_started = {
+	events = {
+		action.450
+	}
+}
+
+# Fired when a subject has finished converting to a specialist type
+# This = agreement
+# owner = overlord
+# target = subject
+on_specialist_subject_conversion_finished = {
+	events = {
+		action.451
+	}
+}
+
+# Fired when a subject specialist conversion has been aborted
+# This = agreement
+# owner = overlord
+# target = subject
+on_specialist_subject_conversion_aborted = {
+	events = {
+		action.451
+	}
+}
+
+# Executed when a two capitals get connected through relay network
+# THIS = Country: Owner
+# FROM = Country: Other
+on_capitals_connected = {
+	events = {
+		over.100 # Hyper Relay Connection
+	}
+}
+
+# Fired when a change to an existing subject agreement has been accepted
+# This = agreement
+# owner = overlord
+# target = subject
+on_agreement_change_accepted = {
+	events = {
+		action.435 # Fine Print achievement
+		action.440 # Force Subjects to join GalCom
+		action.442 # Force Subjects to join Federation, on Agreement Change.
+		action.443 # Force Subjects to join Federation, on Agreement Change.
+	}
+}
+
+on_shroudwalker_divination_visitors_situation = {
+	random_events = {
+		1 = enclave.4150 # "Joint Operation: Dismembered Cloud"
+		1 = enclave.4151 # "A Most Irritating Envoy"
+		1 = enclave.5070 # "Rogue Shaman"
+		1 = enclave.5085 # "The Great Schism"
+		1 = enclave.5165 # Brain Slug - distar.170
+		1 = enclave.5170 # The Doorway - colony.3005
+		1 = enclave.5175 # Atmospheric Ecosystem - colony.300
+		1 = enclave.5190 # Hero Redivivus
+		1 = enclave.5560 # Wayward Pilgrims
+	}
+}
+
+on_shroudwalker_divination_locus_situation = {
+	random_events = {
+		1 = enclave.5000 # "All Too Lucid"
+		1 = enclave.5050 # "Shrouded"
+		1 = enclave.5500 # "Shattered Frontier" (> 50% progress)
+		1 = enclave.5125 # "Floating Parts" (> 10% progress)
+		1 = enclave.5150 # Lightshow - anomaly.235 (>10% progress)
+		1 = enclave.5155 # Grimacing - anomaly.230 (>10% progress)
+		1 = enclave.5160 # Improbable Teapot - anomaly.4060
+		1 = enclave.5185 # Terminal Orbit - anomaly.2570 (>15% progress)
+		1 = enclave.5180 # The Color of Science - anomaly.6740 (>15% progress)
+	}
+}
+
+on_shroudwalker_insight_situation_finish = {
+	random_events = {
+		40 = enclave.7060 # Asset
+		25 = enclave.7065 # Spy Network
+		25 = enclave.7070 # Intel
+		10 = enclave.7075 # Shroud is busy right now, come back later (Nothing)
+	}
+}
+
+# Executed when an astral rift spawns
+# THIS = AstralRift: spawned astral rift
+on_astral_rift_spawned = {
+	events = {
+		astral_planes.7		# Trigger A Rift In Space situation
+		astral_planes.8		# Add Astral Threads deposits
+	}
+}
+
+# Executed when the exploration of an astral rift starts
+# THIS = Country: Explorer country
+# FROM = AstralRift: Explored astral rift
+# FROMFROM = Exploring Fleet
+on_astral_rift_exploration_start = {
+	events = {
+		astral_planes.3		# Lock rift if it may reward a relic
+		astral_planes.9		# Indicate this player started exploring Rifts
+		astral_planes.200	# Prevents exploring leaders' death from specific events
+		astral_rift.1699 	# Strange Station Astral Rift - Create mirrored country
+		astral_rift.2398	# Lock Genesis rift (one at a time)
+	}
+}
+
+# Executed when an astral rift event is about to be fired
+# THIS = Country: Explorer country
+# FROM = AstralRift: Explored astral rift
+# FROMFROM = Exploring Fleet
+on_astral_rift_pre_event_fire = {
+	events = {
+		astral_planes.6		# Setup event description flags
+	}
+}
+
+# Executed when the exploration of an astral rift ends
+# THIS = Country: Explorer country
+# FROM = AstralRift: Explored astral rift
+# FROMFROM = Exploring Fleet
+on_astral_rift_exploration_complete = {
+	events = {
+		astral_planes.4		# Unlock rift if it was possible to get a relic from it but we didn't
+		astral_planes.205	# Removes exploring leaders' death prevention
+		astral_planes.2104	# Formless contact Riftworld
+		astral_rift.1698	# Clears mirrored country global event target
+		astral_rift.2399	# Unlock Genesis rift
+		astral_planes.6059	# Astral Zeal modifier effect
+		focus.55			# Empire Focus
+		timeline.11         # Milestone First Astral Rift
+	}
+	random_events = {
+		1 = astral_planes.6095  # Final Escapee Mercedes Romero
+		49 = 0
+	}
+}
+
+
+# Fired when a Commercial Pact is Broken for both parties
+#This = Active Country
+#From = Other participating Country
+on_commercial_pact_broken = {
+	events = {
+		cyber.1020 # For Sale: The Sky cleanup
+	}
+}
+
+# Executed when a country activates an agenda
+# THIS = country
+on_agenda_finished = {
+	events = {
+		paragon.402	# Tradition tr_statecraft_amongst_peers XP bonus.
+		paragon.404	# Give boost to young colonies if "Superior Colonies" Agenda is finished.
+		focus.505	# Set Launch Diplomatic Agenda Flag for Focus
+		focus.105	# Empire Focus
+	}
+}
+
+# Fired when a fleet activates cloaking
+# This = Fleet
+on_cloaking_activated = {
+	events = {
+		fircon.15 #Predatory Tactics Activate
+	}
+}
+
+# Fired when cloaking is deactivated for a fleet (voluntarily or involuntarily)
+# This = Fleet
+on_cloaking_deactivated = {
+	events = {
+		fircon.16 #Predatory Tactics Deactivate
+		awareness.100 # Decloaked in pre-ftl system.
+	}
+}
+
+# Fired when a pre-FTL's awareness level increases (by uncloaking ships or using add/set_awareness in events)
+# This = PreFTL Country
+# From = Observing Country
+on_awareness_level_increase = {
+	events = {
+		awareness.160 # Increased awareness to next threshold, fire a notification for any observer.
+		awareness.170 # Sets observation mission to none when you reach full awareness
+		awareness.900 # Establish communications if they reach full awareness
+	}
+}
+
+# Fired when a pre-FTL's awareness level decreases (by uncloaking ships or using add/set_awareness in events)
+# This = PreFTL Country
+# From = Observing Country
+on_awareness_level_decrease = {
+	events = {
+		awareness.165 # Decreased awareness to previous threshold, fire a notification for any observer.
+	}
+}
+
+# Chance of pre-FTL civilizations to shift their ethics
+on_pre_ftl_pop_ethic_shift = {
+	random_events = {
+		500 = 0
+		5 = observation.3138	# Societal Shift towards Authoritarian
+		5 = observation.3140	# Societal Shift towards Egalitarian
+		5 = observation.3142	# Societal Shift towards Xenophobe
+		5 = observation.3144	# Societal Shift towards Xenophile
+		5 = observation.3146	# Societal Shift towards Militarist
+		5 = observation.3148	# Societal Shift towards Pacifist
+		5 = observation.3150	# Societal Shift towards Spiritualist
+		5 = observation.3152	# Societal Shift towards Materialist
+	}
+}
+
+# Fired when a country attacks another country
+#This = attacked country
+#From = attacker country
+on_country_attacked = {
+	events = {
+		observation.3200 		# Clear relations with pre-ftl under observation
+		astral_planes.3150		# A player attacked the Formless, they become hostile to them
+	}
+}
+
+# Fired when a bypass Dimensional Lock expires
+# This = Bypass
+on_dimensional_lock_expired = {
+	events = {
+		astral_planes.1030
+	}
+}
+
+# Fired when a Space Storm is created
+# This = System containing the Storm
+on_space_storm_created = {
+	events = {
+		astral_rift.3291 # Space Storm immunity
+	}
+}
+
+# Fired when a Space Storm is destroyed
+# This = System containing the Storm
+on_space_storm_destroyed = {
+	events = {
+		astral_rift.3291 # Space Storm immunity
+	}
+}
+
+# Fired approximately every decade via 'syndaw.11'
+on_machine_leader_malfunction = {
+	random_events = {
+		1 = syndaw.21 # assigned to a Science Vessel
+		1 = syndaw.25 # assigned Admiral
+		1 = syndaw.26 # assigned Governor
+	}
+}
+
+# Fired approximately every decade via 'syndaw.11'
+on_synth_leader_malfunction = {
+	random_events = {
+		1 = action.71 # assigned to a Science Vessel
+		1 = action.72 # Council: Head of Research
+		1 = action.75 # assigned Admiral
+		1 = action.76 # assigned Governor
+	}
+}
+
+# Fired when a PopGroup has a change in their ethics
+#This = PopGroup
+#From = Planet Owner
+#local_num_pops_changed = Num pops that switched ethic to This pop group
+on_daily_pop_ethics_divergence = {
+	events = {
+		machine_age.2100 # Cybernetic Creed - add Creed traits to spiritualist pops
+		machine_age.2101 # Cybernetic Creed - remove Creed traits from non-spiritualist pops
+		cyber.8 # Cyber objectors
+	}
+}
+
+# Situation Random Event Pool | Fired by cyber.5
+# This = Situation
+on_cyberization_situation_random_events_list = {
+	random_events = {
+		1 = cyber.120 # Stage 2 Opportunity
+		1 = cyber.160 # Stage 2 Challenge
+		1 = cyber.210 # Stage 2 Random Event
+		1 = cyber.220 # Stage 2 Opportunity
+		1 = cyber.260 # Stage 2 Challenge
+		1 = cyber.320 # Stage 3 Opportunity
+		1 = cyber.360 # Stage 3 Challenge
+	}
+}
+
+on_cyberization_hive_situation_random_events_list = {
+	random_events = {
+		1 = cyber.2220 # Stage 2 Opportunity
+		1 = cyber.2260 # Stage 2 Challenge
+		1 = cyber.2320 # Stage 3 Opportunity
+		1 = cyber.2360 # Stage 3 Challenge
+		1 = cyber.2420 # Stage 4 Opportunity
+		1 = cyber.2460 # Stage 4 Challenge
+	}
+}
+
+# Situation Random Event Pool | Fired by synth.5
+# This = Situation
+on_digitization_situation_random_events_list = {
+	random_events = {
+		1 = synth.120 # Stage 1 Opportunity
+		1 = synth.160 # Stage 1 Challenge
+		1 = synth.220 # Stage 2 Opportunity
+		1 = synth.260 # Stage 2 Challenge
+		1 = synth.320 # Stage 3 Opportunity
+		1 = synth.360 # Stage 3 Challenge
+	}
+}
+
+# Work/Family Event Pool | Fired by cyber.600
+# This = Country
+on_futureshock_chain_work_family_events_list = {
+	random_events = {
+		# Work
+		5 = cyber.610 # Virtual Slackers
+		5 = cyber.615 # Work-Drive Divide
+		5 = cyber.625 # Cyber Subscriptions
+		5 = cyber.655 # Unforeseeable Mechanical Failure
+		# Family
+		5 = cyber.805 # Parental Controls
+		5 = cyber.810 # Knowlege Transfer
+		5 = cyber.815 # Decentralized Love
+		5 = cyber.820 # Radical Image
+		5 = cyber.830 # Cold Metal
+		5 = cyber.840 # Where Our Hearts Will Take Us
+		5 = cyber.855 # Making the Grade
+	}
+}
+
+# Leisure/Social Event Pool | Fired by cyber.1000
+# This = Country
+on_futureshock_chain_leisure_events_list = {
+	random_events = {
+		#Leisure
+		5 = cyber.1005 # Limit Breaker
+		5 = cyber.1010 # For Sale: The Sky
+		5 = cyber.1030 # Illicit Memories
+		5 = cyber.1055 # Spy Games
+		#Society
+		5 = cyber.1205 # Sensory Censorship
+		5 = cyber.1210 # Subliminhack Messaging
+		5 = cyber.1255 # Cyberbrain Hacking
+	}
+}
+
+# Identity Event Pool | Fired by synth.600
+# This = Country
+on_synthshock_chain_identity_events_list = {
+	random_events = {
+		5 = synth.610 # Synth Provenance
+		5 = synth.620 # Organic Cravings
+		5 = synth.630 # Home Server Architecture
+	}
+}
+
+# Possibilities Event Pool | Fired by synth.1000
+# This = Country
+on_synthshock_chain_opportunity_events_list = {
+	random_events = {
+		5 = synth.1010 # Infinite Possibility Matrix
+		5 = synth.1020 # Synthetic Medication
+		5 = synth.1030 # Respawn
+	}
+}
+
+# Synth Queen Random Demand Pool | Fired by situation_synth_queen_player_facing
+# This = Country
+on_synth_queen_random_demand_list = {
+	random_events = {
+		5 = crisis.8285 # Synth Queen Demand - Resources
+		5 = crisis.8290 # Synth Queen Demand - Research
+		5 = crisis.8295 # Synth Queen Demand - System
+		5 = crisis.8280 # Synth Queen Demand - Pops
+		5 = crisis.8300 # Synth Queen Demand - Habitable System
+	}
+}
+
+on_galaxy_map_during_tutorial = {
+	events = {
+		tutorial.4 # Completed "galaxy map toggle" tutorial
+	}
+}
+
+# A Gravity Snare was sent by a science fleet
+# This = Snare Fleet
+# From = Fleet that sent the snare
+on_snare_sent = {
+	events = {
+		grand_archive.100
+	}
+}
+
+# Fired when a truce is over
+# This = owner of the truce
+# From = target of the truce
+on_truce_end = {
+	events = {
+		action.740 #Truce is over toast
+	}
+}
+
+# Fired when starbase is occupied and changes controller
+# This = New controller
+# From = Starbase being occupied
+on_starbase_occupied = {
+	events = {
+		crisis.7535 #Synaptic Lathe Captured
+	}
+}
+
+# A specimen has been acquired
+# This = country receiving the specimen
+on_specimen_acquired = {
+	events = {
+		grand_archive.4000		# Specimen acquired notification
+		grand_archive.4005		# First specimen acquired event
+		grand_archive.4100		# Collection Curators rewards
+		grand_archive.4130		# Collection Curators rewards - Homicidal considerations
+		grand_archive.4151		# Galactic Curators rewards
+		grand_archive.4155		# It belongs in a museum oh right achievement
+		grand_archive.4200		# Archivism finisher effect
+		grand_archive.4210		# Archivism Expert Negociation effect
+		grand_archive.4220		# Archivism Flawless Display effect
+	}
+}
+
+# A specimen has been sold
+# This = country selling the specimen
+on_specimen_sold = {
+	events = {
+		grand_archive.4200		# Archivism finisher effect
+		grand_archive.4210		# Archivism Expert Negociation effect
+		grand_archive.4220		# Archivism Flawless Display effect
+	}
+}
+
+# Fired when a ship engulfs another one with an engulf type weapon
+# This = Engulfed Ship (Defender)
+# From = Engulfing Ship (Attacker)
+on_ship_engulfed = {
+	events = {
+		grand_archive.3200
+	}
+}
+
+# This: System
+# From: Storm
+on_storm_entered_system = {
+	random_events = {
+		90 = 0
+		10 = cstorms.1800
+	}
+	events = {
+		cstorms.2370
+		cstorms.1317
+		cstorms.1760	# Dusty Drink (triggered when a Celestial Storm hits a colony)
+		cstorms.1770	# Flightless Fauna (triggered when a Gravity Storm hits a colony)
+		cstorms.1150	# Update Diplomatic Weight for Storm Devotion
+		timeline.49		# First Storm Appears Within Borders
+	}
+}
+
+# This: System
+# From: Storm
+on_storm_left_system = {
+	random_events = {
+		75 = 0
+		5 = cstorms.5
+		20 = cstorms.10
+		5 = cstorms.1310
+	}
+	events = {
+		cstorms.500		# Storm negation tech insight
+		cstorms.1313	# Stormbound Returns
+		cstorms.1316	# Whispers in the Tempest
+		cstorms.1700	# Magnetized Planetary Core (triggered when a Magnetic Storm leaves a colony)
+		cstorms.1710	# Electrified Oceans (triggered when an Electric Storm leaves a colony)
+		cstorms.1720	# Ghostly Apparitions (triggered when a Shroud Storm leaves a colony)
+		cstorms.1730	# Volcanic Inactivity (triggered when a storm leaves a colony with a volcano)
+		cstorms.1740	# Mountain in the Sky (triggered when a Gravity Storm leaves a colony)
+		cstorms.1750	# Melting Glaciers (triggered when a basic Storm leaves a cold colony)
+		cstorms.1775	# Flightless Fauna 2 (triggered when a Gravity Storm leaves a colony with protected flightless fauna)
+		cstorms.1830	# Aftermath Opportunists (triggered if you know the Rackets)
+		cstorms.1840	# Repowered Complex arc site spawn (triggered when an Electric Storm leaves)
+		cstorms.1155	# Update Diplomatic Weight for Storm Devotion
+	}
+}
+
+# Fired when a collection exhibit has been unlocked
+# This = Country
+on_exhibit_unlocked = {
+	events = {
+		grand_archive.4100		# Collection Curators rewards
+		grand_archive.4130		# Collection Curators rewards - Homicidal considerations
+		grand_archive.4155		# It belongs in a museum oh right achievement
+		grand_archive.4200		# Archivism finisher effect
+		grand_archive.4210		# Archivism Expert Negociation effect
+		grand_archive.4220		# Archivism Flawless Display effect
+	}
+}
+
+# Fired when a space fauna is captured
+# This = Ship captured by a gravity snare - deleted after event fired and sent to vivarium
+# From = Fleet / Gravity snare that captured the space fauna
+on_fauna_captured = {
+	events = {
+		grand_archive.110		# capture_leader_scientist_exp_gain handle
+		grand_archive.115		# Gravity Snare general experience reward
+		grand_archive.3035		# Cutholoid captured achievement
+		grand_archive.9955		# Primal Calling first capture tech insight
+		biocrisis.515			# Behemoth Crisis Objective: Capture or Destroy Space Fauna or Bioships
+	}
+}
+
+# Performed once a space fauna capture attempt ends, no matter the outcome of the attempt
+# This = Fleet / Gravity Snare Fleet
+on_fauna_capture_ended = {
+	events = {
+		grand_archive.120		# Gravity snare sender global target clear
+	}
+}
+
+# Fired when a space fauna is added to the vivarium
+# This = Country
+on_vivarium_populated = {
+	events = {
+		grand_archive.1020		# Primal Calling bonus refresh
+	}
+}
+
+# Fired when a space fauna is culled
+# From = Design
+# This = Country
+on_space_fauna_culled = {
+	events = {
+		grand_archive.1020		# Primal Calling bonus refresh
+		grand_archive.8610		# Rare Crystals Mining tech weight boost
+	}
+}
+
+# This: Storm
+on_storm_finished = {
+}
+# Fired when a country encounters a storm for the first time
+# The number of met storms is incremented after this action
+# This: Country
+# From: Storm
+on_storm_encountered = {
+	events = {
+		cstorms.1		# Flag first storm met by a country
+		cstorms.1810	# Storm in a Box event chain
+	}
+}
+
+# This = Leader captured
+# from = perpetrator country
+# fromfrom = victim country
+# fromfromfrom = system where it happened
+on_leader_captured = {
+	events = {
+		grand_archive.9000
+	}
+}
+
+# This = Country
+# This.local_country_biomass = amount of wilderness pops
+on_biomass_monthly = {
+	events = {
+		wilderness.10
+	}
+}
+
+debug_spawn_storm_random_system = {
+	events = {
+		galactic_features.409
+	}
+}
+
+# This = Country
+on_ftl_society_enters_new_age = {
+	events = {
+		strange_worlds.3055
+	}
+}
+
+on_genetic_ascension_events_list = {
+	random_events = {
+		# Purity Random Events
+		10 = bio.50
+		10 = bio.55
+		10 = bio.60
+		10 = bio.65
+		10 = bio.200
+		10 = bio.210
+		10 = bio.215
+		10 = bio.220
+		10 = bio.225
+		# Cloning Random Events
+		10 = bio.70
+		10 = bio.75
+		10 = bio.80
+		10 = bio.85
+		10 = bio.230
+		10 = bio.235
+		10 = bio.240
+		10 = bio.250
+		# Mutation Random Events
+		10 = bio.90
+		10 = bio.95
+		10 = bio.100
+		10 = bio.105
+		10 = bio.260
+		10 = bio.265
+		10 = bio.270
+		10 = bio.280
+		# Bonus Events (any approach)
+		5 = bio.295
+		5 = bio.300
+	}
+}
+
+on_genetic_ascension_approach_purity_events_list = {
+	random_events = {
+		# Purity Random Events
+		10 = bio.50
+		10 = bio.55
+		10 = bio.60
+		10 = bio.65
+		10 = bio.200
+		10 = bio.210
+		10 = bio.215
+		10 = bio.220
+		10 = bio.225
+		# Bonus Events (any approach)
+		5 = bio.295
+		5 = bio.300
+	}
+}
+
+on_genetic_ascension_approach_cloning_events_list = {
+	random_events = {
+		# Cloning Random Events
+		10 = bio.70
+		10 = bio.75
+		10 = bio.80
+		10 = bio.85
+		10 = bio.230
+		10 = bio.235
+		10 = bio.240
+		10 = bio.250
+		# Bonus Events (any approach)
+		5 = bio.295
+		5 = bio.300
+	}
+}
+
+on_genetic_ascension_approach_mutation_events_list = {
+	random_events = {
+		# Mutation Random Events
+		10 = bio.90
+		10 = bio.95
+		10 = bio.100
+		10 = bio.105
+		10 = bio.260
+		10 = bio.265
+		10 = bio.270
+		10 = bio.280
+		# Bonus Events (any approach)
+		5 = bio.295
+		5 = bio.300
+	}
+}
+
+on_genetic_ascension_hive_events_list = {
+	random_events = {
+		# Purity Random Events
+		10 = bio.110
+		10 = bio.115
+		10 = bio.120
+		10 = bio.125
+		10 = bio.310
+		10 = bio.315
+		10 = bio.325
+		10 = bio.330
+		10 = bio.335
+		# Cloning Random Events
+		10 = bio.130
+		10 = bio.135
+		10 = bio.140
+		10 = bio.145
+		10 = bio.340
+		10 = bio.350
+		10 = bio.365
+		# Mutation Random Events
+		10 = bio.150
+		10 = bio.155
+		10 = bio.160
+		10 = bio.165
+		10 = bio.375
+		10 = bio.380
+		10 = bio.385
+		10 = bio.390
+		# Bonus Events (any approach)
+		10 = bio.405
+		10 = bio.410
+	}
+}
+
+on_genetic_ascension_hive_approach_purity_events_list = {
+	random_events = {
+		# Purity Random Events
+		10 = bio.110
+		10 = bio.115
+		10 = bio.120
+		10 = bio.125
+		10 = bio.310
+		10 = bio.315
+		10 = bio.325
+		10 = bio.330
+		10 = bio.335
+		# Bonus Events (any approach)
+		10 = bio.405
+		10 = bio.410
+	}
+}
+
+on_genetic_ascension_hive_approach_cloning_events_list = {
+	random_events = {
+		# Cloning Random Events
+		10 = bio.130
+		10 = bio.135
+		10 = bio.140
+		10 = bio.145
+		10 = bio.340
+		10 = bio.350
+		10 = bio.365
+		# Bonus Events (any approach)
+		10 = bio.405
+		10 = bio.410
+	}
+}
+
+on_genetic_ascension_hive_approach_mutation_events_list = {
+	random_events = {
+		# Mutation Random Events
+		10 = bio.150
+		10 = bio.155
+		10 = bio.160
+		10 = bio.165
+		10 = bio.375
+		10 = bio.380
+		10 = bio.385
+		10 = bio.390
+		# Bonus Events (any approach)
+		10 = bio.405
+		10 = bio.410
+	}
+}

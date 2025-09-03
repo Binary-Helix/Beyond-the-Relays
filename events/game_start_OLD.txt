@@ -4,13 +4,15 @@ namespace = game_start
 
 ### Hidden Game Start Event
 event = {
-	id = game_start.1
+	id = btr_game_start.1
 	hide_window = yes
 	is_triggered_only = yes
 
 	immediate = {
 		set_global_flag = game_started
-
+		set_global_flag = has_beyond_the_relays
+		country_event = { id = btr_start_global.6 days = 1 }
+		log = "Playing Beyond the Relays"
 
 		every_country = {
 			limit = { is_ai = no }

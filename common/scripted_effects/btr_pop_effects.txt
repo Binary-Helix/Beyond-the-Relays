@@ -1,7 +1,7 @@
 generate_homeworldPop = {
 	while = {
 		count = 1
-		create_pop = {
+		create_pop_group = {
 			species = owner_main_species
 			ethos = owner
 		}
@@ -11,8 +11,8 @@ generate_homeworldPop = {
 generate_asariPop = {
 	create_asari_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:asariSpecies
 			ethos = owner
 		}
@@ -22,8 +22,8 @@ generate_asariPop = {
 generate_salarianPop = {
 	create_salarian_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:salarianSpecies
 			ethos = owner
 		}
@@ -33,8 +33,8 @@ generate_salarianPop = {
 generate_turianPop = {
 	create_turian_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:turianSpecies
 			ethos = owner
 		}
@@ -44,8 +44,8 @@ generate_turianPop = {
 generate_humanPop = {
 	create_human_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:humanSpecies
 			ethos = owner
 		}
@@ -55,8 +55,8 @@ generate_humanPop = {
 generate_elcorPop = {
 	create_elcor_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:elcorSpecies
 			ethos = owner
 		}
@@ -66,8 +66,8 @@ generate_elcorPop = {
 generate_volusPop = {
 	create_volus_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:volusSpecies
 			ethos = owner
 		}
@@ -77,8 +77,8 @@ generate_volusPop = {
 generate_hanarPop = {
 	create_hanar_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:hanarSpecies
 			ethos = owner
 		}
@@ -88,8 +88,8 @@ generate_hanarPop = {
 generate_batarianPop = {
 	create_batarian_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:batarianSpecies
 			ethos = owner
 		}
@@ -99,8 +99,8 @@ generate_batarianPop = {
 generate_kroganPop = {
 	create_krogan_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:kroganSpecies
 			ethos = owner
 		}
@@ -110,8 +110,8 @@ generate_kroganPop = {
 generate_quarianPop = {
 	create_quarian_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:quarianSpecies
 			ethos = owner
 		}
@@ -121,8 +121,8 @@ generate_quarianPop = {
 generate_drellPop = {
 	create_drell_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:drellSpecies
 			ethos = owner
 		}
@@ -132,8 +132,8 @@ generate_drellPop = {
 generate_vorchaPop = {
 	create_vorcha_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:vorchaSpecies
 			ethos = owner
 		}
@@ -143,8 +143,8 @@ generate_vorchaPop = {
 generate_forayanPop = {
 	create_forayan_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:forayanSpecies
 			ethos = owner
 		}
@@ -155,7 +155,7 @@ generate_lystheniPop = {
 	create_lystheni_species = yes
 	while = {
 		count = 1
-		create_pop = {
+		create_pop_group = {
 			species = event_target:lystheniSpecies
 			ethos = owner
 		}
@@ -165,8 +165,8 @@ generate_lystheniPop = {
 generate_gothonesPop = {
 	create_gothones_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:gothonesSpecies
 			ethos = owner
 		}
@@ -176,8 +176,8 @@ generate_gothonesPop = {
 generate_yahgPop = {
 	create_yahg_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:yahgSpecies
 			ethos = owner
 		}
@@ -187,8 +187,8 @@ generate_yahgPop = {
 generate_raloiPop = {
 	create_raloi_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:raloiSpecies
 			ethos = owner
 		}
@@ -198,8 +198,8 @@ generate_raloiPop = {
 generate_gethPop = {
 	create_geth_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:gethSpecies
 			ethos = owner
 		}
@@ -209,8 +209,8 @@ generate_gethPop = {
 generate_rachniPop = {
 	create_rachni_species = yes
 	while = {
-		count = 100
-		create_pop = {
+		count = 1
+		create_pop_group = {
 			species = event_target:rachniSpecies
 			ethos = owner
 		}
@@ -221,7 +221,7 @@ generate_rachniPop = {
 # 	create_collectors_species = yes
 # 	while = {
 # 		count = 1
-# 		create_pop = {
+# 		create_pop_group = {
 # 			species = event_target:collectorsSpecies
 # 			ethos = owner
 # 		}
@@ -419,7 +419,7 @@ generate_misc_traverse_pop = {
 #     }
 #     last_created_species = { save_global_event_target_as = leviathanSpecies }
 #   }
-#   create_pop = {
+#   create_pop_group = {
 #     species = event_target:leviathanSpecies
 #     ethos = owner
 #   }
@@ -444,7 +444,7 @@ generate_misc_traverse_pop = {
 #     }
 #     last_created_species = { save_global_event_target_as = protheanSpecies }
 #   }
-#   create_pop = {
+#   create_pop_group = {
 #     species = event_target:protheanSpecies
 #     ethos = owner
 #   }

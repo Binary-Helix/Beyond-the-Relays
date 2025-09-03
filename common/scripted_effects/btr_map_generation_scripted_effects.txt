@@ -749,248 +749,248 @@
 #	log = "Capital World Starting Deposits and Blockers Created"
 #}
 #
-#generate_btr_canon_capital_buildings_and_districts = {
-#	optimize_memory
-#	if = {
-#		limit = {
-#			owner = {
-#				is_ai = no
-#			}
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = asari_rep_origin
-#				}
-#			}
-#			generate_asr_thessia_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = salarian_uni_origin
-#				}
-#			}
-#			generate_sal_surkesh_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = turian_hier_origin
-#				}
-#			}
-#			generate_tur_palaven_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = systems_all_origin
-#				}
-#			}
-#			generate_sys_earth_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = courts_dek_origin
-#				}
-#			}
-#			generate_cod_dekuuna_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = vol_pro_origin
-#				}
-#			}
-#			generate_vol_irune_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = illuminated_pri_origin
-#				}
-#			}
-#			generate_han_kahje_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = hegemony_kha_origin
-#				}
-#			}
-#			generate_bat_kharshan_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = aralakh_kah_origin
-#				}
-#			}
-#			generate_kro_tuchanka_capital_buildings = yes
-#		}
-#		# if = {
-#		# 	limit = {
-#		# 		owner = {
-#		# 			has_origin = migrant_fle_origin
-#		# 		}
-#		# 	}
-#		# 	generate_qua_rayya_capital_buildings = yes
-#		# }
-#		# if = {
-#		# 	limit = {
-#		# 		owner = {
-#		# 			has_origin = cerberus_emp_origin
-#		# 		}
-#		# 	}
-#		# 	generate_cer_cronos_capital_buildings = yes
-#		# }
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = omega_emp_origin
-#				}
-#			}
-#			generate_omega_building_and_districts = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = illium_cor_origin
-#				}
-#			}
-#			generate_illium_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = caleston_dir_origin
-#				}
-#			}
-#			generate_caleston_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = remnants_rak_origin
-#				}
-#			}
-#			generate_dre_rahkana_capital_buildings = yes
-#			set_destroyed_rakhana_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = vorcha_cla_origin
-#				}
-#			}
-#			generate_vor_heshtok_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = sedriicae_col_origin
-#				}
-#			}
-#			generate_sed_sedriicae_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = lystheni_ord_origin
-#				}
-#			}
-#			generate_lys_sepkai_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = gothones_rem_origin
-#				}
-#			}
-#			generate_got_vindicta_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = cerberus_emp_origin
-#				}
-#			}
-#			generate_yah_parnack_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = cerberus_emp_origin
-#				}
-#			}
-#			generate_ral_turvess_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = cerberus_emp_origin
-#				}
-#			}
-#			generate_get_rannoch_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = disciples_naz_origin
-#				}
-#			}
-#			generate_naz_heretic_station_capital_buildings = yes
-#		}
-#		if = {
-#			limit = {
-#				owner = {
-#					has_origin = rachni_hiv_origin
-#				}
-#			}
-#			generate_rac_utukku_start_buildings = yes
-#		}
-#		# if = {
-#		# 	limit = {
-#		# 		owner = {
-#		# 			has_origin = collectors_emp_origin
-#		# 		}
-#		# 	}
-#		# 	generate_collectors_capital_buildings = yes
-#		# }
-#
-#
-#		# Replace mining districts with uncapped ones for subterranean origin
-#		if = {
-#			limit = {
-#				owner = { is_subterranean_empire = yes }
-#			}
-#			while = {
-#				limit = { num_districts = { type = district_mining value > 0 } }
-#				remove_district = district_mining
-#				add_district_and_planet_size_if_needed_effect = {
-#					district = district_mining_uncapped
-#				}
-#			}
-#		}
-#	}
-#}
+generate_btr_canon_capital_buildings_and_districts = {
+	optimize_memory
+	if = {
+		limit = {
+			owner = {
+				is_ai = no
+			}
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = asari_rep_origin
+				}
+			}
+			generate_asr_thessia_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = salarian_uni_origin
+				}
+			}
+			generate_sal_surkesh_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = turian_hier_origin
+				}
+			}
+			generate_tur_palaven_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = systems_all_origin
+				}
+			}
+			generate_sys_earth_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = courts_dek_origin
+				}
+			}
+			generate_cod_dekuuna_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = vol_pro_origin
+				}
+			}
+			generate_vol_irune_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = illuminated_pri_origin
+				}
+			}
+			generate_han_kahje_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = hegemony_kha_origin
+				}
+			}
+			generate_bat_kharshan_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = aralakh_kah_origin
+				}
+			}
+			generate_kro_tuchanka_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = migrant_fle_origin
+				}
+			}
+			generate_qua_rayya_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = cerberus_emp_origin
+				}
+			}
+			generate_cer_cronos_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = omega_emp_origin
+				}
+			}
+			generate_omega_building_and_districts = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = illium_cor_origin
+				}
+			}
+			generate_illium_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = caleston_dir_origin
+				}
+			}
+			generate_caleston_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = remnants_rak_origin
+				}
+			}
+			generate_dre_rahkana_capital_buildings = yes
+			set_destroyed_rakhana_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = vorcha_cla_origin
+				}
+			}
+			generate_vor_heshtok_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = sedriicae_col_origin
+				}
+			}
+			generate_sed_sedriicae_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = lystheni_ord_origin
+				}
+			}
+			generate_lys_sepkai_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = gothones_rem_origin
+				}
+			}
+			generate_got_vindicta_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = cerberus_emp_origin
+				}
+			}
+			generate_yah_parnack_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = cerberus_emp_origin
+				}
+			}
+			generate_ral_turvess_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = cerberus_emp_origin
+				}
+			}
+			generate_get_rannoch_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = disciples_naz_origin
+				}
+			}
+			generate_naz_heretic_station_capital_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = rachni_hiv_origin
+				}
+			}
+			generate_rac_utukku_start_buildings = yes
+		}
+		if = {
+			limit = {
+				owner = {
+					has_origin = collectors_emp_origin
+				}
+			}
+			generate_collectors_capital_buildings = yes
+		}
+
+
+		# Replace mining districts with uncapped ones for subterranean origin
+		if = {
+			limit = {
+				owner = { is_subterranean_empire = yes }
+			}
+			while = {
+				limit = { num_districts = { type = district_mining value > 0 } }
+				remove_district = district_mining
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_mining_uncapped
+				}
+			}
+		}
+	}
+}
 
 btr_generate_capital_planetary_features = {
 	if = {
 		limit = { has_planet_flag = thessia_planet }
-		add_deposit = d_thessia_republic_armali	
+		add_deposit = d_thessia_republic_armali
 		add_deposit = d_thessia_nosdesera
 		add_deposit = d_thessia_serrice_university
 		add_deposit = d_thessia_cresyl_plateau
-		add_deposit = d_thessia_askasian_mountains	
+		add_deposit = d_thessia_askasian_mountains
 		add_deposit = d_thessia_pulian_delta
 		add_deposit = d_thessia_senecan_lakes
 		add_deposit = d_thessia_irssal_tea
 		add_deposit = d_thessia_eezo_deposits
 		add_deposit = d_thessia_thessia_net
 		add_deposit = d_thessia_zalis_chemical_spill
-		add_deposit = d_thessia_devastated_republic_yisrin	
+		add_deposit = d_thessia_devastated_republic_yisrin
 	}
 	else_if = {
 		limit = { has_planet_flag = surkesh_planet }
@@ -1151,7 +1151,7 @@ btr_generate_capital_planetary_features = {
 		add_deposit = d_heshtok_ocean_of_cinders_3
 		add_deposit = d_heshtok_ocean_of_cinders_4
 		add_deposit = d_heshtok_ocean_of_cinders_5
-		add_deposit = d_bountiful_plains	
+		add_deposit = d_bountiful_plains
 	}
 	else_if = {
 		limit = { has_planet_flag = sedriicae_planet }
@@ -1181,29 +1181,29 @@ btr_generate_capital_planetary_features = {
 		add_deposit = d_parnack_dartack_agglomerate
 		add_deposit = d_parnack_mapofter_industrial_parks
 		add_deposit = d_parnack_ipock_black_soil_plains
-		add_deposit = d_parnack_yockar_nuclear_complex	
-		add_deposit = d_parnack_darlock_range	
+		add_deposit = d_parnack_yockar_nuclear_complex
+		add_deposit = d_parnack_darlock_range
 	}
 	else_if = {
 		limit = { has_planet_flag = turvess_planet }
 		add_deposit = d_turvess_advanced_wind_farms
 		add_deposit = d_turvess_heart_republic
 		add_deposit = d_turvess_ecological_preservation
-		add_deposit = d_turvess_advanced_farming_industry	
-		add_deposit = d_turvess_condensed_industrial_zones	
+		add_deposit = d_turvess_advanced_farming_industry
+		add_deposit = d_turvess_condensed_industrial_zones
 	}
 	else_if = {
 		limit = { has_planet_flag = rannoch_planet }
 		add_deposit = d_rannoch_southern_farmlands
 		add_deposit = d_rannoch_graveyard_homeworld
 		add_deposit = d_rannoch_tikkuns_embrace
-		add_deposit = d_rannoch_ancestors_fleet	
-		add_deposit = d_rannoch_geth_base	
+		add_deposit = d_rannoch_ancestors_fleet
+		add_deposit = d_rannoch_geth_base
 		add_deposit = d_rannoch_quarian_ruins
 		add_deposit = d_rannoch_consensus_core
 		add_deposit = d_rannoch_geth_factory
-		add_deposit = d_rannoch_insect_free	
-		add_deposit = d_rannoch_geth_base	
+		add_deposit = d_rannoch_insect_free
+		add_deposit = d_rannoch_geth_base
 	}
 	else_if = {
 		limit = { has_planet_flag = heretic_station }
