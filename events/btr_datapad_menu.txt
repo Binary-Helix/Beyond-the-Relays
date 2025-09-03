@@ -171,6 +171,10 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	immediate = {
+		log = "DERPLLECTOR SMELLS CUSTOM EMPIRE"
+	}
+
 	option = {
 		name = "btr_datapad_menu.01.confirm"
 		custom_gui = "btr_derpllector_confirm"
@@ -187,6 +191,10 @@ country_event = {
 	custom_gui = "btr_derpllector_speech_custom_empire_incompatible_mods"
 	is_triggered_only = yes
 	fire_only_once = yes
+
+	immediate = {
+		log = "DERPLLECTOR SMELLS CUSTOM EMPIRE AND INCOMPATIBLE MODS"
+	}
 
 	option = {
 		name = "btr_datapad_menu.01.confirm"
@@ -205,6 +213,10 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	immediate = {
+		log = "DERPLLECTOR SMELLS CUSTOM EMPIRE AND INTEGRATED MODS"
+	}
+
 	option = {
 		name = "btr_datapad_menu.01.confirm"
 		custom_gui = "btr_derpllector_confirm"
@@ -221,6 +233,10 @@ country_event = {
 	custom_gui = "btr_derpllector_speech_integrated_mods"
 	is_triggered_only = yes
 	fire_only_once = yes
+
+	immediate = {
+		log = "DERPLLECTOR SMELLS INTEGRATED MODS"
+	}
 
 	option = {
 		name = "btr_datapad_menu.01.confirm"
@@ -239,6 +255,10 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	immediate = {
+		log = "DERPLLECTOR SMELLS INTEGRATED AND INCOMPATIBLE MODS"
+	}
+
 	option = {
 		name = "btr_datapad_menu.01.confirm"
 		custom_gui = "btr_derpllector_confirm"
@@ -255,6 +275,10 @@ country_event = {
 	custom_gui = "btr_derpllector_speech_incompatible_mods"
 	is_triggered_only = yes
 	fire_only_once = yes
+
+	immediate = {
+		log = "DERPLLECTOR SMELLS INCOMPATIBLE MODS"
+	}
 
 	option = {
 		name = "btr_datapad_menu.01.confirm"
@@ -273,6 +297,10 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
+	immediate = {
+		log = "DERPLLECTOR SMELLS FUCKY SHIT"
+	}
+
 	option = {
 		name = "btr_datapad_menu.01.confirm"
 		custom_gui = "btr_derpllector_confirm"
@@ -290,6 +318,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		log = "DERPLLECTOR APPROVES"
 		if = {
 			limit = {
 				NOT = {

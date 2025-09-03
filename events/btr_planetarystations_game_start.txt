@@ -18,661 +18,661 @@ event = {
 		set_global_flag = "has_planetary_stations_mod"
 	}
 }
-
-### Changing the prescripted planets
-event = {
-	id = planetarystations.2
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		#Venus
-		random_galaxy_planet = {	
-			limit = {
-				has_planet_flag = venus
-			}
-			add_modifier = {
-				modifier = "greenhouse_planet"
-				days = -1
-			}
-			set_planet_entity = { 
-				entity = greenhouse_planet_01_entity
-				picture = pc_greenhouse
-				atmosphere_color = hsv { 0.854 0.072 0.7 }
-				atmosphere_intensity = 0.2
-				atmosphere_width = 1.0
-			}
-		}
-		#Io
-		random_galaxy_planet = {	
-			limit = {
-				has_planet_flag = io
-			}
-			add_modifier = {
-				modifier = "sulfur_planet"
-				days = -1
-			}
-			set_sulfur_entity = yes
-		}
-		#Saturn
-		random_galaxy_planet = {
-			limit = { has_planet_flag = saturn }
-			set_planet_flag = bright_gas_giant
-		}
-		#Titan
-		random_galaxy_planet = {
-			limit = { has_planet_flag = titan }
-			add_modifier = {
-				modifier = "methane_planet"
-				days = -1
-			}
-			set_methane_entity = yes
-		}
-		#Uranus
-		random_galaxy_planet = {
-			limit = { has_planet_flag = uranus }
-			add_modifier = {
-				modifier = "ice_giant"
-				days = -1
-			}
-			set_planet_entity = { 
-				picture = pc_ice_giant 
-				entity = "gas_giant_uranus_entity"
-			}
-		}
-		#Neptune
-		random_galaxy_planet = {	
-			limit = { has_planet_flag = neptune }
-			add_modifier = {
-				modifier = "ice_giant"
-				days = -1
-			}
-			set_planet_entity = { 
-				picture = pc_ice_giant 
-				entity = "gas_giant_neptune_entity"
-			}
-		}
-	}
-}
-
-### Start Origins
-event = {
-	id = planetarystations.4
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		#expanse
-		every_country = {
-			limit = { has_origin = origin_expanse }
-			capital_scope = {
-				add_modifier = { modifier = the_consumers days = 9000 }
-				
-				solar_system = {
-					if = {
-						limit = { has_star_flag = sol_system }
-						# Luna - Regolith Station
-						random_system_planet = {
-							limit = { has_planet_flag = luna }
-							set_planet_flag = planetary_station
-							clear_deposits = yes
-							deploy_planetary_station = yes
-							
-							set_planet_entity = { entity = cold_barren_planet_luna_entity }
-							
-							add_deposit = d_rich_regolith_formations
-							add_deposit = d_rich_regolith_formations
-							
-							set_owner = prevprev.owner
-							
-							while = {
-								count = 5
-								create_pop_group = {
-									species = prevprev.owner.owner_main_species
-								}
-							}
-							
-							add_district = district_habitable_dome
-							add_district = district_helium_extractor
-							add_building = building_hydroponics_farm
-							
-							add_modifier = { modifier = the_consumers days = 9000 }
-						}
-						
-						# Mars - Industrial Station
-						random_system_planet = {
-							limit = { has_planet_flag = mars }
-							set_planet_flag = planetary_station
-							clear_deposits = yes
-							deploy_planetary_station = yes
-							
-							set_planet_entity = { entity = barren_planet_mars_entity }
-							
-							add_deposit = d_mineral_lodes
-							
-							set_owner = prevprev.owner
-							
-							while = {
-								count = 10
-								create_pop_group = {
-									species = prevprev.owner.owner_main_species
-								}
-							}
-							
-							add_district = district_habitable_dome
-							add_district = district_habitable_dome
-							add_district = district_mining_complex
-							add_district = district_manufacturing_complex
-							add_building = building_monorail
-							add_building = building_hydroponics_farm
-							
-							add_modifier = { modifier = the_unruly days = 9000 }
-						}
-						
-						# Ceres - Mining Station
-						random_system_planet = {
-							limit = { has_planet_flag = ceres }
-							set_planet_flag = planetary_station
-							clear_deposits = yes
-							deploy_planetary_station = yes
-							
-							add_deposit = d_mineral_lodes
-							add_deposit = d_mineral_lodes
-							add_deposit = d_mineral_lodes
-							
-							set_owner = prevprev.owner
-							
-							while = {
-								count = 7
-								create_pop_group = {
-									species = prevprev.owner.owner_main_species
-								}
-							}
-							
-							add_district = district_mining_complex
-							add_district = district_mining_complex
-							add_building = building_holo_theatres
-								
-							add_modifier = { modifier = the_rebels days = 9000 }
-						}
-					}
-					else = {
-						if = {
-							limit = {
-								any_system_planet = {
-									OR = {
-										is_asteroid = yes
-										is_planet_class = pc_barren_cold
-									}
-								}
-							}
-							# Regolith Station
-							random_system_planet = {
-								limit = {
-									OR = {
-										is_asteroid = yes
-										is_planet_class = pc_barren_cold
-									}
-								}
-								set_planet_flag = planetary_station
-								clear_deposits = yes
-								deploy_planetary_station = yes
-								
-								add_deposit = d_rich_regolith_formations
-								add_deposit = d_rich_regolith_formations
-								
-								set_owner = prevprev.owner
-								
-								while = {
-									count = 5
-									create_pop_group = {
-										species = prevprev.owner.owner_main_species
-									}
-								}
-								
-								add_district = district_habitable_dome
-								add_district = district_helium_extractor
-								add_building = building_hydroponics_farm
-								
-								if = {
-									limit = {
-										is_moon = yes
-										exists = orbit
-										orbit = { is_capital = yes }
-									}
-									add_modifier = { modifier = the_consumers days = 9000 }
-								}
-								else = {
-									add_modifier = { modifier = the_rebels days = 9000 }
-								}
-							}
-						}
-						else = {
-							# Mining Station
-							random_system_planet = {
-								limit = { 
-									OR = {
-										is_planet_class = pc_barren
-										is_planet_class = pc_frozen
-									}
-								}
-								set_planet_flag = planetary_station
-								clear_deposits = yes
-								deploy_planetary_station = yes
-								
-								add_deposit = d_mineral_lodes
-								add_deposit = d_mineral_lodes
-								add_deposit = d_mineral_lodes
-								
-								set_owner = prevprev.owner
-								
-								while = {
-									count = 7
-									create_pop_group = {
-										species = prevprev.owner.owner_main_species
-									}
-								}
-								
-								add_district = district_mining_complex
-								add_district = district_mining_complex
-								add_building = building_holo_theatres
-									
-								if = {
-									limit = {
-										is_moon = yes
-										exists = orbit
-										orbit = { is_capital = yes }
-									}
-									add_modifier = { modifier = the_consumers days = 9000 }
-								}
-								else = {
-									add_modifier = { modifier = the_rebels days = 9000 }
-								}
-							}
-						}
-						
-						# Industrial Station
-						random_system_planet = {
-							limit = {
-								OR = {
-									is_planet_class = pc_barren
-									is_planet_class = pc_barren_cold
-								}
-							}
-							set_planet_flag = planetary_station
-							clear_deposits = yes
-							deploy_planetary_station = yes
-							
-							set_owner = prevprev.owner
-							
-							while = {
-								count = 10
-								create_pop_group = {
-									species = prevprev.owner.owner_main_species
-								}
-							}
-							
-							add_district = district_habitable_dome
-							add_district = district_habitable_dome
-							add_district = district_mining_complex
-							add_district = district_manufacturing_complex
-							add_building = building_monorail
-							add_building = building_hydroponics_farm
-							
-							add_modifier = { modifier = the_unruly days = 9000 }
-						}
-						
-						# Mining Station
-						random_system_planet = {
-							limit = { 
-								OR = {
-									is_asteroid = yes
-									is_planet_class = pc_barren
-									is_planet_class = pc_barren_cold
-									is_planet_class = pc_frozen
-								}
-							}
-							set_planet_flag = planetary_station
-							clear_deposits = yes
-							deploy_planetary_station = yes
-							
-							add_deposit = d_mineral_lodes
-							add_deposit = d_mineral_lodes
-							add_deposit = d_mineral_lodes
-							
-							set_owner = prevprev.owner
-							
-							while = {
-								count = 7
-								create_pop_group = {
-									species = prevprev.owner.owner_main_species
-								}
-							}
-							
-							add_district = district_mining_complex
-							add_district = district_mining_complex
-							add_building = building_holo_theatres
-								
-							add_modifier = { modifier = the_rebels days = 9000 }
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
-### Set Subclasses
-event = {
-	id = planetarystations.5
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		every_galaxy_planet = {
-			limit = {
-				is_planet_class = "pc_gas_giant"
-				NOT = { has_planet_flag = prescripted_planet }
-				solar_system = { NOT = { has_star_flag = sol } }
-			}
-			# Ice Giant
-			if = {
-				limit = {
-					planet_size <= 22
-					is_hot_zone = no
-					NOT = { has_modifier = "ice_giant" }
-				}
-				add_modifier = {
-					modifier = "ice_giant"
-					days = -1
-				}
-				set_ice_giant_entity = yes
-			}
-			else = {
-				set_warm_giant_entity = yes
-			}
-			#Set Space Life Deposit
-			if = {
-				limit = { has_deposit = no }
-				random_list = {
-					5 = {
-						set_planet_flag = gas_giant_life_deposit
-					}
-					95 = {
-						#Null
-					}
-				}
-			}
-			#Set Ring Deposit
-			if = {
-				limit = {
-					has_ring = yes
-					has_deposit = no
-				}
-				random_list = {
-					5 = {
-						add_deposit = d_minerals_3
-					}
-					5 = {
-						add_deposit = d_minerals_4
-					}
-					5 = {
-						add_deposit = d_minerals_5
-					}
-					85 = {
-						#Null
-					}
-				}
-			}
-		}
-		
-		# Hot Giant
-		every_galaxy_planet = {
-			limit = { is_planet_class = "pc_hot_giant" }
-			#Set Deposit
-			if = {
-				limit = { has_deposit = no }
-				random_list = {
-					50 = {
-						random_list = {
-							40 = {
-								add_deposit = d_energy_3
-							}
-							20 = {
-								add_deposit = d_physics_3
-							}
-							20 = {
-								add_deposit = d_engineering_3
-							}
-							20 = {
-								add_deposit = d_trade_value_3
-							}
-						}
-					}
-					20 = {
-						random_list = {
-							40 = {
-								add_deposit = d_energy_3
-							}
-							20 = {
-								add_deposit = d_physics_3
-							}
-							20 = {
-								add_deposit = d_engineering_3
-							}
-							20 = {
-								add_deposit = d_trade_value_3
-							}
-						}
-					}
-					10 = {
-						random_list = {
-							80 = {
-								add_deposit = d_exotic_gases_2
-							}
-							20 = {
-								add_deposit = d_zro_deposit_2
-							}
-						}
-					}
-					20 = {
-						#Null
-					}
-				}
-			}
-		}
-		
-		every_galaxy_planet = {
-			limit = {
-				is_asteroid = yes
-				NOT = { has_planet_flag = prescripted_planet }
-				solar_system = { NOT = { has_star_flag = sol } }
-			}
-			#Set Space Life Deposit
-			if = {
-				limit = { has_deposit = no }
-				random_list = {
-					5 = {
-						set_planet_flag = asteroid_life_deposit
-					}
-					95 = {
-						#Null
-					}
-				}
-			}
-		}
-		
-		every_galaxy_planet = {
-			limit = {
-				is_planet_class = "pc_frozen"
-				NOT = { has_planet_flag = prescripted_planet }
-				solar_system = { NOT = { has_star_flag = sol } }
-			}
-			#Set Space Life Deposit
-			if = {
-				limit = { has_deposit = no }
-				random_list = {
-					3 = {
-						set_planet_flag = frozen_life_deposit
-					}
-					97 = {
-						#Null
-					}
-				}
-			}
-		}
-		
-		every_galaxy_planet = {
-			limit = {
-				is_planet_class = "pc_toxic"
-				NOT = { has_planet_flag = prescripted_planet }
-				solar_system = { NOT = { has_star_flag = sol } }
-			}
-			random_list = {
-				10 = {
-					#Methane
-					modifier = {
-						factor = 2
-						is_hot_zone = no
-					}
-					add_modifier = {
-						modifier = "methane_planet"
-						days = -1
-					}
-					set_methane_entity = yes
-					
-					if = {
-						limit = { has_deposit = no }
-						random_list = {
-							15 = {
-								add_deposit = d_energy_3
-							}
-							10 = {
-								add_deposit = d_energy_5
-							}
-							5 = {
-								add_deposit = d_exotic_gases_2
-							}
-							75 = {
-								#Null
-							}
-						}
-					}
-				}
-				10 = {
-					#Greenhouse
-					modifier = {
-						factor = 2
-						is_hot_zone = yes
-					}
-					add_modifier = {
-						modifier = "greenhouse_planet"
-						days = -1
-					}
-					set_greenhouse_entity = yes
-					
-					if = {
-						limit = { has_deposit = no }
-						random_list = {
-							15 = {
-								add_deposit = d_energy_3
-							}
-							10 = {
-								add_deposit = d_exotic_gases_1
-							}
-							5 = {
-								add_deposit = d_exotic_gases_2
-							}
-							75 = {
-								#Null
-							}
-						}
-					}
-				}
-				80 = {
-					#Null
-				}
-			}
-		}
-		
-		every_galaxy_planet = {
-			limit = {
-				is_planet_class = "pc_molten"
-				NOT = { has_planet_flag = prescripted_planet }
-				solar_system = { NOT = { has_star_flag = sol } }
-			}
-			random_list = {
-				10 = {
-					#Scorched
-					add_modifier = {
-						modifier = "scorched_planet"
-						days = -1
-					}
-					set_scorched_entity = yes
-					
-					if = {
-						limit = { has_deposit = no }
-						random_list = {
-							15 = {
-								add_deposit = d_energy_3
-							}
-							10 = {
-								add_deposit = d_alloys_2
-							}
-							5 = {
-								add_deposit = d_volatile_motes_1
-							}
-							75 = {
-								#Null
-							}
-						}
-					}
-				}
-				10 = {
-					#Sulfur
-					add_modifier = {
-						modifier = "sulfur_planet"
-						days = -1
-					}
-					set_sulfur_entity = yes
-					
-					if = {
-						limit = { has_deposit = no }
-						random_list = {
-							15 = {
-								add_deposit = d_energy_3
-							}
-							10 = {
-								add_deposit = d_volatile_motes_1
-							}
-							5 = {
-								add_deposit = d_volatile_motes_2
-							}
-							75 = {
-								#Null
-							}
-						}
-					}
-				}
-				80 = {
-					#Null
-				}
-			}
-			
-			#Set Space Life Deposit
-			if = {
-				limit = { has_deposit = no }
-				random_list = {
-					5 = {
-						set_planet_flag = molten_life_deposit
-					}
-					95 = {
-						#Null
-					}
-				}
-			}
-		}
-	}
-}
+#
+# ### Changing the prescripted planets
+# event = {
+# 	id = planetarystations.2
+# 	hide_window = yes
+# 	is_triggered_only = yes
+#
+# 	immediate = {
+# 		#Venus
+# 		random_galaxy_planet = {
+# 			limit = {
+# 				has_planet_flag = venus
+# 			}
+# 			add_modifier = {
+# 				modifier = "greenhouse_planet"
+# 				days = -1
+# 			}
+# 			set_planet_entity = {
+# 				entity = greenhouse_planet_01_entity
+# 				picture = pc_greenhouse
+# 				atmosphere_color = hsv { 0.854 0.072 0.7 }
+# 				atmosphere_intensity = 0.2
+# 				atmosphere_width = 1.0
+# 			}
+# 		}
+# 		#Io
+# 		random_galaxy_planet = {
+# 			limit = {
+# 				has_planet_flag = io
+# 			}
+# 			add_modifier = {
+# 				modifier = "sulfur_planet"
+# 				days = -1
+# 			}
+# 			set_sulfur_entity = yes
+# 		}
+# 		#Saturn
+# 		random_galaxy_planet = {
+# 			limit = { has_planet_flag = saturn }
+# 			set_planet_flag = bright_gas_giant
+# 		}
+# 		#Titan
+# 		random_galaxy_planet = {
+# 			limit = { has_planet_flag = titan }
+# 			add_modifier = {
+# 				modifier = "methane_planet"
+# 				days = -1
+# 			}
+# 			set_methane_entity = yes
+# 		}
+# 		#Uranus
+# 		random_galaxy_planet = {
+# 			limit = { has_planet_flag = uranus }
+# 			add_modifier = {
+# 				modifier = "ice_giant"
+# 				days = -1
+# 			}
+# 			set_planet_entity = {
+# 				picture = pc_ice_giant
+# 				entity = "gas_giant_uranus_entity"
+# 			}
+# 		}
+# 		#Neptune
+# 		random_galaxy_planet = {
+# 			limit = { has_planet_flag = neptune }
+# 			add_modifier = {
+# 				modifier = "ice_giant"
+# 				days = -1
+# 			}
+# 			set_planet_entity = {
+# 				picture = pc_ice_giant
+# 				entity = "gas_giant_neptune_entity"
+# 			}
+# 		}
+# 	}
+# }
+#
+# ### Start Origins
+# event = {
+# 	id = planetarystations.4
+# 	hide_window = yes
+# 	is_triggered_only = yes
+#	
+# 	immediate = {
+# 		#expanse
+# 		every_country = {
+# 			limit = { has_origin = origin_expanse }
+# 			capital_scope = {
+# 				add_modifier = { modifier = the_consumers days = 9000 }
+#				
+# 				solar_system = {
+# 					if = {
+# 						limit = { has_star_flag = sol_system }
+# 						# Luna - Regolith Station
+# 						random_system_planet = {
+# 							limit = { has_planet_flag = luna }
+# 							set_planet_flag = planetary_station
+# 							clear_deposits = yes
+# 							deploy_planetary_station = yes
+#							
+# 							set_planet_entity = { entity = cold_barren_planet_luna_entity }
+#							
+# 							add_deposit = d_rich_regolith_formations
+# 							add_deposit = d_rich_regolith_formations
+#							
+# 							set_owner = prevprev.owner
+#							
+# 							while = {
+# 								count = 5
+# 								create_pop_group = {
+# 									species = prevprev.owner.owner_main_species
+# 								}
+# 							}
+#							
+# 							add_district = district_habitable_dome
+# 							add_district = district_helium_extractor
+# 							add_building = building_hydroponics_farm
+#							
+# 							add_modifier = { modifier = the_consumers days = 9000 }
+# 						}
+#						
+# 						# Mars - Industrial Station
+# 						random_system_planet = {
+# 							limit = { has_planet_flag = mars }
+# 							set_planet_flag = planetary_station
+# 							clear_deposits = yes
+# 							deploy_planetary_station = yes
+#							
+# 							set_planet_entity = { entity = barren_planet_mars_entity }
+#							
+# 							add_deposit = d_mineral_lodes
+#							
+# 							set_owner = prevprev.owner
+#							
+# 							while = {
+# 								count = 10
+# 								create_pop_group = {
+# 									species = prevprev.owner.owner_main_species
+# 								}
+# 							}
+#							
+# 							add_district = district_habitable_dome
+# 							add_district = district_habitable_dome
+# 							add_district = district_mining_complex
+# 							add_district = district_manufacturing_complex
+# 							add_building = building_monorail
+# 							add_building = building_hydroponics_farm
+#							
+# 							add_modifier = { modifier = the_unruly days = 9000 }
+# 						}
+#						
+# 						# Ceres - Mining Station
+# 						random_system_planet = {
+# 							limit = { has_planet_flag = ceres }
+# 							set_planet_flag = planetary_station
+# 							clear_deposits = yes
+# 							deploy_planetary_station = yes
+#							
+# 							add_deposit = d_mineral_lodes
+# 							add_deposit = d_mineral_lodes
+# 							add_deposit = d_mineral_lodes
+#							
+# 							set_owner = prevprev.owner
+#							
+# 							while = {
+# 								count = 7
+# 								create_pop_group = {
+# 									species = prevprev.owner.owner_main_species
+# 								}
+# 							}
+#							
+# 							add_district = district_mining_complex
+# 							add_district = district_mining_complex
+# 							add_building = building_holo_theatres
+#								
+# 							add_modifier = { modifier = the_rebels days = 9000 }
+# 						}
+# 					}
+# 					else = {
+# 						if = {
+# 							limit = {
+# 								any_system_planet = {
+# 									OR = {
+# 										is_asteroid = yes
+# 										is_planet_class = pc_barren_cold
+# 									}
+# 								}
+# 							}
+# 							# Regolith Station
+# 							random_system_planet = {
+# 								limit = {
+# 									OR = {
+# 										is_asteroid = yes
+# 										is_planet_class = pc_barren_cold
+# 									}
+# 								}
+# 								set_planet_flag = planetary_station
+# 								clear_deposits = yes
+# 								deploy_planetary_station = yes
+#								
+# 								add_deposit = d_rich_regolith_formations
+# 								add_deposit = d_rich_regolith_formations
+#								
+# 								set_owner = prevprev.owner
+#								
+# 								while = {
+# 									count = 5
+# 									create_pop_group = {
+# 										species = prevprev.owner.owner_main_species
+# 									}
+# 								}
+#								
+# 								add_district = district_habitable_dome
+# 								add_district = district_helium_extractor
+# 								add_building = building_hydroponics_farm
+#								
+# 								if = {
+# 									limit = {
+# 										is_moon = yes
+# 										exists = orbit
+# 										orbit = { is_capital = yes }
+# 									}
+# 									add_modifier = { modifier = the_consumers days = 9000 }
+# 								}
+# 								else = {
+# 									add_modifier = { modifier = the_rebels days = 9000 }
+# 								}
+# 							}
+# 						}
+# 						else = {
+# 							# Mining Station
+# 							random_system_planet = {
+# 								limit = { 
+# 									OR = {
+# 										is_planet_class = pc_barren
+# 										is_planet_class = pc_frozen
+# 									}
+# 								}
+# 								set_planet_flag = planetary_station
+# 								clear_deposits = yes
+# 								deploy_planetary_station = yes
+#								
+# 								add_deposit = d_mineral_lodes
+# 								add_deposit = d_mineral_lodes
+# 								add_deposit = d_mineral_lodes
+#								
+# 								set_owner = prevprev.owner
+#								
+# 								while = {
+# 									count = 7
+# 									create_pop_group = {
+# 										species = prevprev.owner.owner_main_species
+# 									}
+# 								}
+#								
+# 								add_district = district_mining_complex
+# 								add_district = district_mining_complex
+# 								add_building = building_holo_theatres
+#									
+# 								if = {
+# 									limit = {
+# 										is_moon = yes
+# 										exists = orbit
+# 										orbit = { is_capital = yes }
+# 									}
+# 									add_modifier = { modifier = the_consumers days = 9000 }
+# 								}
+# 								else = {
+# 									add_modifier = { modifier = the_rebels days = 9000 }
+# 								}
+# 							}
+# 						}
+#						
+# 						# Industrial Station
+# 						random_system_planet = {
+# 							limit = {
+# 								OR = {
+# 									is_planet_class = pc_barren
+# 									is_planet_class = pc_barren_cold
+# 								}
+# 							}
+# 							set_planet_flag = planetary_station
+# 							clear_deposits = yes
+# 							deploy_planetary_station = yes
+#							
+# 							set_owner = prevprev.owner
+#							
+# 							while = {
+# 								count = 10
+# 								create_pop_group = {
+# 									species = prevprev.owner.owner_main_species
+# 								}
+# 							}
+#							
+# 							add_district = district_habitable_dome
+# 							add_district = district_habitable_dome
+# 							add_district = district_mining_complex
+# 							add_district = district_manufacturing_complex
+# 							add_building = building_monorail
+# 							add_building = building_hydroponics_farm
+#							
+# 							add_modifier = { modifier = the_unruly days = 9000 }
+# 						}
+#						
+# 						# Mining Station
+# 						random_system_planet = {
+# 							limit = { 
+# 								OR = {
+# 									is_asteroid = yes
+# 									is_planet_class = pc_barren
+# 									is_planet_class = pc_barren_cold
+# 									is_planet_class = pc_frozen
+# 								}
+# 							}
+# 							set_planet_flag = planetary_station
+# 							clear_deposits = yes
+# 							deploy_planetary_station = yes
+#							
+# 							add_deposit = d_mineral_lodes
+# 							add_deposit = d_mineral_lodes
+# 							add_deposit = d_mineral_lodes
+#							
+# 							set_owner = prevprev.owner
+#							
+# 							while = {
+# 								count = 7
+# 								create_pop_group = {
+# 									species = prevprev.owner.owner_main_species
+# 								}
+# 							}
+#							
+# 							add_district = district_mining_complex
+# 							add_district = district_mining_complex
+# 							add_building = building_holo_theatres
+#								
+# 							add_modifier = { modifier = the_rebels days = 9000 }
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+#
+# ### Set Subclasses
+# event = {
+# 	id = planetarystations.5
+# 	hide_window = yes
+# 	is_triggered_only = yes
+#	
+# 	immediate = {
+# 		every_galaxy_planet = {
+# 			limit = {
+# 				is_planet_class = "pc_gas_giant"
+# 				NOT = { has_planet_flag = prescripted_planet }
+# 				solar_system = { NOT = { has_star_flag = sol } }
+# 			}
+# 			# Ice Giant
+# 			if = {
+# 				limit = {
+# 					planet_size <= 22
+# 					is_hot_zone = no
+# 					NOT = { has_modifier = "ice_giant" }
+# 				}
+# 				add_modifier = {
+# 					modifier = "ice_giant"
+# 					days = -1
+# 				}
+# 				set_ice_giant_entity = yes
+# 			}
+# 			else = {
+# 				set_warm_giant_entity = yes
+# 			}
+# 			#Set Space Life Deposit
+# 			if = {
+# 				limit = { has_deposit = no }
+# 				random_list = {
+# 					5 = {
+# 						set_planet_flag = gas_giant_life_deposit
+# 					}
+# 					95 = {
+# 						#Null
+# 					}
+# 				}
+# 			}
+# 			#Set Ring Deposit
+# 			if = {
+# 				limit = {
+# 					has_ring = yes
+# 					has_deposit = no
+# 				}
+# 				random_list = {
+# 					5 = {
+# 						add_deposit = d_minerals_3
+# 					}
+# 					5 = {
+# 						add_deposit = d_minerals_4
+# 					}
+# 					5 = {
+# 						add_deposit = d_minerals_5
+# 					}
+# 					85 = {
+# 						#Null
+# 					}
+# 				}
+# 			}
+# 		}
+#		
+# 		# Hot Giant
+# 		every_galaxy_planet = {
+# 			limit = { is_planet_class = "pc_hot_giant" }
+# 			#Set Deposit
+# 			if = {
+# 				limit = { has_deposit = no }
+# 				random_list = {
+# 					50 = {
+# 						random_list = {
+# 							40 = {
+# 								add_deposit = d_energy_3
+# 							}
+# 							20 = {
+# 								add_deposit = d_physics_3
+# 							}
+# 							20 = {
+# 								add_deposit = d_engineering_3
+# 							}
+# 							20 = {
+# 								add_deposit = d_trade_value_3
+# 							}
+# 						}
+# 					}
+# 					20 = {
+# 						random_list = {
+# 							40 = {
+# 								add_deposit = d_energy_3
+# 							}
+# 							20 = {
+# 								add_deposit = d_physics_3
+# 							}
+# 							20 = {
+# 								add_deposit = d_engineering_3
+# 							}
+# 							20 = {
+# 								add_deposit = d_trade_value_3
+# 							}
+# 						}
+# 					}
+# 					10 = {
+# 						random_list = {
+# 							80 = {
+# 								add_deposit = d_exotic_gases_2
+# 							}
+# 							20 = {
+# 								add_deposit = d_zro_deposit_2
+# 							}
+# 						}
+# 					}
+# 					20 = {
+# 						#Null
+# 					}
+# 				}
+# 			}
+# 		}
+#		
+# 		every_galaxy_planet = {
+# 			limit = {
+# 				is_asteroid = yes
+# 				NOT = { has_planet_flag = prescripted_planet }
+# 				solar_system = { NOT = { has_star_flag = sol } }
+# 			}
+# 			#Set Space Life Deposit
+# 			if = {
+# 				limit = { has_deposit = no }
+# 				random_list = {
+# 					5 = {
+# 						set_planet_flag = asteroid_life_deposit
+# 					}
+# 					95 = {
+# 						#Null
+# 					}
+# 				}
+# 			}
+# 		}
+#		
+# 		every_galaxy_planet = {
+# 			limit = {
+# 				is_planet_class = "pc_frozen"
+# 				NOT = { has_planet_flag = prescripted_planet }
+# 				solar_system = { NOT = { has_star_flag = sol } }
+# 			}
+# 			#Set Space Life Deposit
+# 			if = {
+# 				limit = { has_deposit = no }
+# 				random_list = {
+# 					3 = {
+# 						set_planet_flag = frozen_life_deposit
+# 					}
+# 					97 = {
+# 						#Null
+# 					}
+# 				}
+# 			}
+# 		}
+#		
+# 		every_galaxy_planet = {
+# 			limit = {
+# 				is_planet_class = "pc_toxic"
+# 				NOT = { has_planet_flag = prescripted_planet }
+# 				solar_system = { NOT = { has_star_flag = sol } }
+# 			}
+# 			random_list = {
+# 				10 = {
+# 					#Methane
+# 					modifier = {
+# 						factor = 2
+# 						is_hot_zone = no
+# 					}
+# 					add_modifier = {
+# 						modifier = "methane_planet"
+# 						days = -1
+# 					}
+# 					set_methane_entity = yes
+#					
+# 					if = {
+# 						limit = { has_deposit = no }
+# 						random_list = {
+# 							15 = {
+# 								add_deposit = d_energy_3
+# 							}
+# 							10 = {
+# 								add_deposit = d_energy_5
+# 							}
+# 							5 = {
+# 								add_deposit = d_exotic_gases_2
+# 							}
+# 							75 = {
+# 								#Null
+# 							}
+# 						}
+# 					}
+# 				}
+# 				10 = {
+# 					#Greenhouse
+# 					modifier = {
+# 						factor = 2
+# 						is_hot_zone = yes
+# 					}
+# 					add_modifier = {
+# 						modifier = "greenhouse_planet"
+# 						days = -1
+# 					}
+# 					set_greenhouse_entity = yes
+#					
+# 					if = {
+# 						limit = { has_deposit = no }
+# 						random_list = {
+# 							15 = {
+# 								add_deposit = d_energy_3
+# 							}
+# 							10 = {
+# 								add_deposit = d_exotic_gases_1
+# 							}
+# 							5 = {
+# 								add_deposit = d_exotic_gases_2
+# 							}
+# 							75 = {
+# 								#Null
+# 							}
+# 						}
+# 					}
+# 				}
+# 				80 = {
+# 					#Null
+# 				}
+# 			}
+# 		}
+#		
+# 		every_galaxy_planet = {
+# 			limit = {
+# 				is_planet_class = "pc_molten"
+# 				NOT = { has_planet_flag = prescripted_planet }
+# 				solar_system = { NOT = { has_star_flag = sol } }
+# 			}
+# 			random_list = {
+# 				10 = {
+# 					#Scorched
+# 					add_modifier = {
+# 						modifier = "scorched_planet"
+# 						days = -1
+# 					}
+# 					set_scorched_entity = yes
+#					
+# 					if = {
+# 						limit = { has_deposit = no }
+# 						random_list = {
+# 							15 = {
+# 								add_deposit = d_energy_3
+# 							}
+# 							10 = {
+# 								add_deposit = d_alloys_2
+# 							}
+# 							5 = {
+# 								add_deposit = d_volatile_motes_1
+# 							}
+# 							75 = {
+# 								#Null
+# 							}
+# 						}
+# 					}
+# 				}
+# 				10 = {
+# 					#Sulfur
+# 					add_modifier = {
+# 						modifier = "sulfur_planet"
+# 						days = -1
+# 					}
+# 					set_sulfur_entity = yes
+#					
+# 					if = {
+# 						limit = { has_deposit = no }
+# 						random_list = {
+# 							15 = {
+# 								add_deposit = d_energy_3
+# 							}
+# 							10 = {
+# 								add_deposit = d_volatile_motes_1
+# 							}
+# 							5 = {
+# 								add_deposit = d_volatile_motes_2
+# 							}
+# 							75 = {
+# 								#Null
+# 							}
+# 						}
+# 					}
+# 				}
+# 				80 = {
+# 					#Null
+# 				}
+# 			}
+#			
+# 			#Set Space Life Deposit
+# 			if = {
+# 				limit = { has_deposit = no }
+# 				random_list = {
+# 					5 = {
+# 						set_planet_flag = molten_life_deposit
+# 					}
+# 					95 = {
+# 						#Null
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 

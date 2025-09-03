@@ -1,0 +1,66 @@
+
+planet_state = {
+	sub_title = "COUNTRY_PLANET_STATE"
+	sub_title_desc = "COUNTRY_PLANET_STATE_DESC"
+
+	show_in_contacts_list = yes
+	custom_diplomacy = yes
+	share_survey_data = no
+	destroys_starbases = yes
+	can_have_their_comms_shared = yes
+	observable = no
+	custom_opinion = yes
+	enforces_borders = no
+
+	faction = {
+		hostile = no
+		pirate = no
+		needs_border_access = no
+		generate_borders = yes
+		needs_colony = yes
+		primitive = no
+		intel_effects_surveyed = no
+	}
+
+	ai = {
+		enabled = yes
+		declare_war = no
+		colonizer = no
+		internal_policies = no
+		construction = no
+		modification = no
+		limited_construction = yes
+		tech = no
+	}
+
+	modules = {
+		all_technology_module = {}
+		standard_event_module = {}
+		standard_leader_module = {}
+		standard_economy_module = {}
+		standard_species_rights_module = {}
+		exclusive_diplomacy_module = {} # Nothing is allowed, but we need this for relationships.
+	}
+
+	resources = {
+		category = country_base
+		produces = {
+			energy = 1000
+			minerals = 250
+			food = 100
+			consumer_goods = 100
+			light_alloys = 500
+			heavy_alloys = 500
+			antimatter_fuel = 500
+			beryllium = 250
+			lithium = 250
+			titanium = 250
+			iridium = 250
+			platinum = 250
+			palladium = 250
+			helium_3 = 250
+			hydrogen = 250
+			influence = 3
+		}
+	}
+}
