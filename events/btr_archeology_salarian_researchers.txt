@@ -1,20 +1,20 @@
 ################################
 #
-# Beyond the Relays Krogan Warlord
+# Beyond the Relays Salarian Researchers
 #
 # Written by Coffee,
 #
 #
 ################################
 
-namespace = btr_archeology_krogan_warlord
+namespace = btr_archeology_salarian_researchers
 
 # Zroni Introduction
 # via on_survey = {} | this = surveying vessel
 ship_event = {
-    id = btr_archeology_krogan_warlord.1
-    title = "btr_archeology_krogan_warlord.name"
-    desc = "btr_archeology_krogan_warlord.desc"
+    id = btr_archeology_salarian_researchers.1
+    title = "btr_archeology_salarian_researchers.name"
+    desc = "btr_archeology_salarian_researchers.desc"
     picture = #TODO
     location = from
     show_sound = event_wind_ruins
@@ -31,15 +31,15 @@ ship_event = {
     }
 
     option = {
-        name = btr_archeology_krogan_warlord.a
+        name = btr_archeology_salarian_researchers.a
     }
 }
 
 #zroni_digsite_1
 fleet_event = {
-    id = btr_archeology_krogan_warlord.2
-    title = "btr_archeology_krogan_warlord.1.name"
-    desc = btr_archeology_krogan_warlord.1.desc
+    id = btr_archeology_salarian_researchers.2
+    title = "btr_archeology_salarian_researchers.1.name"
+    desc = btr_archeology_salarian_researchers.1.desc
     picture = #TODO
     show_sound = event_wind_ruins
     location = from
@@ -49,14 +49,14 @@ fleet_event = {
     is_triggered_only = yes
 
     option = {
-        name = btr_archeology_krogan_warlord.1.a
+        name = btr_archeology_salarian_researchers.1.a
     }
 }
 
 fleet_event = {
-    id = btr_archeology_krogan_warlord.3
-    title = "btr_archeology_krogan_warlord.2.name"
-    desc = btr_archeology_krogan_warlord.2.desc
+    id = btr_archeology_salarian_researchers.3
+    title = "btr_archeology_salarian_researchers.2.name"
+    desc = btr_archeology_salarian_researchers.2.desc
     picture = #TODO
     show_sound = event_whispering
     location = from
@@ -66,7 +66,8 @@ fleet_event = {
     is_triggered_only = yes
 
     option = {
-        name = btr_archeology_krogan_warlord.2.a
+        name = btr_archeology_salarian_researchers.2.a
         small_artifact_reward = yes
     }
 }
+
