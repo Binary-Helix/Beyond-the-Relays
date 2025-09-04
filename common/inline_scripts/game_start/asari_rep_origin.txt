@@ -12,56 +12,34 @@
 
 if = {
     limit = {
-        exists = owner
-        owner = {
-            has_origin = asari_rep_origin
+        AND = {
+            exists = owner
+            owner = {
+                has_origin = asari_rep_origin
+            }
         }
+        has_planet_flag = thessia_planet
     }
-    change_variable = {
-        which = farming_districts
-        value = 1
-    }
-
-    remove_building = building_capital
-    remove_building = building_factory_1
-    remove_zone = {
-        district = district_city
-        zone = zone_research_unity
-        zone_slot = 1
-    }
-
-    add_zone = {
-        district = district_city
-        zone = zone_research_society
-    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
     add_building = building_system_capital
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_mining }
+
+    add_building = building_fortress
+    add_building = building_embassy
+    add_building = building_commercial_zone
+    add_building = building_asari_rep_comm_center
+
     add_building = {
-        building = building_fortress
-        zone = zone_urban
+        building = building_research_lab_2
+        zone = zone_research_unity
     }
     add_building = {
         building = building_bureaucratic_1
-        zone = zone_urban
-    }
-    add_building = {
-        building = building_embassy
-        zone = zone_urban
-    }
-    add_building = {
-        building = building_commercial_zone
-        zone = zone_urban
-    }
-    add_building = {
-        building = building_asari_rep_comm_center
-        zone = zone_urban
-    }
-    add_building = {
-        building = building_asari_rep_comm_center
-        zone = zone_urban
-    }
-    add_building = {
-        building = building_research_lab_2
-        zone = zone_research_society
+        zone = zone_research_unity
     }
     add_building = {
         building = building_factory_2

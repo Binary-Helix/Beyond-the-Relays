@@ -6,7 +6,7 @@ d_thessia_republic_armali = {
 	category = deposit_cat_rare
 
 	planet_modifier = { 
-		district_generator_max = 3
+		district_generator_max_add = 3
 		planet_max_districts_add = 2
 		trade_value_mult = 0.1
 		}
@@ -32,7 +32,7 @@ d_thessia_nosdesera = {
 	category = deposit_cat_rare
 
 	planet_modifier = { 
-		district_generator_max = 3
+		district_generator_max_add = 3
 		planet_max_districts_add = 2
 		trade_value_mult = 0.1
 	}
@@ -62,7 +62,7 @@ d_thessia_serrice_university = {
 	}
 
 	planet_modifier = {
-		district_generator_max = 2
+		district_generator_max_add = 2
 		planet_researchers_produces_mult = 0.05
 	}
 	
@@ -77,7 +77,7 @@ d_thessia_cresyl_plateau = {
 	category = deposit_cat_rare
 
 	planet_modifier = { 
-		district_mining_max = 3
+		district_mining_max_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -102,7 +102,7 @@ d_thessia_askasian_mountains = {
 	category = deposit_cat_rare
 
 	planet_modifier = { 
-		district_mining_max = 3
+		district_mining_max_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -126,7 +126,7 @@ d_thessia_pulian_delta = {
 	category = deposit_cat_rare
 
 	planet_modifier = { 
-		district_farming_max = 3
+		district_farming_max_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -150,7 +150,7 @@ d_thessia_senecan_lakes = {
 	category = deposit_cat_rare
 
 	planet_modifier = { 
-		district_farming_max = 2
+		district_farming_max_add = 2
 	}
 	
 	drop_weight = {
@@ -164,7 +164,7 @@ d_thessia_irssal_tea = {
 	category = deposit_cat_rare
 
 	planet_modifier = { 
-		district_farming_max = 1
+		district_farming_max_add = 1
 		pop_happiness = 0.02
 	}
 	
@@ -214,7 +214,7 @@ d_thessia_zalis_sea = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		district_farming_max = 2
+		district_farming_max_add = 2
 	}
 	
 	drop_weight = {
@@ -228,7 +228,7 @@ d_thessia_lifio_tidal_barrage = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		district_generator_max = 2
+		district_generator_max_add = 2
 	}
 	
 	drop_weight = {
@@ -244,7 +244,7 @@ d_surkesh_burngrass = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_farming_max = 6
+		district_farming_max_add = 6
 		trade_value_mult = 0.1
 
 	}
@@ -277,8 +277,8 @@ d_surkesh_optim_energy = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_mining_max = -2
-		district_generator_max = 3
+		district_mining_max_add = -2
+		district_generator_max_add = 3
 		founder_species_growth_mult = 0.1
 		country_energy_produces_mult = 0.1
 	}
@@ -479,7 +479,7 @@ d_palaven_cipritine_sprawl = {
 
 	planet_modifier = {
 		pop_government_ethic_attraction = 0.10
-		district_generator_max = 4
+		district_generator_max_add = 4
 		planet_max_districts_add = 5
 	}
 
@@ -509,7 +509,7 @@ d_palaven_bountiful_oceans = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_farming_max = 3
+		district_farming_max_add = 3
 		planet_farmers_food_produces_mult = 0.15
 		pop_environment_tolerance = 0.10
 	}
@@ -525,7 +525,7 @@ d_palaven_hot_spots = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_generator_max = 4
+		district_generator_max_add = 4
 
 	}
 
@@ -596,7 +596,7 @@ d_earth_deep_minerals = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_mining_max = 3
+		district_mining_max_add = 3
 	}
 
 	drop_weight = {
@@ -610,7 +610,7 @@ d_earth_norsefire_geothermal_project = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_generator_max = 3
+		district_generator_max_add = 3
 	}
 
 	drop_weight = {
@@ -624,7 +624,7 @@ d_earth_alliance_land_grants = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_farming_max = 4
+		district_farming_max_add = 4
 	}
 
 	drop_weight = {
@@ -815,7 +815,7 @@ d_dekuuna_natural_sanctuaries = {
 
 	planet_modifier = {
 		planet_miners_produces_mult = -0.15
-		district_mining_max = -1
+		district_mining_max_add = -1
 		planet_stability_add = 15
 	}
 
@@ -830,8 +830,8 @@ d_dekuuna_savannah_belt = {
 	category = deposit_cat_rare		
 
 	planet_modifier = {
-		district_farming_max = 5
-		district_mining_max = 2
+		district_farming_max_add = 5
+		district_mining_max_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -886,7 +886,7 @@ d_dekuuna_environmental_law = {
 	category = deposit_cat_rare		
 
 	planet_modifier = {
-		district_generator_max = 4
+		district_generator_max_add = 4
 	}
 
 	drop_weight = {
@@ -932,7 +932,7 @@ d_irune_central_bank = {
 	category = deposit_cat_rare	
 	
 	planet_modifier = {
-		district_generator_max = 3
+		district_generator_max_add = 3
 		trade_value_mult = 0.2 
 	}
 
@@ -978,7 +978,7 @@ d_irune_ammonia_paradise = {
 	category = deposit_cat_rare		
 
 	planet_modifier = {
-		district_mining_max = -2
+		district_mining_max_add = -2
 		pop_environment_tolerance = 0.1
 	}
 
@@ -1082,7 +1082,7 @@ d_kahje_heavy_cloud_cover = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_generator_max = 4
+		district_generator_max_add = 4
 	}
 
 	drop_weight = {
@@ -1177,7 +1177,7 @@ d_kharshan_ignac_plains = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_mining_max = 3
+		district_mining_max_add = 3
 		pop_environment_tolerance = -0.05
 	}
 
@@ -1216,7 +1216,7 @@ d_kharshan_greboshts_public_works = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_generator_max = 3
+		district_generator_max_add = 3
 		planet_crime_add = -10
 		pop_government_ethic_attraction = 0.2
 	}
@@ -1246,7 +1246,7 @@ d_kharshan_krudanzi_jungle = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_farming_max = 3
+		district_farming_max_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -1302,7 +1302,7 @@ d_tuchanka_wasteland_plains = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_mining_max = 3
+		district_mining_max_add = 3
 		planet_jobs_food_produces_mult = -0.1
 	}
 
@@ -1317,7 +1317,7 @@ d_tuchanka_kradak_wastes = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_generator_max = 3
+		district_generator_max_add = 3
 		planet_jobs_society_research_produces_mult = 0.1
 	}
 
@@ -1332,7 +1332,7 @@ d_tuchanka_scars_of_rebellion = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_generator_max = 3
+		district_generator_max_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -1382,9 +1382,9 @@ d_tuchanka_underground_tunnels = {
 
 	planet_modifier = {
 		planet_housing_add = 2
-		district_generator_max = 4
-		district_mining_max = 6
-		district_farming_max = 4
+		district_generator_max_add = 4
+		district_mining_max_add = 6
+		district_farming_max_add = 4
 	}
 
 	drop_weight = {
@@ -1439,7 +1439,7 @@ d_rannoch_southern_farmlands = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_farming_max = 4
+		district_farming_max_add = 4
 	}
 
 	drop_weight = {
@@ -1615,9 +1615,9 @@ d_rannoch_asteroid_mining_pads = {
 # 	category = deposit_cat_rare
 
 # 	planet_modifier = {
-# 		district_farming_max = 2
-# 		district_generator_max = 2
-# 		district_mining_max = 2
+# 		district_farming_max_add = 2
+# 		district_generator_max_add = 2
+# 		district_mining_max_add = 2
 # 		planet_max_districts_add = 2
 # 	}
 # }
@@ -1849,7 +1849,7 @@ d_omega_fumi_district = {
 	category = deposit_cat_rare		
 
 	planet_modifier = {
-		district_mining_max = 3 
+		district_mining_max_add = 3 
 		planet_crime_mult = 0.05
 	}
 
@@ -1889,7 +1889,7 @@ d_omega_kenzo_district = {
 	category = deposit_cat_rare		
 
 	planet_modifier = {
-		district_generator_max = 2
+		district_generator_max_add = 2
 		planet_crime_mult = 0.05
 	}
 
@@ -1915,7 +1915,7 @@ d_omega_kima_district = {
 
 	planet_modifier = {
 		planet_max_districts_add = 1
-		district_farming_max = 2
+		district_farming_max_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -1959,7 +1959,7 @@ d_omega_zeta_district = {
 	category = deposit_cat_rare	
 	
 	planet_modifier = {
-		district_mining_max = 3
+		district_mining_max_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -2002,8 +2002,8 @@ d_illium_comfortable_poles = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_farming_max = -3
-		district_mining_max = 2
+		district_farming_max_add = -3
+		district_mining_max_add = 2
 		planet_jobs_food_produces_mult = -0.1 
 	}
 
@@ -2033,7 +2033,7 @@ d_illium_trade_infrastructure = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_generator_max = 4
+		district_generator_max_add = 4
 		trade_value_add = 10
 		planet_jobs_energy_produces_mult = 1
 	}
@@ -2064,7 +2064,7 @@ d_illium_manjoros_plaza = {
 	icon = d_city
 	
 	planet_modifier = { 
-		district_generator_max = 2
+		district_generator_max_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -2087,7 +2087,7 @@ d_illium_sulsara_oasis = {
 	icon = d_solar_array
 	
 	planet_modifier = { 
-		district_generator_max = 4
+		district_generator_max_add = 4
 	}
 	
 	drop_weight = {
@@ -2100,7 +2100,7 @@ d_illium_saefos_valley = {
 	icon = d_illium_saefos_valley
 	
 	planet_modifier = { 
-		district_farming_max = 3
+		district_farming_max_add = 3
 	}
 	
 	drop_weight = {
@@ -2128,7 +2128,7 @@ d_illium_kyatari_thanoris = {
 	icon = d_city
 	
 	planet_modifier = { 
-		district_mining_max = 2
+		district_mining_max_add = 2
 	}
 	
 	drop_weight = {
@@ -2141,7 +2141,7 @@ d_illium_sedera_canyon = {
 	icon = d_arid_highlands
 	
 	planet_modifier = { 
-		district_mining_max = 2
+		district_mining_max_add = 2
 	}
 	
 	drop_weight = {
@@ -2190,7 +2190,7 @@ d_rakhana_depleted_mining_tunnels = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_mining_max = 1
+		district_mining_max_add = 1
 	}
 
 	drop_weight = {
@@ -2243,7 +2243,7 @@ d_rakhana_endless_desert = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_farming_max = -6
+		district_farming_max_add = -6
 	}
 
 	drop_weight = {
@@ -2286,8 +2286,8 @@ d_heshtok_volcanic_treasures = {
 	category = deposit_cat_rare
 	 
 	planet_modifier = {
-		district_mining_max = 2
-		district_generator_max = 3
+		district_mining_max_add = 2
+		district_generator_max_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -2315,7 +2315,7 @@ d_heshtok_stripped_fields = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_farming_max = -4
+		district_farming_max_add = -4
 	}
 
 	drop_weight = {
@@ -2330,7 +2330,7 @@ d_heshtok_tribal_settlements = {
 
 	planet_modifier = {
 		pop_housing_usage_mult = -0.4
-		district_farming_max = 4
+		district_farming_max_add = 4
 	}
 
 	drop_weight = {
@@ -2346,7 +2346,7 @@ d_sedriicae_mukiilak_ocean = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_farming_max = 4
+		district_farming_max_add = 4
 		planet_farmers_produces_mult = 0.15
 		founder_species_growth_mult = 0.05
 	}
@@ -2371,7 +2371,7 @@ d_sedriicae_natural_mines = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		district_mining_max = 5
+		district_mining_max_add = 5
 		planet_miners_produces_mult = 0.2
 	}
 
@@ -2395,7 +2395,7 @@ d_sedriicae_main_industry_hub = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_generator_max = 3
+		district_generator_max_add = 3
 		planet_jobs_consumer_goods_produces_mult = -0.1
 		planet_jobs_alloys_produces_mult = -0.1
 	}
@@ -2435,7 +2435,7 @@ d_sedriicae_surface_radiation_collector = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_generator_max = 2
+		district_generator_max_add = 2
 		planet_jobs_energy_produces_mult = 0.05
 	}
 
@@ -2472,7 +2472,7 @@ d_sepkai_covert_infrastructure = {
 		planet_housing_add = -3
 		founder_species_growth_mult = -0.1
 		army_collateral_damage_mult = -0.5
-		district_farming_max = -3
+		district_farming_max_add = -3
 	}
 
 	drop_weight = {
@@ -2486,8 +2486,8 @@ d_sepkai_untouched_world = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_mining_max = 5
-		district_generator_max = 3
+		district_mining_max_add = 5
+		district_generator_max_add = 3
 	}
 
 	drop_weight = {
@@ -2564,7 +2564,7 @@ d_vindicta_vallis_vetaxis = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_farming_max = 5
+		district_farming_max_add = 5
 	}
 
 	drop_weight = {
@@ -2578,7 +2578,7 @@ d_vindicta_subterranean_generator_sites = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_generator_max = 4
+		district_generator_max_add = 4
 	}
 
 	drop_weight = {
@@ -2592,7 +2592,7 @@ d_vindicta_subterranean_mineral_deposits = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_mining_max = 4
+		district_mining_max_add = 4
 	}
 
 	drop_weight = {
@@ -2674,7 +2674,7 @@ d_parnack_ipock_black_soil_plains = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_farming_max = 2
+		district_farming_max_add = 2
 	}
 
 	drop_weight = {
@@ -2688,7 +2688,7 @@ d_parnack_yockar_nuclear_complex = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_generator_max = 2
+		district_generator_max_add = 2
 		planet_jobs_energy_produces_mult = 0.15
 		army_defense_damage_mult = 0.25
 	}
@@ -2713,7 +2713,7 @@ d_parnack_darlock_range = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_mining_max = 3
+		district_mining_max_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -2738,7 +2738,7 @@ d_turvess_advanced_wind_farms = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_generator_max = 2
+		district_generator_max_add = 2
 	}
 
 	drop_weight = {
@@ -2766,7 +2766,7 @@ d_turvess_ecological_preservation = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_mining_max = 2
+		district_mining_max_add = 2
 	}
 
 	drop_weight = {
@@ -2780,7 +2780,7 @@ d_turvess_advanced_farming_industry = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_farming_max = 3
+		district_farming_max_add = 3
 	}
 
 	drop_weight = {
@@ -2903,7 +2903,7 @@ d_utukku_deep_tunneling_mines = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_mining_max = 5
+		district_mining_max_add = 5
 		planet_max_districts_add = 5
 		planet_jobs_minerals_produces_mult = 0.1
 		planet_jobs_beryllium_produces_mult = 0.1
@@ -2955,7 +2955,7 @@ d_utukku_nurturing_halls_respite = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_farming_max = 4
+		district_farming_max_add = 4
 	}
 
 	drop_weight = {
@@ -3151,7 +3151,7 @@ d_caleston_catacombs = {
 
 	planet_modifier = {
 		army_defense_damage_mult = 0.15
-		district_mining_max = 1
+		district_mining_max_add = 1
 		planet_max_districts_add = 2
 	}
 	drop_weight = {
@@ -3202,7 +3202,7 @@ d_caleston_charred_world = {
 	category = deposit_cat_blockers_natural
 
 	planet_modifier = {
-		district_farming_max = -20
+		district_farming_max_add = -20
 		planet_building_build_speed_mult = -0.1
 		planet_buildings_cost_mult = 0.1
 	}

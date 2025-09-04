@@ -1,0 +1,42 @@
+# Initial district counts
+#	* 2× Generator Districts
+#	* 2× Mining Districts
+#	* 3× Agriculture Districts
+# Urban Districts:
+#	- 2× City Districts
+# Buildings Added:
+#	* Planetary Administration
+# Zones:
+#	* Archive Specialization
+#	* Industrial Specialization
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                has_origin = aralakh_kah_origin
+            }
+        }
+        has_planet_flag = tuchanka_planet
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_mining }
+
+    add_building = building_krogan_neutral_ground
+
+    add_building = {
+        building = building_factory_1
+        zone = zone_industrial
+    }
+
+    add_building = {
+        building = building_foundry_1
+        zone = zone_industrial
+    }
+}

@@ -2,11 +2,11 @@ establish_asari_republics_communication = {
 	if = {
 		limit = { exists = event_target:asari_republics }
 		event_target:asari_republics = {
-			# if = {
-			# 	limit = { exists = event_target:asari_republics }
-			# 	establish_communications_no_message = event_target:asari_republics
-			# }
 			if = {
+				if = {
+					limit = { has_paragon_dlc = yes	}
+					unlock_council_slots = 2
+				}
 				limit = { exists = event_target:salarian_union  }
 				establish_communications_no_message = event_target:salarian_union
 				add_opinion_modifier = {
@@ -149,7 +149,7 @@ establish_asari_republics_communication = {
 					modifier = citadel_council_member
 				}				
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Asari Republics Communications Established"
 	}
@@ -160,6 +160,10 @@ establish_salarian_union_communication = {
 		limit = { exists = event_target:salarian_union }
 		event_target:salarian_union = {
 			if = {
+				limit = { has_paragon_dlc = yes	}
+				unlock_council_slots = 2
+			}
+			if = {
 				limit = { exists = event_target:asari_republics }
 				establish_communications_no_message = event_target:asari_republics
 				add_opinion_modifier = {
@@ -167,10 +171,6 @@ establish_salarian_union_communication = {
 					modifier = citadel_council_member
 				}				
 			}
-			# if = {
-			# 	limit = { exists = event_target:salarian_union  }
-			# 	establish_communications_no_message = event_target:salarian_union
-			# }
 			if = {
 				limit = { exists = event_target:turian_hierarchy  }
 				establish_communications_no_message = event_target:turian_hierarchy
@@ -302,7 +302,7 @@ establish_salarian_union_communication = {
 					modifier = citadel_council_member
 				}
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Salarian Union Communications Established"
 	}
@@ -313,6 +313,10 @@ establish_turian_hierarchy_communication = {
 	if = {
 		limit = { exists = event_target:turian_hierarchy }
 		event_target:turian_hierarchy = {
+			if = {
+				limit = { has_paragon_dlc = yes	}
+				unlock_council_slots = 2
+			}
 			if = {
 				limit = { exists = event_target:asari_republics }
 				establish_communications_no_message = event_target:asari_republics
@@ -329,10 +333,6 @@ establish_turian_hierarchy_communication = {
 					modifier = citadel_council_member
 				}
 			}
-			# if = {
-			# 	limit = { exists = event_target:turian_hierarchy  }
-			# 	establish_communications_no_message = event_target:turian_hierarchy
-			# }
 			if = {
 				limit = { exists = event_target:systems_alliance  }
 				establish_communications_no_message = event_target:systems_alliance
@@ -466,7 +466,7 @@ establish_turian_hierarchy_communication = {
 					modifier = citadel_council_member
 				}
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Turian Hierarchy Communications Established"
 	}
@@ -500,14 +500,6 @@ establish_systems_alliance_communication = {
 					modifier = citadel_embassy_race
 				}
 			}
-			# if = {
-			# 	limit = { exists = event_target:systems_alliance  }
-			# 	establish_communications_no_message = event_target:systems_alliance
-			# 	add_opinion_modifier = {
-			# 		who = event_target:systems_alliance
-			# 		modifier = systems_all_imperialist_tendencies
-			# 	}
-			# }
 			if = {
 				limit = { exists = event_target:courts_of_dekuuna  }
 				establish_communications_no_message = event_target:courts_of_dekuuna
@@ -599,7 +591,7 @@ establish_systems_alliance_communication = {
 					modifier = citadel_embassy_race
 				}
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Systems Alliance Communications Established"
 	}
@@ -609,6 +601,10 @@ establish_courts_of_dekuuna_communication = {
 	if = {
 		limit = { exists = event_target:courts_of_dekuuna }
 		event_target:courts_of_dekuuna = {
+			if = {
+				limit = { has_paragon_dlc = yes	}
+				unlock_council_slots = 2
+			}
 			if = {
 				limit = { exists = event_target:asari_republics }
 				establish_communications_no_message = event_target:asari_republics
@@ -645,11 +641,6 @@ establish_courts_of_dekuuna_communication = {
 					modifier = systems_all_imperialist_tendencies
 				}
 			}
-			# if = {
-			# 	limit = { exists = event_target:courts_of_dekuuna  }
-			# 	establish_communications_no_message = event_target:courts_of_dekuuna
-			# 	guarantee_country = event_target:courts_of_dekuuna
-			# }
 			if = {
 				limit = { exists = event_target:vol_protectorate  }
 				establish_communications_no_message = event_target:vol_protectorate
@@ -732,7 +723,7 @@ establish_courts_of_dekuuna_communication = {
 					modifier = citadel_embassy_race
 				}
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Courts of Dekuuna Communications Established"
 	}
@@ -743,6 +734,10 @@ establish_vol_protectorate_communication = {
 	if = {
 		limit = { exists = event_target:vol_protectorate }
 		event_target:vol_protectorate = {
+			if = {
+				limit = { has_paragon_dlc = yes	}
+				unlock_council_slots = 1
+			}
 			set_subject_of = { who = event_target:turian_hierarchy preset = preset_protectorate }
 			if = {
 				limit = { exists = event_target:asari_republics }
@@ -789,11 +784,6 @@ establish_vol_protectorate_communication = {
 					modifier = citadel_embassy_race
 				}
 			}
-			# if = {
-			# 	limit = { exists = event_target:vol_protectorate  }
-			# 	establish_communications_no_message = event_target:vol_protectorate
-			# 	guarantee_country = event_target:vol_protectorate
-			# }
 			if = {
 				limit = { exists = event_target:illuminated_primacy  }
 				establish_communications_no_message = event_target:illuminated_primacy
@@ -867,17 +857,20 @@ establish_vol_protectorate_communication = {
 					modifier = citadel_embassy_race
 				}				
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Vol Protectorate Communications Established"
 	}
 }
 
-
 establish_illuminated_primacy_communication = {
 	if = {
 		limit = { exists = event_target:illuminated_primacy }
 		event_target:illuminated_primacy = {
+			if = {
+				limit = { has_paragon_dlc = yes	}
+				unlock_council_slots = 1
+			}
 			if = {
 				limit = { exists = event_target:asari_republics }
 				establish_communications_no_message = event_target:asari_republics
@@ -932,11 +925,6 @@ establish_illuminated_primacy_communication = {
 					modifier = citadel_embassy_race
 				}
 			}
-			# if = {
-			# 	limit = { exists = event_target:illuminated_primacy  }
-			# 	establish_communications_no_message = event_target:illuminated_primacy
-			# 	guarantee_country = event_target:illuminated_primacy
-			# }
 			if = {
 				limit = { exists = event_target:hegemony_of_kharshan  }
 				establish_communications_no_message = event_target:hegemony_of_kharshan
@@ -1001,7 +989,7 @@ establish_illuminated_primacy_communication = {
 					modifier = citadel_embassy_race
 				}
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Illuminated Primacy Communications Established"
 	}
@@ -1087,14 +1075,6 @@ establish_hegemony_of_kharshan_communication = {
 					status = yes
 				}
 			}
-			# if = {
-			# 	limit = { exists = event_target:hegemony_of_kharshan  }
-			# 	establish_communications_no_message = event_target:hegemony_of_kharshan
-			# 	set_closed_borders = {
-			# 		who = THIS
-			# 		status = yes
-			# 	}
-			# }
 			if = {
 				limit = { exists = event_target:aralakh_kahmat  }
 				establish_communications_no_message = event_target:aralakh_kahmat
@@ -1171,7 +1151,7 @@ establish_hegemony_of_kharshan_communication = {
 					status = yes
 				}
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Hegemony of Khar'shan Communications Established"
 	}
@@ -1264,14 +1244,6 @@ establish_aralakh_kahmat_communication = {
 					status = yes
 				}
 			}
-			# if = {
-			# 	limit = { exists = event_target:aralakh_kahmat  }
-			# 	establish_communications_no_message = event_target:aralakh_kahmat
-			# 	set_closed_borders = {
-			# 		who = THIS
-			# 		status = yes
-			# 	}
-			# }
 			if = {
 				limit = { exists = event_target:omega_empire  }
 				establish_communications_no_message = event_target:omega_empire
@@ -1340,7 +1312,7 @@ establish_aralakh_kahmat_communication = {
 					status = yes
 				}
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Aralakh Kahmat Communications Established"
 	}
@@ -1393,10 +1365,6 @@ establish_omega_communication = {
 				limit = { exists = event_target:aralakh_kahmat  }
 				establish_communications_no_message = event_target:aralakh_kahmat
 			}
-			# if = {
-			# 	limit = { exists = event_target:omega_empire  }
-			# 	establish_communications_no_message = event_target:omega_empire
-			# }
 			if = {
 				limit = { exists = event_target:illium_corporate_interests  }
 				establish_communications_no_message = event_target:illium_corporate_interests
@@ -1433,7 +1401,7 @@ establish_omega_communication = {
 					status = yes
 				}
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 
 		log = "Omega Communications Established"
@@ -1444,6 +1412,10 @@ establish_illium_corporate_interests_communication = {
 	if = {
 		limit = { exists = event_target:illium_corporate_interests }
 		event_target:illium_corporate_interests = {
+			if = {
+				limit = { has_paragon_dlc = yes	}
+				unlock_council_slots = 2
+			}
 			if = {
 				limit = { exists = event_target:asari_republics }
 				establish_communications_no_message = event_target:asari_republics
@@ -1499,10 +1471,6 @@ establish_illium_corporate_interests_communication = {
 				limit = { exists = event_target:omega_empire  }
 				establish_communications_no_message = event_target:omega_empire
 			}
-			# if = {
-			# 	limit = { exists = event_target:illium_corporate_interests  }
-			# 	establish_communications_no_message = event_target:illium_corporate_interests
-			# }
 			if = {
 				limit = { exists = event_target:remnants_of_rakhana  }
 				establish_communications_no_message = event_target:remnants_of_rakhana
@@ -1535,7 +1503,7 @@ establish_illium_corporate_interests_communication = {
 				limit = { exists = event_target:citadel_council  }
 				establish_communications_no_message = event_target:citadel_council
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Illium Corporate Interests Communications Established"
 	}	
@@ -1600,10 +1568,6 @@ establish_caleston_directorate_communication = {
 				limit = { exists = event_target:omega_empire  }
 				establish_communications_no_message = event_target:omega_empire
 			}
-			# if = {
-			# 	limit = { exists = event_target:illium_corporate_interests  }
-			# 	establish_communications_no_message = event_target:illium_corporate_interests
-			# }
 			if = {
 				limit = { exists = event_target:remnants_of_rakhana  }
 				establish_communications_no_message = event_target:remnants_of_rakhana
@@ -1632,7 +1596,7 @@ establish_caleston_directorate_communication = {
 				limit = { exists = event_target:citadel_council  }
 				establish_communications_no_message = event_target:citadel_council
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Caleston Directorate Communications Established"
 	}	
@@ -1706,10 +1670,6 @@ establish_remnants_of_rakhana_communication = {
 				limit = { exists = event_target:caleston_directorate  }
 				establish_communications_no_message = event_target:caleston_directorate
 			}
-			# if = {
-			# 	limit = { exists = event_target:remnants_of_rakhana  }
-			# 	establish_communications_no_message = event_target:remnants_of_rakhana
-			# }
 			if = {
 				limit = { exists = event_target:vorcha_clandom  }
 				establish_communications_no_message = event_target:vorcha_clandom
@@ -1734,7 +1694,7 @@ establish_remnants_of_rakhana_communication = {
 				limit = { exists = event_target:citadel_council  }
 				establish_communications_no_message = event_target:citadel_council
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Remnants of Rakhana Communications Established"
 	}	
@@ -1799,27 +1759,15 @@ establish_vorcha_clandom_communication = {
 				limit = { exists = event_target:remnants_of_rakhana  }
 				establish_communications_no_message = event_target:remnants_of_rakhana
 			}
-			# if = {
-			# 	limit = { exists = event_target:vorcha_clandom  }
-			# 	establish_communications_no_message = event_target:vorcha_clandom
-			# }
 			if = {
 				limit = { exists = event_target:sedriicae_collective  }
 				establish_communications_no_message = event_target:sedriicae_collective
 			}
-			# if = {
-			# 	limit = { exists = event_target:lystheni_order  }
-			# 	establish_communications_no_message = event_target:lystheni_order
-			# }
-			# if = {
-			# 	limit = { exists = event_target:gothones_remnant  }
-			# 	establish_communications_no_message = event_target:gothones_remnant
-			# }
 			if = {
 				limit = { exists = event_target:citadel_council  }
 				establish_communications_no_message = event_target:citadel_council
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Vorcha Clandom Communications Established"
 	}	
@@ -1829,6 +1777,10 @@ establish_sedriicae_collective_communication = {
 	if = {
 		limit = { exists = event_target:sedriicae_collective }
 		event_target:sedriicae_collective = {
+			if = {
+				limit = { has_paragon_dlc = yes	}
+				unlock_council_slots = 2
+			}
 			if = {
 				limit = { exists = event_target:asari_republics }
 				establish_communications_no_message = event_target:asari_republics
@@ -1944,14 +1896,6 @@ establish_sedriicae_collective_communication = {
 					status = yes
 				}
 			}
-			# if = {
-			# 	limit = { exists = event_target:sedriicae_collective  }
-			# 	establish_communications_no_message = event_target:sedriicae_collective
-			# 	set_closed_borders = {
-			# 		who = THIS
-			# 		status = yes
-			# 	}
-			# }
 			if = {
 				limit = { exists = event_target:lystheni_order  }
 				establish_communications_no_message = event_target:lystheni_order
@@ -1976,7 +1920,7 @@ establish_sedriicae_collective_communication = {
 					status = yes
 				}
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Sed'riicae Collective Communications Established"
 	}	
@@ -1986,6 +1930,10 @@ establish_lystheni_order_communication = {
 	if = {
 		limit = { exists = event_target:lystheni_order }
 		event_target:lystheni_order = {
+			if = {
+				limit = { has_paragon_dlc = yes	}
+				unlock_council_slots = 2
+			}
 			if = {
 				limit = { exists = event_target:asari_republics }
 				establish_communications_no_message = event_target:asari_republics
@@ -2041,10 +1989,6 @@ establish_lystheni_order_communication = {
 					status = yes
 				}
 			}
-			# if = {
-			# 	limit = { exists = event_target:aralakh_kahmat  }
-			# 	establish_communications_no_message = event_target:aralakh_kahmat
-			# }
 			if = {
 				limit = { exists = event_target:omega_empire  }
 				establish_communications_no_message = event_target:omega_empire
@@ -2057,10 +2001,6 @@ establish_lystheni_order_communication = {
 				limit = { exists = event_target:illium_corporate_interests  }
 				establish_communications_no_message = event_target:illium_corporate_interests
 			}
-			# if = {
-			# 	limit = { exists = event_target:remnants_of_rakhana  }
-			# 	establish_communications_no_message = event_target:remnants_of_rakhana
-			# }
 			if = {
 				limit = { exists = event_target:vorcha_clandom  }
 				establish_communications_no_message = event_target:vorcha_clandom
@@ -2073,15 +2013,11 @@ establish_lystheni_order_communication = {
 				limit = { exists = event_target:lystheni_order  }
 				establish_communications_no_message = event_target:lystheni_order
 			}
-			# if = {
-			# 	limit = { exists = event_target:gothones_remnant  }
-			# 	establish_communications_no_message = event_target:gothones_remnant
-			# }
 			if = {
 				limit = { exists = event_target:citadel_council  }
 				establish_communications_no_message = event_target:citadel_council
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Lystheni Order Communications Established"
 	}	
@@ -2091,6 +2027,10 @@ establish_gothones_remnant_communication = {
 	if = {
 		limit = { exists = event_target:gothones_remnant }
 		event_target:gothones_remnant = {
+			if = {
+				limit = { has_paragon_dlc = yes	}
+				unlock_council_slots = 1
+			}
 			if = {
 				limit = { exists = event_target:asari_republics }
 				establish_communications_no_message = event_target:asari_republics
@@ -2171,10 +2111,6 @@ establish_gothones_remnant_communication = {
 					status = yes
 				}
 			}
-			# if = {
-			# 	limit = { exists = event_target:aralakh_kahmat  }
-			# 	establish_communications_no_message = event_target:aralakh_kahmat
-			# }
 			if = {
 				limit = { exists = event_target:omega_empire  }
 				establish_communications_no_message = event_target:omega_empire
@@ -2187,26 +2123,6 @@ establish_gothones_remnant_communication = {
 				limit = { exists = event_target:illium_corporate_interests  }
 				establish_communications_no_message = event_target:illium_corporate_interests
 			}
-			# if = {
-			# 	limit = { exists = event_target:remnants_of_rakhana  }
-			# 	establish_communications_no_message = event_target:remnants_of_rakhana
-			# }
-			# if = {
-			# 	limit = { exists = event_target:vorcha_clandom  }
-			# 	establish_communications_no_message = event_target:vorcha_clandom
-			# }
-			# if = {
-			# 	limit = { exists = event_target:sedriicae_collective  }
-			# 	establish_communications_no_message = event_target:sedriicae_collective
-			# }
-			# if = {
-			# 	limit = { exists = event_target:lystheni_order  }
-			# 	establish_communications_no_message = event_target:lystheni_order
-			# }
-			# if = {
-			# 	limit = { exists = event_target:gothones_remnant  }
-			# 	establish_communications_no_message = event_target:gothones_remnant
-			# }
 			if = {
 				limit = { exists = event_target:citadel_council  }
 				establish_communications_no_message = event_target:citadel_council
@@ -2215,7 +2131,7 @@ establish_gothones_remnant_communication = {
 				who = event_target:hegemony_of_kharshan
 				status = yes
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Gothones Remnant Communications Established"
 	}	
@@ -2226,10 +2142,14 @@ establish_geth_consensus_communication = {
 		limit = { exists = event_target:geth_consensus }
 		event_target:geth_consensus = {
 			if = {
+				limit = { has_paragon_dlc = yes	}
+				unlock_council_slots = 2
+			}
+			if = {
 				limit = { exists = event_target:disciples_of_nazara }
 				establish_communications_no_message = event_target:disciples_of_nazara
 			}
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Geth Consensus Communications Established"
 	}	
@@ -2240,10 +2160,14 @@ establish_disciples_of_nazara_communication = {
 		limit = { exists = event_target:disciples_of_nazara }
 		event_target:disciples_of_nazara = {
 			if = {
+				limit = { has_paragon_dlc = yes	}
+				unlock_council_slots = 2
+			}
+			if = {
 				limit = { exists = event_target:geth_consensus }
 				establish_communications_no_message = event_target:geth_consensus
 			}	
-			#set_all_comms_surveyed = yes		
+			set_all_comms_surveyed = yes		
 		}
 		log = "Disciples of Nazara Communications Established"
 	}	
@@ -2253,6 +2177,10 @@ establish_citadel_council_communication = {
 	if = {
 		limit = { exists = event_target:citadel_council }
 		event_target:citadel_council = {
+			if = {
+				limit = { has_paragon_dlc = yes	}
+				unlock_council_slots = 2
+			}
 			if = {
 				limit = { exists = event_target:asari_republics }
 				establish_communications_no_message = event_target:asari_republics
@@ -2392,15 +2320,7 @@ establish_citadel_council_communication = {
 					modifier = rogue_actors
 				}
 			}
-			# if = {
-			# 	limit = { exists = event_target:citadel_council  }
-			# 	establish_communications_no_message = event_target:citadel_council
-			# 	add_opinion_modifier = {
-			# 		who = event_target:citadel_council
-			# 		modifier = citadel_council_member
-			# 	}				
-			# }
-			#set_all_comms_surveyed = yes
+			set_all_comms_surveyed = yes
 		}
 		log = "Citadel Council Communications Established"
 	}	

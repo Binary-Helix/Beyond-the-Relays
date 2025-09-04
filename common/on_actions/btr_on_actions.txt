@@ -7,9 +7,9 @@ on_press_begin = {
 
 on_game_start = {
 	events = {
-		btr_start_country.1		# Master Event Trigger
-		btr_game_start.1 # Spawn special/hidden countries
-		btr_game_start.3 # Hidden Game Start Event that resets tutorial for advisor trigger purposes
+		btr_game_start.1		# Master Event Trigger
+		#btr_game_start.1 # Spawn special/hidden countries
+		#btr_game_start.3 # Hidden Game Start Event that resets tutorial for advisor trigger purposes
 		# btr_start_map.1 		#Create Real Space Nebula
 		# btr_start_map.2 		#Create New Star Space
 		# btr_start_map.3 		#Create Planetary Rings
@@ -41,6 +41,6 @@ on_game_start_country = {
 # fromfrom: secondary species (if exists)
 empire_init_capital_planet = {
 	events = {
-		btr_start_country.4 # Starting buildings, districts
+		#btr_start_country.4 # Starting buildings, districts
 	}
 }

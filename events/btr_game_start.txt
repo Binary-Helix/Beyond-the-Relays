@@ -1,7 +1,9 @@
 ###########################
-###
-### 
-### 
+### Adapted from STNH by
+### Puck with permission
+### from G-Man - 11/08/23
+### Screenshot of Perms
+### in permissions folder.
 ###########################
 
 namespace = btr_game_start
@@ -19,92 +21,32 @@ event = {
 		log = "Playing Beyond the Relays"
 
 		every_country = {
-			limit = {
-				is_ai = no
-			}
-			#country_event = { id = country.900 days = 460 random = 60 }
-			country_event = { id = game_start.74 }
-		}
-
-		### SPAWN INVISIBLE GLOBAL EVENT COUNTRY
-		create_country = {
-			name = "global_event_country"
-			type = global_event
-			effect = {
-				save_global_event_target_as = global_event_country
-			}
-		}
-
-		### SLOW DOWN PRE-FTL EVENTS
-		set_timed_global_flag = {
-			flag = asteroid_sighted_pre_ftl_global
-			years = 10
-		}
-		set_timed_global_flag = {
-			flag = nuclear_war_pre_ftl_global
-			years = 10
-		}
-
-		random_country = {
-			limit = {
-				is_country_type = default
-			}
-			country_event = { #Set Start Flag
-				id = btr_game_start.2
-				days = 1
-			}
-		}
-		every_country = {
-			limit = {
-				is_btr_empire = yes
-			}
-			country_event = { #Country Starting Setups
-				id = btr_game_start.3
-				days = 0
-			}
-			country_event = { #Set Empire Starting Territory
-				id = btr_game_start.4
-				days = 0
-			}
-			country_event = { id = btr_game_start.6 days = 0 } #Set Empire Specific Policies
-			country_event = { id = btr_game_start.7 days = 0 } #Mining and Research Stations
-			country_event = { id = btr_game_start.8 days = 0 } #Empire init - add resources, empire modifiers, and technologies
-			#country_event = { id = btr_game_start.8 days = 0 } #Starting Fleets
-
-			#country_event = { id = btr_game_start.20 days = 1 } #Set Homeworld surveyed and clear borders of hostiles
-			#country_event = { id = btr_game_start.22 days = 0 } #Pregame Genocide
-			#country_event = { id = btr_game_start.24 } TODO: Have team finalize list of starting relics - Asari beacon, earth mars archives, etc.
-			#country_event = { id = btr_game_start.26 days = 0 } #Set Starting Ships
-		}
-		every_country = {
-			limit = {
-				is_ai = no
-			}
-			country_event = {
-				id = tutorial.104
-			}
+			limit = { is_btr_empire = yes }
+			country_event = { id = btr_game_start.10 days = 2 } #Set Starting Contacts and Flags
+			country_event = { id = btr_game_start.11 days = 1 } #Set Species Rights
+			country_event = { id = btr_game_start.12 days = 0 } #Set starting Techs
+			country_event = { id = btr_game_start.13 days = 0 } #Set Starting Buildings
 		}
 	}
 }
 
+
+
+
+
+
+###############################
+# COUNTRY INITIALIZATION EVENTS
+###############################
+
+#Set Species Contacts
 country_event = {
-	id = btr_game_start.2
+	id = btr_game_start.10
 	hide_window = yes
 	is_triggered_only = yes
+	trigger = {  }
 	immediate = {
-		set_global_flag = game_started_day_1
-		log = "btr_game_start.2"
-	}
-}
-
-country_event = {
-	id = btr_game_start.3
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {	}
-	immediate = {
-
-		log = "btr_game_start.3 - Started"
+		log = "btr_game_start.10 - Started"
 		# PRIMARY EMPIRES
 		random_country = { limit = { has_country_flag = asari_republics } save_global_event_target_as = asari_republics }
 		random_country = { limit = { has_country_flag = salarian_union } save_global_event_target_as = salarian_union }
@@ -245,9 +187,250 @@ country_event = {
 			}
 			set_country_flag = has_encountered_other_empire
 		}
-		log = "btr_game_start.3 - Completed"
+		log = "btr_game_start.10 - Completed"
 	}
 }
+
+#Set Species Rights
+country_event = {
+	id = btr_game_start.11
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		log = "btr_game_start.11 - Started"
+		every_country = {
+			random_owned_pop_group = {
+				limit = {
+					has_pop_group_flag = init_spawn
+					is_same_species = owner_species
+				}
+				save_event_target_as = realOwnerSpecies
+			}
+			if = {
+				limit = { exists = event_target:realOwnerSpecies }
+				change_dominant_species = { species = event_target:realOwnerSpecies	}
+			}
+		}
+		every_country = {
+			limit = {
+				NOR = {
+					has_country_flag = hegemony_of_kharshan
+					has_country_flag = lystheni_order
+					has_country_flag = omega_empire
+					has_country_flag = collector_empire
+					has_country_flag = cerberus_empire
+					has_country_flag = disciples_of_nazara
+					is_independent_colony = yes
+				}
+			}
+			every_owned_pop_species = {
+				limit = {
+					NOT = {
+						is_same_species = owner_species
+					}
+				}
+				set_citizenship_type = { country = root type = citizenship_limited cooldown = yes }
+				set_living_standard = { country = root type = living_standard_normal cooldown = yes }
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					has_country_flag = hegemony_of_kharshan
+					has_country_flag = lystheni_order
+				}
+			}
+			every_owned_pop_species = {
+				limit = {
+					NOT = {
+						is_same_species = owner_species
+					}
+				}
+				set_citizenship_type = { country = root type = citizenship_slavery cooldown = yes }
+				set_living_standard = { country = root type = living_standard_subsistence cooldown = yes }
+			}
+			set_policy = {
+				policy = slavery
+				option = slavery_allowed
+				cooldown = yes
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+
+					has_country_flag = omega_empire
+				}
+			}
+			every_owned_pop_species = {
+				limit = {
+					NOT = {
+						is_same_species = owner_species
+					}
+				}
+				set_citizenship_type = { country = root type = citizenship_full cooldown = yes }
+				set_living_standard = { country = root type = living_standard_omega_subsistence cooldown = yes }
+			}
+			set_policy = {
+				policy = slavery
+				option = slavery_allowed
+				cooldown = yes
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					has_country_flag = collector_empire
+					has_country_flag = cerberus_empire
+					has_country_flag = disciples_of_nazara
+				}
+			}
+			every_owned_pop_species = {
+				limit = {
+					NOT = {
+						is_same_species = owner_species
+					}
+				}
+				set_citizenship_type = { country = root type = citizenship_purge cooldown = yes }
+				set_living_standard = { country = root type = living_standard_none cooldown = yes }
+			}
+			set_policy = {
+				policy = slavery
+				option = slavery_allowed
+				cooldown = yes
+			}
+		}
+		log = "btr_game_start.11 - Completed"
+	}
+}
+
+# Set Starting Techs
+country_event = {
+	id = btr_game_start.12
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		log = "btr_game_start.12 - Started"
+		if = {
+			limit = {
+				is_btr_canon_map = yes
+			}
+			set_canon_starting_technologies = yes
+
+			log = "Canon Starting Techs Given"
+		}
+		if = {
+			limit = {
+				is_btr_sandbox_map = yes
+			}
+			generate_sandbox_starting_resources = yes
+			give_technology = { tech = "tech_society_1" message = no }
+			give_technology = { tech = "tech_engineering_1" message = no }
+			give_technology = { tech = "tech_physics_1" message = no }
+			give_technology = { tech = "tech_planetary_unification" message = no }
+			log = "Sandbox Starting Techs Given"
+		}
+		log = "btr_game_start.12 - Completed"
+	}
+}
+
+# Add Starting Districts and Buildings
+country_event = {
+	id = btr_game_start.13
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_btr_empire = yes
+	}
+	immediate = {
+		log = "btr_game_start.13 - Started"
+		every_owned_planet = {
+			limit = {
+				is_capital = yes
+			}
+			generate_btr_starting_canon_districts = yes
+			set_planet_flag = capital_starting_districts_and_buildings_added
+			if = {
+				limit = {
+					is_btr_canon_map = yes
+				}
+				btr_generate_starting_deposits_and_resources = yes
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# 		every_country = {
+# 			limit = { is_ai = no }
+# 			#country_event = { id = country.900 days = 460 random = 60 }
+# 			country_event = { id = game_start.74 }
+# 		}
+#
+# 		### SPAWN INVISIBLE GLOBAL EVENT COUNTRY
+# 		create_country = {
+# 			name = "global_event_country"
+# 			type = global_event
+# 			effect = {
+# 				save_global_event_target_as = global_event_country
+# 			}
+# 		}
+#
+# 		### SLOW DOWN PRE-FTL EVENTS
+# 		set_timed_global_flag = { flag = asteroid_sighted_pre_ftl_global years = 10 }
+# 		set_timed_global_flag = { flag = nuclear_war_pre_ftl_global years = 10 }
+#
+#
+# 		every_country = {
+# 			limit = { is_btr_empire = yes }
+# 			country_event = { id = btr_game_start.3 days = 0 } #Country Starting Setups
+# 			country_event = { id = btr_game_start.4 days = 0 } #Set Empire Starting Territory
+# 			country_event = { id = btr_game_start.6 days = 0 } #Set Empire Specific Policies
+# 			country_event = { id = btr_game_start.7 days = 0 } #Mining and Research Stations
+# 			country_event = { id = btr_game_start.8 days = 0 } #Empire init - add resources, empire modifiers, and technologies
+# 			#country_event = { id = btr_game_start.8 days = 0 } #Starting Fleets
+#
+# 			#country_event = { id = btr_game_start.20 days = 1 } #Set Homeworld surveyed and clear borders of hostiles
+# 			#country_event = { id = btr_game_start.22 days = 0 } #Pregame Genocide
+# 			#country_event = { id = btr_game_start.24 } TODO: Have team finalize list of starting relics - Asari beacon, earth mars archives, etc.
+# 			#country_event = { id = btr_game_start.26 days = 0 } #Set Starting Ships
+# 		}
+# 		every_country = {
+# 			limit = {
+# 				is_ai = no
+# 			}
+# 			country_event = {
+# 				id = tutorial.104
+# 			}
+# 		}
+# 	}
+# }
 
 country_event = {
 	id = btr_game_start.4
@@ -308,834 +491,738 @@ country_event = {
 	}
 }
 
-
-country_event = {
-	id = btr_game_start.5
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		log = "btr_game_start.5 - Started"
-		every_owned_planet = {
-			limit = {
-				is_capital = yes
-			}
-			generate_btr_canon_capital_buildings_and_districts = yes
-		}
-		if = {
-			limit = { 
-				is_btr_canon_map = yes
-			}
-			generate_btr_start_deposits_and_blockers = yes
-			if = {
-				limit = { 
-					NOT = {
-						has_global_flag = asari_republics_colonies_created
-					}
-				}
-				generate_asari_republics_colonies = yes
-				log = "Asari Republics Colonies Spawned"
-			}
-			if = {
-				limit = { 
-					NOT = {
-						has_global_flag = salarian_union_colonies_created
-					}
-				}
-				generate_salarian_union_colonies = yes
-				log = "Salarian Union Colonies Spawned"
-			}
-			if = {
-				limit = { 
-					NOT = {
-						has_global_flag = turian_hierarchy_colonies_created
-					}
-				}
-				generate_turian_hierarchy_colonies = yes
-				log = "Turian Hierarchy Colonies Spawned"
-			}
-			if = {
-				limit = { 
-					NOT = {
-						has_global_flag = systems_alliance_colonies_created
-					}
-				}
-				generate_systems_alliance_colonies = yes
-				log = "Systems Alliance Colonies Spawned"
-			}
-			if = {
-				limit = { 
-					NOT = {
-						has_global_flag = courts_of_dekuuna_colonies_created
-					}
-				}
-				generate_courts_of_dekuuna_colonies = yes
-				log = "Courts of Dekuuna Colonies Spawned"
-			}
-			if = {
-				limit = { 
-					NOT = {
-						has_global_flag = vol_protectorate_colonies_created
-					}
-				}
-				generate_vol_protectorate_colonies = yes
-				log = "Vol Protectorate Colonies Spawned"
-			}
-			if = {
-				limit = { 
-					NOT = {
-						has_global_flag = illuminated_primacy_colonies_created
-					}
-				}
-				generate_illuminated_primacy_colonies = yes
-				log = "Illuminated Primacy Colonies Spawned"
-			}
-			if = {
-				limit = { 
-					NOT = {
-						has_global_flag = hegemony_of_kharshan_colonies_created
-					}
-				}
-				generate_hegemony_of_kharshan_colonies = yes
-				log = "Hegemony of Khar'shan Colonies Spawned"
-			}
-			if = {
-				limit = { 
-					NOT = {
-						has_global_flag = sedriicae_collective_colonies_created
-					}
-				}
-				generate_sedriicae_collective_colonies = yes
-				log = "Sed'riicae Collective Colonies Spawned"
-			}
-			if = {
-				limit = { 
-					NOT = {
-						has_global_flag = geth_consensus_colonies_created
-					}
-				}
-				generate_geth_consensus_colonies = yes
-				log = "Geth Consensus Colonies Spawned"
-			}
-			if = {
-				limit = { 
-					NOT = {
-						has_global_flag = disciples_of_nazara_colonies_created
-					}
-				}
-				generate_disciples_of_nazara_colonies = yes
-				log = "Disciples of Nazara Colonies Spawned"
-			}
-		}
-
-		log = "btr_game_start.4 - Completed"
-	}
-}
-country_event = {
-	id = btr_game_start.6
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		log = "btr_game_start.5 - Started"
-		event_target:asari_republics = { establish_asari_republics_starting_policies = yes }
-		event_target:salarian_union = { establish_salarian_union_starting_policies = yes }
-		event_target:turian_hierarchy = { establish_turian_hierarchy_starting_policies = yes }
-		event_target:systems_alliance = { establish_systems_alliance_starting_policies = yes }
-		event_target:courts_of_dekuuna = { establish_courts_of_dekuuna_starting_policies = yes }
-		event_target:vol_protectorate = { establish_vol_protectorate_starting_policies = yes }
-		event_target:illuminated_primacy = { establish_illuminated_primacy_starting_policies = yes }
-		event_target:hegemony_of_kharshan = { establish_hegemony_of_kharshan_starting_policies = yes }
-		event_target:aralakh_kahmat = { establish_aralakh_kahmat_starting_policies = yes }
-		#event_target:migrant_fleet = { establish_migrant_fleet_starting_policies = yes }
-		#event_target:cerberus_empire = { establish_cerberus_starting_policies = yes }
-		event_target:omega_empire = { establish_omega_starting_policies = yes }
-		event_target:illium_corporate_interests = { establish_illium_corporate_interests_starting_policies = yes }
-		event_target:caleston_directorate = { establish_caleston_directorate_starting_policies = yes }
-		event_target:remnants_of_rakhana = { establish_remnants_of_rakhana_starting_policies = yes }
-		event_target:vorcha_clandom = { establish_vorcha_clandom_starting_policies = yes }
-		event_target:sedriicae_collective = { establish_sedriicae_collective_starting_policies = yes }
-		event_target:lystheni_order = { establish_lystheni_order_starting_policies = yes }
-		event_target:gothones_remnant = { establish_gothones_remnant_starting_policies = yes }
-		#event_target:parnack_regime = { establish_parnack_regime_starting_policies = yes }
-		#event_target:raloi_republic = { establish_raloi_republic_starting_policies = yes }
-		event_target:disciples_of_nazara = { establish_disciples_of_nazara_starting_policies = yes }
-		event_target:geth_consensus = { establish_geth_consensus_starting_policies = yes }
-		log = "btr_game_start.5 - Completed"
-	}
-}
-
-#Set Starting Mining Stations
-country_event = {
-	id = btr_game_start.7
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = { is_btr_empire = yes }
-	immediate = {	
-		log = "btr_game_start.6 - Started"
-		every_planet_within_border = {
-			limit = {
-				has_deposit_for = shipclass_mining_station
-				has_mining_station = no
-			}
-			create_mining_station = {
-				owner = ROOT
-			}
-		}
-		every_planet_within_border = {
-			limit = {
-				has_deposit_for = shipclass_research_station
-				has_research_station = no
-			}
-			create_research_station = {
-				owner = ROOT
-			}
-		}
-		log = "btr_game_start.6 - Completed"
-	}
-}
-
-country_event = {
-	id = btr_game_start.8
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		if = {
-			limit = {
-				is_btr_canon_map = yes
-			}
-			if = {
-				limit = {
-					has_origin = asari_rep_origin
-				}
-				generate_asari_republic_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = salarian_uni_origin
-				}
-				generate_salarian_union_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = turian_hie_origin
-				}
-				generate_turian_hierarchy_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = systems_all_origin
-				}
-				generate_systems_alliance_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = courts_dek_origin
-				}
-				generate_courts_of_dekuuna_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = vol_pro_origin
-				}
-				generate_vol_protectorate_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = illuminated_pri_origin
-				}
-				generate_illuminated_primacy_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = hegemony_kha_origin
-				}
-				generate_hegemony_of_kharshan_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = aralakh_kah_origin
-				}
-				generate_aralakh_kahmat_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = migrant_fle_origin
-				}
-				generate_migrant_fleet_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = cerberus_emp_origin
-				}
-				generate_cerberus_empire_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = omega_emp_origin
-				}
-				generate_omega_empire_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = illium_cor_origin
-				}
-				generate_illium_corporate_interests_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = caleston_dir_origin
-				}
-				generate_caleston_directorate_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = remnants_rak_origin
-				}
-				generate_remnants_of_rakhana_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = vorcha_cla_origin
-				}
-				generate_vorcha_clandom_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = sedriicae_col_origin
-				}
-				generate_sedriicae_collective_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = lystheni_ord_origin
-				}
-				generate_lystheni_order_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = gothones_rem_origin
-				}
-				generate_gothones_remnant_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = parnack_reg_origin
-				}
-				generate_parnack_regime_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = raloi_rep_origin
-				}
-				generate_raloi_republic_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = geth_con_origin
-				}
-				generate_geth_consensus_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = disciples_naz_origin
-				}
-				generate_disciples_of_nazara_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = rachni_hiv_origin
-				}
-				generate_rachni_hive_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = collectors_emp_origin
-				}
-				generate_collectors_empire_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_country_flag = btr_independent_colony
-					NOT = {
-						has_country_flag = citadel_council
-					}
-				}
-				generate_independent_world_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_country_flag = citadel_council
-				}
-				generate_citadel_council_starting_resources = yes
-			}
-		}
-		if = {
-			limit =  {
-				is_btr_sandbox_map = yes
-			}
-			if = {
-				limit = {
-					has_origin = asari_rep_origin
-				}
-				generate_asari_republic_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = salarian_uni_origin
-				}
-				generate_salarian_union_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = turian_hie_origin
-				}
-				generate_turian_hierarchy_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = systems_all_origin
-				}
-				generate_systems_alliance_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = courts_dek_origin
-				}
-				generate_courts_of_dekuuna_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = vol_pro_origin
-				}
-				generate_vol_protectorate_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = illuminated_pri_origin
-				}
-				generate_illuminated_primacy_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = hegemony_kha_origin
-				}
-				generate_hegemony_of_kharshan_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = aralakh_kah_origin
-				}
-				generate_aralakh_kahmat_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = migrant_fle_origin
-				}
-				generate_migrant_fleet_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = cerberus_emp_origin
-				}
-				generate_cerberus_empire_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = omega_emp_origin
-				}
-				generate_omega_empire_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = illium_cor_origin
-				}
-				generate_illium_corporate_interests_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = caleston_dir_origin
-				}
-				generate_caleston_directorate_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = remnants_rak_origin
-				}
-				generate_remnants_of_rakhana_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = vorcha_cla_origin
-				}
-				generate_vorcha_clandom_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = sedriicae_col_origin
-				}
-				generate_sedriicae_collective_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = lystheni_ord_origin
-				}
-				generate_lystheni_order_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = gothones_rem_origin
-				}
-				generate_gothones_remnant_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = parnack_reg_origin
-				}
-				generate_parnack_regime_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = raloi_rep_origin
-				}
-				generate_raloi_republic_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = geth_con_origin
-				}
-				generate_geth_consensus_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = disciples_naz_origin
-				}
-				generate_disciples_of_nazara_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = rachni_hiv_origin
-				}
-				generate_rachni_hive_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_origin = collectors_emp_origin
-				}
-				generate_collectors_empire_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_country_flag = btr_independent_colony
-					NOT = {
-						has_country_flag = citadel_council
-					}
-				}
-				generate_independent_world_starting_setup = yes
-			}
-			if = {
-				limit = {
-					has_country_flag = citadel_council
-				}
-				generate_citadel_council_starting_resources = yes
-			}
-		}
-	}
-}
-
-
-#Starting Fleets
-country_event = {
-	id = btr_game_start.9
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = { is_btr_empire = yes }
-	immediate = {
-		if = {
-			limit = { 
-				is_btr_canon_map = yes
-			}
-			if = {
-				limit = { 
-					has_origin = asari_rep_origin
-				}
-				generate_asari_republic_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = salarian_uni_origin
-				}
-				generate_salarian_union_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = turian_hie_origin
-				}
-				generate_turian_hierarchy_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = systems_all_origin
-				}
-				generate_systems_alliance_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = courts_dek_origin
-				}
-				generate_courts_of_dekuuna_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = vol_pro_origin
-				}
-				generate_vol_protectorate_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = illuminated_pri_origin
-				}
-				generate_illuminated_primacy_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = hegemony_kha_origin
-				}
-				generate_hegemony_of_kharshan_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = aralakh_kah_origin
-				}
-				generate_aralakh_kahmat_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = omega_emp_origin
-				}
-				generate_omega_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = illium_cor_origin
-				}
-				generate_illium_corporate_interests_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = caleston_dir_origin
-				}
-				generate_caleston_directorate_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = sedriicae_col_origin
-				}
-				generate_sedriicae_collective_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = lystheni_ord_origin
-				}
-				generate_lystheni_order_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = gothones_rem_origin
-				}
-				generate_gothones_remnant_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = rachni_hiv_origin
-				}
-				generate_rachni_hive_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = geth_con_origin
-				}
-				generate_geth_consensus_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = disciples_naz_origin
-				}
-				generate_disciples_nazara_starting_fleets = yes
-			}
-			if = {
-				limit = { 
-					has_origin = citadel_council_origin
-				}
-				generate_citadel_council_starting_fleets = yes
-			}
-		}
-		if = {
-			limit = { 
-				is_btr_sandbox_map = yes
-			}
-			generate_sandbox_starting_fleets = yes
-		}
-
-		log = "btr_game_start.8 - Fleets Generated"
-	}
-}
-
-
-
-
-
-
-
-
-
-#Set Species Rights
-country_event = {
-	id = btr_game_start.10
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		log = "btr_game_start.14"
-		every_country = {
-			random_owned_pop_group = {
-				limit = {
-					has_pop_group_flag = init_spawn
-					is_same_species = owner_species
-				}
-				save_event_target_as = realOwnerSpecies
-			}
-			if = {
-				limit = { exists = event_target:realOwnerSpecies }
-				change_dominant_species = { species = event_target:realOwnerSpecies	}
-			}
-		}
-		every_country = {
-			limit = {
-				NOR = {
-					has_country_flag = hegemony_of_kharshan
-					has_country_flag = aralakh_kahmat
-					has_country_flag = omega_empire
-					has_country_flag = vorcha_clandom
-					has_country_flag = lystheni_order
-					is_independent_colony = yes
-				}
-			}
-			every_owned_pop_species = {
-				limit = {
-					NOT = {
-						is_same_species = owner_species
-					}
-				}
-				set_citizenship_type = { country = root type = citizenship_limited cooldown = yes }
-				set_living_standard = { country = root type = living_standard_normal cooldown = yes }
-			}
-		}
-		every_country = {
-			limit = {
-				OR = {
-					has_country_flag = hegemony_of_kharshan
-					has_country_flag = aralakh_kahmat
-					has_country_flag = omega_empire
-					has_country_flag = vorcha_clandom
-					has_country_flag = lystheni_order
-				}
-			}
-			every_owned_pop_species = {
-				limit = {
-					NOT = {
-						is_same_species = owner_species
-					}
-				}
-				set_citizenship_type = { country = root type = citizenship_slavery cooldown = yes }
-				set_living_standard = { country = root type = living_standard_subsistence cooldown = yes }
-			}
-			set_policy = {
-				policy = slavery
-				option = slavery_allowed
-				cooldown = yes
-			}
-
-		}
-	}
-}
-
-country_event = {
-	id = btr_game_start.11
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		log = "btr_game_start.19"
-		if = {
-			limit = { 
-				is_btr_canon_map = yes
-			}
-			set_canon_starting_technologies = yes
-
-			log = "Canon Starting Techs Given"
-		}
-		if = {
-			limit = { 
-				is_btr_sandbox_map = yes
-			}
-			generate_sandbox_starting_resources = yes
-			give_technology = { tech = "tech_society_1" message = no }
-			give_technology = { tech = "tech_engineering_1" message = no }
-			give_technology = { tech = "tech_physics_1" message = no }
-			give_technology = { tech = "tech_planetary_unification" message = no }
-
-			log = "Sandbox Starting Techs Given"
-		}
-	}
-}
-
-#Survey home system and clear surrounding borders of random enemies.
-country_event = {
-	id = btr_game_start.12
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		log = "btr_game_start.20"
-		every_owned_planet = { 
-			solar_system = { every_system_planet = { set_surveyed = { surveyed = yes surveyor = ROOT } } } 
-			if = {
-				limit = { is_homeworld = yes }
-				set_planet_flag = "homeworld"
-			}
-		}
-		every_system_within_border = {
-			every_fleet_in_system = {
-				limit = { 
-					OR = { 
-						AND = { exists = owner owner = { is_hostile = root } }					
-						NOT = { exists = owner }
-					}
-				}
-				delete_fleet = this
-			}
-		}		
-	}
-}
-
-#Ensure Homeworld Pops
-country_event = {
-	id = btr_game_start.13
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		is_btr_empire = yes
-	}
-	immediate = {
-		if = {
-			limit = { is_btr_empire = yes }
-			every_owned_planet = {
-				every_owned_pop_group = {
-					limit = { NOT = { has_pop_group_flag = init_spawn } }
-					kill_pop_group = { pop_group = this amount = local_pop_amount }
-				}
-			}
-		}
-	}
-}
+#
+# country_event = {
+# 	id = btr_game_start.5
+# 	hide_window = yes
+# 	is_triggered_only = yes
+#
+# 	immediate = {
+# 		log = "btr_game_start.5 - Started"
+# 		every_owned_planet = {
+# 			limit = {
+# 				is_capital = yes
+# 			}
+# 			generate_btr_canon_capital_buildings_and_districts = yes
+# 		}
+# 		if = {
+# 			limit = {
+# 				is_btr_canon_map = yes
+# 			}
+# 			generate_btr_start_deposits_and_blockers = yes
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						has_global_flag = asari_republics_colonies_created
+# 					}
+# 				}
+# 				generate_asari_republics_colonies = yes
+# 				log = "Asari Republics Colonies Spawned"
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						has_global_flag = salarian_union_colonies_created
+# 					}
+# 				}
+# 				generate_salarian_union_colonies = yes
+# 				log = "Salarian Union Colonies Spawned"
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						has_global_flag = turian_hierarchy_colonies_created
+# 					}
+# 				}
+# 				generate_turian_hierarchy_colonies = yes
+# 				log = "Turian Hierarchy Colonies Spawned"
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						has_global_flag = systems_alliance_colonies_created
+# 					}
+# 				}
+# 				generate_systems_alliance_colonies = yes
+# 				log = "Systems Alliance Colonies Spawned"
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						has_global_flag = courts_of_dekuuna_colonies_created
+# 					}
+# 				}
+# 				generate_courts_of_dekuuna_colonies = yes
+# 				log = "Courts of Dekuuna Colonies Spawned"
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						has_global_flag = vol_protectorate_colonies_created
+# 					}
+# 				}
+# 				generate_vol_protectorate_colonies = yes
+# 				log = "Vol Protectorate Colonies Spawned"
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						has_global_flag = illuminated_primacy_colonies_created
+# 					}
+# 				}
+# 				generate_illuminated_primacy_colonies = yes
+# 				log = "Illuminated Primacy Colonies Spawned"
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						has_global_flag = hegemony_of_kharshan_colonies_created
+# 					}
+# 				}
+# 				generate_hegemony_of_kharshan_colonies = yes
+# 				log = "Hegemony of Khar'shan Colonies Spawned"
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						has_global_flag = sedriicae_collective_colonies_created
+# 					}
+# 				}
+# 				generate_sedriicae_collective_colonies = yes
+# 				log = "Sed'riicae Collective Colonies Spawned"
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						has_global_flag = geth_consensus_colonies_created
+# 					}
+# 				}
+# 				generate_geth_consensus_colonies = yes
+# 				log = "Geth Consensus Colonies Spawned"
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						has_global_flag = disciples_of_nazara_colonies_created
+# 					}
+# 				}
+# 				generate_disciples_of_nazara_colonies = yes
+# 				log = "Disciples of Nazara Colonies Spawned"
+# 			}
+# 		}
+#
+# 		log = "btr_game_start.4 - Completed"
+# 	}
+# }
+# country_event = {
+# 	id = btr_game_start.6
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		log = "btr_game_start.5 - Started"
+# 		event_target:asari_republics = { establish_asari_republics_starting_policies = yes }
+# 		event_target:salarian_union = { establish_salarian_union_starting_policies = yes }
+# 		event_target:turian_hierarchy = { establish_turian_hierarchy_starting_policies = yes }
+# 		event_target:systems_alliance = { establish_systems_alliance_starting_policies = yes }
+# 		event_target:courts_of_dekuuna = { establish_courts_of_dekuuna_starting_policies = yes }
+# 		event_target:vol_protectorate = { establish_vol_protectorate_starting_policies = yes }
+# 		event_target:illuminated_primacy = { establish_illuminated_primacy_starting_policies = yes }
+# 		event_target:hegemony_of_kharshan = { establish_hegemony_of_kharshan_starting_policies = yes }
+# 		event_target:aralakh_kahmat = { establish_aralakh_kahmat_starting_policies = yes }
+# 		#event_target:migrant_fleet = { establish_migrant_fleet_starting_policies = yes }
+# 		#event_target:cerberus_empire = { establish_cerberus_starting_policies = yes }
+# 		event_target:omega_empire = { establish_omega_starting_policies = yes }
+# 		event_target:illium_corporate_interests = { establish_illium_corporate_interests_starting_policies = yes }
+# 		event_target:caleston_directorate = { establish_caleston_directorate_starting_policies = yes }
+# 		event_target:remnants_of_rakhana = { establish_remnants_of_rakhana_starting_policies = yes }
+# 		event_target:vorcha_clandom = { establish_vorcha_clandom_starting_policies = yes }
+# 		event_target:sedriicae_collective = { establish_sedriicae_collective_starting_policies = yes }
+# 		event_target:lystheni_order = { establish_lystheni_order_starting_policies = yes }
+# 		event_target:gothones_remnant = { establish_gothones_remnant_starting_policies = yes }
+# 		#event_target:parnack_regime = { establish_parnack_regime_starting_policies = yes }
+# 		#event_target:raloi_republic = { establish_raloi_republic_starting_policies = yes }
+# 		event_target:disciples_of_nazara = { establish_disciples_of_nazara_starting_policies = yes }
+# 		event_target:geth_consensus = { establish_geth_consensus_starting_policies = yes }
+# 		log = "btr_game_start.5 - Completed"
+# 	}
+# }
+#
+# #Set Starting Mining Stations
+# country_event = {
+# 	id = btr_game_start.7
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = { is_btr_empire = yes }
+# 	immediate = {
+# 		log = "btr_game_start.6 - Started"
+# 		every_planet_within_border = {
+# 			limit = {
+# 				has_deposit_for = shipclass_mining_station
+# 				has_mining_station = no
+# 			}
+# 			create_mining_station = {
+# 				owner = ROOT
+# 			}
+# 		}
+# 		every_planet_within_border = {
+# 			limit = {
+# 				has_deposit_for = shipclass_research_station
+# 				has_research_station = no
+# 			}
+# 			create_research_station = {
+# 				owner = ROOT
+# 			}
+# 		}
+# 		log = "btr_game_start.6 - Completed"
+# 	}
+# }
+#
+# country_event = {
+# 	id = btr_game_start.8
+# 	hide_window = yes
+# 	is_triggered_only = yes
+#
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				is_btr_canon_map = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = asari_rep_origin
+# 				}
+# 				generate_asari_republic_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = salarian_uni_origin
+# 				}
+# 				generate_salarian_union_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = turian_hie_origin
+# 				}
+# 				generate_turian_hierarchy_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = systems_all_origin
+# 				}
+# 				generate_systems_alliance_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = courts_dek_origin
+# 				}
+# 				generate_courts_of_dekuuna_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = vol_pro_origin
+# 				}
+# 				generate_vol_protectorate_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = illuminated_pri_origin
+# 				}
+# 				generate_illuminated_primacy_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = hegemony_kha_origin
+# 				}
+# 				generate_hegemony_of_kharshan_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = aralakh_kah_origin
+# 				}
+# 				generate_aralakh_kahmat_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = migrant_fle_origin
+# 				}
+# 				generate_migrant_fleet_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = cerberus_emp_origin
+# 				}
+# 				generate_cerberus_empire_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = omega_emp_origin
+# 				}
+# 				generate_omega_empire_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = illium_cor_origin
+# 				}
+# 				generate_illium_corporate_interests_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = caleston_dir_origin
+# 				}
+# 				generate_caleston_directorate_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = remnants_rak_origin
+# 				}
+# 				generate_remnants_of_rakhana_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = vorcha_cla_origin
+# 				}
+# 				generate_vorcha_clandom_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = sedriicae_col_origin
+# 				}
+# 				generate_sedriicae_collective_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = lystheni_ord_origin
+# 				}
+# 				generate_lystheni_order_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = gothones_rem_origin
+# 				}
+# 				generate_gothones_remnant_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = parnack_reg_origin
+# 				}
+# 				generate_parnack_regime_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = raloi_rep_origin
+# 				}
+# 				generate_raloi_republic_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = geth_con_origin
+# 				}
+# 				generate_geth_consensus_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = disciples_naz_origin
+# 				}
+# 				generate_disciples_of_nazara_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = rachni_hiv_origin
+# 				}
+# 				generate_rachni_hive_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = collectors_emp_origin
+# 				}
+# 				generate_collectors_empire_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_country_flag = btr_independent_colony
+# 					NOT = {
+# 						has_country_flag = citadel_council
+# 					}
+# 				}
+# 				generate_independent_world_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_country_flag = citadel_council
+# 				}
+# 				generate_citadel_council_starting_resources = yes
+# 			}
+# 		}
+# 		if = {
+# 			limit =  {
+# 				is_btr_sandbox_map = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = asari_rep_origin
+# 				}
+# 				generate_asari_republic_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = salarian_uni_origin
+# 				}
+# 				generate_salarian_union_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = turian_hie_origin
+# 				}
+# 				generate_turian_hierarchy_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = systems_all_origin
+# 				}
+# 				generate_systems_alliance_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = courts_dek_origin
+# 				}
+# 				generate_courts_of_dekuuna_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = vol_pro_origin
+# 				}
+# 				generate_vol_protectorate_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = illuminated_pri_origin
+# 				}
+# 				generate_illuminated_primacy_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = hegemony_kha_origin
+# 				}
+# 				generate_hegemony_of_kharshan_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = aralakh_kah_origin
+# 				}
+# 				generate_aralakh_kahmat_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = migrant_fle_origin
+# 				}
+# 				generate_migrant_fleet_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = cerberus_emp_origin
+# 				}
+# 				generate_cerberus_empire_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = omega_emp_origin
+# 				}
+# 				generate_omega_empire_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = illium_cor_origin
+# 				}
+# 				generate_illium_corporate_interests_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = caleston_dir_origin
+# 				}
+# 				generate_caleston_directorate_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = remnants_rak_origin
+# 				}
+# 				generate_remnants_of_rakhana_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = vorcha_cla_origin
+# 				}
+# 				generate_vorcha_clandom_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = sedriicae_col_origin
+# 				}
+# 				generate_sedriicae_collective_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = lystheni_ord_origin
+# 				}
+# 				generate_lystheni_order_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = gothones_rem_origin
+# 				}
+# 				generate_gothones_remnant_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = parnack_reg_origin
+# 				}
+# 				generate_parnack_regime_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = raloi_rep_origin
+# 				}
+# 				generate_raloi_republic_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = geth_con_origin
+# 				}
+# 				generate_geth_consensus_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = disciples_naz_origin
+# 				}
+# 				generate_disciples_of_nazara_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = rachni_hiv_origin
+# 				}
+# 				generate_rachni_hive_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = collectors_emp_origin
+# 				}
+# 				generate_collectors_empire_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_country_flag = btr_independent_colony
+# 					NOT = {
+# 						has_country_flag = citadel_council
+# 					}
+# 				}
+# 				generate_independent_world_starting_setup = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_country_flag = citadel_council
+# 				}
+# 				generate_citadel_council_starting_resources = yes
+# 			}
+# 		}
+# 	}
+# }
+#
+#
+# #Starting Fleets
+# country_event = {
+# 	id = btr_game_start.9
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = { is_btr_empire = yes }
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				is_btr_canon_map = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = asari_rep_origin
+# 				}
+# 				generate_asari_republic_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = salarian_uni_origin
+# 				}
+# 				generate_salarian_union_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = turian_hie_origin
+# 				}
+# 				generate_turian_hierarchy_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = systems_all_origin
+# 				}
+# 				generate_systems_alliance_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = courts_dek_origin
+# 				}
+# 				generate_courts_of_dekuuna_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = vol_pro_origin
+# 				}
+# 				generate_vol_protectorate_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = illuminated_pri_origin
+# 				}
+# 				generate_illuminated_primacy_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = hegemony_kha_origin
+# 				}
+# 				generate_hegemony_of_kharshan_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = aralakh_kah_origin
+# 				}
+# 				generate_aralakh_kahmat_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = omega_emp_origin
+# 				}
+# 				generate_omega_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = illium_cor_origin
+# 				}
+# 				generate_illium_corporate_interests_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = caleston_dir_origin
+# 				}
+# 				generate_caleston_directorate_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = sedriicae_col_origin
+# 				}
+# 				generate_sedriicae_collective_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = lystheni_ord_origin
+# 				}
+# 				generate_lystheni_order_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = gothones_rem_origin
+# 				}
+# 				generate_gothones_remnant_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = rachni_hiv_origin
+# 				}
+# 				generate_rachni_hive_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = geth_con_origin
+# 				}
+# 				generate_geth_consensus_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = disciples_naz_origin
+# 				}
+# 				generate_disciples_nazara_starting_fleets = yes
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_origin = citadel_council_origin
+# 				}
+# 				generate_citadel_council_starting_fleets = yes
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				is_btr_sandbox_map = yes
+# 			}
+# 			generate_sandbox_starting_fleets = yes
+# 		}
+#
+# 		log = "btr_game_start.8 - Fleets Generated"
+# 	}
+# }
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# #Survey home system and clear surrounding borders of random enemies.
+# country_event = {
+# 	id = btr_game_start.12
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		log = "btr_game_start.20"
+# 		every_owned_planet = {
+# 			solar_system = { every_system_planet = { set_surveyed = { surveyed = yes surveyor = ROOT } } }
+# 			if = {
+# 				limit = { is_homeworld = yes }
+# 				set_planet_flag = "homeworld"
+# 			}
+# 		}
+# 		every_system_within_border = {
+# 			every_fleet_in_system = {
+# 				limit = {
+# 					OR = {
+# 						AND = { exists = owner owner = { is_hostile = root } }
+# 						NOT = { exists = owner }
+# 					}
+# 				}
+# 				delete_fleet = this
+# 			}
+# 		}
+# 	}
+# }
+#
+# #Ensure Homeworld Pops
+# country_event = {
+# 	id = btr_game_start.13
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		is_btr_empire = yes
+# 	}
+# 	immediate = {
+# 		if = {
+# 			limit = { is_btr_empire = yes }
+# 			every_owned_planet = {
+# 				every_owned_pop_group = {
+# 					limit = { NOT = { has_pop_group_flag = init_spawn } }
+# 					kill_pop_group = { pop_group = this amount = local_pop_amount }
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 # #Set Relics
 # country_event = {

@@ -1,16 +1,39 @@
-## ASARI REPUBLIC ##
-generate_asr_thessia_capital_buildings = {
+generate_btr_starting_canon_districts = {
 	optimize_memory
 	set_timed_planet_flag = {
 		flag = ignore_ai_building_limitations
 		days = 1
 	}
 
-	inline_script = "game_start/rural_districts_initializer"
-	inline_script = "game_start/authority_regular"
-
 	#Origins
 	inline_script = "game_start/origins"
+}
+
+
+
+
+
+
+
+
+
+
+
+#
+#
+# ## ASARI REPUBLIC ##
+# generate_asr_thessia_capital_buildings = {
+# 	optimize_memory
+# 	set_timed_planet_flag = {
+# 		flag = ignore_ai_building_limitations
+# 		days = 1
+# 	}
+#
+# 	inline_script = "game_start/rural_districts_initializer"
+# 	inline_script = "game_start/authority_regular"
+#
+# 	#Origins
+# 	inline_script = "game_start/origins"
 
 
 
@@ -37,7 +60,7 @@ generate_asr_thessia_capital_buildings = {
 	# add_building = building_factory_2
 	# add_building = building_research_lab_2
 	# add_building = building_asari_rep_comm_center
-}
+# }
 #
 # generate_asr_sanves_colony_buildings = {
 # 	while = { count = 2 add_district = { district_type = district_city ignore_cap = yes }}

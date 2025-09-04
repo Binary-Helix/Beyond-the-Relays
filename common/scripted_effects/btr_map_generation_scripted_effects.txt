@@ -749,234 +749,8 @@
 #	log = "Capital World Starting Deposits and Blockers Created"
 #}
 #
-generate_btr_canon_capital_buildings_and_districts = {
-	optimize_memory
-	if = {
-		limit = {
-			owner = {
-				is_ai = no
-			}
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = asari_rep_origin
-				}
-			}
-			generate_asr_thessia_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = salarian_uni_origin
-				}
-			}
-			generate_sal_surkesh_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = turian_hier_origin
-				}
-			}
-			generate_tur_palaven_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = systems_all_origin
-				}
-			}
-			generate_sys_earth_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = courts_dek_origin
-				}
-			}
-			generate_cod_dekuuna_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = vol_pro_origin
-				}
-			}
-			generate_vol_irune_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = illuminated_pri_origin
-				}
-			}
-			generate_han_kahje_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = hegemony_kha_origin
-				}
-			}
-			generate_bat_kharshan_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = aralakh_kah_origin
-				}
-			}
-			generate_kro_tuchanka_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = migrant_fle_origin
-				}
-			}
-			generate_qua_rayya_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = cerberus_emp_origin
-				}
-			}
-			generate_cer_cronos_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = omega_emp_origin
-				}
-			}
-			generate_omega_building_and_districts = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = illium_cor_origin
-				}
-			}
-			generate_illium_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = caleston_dir_origin
-				}
-			}
-			generate_caleston_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = remnants_rak_origin
-				}
-			}
-			generate_dre_rahkana_capital_buildings = yes
-			set_destroyed_rakhana_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = vorcha_cla_origin
-				}
-			}
-			generate_vor_heshtok_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = sedriicae_col_origin
-				}
-			}
-			generate_sed_sedriicae_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = lystheni_ord_origin
-				}
-			}
-			generate_lys_sepkai_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = gothones_rem_origin
-				}
-			}
-			generate_got_vindicta_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = cerberus_emp_origin
-				}
-			}
-			generate_yah_parnack_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = cerberus_emp_origin
-				}
-			}
-			generate_ral_turvess_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = cerberus_emp_origin
-				}
-			}
-			generate_get_rannoch_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = disciples_naz_origin
-				}
-			}
-			generate_naz_heretic_station_capital_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = rachni_hiv_origin
-				}
-			}
-			generate_rac_utukku_start_buildings = yes
-		}
-		if = {
-			limit = {
-				owner = {
-					has_origin = collectors_emp_origin
-				}
-			}
-			generate_collectors_capital_buildings = yes
-		}
 
-
-		# Replace mining districts with uncapped ones for subterranean origin
-		if = {
-			limit = {
-				owner = { is_subterranean_empire = yes }
-			}
-			while = {
-				limit = { num_districts = { type = district_mining value > 0 } }
-				remove_district = district_mining
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_mining_uncapped
-				}
-			}
-		}
-	}
-}
-
-btr_generate_capital_planetary_features = {
+btr_generate_canon_planetary_features = {
 	if = {
 		limit = { has_planet_flag = thessia_planet }
 		add_deposit = d_thessia_republic_armali
@@ -1232,185 +1006,185 @@ btr_generate_capital_planetary_features = {
 		add_deposit = d_citadel_joint_research_division
 	}
 }
-#
-#btr_generate_canon_planetary_deposits = {
-#	if = {
-#		limit = { has_planet_flag = junthor_planet }
-#		add_deposit = d_aluminum_surface
-#		add_deposit = d_nickel_deposits
-#		add_deposit = d_junthor_ruins
-#	}
-#	if = {
-#		limit = { has_planet_flag = noveria_planet }
-#		add_deposit = d_noveria_port_hanshan
-#		add_deposit = d_noveria_peak_research_facility
-#	}
-#}
-#
-#btr_generate_planet_subclass_deposits = {
-#	if = {
-#		limit = { has_planet_flag = dune_world }
-#		add_deposit = d_great_sea
-#	}
-#	if = {
-#		limit = { has_planet_flag = dust_world }
-#		add_deposit = d_splintered_lands
-#	}
-#	if = {
-#		limit = {has_planet_flag = badlands_world }
-#		add_deposit = d_bountiful_valley
-#	}
-#	if = {
-#		limit = { has_planet_flag = aquifer_world }
-#		add_deposit = d_subterranean_ocean
-#	}
-#	if = {
-#		limit = { has_planet_flag = mesa_world }
-#		add_deposit = d_stellarite_archway
-#	}
-#	if = {
-#		limit = { has_planet_flag = cenote_world }
-#		add_deposit = d_eezo_sinkhole
-#	}
-#	if = {
-#		limit = { has_planet_flag = outback_world }
-#		add_deposit = d_fairwinds_basin
-#	}
-#	if = {
-#		limit = { has_planet_flag = oasis_world }
-#		add_deposit = d_green_ring
-#	}
-#	if = {
-#		limit = { has_planet_flag = steppe_world }
-#		add_deposit = d_great_mystery_tree
-#	}
-#	if = {
-#		limit = { has_planet_flag = veld_world }
-#		add_deposit = d_arborary_oasis
-#	}
-#	if = {
-#		limit = { has_planet_flag = medit_world }
-#		add_deposit = d_cooperative_weather
-#	}
-#	if = {
-#		limit = { has_planet_flag = retinal_world }
-#		add_deposit = d_purple_heaven_arch
-#	}
-#	if = {
-#		limit = { has_planet_flag = atoll_world }
-#		add_deposit = d_majestic_reef
-#	}
-#	if = {
-#		limit = { has_planet_flag = coastal_world }
-#		add_deposit = d_grand_bay
-#	}
-#	if = {
-#		limit = { has_planet_flag = jungle_world }
-#		add_deposit = d_bellowing_rainforest
-#	}
-#	if = {
-#		limit = { has_planet_flag = biolum_world }
-#		add_deposit = d_glowing_jungle
-#	}
-#	if = {
-#		limit = { has_planet_flag = marsh_world }
-#		add_deposit = d_mineral_rich_delta
-#	}
-#	if = {
-#		limit = { has_planet_flag = mangrove_world }
-#		add_deposit = d_heart_of_grove
-#	}
-#	if = {
-#		limit = { has_planet_flag = bog_world }
-#		add_deposit = d_endless_mud
-#	}
-#	if = {
-#		limit = { has_planet_flag = lake_world }
-#		add_deposit = d_water_web
-#	}
-#	if = {
-#		limit = { has_planet_flag = prairie_world }
-#		add_deposit = d_polarizing_seasons
-#	}
-#	if = {
-#		limit = { has_planet_flag = temperate_world }
-#		add_deposit = d_colorful_seasons
-#	}
-#	if = {
-#		limit = { has_planet_flag = forest_world }
-#		add_deposit = d_great_hunting_grounds
-#	}
-#	if = {
-#		limit = { has_planet_flag = supercon_world }
-#		add_deposit = d_dead_centre
-#	}
-#	if = {
-#		limit = { has_planet_flag = hotocean_world }
-#		add_deposit = d_hot_currents
-#	}
-#	if = {
-#		limit = { has_planet_flag = coldocean_world }
-#		add_deposit = d_standing_waters
-#	}
-#	if = {
-#		limit = { has_planet_flag = storm_world }
-#		add_deposit = d_storm_eye
-#	}
-#	if = {
-#		limit = { has_planet_flag = boreal_world }
-#		add_deposit = d_boreal_megafauna
-#	}
-#	if = {
-#		limit = { has_planet_flag = highland_world }
-#		add_deposit = d_northern_highlands
-#	}
-#	if = {
-#		limit = { has_planet_flag = cascadian_world }
-#		add_deposit = d_sights_to_behold
-#	}
-#	if = {
-#		limit = { has_planet_flag = crag_world }
-#		add_deposit = d_bleeding_volcano
-#	}
-#	if = {
-#		limit = { has_planet_flag = basalt_world }
-#		add_deposit = d_hidden_treasures
-#	}
-#	if = {
-#		limit = { has_planet_flag = lichen_world }
-#		add_deposit = d_lichen_trees
-#	}
-#	if = {
-#		limit = { has_planet_flag = mire_world }
-#		add_deposit = d_bottomless_mud_lakes
-#	}
-#	if = {
-#		limit = { has_planet_flag = fungal_world }
-#		add_deposit = d_holy_realm
-#	}
-#	if = {
-#		limit = { has_planet_flag = snow_world }
-#		add_deposit = d_great_blue_spot
-#	}
-#	if = {
-#		limit = { has_planet_flag = glacial_world }
-#		add_deposit = d_diamond_cliff
-#	}
-#	if = {
-#		limit = { has_planet_flag = antar_world }
-#		add_deposit = d_mammoth_cave
-#	}
-#	if = {
-#		limit = { has_planet_flag = cryovolcanic_world }
-#		add_deposit = d_empyrean_lakes
-#	}
-#}
-#
-#btr_generate_starting_deposits_and_resources = {
-#	btr_generate_capital_planetary_features = yes
-#	btr_generate_canon_planetary_deposits = yes
-#	btr_generate_planet_subclass_deposits = yes
-#}
+
+btr_generate_canon_planetary_deposits = {
+	if = {
+		limit = { has_planet_flag = junthor_planet }
+		add_deposit = d_aluminum_surface
+		add_deposit = d_nickel_deposits
+		add_deposit = d_junthor_ruins
+	}
+	if = {
+		limit = { has_planet_flag = noveria_planet }
+		add_deposit = d_noveria_port_hanshan
+		add_deposit = d_noveria_peak_research_facility
+	}
+}
+
+btr_generate_planet_subclass_deposits = {
+	if = {
+		limit = { has_planet_flag = dune_world }
+		add_deposit = d_great_sea
+	}
+	if = {
+		limit = { has_planet_flag = dust_world }
+		add_deposit = d_splintered_lands
+	}
+	if = {
+		limit = {has_planet_flag = badlands_world }
+		add_deposit = d_bountiful_valley
+	}
+	if = {
+		limit = { has_planet_flag = aquifer_world }
+		add_deposit = d_subterranean_ocean
+	}
+	if = {
+		limit = { has_planet_flag = mesa_world }
+		add_deposit = d_stellarite_archway
+	}
+	if = {
+		limit = { has_planet_flag = cenote_world }
+		add_deposit = d_eezo_sinkhole
+	}
+	if = {
+		limit = { has_planet_flag = outback_world }
+		add_deposit = d_fairwinds_basin
+	}
+	if = {
+		limit = { has_planet_flag = oasis_world }
+		add_deposit = d_green_ring
+	}
+	if = {
+		limit = { has_planet_flag = steppe_world }
+		add_deposit = d_great_mystery_tree
+	}
+	if = {
+		limit = { has_planet_flag = veld_world }
+		add_deposit = d_arborary_oasis
+	}
+	if = {
+		limit = { has_planet_flag = medit_world }
+		add_deposit = d_cooperative_weather
+	}
+	if = {
+		limit = { has_planet_flag = retinal_world }
+		add_deposit = d_purple_heaven_arch
+	}
+	if = {
+		limit = { has_planet_flag = atoll_world }
+		add_deposit = d_majestic_reef
+	}
+	if = {
+		limit = { has_planet_flag = coastal_world }
+		add_deposit = d_grand_bay
+	}
+	if = {
+		limit = { has_planet_flag = jungle_world }
+		add_deposit = d_bellowing_rainforest
+	}
+	if = {
+		limit = { has_planet_flag = biolum_world }
+		add_deposit = d_glowing_jungle
+	}
+	if = {
+		limit = { has_planet_flag = marsh_world }
+		add_deposit = d_mineral_rich_delta
+	}
+	if = {
+		limit = { has_planet_flag = mangrove_world }
+		add_deposit = d_heart_of_grove
+	}
+	if = {
+		limit = { has_planet_flag = bog_world }
+		add_deposit = d_endless_mud
+	}
+	if = {
+		limit = { has_planet_flag = lake_world }
+		add_deposit = d_water_web
+	}
+	if = {
+		limit = { has_planet_flag = prairie_world }
+		add_deposit = d_polarizing_seasons
+	}
+	if = {
+		limit = { has_planet_flag = temperate_world }
+		add_deposit = d_colorful_seasons
+	}
+	if = {
+		limit = { has_planet_flag = forest_world }
+		add_deposit = d_great_hunting_grounds
+	}
+	if = {
+		limit = { has_planet_flag = supercon_world }
+		add_deposit = d_dead_centre
+	}
+	if = {
+		limit = { has_planet_flag = hotocean_world }
+		add_deposit = d_hot_currents
+	}
+	if = {
+		limit = { has_planet_flag = coldocean_world }
+		add_deposit = d_standing_waters
+	}
+	if = {
+		limit = { has_planet_flag = storm_world }
+		add_deposit = d_storm_eye
+	}
+	if = {
+		limit = { has_planet_flag = boreal_world }
+		add_deposit = d_boreal_megafauna
+	}
+	if = {
+		limit = { has_planet_flag = highland_world }
+		add_deposit = d_northern_highlands
+	}
+	if = {
+		limit = { has_planet_flag = cascadian_world }
+		add_deposit = d_sights_to_behold
+	}
+	if = {
+		limit = { has_planet_flag = crag_world }
+		add_deposit = d_bleeding_volcano
+	}
+	if = {
+		limit = { has_planet_flag = basalt_world }
+		add_deposit = d_hidden_treasures
+	}
+	if = {
+		limit = { has_planet_flag = lichen_world }
+		add_deposit = d_lichen_trees
+	}
+	if = {
+		limit = { has_planet_flag = mire_world }
+		add_deposit = d_bottomless_mud_lakes
+	}
+	if = {
+		limit = { has_planet_flag = fungal_world }
+		add_deposit = d_holy_realm
+	}
+	if = {
+		limit = { has_planet_flag = snow_world }
+		add_deposit = d_great_blue_spot
+	}
+	if = {
+		limit = { has_planet_flag = glacial_world }
+		add_deposit = d_diamond_cliff
+	}
+	if = {
+		limit = { has_planet_flag = antar_world }
+		add_deposit = d_mammoth_cave
+	}
+	if = {
+		limit = { has_planet_flag = cryovolcanic_world }
+		add_deposit = d_empyrean_lakes
+	}
+}
+
+btr_generate_starting_deposits_and_resources = {
+	btr_generate_canon_planetary_features = yes
+	btr_generate_canon_planetary_deposits = yes
+	btr_generate_planet_subclass_deposits = yes
+}
 #
 #set_dune_subclass = {
 #	add_modifier = {
