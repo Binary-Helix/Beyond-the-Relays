@@ -859,9 +859,16 @@ btr_generate_canon_planetary_features = {
 	 	limit = { has_planet_flag = civilian_fleet_planet }
 		 add_deposit = d_migrant_fleet_resource_income
 	 }
-	# else_if = {
-	# 	limit = { has_planet_flag = cronos_station }
-	# }
+	else_if = {
+		limit = { has_planet_flag = cronos_station }
+		add_deposit = d_cronos_cerberus_news_network
+		add_deposit = d_cronos_combat_labs
+		add_deposit = d_cronos_hydroponics_bays
+		add_deposit = d_cronos_luxury_accommodations
+		add_deposit = d_cronos_reactor
+		add_deposit = d_cronos_inner_sanctum
+		add_deposit = d_cronos_science_labs
+	}
 	else_if = {
 		limit = { has_planet_flag = omega_station }
 		add_deposit = d_omega_afterlife
