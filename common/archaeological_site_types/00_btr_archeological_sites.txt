@@ -65,6 +65,11 @@ btr_archeology_crashed_ship = {
         icon = GFX_archaeology_runes_F3
         event = btr_archeology_crashed_ship.4
     }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_archeology_crashed_ship.5
+    }
 
     on_roll_failed = {
         from = {
@@ -87,18 +92,23 @@ btr_archeology_space_hulk = {
 
     stage = {
         difficulty = 1
-        icon = GFX_archaeology_runes_F1
-        event = btr_archeology_crashed_ship.2
-    }
-    stage = {
-        difficulty = 1
         icon = GFX_archaeology_runes_F2
-        event = btr_archeology_crashed_ship.3
+        event = btr_archeology_space_hulk.2
     }
     stage = {
         difficulty = 2
         icon = GFX_archaeology_runes_F3
-        event = btr_archeology_crashed_ship.4
+        event = btr_archeology_space_hulk.3
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_archeology_space_hulk.4
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_archeology_space_hulk.5
     }
 
     on_roll_failed = {
@@ -131,11 +141,6 @@ btr_archeology_krogan_warlord = {
         difficulty = 1
         icon = GFX_archaeology_runes_F2
         event = btr_archeology_krogan_warlord.3
-    }
-    stage = {
-        difficulty = 2
-        icon = GFX_archaeology_runes_F3
-        event = btr_archeology_krogan_warlord.4
     }
 
     on_roll_failed = {
