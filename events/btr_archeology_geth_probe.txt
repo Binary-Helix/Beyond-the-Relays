@@ -13,8 +13,8 @@ namespace = btr_archeology_geth_probe
 # via on_survey = {} | this = surveying vessel
 ship_event = {
     id = btr_archeology_geth_probe.1
-    title = "btr_archeology_geth_probe.name"
-    desc = "btr_archeology_geth_probe.desc"
+    title = "btr_archeology_geth_probe.1.name"
+    desc = "btr_archeology_geth_probe.1.desc"
     picture = #TODO
     location = from
     show_sound = event_wind_ruins
@@ -31,15 +31,15 @@ ship_event = {
     }
 
     option = {
-        name = btr_archeology_geth_probe.a
+        name = btr_archeology_geth_probe.1.a
     }
 }
 
 #zroni_digsite_1
 fleet_event = {
     id = btr_archeology_geth_probe.2
-    title = "btr_archeology_geth_probe.1.name"
-    desc = btr_archeology_geth_probe.1.desc
+    title = "btr_archeology_geth_probe.2.name"
+    desc = btr_archeology_geth_probe.2.desc
     picture = #TODO
     show_sound = event_wind_ruins
     location = from
@@ -49,15 +49,15 @@ fleet_event = {
     is_triggered_only = yes
 
     option = {
-        name = btr_archeology_geth_probe.1.a
+        name = btr_archeology_geth_probe.2.a
     small_artifact_reward = yes
     }
 }
 
 fleet_event = {
     id = btr_archeology_geth_probe.3
-    title = "btr_archeology_geth_probe.2.name"
-    desc = btr_archeology_geth_probe.2.desc
+    title = "btr_archeology_geth_probe.3.name"
+    desc = btr_archeology_geth_probe.3.desc
     picture = #TODO
     show_sound = event_whispering
     location = from
@@ -67,7 +67,7 @@ fleet_event = {
     is_triggered_only = yes
 
     option = {
-        name = btr_archeology_geth_probe.2.a
+        name = btr_archeology_geth_probe.3.a
         small_artifact_reward = yes
 
         if = {

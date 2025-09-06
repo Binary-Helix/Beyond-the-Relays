@@ -13,8 +13,8 @@ namespace = btr_archeology_salarian_researchers
 # via on_survey = {} | this = surveying vessel
 ship_event = {
     id = btr_archeology_salarian_researchers.1
-    title = "btr_archeology_salarian_researchers.name"
-    desc = "btr_archeology_salarian_researchers.desc"
+    title = "btr_archeology_salarian_researchers.1.name"
+    desc = "btr_archeology_salarian_researchers.1.desc"
     picture = #TODO
     location = from
     show_sound = event_wind_ruins
@@ -31,15 +31,24 @@ ship_event = {
     }
 
     option = {
-        name = btr_archeology_salarian_researchers.a
+        name = btr_archeology_salarian_researchers.1.a
+        small_artifact_reward = yes
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = @tier2researchreward
+                max = @tier2researchmax
+                min = @tier2researchmin
+            }
+        }
     }
 }
 
 #zroni_digsite_1
 fleet_event = {
     id = btr_archeology_salarian_researchers.2
-    title = "btr_archeology_salarian_researchers.1.name"
-    desc = btr_archeology_salarian_researchers.1.desc
+    title = "btr_archeology_salarian_researchers.2.name"
+    desc = btr_archeology_salarian_researchers.2.desc
     picture = #TODO
     show_sound = event_wind_ruins
     location = from
@@ -49,14 +58,23 @@ fleet_event = {
     is_triggered_only = yes
 
     option = {
-        name = btr_archeology_salarian_researchers.1.a
+        name = btr_archeology_salarian_researchers.2.a
+        small_artifact_reward = yes
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier2researchreward
+                max = @tier2researchmax
+                min = @tier2researchmin
+            }
+        }
     }
 }
 
 fleet_event = {
     id = btr_archeology_salarian_researchers.3
-    title = "btr_archeology_salarian_researchers.2.name"
-    desc = btr_archeology_salarian_researchers.2.desc
+    title = "btr_archeology_salarian_researchers.3.name"
+    desc = btr_archeology_salarian_researchers.3.desc
     picture = #TODO
     show_sound = event_whispering
     location = from
@@ -66,8 +84,16 @@ fleet_event = {
     is_triggered_only = yes
 
     option = {
-        name = btr_archeology_salarian_researchers.2.a
+        name = btr_archeology_salarian_researchers.3.a
         small_artifact_reward = yes
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier2researchreward
+                max = @tier2researchmax
+                min = @tier2researchmin
+            }
+        }
     }
 }
 
