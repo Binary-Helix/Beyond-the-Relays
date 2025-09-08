@@ -5,24 +5,259 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08664527-6757-472e-b0f6-9970e531260c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/scripted_effects/01_start_of_game_effects.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/events/game_start.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_effects/btr_01_start_of_game_effects.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_effects/btr_game_start_empire_building_effects.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_effects/btr_game_start_empire_technologies_effects.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_effects/btr_game_start_pop_scripts.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_effects/btr_generate_pop_effects.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/section_templates/battleship.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/section_templates/corvette.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/section_templates/cruiser.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/section_templates/destroyer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/section_templates/juggernaut.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/section_templates/other.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/section_templates/overlord.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/section_templates/planet_states_section_templates.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/section_templates/titan.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ship_sizes/00_first_contact.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ship_sizes/00_orbital_rings.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ship_sizes/00_ship_sizes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ship_sizes/00_starbases.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ship_sizes/01_colossi.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ship_sizes/18_juggernauts.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/ship_sizes/planet_states_ship_sizes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/Loadingscreen_loadingtip.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/btr_eventpictures.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/anomaly/line_short.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/BTR_Delete.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/BTR_LoadGame.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/MP_Back.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/MP_Cancel.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/MP_Connect.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/MP_Direct_Join.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/MP_HostSaved.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/MP_Join.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/MP_New.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/MP_scan.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/btr_apply.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/btr_main_menu_stripe.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/btr_reset.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/button_116_24_animated.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/button_200_24_animated.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/button_268_animated.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/button_520_animated.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/checkbox_20_20_01.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/empire_edit_button.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/empire_edit_button_mask.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/general_tab.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/standard_button_200_24_animated.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/buttons/white_stripe.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/diplomacy/diplomacy_portrait_frame.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/diplomacy/diplomacy_portrait_mask.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/diplomacy/diplomacy_portrait_mask2.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/diplomacy/diplomacy_shadow_frame.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/diplomacy/diplomacy_stripes.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/advisors/aralakh_kahmat.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/advisors/asari_republics.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/advisors/batarian_hegemony.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/advisors/disciples_of_nazara.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/advisors/geth_consensus.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/advisors/illuminated_primacy.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/advisors/migrant_fleet.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/advisors/renegade_alliance.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/advisors/salarian_union.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/advisors/systems_alliance.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/advisors/turian_hierarchy.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/advisors/vol_protectorate.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/advisors/vorcha_clandom.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_breeding_tank.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_checkpoint.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_dormitories.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_dread_site.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_drone_depot.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_ftl_inhibitor.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_guard_quarters.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_nazara_altar.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/buildings/building_training_area.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/colonizability_icons_shadow.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_assembly_factory.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_barracks.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_battle_arena.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_bureaucratic_center.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_corporate_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_elevation_center.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_fortified_bunkers.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_grim_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_outer_limits_router.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/district_temple_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_assembly_factory.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_assembly_factory_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_barracks.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_barracks_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_battle_arena.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_battle_arena_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_bureaucratic_center.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_bureaucratic_center_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_corporate_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_corporate_complex_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_elevation_center.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_elevation_center_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_fortified_bunkers.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_fortified_bunkers_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_grim_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_grim_complex_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_link_node.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_link_node_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_outer_limits_router.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_outer_limits_router_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_reactor_block.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_reactor_block_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_temple_complex.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/districts/grid_box/district_temple_complex_big.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/fleet_size_icon.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/icon_leader.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_btr_redsand_antifarmer.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_btr_redsand_farmer.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_elcor_elder.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/jobs/job_league_one.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/pop.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/relay_network_icon.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/relics/relic_asari_rep_library_asha.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/relics/relic_turian_banner_first_regiment.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/research_icon.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/icons/ship_classes.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/main/game_logo.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/main/game_logo_old.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/main/navbar_bg.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/main/navbar_bg_wide.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/main/topbar_background.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/main/topbar_background_cutoff.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/main/topbar_bar_04.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/planetview/mass_relay.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/planetview/planet_view_center_hex_bg.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/planetview/planet_view_middle.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/progress bars/Load_Screen_Radial_Empty.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/interface/progress bars/Load_Screen_Radial_full.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_1.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_10.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_11.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_12.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_13.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_14.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_15.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_16.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_17.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_2.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_3.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_4.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_5.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_6.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_7.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_8.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/loadingscreens/load_9.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/matchmaking_entry.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/sliders/ncp_scroll_slider.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/sliders/ncp_scroll_slider_small.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/Empire_Select_Main.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/Empire_Select_Sidebar.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/MP_BG_BTR.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/backup/btr_datapad_menu_blank.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/backup/btr_datapad_menu_dev_news.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/backup/btr_datapad_menu_economy.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/backup/btr_datapad_menu_empire_dossier.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/backup/btr_datapad_menu_planet_classes.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/backup/btr_datapad_menu_relay_network.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/backup/btr_datapad_menu_warfare.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/bottom_frame.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_datapad_dev_news_bg.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_datapad_economy_bg.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_datapad_empire_dossier_bg.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_datapad_main_menu_bg.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_datapad_planet_classes_bg.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_datapad_relay_network_bg.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_datapad_warfare_bg.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_derpllector_speech_all.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_derpllector_speech_custom_empire.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_derpllector_speech_custom_empire_incompatible_mods.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_derpllector_speech_incompatible_mods.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_derpllector_speech_integrated_custom_empire.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_derpllector_speech_integrated_incompatible_mods.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_derpllector_speech_integrated_mods.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_intro_screen_datapad.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_start_screen_datapad.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_start_screen_datapad_animated.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_start_screen_datapad_animated_mask.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/btr_start_screen_datapad_animated_texture.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/clean_frame_area.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/green_bg_tile.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/main_menu_popup.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/origin_frame.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/tiles/topbar_bar.dds" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/btr_frontend.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/btr_mapicons.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/btr_megastructure_view.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/btr_planet_backgrounds.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/btr_rs_eventpictures.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/btr_start_screen.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/btr_station.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/credits.gui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/credits.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/frontend.gui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/frontend_dlc.gui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/launcher.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/load_screen.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/load_screen.gui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/load_screen_font.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/loadgame_view.gui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/main.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/main.gui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/monthly_trade_view.gui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/resource_groups/topbar_other_resource_groups.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/resource_groups/topbar_single_resource_groups.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_OLD/common/solar_system_initializers/canon/00_attican_traverse_initializers.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_OLD/common/solar_system_initializers/canon/01_citadel_space_initializers.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_OLD/common/solar_system_initializers/canon/02_skyllian_verge_initializers.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_OLD/common/solar_system_initializers/canon/03_terminus_systems_initializers.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_OLD/common/solar_system_initializers/canon/04_miscellaneous_system_initializers.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/deposits/btr_empire_planetary_features.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/deposits/btr_empire_planetary_features.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/game_start/caleston_dir_origin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/game_start/caleston_dir_origin.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/game_start/cerberus_emp_origin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/game_start/cerberus_emp_origin.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/inline_scripts/game_start/origins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/game_start/origins.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/buildings/btr_empire_unique_buildings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/buildings/btr_empire_unique_buildings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/graphical_culture/btr_graphical_cultures.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/graphical_culture/btr_graphical_cultures.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/inline_scripts/game_start/aralakh_kah_origin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/game_start/aralakh_kah_origin.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/inline_scripts/game_start/asari_rep_origin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/game_start/asari_rep_origin.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/inline_scripts/game_start/courts_dek_origin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/game_start/courts_dek_origin.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/inline_scripts/game_start/hegemony_kha_origin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/game_start/hegemony_kha_origin.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/inline_scripts/game_start/illuminated_pri_origin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/game_start/illuminated_pri_origin.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/inline_scripts/game_start/origins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/game_start/btr_origins.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/inline_scripts/game_start/salarian_uni_origin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/game_start/salarian_uni_origin.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/inline_scripts/game_start/systems_all_origin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/game_start/systems_all_origin.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/inline_scripts/game_start/turian_hie_origin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/game_start/turian_hie_origin.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/inline_scripts/game_start/vol_pro_origin.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/inline_scripts/game_start/vol_pro_origin.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/on_actions/00_on_actions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/on_actions/00_on_actions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_effects/00_btr_start_of_game_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/00_btr_start_of_game_effects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_empire_building_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/btr_empire_building_effects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_map_generation_scripted_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/btr_map_generation_scripted_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/on_actions/btr_on_actions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/on_actions/btr_on_actions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/00_btr_start_of_game_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/scripted_effects/OLD_00_btr_start_of_game_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_communications_scripted_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/btr_game_start_communications_scripted_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_empire_building_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/scripted_effects/OLD_btr_empire_building_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_empire_colony_creation_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/scripted_effects/OLD_btr_empire_colony_creation_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_empire_creation_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/btr_game_start_empire_creation_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_empire_setup_scripted_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/btr_game_start_empire_resources_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_empire_starting_policy_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/scripted_effects/OLD_btr_empire_starting_policy_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_empire_starting_technologies_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/scripted_effects/OLD_btr_empire_starting_technologies_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_empire_starting_territory_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/scripted_effects/OLD_btr_empire_starting_territory_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_independent_world_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/scripted_effects/OLD_btr_independent_world_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_map_generation_scripted_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/scripted_effects/OLD_btr_map_generation_scripted_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_pop_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/scripted_effects/OLD_btr_pop_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_pop_scripts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_OLD/common/scripted_effects/OLD_btr_pop_scripts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_species_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/btr_game_start_species_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/solar_system_initializers/canon/00_attican_traverse_initializers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/solar_system_initializers/canon/00_attican_traverse_initializers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/solar_system_initializers/canon/01_citadel_space_initializers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/solar_system_initializers/canon/01_citadel_space_initializers.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/solar_system_initializers/canon/02_skyllian_verge_initializers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/solar_system_initializers/canon/02_skyllian_verge_initializers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/solar_system_initializers/canon/03_terminus_systems_initializers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/solar_system_initializers/canon/03_terminus_systems_initializers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/solar_system_initializers/canon/04_miscellaneous_system_initializers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/solar_system_initializers/canon/04_miscellaneous_system_initializers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/species_classes/btr_species_classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/species_classes/btr_species_classes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/start_screen_messages/btr_start_screen_messages.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/start_screen_messages/btr_start_screen_messages.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/static_modifiers/btr_empire_modifiers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/static_modifiers/btr_empire_modifiers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/technology/btr_empire_technologies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/technology/btr_empire_technologies.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/traits/btr_species_traits.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/traits/btr_species_traits.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/events/btr_game_start.txt" beforeDir="false" afterPath="$PROJECT_DIR$/events/btr_game_start.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/game_setup/species.gui" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/main_bottom.gui" beforeDir="false" afterPath="$PROJECT_DIR$/interface/main_bottom.gui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/localisation/english/btr_empire_technologies_l_english.yml" beforeDir="false" afterPath="$PROJECT_DIR$/localisation/english/btr_empire_technologies_l_english.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music/mainmenu12.asset" beforeDir="false" afterPath="$PROJECT_DIR$/music/mainmenu12.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,38 +286,38 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;features-resource-building-pop-integration&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Repositories/btr_skunkworks/common/scripted_effects&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2954023&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "features-resource-building-pop-integration",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/Repositories/btr_skunkworks/interface/game_setup",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2954023",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Repositories\btr_skunkworks\interface\game_setup" />
+      <recent name="E:\Repositories\btr_skunkworks\interface" />
+      <recent name="E:\Repositories\btr_skunkworks\gfx\interface\main" />
+      <recent name="E:\Repositories\btr_skunkworks\common\ship_sizes" />
       <recent name="E:\Repositories\btr_skunkworks\common\scripted_effects" />
-      <recent name="E:\Repositories\btr_skunkworks\events" />
-      <recent name="E:\Repositories\btr_skunkworks\music" />
-      <recent name="E:\Repositories\btr_skunkworks\common\species_rights\living_standards" />
-      <recent name="E:\Repositories\btr_skunkworks\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Repositories\btr_skunkworks\common\scripted_effects" />
       <recent name="E:\Repositories\btr_skunkworks\common\government\civics" />
       <recent name="E:\Repositories\btr_skunkworks\common" />
       <recent name="E:\Repositories\btr_skunkworks\common\buildings" />
       <recent name="E:\Repositories\btr_skunkworks\common\scripted_variables" />
-      <recent name="E:\Repositories\btr_skunkworks\_OLD" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

@@ -958,44 +958,44 @@ sys_kyzil_init = {
         flags = { heshtok_planet }  
         deposit_blockers = none
         modifiers = none
-        init_effect = {
-			save_global_event_target_as = vorchaHomeworld
-			if = {
-				limit = {
-					exists = event_target:vorchaHomeworld
-				}
-				log = "Vorcha Homeworld Event Target Set"
-			}
-            prevent_anomaly = yes
-
-            check_for_vorcha_player = yes
-            
-            if = {
-				limit = { 
-					any_country = {
-						has_country_flag = vorcha_clandom_player
-					}
-				}
-				random_country = {
-					limit = {
-						has_country_flag = vorcha_clandom_player
-					}
-					save_global_event_target_as = vorcha_clandom
-				}
-			}
-			else = {
-				generate_vorcha_clandom_country = yes
-			}
-            set_capital = yes
-			set_owner = event_target:vorcha_clandom
-			create_colony = {
-				owner = event_target:vorcha_clandom
-				species = event_target:vorchaSpecies
-				ethos = owner
-			}
-            generate_vor_heshtok_pops = yes
-            generate_vor_heshtok_buildings = yes
-		}  
+        # init_effect = {
+		# 	save_global_event_target_as = vorchaHomeworld
+		# 	if = {
+		# 		limit = {
+		# 			exists = event_target:vorchaHomeworld
+		# 		}
+		# 		log = "Vorcha Homeworld Event Target Set"
+		# 	}
+        #     prevent_anomaly = yes
+        #
+        #     check_for_vorcha_player = yes
+        #
+        #     if = {
+		# 		limit = {
+		# 			any_country = {
+		# 				has_country_flag = vorcha_clandom_player
+		# 			}
+		# 		}
+		# 		random_country = {
+		# 			limit = {
+		# 				has_country_flag = vorcha_clandom_player
+		# 			}
+		# 			save_global_event_target_as = vorcha_clandom
+		# 		}
+		# 	}
+		# 	else = {
+		# 		generate_vorcha_clandom_country = yes
+		# 	}
+        #     set_capital = yes
+		# 	set_owner = event_target:vorcha_clandom
+		# 	create_colony = {
+		# 		owner = event_target:vorcha_clandom
+		# 		species = event_target:vorchaSpecies
+		# 		ethos = owner
+		# 	}
+        #     generate_vor_heshtok_pops = yes
+        #     generate_vor_heshtok_buildings = yes
+		# }
     }	
 
     planet = {
@@ -1095,37 +1095,37 @@ sys_thal_init = {
 		size = 14
 		flags = { subclass_world altakiril_planet }
 		entity = "fungal_planet_01_entity"
-		init_effect = {
-            save_global_event_target_as = altakirilHomeworld
-            if = {
-                limit = {
-                    exists = event_target:altakirilHomeworld
-                }
-                log = "Altakiril Union Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_altakiril_union_country = yes
-
-            set_capital = yes
-			set_owner = event_target:altakiril_union
-			create_colony = {
-				owner = event_target:altakiril_union
-				species = event_target:turianSpecies
-				ethos = owner
-			}
-
-            generate_altakiril_pops = yes
-
-			add_modifier = {
-				modifier = fungal_world
-				days = -1
-			}
-			add_modifier = {
-				modifier = dextro_world
-				days = -1
-			}
-		}
+		# init_effect = {
+        #     save_global_event_target_as = altakirilHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:altakirilHomeworld
+        #         }
+        #         log = "Altakiril Union Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_altakiril_union_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:altakiril_union
+		# 	create_colony = {
+		# 		owner = event_target:altakiril_union
+		# 		species = event_target:turianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_altakiril_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = fungal_world
+		# 		days = -1
+		# 	}
+		# 	add_modifier = {
+		# 		modifier = dextro_world
+		# 		days = -1
+		# 	}
+		# }
     }
 
     planet = {
@@ -1204,35 +1204,35 @@ sys_urlarast_init = {
 		deposit_blockers = none
         modifiers = none        
 		entity = "ammonia_continental_planet_02_entity"
-		init_effect = {
-            save_global_event_target_as = talisfiaHomeworld
-            if = {
-                limit = {
-                    exists = event_target:talisfiaHomeworld
-                }
-                log = "Thalassocracy of Talis Fia Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_thalassocracy_of_talis_fia_country = yes
-
-            set_capital = yes
-			set_owner = event_target:thalassocracy_of_talis_fia
-			create_colony = {
-				owner = event_target:thalassocracy_of_talis_fia
-				species = event_target:volusSpecies
-				ethos = owner
-			}
-
-            generate_talis_fia_pops = yes
-
-            add_modifier = {
-				modifier = forest_world
-				days = -1
-			}
-
-            add_deposit = d_eezo_trace
-		}
+		# init_effect = {
+        #     save_global_event_target_as = talisfiaHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:talisfiaHomeworld
+        #         }
+        #         log = "Thalassocracy of Talis Fia Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_thalassocracy_of_talis_fia_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:thalassocracy_of_talis_fia
+		# 	create_colony = {
+		# 		owner = event_target:thalassocracy_of_talis_fia
+		# 		species = event_target:volusSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_talis_fia_pops = yes
+        #
+        #     add_modifier = {
+		# 		modifier = forest_world
+		# 		days = -1
+		# 	}
+        #
+        #     add_deposit = d_eezo_trace
+		# }
     }
 
     planet = {
@@ -1495,35 +1495,35 @@ sys_osun_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "bog_planet_02_entity"
-		init_effect = {
-            save_global_event_target_as = erinleHomeworld
-            if = {
-                limit = {
-                    exists = event_target:erinleHomeworld
-                }
-                log = "Erinle Conservancy Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_erinle_conservancy_country = yes
-
-            set_capital = yes
-			set_owner = event_target:erinle_conservancy
-			create_colony = {
-				owner = event_target:erinle_conservancy
-				species = event_target:salarianSpecies
-				ethos = owner
-			}
-
-            generate_erinle_pops = yes
-
-			add_modifier = {
-				modifier = bog_world
-				days = -1
-			}
-
-            add_deposit = d_eezo_scarce
-		}
+		# init_effect = {
+        #     save_global_event_target_as = erinleHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:erinleHomeworld
+        #         }
+        #         log = "Erinle Conservancy Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_erinle_conservancy_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:erinle_conservancy
+		# 	create_colony = {
+		# 		owner = event_target:erinle_conservancy
+		# 		species = event_target:salarianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_erinle_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = bog_world
+		# 		days = -1
+		# 	}
+        #
+        #     add_deposit = d_eezo_scarce
+		# }
     }
 
     planet = {
@@ -2274,34 +2274,34 @@ sys_paz_init = {
         deposit_blockers = none
         modifiers = none
 		flags = { subclass_world garvug_planet }
-		init_effect = {
-            save_global_event_target_as = garvugHomeworld
-            if = {
-                limit = {
-                    exists = event_target:garvugHomeworld
-                }
-                log = "State of Garvug Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_state_of_garvug_country = yes
-
-            set_capital = yes
-			set_owner = event_target:state_of_garvug
-			create_colony = {
-				owner = event_target:state_of_garvug
-				species = event_target:kroganSpecies
-				ethos = owner
-			}
-
-            generate_garvug_pops = yes
-
-            add_modifier = {
-				modifier = snow_world
-				days = -1
-			}
-            add_deposit = d_eezo_scarce
-		}
+		# init_effect = {
+        #     save_global_event_target_as = garvugHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:garvugHomeworld
+        #         }
+        #         log = "State of Garvug Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_state_of_garvug_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:state_of_garvug
+		# 	create_colony = {
+		# 		owner = event_target:state_of_garvug
+		# 		species = event_target:kroganSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_garvug_pops = yes
+        #
+        #     add_modifier = {
+		# 		modifier = snow_world
+		# 		days = -1
+		# 	}
+        #     add_deposit = d_eezo_scarce
+		# }
     }	
 }
 
@@ -3751,33 +3751,33 @@ sys_brikhaun_init = {
         deposit_blockers = none
         modifiers = none
         flags = { thrednakka_planet subclass_world }
-		init_effect = {
-            save_global_event_target_as = thrednakkaHomeworld
-            if = {
-                limit = {
-                    exists = event_target:citadelHomeworld
-                }
-                log = "Citadel Station Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_thrednakka_autonomy_country = yes
-
-            set_capital = yes
-			set_owner = event_target:thrednakka_autonomy
-			create_colony = {
-				owner = event_target:thrednakka_autonomy
-				species = event_target:batarianSpecies
-				ethos = owner
-			}
-
-            generate_thrednakka_pops = yes
-            
-            add_modifier = {
-				modifier = dune_world
-				days = -1
-			}
-		}
+		# init_effect = {
+        #     save_global_event_target_as = thrednakkaHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:citadelHomeworld
+        #         }
+        #         log = "Citadel Station Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_thrednakka_autonomy_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:thrednakka_autonomy
+		# 	create_colony = {
+		# 		owner = event_target:thrednakka_autonomy
+		# 		species = event_target:batarianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_thrednakka_pops = yes
+        #
+        #     add_modifier = {
+		# 		modifier = dune_world
+		# 		days = -1
+		# 	}
+		# }
 	}	
 	
 	init_effect = { 
@@ -3880,33 +3880,33 @@ sys_tkachyov_init = {
 			entity = "steppe_planet_02_entity"
             deposit_blockers = none
             modifiers = none
-			init_effect = {
-                save_global_event_target_as = cyreneHomeworld
-                if = {
-                    limit = {
-                        exists = event_target:cyreneHomeworld
-                    }
-                    log = "Autonomy of Cyrene Event Target Set"
-                }
-                prevent_anomaly = yes
-
-                generate_autonomy_of_cyrene_country = yes
-
-                set_capital = yes
-                set_owner = event_target:autonomy_of_cyrene
-                create_colony = {
-                    owner = event_target:autonomy_of_cyrene
-                    species = event_target:humanSpecies
-                    ethos = owner
-                }
-
-                generate_cyrene_pops = yes
-
-				add_modifier = {
-					modifier = steppe_world
-					days = -1
-				}
-			}
+			# init_effect = {
+            #     save_global_event_target_as = cyreneHomeworld
+            #     if = {
+            #         limit = {
+            #             exists = event_target:cyreneHomeworld
+            #         }
+            #         log = "Autonomy of Cyrene Event Target Set"
+            #     }
+            #     prevent_anomaly = yes
+            #
+            #     generate_autonomy_of_cyrene_country = yes
+            #
+            #     set_capital = yes
+            #     set_owner = event_target:autonomy_of_cyrene
+            #     create_colony = {
+            #         owner = event_target:autonomy_of_cyrene
+            #         species = event_target:humanSpecies
+            #         ethos = owner
+            #     }
+            #
+            #     generate_cyrene_pops = yes
+            #
+			# 	add_modifier = {
+			# 		modifier = steppe_world
+			# 		days = -1
+			# 	}
+			# }
 		}
 	}
 
@@ -4440,35 +4440,35 @@ sys_enoch_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "mire_planet_06_entity"
-		init_effect = {
-            save_global_event_target_as = joabHomeworld
-            if = {
-                limit = {
-                    exists = event_target:joabHomeworld
-                }
-                log = "Commonwealth of Joab Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_commonwealth_of_joab_country = yes
-
-            set_capital = yes
-			set_owner = event_target:commonwealth_of_joab
-			create_colony = {
-				owner = event_target:commonwealth_of_joab
-				species = event_target:humanSpecies
-				ethos = owner
-			}
-
-            generate_joab_pops = yes
-
-            add_modifier = {
-				modifier = mire_world
-				days = -1
-			}
-
-            add_deposit = d_eezo_scarce
-		}
+		# init_effect = {
+        #     save_global_event_target_as = joabHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:joabHomeworld
+        #         }
+        #         log = "Commonwealth of Joab Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_commonwealth_of_joab_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:commonwealth_of_joab
+		# 	create_colony = {
+		# 		owner = event_target:commonwealth_of_joab
+		# 		species = event_target:humanSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_joab_pops = yes
+        #
+        #     add_modifier = {
+		# 		modifier = mire_world
+		# 		days = -1
+		# 	}
+        #
+        #     add_deposit = d_eezo_scarce
+		# }
 
 		moon = {
 			name = "Esther"
@@ -5710,33 +5710,33 @@ sys_jintanei_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "outback_planet_01_entity"
-		init_effect = {
-            save_global_event_target_as = ferrisfieldsHomeworld
-            if = {
-                limit = {
-                    exists = event_target:ferrisfieldsHomeworld
-                }
-                log = "Ferris Fields Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_union_of_ferris_fields_country = yes
-
-            set_capital = yes
-			set_owner = event_target:union_of_ferris_fields
-			create_colony = {
-				owner = event_target:union_of_ferris_fields
-				species = event_target:humanSpecies
-				ethos = owner
-			}
-
-            generate_ferris_fields_pops = yes
-
-            add_modifier = {
-				modifier = outback_world
-				days = -1
-			}
-		}
+		# init_effect = {
+        #     save_global_event_target_as = ferrisfieldsHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:ferrisfieldsHomeworld
+        #         }
+        #         log = "Ferris Fields Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_union_of_ferris_fields_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:union_of_ferris_fields
+		# 	create_colony = {
+		# 		owner = event_target:union_of_ferris_fields
+		# 		species = event_target:humanSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_ferris_fields_pops = yes
+        #
+        #     add_modifier = {
+		# 		modifier = outback_world
+		# 		days = -1
+		# 	}
+		# }
 	}
 
 	planet = {
@@ -5874,33 +5874,33 @@ sys_razhek_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "snow_planet_05_entity"
-		init_effect = {
-            save_global_event_target_as = newcantonHomeworld
-            if = {
-                limit = {
-                    exists = event_target:newcantonHomeworld
-                }
-                log = "New Canton Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_authority_of_new_canton_country = yes
-
-            set_capital = yes
-			set_owner = event_target:authority_of_new_canton
-			create_colony = {
-				owner = event_target:authority_of_new_canton
-				species = event_target:humanSpecies
-				ethos = owner
-			}
-
-            generate_new_canton_pops = yes
-
-            add_modifier = {
-				modifier = snow_world
-				days = -1
-			}
-		}
+		# init_effect = {
+        #     save_global_event_target_as = newcantonHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:newcantonHomeworld
+        #         }
+        #         log = "New Canton Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_authority_of_new_canton_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:authority_of_new_canton
+		# 	create_colony = {
+		# 		owner = event_target:authority_of_new_canton
+		# 		species = event_target:humanSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_new_canton_pops = yes
+        #
+        #     add_modifier = {
+		# 		modifier = snow_world
+		# 		days = -1
+		# 	}
+		# }
 	}	
 
     change_orbit = 50
@@ -6151,48 +6151,48 @@ sys_nosikae_init = {
         flags = { sedriicae_planet subclass_world }
         deposit_blockers = none
         modifiers = none
-		init_effect = {
-            save_global_event_target_as = forayanHomeworld
-			if = {
-				limit = {
-					exists = event_target:forayanHomeworld
-				}
-				log = "Forayan Homeworld Event Target Set"
-			}
-            prevent_anomaly = yes
-
-            check_for_forayan_player = yes
-            
-            if = {
-				limit = { 
-					any_country = {
-						has_country_flag = sedriicae_collective_player
-					}
-				}
-				random_country = {
-					limit = {
-						has_country_flag = sedriicae_collective_player
-					}
-					save_global_event_target_as = sedriicae_collective
-				}
-			}
-			else = {
-				generate_sedriicae_collective_country = yes
-			}
-            set_capital = yes
-			set_owner = event_target:sedriicae_collective
-			create_colony = {
-				owner = event_target:sedriicae_collective
-				species = event_target:forayanSpecies
-				ethos = owner
-			}
-            generate_sed_sedriicae_pops = yes
-			add_modifier = {
-				modifier = dextro_world
-				days = -1
-			}
-            generate_sed_sedriicae_capital_buildings = yes
-		}			
+		# init_effect = {
+        #     save_global_event_target_as = forayanHomeworld
+		# 	if = {
+		# 		limit = {
+		# 			exists = event_target:forayanHomeworld
+		# 		}
+		# 		log = "Forayan Homeworld Event Target Set"
+		# 	}
+        #     prevent_anomaly = yes
+        #
+        #     check_for_forayan_player = yes
+        #
+        #     if = {
+		# 		limit = {
+		# 			any_country = {
+		# 				has_country_flag = sedriicae_collective_player
+		# 			}
+		# 		}
+		# 		random_country = {
+		# 			limit = {
+		# 				has_country_flag = sedriicae_collective_player
+		# 			}
+		# 			save_global_event_target_as = sedriicae_collective
+		# 		}
+		# 	}
+		# 	else = {
+		# 		generate_sedriicae_collective_country = yes
+		# 	}
+        #     set_capital = yes
+		# 	set_owner = event_target:sedriicae_collective
+		# 	create_colony = {
+		# 		owner = event_target:sedriicae_collective
+		# 		species = event_target:forayanSpecies
+		# 		ethos = owner
+		# 	}
+        #     generate_sed_sedriicae_pops = yes
+		# 	add_modifier = {
+		# 		modifier = dextro_world
+		# 		days = -1
+		# 	}
+        #     generate_sed_sedriicae_capital_buildings = yes
+		# }
 	}
 	
 	planet = {
@@ -7637,39 +7637,39 @@ sys_the_sea_of_storms_init = {
         flags = { heretic_station }
         deposit_blockers = none
         modifiers = none
-        init_effect = {
-			save_global_event_target_as = disciplesHomeStation
-
-            prevent_anomaly = yes
-
-            check_for_geth_player = yes
-            
-            if = {
-				limit = { 
-					any_country = {
-						has_country_flag = disciples_of_nazara_player
-					}
-				}
-				random_country = {
-					limit = {
-						has_country_flag = disciples_of_nazara_player
-					}
-					save_global_event_target_as = disciples_of_nazara
-				}
-			}
-			else = {
-				generate_disciples_of_nazara_country = yes
-			}
-            set_capital = yes
-			set_owner = event_target:disciples_of_nazara
-			create_colony = {
-				owner = event_target:disciples_of_nazara
-				species = event_target:gethSpecies
-				ethos = owner
-			}
-            generate_naz_station_pops = yes
-            generate_naz_heretic_station_capital_buildings = yes
-		} 
+        # init_effect = {
+		# 	save_global_event_target_as = disciplesHomeStation
+        #
+        #     prevent_anomaly = yes
+        #
+        #     check_for_geth_player = yes
+        #
+        #     if = {
+		# 		limit = {
+		# 			any_country = {
+		# 				has_country_flag = disciples_of_nazara_player
+		# 			}
+		# 		}
+		# 		random_country = {
+		# 			limit = {
+		# 				has_country_flag = disciples_of_nazara_player
+		# 			}
+		# 			save_global_event_target_as = disciples_of_nazara
+		# 		}
+		# 	}
+		# 	else = {
+		# 		generate_disciples_of_nazara_country = yes
+		# 	}
+        #     set_capital = yes
+		# 	set_owner = event_target:disciples_of_nazara
+		# 	create_colony = {
+		# 		owner = event_target:disciples_of_nazara
+		# 		species = event_target:gethSpecies
+		# 		ethos = owner
+		# 	}
+        #     generate_naz_station_pops = yes
+        #     generate_naz_heretic_station_capital_buildings = yes
+		# }
     }
 }
 
@@ -7711,35 +7711,35 @@ sys_typhon_init = {
 		deposit_blockers = none
 		modifiers = none
 		flags = { subclass_world }
-		init_effect = {
-            save_global_event_target_as = aiteHomeworld
-            set_planet_flag = aite_planet
-            if = {
-                limit = {
-                    exists = event_target:aiteHomeworld
-                }
-                log = "Aite Warring States Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_aite_warring_states_country = yes
-
-            set_capital = yes
-			set_owner = event_target:aite_warring_states
-            set_controller = event_target:aite_warring_states
-			create_colony = {
-				owner = event_target:aite_warring_states
-				species = event_target:batarianSpecies
-				ethos = owner
-			}
-
-            generate_aite_pops = yes
-
-			add_modifier = {
-				modifier = temperate_world
-				days = -1
-			}
-		}
+		# init_effect = {
+        #     save_global_event_target_as = aiteHomeworld
+        #     set_planet_flag = aite_planet
+        #     if = {
+        #         limit = {
+        #             exists = event_target:aiteHomeworld
+        #         }
+        #         log = "Aite Warring States Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_aite_warring_states_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:aite_warring_states
+        #     set_controller = event_target:aite_warring_states
+		# 	create_colony = {
+		# 		owner = event_target:aite_warring_states
+		# 		species = event_target:batarianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_aite_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = temperate_world
+		# 		days = -1
+		# 	}
+		# }
 
         moon = {
             name = "Litae"
@@ -7941,33 +7941,33 @@ sys_tydeous_init = {
 		modifiers = none
 		entity = "badlands_planet_01_entity"
 		flags = { subclass_world freedoms_progress_planet }
-		init_effect = {			
-            save_global_event_target_as = freedomsprogressHomeworld
-            if = {
-                limit = {
-                    exists = event_target:freedomsprogressHomeworld
-                }
-                log = "Freehold of Freedom's Progress Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_freehold_of_freedoms_progress_country = yes
-
-            set_capital = yes
-			set_owner = event_target:freehold_of_freedoms_progress
-			create_colony = {
-				owner = event_target:freehold_of_freedoms_progress
-				species = event_target:humanSpecies
-				ethos = owner
-			}
-
-            generate_freedoms_progress_pops = yes
-
-			add_modifier = {
-				modifier = badlands_world
-				days = -1
-			}
-		}
+		# init_effect = {
+        #     save_global_event_target_as = freedomsprogressHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:freedomsprogressHomeworld
+        #         }
+        #         log = "Freehold of Freedom's Progress Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_freehold_of_freedoms_progress_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:freehold_of_freedoms_progress
+		# 	create_colony = {
+		# 		owner = event_target:freehold_of_freedoms_progress
+		# 		species = event_target:humanSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_freedoms_progress_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = badlands_world
+		# 		days = -1
+		# 	}
+		# }
 
 		moon = {
 			name = "Freedom's Progress a"
@@ -8366,52 +8366,52 @@ sys_tikkun_init = {
 		flags = { rannoch_planet subclass_world }	
         deposit_blockers = none
         modifiers = none
-		init_effect = {
-            save_global_event_target_as = gethHomeworld
-			if = {
-				limit = {
-					exists = event_target:gethHomeworld
-				}
-				log = "Geth Homeworld Event Target Set"
-			}
-            prevent_anomaly = yes
-
-            check_for_geth_player = yes
-            
-            if = {
-				limit = { 
-					any_country = {
-						has_country_flag = geth_consensus_player
-					}
-				}
-				random_country = {
-					limit = {
-						has_country_flag = geth_consensus_player
-					}
-					save_global_event_target_as = geth_consensus
-				}
-			}
-			else = {
-				generate_geth_consensus_country = yes
-			}
-            set_capital = yes
-			set_owner = event_target:geth_consensus
-			create_colony = {
-				owner = event_target:geth_consensus
-				species = event_target:gethSpecies
-				ethos = owner
-			}
-            generate_get_rannoch_pops = yes
-			add_modifier = {
-				modifier = dextro_world
-				days = -1
-			}
-			add_modifier = {
-				modifier = mesa_world
-				days = -1
-			}
-            generate_get_rannoch_capital_buildings = yes
-		}
+		# init_effect = {
+        #     save_global_event_target_as = gethHomeworld
+		# 	if = {
+		# 		limit = {
+		# 			exists = event_target:gethHomeworld
+		# 		}
+		# 		log = "Geth Homeworld Event Target Set"
+		# 	}
+        #     prevent_anomaly = yes
+        #
+        #     check_for_geth_player = yes
+        #
+        #     if = {
+		# 		limit = {
+		# 			any_country = {
+		# 				has_country_flag = geth_consensus_player
+		# 			}
+		# 		}
+		# 		random_country = {
+		# 			limit = {
+		# 				has_country_flag = geth_consensus_player
+		# 			}
+		# 			save_global_event_target_as = geth_consensus
+		# 		}
+		# 	}
+		# 	else = {
+		# 		generate_geth_consensus_country = yes
+		# 	}
+        #     set_capital = yes
+		# 	set_owner = event_target:geth_consensus
+		# 	create_colony = {
+		# 		owner = event_target:geth_consensus
+		# 		species = event_target:gethSpecies
+		# 		ethos = owner
+		# 	}
+        #     generate_get_rannoch_pops = yes
+		# 	add_modifier = {
+		# 		modifier = dextro_world
+		# 		days = -1
+		# 	}
+		# 	add_modifier = {
+		# 		modifier = mesa_world
+		# 		days = -1
+		# 	}
+        #     generate_get_rannoch_capital_buildings = yes
+		# }
 		
 		moon = {
 			name = "Jelachai"
@@ -8607,33 +8607,33 @@ sys_adiratna_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "mire_planet_01_entity"
-		init_effect = {
-            save_global_event_target_as = monriniHomeworld
-            if = {
-                limit = {
-                    exists = event_target:monriniHomeworld
-                }
-                log = "Monrini Syndicate Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_monrini_syndicate_country = yes
-
-            set_capital = yes
-			set_owner = event_target:monrini_syndicate
-			create_colony = {
-				owner = event_target:monrini_syndicate
-				species = event_target:salarianSpecies
-				ethos = owner
-			}
-
-            generate_monrini_pops = yes
-
-			add_modifier = {
-				modifier = mire_world
-				days = -1
-			}
-		}
+		# init_effect = {
+        #     save_global_event_target_as = monriniHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:monriniHomeworld
+        #         }
+        #         log = "Monrini Syndicate Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_monrini_syndicate_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:monrini_syndicate
+		# 	create_colony = {
+		# 		owner = event_target:monrini_syndicate
+		# 		species = event_target:salarianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_monrini_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = mire_world
+		# 		days = -1
+		# 	}
+		# }
 	}
 
 	planet = {
@@ -9108,8 +9108,7 @@ sys_cheng_init = {
 				modifier = aquifer_world
 				days = -1
 			}
-		}
-        init_effect = {
+
             add_deposit = d_eezo_trace
         }
 	}
@@ -9214,30 +9213,30 @@ sys_fal_init = {
         deposit_blockers = none
         modifiers = none
         flags = { yalson_planet }
-        init_effect = {
-            save_global_event_target_as = yalsonHomeworld
-            if = {
-                limit = {
-                    exists = event_target:yalsonHomeworld
-                }
-                log = "Fal III Manufactory Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_fal_iii_manufactory_country = yes
-
-            set_capital = yes
-			set_owner = event_target:fal_iii_manufactory
-			create_colony = {
-				owner = event_target:fal_iii_manufactory
-				species = event_target:salarianSpecies
-				ethos = owner
-			}
-
-            generate_yalson_pops = yes
-
-            add_deposit = d_eezo_trace
-        }
+        # init_effect = {
+        #     save_global_event_target_as = yalsonHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:yalsonHomeworld
+        #         }
+        #         log = "Fal III Manufactory Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_fal_iii_manufactory_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:fal_iii_manufactory
+		# 	create_colony = {
+		# 		owner = event_target:fal_iii_manufactory
+		# 		species = event_target:salarianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_yalson_pops = yes
+        #
+        #     add_deposit = d_eezo_trace
+        # }
 	}
 	
 	planet = {
@@ -9302,33 +9301,33 @@ sys_olonnais_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "basalt_planet_06_entity"
-		init_effect = {
-            save_global_event_target_as = tortugaHomeworld
-            if = {
-                limit = {
-                    exists = event_target:tortugaHomeworld
-                }
-                log = "Free Port of Tortuga Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_free_port_of_tortuga_country = yes
-
-            set_capital = yes
-			set_owner = event_target:free_port_of_tortuga
-			create_colony = {
-				owner = event_target:free_port_of_tortuga
-				species = event_target:batarianSpecies
-				ethos = owner
-			}
-
-            generate_tortuga_pops = yes
-
-			add_modifier = {
-				modifier = basalt_world
-				days = -1
-			}
-		}
+		# init_effect = {
+        #     save_global_event_target_as = tortugaHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:tortugaHomeworld
+        #         }
+        #         log = "Free Port of Tortuga Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_free_port_of_tortuga_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:free_port_of_tortuga
+		# 	create_colony = {
+		# 		owner = event_target:free_port_of_tortuga
+		# 		species = event_target:batarianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_tortuga_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = basalt_world
+		# 		days = -1
+		# 	}
+		# }
 
         moon = {
 			name = "Batsch"
@@ -9673,33 +9672,33 @@ sys_essul_init = {
 			flags = { subclass_world sahidau_planet }
             orbit_distance = 15
             modifiers = none
-			init_effect = {	
-                save_global_event_target_as = sahidauHomeworld
-                if = {
-                    limit = {
-                        exists = event_target:sahidauHomeworld
-                    }
-                    log = "League of Sahi Dau Event Target Set"
-                }
-                prevent_anomaly = yes
-
-                generate_league_of_sahi_dau_country = yes
-
-                set_capital = yes
-                set_owner = event_target:league_of_sahi_dau
-                create_colony = {
-                    owner = event_target:league_of_sahi_dau
-                    species = event_target:volusSpecies
-                    ethos = owner
-                }
-
-                generate_sahi_dau_pops = yes
-
-                add_modifier = {
-					modifier = supercon_world
-					days = -1
-				}
-			}
+			# init_effect = {
+            #     save_global_event_target_as = sahidauHomeworld
+            #     if = {
+            #         limit = {
+            #             exists = event_target:sahidauHomeworld
+            #         }
+            #         log = "League of Sahi Dau Event Target Set"
+            #     }
+            #     prevent_anomaly = yes
+            #
+            #     generate_league_of_sahi_dau_country = yes
+            #
+            #     set_capital = yes
+            #     set_owner = event_target:league_of_sahi_dau
+            #     create_colony = {
+            #         owner = event_target:league_of_sahi_dau
+            #         species = event_target:volusSpecies
+            #         ethos = owner
+            #     }
+            #
+            #     generate_sahi_dau_pops = yes
+            #
+            #     add_modifier = {
+			# 		modifier = supercon_world
+			# 		days = -1
+			# 	}
+			# }
 		}
 	}	
 }	
@@ -10053,48 +10052,48 @@ sys_taesin_init = {
 		entity = "biolum_planet_08_entity"	
         deposit_blockers = none
         modifiers = none
-		init_effect = {
-            save_global_event_target_as = lystheniHomeworld
-			if = {
-				limit = {
-					exists = event_target:lystheniHomeworld
-				}
-				log = "Lystheni Homeworld Event Target Set"
-			}
-            prevent_anomaly = yes
-
-            check_for_lystheni_player = yes
-            
-            if = {
-				limit = { 
-					any_country = {
-						has_country_flag = lystheni_order_player
-					}
-				}
-				random_country = {
-					limit = {
-						has_country_flag = lystheni_order_player
-					}
-					save_global_event_target_as = lystheni_order
-				}
-			}
-			else = {
-				generate_lystheni_order_country = yes
-			}
-            set_capital = yes
-			set_owner = event_target:lystheni_order
-			create_colony = {
-				owner = event_target:lystheni_order
-				species = event_target:lystheniSpecies
-				ethos = owner
-			}
-            generate_lys_sepkai_pops = yes
-			add_modifier = {
-				modifier = biolum_world
-				days = -1
-			}
-            generate_lys_sepkai_capital_buildings = yes
-		}	
+		# init_effect = {
+        #     save_global_event_target_as = lystheniHomeworld
+		# 	if = {
+		# 		limit = {
+		# 			exists = event_target:lystheniHomeworld
+		# 		}
+		# 		log = "Lystheni Homeworld Event Target Set"
+		# 	}
+        #     prevent_anomaly = yes
+        #
+        #     check_for_lystheni_player = yes
+        #
+        #     if = {
+		# 		limit = {
+		# 			any_country = {
+		# 				has_country_flag = lystheni_order_player
+		# 			}
+		# 		}
+		# 		random_country = {
+		# 			limit = {
+		# 				has_country_flag = lystheni_order_player
+		# 			}
+		# 			save_global_event_target_as = lystheni_order
+		# 		}
+		# 	}
+		# 	else = {
+		# 		generate_lystheni_order_country = yes
+		# 	}
+        #     set_capital = yes
+		# 	set_owner = event_target:lystheni_order
+		# 	create_colony = {
+		# 		owner = event_target:lystheni_order
+		# 		species = event_target:lystheniSpecies
+		# 		ethos = owner
+		# 	}
+        #     generate_lys_sepkai_pops = yes
+		# 	add_modifier = {
+		# 		modifier = biolum_world
+		# 		days = -1
+		# 	}
+        #     generate_lys_sepkai_capital_buildings = yes
+		# }
 
 		moon = {
 			name = "Nonau"
@@ -11049,35 +11048,35 @@ sys_decoris_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "snow_planet_03_entity"
-		init_effect = {
-            save_global_event_target_as = sanctumHomeworld
-            if = {
-                limit = {
-                    exists = event_target:sanctumHomeworld
-                }
-                log = "Sanctum Metals Group Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_sanctum_metals_group_country = yes
-
-            set_capital = yes
-			set_owner = event_target:sanctum_metals_group
-			create_colony = {
-				owner = event_target:sanctum_metals_group
-				species = event_target:turianSpecies
-				ethos = owner
-			}
-
-            generate_sanctum_pops = yes
-
-			add_modifier = {
-				modifier = snow_world
-				days = -1
-			}
-
-            add_deposit = d_eezo_scarce
-		}
+		# init_effect = {
+        #     save_global_event_target_as = sanctumHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:sanctumHomeworld
+        #         }
+        #         log = "Sanctum Metals Group Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_sanctum_metals_group_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:sanctum_metals_group
+		# 	create_colony = {
+		# 		owner = event_target:sanctum_metals_group
+		# 		species = event_target:turianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_sanctum_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = snow_world
+		# 		days = -1
+		# 	}
+        #
+        #     add_deposit = d_eezo_scarce
+		# }
     }	
 }
 
@@ -11151,33 +11150,33 @@ sys_lenal_init = {
 		entity = "badlands_planet_08_entity"
         deposit_blockers = none
         modifiers = none
-		init_effect = {
-            save_global_event_target_as = trigintapetraHomeworld
-            if = {
-                limit = {
-                    exists = event_target:trigintapetraHomeworld
-                }
-                log = "Trigintan League Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_trigintan_league_country = yes
-
-            set_capital = yes
-			set_owner = event_target:trigintan_league
-			create_colony = {
-				owner = event_target:trigintan_league
-				species = event_target:turianSpecies
-				ethos = owner
-			}
-
-            generate_triginta_petra_pops = yes
-
-            add_modifier = {
-				modifier = badlands_world
-				days = -1
-			}
-		}
+		# init_effect = {
+        #     save_global_event_target_as = trigintapetraHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:trigintapetraHomeworld
+        #         }
+        #         log = "Trigintan League Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_trigintan_league_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:trigintan_league
+		# 	create_colony = {
+		# 		owner = event_target:trigintan_league
+		# 		species = event_target:turianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_triginta_petra_pops = yes
+        #
+        #     add_modifier = {
+		# 		modifier = badlands_world
+		# 		days = -1
+		# 	}
+		# }
     }
 
     planet = {
@@ -11260,29 +11259,29 @@ sys_mil_init = {
         deposit_blockers = none
         modifiers = none
         flags = { subclass_world chalkos_planet }
-        init_effect = {
-            save_global_event_target_as = chalkosHomeworld
-            if = {
-                limit = {
-                    exists = event_target:chalkosHomeworld
-                }
-                log = "Chalkos Freehold Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_chalkhos_freehold_country = yes
-            
-            set_capital = yes
-			set_owner = event_target:chalkhos_freehold
-			create_colony = {
-				owner = event_target:chalkhos_freehold
-				species = event_target:asariSpecies
-				ethos = owner
-			}
-
-            generate_chalkhos_pops = yes
-
-        }
+        # init_effect = {
+        #     save_global_event_target_as = chalkosHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:chalkosHomeworld
+        #         }
+        #         log = "Chalkos Freehold Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_chalkhos_freehold_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:chalkhos_freehold
+		# 	create_colony = {
+		# 		owner = event_target:chalkhos_freehold
+		# 		species = event_target:asariSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_chalkhos_pops = yes
+        #
+        # }
     }
 
     planet = {
@@ -12072,33 +12071,33 @@ sys_batalla_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "mephitic_arid_planet_03_entity"
-		init_effect = {
-            save_global_event_target_as = logarisiHomeworld
-            if = {
-                limit = {
-                    exists = event_target:logarisiHomeworld
-                }
-                log = "Logarisi Development Corporation Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_logarisi_development_corporation_country = yes
-
-            set_capital = yes
-			set_owner = event_target:logarisi_development_corporation
-			create_colony = {
-				owner = event_target:logarisi_development_corporation
-				species = event_target:batarianSpecies
-				ethos = owner
-			}
-
-            generate_logarisi_pops = yes
-
-			add_modifier = {
-				modifier = outback_world
-				days = -1
-			}
-		}
+		# init_effect = {
+        #     save_global_event_target_as = logarisiHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:logarisiHomeworld
+        #         }
+        #         log = "Logarisi Development Corporation Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_logarisi_development_corporation_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:logarisi_development_corporation
+		# 	create_colony = {
+		# 		owner = event_target:logarisi_development_corporation
+		# 		species = event_target:batarianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_logarisi_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = outback_world
+		# 		days = -1
+		# 	}
+		# }
     }
 
     planet = {
@@ -12111,39 +12110,39 @@ sys_batalla_init = {
         flags = { subclass_world thunawanuro_planet }
         deposit_blockers = none
         modifiers = none
-		init_effect = {
-            save_global_event_target_as = thunawanuroHomeworld
-            if = {
-                limit = {
-                    exists = event_target:thunawanuroHomeworld
-                }
-                log = "Confederation of Thunawanuro Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_confederation_of_thunawanuro_country = yes
-
-            set_capital = yes
-			set_owner = event_target:confederation_of_thunawanuro
-			create_colony = {
-				owner = event_target:confederation_of_thunawanuro
-				species = event_target:elcorSpecies
-				ethos = owner
-			}
-
-            generate_thunawanuro_pops = yes
-
-			add_modifier = {
-				modifier = high_gravity
-				days = -1
-			}
-			add_modifier = {
-				modifier = forest_world
-				days = -1
-			}
-
-            add_deposit = d_eezo_scarce
-		}
+		# init_effect = {
+        #     save_global_event_target_as = thunawanuroHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:thunawanuroHomeworld
+        #         }
+        #         log = "Confederation of Thunawanuro Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_confederation_of_thunawanuro_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:confederation_of_thunawanuro
+		# 	create_colony = {
+		# 		owner = event_target:confederation_of_thunawanuro
+		# 		species = event_target:elcorSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_thunawanuro_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = high_gravity
+		# 		days = -1
+		# 	}
+		# 	add_modifier = {
+		# 		modifier = forest_world
+		# 		days = -1
+		# 	}
+        #
+        #     add_deposit = d_eezo_scarce
+		# }
     }
 
     planet = {
@@ -12433,39 +12432,39 @@ sys_sahrabarik_init = {
         flags = { omega_station }
         deposit_blockers = none
         modifiers = none
-        init_effect = {
-            prevent_anomaly = yes
-
-            check_for_asari_player = yes
-            
-            if = {
-				limit = { 
-					any_country = {
-						has_country_flag = omega_empire_player
-					}
-				}
-				random_country = {
-					limit = {
-						has_country_flag = omega_empire_player
-					}
-					save_global_event_target_as = omega_empire
-				}
-			}
-			else = {
-				generate_omega_empire_country = yes
-			}
-            set_capital = yes
-			set_owner = event_target:omega_empire
-			create_colony = {
-				owner = event_target:omega_empire
-				species = event_target:asariSpecies
-				ethos = owner
-			}
-            generate_omega_pops = yes     
-            add_deposit = d_eezo_abundant       
-
-            generate_omega_building_and_districts = yes
-        }
+        # init_effect = {
+        #     prevent_anomaly = yes
+        #
+        #     check_for_asari_player = yes
+        #
+        #     if = {
+		# 		limit = {
+		# 			any_country = {
+		# 				has_country_flag = omega_empire_player
+		# 			}
+		# 		}
+		# 		random_country = {
+		# 			limit = {
+		# 				has_country_flag = omega_empire_player
+		# 			}
+		# 			save_global_event_target_as = omega_empire
+		# 		}
+		# 	}
+		# 	else = {
+		# 		generate_omega_empire_country = yes
+		# 	}
+        #     set_capital = yes
+		# 	set_owner = event_target:omega_empire
+		# 	create_colony = {
+		# 		owner = event_target:omega_empire
+		# 		species = event_target:asariSpecies
+		# 		ethos = owner
+		# 	}
+        #     generate_omega_pops = yes
+        #     add_deposit = d_eezo_abundant
+        #
+        #     generate_omega_building_and_districts = yes
+        # }
 	}			
 
     planet = {

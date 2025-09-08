@@ -55,7 +55,7 @@ salarian_uni_hold_the_line_full_spy = {
 
 salarian_uni_hold_the_line_survey_army = {
 	army_attack_damage_mult = 0.25
-	pop_growth_speed = 0.1
+	logistic_growth_mult = 0.1
 }
 
 salarian_uni_hold_the_line_full_spy_army = {
@@ -67,7 +67,13 @@ salarian_uni_hold_the_line_full_spy_army = {
 # TURIAN HIERARCHY #
 ####################
 
-turian_hier_shanxi_314 = {
+turian_hie_empire_modifier = {
+	pop_job_amenities_mult = 0.05
+	planet_jobs_consumer_goods_produces_mult = 0.05
+	planet_jobs_trade_produces_mult = 0.1
+}
+
+turian_hie_shanxi_314 = {
 	army_morale = -0.15
 	diplo_weight_naval_mult = -0.05
 	ship_experience_gain_mult = 0.2
@@ -85,8 +91,8 @@ systems_all_empire_modifier = {
 
 systems_all_skyllian_verge = {
 	starbase_outpost_cost_mult = -0.2
-	starbase_outpost_time_cost_mult = -0.2
-	pop_growth_speed = 0.2
+	shipsize_starbase_outpost_build_speed_mult = -0.2
+	logistic_growth_mult = 0.2
 }
 
 # Lore Addition
@@ -103,8 +109,8 @@ systems_all_shanxi_314 = {
 # COURTS OF DEKUUNA #
 #####################
 
-courts_deku_mechanized_army = { 
-	pop_defense_armies_add = 2
+courts_deku_mechanized_army = {
+	planet_defense_armies_add = 2
 	armies_upkeep_mult = 1
 	army_morale = 0.33
 	army_health = 0.3
@@ -118,7 +124,7 @@ courts_deku_mechanized_army = {
 volus_corporate_dominance = {
 	commercial_pact_mult = 0.5
 	planet_pops_organics_consumer_goods_upkeep_mult = -0.1
-	trade_routes_produces_mult = 0.25
+	planet_buildings_trade_produces_mult = 0.25
 }
 
 #########################
@@ -205,12 +211,13 @@ illium_corporate_emporium = {
 #TO BE REPLACED WITH Miz's REPLACEMENT MODIFIER
 }
 illium_tribute_modifier = {
-	country_produces_heavy_alloys_add = 10
-	country_produces_light_alloys_add = 10
-	country_produces_antimatter_fuel_add = 10
-	country_produces_uranium_add = 10
-	country_produces_eezo_add = 0.5
+	country_base_light_alloys_produces_add = 10
+	country_base_heavy_alloys_produces_add = 10
+	country_base_antimatter_fuel_produces_add = 10
+	country_base_uranium_produces_add = 10
+	country_base_eezo_produces_add = 0.5
 }
+
 ########################
 # CALESTON DIRECTORATE #
 ########################
@@ -219,8 +226,7 @@ caleston_dir_civility_among_savages = {
 	pop_demotion_time_mult = -0.5
 	planet_stability_add = 5
 	starbase_defense_platform_capacity_add = 16
-	shipclass_starbase_shield_mult = 0.2
-	shipclass_starbase_armor_mult = 0.2
+	shipclass_starbase_armor_mult = 0.4
 	army_defense_morale_mult = 0.1
 }
 
@@ -247,8 +253,8 @@ drell_dying_planet_2 = {
 	planet_jobs_minerals_produces_mult = 0.3
 	planet_jobs_energy_produces_mult = 0.3
 	planet_stability_add = -10
-	planet_immigration_pull_mult = -0.5
-	planet_emigration_push_add = 100
+	planet_resettlement_unemployed_destination_mult = -0.5
+	planet_resettlement_unemployed_mult = 10.0
 }
 
 drell_dying_planet_3 = {
@@ -259,8 +265,8 @@ drell_dying_planet_3 = {
 	planet_jobs_minerals_produces_mult = 0.6
 	planet_jobs_energy_produces_mult = 0.6
 	planet_stability_add = -15
-	planet_immigration_pull_mult = -0.5
-	planet_emigration_push_add = 100
+	planet_resettlement_unemployed_destination_mult = -0.5
+	planet_resettlement_unemployed_mult = 10.0
 }
 
 drell_dying_planet_4 = {
@@ -271,8 +277,8 @@ drell_dying_planet_4 = {
 	planet_jobs_minerals_produces_mult = 0.9
 	planet_jobs_energy_produces_mult = 0.9
 	planet_stability_add = -20
-	planet_immigration_pull_mult = -0.5
-	planet_emigration_push_add = 100
+	planet_resettlement_unemployed_destination_mult = -0.5
+	planet_resettlement_unemployed_mult = 10.0
 }
 
 drell_dying_planet_5 = {
@@ -283,8 +289,8 @@ drell_dying_planet_5 = {
 	planet_jobs_minerals_produces_mult = 1.2
 	planet_jobs_energy_produces_mult = 1.2
 	planet_stability_add = -30
-	planet_immigration_pull_mult = -0.5
-	planet_emigration_push_add = 100
+	planet_resettlement_unemployed_destination_mult = -0.5
+	planet_resettlement_unemployed_mult = 10.0
 }
 
 drell_dying_planet_first_colony = {
@@ -355,7 +361,7 @@ parnack_regime_highly_adaptable = {
 	ship_weapon_damage = 0.2
 	empire_size_penalty_mult = -0.2
 	planet_jobs_unity_produces_mult = 0.2
-	pop_growth_speed = 0.5
+	logistic_growth_mult = 0.5
 	country_energy_produces_mult = 1
 	country_minerals_produces_mult = 0.5
 }
@@ -364,7 +370,7 @@ parnack_regime_highly_adaptable = {
 # RALOI REPUBLIC #
 ##################
 raloi_catching_up = {
-	pop_growth_speed = 2
+	logistic_growth_mult = 2
 	starbase_outpost_cost_mult = -0.2
 	all_technology_research_speed = 0.1
 }
@@ -397,10 +403,10 @@ nazara_alone_with_divine = {
 # Rachni Hive #
 ################
 rachni_choir_sings = {
-	pop_growth_speed = 0.2
-	planet_jobs_engineering_research_mult = 0.2
-	planet_jobs_physics_research_mult = 0.2
-	planet_jobs_society_research_mult =  0.2
+	logistic_growth_mult = 0.2
+	country_engineering_research_produces_mult = 0.2
+	country_physics_research_produces_mult = 0.2
+	country_society_research_produces_mult =  0.2
 }
 
 ##############

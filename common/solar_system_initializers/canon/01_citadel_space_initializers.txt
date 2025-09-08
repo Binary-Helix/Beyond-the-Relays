@@ -446,6 +446,10 @@ sys_pompeii_init = {
 
     flags = { inner_council sector_ic1 vesuvius_nebula pompeii_system secondary_relay_system }
 
+    init_effect = {
+        generate_btr_home_system_resources = yes
+    }
+
     planet = {
 	    name = "Pompeii"
         class = pc_g_star
@@ -463,48 +467,48 @@ sys_pompeii_init = {
 		flags = { rakhana_planet subclass_world }
         deposit_blockers = none
         modifiers = none
-		init_effect = {
-            save_global_event_target_as = drellHomeworld
-			if = {
-				limit = {
-					exists = event_target:drellHomeworld
-				}
-				log = "Drell Homeworld Event Target Set"
-			}
-            prevent_anomaly = yes
-
-            check_for_drell_player = yes
-            
-            if = {
-				limit = { 
-					any_country = {
-						has_country_flag = remnants_of_rakhana_player
-					}
-				}
-				random_country = {
-					limit = {
-						has_country_flag = remnants_of_rakhana_player
-					}
-					save_global_event_target_as = remnants_of_rakhana
-				}
-			}
-			else = {
-				generate_remnants_of_rakhana_country = yes
-			}
-            set_capital = yes
-			set_owner = event_target:remnants_of_rakhana
-			create_colony = {
-				owner = event_target:remnants_of_rakhana
-				species = event_target:drellSpecies
-				ethos = owner
-			}
-            generate_dre_rakhana_pops = yes
-			add_modifier = {
-				modifier = dust_world
-				days = -1
-			}
-            generate_dre_rahkana_capital_buildings = yes
-		}			
+		# init_effect = {
+        #     save_global_event_target_as = drellHomeworld
+		# 	if = {
+		# 		limit = {
+		# 			exists = event_target:drellHomeworld
+		# 		}
+		# 		log = "Drell Homeworld Event Target Set"
+		# 	}
+        #     prevent_anomaly = yes
+        #
+        #     check_for_drell_player = yes
+        #
+        #     if = {
+		# 		limit = {
+		# 			any_country = {
+		# 				has_country_flag = remnants_of_rakhana_player
+		# 			}
+		# 		}
+		# 		random_country = {
+		# 			limit = {
+		# 				has_country_flag = remnants_of_rakhana_player
+		# 			}
+		# 			save_global_event_target_as = remnants_of_rakhana
+		# 		}
+		# 	}
+		# 	else = {
+		# 		generate_remnants_of_rakhana_country = yes
+		# 	}
+        #     set_capital = yes
+		# 	set_owner = event_target:remnants_of_rakhana
+		# 	create_colony = {
+		# 		owner = event_target:remnants_of_rakhana
+		# 		species = event_target:drellSpecies
+		# 		ethos = owner
+		# 	}
+        #     generate_dre_rakhana_pops = yes
+		# 	add_modifier = {
+		# 		modifier = dust_world
+		# 		days = -1
+		# 	}
+        #     generate_dre_rahkana_capital_buildings = yes
+		# }
 	}
 
 	planet = {
@@ -1090,6 +1094,7 @@ sys_kanala_init = {
 
     init_effect = {
         save_global_event_target_as = primacyFirstFleet
+        generate_btr_home_system_resources = yes
     }
 
     asteroid_belt = {
@@ -1125,6 +1130,10 @@ sys_kanala_init = {
         deposit_blockers = none
         modifiers = none
 		init_effect = {
+            add_modifier = {
+                modifier = coldocean_world
+                days = -1
+            }
 			save_global_event_target_as = hanarHomeworld
 			if = {
 				limit = {
@@ -1135,9 +1144,9 @@ sys_kanala_init = {
             prevent_anomaly = yes
 
             check_for_hanar_player = yes
-            
+
             if = {
-				limit = { 
+				limit = {
 					any_country = {
 						has_country_flag = illuminated_primacy_player
 					}
@@ -1148,7 +1157,8 @@ sys_kanala_init = {
 					}
 					save_global_event_target_as = illuminated_primacy
 				}
-			}
+                generate_empire_home_planet = yes
+            }
 			else = {
 				generate_illuminated_primacy_country = yes
 			}
@@ -1159,8 +1169,15 @@ sys_kanala_init = {
 				species = event_target:hanarSpecies
 				ethos = owner
 			}
+            clear_blockers = yes
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/illuminated_pri_origin"
             generate_han_kahje_pops = yes
-            generate_han_kahje_capital_buildings = yes
+            event_target:illuminated_primacy = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
 		}
 
         moon = {
@@ -2293,6 +2310,7 @@ sys_aralakh_init = {
 
     init_effect = {
         save_global_event_target_as = aralakhDefense
+        generate_btr_home_system_resources = yes
     }
 
 	asteroid_belt = {
@@ -2365,9 +2383,9 @@ sys_aralakh_init = {
             prevent_anomaly = yes
 
             check_for_krogan_player = yes
-            
+
             if = {
-				limit = { 
+				limit = {
 					any_country = {
 						has_country_flag = aralakh_kahmat_player
 					}
@@ -2378,7 +2396,8 @@ sys_aralakh_init = {
 					}
 					save_global_event_target_as = aralakh_kahmat
 				}
-			}
+                generate_empire_home_planet = yes
+            }
 			else = {
 				generate_aralakh_kahmat_country = yes
 			}
@@ -2389,9 +2408,16 @@ sys_aralakh_init = {
 				species = event_target:kroganSpecies
 				ethos = owner
 			}
+            clear_blockers = yes
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/aralakh_kah_origin"
             generate_kro_tuchanka_pops = yes
-            generate_kro_tuchanka_capital_buildings = yes
-		}
+            event_target:aralakh_kahmat = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+        }
 	}			
 
 
@@ -3306,6 +3332,7 @@ sys_pranas_init = {
 
     init_effect = {
         save_global_event_target_as = salarianSecondFleet
+        generate_btr_home_system_resources = yes
     }
     
     asteroid_belt = {
@@ -3341,6 +3368,10 @@ sys_pranas_init = {
         deposit_blockers = none
         modifiers = none
         init_effect = {
+            add_modifier = {
+                modifier = jungle_world
+                days = -1
+            }
 			save_global_event_target_as = salarianHomeworld
 			if = {
 				limit = {
@@ -3351,9 +3382,9 @@ sys_pranas_init = {
             prevent_anomaly = yes
 
             check_for_salarian_player = yes
-            
+
             if = {
-				limit = { 
+				limit = {
 					any_country = {
 						has_country_flag = salarian_union_player
 					}
@@ -3364,7 +3395,8 @@ sys_pranas_init = {
 					}
 					save_global_event_target_as = salarian_union
 				}
-			}
+                generate_empire_home_planet = yes
+            }
 			else = {
 				generate_salarian_union_country = yes
 			}
@@ -3375,10 +3407,17 @@ sys_pranas_init = {
 				species = event_target:salarianSpecies
 				ethos = owner
 			}
+            clear_blockers = yes
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/salarian_uni_origin"
             generate_sal_surkesh_pops = yes
-            generate_sal_surkesh_capital_buildings = yes
-		}	
-    } 
+            event_target:salarian_union = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+		}
+    }
 
     planet = {
         name = "Dragel"
@@ -4584,6 +4623,10 @@ sys_trebia_init = {
 
     flags = { inner_council sector_ic6 apien_crest trebia_system turian_hierarchy_system }
 
+    init_effect = {
+        generate_btr_home_system_resources = yes
+    }
+
     planet = {
 		name = "Trebia"
         class = pc_g_star
@@ -4622,6 +4665,14 @@ sys_trebia_init = {
         deposit_blockers = none
         modifiers = none
 		init_effect = {
+            add_modifier = {
+                modifier = dextro_world
+                days = -1
+            }
+            add_modifier = {
+                modifier = veld_world
+                days = -1
+            }
 			save_global_event_target_as = turianHomeworld
 			if = {
 				limit = {
@@ -4632,9 +4683,9 @@ sys_trebia_init = {
             prevent_anomaly = yes
 
             check_for_turian_player = yes
-            
+
             if = {
-				limit = { 
+				limit = {
 					any_country = {
 						has_country_flag = turian_hierarchy_player
 					}
@@ -4645,7 +4696,8 @@ sys_trebia_init = {
 					}
 					save_global_event_target_as = turian_hierarchy
 				}
-			}
+                generate_empire_home_planet = yes
+            }
 			else = {
 				generate_turian_hierarchy_country = yes
 			}
@@ -4656,18 +4708,16 @@ sys_trebia_init = {
 				species = event_target:turianSpecies
 				ethos = owner
 			}
+            clear_blockers = yes
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/turian_hie_origin"
             generate_tur_palaven_pops = yes
-
-			add_modifier = {
-				modifier = dextro_world
-				days = -1
-			}
-			add_modifier = {
-				modifier = veld_world
-				days = -1
-			}
-            generate_tur_palaven_capital_buildings = yes
-		}	
+            event_target:turian_hierarchy = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+		}
 
         moon = {
             name = "Menae"
@@ -5784,6 +5834,7 @@ sys_aru_init = {
 
     init_effect = {
         save_global_event_target_as = protectorateFirstFleet
+        generate_btr_home_system_resources = yes
     }
 	
 	asteroid_belt = {
@@ -5829,6 +5880,10 @@ sys_aru_init = {
         deposit_blockers = none
         modifiers = none
 		init_effect = {
+            add_modifier = {
+                modifier = prairie_world
+                days = -1
+            }
             save_global_event_target_as = volusHomeworld
 			if = {
 				limit = {
@@ -5839,9 +5894,9 @@ sys_aru_init = {
             prevent_anomaly = yes
 
             check_for_volus_player = yes
-            
+
             if = {
-				limit = { 
+				limit = {
 					any_country = {
 						has_country_flag = vol_protectorate_player
 					}
@@ -5852,7 +5907,8 @@ sys_aru_init = {
 					}
 					save_global_event_target_as = vol_protectorate
 				}
-			}
+                generate_empire_home_planet = yes
+            }
 			else = {
 				generate_vol_protectorate_country = yes
 			}
@@ -5863,13 +5919,15 @@ sys_aru_init = {
 				species = event_target:volusSpecies
 				ethos = owner
 			}
+            clear_blockers = yes
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/vol_pro_origin"
             generate_vol_irune_pops = yes
-			add_modifier = {
-				modifier = prairie_world
-				days = -1
-			}
-
-            generate_vol_irune_capital_buildings = yes
+            event_target:vol_protectorate = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
 		}
 	}
 	
@@ -9882,6 +9940,7 @@ sys_parnitha_init = {
 
     init_effect = {
         save_global_event_target_as = asariSecondFleet
+        generate_btr_home_system_resources = yes
     }
 
 	asteroid_belt = {
@@ -9920,6 +9979,10 @@ sys_parnitha_init = {
         deposit_blockers = none
         modifiers = none
 		init_effect = {
+            add_modifier = {
+                modifier = temperate_world
+                days = -1
+            }
 			save_global_event_target_as = asariHomeworld
 			if = {
 				limit = {
@@ -9930,9 +9993,9 @@ sys_parnitha_init = {
             prevent_anomaly = yes
 
             check_for_asari_player = yes
-            
+
             if = {
-				limit = { 
+				limit = {
 					any_country = {
 						has_country_flag = asari_republics_player
 					}
@@ -9943,9 +10006,10 @@ sys_parnitha_init = {
 					}
 					save_global_event_target_as = asari_republics
 				}
-			}
+                generate_empire_home_planet = yes
+            }
 			else = {
-				generate_asari_republics_country = yes
+                generate_asari_republics_country = yes
 			}
             set_capital = yes
 			set_owner = event_target:asari_republics
@@ -9954,12 +10018,15 @@ sys_parnitha_init = {
 				species = event_target:asariSpecies
 				ethos = owner
 			}
+            clear_blockers = yes
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/asari_rep_origin"
             generate_asr_thessia_pops = yes
-            add_modifier = {
-				modifier = temperate_world
-				days = -1
-			}
-            generate_asr_thessia_capital_buildings = yes
+            event_target:asari_republics = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
 		}
 	}
 
@@ -11031,6 +11098,7 @@ sys_phontes_init = {
 
     init_effect = {
         save_global_event_target_as = courtsFirstFleet
+        generate_btr_home_system_resources = yes
     }
 
     planet = {
@@ -11067,6 +11135,14 @@ sys_phontes_init = {
         deposit_blockers = none
         modifiers = none
 		init_effect = {
+            add_modifier = {
+                modifier = prairie_world
+                days = -1
+            }
+            add_modifier = {
+                modifier = btr_high_gravity
+                days = -1
+            }
             save_global_event_target_as = elcorHomeworld
 			if = {
 				limit = {
@@ -11077,9 +11153,9 @@ sys_phontes_init = {
             prevent_anomaly = yes
 
             check_for_elcor_player = yes
-            
+
             if = {
-				limit = { 
+				limit = {
 					any_country = {
 						has_country_flag = courts_of_dekuuna_player
 					}
@@ -11091,7 +11167,8 @@ sys_phontes_init = {
 					save_global_event_target_as = courts_of_dekuuna
 				}
 			}
-			else = {
+            generate_empire_home_planet = yes
+            else = {
 				generate_courts_of_dekuuna_country = yes
 			}
             set_capital = yes
@@ -11101,18 +11178,16 @@ sys_phontes_init = {
 				species = event_target:elcorSpecies
 				ethos = owner
 			}
+            clear_blockers = yes
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/courts_dek_origin"
             generate_cod_dekuuna_pops = yes
-			add_modifier = {
-				modifier = prairie_world
-				days = -1
-			}
-			add_modifier = {
-				modifier = btr_high_gravity
-				days = -1
-			}
-
-            generate_cod_dekuuna_capital_buildings = yes
-		}	
+            event_target:courts_of_dekuuna = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+		}
 
 		moon = {
 			name = "Oltan"
@@ -11613,6 +11688,7 @@ sys_widow_init = {
 
     init_effect = {
         save_global_event_target_as = citadelFirstFleet
+        generate_btr_home_system_resources = yes
     }
 
     planet = {
@@ -11634,28 +11710,28 @@ sys_widow_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "btr_citadel_01_entity"		
-        init_effect = {
-            save_global_event_target_as = citadelHomeworld
-            if = {
-                limit = {
-                    exists = event_target:citadelHomeworld
-                }
-                log = "Citadel Station Event Target Set"
-            }
-            prevent_anomaly = yes
-
-            generate_citadel_council_country = yes
-            
-            set_capital = yes
-			set_owner = event_target:citadel_council
-			create_colony = {
-				owner = event_target:citadel_council
-				species = event_target:asariSpecies
-				ethos = owner
-			}
-
-            generate_citadel_station_pops = yes
-        }
+        # init_effect = {
+        #     save_global_event_target_as = citadelHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:citadelHomeworld
+        #         }
+        #         log = "Citadel Station Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_citadel_council_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:citadel_council
+		# 	create_colony = {
+		# 		owner = event_target:citadel_council
+		# 		species = event_target:asariSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_citadel_station_pops = yes
+        # }
 	}
 
 	init_effect = { 
