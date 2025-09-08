@@ -17,7 +17,7 @@ d_thessia_republic_armali = {
 				owner = { has_origin = asari_rep_origin }
 			}
 			modifier = {
-				job_merchant_add = 2
+				job_merchant_add = 200
 			}
 		}
 
@@ -43,7 +43,7 @@ d_thessia_nosdesera = {
 			owner = { has_origin = asari_rep_origin }
 		}
 		modifier = {
-			job_entertainer_add = 1
+			job_entertainer_add = 100
 		}
 	}
 
@@ -86,8 +86,8 @@ d_thessia_cresyl_plateau = {
 			owner = { has_origin = asari_rep_origin }
 			}
 		modifier = {
-			job_miner_add = 1
-			job_artisan_add = 1
+			job_miner_add = 100
+			job_artisan_add = 100
 		}
 	}	
 	
@@ -111,7 +111,7 @@ d_thessia_askasian_mountains = {
 			owner = { has_origin = asari_rep_origin }
 			}
 		modifier = {
-			job_miner_add = 2
+			job_miner_add = 200
 		}
 	}
 	
@@ -135,7 +135,7 @@ d_thessia_pulian_delta = {
 			owner = { has_origin = asari_rep_origin }
 			}
 		modifier = {
-			job_farmer_add = 3
+			job_farmer_add = 300
 		}
 	}
 	
@@ -255,7 +255,7 @@ d_surkesh_burngrass = {
 			owner = { has_origin = salarian_uni_origin }
 		}
 		modifier = {
-			job_farmer_add = 5
+			job_farmer_add = 500
 		}
 	}
 
@@ -351,10 +351,10 @@ d_surkesh_stg_hq = {
 			owner = { has_origin = salarian_uni_origin }
 		}
 		modifier = {
-			job_artificer_add = 2
-			job_researcher_add = 2
-			job_technician_add = 2
-			job_soldier_add = 2
+			job_artificer_add = 200
+			job_researcher_add = 200
+			job_technician_add = 200
+			job_soldier_add = 200
 		}
 	}
 
@@ -368,7 +368,7 @@ d_surkesh_stg_hq = {
 			}
 		}
 		modifier = {
-			job_researcher_add = 3
+			job_researcher_add = 300
 			planet_researchers_produces_mult = 0.1
 		}
 	}
@@ -532,10 +532,10 @@ d_palaven_hot_spots = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_origin = turian_hier_origin }
+			owner = { has_origin = turian_hie_origin }
 		}
 		modifier = {
-			job_technician_add = 2
+			job_technician_add = 200
 		}
 	}
 
@@ -840,7 +840,7 @@ d_dekuuna_savannah_belt = {
 			owner = { has_origin = courts_dek_origin }
 		}
 		modifier = {
-			job_farmer_add = 3
+			job_farmer_add = 300
 		}
 	}
 
@@ -942,8 +942,8 @@ d_irune_central_bank = {
 			owner = { has_origin = vol_pro_origin }
 		}
 		modifier = {
-			job_executive_add = 1
-			job_manager_add = 3
+			job_executive_add = 100
+			job_manager_add = 300
 		}
 	}
 
@@ -988,7 +988,7 @@ d_irune_ammonia_paradise = {
 			owner = { has_origin = vol_pro_origin }
 		}
 		modifier = {
-			job_farmer_add = 4
+			job_farmer_add = 400
 		}
 	}
 
@@ -1045,7 +1045,7 @@ d_kahje_mount_vassla = {
 			owner = { has_origin = vol_pro_origin }
 		}
 		modifier = {
-			job_bureaucrat_add = 2
+			job_bureaucrat_add = 200
 		}
 	}
 
@@ -1134,7 +1134,7 @@ d_kahje_automated_defense_array = {
 			owner = { has_origin = illuminated_pri_origin }
 		}
 		modifier = {
-			job_soldier_add = 1
+			job_soldier_add = 100
 		}
 	}
 
@@ -1201,7 +1201,7 @@ d_kharshan_dostraz_agglomerate = {
 			owner = { has_origin = hegemony_kha_origin }
 		}
 		modifier = {
-			job_enforcer_add = 1
+			job_enforcer_add = 100
 		}
 	}
 
@@ -1255,7 +1255,7 @@ d_kharshan_krudanzi_jungle = {
 			owner = { has_origin = hegemony_kha_origin }
 		}
 		modifier = {
-			job_farmer_add = 2
+			job_farmer_add = 200
 		}
 	}
 
@@ -1341,7 +1341,7 @@ d_tuchanka_scars_of_rebellion = {
 			owner = { has_origin = aralakh_kah_origin }
 		}
 		modifier = {
-			job_researcher_add = 2
+			job_researcher_add = 200
 		}
 	}
 
@@ -1599,7 +1599,7 @@ d_rannoch_asteroid_mining_pads = {
 			exists = owner
 		}
 		modifier = {
-			job_miner_add = 3
+			job_miner_add = 300
 		}
 	}
 
@@ -1716,7 +1716,7 @@ d_cronos_inner_sanctum = {
 			owner = { has_origin = cerberus_emp_origin }
 		}
 		modifier = {
-			job_politician_add = 1
+			job_politician_add = 100
 			district_hab_energy_max = 3
 		}
 	}
@@ -1737,8 +1737,8 @@ d_cronos_combat_labs = {
 			owner = { has_origin = cerberus_emp_origin }
 		}
 		modifier = {
-			job_foundry_add = 2
-			job_head_researcher_add = 1
+			job_foundry_add = 200
+			job_head_researcher_add = 100
 			district_hab_mining_max = 3
 		}
 	}
@@ -1781,7 +1781,7 @@ d_cronos_cerberus_news_network = {
 			owner = { has_origin = cerberus_emp_origin }
 		}
 		modifier = {
-			job_culture_worker_add = 2
+			job_culture_worker_add = 200
 		}
 	}
 
@@ -1810,7 +1810,7 @@ d_omega_afterlife = {
 			owner = { has_origin = omega_emp_origin }
 		}
 		modifier = {
-			job_entertainer_add = 2
+			job_entertainer_add = 200
 		}
 	}
 
@@ -1835,8 +1835,8 @@ d_omega_carrd_district = {
 			owner = { has_origin = omega_emp_origin }
 		}
 		modifier = {
-			job_manager_add = 2
-			job_merchant_add = 1
+			job_manager_add = 200
+			job_merchant_add = 100
 		}
 	}
 
@@ -1860,8 +1860,8 @@ d_omega_doru_district = {
 			owner = { has_origin = omega_emp_origin }
 		}
 		modifier = {
-			job_artisan_add = 1
-			job_culture_worker_add = 1
+			job_artisan_add = 100
+			job_culture_worker_add = 100
 		}
 	}
 
@@ -1900,8 +1900,8 @@ d_omega_gozu_district = {
 			owner = { has_origin = omega_emp_origin }
 		}
 		modifier = {
-			job_healthcare_add = 1
-			job_merchant_add = 2
+			job_healthcare_add = 100
+			job_merchant_add = 200
 		}
 	}
 
@@ -1926,7 +1926,7 @@ d_omega_kenzo_district = {
 			owner = { has_origin = omega_emp_origin }
 		}
 		modifier = {
-			job_enforcer_add = 2
+			job_enforcer_add = 200
 		}
 	}
 
@@ -1951,7 +1951,7 @@ d_omega_kima_district = {
 			owner = { has_origin = omega_emp_origin }
 		}
 		modifier = {
-			job_farmer_add = 3
+			job_farmer_add = 300
 		}
 	}
 
@@ -1995,7 +1995,7 @@ d_omega_zeta_district = {
 			owner = { has_origin = omega_emp_origin }
 		}
 		modifier = {
-			job_miner_add = 3
+			job_miner_add = 300
 		}
 	}
 
@@ -2100,7 +2100,7 @@ d_illium_manjoros_plaza = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_bureaucrat_add = 1
+			job_bureaucrat_add = 100
 		}
 	}
 	
@@ -2256,7 +2256,7 @@ d_rakhana_metal_boneyards = {
 		potential = {
 			exists = owner
 		}
-		job_scrap_miner_add = 2
+		job_scrap_miner_add = 200
 	}
 
 	drop_weight = {
@@ -2327,7 +2327,7 @@ d_heshtok_volcanic_treasures = {
 			}
 		}
 		modifier = {
-			job_gas_extractor_add = 1
+			job_gas_extractor_add = 100
 		}
 	}
 
@@ -2383,7 +2383,7 @@ d_sedriicae_mukiilak_ocean = {
 			exists = owner
 		}
 		modifier = {
-			job_farmer_add = 4
+			job_farmer_add = 400
 		}
 	}
 
@@ -2407,7 +2407,7 @@ d_sedriicae_natural_mines = {
 			exists = owner
 		}
 		modifier = {
-			job_miner_add = 5
+			job_miner_add = 500
 		}
 	}
 
@@ -2432,8 +2432,8 @@ d_sedriicae_main_industry_hub = {
 			exists = owner
 		}
 		modifier = {
-			job_artisan_add = 1
-			job_foundry_add = 1
+			job_artisan_add = 100
+			job_foundry_add = 100
 		}
 	}
 
@@ -2537,7 +2537,7 @@ d_sepkai_grand_temple = {
 			exists = owner
 		}
 		modifier = {
-			job_priest_add = 4
+			job_priest_add = 400
 		}
 	}
 
@@ -2573,8 +2573,8 @@ d_sepkai_tomb_thirteen = {
 			exists = owner
 		}
 		modifier = {
-			job_researcher_add = 3
-			job_technician_add = 3
+			job_researcher_add = 300
+			job_technician_add = 300
 		}
 	}
 
@@ -2645,7 +2645,7 @@ d_vindicta_bella_saevix = {
 			exists = owner
 		}
 		modifier = {
-			job_researcher_add = 2
+			job_researcher_add = 200
 		}
 	}
 
@@ -2725,7 +2725,7 @@ d_parnack_yockar_nuclear_complex = {
 			exists = owner
 		}
 		modifier = {
-			job_technician_add = 2
+			job_technician_add = 200
 		}
 	}
 
@@ -2748,7 +2748,7 @@ d_parnack_darlock_range = {
 			exists = owner
 		}
 		modifier = {
-			job_miner_add = 3
+			job_miner_add = 300
 		}
 	}
 
@@ -2914,7 +2914,7 @@ d_heretic_datacore = {
 		potential = {
 			exists = owner
 		}
-		job_coordinator_add = 5
+		job_coordinator_add = 500
 	}
 
 	drop_weight = {
@@ -3140,7 +3140,7 @@ d_citadel_joint_research_division = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		job_researcher_add = 3
+		job_researcher_add = 300
 	}
 
 	country_modifier = {
@@ -3209,9 +3209,9 @@ d_caleston_central_admin_plaza = {
 		potential = {
 			exists = owner
 		}
-		job_bureaucrat_add = 2
-		job_enforcer_add = 2
-		job_politician_add = 1
+		job_bureaucrat_add = 200
+		job_enforcer_add = 200
+		job_politician_add = 100
 	}
 
 	planet_modifier = {

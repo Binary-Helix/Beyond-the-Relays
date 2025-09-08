@@ -2668,9 +2668,6 @@ event = {
 				}
 			}
 		}
-		every_galaxy_planet = {
-			btr_generate_planet_subclass_deposits = yes
-		}
 
 		log = "btr_game_start.2 - Subclass Modifiers and Entities Set"
 	}
@@ -2900,18 +2897,27 @@ country_event = {
 			limit = {
 				is_btr_canon_map = yes
 			}
-			set_canon_starting_technologies = yes
-			#generate_canon_starting_resources = yes
-			generate_canon_playtest_resources = yes
-
+			every_country = {
+				limit = {
+					is_btr_empire = yes
+				}
+				set_canon_starting_technologies = yes
+				#generate_canon_starting_resources = yes
+				generate_canon_playtest_resources = yes
+			}
 			log = "Canon Starting Techs and Resources Given"
 		}
 		if = {
 			limit = {
 				is_btr_sandbox_map = yes
 			}
-			generate_sandbox_starting_resources = yes
-			set_sandbox_starting_technologies = yes
+			every_country = {
+				limit = {
+					is_btr_empire = yes
+				}
+				generate_sandbox_starting_resources = yes
+				set_sandbox_starting_technologies = yes
+			}
 			log = "Sandbox Starting Techs and Resources Given"
 		}
 		log = "btr_game_start.8 - Completed"
