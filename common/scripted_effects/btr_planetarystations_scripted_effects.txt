@@ -585,7 +585,18 @@ set_station_deposits = {
 		add_deposit = d_junkyard
 	}
 	else_if = {
-		limit = { has_planet_flag = minerals_1 }
+		limit = {
+			OR = {
+				has_planet_flag = minerals_1
+				has_planet_flag = beryllium_1
+				has_planet_flag = lithium_1
+				has_planet_flag = titanium_1
+				has_planet_flag = iridium_1
+				has_planet_flag = palladium_1
+				has_planet_flag = platinum_1
+				has_planet_flag = uranium_1
+			}
+		}
 		if = {
 			limit = {
 				OR = {
@@ -600,7 +611,18 @@ set_station_deposits = {
 		}
 	}
 	else_if = {
-		limit = { has_planet_flag = minerals_2 }
+		limit = {
+			OR = {
+				has_planet_flag = minerals_2
+				has_planet_flag = beryllium_2
+				has_planet_flag = lithium_2
+				has_planet_flag = titanium_2
+				has_planet_flag = iridium_2
+				has_planet_flag = palladium_2
+				has_planet_flag = platinum_2
+				has_planet_flag = uranium_2
+			}
+		}
 		if = {
 			limit = {
 				OR = {
@@ -617,7 +639,18 @@ set_station_deposits = {
 		}
 	}
 	else_if = {
-		limit = { has_planet_flag = minerals_3 }
+		limit = {
+			OR = {
+				has_planet_flag = minerals_3
+				has_planet_flag = beryllium_3
+				has_planet_flag = lithium_3
+				has_planet_flag = titanium_3
+				has_planet_flag = iridium_3
+				has_planet_flag = palladium_3
+				has_planet_flag = platinum_3
+				has_planet_flag = uranium_3
+			}
+		}
 		if = {
 			limit = {
 				OR = {
@@ -636,7 +669,18 @@ set_station_deposits = {
 		}
 	}
 	else_if = {
-		limit = { has_planet_flag = minerals_4 }
+		limit = {
+			OR = {
+				has_planet_flag = minerals_4
+				has_planet_flag = beryllium_4
+				has_planet_flag = lithium_4
+				has_planet_flag = titanium_4
+				has_planet_flag = iridium_4
+				has_planet_flag = palladium_4
+				has_planet_flag = platinum_4
+				has_planet_flag = uranium_4
+			}
+		}
 		if = {
 			limit = {
 				OR = {
@@ -657,31 +701,40 @@ set_station_deposits = {
 		}
 	}
 	else = {
-		limit = {
-			OR = {
-				has_planet_flag = minerals_5
-				has_planet_flag = minerals_larg
-			}
-		}
 		if = {
 			limit = {
 				OR = {
-					is_gas_giant_station = yes
-					is_ice_giant_station = yes
+					has_planet_flag = minerals_5
+					has_planet_flag = beryllium_5
+					has_planet_flag = lithium_5
+					has_planet_flag = titanium_5
+					has_planet_flag = iridium_5
+					has_planet_flag = palladium_5
+					has_planet_flag = platinum_5
+					has_planet_flag = uranium_5
+					has_planet_flag = minerals_larg
 				}
 			}
-			add_deposit = d_ore_rich_rings
-			add_deposit = d_ore_rich_rings
-			add_deposit = d_ore_rich_rings
-			add_deposit = d_ore_rich_rings
-			add_deposit = d_ore_rich_rings
-		}
-		else = {
-			add_deposit = d_mineral_lodes
-			add_deposit = d_mineral_lodes
-			add_deposit = d_mineral_lodes
-			add_deposit = d_mineral_lodes
-			add_deposit = d_mineral_lodes
+			if = {
+				limit = {
+					OR = {
+						is_gas_giant_station = yes
+						is_ice_giant_station = yes
+					}
+				}
+				add_deposit = d_ore_rich_rings
+				add_deposit = d_ore_rich_rings
+				add_deposit = d_ore_rich_rings
+				add_deposit = d_ore_rich_rings
+				add_deposit = d_ore_rich_rings
+			}
+			else = {
+				add_deposit = d_mineral_lodes
+				add_deposit = d_mineral_lodes
+				add_deposit = d_mineral_lodes
+				add_deposit = d_mineral_lodes
+				add_deposit = d_mineral_lodes
+			}
 		}
 	}
 	
@@ -896,74 +949,76 @@ set_station_deposits = {
 		}
 	}
 	else = {
-		limit = {
-			OR = {
-				has_planet_flag = energy_5
-				has_planet_flag = energy_larg
-			}
-		}
 		if = {
 			limit = {
 				OR = {
-					is_planet_class = pc_molten_station
-					is_planet_class = pc_sulfur_station
+					has_planet_flag = energy_5
+					has_planet_flag = energy_larg
 				}
 			}
-			add_deposit = d_geothermal_springs
-			add_deposit = d_geothermal_springs
-			add_deposit = d_geothermal_springs
-			add_deposit = d_geothermal_springs
-			add_deposit = d_geothermal_springs
-		}
-		else_if = {
-			limit = { 
-				OR = {
-					is_barren_cold_station = yes
-					is_asteroid_station = yes
+			if = {
+				limit = {
+					OR = {
+						is_planet_class = pc_molten_station
+						is_planet_class = pc_sulfur_station
+					}
 				}
+				add_deposit = d_geothermal_springs
+				add_deposit = d_geothermal_springs
+				add_deposit = d_geothermal_springs
+				add_deposit = d_geothermal_springs
+				add_deposit = d_geothermal_springs
 			}
-			add_deposit = d_rich_regolith_formations
-			add_deposit = d_rich_regolith_formations
-			add_deposit = d_rich_regolith_formations
-			add_deposit = d_rich_regolith_formations
-			add_deposit = d_rich_regolith_formations
-		}
-		else_if = {
-			limit = {
-				OR = {
-					is_gas_giant_station = yes
-					is_ice_giant_station = yes
-					is_planet_class = pc_hot_giant_station
+			else_if = {
+				limit = {
+					OR = {
+						is_barren_cold_station = yes
+						is_asteroid_station = yes
+					}
 				}
+				add_deposit = d_rich_regolith_formations
+				add_deposit = d_rich_regolith_formations
+				add_deposit = d_rich_regolith_formations
+				add_deposit = d_rich_regolith_formations
+				add_deposit = d_rich_regolith_formations
 			}
-			add_deposit = d_helium_clouds
-			add_deposit = d_helium_clouds
-			add_deposit = d_helium_clouds
-			add_deposit = d_helium_clouds
-			add_deposit = d_helium_clouds
-		}
-		else_if = {
-			limit = { is_planet_class = pc_greenhouse_station }
-			add_deposit = d_storm_area
-			add_deposit = d_storm_area
-			add_deposit = d_storm_area
-			add_deposit = d_storm_area
-			add_deposit = d_storm_area
-		}
-		else_if = {
-			limit = { is_planet_class = pc_scorched_station }
-			add_deposit = d_scorched_plain
-			add_deposit = d_scorched_plain
-			add_deposit = d_scorched_plain
-			add_deposit = d_scorched_plain
-			add_deposit = d_scorched_plain
-		}
-		else = {
-			add_deposit = d_hydrocarbon_deposits
-			add_deposit = d_hydrocarbon_deposits
-			add_deposit = d_hydrocarbon_deposits
-			add_deposit = d_hydrocarbon_deposits
-			add_deposit = d_hydrocarbon_deposits
+			else_if = {
+				limit = {
+					OR = {
+						is_gas_giant_station = yes
+						is_ice_giant_station = yes
+						is_planet_class = pc_hot_giant_station
+					}
+				}
+				add_deposit = d_helium_clouds
+				add_deposit = d_helium_clouds
+				add_deposit = d_helium_clouds
+				add_deposit = d_helium_clouds
+				add_deposit = d_helium_clouds
+			}
+			else_if = {
+				limit = { is_planet_class = pc_greenhouse_station }
+				add_deposit = d_storm_area
+				add_deposit = d_storm_area
+				add_deposit = d_storm_area
+				add_deposit = d_storm_area
+				add_deposit = d_storm_area
+			}
+			else_if = {
+				limit = { is_planet_class = pc_scorched_station }
+				add_deposit = d_scorched_plain
+				add_deposit = d_scorched_plain
+				add_deposit = d_scorched_plain
+				add_deposit = d_scorched_plain
+				add_deposit = d_scorched_plain
+			}
+			else = {
+				add_deposit = d_hydrocarbon_deposits
+				add_deposit = d_hydrocarbon_deposits
+				add_deposit = d_hydrocarbon_deposits
+				add_deposit = d_hydrocarbon_deposits
+				add_deposit = d_hydrocarbon_deposits
+			}
 		}
 	}
 	
@@ -1021,13 +1076,15 @@ set_station_deposits = {
 		add_deposit = d_odd_life_forms
 	}
 	else = {
-		limit = { 
-			OR = {
-				has_planet_flag = society_5
-				has_planet_flag = society_large
+		if = {
+			limit = {
+				OR = {
+					has_planet_flag = society_5
+					has_planet_flag = society_large
+				}
 			}
+			add_deposit = d_mysterious_xenofacts
 		}
-		add_deposit = d_mysterious_xenofacts
 	}
 	
 	# Engineering Deposits
@@ -1078,7 +1135,7 @@ set_station_deposits = {
 			add_deposit = d_cryogazers_valley
 		}
 	}
-	else = {
+	else_if = {
 		limit = { 
 			OR = {
 				has_planet_flag = engineering_5
@@ -2444,51 +2501,51 @@ set_ice_giant_entity = {
 
 set_warm_giant_entity = {
 	random_list = {
-		2.3 = { set_planet_entity = { entity = "gas_giant_01_entity" } }
-		2.2 = { set_planet_entity = { entity = "gas_giant_02_entity" } set_planet_flag = blue_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_03_entity" } set_planet_flag = green_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_04_entity" } set_planet_flag = green_gas_giant }
-		2.3 = { set_planet_entity = { entity = "gas_giant_05_entity" } }
-		2.2 = { set_planet_entity = { entity = "gas_giant_06_entity" } set_planet_flag = blue_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_07_entity" } set_planet_flag = green_gas_giant }
-		2.3 = { set_planet_entity = { entity = "gas_giant_08_entity" } }
-		2.3 = { set_planet_entity = { entity = "gas_giant_09_entity" } }
-		2.2 = { set_planet_entity = { entity = "gas_giant_10_entity"  } set_planet_flag = blue_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_11_entity" } set_planet_flag = blue_gas_giant }
-		2.3 = { set_planet_entity = { entity = "gas_giant_12_entity"  } set_planet_flag = bright_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_13_entity"  } set_planet_flag = green_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_15_entity" } set_planet_flag = blue_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_16_entity" } set_planet_flag = blue_gas_giant }
-		2.3 = { set_planet_entity = { entity = "gas_giant_17_entity" } }
-		2.3 = { set_planet_entity = { entity = "gas_giant_18_entity" } }
-		2.2 = { set_planet_entity = { entity = "gas_giant_19_entity" } set_planet_flag = green_gas_giant }
-		2.3 = { set_planet_entity = { entity = "gas_giant_20_entity" } }
-		2.2 = { set_planet_entity = { entity = "gas_giant_24_entity" } set_planet_flag = blue_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_25_entity" } set_planet_flag = green_gas_giant }
-		2.3 = { set_planet_entity = { entity = "gas_giant_26_entity" } }
-		2.2 = { set_planet_entity = { entity = "gas_giant_28_entity" } set_planet_flag = blue_gas_giant }
-		2.3 = { set_planet_entity = { entity = "gas_giant_29_entity" } set_planet_flag = bright_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_31_entity" } set_planet_flag = blue_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_32_entity" } }
-		2.2 = { set_planet_entity = { entity = "gas_giant_33_entity" } }
-		2.2 = { set_planet_entity = { entity = "gas_giant_34_entity" } }
-		2.2 = { set_planet_entity = { entity = "gas_giant_35_entity" } set_planet_flag = blue_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_36_entity" } set_planet_flag = bright_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_37_entity" } set_planet_flag = blue_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_38_entity" } set_planet_flag = blue_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_40_entity" } set_planet_flag = bright_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_41_entity" } set_planet_flag = bright_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_42_entity" } }
-		2.2 = { set_planet_entity = { entity = "gas_giant_43_entity" } set_planet_flag = blue_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_45_entity" } set_planet_flag = bright_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_46_entity" } set_planet_flag = bright_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_47_entity" } set_planet_flag = green_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_54_entity" } }
-		2.2 = { set_planet_entity = { entity = "gas_giant_55_entity" } set_planet_flag = blue_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_56_entity" } set_planet_flag = bright_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_57_entity" } set_planet_flag = green_gas_giant }
-		2.2 = { set_planet_entity = { entity = "gas_giant_58_entity" } }
-		2.2 = { set_planet_entity = { entity = "gas_giant_59_entity" } }
+		3 = { set_planet_entity = { entity = "gas_giant_01_entity" } }
+		2 = { set_planet_entity = { entity = "gas_giant_02_entity" } set_planet_flag = blue_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_03_entity" } set_planet_flag = green_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_04_entity" } set_planet_flag = green_gas_giant }
+		3 = { set_planet_entity = { entity = "gas_giant_05_entity" } }
+		2 = { set_planet_entity = { entity = "gas_giant_06_entity" } set_planet_flag = blue_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_07_entity" } set_planet_flag = green_gas_giant }
+		3 = { set_planet_entity = { entity = "gas_giant_08_entity" } }
+		3 = { set_planet_entity = { entity = "gas_giant_09_entity" } }
+		2 = { set_planet_entity = { entity = "gas_giant_10_entity"  } set_planet_flag = blue_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_11_entity" } set_planet_flag = blue_gas_giant }
+		3 = { set_planet_entity = { entity = "gas_giant_12_entity"  } set_planet_flag = bright_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_13_entity"  } set_planet_flag = green_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_15_entity" } set_planet_flag = blue_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_16_entity" } set_planet_flag = blue_gas_giant }
+		3 = { set_planet_entity = { entity = "gas_giant_17_entity" } }
+		3 = { set_planet_entity = { entity = "gas_giant_18_entity" } }
+		2 = { set_planet_entity = { entity = "gas_giant_19_entity" } set_planet_flag = green_gas_giant }
+		3 = { set_planet_entity = { entity = "gas_giant_20_entity" } }
+		2 = { set_planet_entity = { entity = "gas_giant_24_entity" } set_planet_flag = blue_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_25_entity" } set_planet_flag = green_gas_giant }
+		3 = { set_planet_entity = { entity = "gas_giant_26_entity" } }
+		2 = { set_planet_entity = { entity = "gas_giant_28_entity" } set_planet_flag = blue_gas_giant }
+		3 = { set_planet_entity = { entity = "gas_giant_29_entity" } set_planet_flag = bright_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_31_entity" } set_planet_flag = blue_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_32_entity" } }
+		2 = { set_planet_entity = { entity = "gas_giant_33_entity" } }
+		2 = { set_planet_entity = { entity = "gas_giant_34_entity" } }
+		2 = { set_planet_entity = { entity = "gas_giant_35_entity" } set_planet_flag = blue_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_36_entity" } set_planet_flag = bright_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_37_entity" } set_planet_flag = blue_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_38_entity" } set_planet_flag = blue_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_40_entity" } set_planet_flag = bright_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_41_entity" } set_planet_flag = bright_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_42_entity" } }
+		2 = { set_planet_entity = { entity = "gas_giant_43_entity" } set_planet_flag = blue_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_45_entity" } set_planet_flag = bright_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_46_entity" } set_planet_flag = bright_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_47_entity" } set_planet_flag = green_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_54_entity" } }
+		2 = { set_planet_entity = { entity = "gas_giant_55_entity" } set_planet_flag = blue_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_56_entity" } set_planet_flag = bright_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_57_entity" } set_planet_flag = green_gas_giant }
+		2 = { set_planet_entity = { entity = "gas_giant_58_entity" } }
+		2 = { set_planet_entity = { entity = "gas_giant_59_entity" } }
 	}
 }
 
@@ -3457,7 +3514,7 @@ terraform_deposits_to_arid = {
 			}
 		}
 	}
-	else = {
+	else_if = {
 		limit = { has_planet_flag = minerals_larg }
 		while = {
 			count = 3
@@ -3601,7 +3658,7 @@ terraform_deposits_to_tundra = {
 			}
 		}
 	}
-	else = {
+	else_if = {
 		limit = { has_planet_flag = minerals_larg }
 		while = {
 			count = 3
@@ -3745,7 +3802,7 @@ terraform_deposits_to_arctic = {
 			}
 		}
 	}
-	else = {
+	else_if = {
 		limit = { has_planet_flag = minerals_larg }
 		while = {
 			count = 3
@@ -3889,7 +3946,7 @@ terraform_deposits_to_savannah = {
 			}
 		}
 	}
-	else = {
+	else_if = {
 		limit = { has_planet_flag = minerals_larg }
 		while = {
 			count = 3
@@ -4033,7 +4090,7 @@ terraform_deposits_to_desert = {
 			}
 		}
 	}
-	else = {
+	else_if = {
 		limit = { has_planet_flag = minerals_larg }
 		while = {
 			count = 3
@@ -4177,7 +4234,7 @@ terraform_deposits_to_alpine = {
 			}
 		}
 	}
-	else = {
+	else_if = {
 		limit = { has_planet_flag = minerals_larg }
 		while = {
 			count = 3
@@ -4390,32 +4447,32 @@ terraform_planetary_station = {
 	
 	if = {
 		limit = { is_planet_class = pc_barren_station }
-		change_pc = { class = pc_arid }
+		change_pc = { class = pc_arid inherit_entity = no }
 		terraform_deposits_to_arid = yes
 	}
 	if = {
 		limit = { is_barren_cold_station = yes }
-		change_pc = { class = pc_tundra }
+		change_pc = { class = pc_tundra inherit_entity = no }
 		terraform_deposits_to_tundra = yes
 	}
 	if = {
 		limit = { is_frozen_station = yes }
-		change_pc = { class = pc_arctic }
+		change_pc = { class = pc_arctic inherit_entity = no }
 		terraform_deposits_to_arctic = yes
 	}
 	if = {
 		limit = { is_planet_class = pc_toxic_station }
-		change_pc = { class = pc_savannah }
+		change_pc = { class = pc_savannah inherit_entity = no }
 		terraform_deposits_to_savannah = yes
 	}
 	if = {
 		limit = { is_planet_class = pc_greenhouse_station }
-		change_pc = { class = pc_desert }
+		change_pc = { class = pc_desert inherit_entity = no }
 		terraform_deposits_to_desert = yes
 	}
 	if = {
 		limit = { is_planet_class = pc_methane_station }
-		change_pc = { class = pc_alpine }
+		change_pc = { class = pc_alpine inherit_entity = no }
 		terraform_deposits_to_alpine = yes
 	}
 	

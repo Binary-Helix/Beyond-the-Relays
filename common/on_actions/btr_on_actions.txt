@@ -8,16 +8,15 @@ on_press_begin = {
 
 on_game_start = {
 	events = {
-		btr_game_start.1		# Master Event Trigger
-		btr_game_start.3 # Set Planet Classes
+		btr_game_start.1	# Master Event Trigger
+		btr_game_start.2 # Set Planet Classes
+		btr_game_start.3 # Set Subclass Modifiers and Entities
 		#btr_game_start.1 # Spawn special/hidden countries
 		#btr_game_start.3 # Hidden Game Start Event that resets tutorial for advisor trigger purposes
 		# btr_start_map.1 		#Create Real Space Nebula
 		# btr_start_map.2 		#Create New Star Space
 		# btr_start_map.3 		#Create Planetary Rings
 		# btr_start_map.4 		#Remove Vanilla Nebula
-		# btr_start_map.5			#Generate Starting Subclasses
-		# btr_start_map.6			#Set HighGrav Planet Classes
 		btr_migrant_fleet_setup.1 	# Spawn Migrant Fleet System
 	}
 }

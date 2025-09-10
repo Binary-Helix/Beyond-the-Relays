@@ -24,7 +24,6 @@ event = {
 			limit = { is_btr_empire = yes }
 			country_event = { id = btr_game_start.10 days = 2 } #Set Starting Contacts and Flags
 			country_event = { id = btr_game_start.11 days = 1 } #Set Species Rights
-			# country_event = { id = btr_game_start.13 days = 0 } #Set Starting Buildings
 		}
 
 		### SPAWN INVISIBLE GLOBAL EVENT COUNTRY
@@ -39,9 +38,221 @@ event = {
 	}
 }
 
-# Generate Starting Subclasses
+### Set HighGrav Planet Classes
 event = {
 	id = btr_game_start.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_galaxy_planet = {
+			if = {
+				limit = {
+					NOR = {
+						has_planet_flag = thessia_planet
+						has_planet_flag = surkesh_planet
+						has_planet_flag = palaven_planet
+						has_planet_flag = earth_planet
+						has_planet_flag = kharshan_planet
+						has_planet_flag = kahje_planet
+						has_planet_flag = irune_planet
+						has_planet_flag = tuchanka_planet
+						has_planet_flag = rannoch_planet
+						has_planet_flag = heshtok_planet
+						has_planet_flag = parnack_planet
+						has_planet_flag = utukku_planet
+						has_planet_flag = illium_planet
+						has_planet_flag = rakhana_planet
+					}
+					OR = {
+						is_planet_class = pc_arid
+						is_planet_class = pc_desert
+						is_planet_class = pc_savannah
+						is_planet_class = pc_tropical
+						is_planet_class = pc_swamp
+						is_planet_class = pc_continental
+						is_planet_class = pc_ocean
+						is_planet_class = pc_alpine
+						is_planet_class = pc_tundra
+						is_planet_class = pc_arctic
+						is_planet_class = pc_dextro_arid
+						is_planet_class = pc_dextro_desert
+						is_planet_class = pc_dextro_savannah
+						is_planet_class = pc_dextro_tropical
+						is_planet_class = pc_dextro_swamp
+						is_planet_class = pc_dextro_continental
+						is_planet_class = pc_dextro_ocean
+						is_planet_class = pc_dextro_alpine
+						is_planet_class = pc_dextro_tundra
+						is_planet_class = pc_dextro_arctic
+						is_planet_class = pc_ammonia
+						is_planet_class = pc_chlorine
+						is_planet_class = pc_methane
+						is_planet_class = pc_mephitic
+						is_planet_class = pc_primal
+					}
+					planet_size > 21
+				}
+				if = {
+					limit = { is_planet_class = pc_arid }
+					change_pc = pc_highgrav_arid
+				}
+				if = {
+					limit = { is_planet_class = pc_desert }
+					change_pc = pc_highgrav_desert
+
+				}
+				if = {
+					limit = { is_planet_class = pc_savannah }
+					change_pc = pc_highgrav_savannah
+
+				}
+				if = {
+					limit = { is_planet_class = pc_tropical }
+					change_pc = pc_highgrav_tropical
+
+				}
+				if = {
+					limit = { is_planet_class = pc_swamp }
+					change_pc = pc_highgrav_swamp
+
+				}
+				if = {
+					limit = { is_planet_class = pc_continental }
+					change_pc = pc_highgrav_continental
+
+				}
+				if = {
+					limit = { is_planet_class = pc_ocean }
+					change_pc = pc_highgrav_ocean
+
+				}
+				if = {
+					limit = { is_planet_class = pc_alpine }
+					change_pc = pc_highgrav_alpine
+
+				}
+				if = {
+					limit = { is_planet_class = pc_tundra }
+					change_pc = pc_highgrav_tundra
+
+				}
+				if = {
+					limit = { is_planet_class = pc_arctic }
+					change_pc = pc_highgrav_arctic
+
+				}
+				if = {
+					limit = { is_planet_class = pc_ammonia }
+					change_pc = pc_highgrav_ammonia
+
+				}
+				if = {
+					limit = { is_planet_class = pc_chlorine }
+					change_pc = pc_highgrav_chlorine
+
+				}
+				if = {
+					limit = { is_planet_class = pc_methane }
+					change_pc = pc_highgrav_methane
+
+				}
+				if = {
+					limit = { is_planet_class = pc_mephitic }
+					change_pc = pc_highgrav_mephitic
+
+				}
+				if = {
+					limit = { is_planet_class = pc_primal }
+					change_pc = pc_highgrav_primal
+
+				}
+				if = {
+					limit = { is_planet_class = pc_dextro_arid }
+					change_pc = pc_dextro_highgrav_arid
+
+				}
+				if = {
+					limit = { is_planet_class = pc_dextro_desert }
+					change_pc = pc_dextro_highgrav_desert
+
+				}
+				if = {
+					limit = { is_planet_class = pc_dextro_savannah }
+					change_pc = pc_dextro_highgrav_savannah
+
+				}
+				if = {
+					limit = { is_planet_class = pc_dextro_tropical }
+					change_pc = pc_dextro_highgrav_tropical
+
+				}
+				if = {
+					limit = { is_planet_class = pc_dextro_swamp }
+					change_pc = pc_dextro_highgrav_swamp
+
+				}
+				if = {
+					limit = { is_planet_class = pc_dextro_continental }
+					change_pc = pc_dextro_highgrav_continental
+
+				}
+				if = {
+					limit = { is_planet_class = pc_dextro_ocean }
+					change_pc = pc_dextro_highgrav_ocean
+
+				}
+				if = {
+					limit = { is_planet_class = pc_dextro_alpine }
+					change_pc = pc_dextro_highgrav_alpine
+
+				}
+				if = {
+					limit = { is_planet_class = pc_dextro_tundra }
+					change_pc = pc_dextro_highgrav_tundra
+
+				}
+				if = {
+					limit = { is_planet_class = pc_dextro_arctic }
+					change_pc = pc_dextro_highgrav_arctic
+
+				}
+			}
+		}
+		# Set HighGrav Modifiers
+		every_galaxy_planet = {
+			limit = {
+				is_btr_high_grav_class = yes
+			}
+			if = {
+				limit = {
+					has_planet_modifier = pm_high_gravity
+				}
+				remove_modifier = high_gravity
+				add_modifier = {
+					modifier = btr_high_gravity
+				}
+			}
+		}
+		#Set Dextro Modifiers
+		every_galaxy_planet = {
+			limit = {
+				is_btr_dextro_class = yes
+			}
+			add_modifier = {
+				modifier = dextro_world
+				days = -1
+			}
+			set_planet_flag = dextro_world
+		}
+
+		log = "btr_game_start.2 - BTR Planetary Modifiers Set"
+	}
+}
+
+# Generate Starting Subclasses and Entities
+event = {
+	id = btr_game_start.3
 	hide_window = yes
 
 	is_triggered_only = yes
@@ -58,7 +269,12 @@ event = {
 			}
 			if = {
 				limit = {
-					is_planet_class = pc_arid
+					OR = {
+						is_planet_class = pc_arid
+						is_planet_class = pc_dextro_arid
+						is_planet_class = pc_highgrav_arid
+						is_planet_class = pc_dextro_highgrav_arid
+					}
 				}
 				random_list = {
 					#Dune
@@ -156,7 +372,12 @@ event = {
 			}
 			if = {
 				limit = {
-					is_planet_class = pc_desert
+					OR = {
+						is_planet_class = pc_desert
+						is_planet_class = pc_dextro_desert
+						is_planet_class = pc_highgrav_desert
+						is_planet_class = pc_dextro_highgrav_desert
+					}
 				}
 				random_list = {
 					#Mesa
@@ -254,7 +475,12 @@ event = {
 			}
 			if = {
 				limit = {
-					is_planet_class = pc_savannah
+					OR = {
+						is_planet_class = pc_savannah
+						is_planet_class = pc_dextro_savannah
+						is_planet_class = pc_highgrav_savannah
+						is_planet_class = pc_dextro_highgrav_savannah
+					}
 				}
 				random_list = {
 					#Steppe
@@ -352,7 +578,12 @@ event = {
 			}
 			if = {
 				limit = {
-					is_planet_class = pc_tropical
+					OR = {
+						is_planet_class = pc_tropical
+						is_planet_class = pc_dextro_tropical
+						is_planet_class = pc_highgrav_tropical
+						is_planet_class = pc_dextro_highgrav_tropical
+					}
 				}
 				random_list = {
 					#Atoll
@@ -450,7 +681,12 @@ event = {
 			}
 			if = {
 				limit = {
-					is_planet_class = pc_swamp
+					OR = {
+						is_planet_class = pc_swamp
+						is_planet_class = pc_dextro_swamp
+						is_planet_class = pc_highgrav_swamp
+						is_planet_class = pc_dextro_highgrav_swamp
+					}
 				}
 				random_list = {
 					#Marsh
@@ -548,7 +784,12 @@ event = {
 			}
 			if = {
 				limit = {
-					is_planet_class = pc_continental
+					OR = {
+						is_planet_class = pc_continental
+						is_planet_class = pc_dextro_continental
+						is_planet_class = pc_highgrav_continental
+						is_planet_class = pc_dextro_highgrav_continental
+					}
 				}
 				random_list = {
 					#Prairie
@@ -646,7 +887,12 @@ event = {
 			}
 			if = {
 				limit = {
-					is_planet_class = pc_ocean
+					OR = {
+						is_planet_class = pc_ocean
+						is_planet_class = pc_dextro_ocean
+						is_planet_class = pc_highgrav_ocean
+						is_planet_class = pc_dextro_highgrav_ocean
+					}
 				}
 				random_list = {
 					#Hot Ocean
@@ -722,7 +968,12 @@ event = {
 			}
 			if = {
 				limit = {
-					is_planet_class = pc_alpine
+					OR = {
+						is_planet_class = pc_alpine
+						is_planet_class = pc_dextro_alpine
+						is_planet_class = pc_highgrav_alpine
+						is_planet_class = pc_dextro_highgrav_alpine
+					}
 				}
 				random_list = {
 					#Boreal
@@ -820,7 +1071,12 @@ event = {
 			}
 			if = {
 				limit = {
-					is_planet_class = pc_tundra
+					OR = {
+						is_planet_class = pc_tundra
+						is_planet_class = pc_dextro_tundra
+						is_planet_class = pc_highgrav_tundra
+						is_planet_class = pc_dextro_highgrav_tundra
+					}
 				}
 				random_list = {
 					#Basalt
@@ -918,966 +1174,12 @@ event = {
 			}
 			if = {
 				limit = {
-					is_planet_class = pc_arctic
-				}
-				random_list = {
-					#Snow
-					10 = {
-						set_planet_entity = {
-							picture = pc_snow
-							entity = snow_planet_01_entity
-						}
-						set_snow_subclass = yes
+					OR = {
+						is_planet_class = pc_arctic
+						is_planet_class = pc_dextro_arctic
+						is_planet_class = pc_highgrav_arctic
+						is_planet_class = pc_dextro_highgrav_arctic
 					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_snow
-							entity = snow_planet_02_entity
-						}
-						set_snow_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_snow
-							entity = snow_planet_03_entity
-						}
-						set_snow_subclass = yes
-					}
-					#Glacial
-					10 = {
-						set_planet_entity = {
-							picture = pc_glacial
-							entity = glacial_planet_01_entity
-						}
-						set_glacial_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_glacial
-							entity = glacial_planet_02_entity
-						}
-						set_glacial_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_glacial
-							entity = glacial_planet_03_entity
-						}
-						set_glacial_subclass = yes
-					}
-					#Antarctic
-					10 = {
-						set_planet_entity = {
-							#picture = pc_antar
-							entity = antar_planet_01_entity
-						}
-						set_antar_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_antar
-							entity = antar_planet_02_entity
-						}
-						set_antar_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_antar
-							entity = antar_planet_03_entity
-						}
-						set_antar_subclass = yes
-					}
-					#Cryovolcanic
-					10 = {
-						set_planet_entity = {
-							picture = pc_cryovolcanic
-							entity = cryovolcanic_planet_01_entity
-						}
-						set_cryovolcanic_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_cryovolcanic
-							entity = cryovolcanic_planet_02_entity
-						}
-						set_cryovolcanic_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_cryovolcanic
-							entity = cryovolcanic_planet_03_entity
-						}
-						set_cryovolcanic_subclass = yes
-					}
-					10 = {
-						#Null
-					}
-				}
-			}
-			if = {
-				limit = {
-					is_planet_class = pc_dextro_arid
-				}
-				random_list = {
-					#Dune
-					10 = {
-						set_planet_entity = {
-							picture = pc_dune
-							entity = dune_planet_01_entity
-						}
-						set_dune_subclass = yes
-						set_planet_flag = cryovolcanic_world
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_dune
-							entity = dune_planet_02_entity
-						}
-						set_dune_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_dune
-							entity = dune_planet_03_entity
-						}
-						set_dune_subclass = yes
-					}
-					#Dust
-					10 = {
-						set_planet_entity = {
-							picture = pc_dust
-							entity = dust_planet_01_entity
-						}
-						set_dust_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_dust
-							entity = dust_planet_02_entity
-						}
-						set_dust_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_dust
-							entity = dust_planet_03_entity
-						}
-						set_dust_subclass = yes
-					}
-					#Badlands
-					10 = {
-						set_planet_entity = {
-							picture = pc_badlands
-							entity = badlands_planet_01_entity
-						}
-						set_badlands_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_badlands
-							entity = badlands_planet_02_entity
-						}
-						set_badlands_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_badlands
-							entity = badlands_planet_03_entity
-						}
-						set_badlands_subclass = yes
-					}
-					#Aquifer
-					10 = {
-						set_planet_entity = {
-							picture = pc_aquifer
-							entity = aquifer_planet_01_entity
-						}
-						set_aquifer_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_aquifer
-							entity = aquifer_planet_02_entity
-						}
-						set_aquifer_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_aquifer
-							entity = aquifer_planet_03_entity
-						}
-						set_aquifer_subclass = yes
-					}
-					10 = {
-						#Null
-					}
-				}
-			}
-			if = {
-				limit = {
-					is_planet_class = pc_dextro_desert
-				}
-				random_list = {
-					#Mesa
-					10 = {
-						set_planet_entity = {
-							picture = pc_mesa
-							entity = mesa_planet_01_entity
-						}
-						set_mesa_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_mesa
-							entity = mesa_planet_02_entity
-						}
-						set_mesa_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_mesa
-							entity = mesa_planet_03_entity
-						}
-						set_mesa_subclass = yes
-					}
-					#Cenote
-					10 = {
-						set_planet_entity = {
-							#picture = pc_cenote
-							entity = cenote_planet_01_entity
-						}
-						set_cenote_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_cenote
-							entity = cenote_planet_02_entity
-						}
-						set_cenote_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_cenote
-							entity = cenote_planet_03_entity
-						}
-						set_cenote_subclass = yes
-					}
-					#Outback
-					10 = {
-						set_planet_entity = {
-							#picture = pc_outback
-							entity = outback_planet_01_entity
-						}
-						set_outback_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_Outback
-							entity = Outback_planet_02_entity
-						}
-						set_outback_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_outback
-							entity = outback_planet_03_entity
-						}
-						set_outback_subclass = yes
-					}
-					#Oasis
-					10 = {
-						set_planet_entity = {
-							picture = pc_oasis
-							entity = oasis_planet_01_entity
-						}
-						set_oasis_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_oasis
-							entity = oasis_planet_02_entity
-						}
-						set_oasis_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_oasis
-							entity = oasis_planet_03_entity
-						}
-						set_oasis_subclass = yes
-					}
-					10 = {
-						#Null
-					}
-				}
-			}
-			if = {
-				limit = {
-					is_planet_class = pc_dextro_savannah
-				}
-				random_list = {
-					#Steppe
-					10 = {
-						set_planet_entity = {
-							picture = pc_steppe
-							entity = steppe_planet_01_entity
-						}
-						set_steppe_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_steppe
-							entity = steppe_planet_02_entity
-						}
-						set_steppe_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_steppe
-							entity = steppe_planet_03_entity
-						}
-						set_steppe_subclass = yes
-					}
-					#Veld
-					10 = {
-						set_planet_entity = {
-							picture = pc_veld
-							entity = veld_planet_01_entity
-						}
-						set_veld_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_veld
-							entity = veld_planet_02_entity
-						}
-						set_veld_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_veld
-							entity = veld_planet_03_entity
-						}
-						set_veld_subclass = yes
-					}
-					#Mediterranean
-					10 = {
-						set_planet_entity = {
-							picture = pc_mediter
-							entity = medit_planet_01_entity
-						}
-						set_medit_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_mediter
-							entity = medit_planet_02_entity
-						}
-						set_medit_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_mediter
-							entity = medit_planet_03_entity
-						}
-						set_medit_subclass = yes
-					}
-					#Retinal
-					10 = {
-						set_planet_entity = {
-							#picture = pc_retinal
-							entity = retinal_planet_01_entity
-						}
-						set_retinal_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_retinal
-							entity = retinal_planet_02_entity
-						}
-						set_retinal_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_retinal
-							entity = retinal_planet_03_entity
-						}
-						set_retinal_subclass = yes
-					}
-					10 = {
-						#Null
-					}
-				}
-			}
-			if = {
-				limit = {
-					is_planet_class = pc_dextro_tropical
-				}
-				random_list = {
-					#Atoll
-					10 = {
-						set_planet_entity = {
-							picture = pc_atoll
-							entity = atoll_planet_01_entity
-						}
-						set_atoll_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_atoll
-							entity = atoll_planet_02_entity
-						}
-						set_atoll_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_atoll
-							entity = atoll_planet_03_entity
-						}
-						set_atoll_subclass = yes
-					}
-					#Coastal
-					10 = {
-						set_planet_entity = {
-							#picture = pc_coastal
-							entity = coastal_planet_01_entity
-						}
-						set_coastal_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_coastal
-							entity = coastal_planet_02_entity
-						}
-						set_coastal_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_coastal
-							entity = coastal_planet_03_entity
-						}
-						set_coastal_subclass = yes
-					}
-					#Jungle
-					10 = {
-						set_planet_entity = {
-							picture = pc_jungle
-							entity = jungle_planet_01_entity
-						}
-						set_jungle_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_jungle
-							entity = jungle_planet_02_entity
-						}
-						set_jungle_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_jungle
-							entity = jungle_planet_03_entity
-						}
-						set_jungle_subclass = yes
-					}
-					#Bioluminescent
-					10 = {
-						set_planet_entity = {
-							picture = pc_biolum
-							entity = biolum_planet_01_entity
-						}
-						set_biolum_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_biolum
-							entity = biolum_planet_02_entity
-						}
-						set_biolum_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_biolum
-							entity = biolum_planet_03_entity
-						}
-						set_biolum_subclass = yes
-					}
-					10 = {
-						#Null
-					}
-				}
-			}
-			if = {
-				limit = {
-					is_planet_class = pc_dextro_swamp
-				}
-				random_list = {
-					#Marsh
-					10 = {
-						set_planet_entity = {
-							#picture = pc_marsh
-							entity = marsh_planet_01_entity
-						}
-						set_marsh_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_marsh
-							entity = marsh_planet_02_entity
-						}
-						set_marsh_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_marsh
-							entity = marsh_planet_03_entity
-						}
-						set_marsh_subclass = yes
-					}
-					#Mangrove
-					10 = {
-						set_planet_entity = {
-							#picture = pc_mangrove
-							entity = mangrove_planet_01_entity
-						}
-						set_mangrove_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_mangrove
-							entity = mangrove_planet_02_entity
-						}
-						set_mangrove_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_mangrove
-							entity = mangrove_planet_03_entity
-						}
-						set_mangrove_subclass = yes
-					}
-					#Bog
-					10 = {
-						set_planet_entity = {
-							picture = pc_bog
-							entity = bog_planet_01_entity
-						}
-						set_bog_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_bog
-							entity = bog_planet_02_entity
-						}
-						set_bog_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_bog
-							entity = bog_planet_03_entity
-						}
-						set_bog_subclass = yes
-					}
-					#Lake
-					10 = {
-						set_planet_entity = {
-							#picture = pc_lake
-							entity = lake_planet_01_entity
-						}
-						set_lake_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_lake
-							entity = lake_planet_02_entity
-						}
-						set_lake_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_lake
-							entity = lake_planet_03_entity
-						}
-						set_lake_subclass = yes
-					}
-					10 = {
-						#Null
-					}
-				}
-			}
-			if = {
-				limit = {
-					is_planet_class = pc_dextro_continental
-				}
-				random_list = {
-					#Prairie
-					10 = {
-						set_planet_entity = {
-							picture = pc_prairie
-							entity = prairie_planet_01_entity
-						}
-						set_prairie_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_prairie
-							entity = prairie_planet_02_entity
-						}
-						set_prairie_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_prairie
-							entity = prairie_planet_03_entity
-						}
-						set_prairie_subclass = yes
-					}
-					#Temperate
-					10 = {
-						set_planet_entity = {
-							#picture = pc_temperate
-							entity = temperate_planet_01_entity
-						}
-						set_temperate_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_temperate
-							entity = temperate_planet_02_entity
-						}
-						set_temperate_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_temperate
-							entity = temperate_planet_03_entity
-						}
-						set_temperate_subclass = yes
-					}
-					#Forest
-					10 = {
-						set_planet_entity = {
-							picture = pc_forest
-							entity = forest_planet_01_entity
-						}
-						set_forest_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_forest
-							entity = forest_planet_02_entity
-						}
-						set_forest_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_forest
-							entity = forest_planet_03_entity
-						}
-						set_forest_subclass = yes
-					}
-					#Supercontinent
-					10 = {
-						set_planet_entity = {
-							picture = pc_supercon
-							entity = supercon_planet_01_entity
-						}
-						set_supercon_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_supercon
-							entity = supercon_planet_02_entity
-						}
-						set_supercon_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_supercon
-							entity = supercon_planet_03_entity
-						}
-						set_supercon_subclass = yes
-					}
-					10 = {
-						#Null
-					}
-				}
-			}
-			if = {
-				limit = {
-					is_planet_class = pc_dextro_ocean
-				}
-				random_list = {
-					#Hot Ocean
-					10 = {
-						set_planet_entity = {
-							picture = pc_hotocean
-							entity = hotocean_planet_01_entity
-						}
-						set_hotocean_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_hotocean
-							entity = hotocean_planet_02_entity
-						}
-						set_hotocean_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_hotocean
-							entity = hotocean_planet_03_entity
-						}
-						set_hotocean_subclass = yes
-					}
-					#Cold Ocean
-					10 = {
-						set_planet_entity = {
-							picture = pc_coldocean
-							entity = coldocean_planet_01_entity
-						}
-						set_coldocean_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_coldocean
-							entity = coldocean_planet_02_entity
-						}
-						set_coldocean_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_coldocean
-							entity = coldocean_planet_03_entity
-						}
-						set_coldocean_subclass = yes
-					}
-					#Storm
-					10 = {
-						set_planet_entity = {
-							picture = pc_storm
-							entity = storm_planet_01_entity
-						}
-						set_storm_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_storm
-							entity = storm_planet_02_entity
-						}
-						set_storm_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_storm
-							entity = storm_planet_03_entity
-						}
-						set_storm_subclass = yes
-					}
-					10 = {
-						#Null
-					}
-				}
-			}
-			if = {
-				limit = {
-					is_planet_class = pc_dextro_alpine
-				}
-				random_list = {
-					#Boreal
-					10 = {
-						set_planet_entity = {
-							picture = pc_boreal
-							entity = boreal_planet_01_entity
-						}
-						set_boreal_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_boreal
-							entity = boreal_planet_02_entity
-						}
-						set_boreal_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_boreal
-							entity = boreal_planet_03_entity
-						}
-						set_boreal_subclass = yes
-					}
-					#Highland
-					10 = {
-						set_planet_entity = {
-							picture = pc_highland
-							entity = highland_planet_01_entity
-						}
-						set_highland_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_highland
-							entity = highland_planet_02_entity
-						}
-						set_highland_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_highland
-							entity = highland_planet_03_entity
-						}
-						set_highland_subclass = yes
-					}
-					#Cascadian
-					10 = {
-						set_planet_entity = {
-							#picture = pc_cascadian
-							entity = cascadian_planet_01_entity
-						}
-						set_cascadian_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_cascadian
-							entity = cascadian_planet_02_entity
-						}
-						set_cascadian_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_cascadian
-							entity = cascadian_planet_03_entity
-						}
-						set_cascadian_subclass = yes
-					}
-					#Crag
-					10 = {
-						set_planet_entity = {
-							picture = pc_crag
-							entity = crag_planet_01_entity
-						}
-						set_crag_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_crag
-							entity = crag_planet_02_entity
-						}
-						set_crag_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_crag
-							entity = crag_planet_03_entity
-						}
-						set_crag_subclass = yes
-					}
-					10 = {
-						#Null
-					}
-				}
-			}
-			if = {
-				limit = {
-					is_planet_class = pc_dextro_tundra
-				}
-				random_list = {
-					#Basalt
-					10 = {
-						set_planet_entity = {
-							#picture = pc_basalt
-							entity = basalt_planet_01_entity
-						}
-						set_basalt_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_basalt
-							entity = basalt_planet_02_entity
-						}
-						set_basalt_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							#picture = pc_basalt
-							entity = basalt_planet_03_entity
-						}
-						set_basalt_subclass = yes
-					}
-					#Lichen
-					10 = {
-						set_planet_entity = {
-							picture = pc_lichen
-							entity = lichen_planet_01_entity
-						}
-						set_lichen_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_lichen
-							entity = lichen_planet_02_entity
-						}
-						set_lichen_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_lichen
-							entity = lichen_planet_03_entity
-						}
-						set_lichen_subclass = yes
-					}
-					#Mud
-					10 = {
-						set_planet_entity = {
-							picture = pc_mire
-							entity = mire_planet_01_entity
-						}
-						set_mire_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_mire
-							entity = mire_planet_02_entity
-						}
-						set_mire_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_mire
-							entity = mire_planet_03_entity
-						}
-						set_mire_subclass = yes
-					}
-					#Fungal
-					10 = {
-						set_planet_entity = {
-							picture = pc_fungal
-							entity = fungal_planet_01_entity
-						}
-						set_fungal_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_fungal
-							entity = fungal_planet_02_entity
-						}
-						set_fungal_subclass = yes
-					}
-					10 = {
-						set_planet_entity = {
-							picture = pc_fungal
-							entity = fungal_planet_03_entity
-						}
-						set_fungal_subclass = yes
-					}
-					10 = {
-						#Null
-					}
-				}
-			}
-			if = {
-				limit = {
-					is_planet_class = pc_dextro_arctic
 				}
 				random_list = {
 					#Snow
@@ -2669,222 +1971,9 @@ event = {
 			}
 		}
 
-		log = "btr_game_start.2 - Subclass Modifiers and Entities Set"
+		log = "btr_game_start.3 - Subclass Modifiers and Entities Set"
 	}
 }
-
-### Set HighGrav Planet Classes
-event = {
-	id = btr_game_start.3
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		every_galaxy_planet = {
-			if = {
-				limit = {
-					NOR = {
-						has_planet_flag = thessia_planet
-						has_planet_flag = surkesh_planet
-						has_planet_flag = palaven_planet
-						has_planet_flag = earth_planet
-						has_planet_flag = kharshan_planet
-						has_planet_flag = kahje_planet
-						has_planet_flag = irune_planet
-						has_planet_flag = tuchanka_planet
-						has_planet_flag = rannoch_planet
-						has_planet_flag = heshtok_planet
-						has_planet_flag = parnack_planet
-						has_planet_flag = utukku_planet
-						has_planet_flag = illium_planet
-						has_planet_flag = rakhana_planet
-					}
-					OR = {
-						is_planet_class = pc_arid
-						is_planet_class = pc_desert
-						is_planet_class = pc_savannah
-						is_planet_class = pc_tropical
-						is_planet_class = pc_swamp
-						is_planet_class = pc_continental
-						is_planet_class = pc_ocean
-						is_planet_class = pc_alpine
-						is_planet_class = pc_tundra
-						is_planet_class = pc_arctic
-						is_planet_class = pc_dextro_arid
-						is_planet_class = pc_dextro_desert
-						is_planet_class = pc_dextro_savannah
-						is_planet_class = pc_dextro_tropical
-						is_planet_class = pc_dextro_swamp
-						is_planet_class = pc_dextro_continental
-						is_planet_class = pc_dextro_ocean
-						is_planet_class = pc_dextro_alpine
-						is_planet_class = pc_dextro_tundra
-						is_planet_class = pc_dextro_arctic
-						is_planet_class = pc_ammonia
-						is_planet_class = pc_chlorine
-						is_planet_class = pc_methane
-						is_planet_class = pc_mephitic
-						is_planet_class = pc_primal
-					}
-					planet_size > 21
-				}
-				if = {
-					limit = { is_planet_class = pc_arid }
-					change_pc = pc_highgrav_arid
-				}
-				if = {
-					limit = { is_planet_class = pc_desert }
-					change_pc = pc_highgrav_desert
-
-				}
-				if = {
-					limit = { is_planet_class = pc_savannah }
-					change_pc = pc_highgrav_savannah
-
-				}
-				if = {
-					limit = { is_planet_class = pc_tropical }
-					change_pc = pc_highgrav_tropical
-
-				}
-				if = {
-					limit = { is_planet_class = pc_swamp }
-					change_pc = pc_highgrav_swamp
-
-				}
-				if = {
-					limit = { is_planet_class = pc_continental }
-					change_pc = pc_highgrav_continental
-
-				}
-				if = {
-					limit = { is_planet_class = pc_ocean }
-					change_pc = pc_highgrav_ocean
-
-				}
-				if = {
-					limit = { is_planet_class = pc_alpine }
-					change_pc = pc_highgrav_alpine
-
-				}
-				if = {
-					limit = { is_planet_class = pc_tundra }
-					change_pc = pc_highgrav_tundra
-
-				}
-				if = {
-					limit = { is_planet_class = pc_arctic }
-					change_pc = pc_highgrav_arctic
-
-				}
-				if = {
-					limit = { is_planet_class = pc_ammonia }
-					change_pc = pc_highgrav_ammonia
-
-				}
-				if = {
-					limit = { is_planet_class = pc_chlorine }
-					change_pc = pc_highgrav_chlorine
-
-				}
-				if = {
-					limit = { is_planet_class = pc_methane }
-					change_pc = pc_highgrav_methane
-
-				}
-				if = {
-					limit = { is_planet_class = pc_mephitic }
-					change_pc = pc_highgrav_mephitic
-
-				}
-				if = {
-					limit = { is_planet_class = pc_primal }
-					change_pc = pc_highgrav_primal
-
-				}
-				if = {
-					limit = { is_planet_class = pc_dextro_arid }
-					change_pc = pc_dextro_highgrav_arid
-
-				}
-				if = {
-					limit = { is_planet_class = pc_dextro_desert }
-					change_pc = pc_dextro_highgrav_desert
-
-				}
-				if = {
-					limit = { is_planet_class = pc_dextro_savannah }
-					change_pc = pc_dextro_highgrav_savannah
-
-				}
-				if = {
-					limit = { is_planet_class = pc_dextro_tropical }
-					change_pc = pc_dextro_highgrav_tropical
-
-				}
-				if = {
-					limit = { is_planet_class = pc_dextro_swamp }
-					change_pc = pc_dextro_highgrav_swamp
-
-				}
-				if = {
-					limit = { is_planet_class = pc_dextro_continental }
-					change_pc = pc_dextro_highgrav_continental
-
-				}
-				if = {
-					limit = { is_planet_class = pc_dextro_ocean }
-					change_pc = pc_dextro_highgrav_ocean
-
-				}
-				if = {
-					limit = { is_planet_class = pc_dextro_alpine }
-					change_pc = pc_dextro_highgrav_alpine
-
-				}
-				if = {
-					limit = { is_planet_class = pc_dextro_tundra }
-					change_pc = pc_dextro_highgrav_tundra
-
-				}
-				if = {
-					limit = { is_planet_class = pc_dextro_arctic }
-					change_pc = pc_dextro_highgrav_arctic
-
-				}
-			}
-		}
-		# Set HighGrav Modifiers
-		every_galaxy_planet = {
-			limit = {
-				is_btr_high_grav_class = yes
-			}
-			if = {
-				limit = {
-					has_planet_modifier = pm_high_gravity
-				}
-				remove_modifier = high_gravity
-				add_modifier = {
-					modifier = btr_high_gravity
-				}
-			}
-		}
-		#Set Dextro Modifiers
-		every_galaxy_planet = {
-			limit = {
-				is_btr_dextro_class = yes
-			}
-			add_modifier = {
-				modifier = dextro_world
-				days = -1
-			}
-			set_planet_flag = dextro_world
-		}
-
-		log = "btr_game_start.3 - BTR Planetary Modifiers Set"
-	}
-}
-
 
 # Set Starting Techs
 country_event = {

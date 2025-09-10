@@ -1,6 +1,4 @@
 spriteTypes = {
-
-
 	spriteType = {
 		name = "BTR_GFX_evt_btr_custom"
 		texturefile = "gfx/event_pictures/custom_empire.dds"
@@ -16,6 +14,12 @@ spriteTypes = {
 	spriteType = {
 		name = "BTR_GFX_evt_btr_incompatible"
 		texturefile = "gfx/event_pictures/incompatible_mod.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "BTR_GFX_evt_the_pyjak"
+		texturefile = "gfx/event_pictures/the_pyjak.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}

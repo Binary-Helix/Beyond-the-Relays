@@ -31,11 +31,11 @@ decision_deep_exploration = {
 		hidden_effect = {
 			set_planet_flag = exploration_executed
 			random_list = {
-				50 = {
+				19 = {
 					#Null
 					planet_event =  { id = planetarystations_decision_event.1 days = 1 }
 				}
-				15 = {
+				 7 = {
 					#Minerals
 					modifier = {
 						factor = 0
@@ -63,8 +63,8 @@ decision_deep_exploration = {
 						}
 					}
 				}
-				10 = {
-					#Regolith
+				4 = {
+					#Helium-3 Regolith
 					modifier = {
 						factor = 0
 						NOR = { 
@@ -87,7 +87,7 @@ decision_deep_exploration = {
 						}
 					}
 				}
-				10 = {
+				4 = {
 					#Helium-3
 					modifier = {
 						factor = 0
@@ -112,7 +112,7 @@ decision_deep_exploration = {
 						}
 					}
 				}
-				20 = {
+				4 = {
 					#Energy
 					modifier = {
 						factor = 0
@@ -142,26 +142,26 @@ decision_deep_exploration = {
 						}
 					}
 				}
-				5 = {
-					#Alloys
-					modifier = {
-						factor = 0
-						NOR = { 
-							is_planet_class = pc_asteroid
-							is_planet_class = pc_molten
-						}
-					}
-					random_list = {
-						#Alloys 1
-						70 = {
-							planet_event =  { id = planetarystations_decision_event.23 days = 1 }
-						}
-						#Alloys 2
-						30 = {
-							planet_event =  { id = planetarystations_decision_event.24 days = 1 }
-						}
-					}
-				}
+				# 5 = {
+				# 	#Alloys
+				# 	modifier = {
+				# 		factor = 0
+				# 		NOR = {
+				# 			is_planet_class = pc_asteroid
+				# 			is_planet_class = pc_molten
+				# 		}
+				# 	}
+				# 	random_list = {
+				# 		#Alloys 1
+				# 		70 = {
+				# 			planet_event =  { id = planetarystations_decision_event.23 days = 1 }
+				# 		}
+				# 		#Alloys 2
+				# 		30 = {
+				# 			planet_event =  { id = planetarystations_decision_event.24 days = 1 }
+				# 		}
+				# 	}
+				# }
 				# 4 = {
 				# 	#Motes
 				# 	modifier = {
@@ -204,7 +204,329 @@ decision_deep_exploration = {
 				# 	planet_event =  { id = planetarystations_decision_event.14 days = 1 }
 				# }
 				#
-
+				7 = {
+					#Beryllium
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Beryllium 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.30 days = 1 }
+						}
+						#Beryllium 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.31 days = 1 }
+						}
+						#Beryllium 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.32 days = 1 }
+						}
+					}
+				}
+				7 = {
+					#Lithium
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Lithium 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.33 days = 1 }
+						}
+						#Lithium 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.34 days = 1 }
+						}
+						#Lithium 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.35 days = 1 }
+						}
+					}
+				}
+				7 = {
+					#Titanium
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Titanium 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.36 days = 1 }
+						}
+						#Titanium 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.37 days = 1 }
+						}
+						#Titanium 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.38 days = 1 }
+						}
+					}
+				}
+				7 = {
+					#Palladium
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Palladium 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.39 days = 1 }
+						}
+						#Palladium 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.40 days = 1 }
+						}
+						#Palladium 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.42 days = 1 }
+						}
+					}
+				}
+				7 = {
+					#Platinum
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Platinum 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.43 days = 1 }
+						}
+						#Platinum 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.44 days = 1 }
+						}
+						#Platinum 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.45 days = 1 }
+						}
+					}
+				}
+				7 = {
+					#Iridium
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Iridium 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.46 days = 1 }
+						}
+						#Iridium 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.47 days = 1 }
+						}
+						#Iridium 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.48 days = 1 }
+						}
+					}
+				}
+				5 = {
+					#Uranium
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Uranium 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.49 days = 1 }
+						}
+						#Uranium 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.50 days = 1 }
+						}
+						#Uranium 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.51 days = 1 }
+						}
+					}
+				}
+				4 = {
+					#Hydrogen
+					modifier = {
+						factor = 0
+						NOR = {
+							is_gas_giant_station = yes
+							is_ice_giant_station = yes
+							is_planet_class = pc_hot_giant_station
+						}
+					}
+					random_list = {
+						#Helium-3 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.52 days = 1 }
+						}
+						#Helium-3 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.53 days = 1 }
+						}
+						#Helium-3 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.54 days = 1 }
+						}
+					}
+				}
+				4 = {
+					#Hydrogen Regolith
+					modifier = {
+						factor = 0
+						NOR = {
+							is_barren_cold_station = yes
+							is_planet_class = pc_asteroid_station
+						}
+					}
+					random_list = {
+						#Regolith 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.55 days = 1 }
+						}
+						#Regolith 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.56 days = 1 }
+						}
+						#Regolith 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.57 days = 1 }
+						}
+					}
+				}
+				2 = {
+					#Antimatter Fuel
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Antimatter Fuel 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.58 days = 1 }
+						}
+						#Antimatter Fuel 2
+						30 = {
+							planet_event =  { id = planetarystations_decision_event.59 days = 1 }
+						}
+					}
+				}
+				2 = {
+					# Light Alloys
+					modifier = {
+						factor = 0
+						NOR = {
+							is_planet_class = pc_asteroid
+							is_planet_class = pc_molten
+						}
+					}
+					random_list = {
+						#Alloys 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.60 days = 1 }
+						}
+						#Alloys 2
+						30 = {
+							planet_event =  { id = planetarystations_decision_event.61 days = 1 }
+						}
+					}
+				}
+				2 = {
+					#Heavy Alloys
+					modifier = {
+						factor = 0
+						NOR = {
+							is_planet_class = pc_asteroid
+							is_planet_class = pc_molten
+						}
+					}
+					random_list = {
+						#Alloys 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.62 days = 1 }
+						}
+						#Alloys 2
+						30 = {
+							planet_event =  { id = planetarystations_decision_event.63 days = 1 }
+						}
+					}
+				}
+				1 = {
+					#EEZO
+					random_list = {
+						80 = {
+							planet_event =  { id = planetarystations_decision_event.64 days = 1 }
+						}
+						15 = {
+							planet_event =  { id = planetarystations_decision_event.65 days = 1 }
+						}
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.66 days = 1 }
+						}
+					}
+				}
 			}
 		}
 	}
