@@ -2322,6 +2322,42 @@ deploy_planetary_station = {
 			add_deposit = d_broken_blocker
 		}
 	}
+
+	if = {
+		limit = { is_planet_class = pc_methane }
+		change_pc = { class = pc_methane_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_methane_blocker
+		}
+	}
+
+	if = {
+		limit = { is_planet_class = pc_mephitic }
+		change_pc = { class = pc_mephitic_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_mephitic_blocker
+		}
+	}
+
+	if = {
+		limit = { is_planet_class = pc_chlorine }
+		change_pc = { class = pc_chlorine_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_chlorine_blocker
+		}
+	}
+
+	if = {
+		limit = { is_planet_class = pc_ammonia }
+		change_pc = { class = pc_methane_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_ammonia_blocker
+		}
+	}
 	
 	if = {
 		limit = { 
@@ -2351,7 +2387,9 @@ deploy_planetary_station = {
 	if = {
 		limit = { 
 			is_planet_class = pc_gas_giant 
-			NOT = { has_modifier = ice_giant }
+			NOT = {
+				is_planet_class = pc_ice_giant
+			}
 		}
 		if = {
 			limit = { has_planet_flag = blue_gas_giant }
@@ -2398,10 +2436,11 @@ deploy_planetary_station = {
 			add_deposit = d_gas_giant_blocker
 		}
 	}
-	
+
 	if = {
-		limit = { has_modifier = ice_giant }
-		remove_modifier = ice_giant
+		limit = {
+			is_planet_class = pc_ice_giant
+		}
 		if = {
 			limit = { has_ring = yes }
 			change_pc = { class = pc_ice_giant_station_ring inherit_entity = yes }
@@ -2415,6 +2454,23 @@ deploy_planetary_station = {
 			add_deposit = d_ice_giant_blocker
 		}
 	}
+	
+	# if = {
+	# 	limit = { has_modifier = ice_giant }
+	# 	remove_modifier = ice_giant
+	# 	if = {
+	# 		limit = { has_ring = yes }
+	# 		change_pc = { class = pc_ice_giant_station_ring inherit_entity = yes }
+	# 	}
+	# 	else = {
+	# 		change_pc = { class = pc_ice_giant_station inherit_entity = yes }
+	# 	}
+	#
+	# 	if = {
+	# 		limit = { planet_size > 5 }
+	# 		add_deposit = d_ice_giant_blocker
+	# 	}
+	# }
 	
 	if = {
 		limit = { is_planet_class = pc_hot_giant  }
@@ -2452,6 +2508,15 @@ deploy_planetary_station = {
 		if = {
 			limit = { planet_size > 5 }
 			add_deposit = d_sulfur_blocker
+		}
+	}
+
+	if = {
+		limit = { is_planet_class = pc_hothouse }
+		change_pc = { class = pc_hothouse_station inherit_entity = yes }
+		if = {
+			limit = { planet_size > 5 }
+			add_deposit = d_hothouse_blocker
 		}
 	}
 	

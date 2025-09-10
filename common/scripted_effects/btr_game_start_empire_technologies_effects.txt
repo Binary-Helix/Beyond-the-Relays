@@ -265,6 +265,7 @@ give_btr_T0_starting_tech = {
         give_technology = { tech = tech_btr_platinum_prospecting message = no }
         give_technology = { tech = tech_btr_helium3_isotope_separation message = no }
         give_technology = { tech = tech_btr_hydrogen_siphoning message = no }
+        give_technology = { tech = tech_planetary_station_1 message = no }
 
         if = {
             limit = {
@@ -379,6 +380,8 @@ give_btr_T1_starting_tech = {
         give_technology = { tech = tech_strike_craft_1 message = no }
         give_technology = { tech = tech_corvette_hull_1 message = no }
         give_technology = { tech = tech_corvette_build_speed message = no }
+        give_technology = { tech = tech_planetary_station_2 message = no }
+        give_technology = { tech = tech_planetary_station_3 message = no }
         if = {
             limit = {
                 NOT = {
