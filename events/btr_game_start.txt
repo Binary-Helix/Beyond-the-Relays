@@ -22,6 +22,7 @@ event = {
 
 		every_country = {
 			limit = { is_btr_empire = yes }
+			country_event = { id = btr_game_start.4 days = 0 } #Set starting Territory
 			country_event = { id = btr_game_start.10 days = 2 } #Set Starting Contacts and Flags
 			country_event = { id = btr_game_start.11 days = 1 } #Set Species Rights
 		}
@@ -2013,9 +2014,68 @@ country_event = {
 	}
 }
 
-###############################
-# COUNTRY INITIALIZATION EVENTS
-###############################
+##########################
+# CANON EMPIRE START SETUP
+##########################
+
+country_event = {
+	id = btr_game_start.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				is_btr_canon_map = yes
+			}
+			log = "btr_game_start.4 - Started"
+			generate_asari_republics_territory = yes
+			log = "Asari Republics Territory Spawned"
+			generate_salarian_union_territory = yes
+			log = "Salarian Union Territory Established"
+			generate_turian_hierarchy_territory = yes
+			log = "Turian Hierarchy Territory Established"
+			generate_systems_alliance_territory = yes
+			log = "Systems Alliance Territory Established"
+			generate_courts_of_dekuuna_territory = yes
+			log = "Courts of Dekuuna Territory Established"
+			generate_vol_protectorate_territory = yes
+			log = "Vol Protectorate Territory Established"
+			generate_illuminated_primacy_territory = yes
+			log = "Illuminated Primacy Territory Established"
+			generate_hegemony_of_kharshan_territory = yes
+			log = "Hegemony of Khar'shan Territory Established"
+			generate_aralakh_kahmat_territory = yes
+			log = "Aralakh Kahmat Territory Established"
+			generate_omega_empire_territory = yes
+			log = "Omega Territory Established"
+			generate_illium_corporate_interests_territory = yes
+			log = "Illium Corporate Interests Territory Established"
+			generate_caleston_directorate_territory = yes
+			log = "Caleston Directorate Territory Established"
+			generate_remnants_of_rakhana_territory = yes
+			log = "Remnants of Rakhana Territory Established"
+			generate_vorcha_clandom_territory = yes
+			log = "Vorcha Clandom Territory Established"
+			generate_sedriiace_collective_territory = yes
+			log = "Sed'riicae Collective Territory Established"
+			generate_lystheni_order_territory = yes
+			log = "Lystheni Order Territory Established"
+			generate_gothones_remnant_territory = yes
+			log = "Gothones Remnant Territory Established"
+			generate_geth_consensus_territory = yes
+			log = "Geth Consensus Territory Established"
+			generate_disciples_of_nazara_territory = yes
+			log = "Disciples of Nazara Territory Established"
+			generate_rachni_hive_territory = yes
+			log = "Rachni Hive Territory Established"
+			generate_citadel_council_territory = yes
+			log = "Citadel Council Territory Established"
+			#generate_independent_worlds_territory = yes
+			#log = "Independent World Territory Established"
+		}
+		log = "btr_game_start.4 - Completed"
+	}
+}
 
 #Set Species Contacts
 country_event = {
@@ -2241,65 +2301,7 @@ country_event = {
 # 		}
 # 	}
 # }
-#
-# country_event = {
-# 	id = btr_game_start.4
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	immediate = {
-# 		if = {
-# 			limit = {
-# 				is_btr_canon_map = yes
-# 			}
-# 			log = "btr_game_start.3 - Started"
-# 			generate_asari_republics_territory = yes
-# 			log = "Asari Republics Territory Spawned"
-# 			generate_salarian_union_territory = yes
-# 			log = "Salarian Union Territory Established"
-# 			generate_turian_hierarchy_territory = yes
-# 			log = "Turian Hierarchy Territory Established"
-# 			generate_systems_alliance_territory = yes
-# 			log = "Systems Alliance Territory Established"
-# 			generate_courts_of_dekuuna_territory = yes
-# 			log = "Courts of Dekuuna Territory Established"
-# 			generate_vol_protectorate_territory = yes
-# 			log = "Vol Protectorate Territory Established"
-# 			generate_illuminated_primacy_territory = yes
-# 			log = "Illuminated Primacy Territory Established"
-# 			generate_hegemony_of_kharshan_territory = yes
-# 			log = "Hegemony of Khar'shan Territory Established"
-# 			generate_aralakh_kahmat_territory = yes
-# 			log = "Aralakh Kahmat Territory Established"
-# 			generate_omega_empire_territory = yes
-# 			log = "Omega Territory Established"
-# 			generate_illium_corporate_interests_territory = yes
-# 			log = "Illium Corporate Interests Territory Established"
-# 			generate_caleston_directorate_territory = yes
-# 			log = "Caleston Directorate Territory Established"
-# 			generate_remnants_of_rakhana_territory = yes
-# 			log = "Remnants of Rakhana Territory Established"
-# 			generate_vorcha_clandom_territory = yes
-# 			log = "Vorcha Clandom Territory Established"
-# 			generate_sedriiace_collective_territory = yes
-# 			log = "Sed'riicae Collective Territory Established"
-# 			generate_lystheni_order_territory = yes
-# 			log = "Lystheni Order Territory Established"
-# 			generate_gothones_remnant_territory = yes
-# 			log = "Gothones Remnant Territory Established"
-# 			generate_geth_consensus_territory = yes
-# 			log = "Geth Consensus Territory Established"
-# 			generate_disciples_of_nazara_territory = yes
-# 			log = "Disciples of Nazara Territory Established"
-# 			generate_rachni_hive_territory = yes
-# 			log = "Rachni Hive Territory Established"
-# 			generate_citadel_council_territory = yes
-# 			log = "Citadel Council Territory Established"
-# 			generate_independent_worlds_territory = yes
-# 			log = "Independent World Territory Established"
-# 		}
-# 		log = "btr_game_start.4 - Completed"
-# 	}
-# }
+
 #
 # #
 # country_event = {
