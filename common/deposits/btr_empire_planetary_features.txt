@@ -1425,7 +1425,24 @@ d_tuchanka_the_hollows = {
 
 ### Migrant Fleet
 
+#Civilian Fleet
+d_migrant_fleet_resource_income = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_migrant_fleet_resources
 
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 1
+			mult = value:migrant_fle_deposit_energy_income
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
 
 
 

@@ -415,11 +415,21 @@ give_btr_T1_starting_tech = {
             give_technology = { tech = tech_space_trading message = no }
             give_technology = { tech = tech_hyper_entertainment_forum message = no }
             give_technology = { tech = tech_alien_life_studies message = no }
-            give_technology = { tech = tech_neural_implants message = no }
             give_technology = { tech = tech_robotic_workers message = no }
             give_technology = { tech = tech_robomodding message = no }
             give_technology = { tech = tech_luxuries_1 message = no }
             give_technology = { tech = tech_robomodding message = no }
+        }
+        if = {
+            limit = {
+                owner = {
+                    OR = {
+                        has_origin = lystheni_ord_origin
+                        has_origin = hegemony_kha_origin
+                    }
+                }
+            }
+            give_technology = { tech = tech_neural_implants message = no }
         }
     }
 }

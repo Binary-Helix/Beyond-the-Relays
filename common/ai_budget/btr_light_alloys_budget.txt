@@ -409,26 +409,26 @@ light_alloys_expenditure_decisions = {
 	}
 }
 
-light_alloys_expenditure_precursors = {
-	resource = light_alloys
-	type = expenditure
-	category = planets
-
-	potential = {
-		OR = {
-			has_technology = tech_lithium_alloys
-			has_technology = tech_beryllium_alloys
-			has_technology = tech_titanium_alloys
-		}
-	}
-
-	weight = {
-		weight = 0.15
-	}
-	desired_max = {
-		base = 600
-	}
-}
+# light_alloys_expenditure_precursors = {
+# 	resource = light_alloys
+# 	type = expenditure
+# 	category = planets
+#
+# 	potential = {
+# 		OR = {
+# 			has_technology = tech_lithium_alloys
+# 			has_technology = tech_beryllium_alloys
+# 			has_technology = tech_titanium_alloys
+# 		}
+# 	}
+#
+# 	weight = {
+# 		weight = 0.15
+# 	}
+# 	desired_max = {
+# 		base = 600
+# 	}
+# }
 
 ############
 ## Upkeep ##

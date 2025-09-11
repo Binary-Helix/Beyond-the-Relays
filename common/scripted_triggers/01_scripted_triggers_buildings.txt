@@ -4,95 +4,48 @@ has_upgraded_capital = {
 		limit = { has_modifier = resort_colony }
 		custom_tooltip = {
 			fail_text = "requires_building_resort_capital"
-			OR = {
-				has_building = building_resort_capital
-				has_building = building_resort_major_capital
-			}
+			capital_tier >= 2
 		}
 	}
 	else_if = {
 		limit = { has_modifier = slave_colony }
 		custom_tooltip = {
 			fail_text = "requires_building_slave_capital"
-			OR = {
-				has_building = building_slave_capital
-				has_building = building_slave_major_capital
-			}
+			capital_tier >= 2
 		}
 	}
 	else_if = {
 		limit = { is_planet_class = pc_habitat }
 		custom_tooltip = {
 			fail_text = "requires_building_hab_capital"
-			OR = {
-				has_building = building_hab_capital
-				has_building = building_hab_major_capital
-				has_building = building_hab_system_capital
-				has_building = building_imperial_capital
-				has_building = building_imperial_machine_capital
-				has_building = building_imperial_hive_capital
-			}
-		}
-	}
-	else_if = {
-		limit = { has_planet_flag = planetary_station }
-		custom_tooltip = {
-			fail_text = "requires_building_planetary_station_capital"
-			OR = {
-				has_building = building_station_capital
-				has_building = building_station_major_capital
-				has_building = building_station_fe_capital
-				has_building = building_station_system_capital
-				has_building = building_prison_capital
-				has_building = building_prison_major_capital
-				has_building = building_prison_system_capital
-			}
+			capital_tier >= 2
 		}
 	}
 	else_if = {
 		limit = { owner = { is_wilderness_empire = yes } }
 		custom_tooltip = {
 			fail_text = "requires_building_wilderness_capital"
-			OR = {
-				has_building = building_capital_wilderness
-				has_building = building_major_capital_wilderness
-				has_building = building_system_capital_wilderness
-				has_building = building_imperial_capital_wilderness
-			}
+			capital_tier >= 2
 		}
 	}
 	else_if = {
 		limit = { owner = { is_hive_empire = yes } } # excludes Wilderness, above
 		custom_tooltip = {
 			fail_text = "requires_building_hive_capital"
-			OR = {
-				has_building = building_hive_capital
-				has_building = building_hive_major_capital
-				has_building = building_imperial_hive_capital
-			}
+			capital_tier >= 2
 		}
 	}
 	else_if = {
 		limit = { owner = { is_machine_empire = yes } }
 		custom_tooltip = {
 			fail_text = "requires_building_machine_capital"
-			OR = {
-				has_building = building_machine_capital
-				has_building = building_machine_major_capital
-				has_building = building_machine_system_capital
-				has_building = building_imperial_machine_capital
-			}
+			capital_tier >= 2
 		}
 	}
 	else = {
 		custom_tooltip = {
 			fail_text = "requires_building_capital"
-			OR = {
-				has_building = building_capital
-				has_building = building_major_capital
-				has_building = building_system_capital
-				has_building = building_imperial_capital
-			}
+			capital_tier >= 2
 		}
 	}
 }
@@ -103,27 +56,21 @@ has_major_upgraded_capital = {
 		limit = { has_modifier = resort_colony }
 		custom_tooltip = {
 			fail_text = "requires_building_resort_major_capital"
-			has_building = building_resort_major_capital
+			capital_tier >= 3
 		}
 	}
 	else_if = {
 		limit = { has_modifier = slave_colony }
 		custom_tooltip = {
 			fail_text = "requires_building_slave_major_capital"
-			has_building = building_slave_major_capital
+			capital_tier >= 3
 		}
 	}
 	else_if = {
 		limit = { is_planet_class = pc_habitat }
 		custom_tooltip = {
 			fail_text = "requires_building_hab_major_capital"
-			OR = {
-				has_building = building_hab_major_capital
-				has_building = building_hab_system_capital
-				has_building = building_imperial_capital
-				has_building = building_imperial_machine_capital
-				has_building = building_imperial_hive_capital
-			}
+			capital_tier >= 3
 		}
 	}
 	else_if = {
@@ -143,42 +90,27 @@ has_major_upgraded_capital = {
 		limit = { owner = { is_wilderness_empire = yes } }
 		custom_tooltip = {
 			fail_text = "requires_building_wilderness_major_capital"
-			OR = {
-				has_building = building_major_capital_wilderness
-				has_building = building_system_capital_wilderness
-				has_building = building_imperial_capital_wilderness
-			}
+			capital_tier >= 3
 		}
 	}
 	else_if = {
 		limit = { owner = { is_hive_empire = yes } } # excludes Wilderness, above
 		custom_tooltip = {
 			fail_text = "requires_building_major_hive_capital"
-			OR = {
-				has_building = building_hive_major_capital
-				has_building = building_imperial_hive_capital
-			}
+			capital_tier >= 3
 		}
 	}
 	else_if = {
 		limit = { owner = { is_machine_empire = yes } }
 		custom_tooltip = {
 			fail_text = "requires_building_machine_major_capital"
-			OR = {
-				has_building = building_machine_major_capital
-				has_building = building_machine_system_capital
-				has_building = building_imperial_machine_capital
-			}
+			capital_tier >= 3
 		}
 	}
 	else = {
 		custom_tooltip = {
 			fail_text = "requires_building_major_capital"
-			OR = {
-				has_building = building_major_capital
-				has_building = building_system_capital
-				has_building = building_imperial_capital
-			}
+			capital_tier >= 3
 		}
 	}
 }
@@ -189,26 +121,21 @@ has_fully_upgraded_capital = {
 		limit = { has_modifier = resort_colony }
 		custom_tooltip = {
 			fail_text = "requires_building_resort_major_capital"
-			has_building = building_resort_major_capital
+			capital_tier >= 3
 		}
 	}
 	else_if = {
 		limit = { has_modifier = slave_colony }
 		custom_tooltip = {
 			fail_text = "requires_building_slave_major_capital"
-			has_building = building_slave_major_capital
+			capital_tier >= 3
 		}
 	}
 	else_if = {
 		limit = { is_planet_class = pc_habitat }
 		custom_tooltip = {
 			fail_text = "requires_building_hab_system_capital"
-			OR = {
-				has_building = building_hab_system_capital
-				has_building = building_imperial_capital
-				has_building = building_imperial_machine_capital
-				has_building = building_imperial_hive_capital
-			}
+			capital_tier >= 4
 		}
 	}
 	else_if = {
@@ -226,40 +153,27 @@ has_fully_upgraded_capital = {
 		limit = { owner = { is_wilderness_empire = yes } }
 		custom_tooltip = {
 			fail_text = "requires_building_wilderness_system_capital"
-			OR = {
-				has_building = building_system_capital_wilderness
-				has_building = building_imperial_capital_wilderness
-			}
+			capital_tier >= 4
 		}
 	}
 	else_if = {
 		limit = { owner = { is_hive_empire = yes } } # excludes Wilderness, above
 		custom_tooltip = {
 			fail_text = "requires_building_major_hive_capital"
-			OR = {
-				has_building = building_hive_major_capital
-				has_building = building_imperial_hive_capital
-			}
+			capital_tier >= 3
 		}
 	}
 	else_if = {
 		limit = { owner = { is_machine_empire = yes } }
 		custom_tooltip = {
-			fail_text = "requires_building_machine_major_capital"
-			OR = {
-				has_building = building_machine_major_capital
-				has_building = building_machine_system_capital
-				has_building = building_imperial_machine_capital
-			}
+			fail_text = "requires_building_machine_system_capital"
+			capital_tier >= 4
 		}
 	}
 	else = {
 		custom_tooltip = {
 			fail_text = "requires_building_system_capital"
-			OR = {
-				has_building = building_system_capital
-				has_building = building_imperial_capital
-			}
+			capital_tier >= 4
 		}
 	}
 }
@@ -732,6 +646,9 @@ has_any_unspecialized_research_zone = {
 		has_zone = {
 			zone = zone_research_hive
 		}
+		has_zone = {
+			zone = zone_central_spire
+		}
 	}
 }
 
@@ -820,6 +737,15 @@ has_any_agriculture_zone = {
 			zone = zone_anglers
 		}
 		has_zone = {
+			zone = zone_agrarian_urban
+		}
+		has_zone = {
+			zone = zone_agrarian_anglers
+		}
+		has_zone = {
+			zone = zone_exotic_gases
+		}
+		has_zone = {
 			zone = zone_food_wilderness
 		}
 		has_zone = {
@@ -838,6 +764,9 @@ has_any_generator_zone = {
 	OR = {
 		has_zone = {
 			zone = zone_energy
+		}
+		has_zone = {
+			zone = zone_volatile_motes
 		}
 		has_zone = {
 			zone = zone_energy_wilderness
@@ -861,6 +790,15 @@ has_any_mining_zone = {
 	OR = {
 		has_zone = {
 			zone = zone_minerals
+		}
+		has_zone = {
+			zone = zone_betharian
+		}
+		has_zone = {
+			zone = zone_subterranean_urban
+		}
+		has_zone = {
+			zone = zone_rare_crystals
 		}
 		has_zone = {
 			zone = zone_minerals_wilderness
@@ -987,6 +925,15 @@ has_any_unity_zone = {
 		has_zone = {
 			zone = zone_unity_hive
 		}
+		has_zone = {
+			zone = zone_research_unity
+		}
+		has_zone = {
+			zone = zone_research_unity_wilderness
+		}
+		has_zone = {
+			zone = zone_habitat_research_unity
+		}
 	}
 }
 
@@ -1007,6 +954,32 @@ has_any_trade_zone = {
 	}
 }
 
+has_any_fortress_zone = {
+	OR = {
+		has_zone = {
+			zone = zone_fortress
+		}
+		has_zone = {
+			zone = zone_fortress_wilderness
+		}
+		has_zone = {
+			zone = zone_fortress_arcology
+		}
+		has_zone = {
+			zone = zone_fortress_ring_world
+		}
+		has_zone = {
+			zone = zone_fortress_nexus
+		}
+		has_zone = {
+			zone = zone_fortress_hive
+		}
+		has_zone = {
+			zone = zone_habitat_knights
+		}
+	}
+}
+
 # These are scripted triggers checking district sets for mod compatibility
 planet_is_habitat_equivalent = {
 	uses_district_set = habitat					# Habitats
@@ -1015,20 +988,37 @@ planet_is_habitat_equivalent = {
 planet_is_ecu_equivalent = {
 	OR = {
 		uses_district_set = city_world 			# Ecumenopoleis
-		AND = {
-			uses_district_set = machine_world		# Machine & Nanotech Worlds
-			exists = owner
-			owner = {
-				OR = {
-					has_ascension_perk = ap_machine_worlds
-					has_tradition = tr_nanotech_3
-				}
-			}
-		}
+		uses_district_set = machine_world		# Machine & Nanotech Worlds
 		uses_district_set = hive_world			# Hive Worlds
 	}
 }
 
 planet_is_ring_world_equivalent = {
 	uses_district_set = ring_world				# Ring Worlds
+}
+
+has_volatile_motes_deposit = {
+	OR = {
+		has_deposit = d_dust_caverns
+		has_deposit = d_dust_desert
+		has_deposit = d_industrial_sector
+	}
+}
+
+has_exotic_gases_deposit = {
+	OR = {
+		has_deposit = d_bubbling_swamp
+		has_deposit = d_fuming_bog
+		has_deposit = d_industrial_sector
+		has_deposit = d_exotic_mountain
+	}
+}
+
+has_rare_crystals_deposit = {
+	OR = {
+		has_deposit = d_crystalline_caverns
+		has_deposit = d_crystal_forest
+		has_deposit = d_crystal_reef
+		has_deposit = d_industrial_sector
+	}
 }

@@ -482,26 +482,26 @@ heavy_alloys_expenditure_armies_threatened = {
 	}
 }
 
-heavy_alloys_expenditure_precursors = {
-	resource = heavy_alloys
-	type = expenditure
-	category = planets
-
-	potential = {
-		OR = {
-			has_technology = tech_iridium_alloys
-			has_technology = tech_palladium_alloys
-			has_technology = tech_platinum_alloys
-		}
-	}
-
-	weight = {
-		weight = 0.20
-	}
-	desired_max = {
-		base = 800
-	}
-}
+# heavy_alloys_expenditure_precursors = {
+# 	resource = heavy_alloys
+# 	type = expenditure
+# 	category = planets
+#
+# 	potential = {
+# 		OR = {
+# 			has_technology = tech_iridium_alloys
+# 			has_technology = tech_palladium_alloys
+# 			has_technology = tech_platinum_alloys
+# 		}
+# 	}
+#
+# 	weight = {
+# 		weight = 0.20
+# 	}
+# 	desired_max = {
+# 		base = 800
+# 	}
+# }
 
 
 ############

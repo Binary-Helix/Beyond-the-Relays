@@ -31,13 +31,13 @@ situation_event = {
 					is_owner_ethic_pop_faction = yes
 					NOT = { has_modifier = faction_loan_taken }
 				}
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = ruler_pop_faction
 			}
 			ordered_owned_planet = {
 				limit = { is_capital = no }
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = looted_planet
 			}
@@ -60,7 +60,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				uranium = 50
-				mult = event_target:ruler_pop_faction.trigger:num_pops
+				mult = event_target:ruler_pop_faction.trigger:pop_amount
 			}
 			event_target:ruler_pop_faction = {
 				add_modifier = {
@@ -75,7 +75,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				uranium = 100
-				mult = event_target:looted_planet.trigger:num_pops
+				mult = event_target:looted_planet.trigger:pop_amount
 			}
 			event_target:looted_planet = {
 				add_planet_devastation = 50
@@ -154,13 +154,13 @@ situation_event = {
 					is_owner_ethic_pop_faction = yes
 					NOT = { has_modifier = faction_loan_taken }
 				}
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = ruler_pop_faction
 			}
 			ordered_owned_planet = {
 				limit = { is_capital = no }
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = looted_planet
 			}
@@ -209,7 +209,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				lithium = 50
-				mult = event_target:ruler_pop_faction.trigger:num_pops
+				mult = event_target:ruler_pop_faction.trigger:pop_amount
 			}
 			event_target:ruler_pop_faction = {
 				add_modifier = {
@@ -224,7 +224,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				lithium = 100
-				mult = event_target:looted_planet.trigger:num_pops
+				mult = event_target:looted_planet.trigger:pop_amount
 			}
 			event_target:looted_planet = {
 				add_planet_devastation = 50
@@ -303,13 +303,13 @@ situation_event = {
 					is_owner_ethic_pop_faction = yes
 					NOT = { has_modifier = faction_loan_taken }
 				}
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = ruler_pop_faction
 			}
 			ordered_owned_planet = {
 				limit = { is_capital = no }
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = looted_planet
 			}
@@ -358,7 +358,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				beryllium = 50
-				mult = event_target:ruler_pop_faction.trigger:num_pops
+				mult = event_target:ruler_pop_faction.trigger:pop_amount
 			}
 			event_target:ruler_pop_faction = {
 				add_modifier = {
@@ -373,7 +373,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				beryllium = 100
-				mult = event_target:looted_planet.trigger:num_pops
+				mult = event_target:looted_planet.trigger:pop_amount
 			}
 			event_target:looted_planet = {
 				add_planet_devastation = 50
@@ -452,13 +452,13 @@ situation_event = {
 					is_owner_ethic_pop_faction = yes
 					NOT = { has_modifier = faction_loan_taken }
 				}
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = ruler_pop_faction
 			}
 			ordered_owned_planet = {
 				limit = { is_capital = no }
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = looted_planet
 			}
@@ -507,7 +507,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				titanium = 50
-				mult = event_target:ruler_pop_faction.trigger:num_pops
+				mult = event_target:ruler_pop_faction.trigger:pop_amount
 			}
 			event_target:ruler_pop_faction = {
 				add_modifier = {
@@ -522,7 +522,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				titanium = 100
-				mult = event_target:looted_planet.trigger:num_pops
+				mult = event_target:looted_planet.trigger:pop_amount
 			}
 			event_target:looted_planet = {
 				add_planet_devastation = 50
@@ -602,13 +602,13 @@ situation_event = {
 					is_owner_ethic_pop_faction = yes
 					NOT = { has_modifier = faction_loan_taken }
 				}
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = ruler_pop_faction
 			}
 			ordered_owned_planet = {
 				limit = { is_capital = no }
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = looted_planet
 			}
@@ -657,7 +657,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				iridium = 50
-				mult = event_target:ruler_pop_faction.trigger:num_pops
+				mult = event_target:ruler_pop_faction.trigger:pop_amount
 			}
 			event_target:ruler_pop_faction = {
 				add_modifier = {
@@ -672,7 +672,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				iridium = 100
-				mult = event_target:looted_planet.trigger:num_pops
+				mult = event_target:looted_planet.trigger:pop_amount
 			}
 			event_target:looted_planet = {
 				add_planet_devastation = 50
@@ -752,13 +752,13 @@ situation_event = {
 					is_owner_ethic_pop_faction = yes
 					NOT = { has_modifier = faction_loan_taken }
 				}
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = ruler_pop_faction
 			}
 			ordered_owned_planet = {
 				limit = { is_capital = no }
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = looted_planet
 			}
@@ -807,7 +807,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				platinum = 50
-				mult = event_target:ruler_pop_faction.trigger:num_pops
+				mult = event_target:ruler_pop_faction.trigger:pop_amount
 			}
 			event_target:ruler_pop_faction = {
 				add_modifier = {
@@ -822,7 +822,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				platinum = 100
-				mult = event_target:looted_planet.trigger:num_pops
+				mult = event_target:looted_planet.trigger:pop_amount
 			}
 			event_target:looted_planet = {
 				add_planet_devastation = 50
@@ -902,13 +902,13 @@ situation_event = {
 					is_owner_ethic_pop_faction = yes
 					NOT = { has_modifier = faction_loan_taken }
 				}
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = ruler_pop_faction
 			}
 			ordered_owned_planet = {
 				limit = { is_capital = no }
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = looted_planet
 			}
@@ -957,7 +957,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				palladium = 50
-				mult = event_target:ruler_pop_faction.trigger:num_pops
+				mult = event_target:ruler_pop_faction.trigger:pop_amount
 			}
 			event_target:ruler_pop_faction = {
 				add_modifier = {
@@ -972,7 +972,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				palladium = 100
-				mult = event_target:looted_planet.trigger:num_pops
+				mult = event_target:looted_planet.trigger:pop_amount
 			}
 			event_target:looted_planet = {
 				add_planet_devastation = 50
@@ -1077,7 +1077,7 @@ situation_event = {
 							is_robot_pop_group = yes
 						}
 					}
-					order_by = trigger:num_pops
+					order_by = trigger:pop_amount
 					position = 0
 					save_event_target_as = robots_planet
 					event_target:robots_planet = {
@@ -1238,7 +1238,7 @@ situation_event = {
 							is_robot_pop_group = yes
 						}
 					}
-					order_by = trigger:num_pops
+					order_by = trigger:pop_amount
 					position = 0
 					save_event_target_as = robots_planet
 					event_target:robots_planet = {
@@ -1373,13 +1373,13 @@ situation_event = {
 					is_owner_ethic_pop_faction = yes
 					NOT = { has_modifier = faction_loan_taken }
 				}
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = ruler_pop_faction
 			}
 			ordered_owned_planet = {
 				limit = { is_capital = no }
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = looted_planet
 			}
@@ -1428,7 +1428,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				helium_3 = 50
-				mult = event_target:ruler_pop_faction.trigger:num_pops
+				mult = event_target:ruler_pop_faction.trigger:pop_amount
 			}
 			event_target:ruler_pop_faction = {
 				add_modifier = {
@@ -1443,7 +1443,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				helium_3 = 100
-				mult = event_target:looted_planet.trigger:num_pops
+				mult = event_target:looted_planet.trigger:pop_amount
 			}
 			event_target:looted_planet = {
 				add_planet_devastation = 50
@@ -1522,13 +1522,13 @@ situation_event = {
 					is_owner_ethic_pop_faction = yes
 					NOT = { has_modifier = faction_loan_taken }
 				}
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = ruler_pop_faction
 			}
 			ordered_owned_planet = {
 				limit = { is_capital = no }
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = looted_planet
 			}
@@ -1577,7 +1577,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				hydrogen = 50
-				mult = event_target:ruler_pop_faction.trigger:num_pops
+				mult = event_target:ruler_pop_faction.trigger:pop_amount
 			}
 			event_target:ruler_pop_faction = {
 				add_modifier = {
@@ -1592,7 +1592,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				hydrogen = 100
-				mult = event_target:looted_planet.trigger:num_pops
+				mult = event_target:looted_planet.trigger:pop_amount
 			}
 			event_target:looted_planet = {
 				add_planet_devastation = 50
@@ -1661,7 +1661,7 @@ situation_event = {
 		owner = {
 			ordered_owned_planet = {
 				limit = { is_capital = no }
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = looted_planet
 			}
@@ -1778,7 +1778,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				antimatter_fuel = 10
-				mult = event_target:looted_planet.trigger:num_pops
+				mult = event_target:looted_planet.trigger:pop_amount
 			}
 		}
 		event_target:looted_planet = {
@@ -1888,7 +1888,7 @@ situation_event = {
 		owner = {
 			ordered_owned_planet = {
 				limit = { is_capital = no }
-				order_by = trigger:num_pops
+				order_by = trigger:pop_amount
 				position = 0
 				save_event_target_as = looted_planet
 			}
@@ -1983,7 +1983,7 @@ situation_event = {
 		owner = {
 			add_resource = {
 				eezo = 10
-				mult = event_target:looted_planet.trigger:num_pops
+				mult = event_target:looted_planet.trigger:pop_amount
 			}
 		}
 		event_target:looted_planet = {

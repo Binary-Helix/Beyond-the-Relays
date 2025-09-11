@@ -2513,7 +2513,7 @@ deploy_planetary_station = {
 
 	if = {
 		limit = { is_planet_class = pc_hothouse }
-		change_pc = { class = pc_hothouse_station inherit_entity = yes }
+		change_pc = { class = pc_greenhouse_station inherit_entity = yes }
 		if = {
 			limit = { planet_size > 5 }
 			add_deposit = d_hothouse_blocker
