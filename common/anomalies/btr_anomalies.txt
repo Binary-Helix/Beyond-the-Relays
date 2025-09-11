@@ -1,0 +1,71 @@
+PRESSHA = {
+    desc = pressha_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO make this spawn only on Pressha b Gargarin, Armstrong Nebula
+        }
+    }
+
+    on_success = {
+        1 = {
+            anomaly_event = pressha.a
+        }
+    }
+}
+
+LIQUOR = {
+    desc = liquor_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Antirumgom Gargarin, Armstrong Nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.1
+        }
+    }
+}
+
+SHOALS = {
+    desc = shoals_life_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Notanban Grissom, Armstrong nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.2
+        }
+    }
+}
+
+PATAMALRUS = {
+    desc = patamalrus_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on patamalrus tereshkova, Armstrong nebula
+        }
+    }
+    on_success = {
+        8 = {
+            anomaly_event = btr_anomaly.3
+        }
+        2 = {
+            anomaly_event = btr_anomaly.4
+        }
+    }
+}

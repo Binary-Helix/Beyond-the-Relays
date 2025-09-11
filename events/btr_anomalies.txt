@@ -1,0 +1,107 @@
+################################
+#
+# Beyond the Relays Space Anomalies
+# Written by Jontxu8831
+###############################
+
+namespace = btr_anomaly
+
+ship_event = {
+    id = btr_anomaly.1
+    title = "btr_anomaly.1.name"
+    desc = "btr_anomaly.1.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.1.a
+        random_list = {
+            50 = {
+                owner = {
+                    add_modifier = { modifier = intoxication }
+                }
+            }
+            50 = {
+                owner = {
+                    add_modifier = { modifier = exotic_liquor }
+                }
+            }
+        }
+    }
+
+    option = {
+        name = btr_anomaly.1.b
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.2
+    title = "btr_anomaly.2.name"
+    desc = "btr_anomaly.2.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.2.a
+        From = {
+            add_deposit = d_society_3
+            add_deposit = d_engineering_2
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.3
+    title = "btr_anomaly.3.name"
+    desc = "btr_anomaly.3.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.3.a
+       leader = {
+           add_experience = 200
+       }
+    }
+}
+ship_event = {
+    id = btr_anomaly.4
+    title = "btr_anomaly.4.name"
+    desc = "btr_anomaly.4.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.4.a
+        From = {
+            add_deposit = d_society_2
+        }
+        leader = {
+            add_trait = leader_trait_expertise_biology
+        }
+    }
+}
