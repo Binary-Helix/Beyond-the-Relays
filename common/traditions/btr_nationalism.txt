@@ -5,7 +5,7 @@ tr_btr_nationalism_adoption = {
     modifier = {
         pop_ethic_xenophobe_attraction_mult = 0.05
         planet_resettlement_unemployed_destination_mult = -0.5
-       # planet_immigration_pull_mult = -0.5
+       # planet_resettlement_unemployed_destination_mult = -0.5
         country_unity_produces_mult = 0.05
         #Officials generate influence, handled in the leaders script
     }
@@ -25,7 +25,7 @@ tr_btr_nationalism_ours = {
     #Handled through galcom.300
     modifier = {
         planet_resettlement_unemployed_mult = 0.15
-       # pop_growth_from_immigration = 0.15
+       # planet_resettlement_unemployed_mult = 0.15
         pop_resettlement_cost_mult = -0.25
     }
     ai_weight = {

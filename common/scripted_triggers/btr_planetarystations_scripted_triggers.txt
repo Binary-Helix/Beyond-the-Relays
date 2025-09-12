@@ -5,6 +5,7 @@ is_special_colony_type = {
 		has_modifier = resort_colony
 		has_modifier = slave_colony
 		has_planet_flag = planetary_station
+		has_modifier = gestation_colony
 	}
 }
 
@@ -166,9 +167,9 @@ has_energy_deposit = {
 
 has_any_industry_district = {
 	OR = {
-		has_district = district_industrial
-		has_district = district_hab_industrial
-		has_district = district_rw_industrial
+		# has_district = district
+		# has_district = district_hab_industrial
+		# has_district = district_rw_industrial
 		has_district = district_arcology_arms_industry
 		has_district = district_arcology_civilian_industry
 		has_district = district_foundry_plant
@@ -188,6 +189,9 @@ has_any_mining_district = {
 
 has_any_generator_district_or_building = {
 	OR = {
+		has_district = district_photosynthesis_fields
+		has_district = district_photosynthesis_fields_uncapped
+		has_building = building_generator_generic
 		has_district = district_generator
 		has_district = district_hab_energy
 		has_district = district_generator_uncapped

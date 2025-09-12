@@ -21,7 +21,7 @@ building_ammos_aegis = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-            district_mining_max = 1
+            district_mining_max_add= 1
 			habitability_floor_mult = 0.1
         }
     }
@@ -32,7 +32,7 @@ building_ammos_aegis = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-            district_mining_max = 1
+            district_mining_max_add= 1
 			habitability_floor_mult = 0.1
         }
     }
@@ -411,7 +411,7 @@ building_planetary_canal_system = {
         modifier = {
 			planet_amenities_add = 10
             planet_max_districts_add = 2
-            district_farming_max = 2
+            district_farming_max_add= 2
 			planet_jobs_energy_produces_mult = 0.1
         }
     }
@@ -424,7 +424,7 @@ building_planetary_canal_system = {
         modifier = {
 			planet_amenities_add = 10
             planet_max_districts_add = 2
-            district_farming_max = 2
+            district_farming_max_add= 2
 			planet_jobs_energy_produces_mult = 0.1
         }
     }
@@ -464,7 +464,7 @@ building_galactic_retreat = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			planet_immigration_pull_mult = 1.5
+			planet_resettlement_unemployed_destination_mult = 1.5
             pop_happiness = 0.2
             planet_stability_add = 5
             planet_amenities_add = 30
@@ -478,7 +478,7 @@ building_galactic_retreat = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			planet_immigration_pull_mult = 1.5
+			planet_resettlement_unemployed_destination_mult = 1.5
             pop_happiness = 0.2
             planet_stability_add = 5
             planet_amenities_add = 30
@@ -522,7 +522,7 @@ building_ground_taming_operations = {
         }
         modifier = {
 			planet_farmers_produces_mult = 0.05
-            district_farming_max = 3
+            district_farming_max_add= 3
         }
     }
     
@@ -533,7 +533,7 @@ building_ground_taming_operations = {
         }
         modifier = {
 			planet_farmers_produces_mult = 0.05
-            district_farming_max = 3
+            district_farming_max_add= 3
         }
     }
     
@@ -731,7 +731,7 @@ building_luxury_resort = {
         }
         modifier = {
 			planet_amenities_add = 15
-            planet_immigration_pull_mult = 0.25
+            planet_resettlement_unemployed_destination_mult = 0.25
             pop_happiness = 0.05
         }
     }
@@ -743,7 +743,7 @@ building_luxury_resort = {
         }
         modifier = {
 			planet_amenities_add = 15
-            planet_immigration_pull_mult = 0.25
+            planet_resettlement_unemployed_destination_mult = 0.25
             pop_happiness = 0.05
         }
     }
@@ -784,7 +784,7 @@ building_sustainable_agriculture_plant = {
         }
         modifier = {
 			planet_jobs_food_produces_mult = 0.1
-            district_farming_max = 3
+            district_farming_max_add= 3
         }
     }
     
@@ -795,7 +795,7 @@ building_sustainable_agriculture_plant = {
         }
         modifier = {
 			planet_jobs_food_produces_mult = 0.1
-            district_farming_max = 3
+            district_farming_max_add= 3
         }
     }
     
@@ -941,7 +941,7 @@ building_stilted_community = {
         modifier = {
             planet_housing_add = 10
 			planet_max_districts_add = 1
-            planet_immigration_pull_mult = 0.1
+            planet_resettlement_unemployed_destination_mult = 0.1
         }
     }
     
@@ -953,7 +953,7 @@ building_stilted_community = {
         modifier = {
             planet_housing_add = 10
 			planet_max_districts_add = 1
-            planet_immigration_pull_mult = 0.1
+            planet_resettlement_unemployed_destination_mult = 0.1
         }
     }
     
@@ -1255,8 +1255,8 @@ building_transcontinental_monorail_system = {
         }
         modifier = {
 			planet_building_build_speed_mult = 0.15
-            planet_immigration_pull_mult = 0.05
-            pop_demotion_time_mult = -0.1
+            planet_resettlement_unemployed_destination_mult = 0.05
+            pop_unemployment_demotion_time_mult = -0.1
         }
     }
     
@@ -1267,8 +1267,8 @@ building_transcontinental_monorail_system = {
         }
         modifier = {
 			planet_building_build_speed_mult = 0.15
-            planet_immigration_pull_mult = 0.05
-            pop_demotion_time_mult = -0.1
+            planet_resettlement_unemployed_destination_mult = 0.05
+            pop_unemployment_demotion_time_mult = -0.1
         }
     }
     
@@ -1524,7 +1524,7 @@ building_distillery_complex = {
 			job_distiller_add = 3
             pop_happiness = 0.2
             planet_amenities_add = 5
-            pop_growth_speed = 0.05
+            founder_species_growth_mult = 0.05
         }
     }
     
@@ -1537,7 +1537,7 @@ building_distillery_complex = {
 			job_distiller_add = 3
             pop_happiness = 0.2
             planet_amenities_add = 5
-            pop_growth_speed = 0.05
+            founder_species_growth_mult = 0.05
         }
     }
     
@@ -1644,7 +1644,7 @@ building_aero_mining_base = {
             planet_jobs_iridium_produces_mult = 0.1
             planet_jobs_platinum_produces_mult = 0.1
             planet_jobs_palladium_produces_mult = 0.1
-            trade_value_add = 4
+            planet_jobs_trade_produces_add = 4
         }
     }
     
@@ -1662,7 +1662,7 @@ building_aero_mining_base = {
             planet_jobs_iridium_produces_mult = 0.1
             planet_jobs_platinum_produces_mult = 0.1
             planet_jobs_palladium_produces_mult = 0.1
-            trade_value_add = 4
+            planet_jobs_trade_produces_add = 4
         }
     }
     
@@ -1759,7 +1759,7 @@ building_lichen_harvesting_facility = {
         }
         modifier = {
 			habitability_floor_add = 0.05
-            trade_value_add = 3
+            planet_jobs_trade_produces_add = 3
         }
     }
     
@@ -1770,7 +1770,7 @@ building_lichen_harvesting_facility = {
         }
         modifier = {
 			habitability_floor_add = 0.05
-            trade_value_add = 3
+            planet_jobs_trade_produces_add = 3
         }
     }
     

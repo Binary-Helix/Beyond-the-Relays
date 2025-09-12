@@ -26,6 +26,7 @@
 # 	# 	- square_root
 
 # 	#All mathematical operations except weight and factor can be used inline e.g.
+# 	#All mathematical operations except weight and factor can be used inline e.g.
 # 	add = 100
 # 	multiply = value:some_other_script_value
 # 	round = yes
@@ -53,193 +54,193 @@
 # This means that you can input parameters into them, in a similar fashion as described in scripted_effects/99_advanced_documentation.txt
 # For format for doing so is value:my_value|PARAM1|value1|PARAM2|value2|.
 # Then you can use $PARAM1$ in the script value and it will replace it with value1
-
-toxic_attendant_growth = {
-	base = 1
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_city
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_crashed_slaver_ship
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_resort
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_prison
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_slave
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_hab_housing
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_hive
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_hive_1
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_hive_2
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_hive_3
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_nexus
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_nexus_1
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_nexus_2
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_nexus_3
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_arcology_housing
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_arcology_urban_1
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_arcology_urban_2
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_arcology_urban_3
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_rw_city
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_rw_urban_1
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_rw_urban_2
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_rw_urban_3
-		}
-		mode = add
-	}
-	modifier = {
-		has_any_industry_zone = yes
-		mult = 2
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_manufacturing_complex
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_foundry_plant
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_districts
-		parameters = {
-			type = district_living_metal_processing
-		}
-		mode = add
-	}
-	modifier = {
-		has_any_station_industry_zone = yes
-		mult = 2
-	}
-}
+#
+# toxic_attendant_growth = {
+# 	base = 1
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_city
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_crashed_slaver_ship
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_resort
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_prison
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_slave
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_hab_housing
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_hive
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_hive_1
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_hive_2
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_hive_3
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_nexus
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_nexus_1
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_nexus_2
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_nexus_3
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_arcology_housing
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_arcology_urban_1
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_arcology_urban_2
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_arcology_urban_3
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_rw_city
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_rw_urban_1
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_rw_urban_2
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_rw_urban_3
+# 		}
+# 		mode = add
+# 	}
+# 	modifier = {
+# 		has_any_industry_zone = yes
+# 		mult = 2
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_manufacturing_complex
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_foundry_plant
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_living_metal_processing
+# 		}
+# 		mode = add
+# 	}
+# 	modifier = {
+# 		has_any_station_industry_zone = yes
+# 		mult = 2
+# 	}
+# }
 
 ai_station_cap = {
 	base = 0

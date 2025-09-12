@@ -3000,39 +3000,39 @@ entity = {
 ############# Debris Entity ##################
 ##############################################
 
-entity = {
-	name = "debris_large_01_entity"
-	pdxmesh = "debris_large_01_mesh"
-	
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" 
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_wrecked_shipyard_idle" } }
-		event = { time = 0 particle = "debris_large_dust_effect" keep_particle = yes trigger_once = yes }
-	}
-	scale = @entity_scale_3
-}
-
-entity = {
-	name = "debris_medium_01_entity"
-	pdxmesh = "debris_medium_01_mesh"
-	
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" 
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_wrecked_shipyard_idle" } }
-		event = { time = 0 node = "dust_locator" particle = "debris_medium_dust_effect" keep_particle = yes trigger_once = yes }
-	}
-	scale = @entity_scale_3
-}
-
-entity = {
-	name = "debris_medium_02_entity"
-	pdxmesh = "debris_medium_02_mesh"
-	
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" 
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_wrecked_shipyard_idle" } }
-		event = { time = 0 node = "dust_locator" particle = "debris_medium_dust_effect" keep_particle = yes trigger_once = yes }
-	}
-	scale = @entity_scale_3
-}
+# entity = {
+# 	name = "debris_large_01_entity"
+# 	pdxmesh = "debris_large_01_mesh"
+#
+# 	default_state = "idle"
+# 	state = { name = "idle" animation = "idle"
+# 		start_event = { trigger_once = yes sound = { soundeffect = "amb_wrecked_shipyard_idle" } }
+# 		event = { time = 0 particle = "debris_large_dust_effect" keep_particle = yes trigger_once = yes }
+# 	}
+# 	scale = @entity_scale_3
+# }
+#
+# entity = {
+# 	name = "debris_medium_01_entity"
+# 	pdxmesh = "debris_medium_01_mesh"
+#
+# 	default_state = "idle"
+# 	state = { name = "idle" animation = "idle"
+# 		start_event = { trigger_once = yes sound = { soundeffect = "amb_wrecked_shipyard_idle" } }
+# 		event = { time = 0 node = "dust_locator" particle = "debris_medium_dust_effect" keep_particle = yes trigger_once = yes }
+# 	}
+# 	scale = @entity_scale_3
+# }
+#
+# entity = {
+# 	name = "debris_medium_02_entity"
+# 	pdxmesh = "debris_medium_02_mesh"
+#
+# 	default_state = "idle"
+# 	state = { name = "idle" animation = "idle"
+# 		start_event = { trigger_once = yes sound = { soundeffect = "amb_wrecked_shipyard_idle" } }
+# 		event = { time = 0 node = "dust_locator" particle = "debris_medium_dust_effect" keep_particle = yes trigger_once = yes }
+# 	}
+# 	scale = @entity_scale_3
+# }
 

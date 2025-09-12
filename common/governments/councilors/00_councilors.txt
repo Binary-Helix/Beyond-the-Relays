@@ -261,7 +261,7 @@ councilor_byzantine_bureaucracy = {
 	}
 	civic = civic_byzantine_bureaucracy
 	modifier = {
-		planet_administrators_upkeep_mult = -0.02
+		planet_bureaucrats_upkeep_mult = -0.02
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -304,7 +304,7 @@ councilor_corporate_dominion = {
 	}
 	civic = civic_corporate_dominion
 	modifier = {
-		trade_value_mult = 0.02
+		planet_traders_trade_produces_mult = 0.02
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -432,7 +432,7 @@ councilor_efficient_bureaucracy = {
 	}
 	civic = civic_efficient_bureaucracy
 	modifier = {
-		planet_administrators_produces_mult = 0.02
+		planet_bureaucrats_produces_mult = 0.02
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -460,7 +460,7 @@ councilor_exalted_priesthood = {
 	}
 	civic = civic_exalted_priesthood
 	modifier = {
-		planet_priests_upkeep_mult = -0.02
+		planet_bureaucrats_upkeep_mult = -0.02
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -562,7 +562,7 @@ councilor_imperial_cult = {
 	}
 	civic = civic_imperial_cult
 	modifier = {
-		planet_priests_produces_mult = 0.02
+		planet_bureaucrats_produces_mult = 0.02
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -969,7 +969,7 @@ councilor_crusader_spirit_corporate = {
 	civic = civic_crusader_spirit_corporate
 	modifier = {
 		ship_fire_rate_mult = 0.01
-		local_trade_protection_add = 1
+		#local_trade_protection_add = 1
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -1001,7 +1001,7 @@ councilor_private_healthcare_corporate = {
 	}
 	civic = civic_private_healthcare_corporate
 	modifier = {
-		pop_growth_speed = 0.01
+		founder_species_growth_mult = 0.01
 		pop_environment_tolerance = 0.01
 	}
 	ai_hiring_weight = {

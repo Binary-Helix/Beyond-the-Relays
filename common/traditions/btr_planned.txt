@@ -58,7 +58,7 @@ tr_btr_planned_oversight = {
         has_tradition = tr_btr_planned_public
     }
     modifier = {
-        pop_demotion_time_mult = -1
+        pop_unemployment_demotion_time_mult = -1
 
     }
     #Handled through galcom.305
@@ -91,7 +91,7 @@ tr_btr_planned_predetermined = {
 
     modifier = {
       #  planet_pops_unemployed_upkeep_mult = -0.2
-       # pop_growth_from_immigration = 0.1
+       # planet_resettlement_unemployed_mult = 0.1
         planet_resettlement_unemployed_mult = 0.2
         planet_resettlement_unemployed_destination_mult = 0.1
 

@@ -379,7 +379,7 @@ building_archeology_conservatory = {
     planet_modifier = {
         planet_jobs_society_research_produces_mult = 0.1
         planet_resettlement_unemployed_destination_mult = 0.1
-     #   planet_immigration_pull_mult = 0.1
+     #   planet_resettlement_unemployed_destination_mult = 0.1
 
         job_head_researcher_add = 100
         job_biologist_add = 200
@@ -698,7 +698,7 @@ building_laisez_alo_3 = {
     triggered_planet_modifier = {
         potential = { planet = { is_planet_class = pc_relic } }
         planet_resettlement_unemployed_destination_mult = 0.25
-    #    planet_immigration_pull_mult = 0.25
+    #    planet_resettlement_unemployed_destination_mult = 0.25
         planet_amenities_add = 2500
         job_engineer_add = 100
         job_physicist_add = 100
@@ -791,7 +791,7 @@ building_planned_economic_coordination = {
 
  #   triggered_planet_modifier = {
   #      potential = { planet = { is_planet_class = pc_relic } }
-   #     planet_immigration_pull_mult = 0.25
+   #     planet_resettlement_unemployed_destination_mult = 0.25
     #    planet_amenities_add = 25
      #   job_engineer_add = 100
       #  job_physcist_add = 100

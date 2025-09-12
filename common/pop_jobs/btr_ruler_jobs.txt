@@ -32,7 +32,7 @@ btr_overlord_ranger = {
     }
 
   #  pop_modifier = {
-  #      pop_defense_armies_add = 4
+  #      planet_defense_armies_add = 4
   #  }
 
     planet_modifier = {
@@ -60,10 +60,7 @@ btr_overlord_ranger = {
             has_citizenship_rights = no
             NOT = { has_trait = trait_mechanical }
         }
-        modifier = {
-            factor = 5
-            has_job = noble
-        }
+
         # crisis purge
         modifier = {
             factor = 0.01
@@ -146,10 +143,7 @@ btr_overlord_arborist = {
             has_citizenship_rights = no
             NOT = { has_trait = trait_mechanical }
         }
-        modifier = {
-            factor = 5
-            has_job = noble
-        }
+
         # crisis purge
         modifier = {
             factor = 0.01
@@ -230,10 +224,7 @@ celebrity = {
             has_citizenship_rights = no
             NOT = { has_trait = trait_mechanical }
         }
-        modifier = {
-            factor = 5
-            has_job = noble
-        }
+
         # crisis purge
         modifier = {
             factor = 0.01
@@ -300,7 +291,7 @@ response_coordinator = {
         planet_crime_add = -30
         planet_defense_armies_add = 3
         planet_enforcers_unity_produces_mult = 0.05
-       # defense_armies_add = 3
+        planet_defense_armies_add = 3
        # planet_enforcer_produces_mult = 0.05
     }
 
@@ -321,10 +312,7 @@ response_coordinator = {
             has_citizenship_rights = no
             NOT = { has_trait = trait_mechanical }
         }
-        modifier = {
-            factor = 5
-            has_job = noble
-        }
+
         # crisis purge
         modifier = {
             factor = 0.01
@@ -385,7 +373,7 @@ btr_industrial_titan = {
     }
 
   #  pop_modifier = {
-   #     pop_defense_armies_add = 4
+   #     planet_defense_armies_add = 4
    # }
 
     planet_modifier = {
@@ -412,10 +400,7 @@ btr_industrial_titan = {
             has_citizenship_rights = no
             NOT = { has_trait = trait_mechanical }
         }
-        modifier = {
-            factor = 5
-            has_job = noble
-        }
+
         # crisis purge
         modifier = {
             factor = 0.01

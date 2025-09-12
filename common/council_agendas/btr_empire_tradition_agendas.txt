@@ -115,10 +115,10 @@ agenda_isolation = {
     }
     modifier = {
         planet_resettlement_unemployed_destination_mult = 0.25
-        # planet_immigration_pull_mult = 0.25
+        # planet_resettlement_unemployed_destination_mult = 0.25
         bonus_pop_growth = 0.25
         planet_pops_trade_produces_mult = 0.1
-        pop_demotion_time_mult = -0.25
+        pop_unemployment_demotion_time_mult = -0.25
     }
     finish_modifier = agenda_isolation_finish
 }
@@ -154,7 +154,7 @@ agenda_splendor = {
         country_trade_fee = -0.1
         planet_resettlement_unemployed_destination_mult = 0.25
         planet_resettlement_unemployed_destination_mult = 0.25
-      #  planet_immigration_pull_mult = 0.25
+      #  planet_resettlement_unemployed_destination_mult = 0.25
     }
     finish_modifier = agenda_splendor_finish
 }
@@ -274,7 +274,7 @@ agenda_hive = {
         pop_resettlement_cost_mult = -0.25
         planet_resettlement_unemployed_destination_mult = 0.2
         planet_resettlement_unemployed_destination_mult = 0.2
-       # pop_growth_from_immigration = 0.2
+       # planet_resettlement_unemployed_mult = 0.2
         bonus_pop_growth = 0.1
     }
     finish_modifier = agenda_hive_finish
@@ -345,8 +345,8 @@ agenda_newcomers = {
         external_leader_pool_add = 3
         planet_resettlement_unemployed_destination_mult = 0.25
         planet_researchers_produces_mult = 0.1
-      #  planet_immigration_pull_mult = 0.25
-      #  pop_growth_from_immigration = 0.25
+      #  planet_resettlement_unemployed_destination_mult = 0.25
+      #  planet_resettlement_unemployed_mult = 0.25
         citizen_pop_different_species_class_happiness = 0.1
     }
     finish_modifier = agenda_newcomers_finish

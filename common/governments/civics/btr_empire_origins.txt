@@ -48,7 +48,7 @@ salarian_uni_origin = {
 
 turian_hie_origin = {
 	is_origin = yes
-	icon = "gfx/interface/icons/origins/turian_hier_origin.dds"
+	icon = "gfx/interface/icons/origins/turian_hie_origin .dds"
 	picture = GFX_evt_metropolis
 
 	random_weight = {
@@ -58,7 +58,7 @@ turian_hie_origin = {
 	modifier = {
 		command_limit_add = 30
 		country_naval_cap_add = 50
-		pop_demotion_time_mult = -0.25
+		pop_unemployment_demotion_time_mult = -0.25
 	}
 }
 
@@ -76,7 +76,7 @@ systems_all_origin = {
 		shipclass_colonizer_build_speed_mult = 0.15
 		planet_colony_development_speed_mult = 0.33
 		planet_buildings_cost_mult = -0.05
-		planet_buildings_time_cost_mult = -0.05
+		planet_buildings_cost_mult = -0.05
 	}
 }
 
@@ -213,7 +213,7 @@ omega_emp_origin = {
 	picture = GFX_evt_metropolis
 
 	modifier = {
-		planet_immigration_pull_mult = 0.3
+		planet_resettlement_unemployed_destination_mult = 0.3
 		pop_happiness = 0.5
 		starbase_outpost_influence_cost_mult = 2
 		starbase_outpost_light_alloys_cost_mult = 1
@@ -241,7 +241,7 @@ illium_cor_origin = {
 		planet_districts_energy_upkeep_mult = -0.15
 		diplo_weight_economy_mult = 0.33
 		country_resource_max_add = 50000
-		local_trade_protection_add = 10
+		#local_trade_protection_add = 10
 	}
 }
 
@@ -478,7 +478,7 @@ citadel_council_origin = {
 	}
 
 	modifier = {
-		trade_value_mult = 0.5
+		planet_traders_trade_produces_mult = 0.5
 		diplo_weight_mult = 0.35
 	}
 }

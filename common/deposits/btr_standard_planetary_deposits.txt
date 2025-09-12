@@ -119,8 +119,8 @@ d_splintered_lands = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_generator_max = 4
-		district_farming_max = -4
+		district_generator_max_add= 4
+		district_farming_max_add= -4
 	}
 
 	potential = {
@@ -169,7 +169,7 @@ d_subterranean_ocean = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_farming_max = 2
+		district_farming_max_add= 2
 		planet_jobs_food_produces_mult = 0.10
 	}
 
@@ -220,7 +220,7 @@ d_eezo_sinkhole = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		trade_value_mult = 0.05
+		planet_traders_trade_produces_mult = 0.05
 		#eezo production = +2
 	}
 
@@ -245,7 +245,7 @@ d_fairwinds_basin = {
 	category = deposit_cat_rare	
 	
 	planet_modifier = {
-		district_generator_max = 2
+		district_generator_max_add= 2
 		planet_jobs_energy_produces_mult = 0.10
 	}
 
@@ -270,7 +270,7 @@ d_green_ring = {
 	category = deposit_cat_rare	
 	
 	planet_modifier = {
-		district_farming_max = 2
+		district_farming_max_add= 2
 	}
 
 	potential = {
@@ -328,7 +328,7 @@ d_arborary_oasis = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		district_farming_max = 4
+		district_farming_max_add= 4
 		pop_citizen_happiness = 0.05
 	}
 
@@ -353,7 +353,7 @@ d_cooperative_weather = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_farming_max = 3
+		district_farming_max_add= 3
 		planet_farmers_produces_mult = 0.15
 		planet_resettlement_unemployed_destination_mult = 0.10
 		pop_citizen_happiness = 0.05
@@ -380,7 +380,7 @@ d_purple_heaven_arch = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		district_farming_max = 2
+		district_farming_max_add= 2
 		planet_amenities_mult = 0.05
 		pop_citizen_happiness = 0.05
 	}
@@ -475,7 +475,7 @@ d_bellowing_rainforest = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_farming_max = 2
+		district_farming_max_add= 2
 	}
 
 	triggered_planet_modifier = {
@@ -545,7 +545,7 @@ d_mineral_rich_delta = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		district_mining_max = 2
+		district_mining_max_add= 2
 		planet_miners_minerals_produces_mult = 0.1
 		planet_districts_minerals_cost_mult = 0.2
 		planet_districts_minerals_upkeep_mult = 0.05
@@ -597,9 +597,9 @@ d_endless_mud = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_mining_max = -3
+		district_mining_max_add= -3
 		planet_miners_produces_mult = -0.05
-		district_farming_max = 3
+		district_farming_max_add= 3
 		planet_farmers_produces_mult = 0.05
 		planet_buildings_cost_mult = 0.1
 		planet_districts_upkeep_mult = 0.05
@@ -653,7 +653,7 @@ d_polarizing_seasons = {
 	
 	planet_modifier = {
 		planet_farmers_produces_mult = 0.05
-		trade_value_mult = 0.05
+		planet_traders_trade_produces_mult = 0.05
 		pop_citizen_happiness = 0.05
 	}
 
@@ -704,7 +704,7 @@ d_great_hunting_grounds = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		trade_value_mult = 0.05
+		planet_traders_trade_produces_mult = 0.05
 		planet_max_districts_add = -1
 		pop_citizen_happiness = 0.05
 	}
@@ -754,7 +754,7 @@ d_hot_currents = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		district_generator_max = 2
+		district_generator_max_add= 2
 		planet_jobs_energy_produces_mult = 0.15
 		planet_districts_energy_cost_mult = 0.05
 	}
@@ -805,7 +805,7 @@ d_storm_eye = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		district_generator_max = 4
+		district_generator_max_add= 4
 		planet_jobs_energy_produces_mult = 0.1
 	}
 
@@ -864,8 +864,8 @@ d_northern_highlands = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_farming_max = -2
-		district_mining_max = 3
+		district_farming_max_add= -2
+		district_mining_max_add= 3
 		planet_miners_produces_mult = 0.05
 	}
 
@@ -1118,7 +1118,7 @@ d_empyrean_lakes = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_farming_max = 4
+		district_farming_max_add= 4
 		planet_jobs_food_produces_mult = 0.1
 	}
 
@@ -1391,7 +1391,7 @@ d_deadly_clouds = {
 
 	planet_modifier = {
 		planet_resettlement_unemployed_destination_mult = -0.1
-		pop_growth_speed_reduction = 0.05
+		founder_species_growth_mult_reduction = 0.05
 		planet_jobs_energy_produces_mult = 0.4
 	}
 
@@ -1462,7 +1462,7 @@ d_acidic_sinkhole = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_mining_max = 3
+		district_mining_max_add= 3
 		planet_jobs_consumer_goods_upkeep_mult = -0.10
 	}
 
@@ -1508,7 +1508,7 @@ d_toxic_waters = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_farming_max = -2
+		district_farming_max_add= -2
 		planet_farmers_produces_mult = -0.1
 		planet_pops_consumer_goods_upkeep_mult = 0.15
 		planet_jobs_physics_research_produces_mult = 0.1
@@ -1647,7 +1647,7 @@ d_green_hell = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		pop_growth_speed_reduction = 0.05
+		founder_species_growth_mult_reduction = 0.05
 		pop_citizen_happiness = -0.1
 		planet_jobs_society_research_produces_mult = 0.5
 		planet_orbital_bombardment_damage = -0.2
@@ -1787,7 +1787,7 @@ d_fuming_hot_springs = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_generator_max = 2
+		district_generator_max_add= 2
 		pop_citizen_happiness = 0.05
 		planet_resettlement_unemployed_destination_mult = 0.05
 		pop_environment_tolerance = 0.05
@@ -1881,7 +1881,7 @@ d_venting_lake = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		district_generator_max = 3
+		district_generator_max_add= 3
 		pop_environment_tolerance = 0.1
 		planet_resettlement_unemployed_destination_mult = 0.1
 	}
@@ -1937,7 +1937,7 @@ d_shifty_cow_2 = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			trade_value_add = -2
+			planet_jobs_trade_produces_add = -2
 		}
 	}
 

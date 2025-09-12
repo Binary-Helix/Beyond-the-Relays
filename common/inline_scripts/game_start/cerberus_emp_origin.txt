@@ -27,20 +27,4 @@ if = {
     add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_hab_science }
     add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_hab_energy }
     add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_hab_mining }
-
-    add_zone = {
-        district = district_hab_housing
-        zone = zone_habitat_research_unity
-        zone_slot = 1
-    }
-
-    add_building = {
-        zone = zone_industrial
-        building = building_coordinated_fulfillment_center_1
-    }
-
-    add_building = building_military_academy
-    add_building = building_precinct_house
-    add_building = building_stronghold
-    add_building = building_medical_1
 }

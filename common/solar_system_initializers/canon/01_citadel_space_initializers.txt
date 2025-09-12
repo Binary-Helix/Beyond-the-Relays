@@ -467,48 +467,55 @@ sys_pompeii_init = {
 		flags = { rakhana_planet subclass_world }
         deposit_blockers = none
         modifiers = none
-		# init_effect = {
-        #     save_global_event_target_as = drellHomeworld
-		# 	if = {
-		# 		limit = {
-		# 			exists = event_target:drellHomeworld
-		# 		}
-		# 		log = "Drell Homeworld Event Target Set"
-		# 	}
-        #     prevent_anomaly = yes
-        #
-        #     check_for_drell_player = yes
-        #
-        #     if = {
-		# 		limit = {
-		# 			any_country = {
-		# 				has_country_flag = remnants_of_rakhana_player
-		# 			}
-		# 		}
-		# 		random_country = {
-		# 			limit = {
-		# 				has_country_flag = remnants_of_rakhana_player
-		# 			}
-		# 			save_global_event_target_as = remnants_of_rakhana
-		# 		}
-		# 	}
-		# 	else = {
-		# 		generate_remnants_of_rakhana_country = yes
-		# 	}
-        #     set_capital = yes
-		# 	set_owner = event_target:remnants_of_rakhana
-		# 	create_colony = {
-		# 		owner = event_target:remnants_of_rakhana
-		# 		species = event_target:drellSpecies
-		# 		ethos = owner
-		# 	}
-        #     generate_dre_rakhana_pops = yes
-		# 	add_modifier = {
-		# 		modifier = dust_world
-		# 		days = -1
-		# 	}
-        #     generate_dre_rahkana_capital_buildings = yes
-		# }
+		init_effect = {
+            add_modifier = {
+                modifier = dust_world
+                days = -1
+            }
+            save_global_event_target_as = drellHomeworld
+			if = {
+				limit = {
+					exists = event_target:drellHomeworld
+				}
+				log = "Drell Homeworld Event Target Set"
+			}
+            prevent_anomaly = yes
+
+            check_for_drell_player = yes
+
+            if = {
+				limit = {
+					any_country = {
+						has_country_flag = remnants_of_rakhana_player
+					}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = remnants_of_rakhana_player
+					}
+					save_global_event_target_as = remnants_of_rakhana
+				}
+                generate_empire_home_planet = yes
+			}
+			else = {
+				generate_remnants_of_rakhana_country = yes
+			}
+            set_capital = yes
+			set_owner = event_target:remnants_of_rakhana
+			create_colony = {
+				owner = event_target:remnants_of_rakhana
+				species = event_target:drellSpecies
+				ethos = owner
+			}
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/remnants_rak_origin"
+            generate_dre_rakhana_pops = yes
+            event_target:disciples_of_nazara = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+		}
 	}
 
 	planet = {
@@ -11729,8 +11736,14 @@ sys_widow_init = {
 		# 		species = event_target:asariSpecies
 		# 		ethos = owner
 		# 	}
-        #
+        #     clear_blockers = yes
+        #     generate_btr_start_deposits_and_blockers = yes
+        #     btr_generate_canon_planetary_features = yes
         #     generate_citadel_station_pops = yes
+        #     event_target:citadel_council = {
+        #         create_starting_leaders = yes
+        #         country_event = { id = game_start.9 }
+        #     }
         # }
 	}
 

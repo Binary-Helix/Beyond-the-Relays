@@ -20,7 +20,7 @@
 # 	leader_lifespan_add = 
 # 	leaders_cost_mult = 
 # 	leaders_upkeep_mult = 
-# 	pop_growth_speed = 
+# 	founder_species_growth_mult =
 # 	special habitability modifiers = 
 # }
 # }
@@ -178,7 +178,7 @@ turian_trait_team_player = {
 	modifier = {
 		pop_job_amenities_mult = -0.05
 		planet_pops_consumer_goods_upkeep_mult = -0.05
-		pop_job_trade_mult = -0.10
+		planet_pops_trade_produces_mult = -0.10
 	}
 }
 
@@ -254,8 +254,8 @@ human_trait_frontier_spirit = {
 	modifier = {
 		pop_resettlement_cost_mult = -0.35
 		logistic_growth_mult = 0.05
-		#pop_growth_from_immigration = 0.25
-		#pop_growth_speed = 0.05
+		#planet_resettlement_unemployed_mult = 0.25
+		#founder_species_growth_mult = 0.05
 	}
 }
 
@@ -367,7 +367,7 @@ volus_trait_clan_based = {
 	modifier = {
         pop_government_ethic_attraction = 0.5
 		citizen_pop_same_species_class_happiness = 0.05
-		#pop_growth_from_immigration = -0.3
+		#planet_resettlement_unemployed_mult = -0.3
 		pop_resettlement_cost_mult = 0.5
 	}
 }
@@ -381,7 +381,7 @@ volus_trait_economic_mindset = {
 	}
 	randomized = no
 	modifier = {
-		pop_job_trade_mult = 0.25
+		planet_pops_trade_produces_mult = 0.25
 		planet_pops_consumer_goods_upkeep_mult = 0.2
 		pop_amenities_usage_mult = 0.1
 		country_light_alloys_produces_mult = -0.15
@@ -477,8 +477,8 @@ hanar_trait_water_bound = {
 			}
 		}
 		pop_housing_usage_mult = -0.1
-		planet_jobs_food_produces_mult = 0.10
-		planet_jobs_energy_produces_mult = 0.10
+		pop_category_workers_food_produces_add = 0.10
+		pop_category_workers_energy_produces_add = 0.10
 		planet_miners_produces_mult = 0.10
 	}
 	triggered_pop_group_modifier = {
@@ -494,9 +494,9 @@ hanar_trait_water_bound = {
 			}
 		}
 		pop_housing_usage_mult = -0.05
-		planet_jobs_food_produces_mult = 0.05
-		planet_jobs_energy_produces_mult = 0.05
-		planet_miners_produces_mult = 0.05
+		pop_category_workers_food_produces_add = 0.05
+		pop_category_workers_energy_produces_add = 0.05
+		#planet_miners_produces_mult = 0.05
 		pop_happiness = 0.05
 	}
 	triggered_pop_group_modifier = {
@@ -589,7 +589,7 @@ batarian_trait_shrewd_business = {
 	}
 	randomized = no
 	modifier = {
-		pop_job_trade_mult = 0.15
+		planet_pops_trade_produces_mult = 0.15
 	}
 }
 
@@ -604,7 +604,7 @@ batarian_trait_karma_chameleon = { #batarian_trait_enduring_physique = {
 	modifier = {
 		pop_environment_tolerance = 0.1
 		pop_resettlement_cost_mult = -0.10
-		planet_miners_produces_mult = 0.10
+		#planet_miners_produces_mult = 0.10
 	}
 }
 
@@ -725,7 +725,11 @@ quarian_trait_suit_entombment = {
 	randomized = no
 
 	modifier = {
-		planet_pops_consumer_goods_upkeep_mult = 0.1
+		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
+		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
+		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
+		pop_category_slave_consumer_goods_upkeep_add = @living_standard_luxuries_low
+		pop_category_civilians_consumer_goods_upkeep_add = @living_standard_luxuries_low
 		pop_happiness = -0.05
 	}
 }
@@ -925,8 +929,8 @@ forayan_trait_forayan_happiness = {
 	randomized = no
 
 	modifier = {
-		planet_administrators_unity_produces_add = 1.0
-		planet_clerks_unity_produces_add = 1.0
+		planet_bureaucrats_unity_produces_add = 1.0
+		planet_jobs_unity_produces_add = 1.0
 		planet_jobs_unity_produces_mult = 0.05
 		pop_happiness = 0.1
 		planet_researchers_produces_mult = -0.1
@@ -960,7 +964,7 @@ forayan_trait_gender_castes = {
 	modifier = {
 		planet_jobs_ruler_produces_mult = 0.15
 		pop_amenities_usage_mult = -0.2
-		pop_job_trade_mult = -0.1
+		planet_pops_trade_produces_mult = -0.1
 	}
 }
 

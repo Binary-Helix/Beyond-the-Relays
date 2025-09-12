@@ -81,8 +81,8 @@ branch_vol_kon_junction_franchise = {
 	}
 
 	country_modifier = {
-#		pop_growth_speed = 0.05
-#		planet_jobs_consumer_goods_upkeep_mult = -0.05
+		logistic_growth_mult = 0.05
+		planet_jobs_consumer_goods_upkeep_mult = -0.05
 	}
 
 	resources = {
@@ -191,7 +191,7 @@ branch_vol_galactic_banking_exchange = {
 
 	country_modifier = {
 		country_energy_produces_mult = 0.2
-		trade_value_mult = 0.1
+		planet_jobs_productive_trade_produces_mult = 0.1
 		diplo_weight_economy_mult = 0.05
 	}
 
@@ -349,8 +349,8 @@ branch_vol_narhu_combine = {
 	}
 
 	country_modifier = {
-		planet_structures_time_cost_mult = -0.1
-		planet_jobs_miners_produces_mult = 0.05
+		planet_buildings_cost_mult = -0.1
+		planet_miners_produces_mult = 0.05
 		country_minerals_produces_mult = 0.05
 		country_beryllium_produces_mult = 0.05
 		country_lithium_produces_mult = 0.05
@@ -473,7 +473,7 @@ branch_vol_haliat_armory = {
 
 	country_modifier = {
 		armies_upkeep_mult = -0.3
-		armies_time_cost_mult = -0.2
+		planet_army_build_time_mult = -0.2
 	}
 
 	resources = {
@@ -626,7 +626,7 @@ branch_vol_jenantech = {
 
 	planet_modifier = {
 		job_clerk_add = 2
-		planet_artisans_amentities_produces_add = 1
+		pop_job_amenities_mult = 1
 	}
 
 	resources = {
@@ -676,7 +676,7 @@ branch_vol_cision_motors = {
 	planet_modifier = {
 		job_artisan_add = 1
 		job_clerk_add = 1
-		planet_immigration_pull_mult = 0.05
+		#planet_resettlement_unemployed_destination_mult = 0.05
 	}
 
 	country_modifier = {
@@ -778,7 +778,7 @@ branch_cerberus_skunkworks = {
 	category = resource
 
 	planet_modifier = {
-		trade_value_mult = 0.1
+		planet_pops_trade_produces_mult = 0.1
 		planet_jobs_minerals_produces_mult = -5
 		planet_jobs_beryllium_produces_mult = 1
 		planet_jobs_lithium_produces_mult = 1
@@ -886,11 +886,11 @@ branch_cerberus_cdr_holdings = {
 		job_clerk_add = 4
 		job_merchant_add = 2
 		planet_technician_produces_mult = 0.1
-		trade_value_add = 10
+		planet_pops_trade_produces_mult = 10
 	}
 
 	country_modifier = {
-		trade_value_mult = 0.15
+		country_trade_attractiveness = 0.15
 	}
 
 	resources = {
@@ -936,8 +936,8 @@ branch_cerberus_terranova_commonwealth = {
 	}
 
 	country_modifier = {
-		trade_value_mult = 0.1
-		pop_job_trade_mult = 0.1
+		#planet_traders_trade_produces_mult = 0.1
+		planet_pops_trade_produces_mult = 0.2
 	}
 
 	resources = {
@@ -982,7 +982,7 @@ branch_cerberus_haribon_military_industries = {
 
 	army_modifier = {
 		armies_cost_mult = -0.1
-		armies_time_cost_mult = -0.1
+		planet_army_build_time_mult = -0.1
 	}
 
 	country_modifier = {
@@ -1084,8 +1084,8 @@ branch_cerberus_new_dawn_pharmaceuticals = {
 	}
 
 	country_modifier = {
-		pop_growth_speed = 0.05
-		leader_age = 10
+		logistic_growth_mult = 0.05
+		leader_lifespan_add = 10
 	}
 
 	resources = {
@@ -1132,11 +1132,11 @@ branch_omega_coalition_cargo_transporters = {
 
 	planet_modifier = {
 		job_clerk_add = 2
-		planet_immigration_pull_mult = 0.1
+		#planet_resettlement_unemployed_destination_mult = 0.1
 	}
 
 	country_modifier = {
-		pop_growth_speed = 0.05
+		logistic_growth_mult = 0.05
 		planet_jobs_consumer_goods_upkeep_mult = -0.05
 	}
 
@@ -1345,7 +1345,7 @@ branch_omega_harrots_emporium = {
 		job_manager_add = 1
 		job_clerk_add = 1
 		job_healthcare_add = 1
-		pop_growth_speed = 0.03
+		logistic_growth_mult = 0.03
 	}
 
 	country_modifier = {
@@ -1409,7 +1409,7 @@ branch_omega_kenns_salvage = {
 	#	country_platinum_produces_mult = 0.1
 	#	country_palladium_produces_mult = 0.1
 		planet_miners_produces_mult = 0.1
-		planet_metalurgists_produces_mult = 0.05
+		planet_metallurgists_produces_mult = 0.05
 	}
 
 	resources = {
@@ -1512,7 +1512,7 @@ branch_omega_aeternal_life = {
 
 	country_modifier = {
 		country_unity_produces_mult = 0.05
-		planet_immigration_pull_mult = 0.25
+		#planet_resettlement_unemployed_destination_mult = 0.25
 	}
 
 	resources = {
@@ -1942,8 +1942,7 @@ branch_illium_indentu_tech = {
 	}
 
 	country_modifier = {
-		planet_structures_time_cost_mult = -0.1
-		planet_structures_cost_mult = -0.05
+		planet_structures_cost_mult = -0.15
 	}
 	
 	resources = {
@@ -1999,7 +1998,7 @@ branch_illium_synthetic_insights = {
 	country_modifier = {
 		country_engineering_research_produces_mult = 0.05
 		planet_pop_assembly_mult = 0.05
-		trade_value_mult = 0.05
+		planet_traders_trade_produces_mult = 0.05
 	}
 
 	resources = {
@@ -2116,7 +2115,7 @@ branch_illium_pyrena_corporation = {
 	#	country_palladium_produces_mult = 0.05
 		planet_miners_produces_mult = 0.05
 		planet_pops_upkeep_mult = -0.05
-		trade_value_mult = 0.05
+		planet_traders_trade_produces_mult = 0.05
 	}
 
 	resources = {
@@ -2163,7 +2162,7 @@ branch_illium_aramali_council = {
 	planet_modifier = {
 		job_manager_add = 1
 		job_researcher_add = 3
-		trade_value_mult = 0.1
+		planet_traders_trade_produces_mult = 0.1
 		planet_orbital_bombardment_damage = -0.1
 	}
 
@@ -2281,7 +2280,7 @@ branch_illium_binary_helix = {
 	planet_modifier = {
 		job_manager_add = 1
 		job_researcher_add = 3
-		trade_value_mult = 0.1
+		planet_traders_trade_produces_mult = 0.1
 		planet_orbital_bombardment_damage = -0.1
 	}
 
@@ -2289,7 +2288,7 @@ branch_illium_binary_helix = {
 		country_society_research_produces_mult = 0.05
 		army_attack_damage_mult = 0.1
 		army_defense_damage_mult = 0.1
-		trade_value_mult = 0.1
+		planet_traders_trade_produces_mult = 0.1
 	}
 
 	resources = {
@@ -2387,7 +2386,7 @@ branch_illium_nava_corp = {
 
 	planet_modifier = {
 		job_clerk_add = 2
-		trade_value_add = 15
+		planet_traders_trade_produces_mult = 15
 	}
 
 	country_modifier = {
@@ -2538,7 +2537,7 @@ branch_illium_baria_frontiers = {
 
 	planet_modifier = {
 		job_bureaucrat_add = 2
-		trade_value_mult = 0.15
+		planet_traders_trade_produces_mult = 0.15
 	}
 
 	country_modifier = {
@@ -2595,7 +2594,7 @@ branch_illium_nos_astra_sporting_goods = {
 	country_modifier = {
 	#	pop_government_ethic_attraction = 0.1
 		branch_office_value_mult = 0.05
-		trade_value_mult = 0.1
+		planet_traders_trade_produces_mult = 0.1
 	}
 
 	resources = {
@@ -2784,11 +2783,11 @@ branch_caleston_intimate_apparel = {
 		}
 	}
 	country_modifier = {
-		pop_growth_speed = 0.01
+		logistic_growth_mult = 0.01
 	}
 
 	triggered_planet_modifier = {
-		pop_growth_speed = 0.01
+		logistic_growth_mult = 0.01
 	}
 
 	planet_modifier = {
@@ -2834,7 +2833,7 @@ branch_caleston_genetic_paradigms = {
 		}
 	}
 	country_modifier = {
-		pop_growth_speed = 0.02
+		logistic_growth_mult = 0.02
 	}
 
 	planet_modifier = {
