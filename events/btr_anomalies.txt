@@ -228,3 +228,148 @@ ship_event = {
         }
     }
 }
+
+ship_event = {
+    id = btr_anomaly.9
+    title = "btr_anomaly.9.name"
+    desc = "btr_anomaly.9.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.9.a
+        FROM = {
+            add_deposit = d_physics_3
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.10
+    title = "btr_anomaly.10.name"
+    desc = "btr_anomaly.10.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.10.a
+        FROM = {
+            add_deposit = d_society_3
+            add_deposit = d_engineering_2
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+    option = {
+        name = btr_anomaly.10.b
+        trigger = {
+            owner = {
+                has_origin = turian_hier_origin
+            }
+        }
+        FROM = {
+            add_deposit = d_society_3
+            add_deposit = d_engineering_2
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 100
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.11
+    title = "btr_anomaly.11.name"
+    desc = "btr_anomaly.11.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.11.a
+        FROM = {
+            add_deposit = d_society_4
+            add_deposit = d_engineering_3
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+    option = {
+        name = btr_anomaly.11.b
+        FROM = {
+            add_deposit = d_engineering_3
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = eezo
+                value = 1
+                min = 25
+                max = 100
+            }
+        }
+    }
+}

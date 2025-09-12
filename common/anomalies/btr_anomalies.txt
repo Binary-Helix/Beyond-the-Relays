@@ -137,3 +137,54 @@ MAGAMA = {
         }
     }
 }
+
+GREAT_SPOT = {
+    desc = great_spot_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Dranen Aysur, Caleston Rift
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.9
+        }
+    }
+}
+
+PRIMORDIAL = {
+    desc = primordial_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Arvuna Aysur Caleston Rift
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.10
+        }
+    }
+}
+
+UNIQUE = {
+    desc = unique_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Caleston, Balor, Caleston Rift
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.11
+        }
+    }
+}
