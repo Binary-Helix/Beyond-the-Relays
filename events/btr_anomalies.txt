@@ -105,3 +105,126 @@ ship_event = {
         }
     }
 }
+ship_event = {
+    id = btr_anomaly.5
+    title = "btr_anomaly.5.name"
+    desc = "btr_anomaly.5.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.5.a
+    owner = {
+        add_monthly_resource_mult = {
+            resource = physics_research
+            value = 1
+            max = 500
+            min = 150
+        }
+    }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.6
+    title = "btr_anomaly.6.name"
+    desc = "btr_anomaly.6.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.6.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                max = 500
+                min = 150
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.7
+    title = "btr_anomaly.7.name"
+    desc = "btr_anomaly.7.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.7.a
+        leader = {
+            add_experience = 200
+            add_trait = leader_trait_traumatized
+        }
+    }
+    option = {
+        name = btr_anomaly.7.b
+        trigger = {
+            owner = {
+               OR = {
+                   has_origin = hegemony_kha_origin
+                   has_origin = aralakh_kah_origin
+                   has_origin = omega_emp_origin
+                   has_origin = vorcha_cla_origin
+                   has_origin = parnack_reg_origin
+               }
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                max = 500
+                min = 150
+            }
+            set_country_flag = blood_sport
+            add_modifier = { modifier = blood_sports }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.8
+    title = "btr_anomaly.8.name"
+    desc = "btr_anomaly.8.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.8.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                max = 500
+                min = 150
+            }
+        }
+    }
+}

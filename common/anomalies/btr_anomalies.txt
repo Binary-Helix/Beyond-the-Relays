@@ -69,3 +69,71 @@ PATAMALRUS = {
         }
     }
 }
+
+KAMAKAZI = {
+    desc = kamakazi_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Thegeuse Tereshkova, Armstrong Nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.5
+        }
+    }
+}
+
+EXILE = {
+    desc = exile_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Mawinor Tereshkova, Armostrong Nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.6
+        }
+    }
+}
+
+FLOATERS = {
+    desc = floaters_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Maji Vamshi, Armstrong Nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.7
+        }
+    }
+}
+
+MAGAMA = {
+    desc = magma_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Shasu Aysur, Caleston Rift
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.8
+        }
+    }
+}
