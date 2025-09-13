@@ -188,3 +188,88 @@ UNIQUE = {
         }
     }
 }
+
+CRUSHER = {
+    desc = crusher_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Sakata, Yakawa, Caleston Rift
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.12
+        }
+    }
+}
+
+TECTONISM = {
+    desc = tectonism_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Sumiko, Yakawa, Caleston Rift
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.13
+        }
+    }
+}
+
+RUINS_OF_RUIN = {
+    desc = ruin_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on karumto, Yakawa, Caleston Rift
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.14
+        }
+    }
+}
+
+FALSE_GARDEN = {
+    desc = false_garden_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Asteria, Hekate, Hades Nexus
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.15
+        }
+    }
+}
+
+FORCED_EXTINCTION = {
+    desc = forced_extiction_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Bothros, Hekate, Hades Nexus
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.16
+        }
+    }
+}

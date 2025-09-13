@@ -373,3 +373,158 @@ ship_event = {
         }
     }
 }
+
+ship_event = {
+    id = btr_anomaly.12
+    title = "btr_anomaly.12.name"
+    desc = "btr_anomaly.12.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.12.a
+       leader = {
+           add_experience = 200
+           add_trait = leader_trait_maniacal
+       }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.13
+    title = "btr_anomaly.13.name"
+    desc = "btr_anomaly.13.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.13.a
+        FROM = {
+        add_deposit = d_physics_3
+            add_deposit = d_engineering_2
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.13
+    title = "btr_anomaly.13.name"
+    desc = "btr_anomaly.13.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.13.a
+        FROM = {
+            add_deposit = d_physics_3
+            add_deposit = d_engineering_2
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.14
+    title = "btr_anomaly.14.name"
+    desc = "btr_anomaly.14.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.14.a
+        #TODO Spawn the Project Firewall Archeology site for Karumto
+    }
+    option = {
+        name = btr_anomaly.14.b
+        trigger = {
+            owner = {
+                has_origin = illuminated_pri_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 40
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.15
+    title = "btr_anomaly.15.name"
+    desc = "btr_anomaly.15.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.15.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.16
+    title = "btr_anomaly.16.name"
+    desc = "btr_anomaly.16.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.16.a
+        leader = {
+            add_trait = leader_trait_archaeologist
+        }
+        #TODO Spawnthe Bothros digsite
+    }
+}
