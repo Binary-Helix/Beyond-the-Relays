@@ -627,7 +627,7 @@ PixelShader =
 			lightingProperties._NonLinearGlossiness = GetNonLinearGlossiness( lightingProperties._Glossiness );
 			lightingProperties._Normal = vNormal;
 
-			float vCubemapIntensity = CubemapIntensity;
+			float vCubemapIntensity = CubemapIntensity * 0.05f;
 
 		#ifdef EMISSIVE
 			float vEmissive = vNormalMap.b;
@@ -697,7 +697,7 @@ PixelShader =
 			float3 reflectiveColor = texCUBElod( EnvironmentMap, float4(reflection, MipmapIndex) ).rgb * vCubemapIntensity;
 			specularLight += reflectiveColor * FresnelGlossy(lightingProperties._SpecularColor, -vEyeDir, lightingProperties._Normal, lightingProperties._Glossiness);
 
-			vColor = ComposeLight(lightingProperties, 1.0f, diffuseLight, specularLight);
+			vColor = ComposeLight(lightingProperties, 0.00f, diffuseLight, specularLight); //  BTR EDIT
 
 		#ifdef EMISSIVE
 			vColor = lerp( vColor, vDiffuse.rgb, vEmissive );
@@ -950,8 +950,14 @@ PixelShader =
 
 				vColor = vColor * 0.15f + vColor * ( diffuseLight + specularLight ) * 2.f;
 
-				float NdotL = saturate( dot( lightingProperties._Normal, -lightingProperties._ToCameraDir ) );
-				vColor *= pow( NdotL * 1.2, 4 );
+                // BTR EDIT Get both viewing angle and star illumination
+                float3 vSystemLightDir = normalize(SystemLightPosRadius.xyz - vPos);
+                float starFacing = saturate(dot(lightingProperties._Normal, vSystemLightDir));
+                float NdotL = saturate( dot( lightingProperties._Normal, -lightingProperties._ToCameraDir ) );
+
+                // BTR EDIT Modulate the rim lighting by star illumination
+                float atmosphereFactor = starFacing * 0.8 + 0.2; // Never completely zero
+                vColor *= pow( NdotL * 1.2, 4 ) * atmosphereFactor;
 
 				return float4( vColor * 1.0, 1.f + NdotL*2.9f );
 			#endif
@@ -1480,7 +1486,7 @@ PixelShader =
 			lightingProperties._Glossiness = vProperties.a;
 			lightingProperties._NonLinearGlossiness = GetNonLinearGlossiness(lightingProperties._Glossiness);
 
-			float vCubemapIntensity = CubemapIntensity;
+			float vCubemapIntensity = CubemapIntensity * 0.05f;
 
 			float fShadowTerm = 1.0f;
 			lightingProperties._Normal = vNormal;
@@ -1572,7 +1578,7 @@ PixelShader =
 			lightingProperties._Glossiness = vProperties.a;
 			lightingProperties._NonLinearGlossiness = GetNonLinearGlossiness(lightingProperties._Glossiness);
 
-			float vCubemapIntensity = CubemapIntensity;
+			float vCubemapIntensity = CubemapIntensity *0.05f;
 
 			float fShadowTerm = 1.0f;
 			lightingProperties._Normal = vNormal;
@@ -1586,11 +1592,11 @@ PixelShader =
 
 			float3 diffuseLight = vec3(0.0);
 			float3 specularLight = vec3(0.0);
-			CalculateSystemPointLight(lightingProperties, 1.0f, diffuseLight, specularLight);
+			CalculateSystemPointLight(lightingProperties, 0.3f, diffuseLight, specularLight);
 			float3 vEyeDir = normalize( vPos - vCamPos.xyz );
 			float3 reflection = reflect( vEyeDir, vNormal );
 			float MipmapIndex = GetEnvmapMipLevel(lightingProperties._Glossiness);
-			float3 reflectiveColor = texCUBElod( EnvironmentMap, float4(reflection, MipmapIndex) ).rgb * vCubemapIntensity;
+			float3 reflectiveColor = float3(0.0f, 0.0f, 0.0f); // Disable environment reflections for black space
 			specularLight += reflectiveColor * FresnelGlossy(lightingProperties._SpecularColor, -vEyeDir, lightingProperties._Normal, lightingProperties._Glossiness);
 
 			float vAmbientIntensity = 0.f;
