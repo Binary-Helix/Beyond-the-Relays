@@ -317,3 +317,65 @@ btr_archeology_echoes_rachni_war = {
         }
     }
 }
+
+btr_archeology_vorcha_colony = {
+    desc = btr_archeology_vorcha_colony_site_desc
+    picture = #TODO
+    stages = 2
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        #TODO in the terminus
+    }
+    visible = {
+        default_site_visible_trigger = yes
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_archeology_vorcha_colony.2
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_archeology_vorcha_colony.3
+    }
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+btr_archeology_failed_pilgrimage = {
+    desc = btr_archeology_failed_pilgrimage_site_desc
+    picture = #TODO
+    stages = 2
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        #TODO in the terminus
+    }
+    visible = {
+        default_site_visible_trigger = yes
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_archeology_failed_pilgrimage.2
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_archeology_failed_pilgrimage.3
+    }
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
