@@ -528,3 +528,150 @@ ship_event = {
         #TODO Spawnthe Bothros digsite
     }
 }
+
+ship_event = {
+    id = btr_anomaly.17
+    title = "btr_anomaly.17.name"
+    desc = "btr_anomaly.17.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.17.a
+        #TODO Spawn Kopis firewalker digsite
+    }
+    option = {
+        name = btr_anomaly.17.b
+        trigger = {
+            owner = {
+                has_origin = illuminated_pri_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 40
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.18
+    title = "btr_anomaly.18.name"
+    desc = "btr_anomaly.18.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.18.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+        leader = {
+            add_trait = leader_trait_expertise_biology
+        }
+        FROM = {
+            add_deposit = d_eezo_2
+        }
+    }
+    option = {
+        name = btr_anomaly.18.b
+        trigger = {
+            owner = {
+                has_origin = systems_all_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+        leader = {
+            add_trait = leader_trait_expertise_biology
+        }
+        FROM = {
+            add_deposit = d_eezo_2
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.19
+    title = "btr_anomaly.19.name"
+    desc = "btr_anomaly.19.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.19.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.20
+    title = "btr_anomaly.20.name"
+    desc = "btr_anomaly.20.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.20.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}

@@ -273,3 +273,71 @@ FORCED_EXTINCTION = {
         }
     }
 }
+
+HEATED_RACE = {
+    desc = heated_race_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on kopis, hoplos, hades nexus
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.17
+        }
+    }
+}
+
+BIG_SQUID = {
+    desc = big_squid_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on trident, hoplos, hades nexus
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.18
+        }
+    }
+}
+
+SPACE_WORDS = {
+    desc = space_words_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on patsayev, pamyat, hades nexus
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.19
+        }
+    }
+}
+
+UNDER_FIRE = {
+    desc = under_fire_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Volkov, pamyat, hades nexus
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.20
+        }
+    }
+}
