@@ -500,10 +500,9 @@ country_event = {
     # Option B: Ignore the intelligence
     option = {
         name = btr_skyllian_blitz_1.7.b
-        # TODO: "This intelligence is inconclusive"
 
         set_country_flag = haliat_investigation_ignored
-        # TODO: Determine what happens here - does crisis end or continue differently?
+        country_event = { id = btr_skyllian_blitz_1.8 days = 60 } # 2 months
     }
 }
 
@@ -633,5 +632,65 @@ country_event = {
     option = {
         name = btr_skyllian_blitz_1.8.a
         # TODO: "We should have seen this coming"
+    }
+
+    option = {
+        name = btr_skyllian_blitz_1.8.b
+        # TODO: "We should have seen this coming"
+    }
+}
+
+# Player Victory Over Haliat's Betrayal
+country_event = {
+    id = btr_skyllian_blitz_1.9
+    title = btr_skyllian_blitz_1.9.name
+    desc = btr_skyllian_blitz_1.9.desc
+    picture = GFX_evt_victory # TODO: Replace with appropriate event picture
+    show_sound = event_celebration
+
+    is_triggered_only = yes
+
+    immediate = {
+        set_country_flag = haliat_coup_defeated
+        remove_country_flag = haliat_betrayal_begun
+
+        # Clean up Haliat's forces
+        if = {
+            limit = { exists = event_target:hostile_haliat_country }
+            event_target:hostile_haliat_country = {
+                destroy_country = yes
+            }
+        }
+
+        # Remove any remaining Haliat-affiliated leaders and fleets
+        every_owned_leader = {
+            limit = {
+                OR = {
+                    has_leader_flag = haliat_leader
+                    has_leader_flag = haliat_recruit_1
+                    has_leader_flag = haliat_recruit_2
+                    has_leader_flag = haliat_recruit_3
+                }
+            }
+            kill_leader = { show_notification = no }
+        }
+
+        every_owned_fleet = {
+            limit = {
+                OR = {
+                    has_fleet_flag = haliat_squadron
+                    has_fleet_flag = haliat_reserve_fleet
+                }
+            }
+            delete_fleet = this
+        }
+    }
+
+    option = {
+        name = btr_skyllian_blitz_1.9.a
+        # TODO: "The coup has been defeated"
+
+        # TODO: Add victory rewards - resources, modifiers, etc.
+        # End of Act 1 - crisis chain concluded
     }
 }

@@ -1,5 +1,5 @@
 guiTypes = {
-	
+
 	@topbar_amount_pos_y = 17
 
 	positionType = {
@@ -155,96 +155,83 @@ guiTypes = {
 		containerWindowType = {
 			name = "topbar"
 			position = { x = 0 y = 0 }
-			size = { width = 1026 height = 50 }
-			if_scaled_resolution = {
-				maxHeight = 1439
-				size = { width = 100% height = 50 }
-			}
-			clipping = no
+			size = { width = 100% height = 50 }
+
+			#clipping = no
 			background = {
 				name = topbar_background
 				quadTextureSprite = "GFX_topbar_background"
 			}
-			containerWindowType = {
-				name = topbar_wrapper
-				size = {
-					width = 100%
-					height = 100%
-				}
-				clipping = yes
-			}
-			background = {
-				name ="background"
-				quadTextureSprite = "GFX_topbar_background"
-				position = { x= 0 y = 0 }
-			}
 		}
 
-		buttonType = {
-			name ="topbar_04"
-			quadTextureSprite = "GFX_topbar_bar_04"
-			position = { x= -170 y = 11 }
-			Orientation = "UPPER_RIGHT"
-			oversound = no_sound
-		}
+		# buttonType = {
+		# 	name ="topbar_04"
+		# 	quadTextureSprite = "GFX_topbar_bar_04"
+		# 	position = { x= -170 y = 11 }
+		# 	Orientation = "UPPER_RIGHT"
+		# 	oversound = no_sound
+		# }
 		###########################
 		### Resources and Stuff ###
 		###########################
 		@static_c1 = 0
-		@static_c2 = 102
-		@static_c3 = 209
-		@static_c4 = 362
-		@static_c5 = 515
-		@static_c6 = 672
-		@static_c7 = 780
-		@static_c8 = 883
-		@static_c9 = 946
-		@static_c10 = 1029
-		@static_c11 = 1108
+		@static_c2 = 107
+		@static_c3 = 212
+		@static_c4 = 318
+		@static_c5 = 455
+		@static_c6 = 561
+		@static_c7 = 681
+		@static_c8 = 787
+		@static_c9 = 893
+		@static_c10 = 959
+		@static_c11 = 1025
+		@static_c12 = 1131
+		@static_c13 = 1237
+		@static_c14 = 1343
 		@extend_c1 = 987
 		@extend_c2 = 92
 		@extend_c3 = 169
 		@extend_c4 = 246
-		@row1 = 5
-		@row2 = 26
+		@row1 = 7
+		@row2 = 28
 		containerWindowType = {
 			name = "topbar_static"
 			position = { x = 70 y = 0 }
 			size = { width = 200 height = 50 }
 			### RESOURCE SECTION MARKERS ###
+			# containerWindowType = {
+			# 	name = "topbar_bar_resources"
+			# 	size = { width = 215 height = 46 }
+			# 	position = { x = -7 y = 6 }
+			# 	background = {
+			# 		name = "topbar_bar_resources"
+			# 		spriteType = "GFX_topbar_bar_03"
+			# 		alwaysTransparent = yes
+			# 	}
+			# }
+			# containerWindowType = {
+			# 	name = "topbar_bar_manufactured_resources"
+			# 	size = { width = 468 height = 46 }
+			# 	position = { x = 203 y = 6 }
+			# 	background = {
+			# 		name = "topbar_bar_resources"
+			# 		spriteType = "GFX_topbar_bar_03"
+			# 		alwaysTransparent = yes
+			# 	}
+			# }
+			# containerWindowType = {
+			# 	name = "topbar_bar_rare_resources"
+			# 	size = { width = 113 height = 46 }
+			# 	position = { x = 666 y = 6 }
+			# 	background = {
+			# 		name = "topbar_bar_resources"
+			# 		spriteType = "GFX_topbar_bar_03"
+			# 		alwaysTransparent = yes
+			# 	}
+			# }
+			### RESOURCE COUNTERS ###
 			containerWindowType = {
-				name = "topbar_bar_resources"
-				size = { width = 215 height = 46 }
-				position = { x = -7 y = 6 }
-				background = {
-					name = "topbar_bar_resources"
-					spriteType = "GFX_topbar_bar_03"
-					alwaysTransparent = yes
-				}
-			}
-			containerWindowType = {
-				name = "topbar_bar_manufactured_resources"
-				size = { width = 468 height = 46 }
-				position = { x = 203 y = 6 }
-				background = {
-					name = "topbar_bar_resources"
-					spriteType = "GFX_topbar_bar_03"
-					alwaysTransparent = yes
-				}
-			}		
-			containerWindowType = {
-				name = "topbar_bar_rare_resources"
-				size = { width = 113 height = 46 }
-				position = { x = 666 y = 6 }
-				background = {
-					name = "topbar_bar_resources"
-					spriteType = "GFX_topbar_bar_03"
-					alwaysTransparent = yes
-				}
-			}	
-			### RESOURCE COUNTERS ###	
-			containerWindowType = {
-				name = "tb_energy_group"
+				name = "tb_trade_group"
 				size = { width = 100 height = 19 }
 				position = { x = @static_c1 y = @row1 }
 				background = {
@@ -254,7 +241,7 @@ guiTypes = {
 				}
 				iconType = {
 					name = "icon"
-					spriteType = "GFX_resource_energy"
+					spriteType = "GFX_resource_trade"
 					position = { x = 2 y = 0 }
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
@@ -272,7 +259,7 @@ guiTypes = {
 				}
 			}
 			containerWindowType = {
-				name = "tb_mineral_group"
+				name = "tb_energy_group"
 				size = { width = 100 height = 19 }
 				position = { x = @static_c1 y = @row2 }
 				background = {
@@ -282,7 +269,7 @@ guiTypes = {
 				}
 				iconType = {
 					name = "icon"
-					spriteType = "GFX_resource_minerals"
+					spriteType = "GFX_resource_energy"
 					position = { x = 2 y = 0 }
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
@@ -356,8 +343,8 @@ guiTypes = {
 				}
 			}
 			containerWindowType = {
-				name = "tb_light_alloys_group"
-				size = { width = 150 height = 19 }
+				name = "tb_minerals_group"
+				size = { width = 100 height = 19 }
 				position = { x = @static_c3 y = @row1 }
 				background = {
 					name = "background"
@@ -366,7 +353,35 @@ guiTypes = {
 				}
 				iconType = {
 					name = "icon"
-					spriteType = "GFX_resource_light_metal_resources2"
+					spriteType = "GFX_resource_minerals"
+					position = { x = 2 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 22 y = 0 }
+					maxWidth = 78
+					maxHeight = 20
+					text = "0 / 0"
+					format = center
+					vertical_alignment = center
+					alwaysTransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "tb_uranium_group"
+				size = { width = 100 height = 19 }
+				position = { x = @static_c3 y = @row2 }
+				background = {
+					name = "background"
+					spriteType = "GFX_dark_area_cut"
+					clicksound = interface
+				}
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_resource_uranium"
 					position = {  x = 2 y = 0 }
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
@@ -374,19 +389,48 @@ guiTypes = {
 				instantTextBoxType={
 					name = "amount"
 					font = "cg_16b"
-					position = { x = 40 y = 0 }
+					position = { x = 22 y = 0 }
 					maxWidth = 80
 					maxHeight = 16
 					text = "0 / 0"
-					format = right
+					format = center
+					vertical_alignment = center
+					alwaysTransparent = yes
+				}
+			}
+
+			containerWindowType = {
+				name = "tb_light_alloys_group"
+				size = { width = 100 height = 19 }
+				position = { x = @static_c5 y = @row1 }
+				background = {
+					name = "background"
+					spriteType = "GFX_dark_area_cut"
+					clicksound = interface
+				}
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_resource_light_metal_resources2"
+					position = {  x = -20 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 22 y = 0 }
+					maxWidth = 80
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
 					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 			}
 			containerWindowType = {
 				name = "tb_light_alloys_resources_group"
-				size = { width = 150 height = 19 }
-				position = { x = @static_c3 y = @row2 }
+				size = { width = 130 height = 19 }
+				position = { x = @static_c4 y = @row1 }
 				background = {
 					name = "background"
 					spriteType = "GFX_dark_area_cut"
@@ -410,11 +454,11 @@ guiTypes = {
 					vertical_alignment = center
 					alwaysTransparent = yes
 				}
-			}	
+			}
 			containerWindowType = {
 				name = "tb_heavy_alloys_group"
-				size = { width = 150 height = 19 }
-				position = { x = @static_c4 y = @row1 }
+				size = { width = 100 height = 19 }
+				position = { x = @static_c5 y = @row2 }
 				background = {
 					name = "background"
 					spriteType = "GFX_dark_area_cut"
@@ -423,25 +467,25 @@ guiTypes = {
 				iconType = {
 					name = "icon"
 					spriteType = "GFX_resource_heavy_metal_resources2"
-					position = {  x = 2 y = 0 }
+					position = {  x = -20 y = 0 }
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
 				instantTextBoxType={
 					name = "amount"
 					font = "cg_16b"
-					position = { x = 40 y = 0 }
+					position = { x = 22 y = 0 }
 					maxWidth = 80
 					maxHeight = 16
 					text = "0 / 0"
-					format = right
+					format = center
 					vertical_alignment = center
 					alwaysTransparent = yes
 				}
-			}		
+			}
 			containerWindowType = {
 				name = "tb_heavy_alloys_resources_group"
-				size = { width = 150 height = 19 }
+				size = { width = 130 height = 19 }
 				position = { x = @static_c4 y = @row2 }
 				background = {
 					name = "background"
@@ -466,66 +510,10 @@ guiTypes = {
 					vertical_alignment = center
 					alwaysTransparent = yes
 				}
-			}	
-			containerWindowType = {
-				name = "tb_antimatter_fuel_group"
-				size = { width = 150 height = 19 }
-				position = { x = @static_c5 y = @row1 }
-				background = {
-					name = "background"
-					spriteType = "GFX_dark_area_cut"
-					clicksound = interface
-				}
-				iconType = {
-					name = "icon"
-					spriteType = "GFX_resource_antimatter_fuel_resources2"
-					position = {  x = 2 y = 0 }
-					tooltip_mode_enabled = yes
-					alwaysTransparent = yes
-				}
-				instantTextBoxType={
-					name = "amount"
-					font = "cg_16b"
-					position = { x = 40 y = 0 }
-					maxWidth = 80
-					maxHeight = 16
-					text = "0 / 0"
-					format = right
-					vertical_alignment = center
-					alwaysTransparent = yes
-				}
 			}
 			containerWindowType = {
-				name = "tb_antimatter_fuel_resources_group"
-				size = { width = 150 height = 19 }
-				position = { x = @static_c5 y = @row2 }
-				background = {
-					name = "background"
-					spriteType = "GFX_dark_area_cut"
-					clicksound = interface
-				}
-				iconType = {
-					name = "icon"
-					spriteType = "GFX_resource_antimatter_fuel_resources"
-					position = {  x = 2 y = 0 }
-					tooltip_mode_enabled = yes
-					alwaysTransparent = yes
-				}
-				instantTextBoxType={
-					name = "amount"
-					font = "cg_16b"
-					position = { x = 40 y = 0 }
-					maxWidth = 80
-					maxHeight = 16
-					text = "0 / 0"
-					format = right
-					vertical_alignment = center
-					alwaysTransparent = yes
-				}
-			}	
-			containerWindowType = {
-				name = "tb_uranium_group"
-				size = { width = 100 height = 19 }
+				name = "tb_antimatter_fuel_group"
+				size = { width = 115 height = 19 }
 				position = { x = @static_c6 y = @row1 }
 				background = {
 					name = "background"
@@ -534,8 +522,8 @@ guiTypes = {
 				}
 				iconType = {
 					name = "icon"
-					spriteType = "GFX_resource_uranium"
-					position = {  x = 2 y = 0 }
+					spriteType = "GFX_resource_antimatter_fuel_resources2"
+					position = {  x = -6 y = 0 }
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
@@ -546,15 +534,43 @@ guiTypes = {
 					maxWidth = 80
 					maxHeight = 16
 					text = "0 / 0"
-					format = center
+					format = right
 					vertical_alignment = center
 					alwaysTransparent = yes
 				}
-			}	
+			}
+			containerWindowType = {
+				name = "tb_antimatter_fuel_resources_group"
+				size = { width = 115 height = 19 }
+				position = { x = @static_c6 y = @row2 }
+				background = {
+					name = "background"
+					spriteType = "GFX_dark_area_cut"
+					clicksound = interface
+				}
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_resource_antimatter_fuel_resources"
+					position = {  x = -6 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 22 y = 0 }
+					maxWidth = 80
+					maxHeight = 16
+					text = "0 / 0"
+					format = right
+					vertical_alignment = center
+					alwaysTransparent = yes
+				}
+			}
 			containerWindowType = {
 				name = "tb_eezo_group"
 				size = { width = 100 height = 19 }
-				position = { x = @static_c6 y = @row2 }
+				position = { x = @static_c7 y = @row1 }
 				background = {
 					name = "background"
 					spriteType = "GFX_dark_area_cut"
@@ -579,11 +595,39 @@ guiTypes = {
 					alwaysTransparent = yes
 				}
 			}
-			
+			containerWindowType = {
+				name = "tb_minor_artifacts_group"
+				size = { width = 100 height = 19 }
+				position = { x = @static_c7 y = @row2 }
+				background = {
+					name = "background"
+					spriteType = "GFX_dark_area_cut"
+					clicksound = interface
+				}
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_resource_minor_artifacts"
+					position = {  x = 2 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 22 y = 0 }
+					maxWidth = 80
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					vertical_alignment = center
+					alwaysTransparent = yes
+				}
+			}
+
 			containerWindowType = {
 				name = "tb_influence_group"
 				size = { width = 100 height = 19 }
-				position = { x = @static_c7 y = @row1 }
+				position = { x = @static_c8 y = @row1 }
 				background = {
 					name = "background"
 					spriteType = "GFX_dark_area_cut"
@@ -611,7 +655,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "tb_unity_group"
 				size = { width = 100 height = 19 }
-				position = { x = @static_c7 y = @row2 }
+				position = { x = @static_c8 y = @row2 }
 				background = {
 					name = "background"
 					spriteType = "GFX_dark_area_cut"
@@ -639,7 +683,7 @@ guiTypes = {
 			dropDownBoxType = {
 				name = "tb_research_group"
 				size = { width = 60 height = 41 }
-				position = { x = @static_c8 y = @row1 }
+				position = { x = @static_c9 y = @row1 }
 				background = {
 					name = "background"
 					spriteType = "GFX_dark_area_cut"
@@ -648,8 +692,8 @@ guiTypes = {
 				iconType = {
 					name = "icon"
 					spriteType = "GFX_research_icon"
-					scale = 1.0
-					position = { x = 20 y = -1 }
+					scale = 0.8
+					position = { x = 20 y = 2 }
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
 				}
@@ -697,8 +741,8 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "leaders_group"
-				size = { width = 80 height = 41 }
-				position = { x = @static_c9 y = @row1 }
+				size = { width = 60 height = 41 }
+				position = { x = @static_c10 y = @row1 }
 				clipping = no
 				background = {
 					name = "background"
@@ -708,45 +752,15 @@ guiTypes = {
 				iconType = {
 					name = "icon"
 					spriteType = "GFX_icon_leader"
-					position = { x = 40 y = 12 }
+					position = { x = 20 y = 2 }
 					scale = 0.65
 					tooltip_mode_enabled = yes
-					centerPosition = yes
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
 					name = "amount"
 					font = "cg_16b"
-					position = { x = 2 y = 22 }
-					maxWidth = 120
-					maxHeight = 16
-					text = "250"
-					format = center
-					vertical_alignment = center
-					alwaysTransparent = yes
-				}
-			}
-			containerWindowType = {
-				name = "pop_group"
-				size = { width = 75 height = 19 }
-				position = { x = @static_c10 y = @row1 }
-				background = {
-					name = "background"
-					spriteType = "GFX_dark_area_cut"
-					clicksound = interface
-				}
-				iconType = {
-					name = "icon"
-					spriteType = "GFX_pop"
-					position = { x = 2 y = 0 }
-					scale = 0.7
-					tooltip_mode_enabled = yes
-					alwaysTransparent = yes
-				}
-				instantTextBoxType={
-					name = "amount"
-					font = "cg_16b"
-					position = { x = 15 y = 0 }
+					position = { x = -5 y = 22 }
 					maxWidth = 70
 					maxHeight = 16
 					text = "0 / 0"
@@ -756,9 +770,37 @@ guiTypes = {
 				}
 			}
 			containerWindowType = {
+				name = "pop_group"
+				size = { width = 100 height = 19 }
+				position = { x = @static_c11 y = @row1 }
+				background = {
+					name = "background"
+					spriteType = "GFX_dark_area_cut"
+					clicksound = interface
+				}
+				iconType = {
+					name = "icon"
+					spriteType = "GFX_pop"
+					position = { x = 0 y = 0 }
+					tooltip_mode_enabled = yes
+					alwaysTransparent = yes
+				}
+				instantTextBoxType={
+					name = "amount"
+					font = "cg_16b"
+					position = { x = 22 y = 0 }
+					maxWidth = 80
+					maxHeight = 16
+					text = "0 / 0"
+					format = center
+					vertical_alignment = center
+					alwaysTransparent = yes
+				}
+			}
+			containerWindowType = {
 				name = "empire_size_group"
-				size = { width = 75 height = 19 }
-				position = { x = @static_c10 y = @row2 }
+				size = { width = 100 height = 19 }
+				position = { x = @static_c11 y = @row2 }
 				background = {
 					name = "background"
 					spriteType = "GFX_dark_area_cut"
@@ -767,7 +809,7 @@ guiTypes = {
 				iconType = {
 					name = "icon"
 					spriteType = "GFX_empire_sprawl_icon"
-					position = { x = 2 y = 0 }
+					position = { x = 4 y = 0 }
 					scale = 0.7
 					tooltip_mode_enabled = yes
 					alwaysTransparent = yes
@@ -775,8 +817,8 @@ guiTypes = {
 				instantTextBoxType={
 					name = "amount"
 					font = "cg_16b"
-					position = { x = 15 y = 0 }
-					maxWidth = 70
+					position = { x = 22 y = 0 }
+					maxWidth = 80
 					maxHeight = 16
 					text = "250"
 					format = center
@@ -787,7 +829,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "starbase_group"
 				size = { width = 100 height = 19 }
-				position = { x = @static_c11 y = @row1 }
+				position = { x = @static_c12 y = @row1 }
 				background = {
 					name = "background"
 					spriteType = "GFX_dark_area_cut"
@@ -816,7 +858,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "navy_group"
 				size = { width = 100 height = 19 }
-				position = { x = @static_c11 y = @row2 }
+				position = { x = @static_c12 y = @row2 }
 				background = {
 					name = "background"
 					spriteType = "GFX_dark_area_cut"
@@ -1068,10 +1110,19 @@ guiTypes = {
 
 		buttonType = {
 			name = "message_icon_button"
-			quadTextureSprite = "GFX_test_message_icon"
+			quadTextureSprite = "GFX_message_background"
 			position = { x= -2 y = 12  }
 			clicksound = "confirmation"
 			oversound = no_sound
+		}
+
+		iconType = {
+			name = "message_icon"
+			quadTextureSprite = "GFX_test_message_icon"
+			position = { x= -13 y = 0 }
+			alwaysTransparent = yes
+			orientation = center
+			centerPosition = yes
 		}
 
 		iconType = {
