@@ -341,3 +341,122 @@ UNDER_FIRE = {
         }
     }
 }
+
+CAT_EARS = {
+    desc = cat_ears_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on asteroid belt, pamyat, hades nexus
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.21
+        }
+    }
+}
+
+GRAVEROBBING = {
+    desc = graverobbing_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Gei Hinnom, Sheol, Hades Nexus
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.22
+        }
+    }
+}
+
+SALTY = {
+    desc = salty_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on neith, amun, Eagle Nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.23
+        }
+    }
+}
+
+SOARING_SOLAR = {
+    desc = soaring_solar_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Osari, Imir, Eagle
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.24
+        }
+    }
+}
+
+BREATHING_ROCK = {
+    desc = breathing_rock_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Gregas, Imir, Eagle Nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.25
+        }
+    }
+}
+
+GAS_EXPLOSION = {
+    desc = gas_explosion_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Uzin, Malgus, Eagle Nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.26
+        }
+    }
+}
+
+PAST_PRIME = {
+    desc = past_prime_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Tamahera, Century, Eagle Nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.27
+        }
+    }
+}

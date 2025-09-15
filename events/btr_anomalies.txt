@@ -675,3 +675,218 @@ ship_event = {
         }
     }
 }
+
+ship_event = {
+    id = btr_anomaly.21
+    title = "btr_anomaly.21.name"
+    desc = "btr_anomaly.21.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.21.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+        leader = {
+             add_trait = leader_trait_xeno_cataloger
+        }
+    }
+    option = {
+        name = btr_anomaly.21.b
+        trigger = {
+            owner = {
+                has_origin = systems_all_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 50
+                max = 200
+            }
+        }
+        leader = {
+            add_trait = leader_trait_xeno_cataloger
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.22
+    title = "btr_anomaly.22.name"
+    desc = "btr_anomaly.22.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.22.a
+        leader = {
+            add_trait = leader_trait_archaeologist
+        }
+        #Spawn archeological site to be written
+    }
+    option = {
+        name = btr_anomaly.22.b
+        trigger = {
+            owner = {
+                has_origin = illuminated_pri_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 50
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.23
+    title = "btr_anomaly.23.name"
+    desc = "btr_anomaly.23.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.23.a
+        leader = {
+            add_trait = leader_trait_expertise_materials
+            add_experience = 200
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.24
+    title = "btr_anomaly.24.name"
+    desc = "btr_anomaly.24.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.24.a
+        leader ={
+            add_trait = leader_trait_expertise_field_manipulation
+        }
+        FROM = {
+            add_deposit = d_energy_5
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.25
+    title = "btr_anomaly.25.name"
+    desc = "btr_anomaly.25.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.25.a
+        FROM = {
+            add_deposit = d_physics_2
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.26
+    title = "btr_anomaly.26.name"
+    desc = "btr_anomaly.26.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.26.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.27
+    title = "btr_anomaly.27.name"
+    desc = "btr_anomaly.27.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.27.a
+       FROM = {
+           add_deposit = d_physics_3
+           add_modifier = {
+               modifier = terraforming_candidate
+           }
+       }
+    }
+}
