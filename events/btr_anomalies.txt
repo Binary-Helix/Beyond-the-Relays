@@ -890,3 +890,159 @@ ship_event = {
        }
     }
 }
+
+ship_event = {
+    id = btr_anomaly.28
+    title = "btr_anomaly.28.name"
+    desc = "btr_anomaly.28.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.28.a
+        #TODO Spawn Klendagon digsite to be written
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.29
+    title = "btr_anomaly.29.name"
+    desc = "btr_anomaly.29.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.29.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+        leader = {
+            add_trait = leader_trait_expertise_military_theory
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.30
+    title = "btr_anomaly.30.name"
+    desc = "btr_anomaly.30.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.30.a
+        #TODO Spawn Etamis digsite to be written
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.31
+    title = "btr_anomaly.31.name"
+    desc = "btr_anomaly.31.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.31.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+        leader = {
+            add_trait = leader_trait_expertise_particles
+        }
+        #TODO Spawn Linossa digsite to be written
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.32
+    title = "btr_anomaly.32.name"
+    desc = "btr_anomaly.32.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.32.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.33
+    title = "btr_anomaly.33.name"
+    desc = "btr_anomaly.33.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.33.a
+       FROM = {
+           add_deposit = d_engineering_3
+       }
+    }
+}

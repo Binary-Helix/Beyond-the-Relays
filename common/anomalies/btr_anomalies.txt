@@ -460,3 +460,105 @@ PAST_PRIME = {
         }
     }
 }
+
+SCOURGED = {
+    desc = scourged_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Klendagon, Century, Eagle Nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.28
+        }
+    }
+}
+
+CLOUDED_HELL = {
+    desc = clouded_hell_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on atahil, schwarzchild, Hawking eta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.29
+        }
+    }
+}
+
+TRAMPLED_FLOWERS = {
+    desc = trampled_flowers_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on etamis, schwarzchild, Hawking eta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.30
+        }
+    }
+}
+
+NANO_RINGS = {
+    desc = nano_rings_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on linossa, schwarzchild, Hawking eta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.31
+        }
+    }
+}
+
+STABLE_PLASMA = {
+    desc = stable_plasma_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on mnemosyne, thorne, hawking eta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.32
+        }
+    }
+}
+
+PULLED_APART = {
+    desc = pulled_apart_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on lethe, thorne, hawking eta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.33
+        }
+    }
+}
