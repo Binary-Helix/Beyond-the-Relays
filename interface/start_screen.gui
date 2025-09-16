@@ -4,101 +4,108 @@ guiTypes = {
 		size = { width = 900 height = 1133 }
 		orientation = center
 		origo = center
-		moveable = yes
+		moveable = no
 		clipping = no
 
 		background = {
 			name = "start_screen_background"
-			quadTextureSprite = "GFX_btr_intro_screen_bg"
+			quadTextureSprite = "GFX_btr_datapad_empire_dossier_bg"
 		}
 
+		#containerWindowType = {
+		#	name = "start_screen_frame_bg"
+		#	size = { width = 560 height = 325 }
+		#	position = { x = 0 y = 285 }
+		#	orientation = center_up
+		#	origo = center_up
+		#
+		#	background = {
+		#		name = "start_screen_frame"
+		#		quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+		#		position = { x = 0 y = 0 }
+		#		alwaysTransparent = yes
+		#	}
+		#}
+
 		containerWindowType = {
-			name = "start_screen_frame_bg"
-			size = { width = 560 height = 325 }
-			position = { x = 0 y = 285 }
-			orientation = center_up
+			name = "banner2"
+			size = { width = 760 height = 390 }
+			position = { x = 0 y = -10 }
+			orientation = center
 			origo = center_up
-		}
-		
-		containerWindowType = {
-			name = "banner"
-			size = { width = 560 height = 260 }
-			position = { x = 90000 y = 20 }
-			orientation = center_up
-			origo = center_up
-			
-			background = {
-				name = "banner"
-				spriteType = "GFX_tiles_dark_area_cut_8"
-			}
+
+			#background = {
+			#	name = "banner"
+			#	spriteType = "GFX_tiles_dark_area_cut_8"
+			#}
 		}
 
 		# LEFT SIDE
 		containerWindowType = {
 			name = "leader_window"
-			position = { x = 900020 y = 20 }
-			size = { width = 300 height = 250 }
+			position = { x = 65 y = 130 }
+			size = { width = 216 height = 289 }
 			orientation = upper_left
-			clipping = yes
-			
+			clipping = no
+
 			iconType = {
 				name = "leader_portrait"
-				position = { x = -70 y = -10 }
+				position = { x = -130 y = -13 }
 				spriteType = "GFX_portrait_character"
-				scale = 0.75
+				scale = 0.9
 			}
 		}
 
 		iconType = {
 			name = "ruler_icon"
-			position = { x = 900034 y = 37 }
+			position = { x = 256 y = 492 }
 			spriteType = "GFX_icon_councilor_ruler"
-			scale = 0.7
+			#scale = 0.9
 		}
 
 		instantTextBoxType={
 			name = "ruler_name_label"
 			font = "cg_16b"
-			text = "LEADER_LABEL"
-			appendtext = ":"
-			position = { x = 900060 y = 39 }
-			maxWidth = 200
-			maxHeight = 20
+			text = " "
+			appendtext = ""
+			position = { x = 258 y = 492 }
+			maxWidth = 29
+			maxHeight = 29
 			fixedSize = yes
 			format = left
 			tooltip_mode_enabled = yes
 		}
-		
+
 		instantTextBoxType={
 			name = "ruler_name"
-			font = "cg_16b"
+			font = "korataki_16"
 			text = "Emperor Gnorkius"
-			position = { x = 900036 y = 60 }
+			position = { x = 90 y = 465 }
 			maxWidth = 200
 			maxHeight = 20
-			fixedSize = yes
-			format = left
-			text_color_code = "Y"
+			fixedSize = no
+			format = center
+			text_color_code = "T"
 		}
-		
+
 		# RIGHT SIDE
 		instantTextBoxType={
 			name = "empire_name"
-			font = "malgun_goth_24"
+			font = "korataki_24"
 			text = "GNORKALL EMPIRE"
-			position = { x = 9000270 y = 35 }
-			maxWidth = 290
-			maxHeight = 20
+			position = { x = 103 y = 100 }
+			maxWidth = 200
+			maxHeight = 300
 			fixedSize = yes
-			format = left
-			text_color_code = E
+			format = Center
+			#text_color_code = B
 		}
-		
+
 		iconType = {
 			name = "government_icon"
 			quadTextureSprite = "GFX_government_authority"
-			position = { x = 9000270 y = 64 }
-			scale = 0.8
+			position = { x = 85 y = 492 }
+			scale = 0.675
 			orientation = "UPPER_LEFT"
 		}
 
@@ -106,147 +113,183 @@ guiTypes = {
 			name = "government_type"
 			font = "cg_16b"
 			text = "government type"
-			position = { x = 9000316 y = 68 }
+			position = { x = 90000 y = 330 }
 			maxWidth = 200
 			maxHeight = 40
 			fixedSize = yes
 			format = left
 		}
-		
-		instantTextBoxType={
-			name = "ethics_label"
-			font = "cg_16b"
-			text = "ETHICS"
-			appendtext = ":"
-			position = { x = 9000270 y = 120 }
-			maxWidth = 100
-			maxHeight = 40
-			fixedSize = yes
-			format = left
-		}
-		
+
+		#instantTextBoxType={
+		#	name = "ethics_label"
+		#	font = "malgun_goth_24"
+		#	text = "ETHICS"
+		#	appendtext = ":"
+		#	position = { x = 378 y = 385 }
+		#	maxWidth = 100
+		#	maxHeight = 40
+		#	fixedSize = yes
+		#	format = left
+		#	text_color_code = T
+		#}
+
 		overlappingElementsBoxType = {
-			name = "ethics"	
-			position = { x = 9000270 y = 140 }
-			size = { x = 150 y = 18 }
-			spacing = 2.0
+			name = "ethics"
+			position = { x = -269 y = 88 }
+			size = { x = 150 y = 200 }
+			spacing = 5
+			orientation = upper_right
+			format = center
+			first_on_top = yes
+			direction = vertical
+
 		}
-		
-		instantTextBoxType={
-			name = "civics_label"
-			font = "cg_16b"
-			text = "GOVERNMENT_CIVICS"
-			appendtext = ":"
-			position = { x = 9000400 y = 120 }
-			maxWidth = 270
-			maxHeight = 40
-			fixedSize = yes
-			format = left
-		}
-		
+
+		#instantTextBoxType={
+		#	name = "civics_label"
+		#	font = "malgun_goth_24"
+		#	text = "GOVERNMENT_CIVICS"
+		#	appendtext = ":"
+		#	position = { x = 478 y = 385 }
+		#	maxWidth = 270
+		#	maxHeight = 40
+		#	fixedSize = yes
+		#	format = left
+		#	text_color_code = T
+		#}
+
 		overlappingElementsBoxType = {
 			name = "civics"
-			position = { x = 9000400 y = 140 }
-			size = { x = 150 y = 18 }
-			spacing = 2.0
-		}	
+			position = { x = -328 y = 110 }
+			size = { x = 150 y = 200 }
+			spacing = 4
+			orientation = upper_right
+			format = center
+			first_on_top = yes
+			direction = vertical
+		}
 
-		iconType = {
-			name = "planet_class"
-			spriteType = "GFX_planet_type"
-			position = { x = 9000270 y = 220 }
-		}		
-		
+
 		instantTextBoxType={
 			name = "species_name"
-			font = "cg_16b"
-			position = { x = 9000385 y = 210 }
+			font = "tigensu_16"
+			position = { x =90775 y = 120 }
 			maxWidth = 150
 			maxHeight = 40
 			fixedSize = yes
 			format = left
+			text_color_code = K
 		}
 
 		containerWindowType = {
 			name = "species_window"
-			position = { x = 9000305 y = 195 }
-			size = { width = 150 height = 120 }
+			position = { x = 740 y = 140 }
+			size = { width = 150 height = 200 }
 			orientation = upper_left
 			clipping = yes
-			
+
 			iconType = {
 				name = "species_portrait"
-				position = { x = 0 y = 0 }
+				position = { x = -62 y = -33 }
 				spriteType = "GFX_portrait_character"
-				scale = 0.17
+				scale = 0.425
 			}
 		}
-		
+
+		iconType = {
+			name = "planet_class"
+			spriteType = "GFX_planet_type"
+			position = { x = 360 y = 120 }
+			scale = 1.0
+		}
+
 		overlappingElementsBoxType = {
 			name = "traits"
-			position = { x = 9000385 y = 230 }
-			size = { x = 150 y = 18 }
-			spacing = 2.0
-		}	
-		
+			position = { x = -207 y = 111 }
+			size = { x = 150 y = 190 }
+			spacing = 1
+			orientation = upper_right
+			format = center
+			first_on_top = yes
+			direction = vertical
+			scale = 0.75
+		}
+
 		# BOTTOM
 
-		instantTextBoxType={
-			name = "origin_header"
-			font = "malgun_goth_24"
-			text = "ORIGIN"
-			position = { x = 900040 y = 296 }
-			maxWidth = 290
-			maxHeight = 20
-			fixedSize = yes
-			format = left
-			text_color_code = L
+		#instantTextBoxType={
+		#	name = "origin_header"
+		#	font = "malgun_goth_24"
+		#	text = "ORIGIN"
+		#	position = { x = 350 y = 160 }
+		#	maxWidth = 290
+		#	maxHeight = 20
+		#	fixedSize = yes
+		#	format = center
+		#	text_color_code = S
+		#}
+
+		ContainerWindowType = {
+			name = "bottom_frame_container"
+			size = { width = 140 height = 54 }
+			position = { x = 733 y = 248 }
+			orientation = UPPER_LEFT
+
+			background = {
+				name = "bottom_frame"
+				quadTextureSprite = "GFX_btr_bottom_frame"
+			}
 		}
 
 		iconType = {
 			name = "origin_icon"
-			position = { x = 900040 y = 325 }
+			position = { x = 781 y = 254 }
 			spriteType = "GFX_government_civic"
+			scale = 1.4
+		}
+
+		containerWindowType = {
+			name = "empire_origin_image"
+			position = { x = 347 y = 287 }
+			size = { width = 568 height = 296 }
+			clipping = yes
+
+			iconType = {
+				name = "empire_origin"
+				quadTextureSprite = GFX_btr_origin_frame
+				alwaysTransparent = yes
+				scale = 1.0
+			}
 		}
 
 		instantTextBoxType={
 			name = "origin_name"
-			font = "cg_16b"
+			font = "korataki_16"
 			text = "ORIGIN"
-			position = { x = 900080 y = 330 }
-			maxWidth = 290
-			maxHeight = 20
+			position = { x = 600 y = 322 }
+			maxWidth = 300
+			maxHeight = 50
 			fixedSize = yes
-			format = left
+			format = center
 		}
 
 		containerWindowType = {
 			name = "starting_description_container"
-			size = { width = 775 height = 325 }
-			position = { x = 15 y = 625 }
-			orientation = center_up
+			size = { width = 750 height = 335 }
+			position = { x = 25 y = 40 }
+			orientation = center
 			origo = center_up
 			verticalScrollBar = "right_vertical_slider"
-			
+
 			background = {
 				name = "scroll_input_hitbox"
 				spriteType = "GFX_invisible"
 			}
-			
+
 			instantTextBoxType={
 				name = "starting_description"
 				font = "tigensu_18"
 				text = "desc"
-				position = { x = 90000015 y = 0 }
-				maxWidth = 775
-				text_color_code = "C"
-				alwaysTransparent = yes
-			}
-			
-			instantTextBoxType={
-				name = "btr_intro"
-				font = "tigensu_18"
-				text = "btr_intro_text"
 				maxWidth = 725
 				text_color_code = "C"
 				alwaysTransparent = yes
@@ -264,8 +307,8 @@ guiTypes = {
 		iconType = {
 			name = "flag"
 			quadTextureSprite = "GFX_empire_flag_128"
-			position = { x = 900010 y = 165 }
-			orientation = "UPPER_LEFT"
+			position = { x = -900 y = 93 }
+			orientation = "UPPER_RIGHT"
 			alwaysTransparent = yes
 			scale = 1.0
 		}
@@ -276,18 +319,32 @@ guiTypes = {
 			position = { x = -163 y = -165 }
 			orientation = center_down
 			text = "START_SCREEN_BEGIN"
-			font = "korataki_16"
+			font = "korataki_24"
 			shortCut = "RETURN"
 			clicksound = "back_click"
 			defaultSelection = yes
 		}
-		
+
+		#containerWindowType = {
+		#	name = "empire_origin_entry"
+		#	position = { x = 451 y = 350 }
+		#	size = { width = 436 height = 196 }
+		#	clipping = yes
+		#
+		#	iconType = {
+		#		name = "empire_origin"
+		#		quadTextureSprite = GFX_origin_default
+		#		alwaysTransparent = yes
+		#		scale = 2.0
+		#	}
+		#}
+
 		containerWindowType = {
-			name = "start_screen_effect" 
+			name = "start_screen_effect"
 			size = { width = 875 height = 946 }
 			position = { x = 500 y = 0 }
 			orientation = upper_left
-		
+
 			buttonType = {
 				name = "btr_start_screen_effect"
 				quadTextureSprite = "GFX_start_screen_effect"
@@ -295,7 +352,7 @@ guiTypes = {
 				position = { x = -489 y = 93 }
 				orientation = upper_left
 			}
-		}	
+		}
 
 	}
 }

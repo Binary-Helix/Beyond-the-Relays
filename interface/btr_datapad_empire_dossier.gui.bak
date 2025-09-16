@@ -159,10 +159,180 @@ guiTypes = {
 			scale = 0.725
 		}
 	}
-	
+
+	containerWindowType = {
+		name = "paragon_portrait_container_heir"
+		size = { width = 272 height = 120 }
+		clipping = no
+
+		### PORTRAIT ###
+
+		containerWindowType = {
+			name = "character_portrait_container_clipping_mask"
+			size = { width = 236 height = 120 }
+			position = { x = 0 y = 0 }
+			orientation = upper_left
+			clipping = yes
+
+			iconType = {
+				name = "character_portrait"
+				quadTextureSprite = "GFX_portrait_character_close_up"
+				position = { x = -25 y = 15 }
+				scale = 0.3
+			}
+		}
+
+		### CLASS ###
+
+		iconType = {
+			name = "leader_type"
+			quadTextureSprite = "GFX_leader_icons"
+			position = { x = 18 y = 24 }
+			centerPosition = yes
+		}
+
+		containerWindowType = {
+			name = "leader_subclass_layered_icon_locator_0"
+			position = { x = 2 y = 58 }
+		}
+
+		### SKILL ###
+
+		iconType = {
+			name = "skill_icon"
+			spriteType = "GFX_leader_skill"
+			position = { x = 9 y = 36 }
+		}
+
+
+		### EMPTY PORTRAIT ###
+
+		containerWindowType = {
+			name = "no_character_container"
+			size = { width = 80 height = 100 }
+			position = { x = 3 y = 0 }
+
+			iconType = {
+				name = "empty_leader_icon"
+				quadTextureSprite = "GFX_empty_leader"
+				position = { x = 10 y = 20 }
+				scale = 1.2
+			}
+		}
+
+		containerWindowType = {
+			name = "on_hover_assign_container"
+			position = { x = 0 y = 0 }
+
+			iconType = {
+				name = "replace_character"
+				spriteType = "GFX_replace_leader"
+				position = { x = 40 y = 30 }
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "on_hover_assign_container_disabled"
+			position = { x = 0 y = 0 }
+
+			iconType = {
+				name = "replace_character"
+				spriteType = "GFX_replace_leader_disabled"
+				position = { x = 40 y = 30 }
+				alwaystransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "council_container"
+
+			iconType = {
+				name = "council_icon"
+				position = { x = 95 y = 12 }
+				spriteType = "GFX_icon_council"
+				centerPosition = yes
+			}
+
+			iconType = {
+				name = "council_position_icon"
+				position = { x = 94 y = 42 }
+				spriteType = "GFX_council_position_icon"
+				centerPosition = yes
+				scale = 0.6
+			}
+
+			instantTextBoxType = {
+				name = "councilor_title"
+				font = "cg_16b"
+				position = { x = 110 y = 28 }
+				maxWidth = 175
+				maxHeight = 25
+				format = left
+				multiline = no
+				alwaystransparent = no
+			}
+		}
+
+		instantTextBoxType={
+			name = "name_without_title_text"
+			font = "cg_16b"
+			position = { x = 110 y = 15 }
+			maxWidth = 145
+			maxHeight = 20
+			fixedSize = yes
+			format = left
+			text_color_code = "Y"
+		}
+
+		buttonType = {
+			name = "rename_leader"
+			position = { x = 110 y = 15 }
+			size = { x = 134 y = 20 }
+			quadTextureSprite = "GFX_invisible"
+		}
+
+		instantTextBoxType = {
+			name = "councilor_title"
+			font = "cg_16b"
+			position = { x = 110 y = 35 }
+			maxWidth = 150
+			maxHeight = 25
+			format = left
+			multiline = no
+			alwaystransparent = no
+		}
+
+		buttonType = {
+			name = "assign_character_button"
+			quadTextureSprite = "GFX_invisible"
+			size = { x = 90 y = 100 }
+			position = { x = 0 y = 6 }
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType={
+			name = "leader_class_text"
+			font = "cg_16b"
+			position = { x = 110 y = 35 }
+			maxWidth = 150
+			maxHeight = 20
+			fixedSize = yes
+			format = left
+			alwaystransparent = yes
+		}
+
+		OverlappingElementsBoxType = {
+			name = "traits_overlapping_box"
+			position = { x = 110 y = 80 }
+			size = { x = 140 y = 30 }
+			first_on_top = yes
+		}
+	}
+
 	# BTR Datapad
 	containerWindowType = {
-		name = "btr_datapad_menu_main"
+		name = "btr_datapad_menu_empire_dossier"
 		orientation = center
 		origo = center
 		movable = yes
@@ -170,55 +340,16 @@ guiTypes = {
 
 		background = {
 			name = "background"
-			quadTextureSprite = "GFX_btr_intro_screen_bg"
+			quadTextureSprite = "gfx_transparency_button"
 		}
 
 		iconType = {
 			name = "btr_datapad_empire_dossier_bg"
-			spriteType = "GFX_btr_intro_screen_bg"
+			spriteType = "GFX_btr_datapad_empire_dossier_bg"
 			alwaysTransparent = yes
 		}
 
-		containerWindowType = {
-			name = "starting_description_container"
-			size = { width = 775 height = 325 }
-			position = { x = 15 y = 625 }
-			orientation = center_up
-			origo = center_up
-			verticalScrollBar = "right_vertical_slider"
-
-			background = {
-				name = "scroll_input_hitbox"
-				spriteType = "GFX_invisible"
-			}
-
-			instantTextBoxType={
-				name = "starting_description"
-				font = "tigensu_18"
-				text = "desc"
-				position = { x = 90000015 y = 0 }
-				maxWidth = 775
-				text_color_code = "C"
-				alwaysTransparent = yes
-			}
-
-			instantTextBoxType={
-				name = "btr_intro"
-				font = "tigensu_18"
-				text = "btr_intro_text"
-				maxWidth = 725
-				text_color_code = "C"
-				alwaysTransparent = yes
-			}
-		}
-
-		buttonType = {
-			name = "tts_button"
-			position = { x = 545 y = 580 }
-			spriteType = "GFX_button_tts_start"
-			buttonFont = "cg_16b"
-			shortCut = "t"
-		}
+		### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
 
 		### EVENT DIPLO ###
 
@@ -249,7 +380,7 @@ guiTypes = {
 			}
 			listboxType = {
 				name = "option_list"
-				position = { x = 0 y = 0 }
+				position = { x = 10000 y = 0 }
 				size = { x = 1000 y = 3000 }
 				spacing = 1
 				scrollbartype = "standardlistbox_slider"
@@ -257,8 +388,6 @@ guiTypes = {
 				Orientation = "center"
 			}
 		}
-
-		### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
 
 		buttonType = {
 			#HIDDEN
@@ -401,12 +530,14 @@ guiTypes = {
 			}
 		}
 
+		### END HIDDEN ITEMS ###
+
 		# Description Section
 		instantTextBoxType = {
 			#HIDDEN
 			name = "alien_message"
 			font = "cg_16b"
-			position = { x = 20 y = 100 }
+			position = { x = 20 y = 100000 }
 			maxWidth = 465
 			maxHeight = 220
 			format = left
