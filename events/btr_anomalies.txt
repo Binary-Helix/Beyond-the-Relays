@@ -1046,3 +1046,116 @@ ship_event = {
        }
     }
 }
+
+ship_event = {
+    id = btr_anomaly.34
+    title = "btr_anomaly.34.name"
+    desc = "btr_anomaly.34.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.34.a
+        #TODO Spawn firewalker Corang digsite
+    }
+    option = {
+        name = btr_anomaly.34.b
+        trigger = {
+            owner = {
+                has_origin = illuminated_pri_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 40
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.35
+    title = "btr_anomaly.35.name"
+    desc = "btr_anomaly.35.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.35.a
+        FROM = {
+            add_deposit = d_physics_3
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.36
+    title = "btr_anomaly.36.name"
+    desc = "btr_anomaly.36.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.36.a
+        #TODO spawn digsite for Vecchio
+    }
+    option = {
+        name = btr_anomaly.36.b
+        trigger = {
+            owner = {
+                OR = {
+                    has_origin = salarian_uni_origin
+                    has_origin = asari_rep_origin
+                    has_origin = turian_hier_origin
+                }
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier3researchreward
+                min = @tier3unitymin
+                max = @tier3researchmax
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = @tier3unityreward
+                min = @tier3unitymin
+                max = @tier3unitymax
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 50
+            }
+        }
+    }
+}

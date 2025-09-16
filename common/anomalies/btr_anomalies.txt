@@ -562,3 +562,54 @@ PULLED_APART = {
         }
     }
 }
+
+SMOG_WORLD = {
+    desc = smog_world_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Corang, Verr, Hawking Eta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.34
+        }
+    }
+}
+
+STORM_TWINS = {
+    desc = storm_twins_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Serao, Verr, Hawking Eta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.35
+        }
+    }
+}
+
+SHALLOW_GRAVES = {
+    desc = shallow_graves_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on vecchio, Aquila, Ismar Frontier
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.36
+        }
+    }
+}
