@@ -1306,3 +1306,225 @@ ship_event = {
         }
     }
 }
+
+ship_event = {
+    id = btr_anomaly.40
+    title = "btr_anomaly.40.name"
+    desc = "btr_anomaly.40.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.40.a
+        trigger = {
+            owner  = {
+                OR = {
+                    has_origin = citadel_council_origin
+                    has_origin = geth_con_origin
+                    has_origin = raloi_rep_origin
+                    has_origin = sedriicae_col_origin
+                    has_origin = remnants_rak_origin
+                    has_origin = caleston_dir_origin
+                    has_origin = illium_cor_origin
+                    has_origin = migrant_fle_origin
+                    has_origin = illuminated_pri_origin
+                    has_origin = vol_pro_origin
+                    has_origin = courts_dek_origin
+                    has_origin = systems_all_origin
+                    has_origin = turian_hier_origin
+                    has_origin = salarian_uni_origin
+                    has_origin = asari_rep_origin
+                }
+            }
+        }
+        leader = {
+            add_experience = 200
+        }
+    }
+    option = {
+        name = btr_anomaly.40.b
+        trigger = {
+            owner = {
+                OR = {
+                    has_origin = hegemony_kha_origin
+                    has_origin = aralakh_kah_origin
+                    has_origin = cerberus_emp_origin
+                    has_origin = omega_emp_origin
+                    has_origin = vorcha_cla_origin
+                    has_origin = lystheni_ord_origin
+                    has_origin = gothones_rem_origin
+                    has_origin = parnack_reg_origin
+                    has_origin = disciples_naz_origin
+                    has_origin = rachni_hiv_origin
+                    has_origin = collectors_emp_origin
+                }
+            }
+        }
+        leader = {
+            add_experience = 200
+        }
+    }
+    option = {
+        name = btr_anomaly.40.c
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.41
+    title = "btr_anomaly.41.name"
+    desc = "btr_anomaly.41.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.41.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+    option = {
+        name = btr_anomaly.41.b
+        trigger = {
+            owner = {
+                has_origin = illuminated_pri_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.42
+    title = "btr_anomaly.42.name"
+    desc = "btr_anomaly.42.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.42.a
+        FROM = {
+            add_deposit = d_society_3
+        }
+    }
+    option = {
+        name = btr_anomaly.42.b
+        trigger = {
+            owner = {
+                has_origin = vorcha_cla_origin
+            }
+        }
+        FROM = {
+            add_deposit = d_society_3
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.43
+    title = "btr_anomaly.43.name"
+    desc = "btr_anomaly.43.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.43.a
+        leader = {
+            add_trait = leader_trait_expertise_industry
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.44
+    title = "btr_anomaly.44.name"
+    desc = "btr_anomaly.44.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.44.a
+        FROM = {
+            add_modifier = {
+                modifier = terraforming_candidate
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.45
+    title = btr_anomaly.45.name
+    desc = btr_anomaly.45.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+        from = {
+            clear_planet_modifiers = yes
+            change_pc = pc_barren
+            reset_planet = yes
+            change_planet_size = 25
+        }
+    }
+
+    option = {
+        name = btr_anomaly.45.a
+        custom_tooltip = anomaly.240.a.tooltip
+        leader = {
+            add_experience = 200
+        }
+    }
+}

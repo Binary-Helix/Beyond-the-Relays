@@ -664,3 +664,105 @@ ZEONA = {
         }
     }
 }
+
+ODASST = {
+    desc = odasst_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on odasst, Elystra, Ismar Frontier
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.40
+        }
+    }
+}
+
+PROTHEAN_PILFERING = {
+    desc = prothean_pilfering_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on hesano, Elystra, Ismar Frontier
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.41
+        }
+    }
+}
+
+GREEN_FLAMES = {
+    desc = green_flames_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on zorya, faia, Ismar Frontier
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.42
+        }
+    }
+}
+
+BALL_OF_ICE = {
+    desc = ball_of_ice_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on vintael, faia, Ismar Frontier
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.43
+        }
+    }
+}
+
+MATOL = {
+    desc = matol_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on matol, herschel, kepler verge
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.44
+        }
+    }
+}
+
+DECEPTIVE_GIANT = {
+    desc = deceptive_giant_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on clungon, herschel, kepler verge
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.45
+        }
+    }
+}
