@@ -1159,3 +1159,150 @@ ship_event = {
         }
     }
 }
+
+ship_event = {
+    id = btr_anomaly.37
+    title = "btr_anomaly.37.name"
+    desc = "btr_anomaly.37.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.37.a
+        #TODO spawn digsite for Vecchio
+    }
+    option = {
+        name = btr_anomaly.36.b
+        leader = {
+            add_experience = 200
+        }
+    }
+    option = {
+        name = btr_anomaly.37.b
+        trigger = {
+            owner = {
+                has_origin = courts_dek_origin
+            }
+        }
+        FROM = {
+            add_modifier = { modifier = terraforming_candidate }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+    option = {
+        name = btr_anomaly.37.c
+        trigger = {
+            owner = {
+                has_origin = vorcha_cla_origin
+            }
+        }
+        FROMFROM = {
+            save_event_target_as = target_system
+        }
+        FROM = {
+            save_event_target_as = target_planet
+        }
+        event_target:target_planet = {
+            planet = {
+                create_colony = {
+                    owner = root
+                    species = root.owner_main_species
+                    ethos = owner
+                }
+            }
+        }
+        while = {
+            count = 300
+            event_target:target_planet = {
+                planet = {
+                    create_pop = {
+                        species = root.owner_main_species
+                        ethos = owner
+                    }
+                    add_building = building_colony_shelter
+                }
+            }
+        }
+        event_target:target_system = {
+            If = {
+                limit = {
+                    exists = owner
+                }
+                owner = {
+                    add_opinion_modifier = {
+                        who = root
+                        modifier = opinion_insult
+                        days = 1800
+                    }
+                }
+            }
+            set_owner = root
+            set_surveyed = {
+                surveyed = yes
+                surveyor = root
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.38
+    title = "btr_anomaly.38.name"
+    desc = "btr_anomaly.38.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.38.a
+        leader = {
+            add_experience = 200
+        }
+    }
+    option = {
+        name = btr_anomaly.38.b
+        leader = {
+            add_experience = 200
+            add_trait = leader_trait_carefree
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.39
+    title = "btr_anomaly.39.name"
+    desc = "btr_anomaly.39.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.39.a
+        FROM = {
+            add_deposit = d_engineering_3
+        }
+    }
+}

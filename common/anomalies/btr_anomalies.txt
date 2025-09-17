@@ -613,3 +613,54 @@ SHALLOW_GRAVES = {
         }
     }
 }
+
+SUPER_FROZNE = {
+    desc = super_frozen_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on volturno, Aquila, Ismar Frontier
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.37
+        }
+    }
+}
+
+EEZO_FRAUD = {
+    desc = eezo_fraud_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on pollino, Aquila, Ismar Frontier
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.38
+        }
+    }
+}
+
+ZEONA = {
+    desc = zeona_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on zeona, Elystra, Ismar Frontier
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.39
+        }
+    }
+}
