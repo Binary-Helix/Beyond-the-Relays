@@ -766,3 +766,105 @@ DECEPTIVE_GIANT = {
         }
     }
 }
+
+BACKSPRAY = {
+    desc = backspray_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on sesmose, newton, kepler verge
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.46
+        }
+    }
+}
+
+RAPID_GLASS = {
+    desc = rapid_glass_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on farnuri, caspain, maroon sea
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.47
+        }
+    }
+}
+
+ALMOST_PERFECT = {
+    desc = almost_perfect_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on almarcrux, caspain, maroon sea
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.48
+        }
+    }
+}
+
+KALEIDOSCOPE = {
+    desc = kaleidoscope_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on chasca, matano, maroon sea
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.49
+        }
+    }
+}
+
+SHAKING = {
+    desc = shaking_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on apo, matano, maroon sea
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.50
+        }
+    }
+}
+
+GIANT_GEM = {
+    desc = giant_gem_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on apo, illapa, maroon sea
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.51
+        }
+    }
+}

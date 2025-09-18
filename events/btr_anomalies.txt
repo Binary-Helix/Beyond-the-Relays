@@ -1528,3 +1528,227 @@ ship_event = {
         }
     }
 }
+
+ship_event = {
+    id = btr_anomaly.46
+    title = btr_anomaly.46.name
+    desc = btr_anomaly.46.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.46.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.47
+    title = btr_anomaly.47.name
+    desc = btr_anomaly.47.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.47.a
+        #TODO spawn reaper bombardment related digsite on Farnuri
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.48
+    title = btr_anomaly.48.name
+    desc = btr_anomaly.48.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.48.a
+       FROM = {
+           add_modifier = { modifier = terraforming_candidate }
+       }
+    }
+    option = {
+        name = btr_anomaly.48.b
+        trigger = {
+            owner = {
+                has_origin = has_origin = asari_rep_origin
+            }
+        }
+        FROM = {
+            add_deposit = d_society_3
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 50
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.49
+    title = btr_anomaly.49.name
+    desc = btr_anomaly.49.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.49.a
+        #TODO spawn digsite on Chasca
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.50
+    title = btr_anomaly.50.name
+    desc = btr_anomaly.50.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.50.a
+        FROM = {
+            add_deposit = d_engineering_4
+            add_deposit = d_physics_2
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.51
+    title = btr_anomaly.51.name
+    desc = btr_anomaly.51.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.51.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_modifier = {
+                modifier = red_world_asari
+                days = 5400
+            }
+        }
+    }
+    option = {
+        name = btr_anomaly.51.b
+        trigger = {
+            owner = {
+                has_origin = asari_rep_origin
+            }
+        }
+        owner = {
+            add_modifier = {
+                modifier = red_world_asari
+                days = 5400
+            }
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+        leader = {
+            add_trait = leader_trait_erudite
+        }
+
+    }
+    option = {
+        name = btr_anomaly.51.c
+        trigger = {
+            owner = {
+                has_origin = salarian_uni_origin
+            }
+        }
+        owner = {
+            add_modifier = {
+                modifier = red_world_salarian
+                days = 3600
+            }
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
