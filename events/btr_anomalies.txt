@@ -1752,3 +1752,227 @@ ship_event = {
         }
     }
 }
+
+ship_event = {
+    id = btr_anomaly.52
+    title = btr_anomaly.52.name
+    desc = btr_anomaly.52.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.52.a
+        FROM = {
+            add_modifier = { modifier = btr_toxic_pollen }
+        }
+        leader = {
+            add_experience = 200
+            add_trait = leader_trait_expertise_new_worlds
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.53
+    title = btr_anomaly.53.name
+    desc = btr_anomaly.53.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.53.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+    option = {
+        name = btr_anomaly.53.b
+        trigger = {
+            owner = {
+                has_origin = aralakh_kah_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 50
+            }
+            add_modifier = {
+                modifier = rachni_visit
+                days = 5400
+            }
+        }
+    }
+    option = {
+        name = btr_anomaly.53.c
+        trigger = {
+            owner = {
+                has_origin = rachni_hiv_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 50
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.54
+    title = btr_anomaly.54.name
+    desc = btr_anomaly.54.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.54.a
+       owner = {
+       add_monthly_resource_mult = {
+           resource = physics_research
+           value = 1
+           min = 150
+           max = 500
+       }
+       }
+        leader = {
+            add_trait = leader_trait_expertise_voidcraft
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.55
+    title = btr_anomaly.55.name
+    desc = btr_anomaly.55.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.55.a
+        leader = {
+            add_trait = leader_trait_expertise_statecraft
+            add_experience = 200
+        }
+    }
+    option = {
+        name = btr_anomaly.55.b
+        trigger = {
+            owner = {
+                has_origin = rachni_hiv_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+        leader = {
+            add_trait = leader_trait_expertise_statecraft
+            add_experience = 200
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.56
+    title = btr_anomaly.56.name
+    desc = btr_anomaly.56.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.56.a
+        FROM = {
+            add_deposit = d_society_3
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.57
+    title = btr_anomaly.57.name
+    desc = btr_anomaly.57.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.57.a
+        leader = {
+            add_experience = 200
+        }
+    }
+}

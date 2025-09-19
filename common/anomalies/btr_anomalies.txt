@@ -868,3 +868,105 @@ GIANT_GEM = {
         }
     }
 }
+
+POLLEN_PAIN = {
+    desc = pollen_pain_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on nordacrux, vostok, maroon sea
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.52
+        }
+    }
+}
+
+OPERA_PHANTOM = {
+    desc = opera_phantom_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on suen, maskim xul, nimah cluster
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.53
+        }
+    }
+}
+
+ANCIENT_EEZO = {
+    desc = ancient_eezo_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on kashshaptu, maskim xul, nimah cluster
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.54
+        }
+    }
+}
+
+EXILE_POST = {
+    desc = exile_post_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on listening post x-19, maskim xul, nimah cluster
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.55
+        }
+    }
+}
+
+WIND_SWEPT = {
+    desc = wind_swept_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on uttuku, maskim xul, nimah cluster
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.56
+        }
+    }
+}
+
+DISAPPEARING_REFINERIES = {
+    desc = disappearing_refineries_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on keph, maskim xul, nimah cluster
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.57
+        }
+    }
+}
