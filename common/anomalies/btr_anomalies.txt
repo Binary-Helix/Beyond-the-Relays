@@ -970,3 +970,105 @@ DISAPPEARING_REFINERIES = {
         }
     }
 }
+
+BLUE_ROCKS = {
+    desc = blue_rocks_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on bannik, dakka, nubian expanse
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.58
+        }
+    }
+}
+
+VAULT22 = {
+    desc = vault22_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on pragia, dakka, nubian expanse
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.59
+        }
+    }
+}
+
+THALASSOPHOBIA = {
+    desc = thalassophobia_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on yamm, kalabsha, nubian expanse
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.60
+        }
+    }
+}
+
+STELLAR_LONELINESS = {
+    desc = stellar_loneliness_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on noresha, qertassi, nubian expanse
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.61
+        }
+    }
+}
+
+FINAL_FLAMES = {
+    desc = final_flames_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on 433 spidau, nx-2185, nubian expanse
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.62
+        }
+    }
+}
+
+QUIET_OUTPOST = {
+    desc = quiet_outpost_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on philae, debod, nubian expanse
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.63
+        }
+    }
+}
