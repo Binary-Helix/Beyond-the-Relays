@@ -1072,3 +1072,122 @@ QUIET_OUTPOST = {
         }
     }
 }
+
+DOWNED_SAT = {
+    desc = downed_sat_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on ageton, refuge, pangaea expanse
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.64
+        }
+    }
+}
+
+LAST_AND_LOST = {
+    desc = last_and_lost_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on ilos, refuge, pangaea expanse
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.65
+        }
+    }
+}
+
+BELTS = {
+    desc = belts_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on zafe, refuge, pangaea expanse
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.66
+        }
+    }
+}
+
+BUNKERS = {
+    desc = bunkers_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on siano, dirada, pylos nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.67
+        }
+    }
+}
+
+HOT_SPIN = {
+    desc = hot_spin_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on canalus, dirada, pylos nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.68
+        }
+    }
+}
+
+FROZEN_LOCKED = {
+    desc = frozen_locked_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on neidus, kriseroi, pylos nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.69
+        }
+    }
+}
+
+ICE_PAVED = {
+    desc = ice_paved_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on theonax, kriseroi, pylos nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.70
+        }
+    }
+}

@@ -2183,3 +2183,199 @@ ship_event = {
         }
     }
 }
+
+ship_event = {
+    id = btr_anomaly.64
+    title = btr_anomaly.64.name
+    desc = btr_anomaly.64.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.64.a
+        #TODO Add technology giving hothouse stations +1 district, possible add a digsite after ilos is finished
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.65
+    title = btr_anomaly.65.name
+    desc = btr_anomaly.65.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.65.a
+        #TODO add Ilos digsite
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 50
+            }
+        }
+    }
+    option = {
+        name = btr_anomaly.65.b
+        trigger = {
+            owner = {
+                has_origin = illuminated_pri_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 1500
+                max = 5000
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 50
+                max = 100
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.66
+    title = btr_anomaly.66.name
+    desc = btr_anomaly.66.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.66.a
+        #TODO Add a technology increasing the amount of helium-3 output, ideally it would be exclusive to stations but across the board isn't bad either
+        #TODO possibly add a digsite after ilos is surveyed
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.67
+    title = btr_anomaly.67.name
+    desc = btr_anomaly.67.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.67.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+        #TODO Spawn digsite for Siano
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.68
+    title = btr_anomaly.68.name
+    desc = btr_anomaly.68.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.68.a
+        FROM = {
+        remove_deposit = d_minerals_10 #TODO This is supposed to remove all mineral deposits
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+        leader = {
+            add_experience = 200
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.69
+    title = btr_anomaly.69.name
+    desc = btr_anomaly.69.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.69.a
+        FROM = {
+       add_deposit = d_society_3
+            add_deposit = d_engineering_2
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.70
+    title = btr_anomaly.70.name
+    desc = btr_anomaly.70.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.70.a
+        FROM = {
+            add_deposit = d_physics_4
+        }
+    }
+}
