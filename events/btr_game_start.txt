@@ -252,14 +252,14 @@ event = {
 }
 
 # Generate Starting Subclasses and Entities
-event = {
+planet_event = {
 	id = btr_game_start.3
 	hide_window = yes
 
 	is_triggered_only = yes
 
 	immediate = {
-		every_galaxy_planet = {
+		if = {
 			limit = {
 				is_capital = no
 				solar_system = { NOT = { has_star_flag = sol_system }}
