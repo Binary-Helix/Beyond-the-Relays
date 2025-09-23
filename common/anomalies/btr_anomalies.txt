@@ -1191,3 +1191,122 @@ ICE_PAVED = {
         }
     }
 }
+
+FROZN_PAST = {
+    desc = frozen_past_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on chithess, kriseroi, pylos nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.71
+        }
+    }
+}
+
+STRONG_MAGNET = {
+    desc = strong_magnet_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on isale, nariph, pylos nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.72
+        }
+    }
+}
+
+HOT_JUPITER = {
+    desc = hot_jupiter_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on rescel, satent, pylos nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.73
+        }
+    }
+}
+
+ICE_BANDITS = {
+    desc = ice_bandits_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on anedia, satent, pylos nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.74
+        }
+    }
+}
+
+VORCHA_FARM = {
+    desc = vorcha_farm_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on namakli, zaherin, pylos nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.75
+        }
+    }
+}
+
+ANCIENT_RESEARCH = {
+    desc = ancient_research_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on azrahas, zaherin, pylos nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.76
+        }
+    }
+}
+
+DERELICT_FUEL = {
+    desc = derelict_fuel_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on rostesk, zaheron, pylos nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.77
+        }
+    }
+}

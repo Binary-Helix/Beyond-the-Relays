@@ -2379,3 +2379,241 @@ ship_event = {
         }
     }
 }
+
+ship_event = {
+    id = btr_anomaly.71
+    title = btr_anomaly.71.name
+    desc = btr_anomaly.71.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.71.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.72
+    title = btr_anomaly.72.name
+    desc = btr_anomaly.72.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.72.a
+        FROM = {
+            add_deposit = d_physics_4
+        }
+        #TODO Add technology related to ME3 war asset for isale
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.73
+    title = btr_anomaly.73.name
+    desc = btr_anomaly.73.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.73.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.74
+    title = btr_anomaly.74.name
+    desc = btr_anomaly.74.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.74.a
+        leader = {
+            add_experience = 200
+            add_trait = leader_trait_expertise_voidcraft
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.75
+    title = btr_anomaly.75.name
+    desc = btr_anomaly.75.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.75.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+        leader = {
+            add_trait = leader_trait_expertise_statecraft
+        }
+    }
+    option = {
+        name = btr_anomaly.75.b
+        trigger = {
+            owner = {
+                has_origin = vorcha_cla_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 50
+            }
+        }
+        leader = {
+            add_trait = leader_trait_expertise_statecraft
+        }
+       #TODO The Vorcha take over the planet, ideally without any conquest penalties
+    }
+    option = {
+        name = btr_anomaly.75.c
+        trigger = {
+            owner = {
+                has_origin = asari_rep_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 50
+            }
+        }
+        leader = {
+            add_trait = leader_trait_expertise_statecraft
+        }
+        #TODO Have the planet be uplifted from pre-ftl into baby-ftl
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.76
+    title = btr_anomaly.76.name
+    desc = btr_anomaly.76.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.76.a
+        FROM = {
+            add_deposit = d_engineering_3
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.77
+    title = btr_anomaly.77.name
+    desc = btr_anomaly.77.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.77.a
+        leader = {
+            add_trait = leader_trait_expertise_propulsion
+            add_experience = 200
+        }
+    }
+}
