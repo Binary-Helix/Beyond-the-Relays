@@ -1310,3 +1310,88 @@ DERELICT_FUEL = {
         }
     }
 }
+
+WINDY_WORLD = {
+    desc = windy_world_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on jarfor, hoc, sentry omega
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.78
+        }
+    }
+}
+
+VIRMIRE = {
+    desc = VIRMIRE_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on vermire, hoc, sentry omega
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.79
+        }
+    }
+}
+
+A_MESSAGE = {
+    desc = a_message_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on prescyla, hoc, sentry omega
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.80
+        }
+    }
+}
+
+GEM_WORLD = {
+    desc = gem_world_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on sapfir, telith, sentry omega
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.81
+        }
+    }
+}
+
+SPINNING_GRAVES = {
+    desc = spinning_graves_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on prospect, lera, shadow sea
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.82
+        }
+    }
+}
