@@ -1395,3 +1395,108 @@ SPINNING_GRAVES = {
         }
     }
 }
+
+NEW_PARADISE = {
+    desc = new_paradise_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on horizon, lera, shadow sea
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.83
+        }
+    }
+}
+
+SHINING_WORLD = {
+    desc = shining_world_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on imaneya, acheron, styx theta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.84
+        }
+    }
+}
+
+HIGH_GROUND = {
+    desc = high_ground_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on nepmos, erebus, styx theta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.85
+        }
+    }
+}
+
+FAIRY_PATERNS = {
+    desc = fairy_paterns_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on quaji, erebus, styx theta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.86
+        }
+    }
+}
+
+FALSE_LIFE = {
+    desc = false_life_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on chofen, erebus, styx theta
+        }
+    }
+    on_success = {
+        15 = {
+            anomaly_event = btr_anomaly.87
+        }
+        85 = {
+            anomaly_event = btr_anomaly.88
+        }
+    }
+}
+
+HIDDEN_STAR = {
+    desc = hidden_star_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on timshar, timshar, styx theta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.89
+        }
+    }
+}

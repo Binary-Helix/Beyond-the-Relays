@@ -2786,3 +2786,188 @@ ship_event = {
         }
     }
 }
+ship_event = {
+    id = btr_anomaly.83
+    title = btr_anomaly.83.name
+    desc = btr_anomaly.83.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.83.a
+        trigger = {
+            owner = {
+                NOR = {
+                    has_origin = vol_pro_origin
+                    has_origin = turian_hier_origin
+                    has_origin = migrant_fle_origin
+                    has_origin = courts_dek_origin
+                }
+            }
+        }
+        leader = {
+            add_experience = 200
+            add_trait = leader_trait_expertise_new_worlds
+        }
+    }
+    option = {
+        name = btr_anomaly.83.b
+        trigger = {
+            owner = {
+                OR = {
+                    has_origin = vol_pro_origin
+                    has_origin = turian_hier_origin
+                    has_origin = migrant_fle_origin
+                    has_origin = courts_dek_origin
+                }
+            }
+        }
+        leader = {
+            add_experience = 200
+            add_trait = leader_trait_expertise_new_worlds
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.84
+    title = btr_anomaly.84.name
+    desc = btr_anomaly.84.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.84.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.85
+    title = btr_anomaly.85.name
+    desc = btr_anomaly.85.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.85.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.86
+    title = btr_anomaly.86.name
+    desc = btr_anomaly.86.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.86.a
+        leader = {
+            add_trait = leader_trait_paranoid
+            add_experience = 200
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.87
+    title = btr_anomaly.87.name
+    desc = btr_anomaly.87.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.87.a
+        FROM = {
+            add_deposit = d_society_3
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.88
+    title = btr_anomaly.88.name
+    desc = btr_anomaly.88.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.88.a
+        leader = {
+            add_experience = 200
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.89
+    title = btr_anomaly.89.name
+    desc = btr_anomaly.89.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.89.a
+        leader = {
+            add_experience = 200
+        }
+    }
+}
