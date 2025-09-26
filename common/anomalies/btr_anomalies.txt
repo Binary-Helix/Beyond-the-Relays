@@ -1500,3 +1500,105 @@ HIDDEN_STAR = {
         }
     }
 }
+
+LIGHTSHOW_RESEARCH = {
+    desc = lightshow_research_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on adounia e, timshar, styx theta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.90
+        }
+    }
+}
+
+DANGEROUS_PARADISE = {
+    desc = dangerous_paradise_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on mindoir, baldr, yggdrasil nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.91
+        }
+    }
+}
+
+LOW_G = {
+    desc = low_g_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on amar, fen, yggdrasil nebula
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.92
+        }
+    }
+}
+
+LOST_HOMES = {
+    desc = lost_homes_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on ket'osh, plenesh, hindara globular
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.93
+        }
+    }
+}
+
+SILENT_GRAVES = {
+    desc = silent_graves_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on sian, plenesh, hindara globular
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.94
+        }
+    }
+}
+
+RED_WIPE = {
+    desc = red_wipe_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on DH1993, SM2183 Rua, Arcturus System
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.95
+        }
+    }
+}
