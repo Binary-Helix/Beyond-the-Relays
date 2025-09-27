@@ -3323,3 +3323,196 @@ ship_event = {
         }
     }
 }
+
+ship_event = {
+    id = btr_anomaly.96
+    title = btr_anomaly.96.name
+    desc = btr_anomaly.96.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.96.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.97
+    title = btr_anomaly.97.name
+    desc = btr_anomaly.97.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.97.a
+        #TODO Spawn DC1938 digsite to be written
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.98
+    title = btr_anomaly.98.name
+    desc = btr_anomaly.98.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.98.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.99
+    title = btr_anomaly.99.name
+    desc = btr_anomaly.99.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.99.a
+        FROM = {
+            add_deposit = d_physics_3
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.100
+    title = btr_anomaly.100.name
+    desc = btr_anomaly.100.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.100.a
+        FROM = {
+            add_deposit = d_society_3
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.101
+    title = btr_anomaly.101.name
+    desc = btr_anomaly.101.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.101.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+    option = {
+        name = btr_anomaly.101.b
+        trigger = {
+            owner = {
+                has_origin = aralakh_kah_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1000
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 50
+            }
+        }
+    }
+    option = {
+        name = btr_anomaly.101.c
+        trigger = {
+            owner = {
+                has_origin = turian_hier_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 50
+            }
+            add_modifier = {
+                modifier = resolute_resolve
+                days = 5400
+            }
+        }
+    }
+}

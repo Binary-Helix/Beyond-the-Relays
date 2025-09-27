@@ -1602,3 +1602,105 @@ RED_WIPE = {
         }
     }
 }
+
+WRONG_MINERALS = {
+    desc = wrong_minerals_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on L/2183, SM2183 Rua, Arcturus System
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.96
+        }
+    }
+}
+
+SHATTERED_WORLD = {
+    desc = shattered_world_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on DC1938, SM2183 Rua, Arcturus System
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.97
+        }
+    }
+}
+
+GHOST_MINING = {
+    desc = ghost_mining_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on MV1963, SM2183 Rua, Arcturus System
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.98
+        }
+    }
+}
+
+MASSIVE_COMMET = {
+    desc = massive_commet_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Vectra, Gorgor, Argos Rho
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.99
+        }
+    }
+}
+
+MOLE_MEN = {
+    desc = mole_men_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Varmalus, hydra, Argos Rho
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.100
+        }
+    }
+}
+
+WOMEN_WARRIOR = {
+    desc = women_warrior_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on canrum, hydra, Argos Rho
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.101
+        }
+    }
+}
