@@ -1,0 +1,143 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+
+	# Asari
+
+	bte_asari_1 = {
+		entity = "portrait_bte_asari_02_entity"
+		clothes_selector = "btr_asari_outfit"
+		attachment_selector = "btr_asari_hair_1"
+		greeting_sound = "bta_asari_greeting"
+
+		character_textures = {
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_dark_blue_01.dds"
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_dark_blue_02.dds"
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_dark_blue_03.dds"
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_dark_blue_04.dds"
+		}
+
+		custom_attachment_label = "FACE_PAINT"
+	}
+
+	bte_asari_2 = {
+		entity = "portrait_bte_asari_02_entity"
+		clothes_selector = "btr_asari_outfit"
+		attachment_selector = "btr_asari_hair_2"
+		greeting_sound = "bta_asari_greeting"
+
+		character_textures = {
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_dark_purple_01.dds"
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_dark_purple_02.dds"
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_dark_purple_03.dds"
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_dark_purple_04.dds"
+		}
+
+		custom_attachment_label = "FACE_PAINT"
+	}
+
+	bte_asari_3 = {
+		entity = "portrait_bte_asari_02_entity"
+		clothes_selector = "btr_asari_outfit"
+		attachment_selector = "btr_asari_hair_3"
+		greeting_sound = "bta_asari_greeting"
+
+		character_textures = {
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_light_blue_01.dds"
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_light_blue_02.dds"
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_light_blue_03.dds"
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_light_blue_04.dds"
+		}
+
+		custom_attachment_label = "FACE_PAINT"
+	}
+
+	bte_asari_4 = {
+		entity = "portrait_bte_asari_02_entity"
+		clothes_selector = "btr_asari_outfit"
+		attachment_selector = "btr_asari_hair_4"
+		greeting_sound = "bta_asari_greeting"
+
+		character_textures = {
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_light_purple_01.dds"
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_light_purple_02.dds"
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_light_purple_03.dds"
+			"gfx/models/portraits/bte_asari_02/bte_asari_02_light_purple_04.dds"
+		}
+
+		custom_attachment_label = "FACE_PAINT"
+	}
+}
+
+portrait_groups = {
+	bte_asari = {
+		default = bte_asari_1
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					bte_asari_1	#dark blue
+					bte_asari_2	#dark purple
+					bte_asari_3	#light blue
+					bte_asari_4	#light purple
+				}
+			}
+		}
+
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					bte_asari_1	#dark blue
+					bte_asari_2	#dark purple
+					bte_asari_3	#light blue
+					bte_asari_4	#light purple
+				}
+			}
+		}
+
+		#pop scope
+		pop_group = { #for a specific pop
+			add = {
+				portraits = {
+					bte_asari_1	#dark blue
+					bte_asari_2	#dark purple
+					bte_asari_3	#light blue
+					bte_asari_4	#light purple
+				}
+			}
+		}
+
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				portraits = {
+					bte_asari_1	#dark blue
+					bte_asari_2	#dark purple
+					bte_asari_3	#light blue
+					bte_asari_4	#light purple
+				}
+			}
+		}
+
+
+		#leader scope
+		ruler = {
+			add = {
+				portraits = {
+					bte_asari_1	#dark blue
+					bte_asari_2	#dark purple
+					bte_asari_3	#light blue
+					bte_asari_4	#light purple
+				}
+			}
+		}
+	}
+}
