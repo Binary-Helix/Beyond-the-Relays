@@ -1704,3 +1704,122 @@ WOMEN_WARRIOR = {
         }
     }
 }
+
+HOT_GARDEN = {
+    desc = hot_garden_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on intai'sei, phoenix, Argos Rho
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.102
+        }
+    }
+}
+
+CRASH_SPILL = {
+    desc = crash_spill_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on vebinok, phoenix, Argos Rho
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.103
+        }
+    }
+}
+
+MOLTEN_CRUST = {
+    desc = molten_crust_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on salamis, Athens, artemis tau
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.104
+        }
+    }
+}
+
+HUMIDIFIER = {
+    desc = humidifier_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on proteus, Athens, artemis tau
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.105
+        }
+    }
+}
+
+LOST_TROVE = {
+    desc = lost_trove_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on therum, knossos, artemis tau
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.106
+        }
+    }
+}
+
+CRYPTIC_MAZE = {
+    desc = cyrptic_maze_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on zakros, knossos, artemis tau
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.107
+        }
+    }
+}
+
+SILICA_LIFE = {
+    desc = silica_life_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on sharjila, macedon, artemis tau
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.108
+        }
+    }
+}
