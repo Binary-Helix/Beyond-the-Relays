@@ -3748,9 +3748,9 @@ ship_event = {
 }
 
 ship_event = {
-    id = btr_anomaly.107
-    title = btr_anomaly.107.name
-    desc = btr_anomaly.107.desc
+    id = btr_anomaly.108
+    title = btr_anomaly.108.name
+    desc = btr_anomaly.108.desc
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3761,9 +3761,223 @@ ship_event = {
     }
 
     option = {
-        name = btr_anomaly.107.a
+        name = btr_anomaly.108.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.109
+    title = btr_anomaly.109.name
+    desc = btr_anomaly.109.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.109.a
         FROM = {
             add_deposit = d_society_3
+        }
+    }
+    option = {
+        name = btr_anomaly.109.b
+        trigger = {
+            owner = {
+                has_origin = vol_pro_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value =  1
+                min = 25
+                max = 50
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.110
+    title = btr_anomaly.110.name
+    desc = btr_anomaly.110.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.110.a
+        #TODO spawn Altaaya digsite to be written
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.111
+    title = btr_anomaly.111.name
+    desc = btr_anomaly.111.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.111.a
+        FROM = {
+            add_deposit = d_physics_3
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.112
+    title = btr_anomaly.112.name
+    desc = btr_anomaly.112.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.112.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.113
+    title = btr_anomaly.113.name
+    desc = btr_anomaly.113.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.113.a
+        FROM = {
+            add_deposit = d_society_4
+        }
+        leader = {
+            add_trait = leader_trait_expertise_new_worlds
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.114
+    title = btr_anomaly.114.name
+    desc = btr_anomaly.114.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.114.a
+        FROM = {
+            add_deposit = d_physics_2
+            add_deposit = d_engineering_2
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.115
+    title = btr_anomaly.115.name
+    desc = btr_anomaly.115.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.115.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+        }
+    }
+    option = {
+        name = btr_anomaly.115.b
+        trigger = {
+            owner = {
+                has_origin = illuminated_pri_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 1500
+                max = 3000
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 50
+                max = 100
+            }
         }
     }
 }

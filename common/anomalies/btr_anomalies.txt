@@ -1823,3 +1823,122 @@ SILICA_LIFE = {
         }
     }
 }
+
+Ammonia_AIR = {
+    desc = ammonia_air_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on patavig, macedon, artemis tau
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.109
+        }
+    }
+}
+
+LOST_ATMOSPHERE = {
+    desc = lost_atmosphere_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on altaaya, sparta, artemis tau
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.110
+        }
+    }
+}
+
+CROWDED_SPACE = {
+    desc = crowded_space_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on ontamalca, sparta, artemis tau
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.111
+        }
+    }
+}
+
+CAVE_LIFE = {
+    desc = cave_life_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Syided, Hercules, Attica Beta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.112
+        }
+    }
+}
+
+DEATH_BREATH = {
+    desc = death_breath_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on Eletania, Hercules, Attica Beta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.113
+        }
+    }
+}
+
+ALL_THAT_GLISTENS = {
+    desc = all_that_glistens_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on sytau, theseus, Attica Beta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.114
+        }
+    }
+}
+
+FEROS = {
+    desc = feros_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on feros, theseus, Attica Beta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.115
+        }
+    }
+}
