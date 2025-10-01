@@ -1942,3 +1942,122 @@ FEROS = {
         }
     }
 }
+
+OLD_FUEL = {
+    desc = old_fuel_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on sharring, theseus, Attica Beta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.116
+        }
+    }
+}
+
+GHOST_MINES = {
+    desc = ghost_mines_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on quana, theseus, Attica Beta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.117
+        }
+    }
+}
+
+BLOOPS = {
+    desc = bloops_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on logan, theseus, Attica Beta
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.118
+        }
+    }
+}
+
+THE_START = {
+    desc = the_Start_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on eden prime, utopia, exodus cluster
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.119
+        }
+    }
+}
+
+PLANETARY_STATIC = {
+    desc = planetary_static_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on huningto, Han, Gemini Sigma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.120
+        }
+    }
+}
+
+PARALLEL_LIFE = {
+    desc = parallel_life_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on mavingon, han, gemini sigma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.121
+        }
+    }
+}
+
+LIFE_SIZED = {
+    desc = life_sized_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on farcrothu c, han, gemini sigma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.122
+        }
+    }
+}
