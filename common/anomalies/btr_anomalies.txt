@@ -2061,3 +2061,122 @@ LIFE_SIZED = {
         }
     }
 }
+
+NO_AIR = {
+    desc = no_air_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on patatanlis, han, gemini sigma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.123
+        }
+    }
+}
+
+GLOW_BALL = {
+    desc = glow_ball_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on antiroprus, han, gemini sigma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.124
+        }
+    }
+}
+
+BIG_BRAIN = {
+    desc = big_brain_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on ploba, antaeus, Hades Gamma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.125
+        }
+    }
+}
+
+WATER_BOY = {
+    desc = water_boy_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on trebin, antaeus, Hades Gamma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.126
+        }
+    }
+}
+
+SMOOTH_WORLD = {
+    desc = smooth_world_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on hunidor, antaeus, Hades Gamma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.127
+        }
+    }
+}
+
+ALL_OF_THE_LIGHTS = {
+    desc = all_of_the_lights_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on zayarter, cacus, Hades Gamma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.128
+        }
+    }
+}
+
+FAMILY_THERMOSTAT = {
+    desc = family_thermostat_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on cohe, cacus, Hades Gamma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.129
+        }
+    }
+}
