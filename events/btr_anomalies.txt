@@ -4327,3 +4327,200 @@ ship_event = {
         }
     }
 }
+
+ship_event = {
+    id = btr_anomaly.130
+    title = btr_anomaly.130.name
+    desc = btr_anomaly.130.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.130.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+    option = {
+        name = btr_anomaly.130.b
+        trigger = {
+            owner = {
+                has_origin = hegemony_kha_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 50
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.131
+    title = btr_anomaly.131.name
+    desc = btr_anomaly.131.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.131.a
+        leader = {
+            add_experience = 200
+        }
+    }
+    option = {
+        name = btr_anomaly.131.b
+        trigger = {
+            owner = {
+                has_origin = systems_all_origin
+            }
+        }
+        leader = {
+            add_experience = 200
+            add_trait = leader_trait_expertise_statecraft
+        }
+    }
+    option = {
+        name = btr_anomaly.131.c
+        trigger = {
+            owner = {
+                has_origin = hegemony_kha_origin
+            }
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = trade
+                value = @tier4materialreward
+                min = @tier4materialmin
+                max = @tier4materialmax
+            }
+        }
+        leader = {
+            add_experience = 200
+            add_trait = leader_trait_expertise_statecraft
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.132
+    title = btr_anomaly.132.name
+    desc = btr_anomaly.132.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.132.a
+        FROM = {
+            add_deposit = d_society_3
+            add_deposit = d_engineering_3
+        }
+    }
+    option = {
+        name = btr_anomaly.132.b
+        trigger = {
+            owner = {
+                has_origin = vol_pro_origin
+            }
+        }
+        FROM = {
+            add_deposit = d_society_3
+            add_deposit = d_engineering_3
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = 1
+                min = 500
+                max = 1500
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = 1
+                min = 25
+                max = 50
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.133
+    title = btr_anomaly.133.name
+    desc = btr_anomaly.133.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.133.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = 1
+                min = 150
+                max = 500
+            }
+        }
+    }
+}
+
+ship_event = {
+    id = btr_anomaly.134
+    title = btr_anomaly.134.name
+    desc = btr_anomaly.134.desc
+    picture = GFX_evt_warm_barren
+    show_sound = event_mystic_reveal
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.134.a
+        leader = {
+            add_trait = leader_trait_expertise_materials
+        }
+        #TODO Possibly add an eezo deposit based on the localization? Probably a size 1.
+    }
+}

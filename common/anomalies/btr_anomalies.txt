@@ -2180,3 +2180,88 @@ FAMILY_THERMOSTAT = {
         }
     }
 }
+
+SPOOKY_SQUID = {
+    desc = spooky_squid_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on jartar, dis, Hades Gamma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.130
+        }
+    }
+}
+
+FOOLS_GOLD = {
+    desc = fools_gold_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on klensal, dis, Hades Gamma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.131
+        }
+    }
+}
+
+FOUL_WATERS = {
+    desc = foul_waters_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on gremar, dis, Hades Gamma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.132
+        }
+    }
+}
+
+HIDDEN_MOONS = {
+    desc = hidden_moons_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on tunshagon, farinata, Hades Gamma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.133
+        }
+    }
+}
+
+BLUE_LAVA = {
+    desc = blue_lava_desc
+    picture = #TODO
+    level = 1
+
+    spawn_chance = {
+        modifier = {
+            #TODO Make this spawn only on nonuel, plutus, Hades Gamma
+        }
+    }
+    on_success = {
+        1 = {
+            anomaly_event = btr_anomaly.134
+        }
+    }
+}
