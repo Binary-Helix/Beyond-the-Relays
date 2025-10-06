@@ -1,289 +1,179 @@
 # This is a template which multiple species can use.
 
 bte_asari_02_clothes_01 = {
-    default = "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"
+    default = "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds"
 
     game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
-        default = "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"
+        default = "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds"
     }
 
     #species scope
     species = { #generic portrait for a species
-        default = "gfx/models/portraits/bte_asari_02/bte_asari_02_civilian_02.dds"
+        default = "gfx/models/portraits/bte_asari_02/bte_asari_02_civilian.dds"
     }
 
     #pop scope
     pop_group = { #for a specific pop
-		random = {
-			trigger = { always = no }
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_civilian_01.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_civilian_02.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_01.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_scientist.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_general.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_admiral.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_soldier.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_soldier_2.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_soldier_helmeted.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_soldier_2_helmeted.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_entertainer.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_slave.dds"
-			}
-		}
-		
-		random = {
-			trigger = {
-				exists = owner
-				owner = {
-					is_pleasure_seeker_empire = yes
-				}
-				OR = {
-					is_pop_category = specialist
-					is_pop_category = specialist_unemployment
-					is_pop_category = dystopian_specialist
-					is_pop_category = worker
-					is_pop_category = worker_unemployment
-				}
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_entertainer.dds"
-			}
-		}	
-		
-		random = {
-			trigger = {
-				is_pop_category = civilian
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_civilian_01.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_civilian_02.dds"
-			}
-		}	
+        default = "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"
 
-		random = {
-			trigger = {
-				is_pop_category = slave
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_entertainer.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_slave.dds"
-			}
-		}			
+        random = {
+            trigger = { always = no }
+            list = {
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_01.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_03.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_04.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_05.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_envoy_01.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_envoy_02.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_envoy_03.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_admiral.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_soldier.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_soldier_helmeted.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_general.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_soldier_2.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_soldier_2_helmeted.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_researcher.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_scientist.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_civilian.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_worker.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_slave.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_entertainer.dds"
+            }
+        }
+
+        "gfx/models/portraits/bte_asari_02/bte_asari_02_slave.dds" = {
+            is_pop_category = slave
+        }
+
+        "gfx/models/portraits/bte_asari_02/bte_asari_02_civilian.dds" = {
+            is_pop_category = civilian
+        }
+
+        "gfx/models/portraits/bte_asari_02/bte_asari_02_worker.dds" = {
+            is_pop_category = worker
+        }
+
+        "gfx/models/portraits/bte_asari_02/bte_asari_02_scientist.dds" 	= {
+            is_pop_category = specialist
+        }
+        "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds" 	= {
+            is_pop_category = ruler
+        }
+
+        random = {
+            trigger = { is_pop_category = slave  }
+            list = {
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_slave.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_entertainer.dds"
+            }
+        }
     }
-	
+
+
+
     #leader scope
-    leader = { #scientists, generals, admirals, governor
-		
-		random = {
-			trigger = {
-				leader_class = envoy
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_civilian_01.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_civilian_02.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_01.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"
-			}
-		}
+    leader = {
+        #scientists, generals, admirals, governor
+        random = {
+            trigger = { leader_class = envoy }
+            list = {
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_envoy_01.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_envoy_02.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_envoy_03.dds"
+            }
+        }
 
-		random = {
-			trigger = {
-				leader_class = commander
-				leader_should_wear_general_uniform = no
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_admiral.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_soldier.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_soldier_helmeted.dds"					
-			}
-		}		
-		
-		random = {
-			trigger = {
-				leader_class = commander
-				leader_should_wear_general_uniform = yes
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_general.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_soldier_2_helmeted.dds"	
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_soldier_2.dds"		
-			}
-		}
+        random = {
+            trigger = {
+                has_total_skill >= 7
+                leader_class = commander
+                leader_should_wear_general_uniform = no
+            }
+            list = {
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_soldier_helmeted.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_soldier.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_admiral.dds"
+            }
+        }
 
-		random = {
-			trigger = {
-				leader_class = scientist
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_scientist.dds"			
-			}
-		}
+        random = {
+            trigger = {
+                leader_class = commander
+                leader_should_wear_general_uniform = yes
+            }
+            list = {
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_soldier_2_helmeted.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_soldier_2.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_general.dds"
+            }
+        }
 
-		random = {
-			trigger = {
-				leader_class = official
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_01.dds"	
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"					
-			}
-		}		
+        random = {
+            trigger = {
+                leader_class = scientist
+            }
+            list = {
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_scientist.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_researcher.dds"
+            }
+        }
+
+        random = {
+            trigger = { leader_class = official }
+            list = {
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_01.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_03.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_04.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_05.dds"
+            }
+        }
     }
 
     #leader scope
     ruler = { #for rulers
-        default = "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"
-		
-		# Dictatorship
-		random = {
-			trigger = { 
-				owner = { has_authority = auth_dictatorial }
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_01.dds"			
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"
-			}
-		}
-		
-		# Oligarchy
-		random = {
-			trigger = { 
-				owner = { has_authority = auth_oligarchic }
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_01.dds"			
-			}
-		}
-		 
-		 # Democracy
-		random = {
-			trigger = { 
-				owner = { has_authority = auth_democratic }
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_01.dds"			
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"	
-			}
-		}
-		
-		# Monarchy
-		random = {
-			trigger = { 
-				owner = { has_authority = auth_imperial }
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_01.dds"			
-			}
-		}
-		
-		# Criminal Syndicate
-		random = {
-			trigger = { 
-				owner = { is_criminal_syndicate = yes }
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"
-			}
-		}
-		
-		# Megacorporation
-		random = {
-			trigger = { 
-				owner = { is_megacorp = yes }
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"
-			}
-		}
+        default = "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds"
 
-		# NPC COUNTRIES
-						
-		# Fallen Empire
-		random = {
-			trigger = { 
-				or = {
-					owner = { is_fallen_empire = yes }
-					always = no
-				}
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_01.dds"			
-			}
-		}
-		
-		# Artist Enclaves
-		random = {
-			trigger = {
-				owner = { has_government = gov_artist_enclave }
-				or = {
-					owner = { is_country_type = enclave }
-					always = no
-				}
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_01.dds"			
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"
-			}
-		}
-		
-		# Militant Enclaves
-		random = {
-			trigger = {
-				or = {
-					owner = { is_country_type = enclave_mercenary }
-					owner = { is_country_type = gdf }
-					owner = { is_country_type = sentinels }
-				}
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_01.dds"			
-			}
-		}
-		
-		# Other Enclaves
-		random = {
-			trigger = {
-				or = {
-					owner = { is_country_type = enclave }
-					always = no
-				}
-			}
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"
-			}
-		}
-	}
+        "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds" = { owner = { has_generic_government = yes NOT = { has_authority = auth_imperial } } }
+        "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds" = { owner = { has_militarist_government = yes NOT = { has_authority = auth_imperial } } }
+        "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds" = { owner = { has_spiritualist_government = yes NOT = { has_authority = auth_imperial } } }
+        "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds" = { owner = { has_pacifist_government = yes NOT = { has_authority = auth_imperial } } }
+        "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds" = { owner = { has_primitive_government = yes  NOT = { has_authority = auth_imperial } } }
+        "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds" = { owner = { has_materialist_government = yes NOT = { has_authority = auth_imperial } } }
+        "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds" = { owner = { has_authority = auth_imperial } }
+    }
 }
+
 
 btr_asari_facepaint_1 = {
     default = "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_3.dds"
 
     game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
-            default = "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_3.dds"
+        default = "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_3.dds"
+    }
+
+    #species scope
+    species = { #generic portrait for a species
+        default = "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_white_1.dds"
+    }
+
+    #pop scope
+    pop_group = { #for a specific pop
+        default = "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_white_3.dds"
+
+        random = {
+            list = {
+                "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_none.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_white_1.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_2.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_3.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_white_2.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_white_3.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_4.dds"
+                "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_5.dds"
+            }
         }
-
-	#species scope
-	species = { #generic portrait for a species
-		default = "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_white_1.dds"
-	}
-
-	#pop scope
-	pop = { #for a specific pop
-
-		default = "gfx/models/portraits/bte_asari_02/bte_asari_facepaint_white_3.dds"
-
-		random = {
-			list = {
-				"gfx/models/portraits/bte_asari_02/bte_asari_facepaint_white_1.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_facepaint_2.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_facepaint_3.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_facepaint_white_2.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_facepaint_white_3.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_facepaint_4.dds"
-				"gfx/models/portraits/bte_asari_02/bte_asari_facepaint_5.dds"
-			}
-		}
-	}
+    }
 }
