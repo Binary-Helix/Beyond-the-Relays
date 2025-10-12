@@ -9216,11 +9216,17 @@ sys_pamyat_init = {
     }
 
 	planet = {
-		count = { min = 1 max = 4 }
+		count = { min = 1 max = 3 }
 		class = pc_asteroid
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
 	}
+    planet = {
+        class = pc_asteroid
+        orbit_distance = 0
+        orbit_angle = { min = 90 max = 270 }
+        flags = { pamyat_belt }
+    }
 }
 
 sys_sheol_init = {
@@ -10674,11 +10680,17 @@ sys_maskimxul_init = {
     }
 
 	planet = {
-		count = { min = 1 max = 4 }
+		count = { min = 1 max = 3 }
 		class = pc_asteroid
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
 	}
+    planet = {
+        class = pc_asteroid
+        orbit_distance = 0
+        orbit_angle = { min = 90 max = 270 }
+        flags = { listening_post_x_19_planet }
+    }
 
     planet = {
         name = "Kashshaptu"
