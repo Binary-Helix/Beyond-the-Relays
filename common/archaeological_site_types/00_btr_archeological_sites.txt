@@ -465,3 +465,48 @@ btr_archeology_aritificial_gladiation = {
         }
     }
 }
+
+btr_archeology_the_scoop = {
+    desc = btr_archeology_the_scoop_desc
+    picture = #TODO
+    stages = 6
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+    }
+    visible = {
+        default_site_visible_trigger = yes
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_archeology_aritificial_gladiation.2
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_archeology_aritificial_gladiation.3
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_archeology_aritificial_gladiation.4
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_archeology_aritificial_gladiation.5
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_archeology_aritificial_gladiation.6
+    }
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
