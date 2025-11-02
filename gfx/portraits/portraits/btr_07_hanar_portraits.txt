@@ -1,13 +1,23 @@
 
 portraits = {
-	btr_hanar = {	entity = "portrait_fungoid_12_entity"	clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "bta_hanar_greeting"	
+	btr_hanar = {	entity = "portrait_hanar_01_entity"	clothes_selector = "no_texture" attachment_selector = "btr_hanar_07_emissives"	greeting_sound = "bta_hanar_greeting"
 		character_textures = {
-			"gfx/models/portraits/btr_07_hanar/btr_hanar_01.dds"
-			"gfx/models/portraits/btr_07_hanar/btr_hanar_02.dds"
-			"gfx/models/portraits/btr_07_hanar/btr_hanar_03.dds"
-			"gfx/models/portraits/btr_07_hanar/btr_hanar_04.dds"
-			"gfx/models/portraits/btr_07_hanar/btr_hanar_05.dds"
+			"gfx/models/portraits/btr_07_hanar/btr_hanar_07_body_pink.dds"
+			"gfx/models/portraits/btr_07_hanar/btr_hanar_07_body_light_red.dds"
+			"gfx/models/portraits/btr_07_hanar/btr_hanar_07_body_salmon.dds"
+			"gfx/models/portraits/btr_07_hanar/btr_hanar_07_body_violet.dds"
+			"gfx/models/portraits/btr_07_hanar/btr_hanar_07_body_teal.dds"
+			"gfx/models/portraits/btr_07_hanar/btr_hanar_07_body_blue.dds"
+			"gfx/models/portraits/btr_07_hanar/btr_hanar_07_body_light_green.dds"
+			"gfx/models/portraits/btr_07_hanar/btr_hanar_07_body_yellow.dds"
+			"gfx/models/portraits/btr_07_hanar/btr_hanar_07_body_white.dds"
+			"gfx/models/portraits/btr_07_hanar/btr_hanar_07_body_dark_blue.dds"
+			"gfx/models/portraits/btr_07_hanar/btr_hanar_07_body_dark_red.dds"
+			"gfx/models/portraits/btr_07_hanar/btr_hanar_07_body_dark_purple.dds"
+			"gfx/models/portraits/btr_07_hanar/btr_hanar_07_body_black.dds"
 		}
+
+		custom_attachment_label = "Stripes"
 	}
 }
 

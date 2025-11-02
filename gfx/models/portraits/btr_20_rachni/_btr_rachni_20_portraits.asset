@@ -1,0 +1,9 @@
+
+entity = {
+	name = "portrait_btr_rachni_20_entity"
+	pdxmesh = "portrait_btr_rachni_20_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"    chance = 3.0 looping = no next_state = idle}
+	scale = 1.35
+}
