@@ -1,0 +1,177 @@
+################################
+#
+# Beyond the Relays The Xultec
+#
+# Written by John Giallorenzo,
+#
+#
+################################
+
+namespace = btr_archeology_the_Xultec
+
+# Zroni Introduction
+# via on_survey = {} | this = surveying vessel
+ship_event = {
+    id = btr_archeology_the_xultec.1
+    title = "btr_archeology_the_xultec.name"
+    desc = "btr_archeology_the_xultec.desc"
+    picture = #TODO
+    location = from
+    show_sound = event_wind_ruins
+    fire_only_once = yes
+    #   is_triggered_only = yes
+
+    trigger = {
+        host_has_dlc = "Ancient Relics Story Pack"
+        FROM = {
+            has_anomaly = no
+            NOT = { exists = archaeological_site }
+            NOT = { has_planet_flag = suppress_archaeological_sites }
+        }
+    }
+
+    immediate = {
+        from = { prevent_anomaly = yes }
+    }
+
+    option = {
+        name = btr_archeology_the_xultec.1.a
+    }
+}
+
+#zroni_digsite_1
+fleet_event = {
+    id = btr_archeology_the_xultec.2
+    title = "btr_archeology_the_xultec.1.name"
+    desc = btr_archeology_the_xultec.1.desc
+    picture = #TODO
+    show_sound = event_wind_ruins
+    location = from
+
+    archaeology = yes
+
+    immediate = {
+        fleet = { set_event_locked = yes }
+    }
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_archeology_the_xultec.1.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier2researchreward
+                min = @tier2researchmin
+                max = @tier2researchmax
+            }
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+    }
+}
+
+fleet_event = {
+    id = btr_archeology_the_xultec.3
+    title = "btr_archeology_the_xultec.2.name"
+    desc = btr_archeology_the_xultec.2.desc
+    picture = #TODO
+    show_sound = event_whispering
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_archeology_the_xultec.2.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = @tier1researchreward
+                min = @tier1researchmin
+                max = @tier1researchmax
+            }
+        }
+    }
+}
+
+fleet_event = {
+    id = btr_archeology_the_xultec.4
+    title = btr_archeology_the_xultec.3.name
+    desc = btr_archeology_the_xultec.3.desc
+    picture = GFX_evt_zro_1
+    show_sound = event_energy_field
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+
+    option = {
+        name = btr_archeology_the_xultec.3.a
+        owner = {
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = @tier2researchreward
+                min = @tier2researchmin
+                max = @tier2researchmax
+            }
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+    }
+}
+
+fleet_event = {
+    id = btr_archeology_the_xultec.5
+    title = "btr_archeology_the_xultec.4.name"
+    desc = btr_archeology_the_xultec.4.desc
+    picture = #TODO
+    show_sound = event_whispering
+    location = from
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_archeology_the_xultec.4.a
+        kill_leader = {
+            class =scientist show_notification = yes
+        }
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier2researchreward
+                min = @tier2researchmin
+                max = @tier2researchmax
+            }
+            add_monthly_resource_mult = {
+                resource = engineering_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+            add_monthly_resource_mult = {
+                resource = physics_research
+                value = @tier3researchreward
+                min = @tier3researchmin
+                max = @tier3researchmax
+            }
+        }
+        FROM = {
+            add_modifier = {
+                modifier = xultec_hives
+            }
+        }
+    }
+}
