@@ -1,0 +1,143 @@
+################################
+#
+# Beyond the Relays Hidden Titans
+#
+# Written by John Giallorenzo,
+#
+#
+################################
+
+namespace = btr_archeology_hidden_titans
+
+# Zroni Introduction
+# via on_survey = {} | this = surveying vessel
+ship_event = {
+    id = btr_archeology_hidden_titans.1
+    title = "btr_archeology_hidden_titans.1.name"
+    desc = "btr_archeology_hidden_titans.1.desc"
+    picture = #TODO
+    location = from
+    show_sound = event_wind_ruins
+    fire_only_once = yes
+    #   is_triggered_only = yes
+
+    trigger = {
+        host_has_dlc = "Ancient Relics Story Pack"
+        FROM = {
+            has_anomaly = no
+            NOT = { exists = archaeological_site }
+            NOT = { has_planet_flag = suppress_archaeological_sites }
+            OR = {
+                is_planet_class = pc_gas_giant
+                is_planet_class = pc_ice_giant
+                is_planet_class = pc_hot_giant
+            }
+        }
+    }
+
+    immediate = {
+        from = { prevent_anomaly = yes }
+    }
+
+    option = {
+        name = btr_archeology_hidden_titans.1.a
+    }
+}
+
+#zroni_digsite_1
+fleet_event = {
+    id = btr_archeology_hidden_titans.2
+    title = "btr_archeology_hidden_titans.2.name"
+    desc = btr_archeology_hidden_titans.2.desc
+    picture = #TODO
+    show_sound = event_wind_ruins
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_archeology_hidden_titans.2.a
+    }
+}
+
+fleet_event = {
+    id = btr_archeology_hidden_titans.3
+    title = "btr_archeology_hidden_titans.3.name"
+    desc = btr_archeology_hidden_titans.3.desc
+    picture = #TODO
+    show_sound = event_whispering
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_archeology_hidden_titans.3.a
+    }
+    option = {
+        name = btr_archeology_hidden_titans.3.b
+        FROM = {
+            set_site_progress_locked = yes
+        }
+    }
+}
+
+fleet_event = {
+    id = btr_archeology_hidden_titans.4
+    title = btr_archeology_hidden_titans.4.name
+    desc = btr_archeology_hidden_titans.4.desc
+    picture = GFX_evt_zro_1
+    show_sound = event_energy_field
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+
+    option = {
+        name = btr_archeology_hidden_titans.4.a
+    }
+    option = {
+        name = btr_archeology_hidden_titans.4.b
+        FROM = {
+           set_site_progress_locked = yes
+        }
+    }
+}
+
+fleet_event = {
+    id = btr_archeology_hidden_titans.5
+    title = "btr_archeology_hidden_titans.5.name"
+    desc = btr_archeology_hidden_titans.5.desc
+    picture = #TODO
+    show_sound = event_whispering
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_archeology_hidden_titans.5.a
+        great_artifact_reward = yes
+        owner = {
+            add_modifier = { modifier = pleasure_barge }
+            add_monthly_resource_mult = {
+                resource = unity
+                value = @tier3unityreward
+                min = @tier3unitymin
+                max = @tier3unitymax
+            }
+            add_monthly_resource_mult = {
+                resource = influence
+                value = @tier1materialreward
+                min = @tier1materialmin
+                max = @tier1materialmax
+            }
+        }
+    }
+}
