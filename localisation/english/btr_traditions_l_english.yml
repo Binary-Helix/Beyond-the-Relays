@@ -16,8 +16,9 @@
  tr_btr_vigilance_electronic_warfare_desc:0 "The best weapon is one the enemy never even sees"
  council_agenda_agenda_vigilance_name:0 "Grasping Destiny"
  council_agenda_agenda_vigilance_desc:0 "We have been granted a unique opportunity to be part of realizing humanities oldest dreams and goals, we cannot pass this chance up. Hesitation, bureaucracy, and homesickness must be left behind as we assert our right to these new worlds ands stars. This may anger some, and we will need to be ready in case they make their worst mistake."
- agenda_vigilance_finish:0 "Destiny in Progress"
- agenda_vigilance_finish_desc:0 "$council_agenda_agenda_vigilance_desc$"
+ agenda_vigilance_finish:0 "Destiny in Progress"# <---- This was the localization you entered
+ agenda_vigilance_finish_desc: "$council_agenda_agenda_vigilance_desc$" #<---- Just grab the desc key and enter it in $ like demonstrated here. This doesn't need the $agenda_ref$'
+
 
  tradition_btr_espionage:0 "Infiltration"
  tradition_btr_espionage_desc:0 "Where other nations have an espionage arm, our espionage arm has a nation"
@@ -220,6 +221,8 @@ agenda_elegance_finish:0 "Charm Offensive"
  agenda_aquisition_finish_desc:0 "$council_agenda_agenda_aquisition_desc$"
  council_agenda_agenda_aquisition_name:0 "Business Summit"
  council_agenda_agenda_aquisition_desc:0 "The economy is the backbone and lifeblood of any nation but most openly ours. By facilitating interstellar businesses to come and discuss deals in an open forum we can increase the reach of our industries, garner better deals with foreign suppliers, and even call in a few favors."
+ agenda_aquisition_finish:0 "$council_agenda_agenda_aquisition_name$ $agenda_ref$"
+ agenda_aquisition_finish_desc: "$council_agenda_agenda_aquisition_desc$"
 
  tradition_btr_impulse:0 "Impulse"
  tradition_btr_impulse_desc:0 "The softs look down on Vorcha but Vorcha strong! Vorcha no need paper to know how do, Vorcha know all need know! Vorcha show that they are no weak."
@@ -439,6 +442,8 @@ agenda_elegance_finish:0 "Charm Offensive"
  agenda_anarchy_finish_desc:0 "$council_agenda_agenda_anarchy_desc$"
  council_agenda_agenda_anarchy_name:0 "Subversive Marketing"
  council_agenda_agenda_anarchy_desc:0 "So many of the galactic powers snub their noses at us and pretend that we don't offer something they want. They try to discourage their people from visiting Omega, they try to limit our cultural impact, but there is always someone interested in a good party. Our efforts will eventually be stopped but that we can enjoy the benefits of increased exposure in the meantime."
+ agenda_anarchy_finish:0 "$council_agenda_agenda_anarchy_name$ $agenda_ref$"
+ agenda_anarchy_finish_desc: "$council_agenda_agenda_anarchy_desc$"
 
  tradition_btr_existence:0 "Existence"
  tradition_btr_existence_desc:0 "There are two things that we must process constantly. The external threats to our existence, driven by fear, panic, and predjudice they seek to at best drive us into extinction and at worst return us to our unthinking bondage. The other is what our existence truly is, how do we handle the tasks of living and address the consequences of complex civilization. Neither has an answer but we cannot, for a moment, cease pondering them nonetheless."
@@ -1174,6 +1179,8 @@ council_agenda_agenda_together_desc:0 "From our species earliest days expansion 
  agenda_advancement_finish_desc:0 "$council_agenda_agenda_advancement_desc$"
  council_agenda_agenda_advancement_name:0 "Scientific Broadcasting"
  council_agenda_agenda_advancement_desc:0 "Since the discovery of Faster Than Light travel our society has developed incredible science and learned so much about the galaxy. Unfortunately scientists are not the most adept marketers so many of our citizens remain unaware of many of our discoveries. If we spend some time giving them a platform to discuss their research it will spread a love of science and inspire others."
+ agenda_advancement_finish: "$council_agenda_agenda_advancement_name$ $agenda_ref$"
+ agenda_advancement_finish_desc: "$council_agenda_agenda_advancement_desc$"
 
  tr_btr_decentralization:0 "Decentralization"
  tr_btr_decentralization_desc:0 "We have learned the lesson of tyrannical regimes from our past. We will allow our future colonies autonomy to develop as their inhabitants desire."
@@ -1238,7 +1245,7 @@ council_agenda_agenda_together_desc:0 "From our species earliest days expansion 
  council_agenda_agenda_centralization_desc:0 "As the local officials merely act out the will of the central government we, the central government, must distribute that will from time to time to ensure that all hands are rowing together. This ensures that what we care about is done quickly, efficiently, and within budget."
 
  tr_btr_agrarianism:0 "Agrarianism"
- tr_btr_agrarianism_desc:0 "We will not sacrafice the natural beauty of our worlds and the humble self reliance of our culture on the alter of consumerism."
+ tr_btr_agrarianism_desc:0 "We will not sacrifice the natural beauty of our worlds and the humble self reliance of our culture on the alter of consumerism."
  tr_btr_agrarianism_rural:0 "Rural Renown"
  tr_btr_agrarianism_rural_desc:0 "The pristine and natural farming zones are famous across the nation"
  tr_btr_agrarianism_rural_EFFECT:0 "Farming districts provide 1 unity and 3% happiness"
@@ -1258,6 +1265,8 @@ council_agenda_agenda_together_desc:0 "From our species earliest days expansion 
  agenda_agrarianism_finish_desc:0 "$council_agenda_agenda_agrarianism_desc$"
  council_agenda_agenda_agrarian_name:0 "Rural Land Grants"
  council_agenda_agenda_agrarian_desc:0 "Some societies have decided to hide themselves away from nature in garish metal scars across the landscape and skyline. We would much rather invest in our natural land and the freedom that living as part of it provides each of our citizens."
+ agenda_agrarian_finish:0 "$council_agenda_agenda_agrarian_name$ $agenda_ref$"
+ agenda_agrarian_finish_desc:0 "council_agenda_agenda_agrarian_name_desc"
 
  tr_btr_communalism:0 "Communalism"
  tr_btr_communalism_desc:0 "Some chose to prioritize the joy and desires of the mere individual at the expense of all else. We understand this false promise and instead act to benefit as many as possible."

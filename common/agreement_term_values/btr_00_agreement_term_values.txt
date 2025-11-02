@@ -183,7 +183,7 @@ specialist_prospectorium = {
 #	maxValue =
 #	minValue =
 #	stepSize =
-# In 00_defines.txt:
+# In 00_btr_defines_edit.txt:
 #	AGREEMENT_RESOURCE_SUBSIDIES_MIN
 #	AGREEMENT_RESOURCE_SUBSIDIES_MAX
 @subsidy_minimum = -0.75
@@ -204,6 +204,14 @@ resource_subsidies_basic = {
 		energy
 		minerals
 		food
+		beryllium
+		titanium
+		lithium
+		palladium
+		iridium
+		platinum
+		helium_3
+		hydrogen
 	}
 
 	subsidy_multiplier = @subsidy_multiplier_basic
@@ -273,6 +281,7 @@ resource_subsidies_advanced = {
 		light_alloys
 		heavy_alloys
 		consumer_goods
+		uranium
 	}
 
 	subsidy_multiplier = @subsidy_multiplier_advanced
@@ -410,9 +419,6 @@ resource_subsidies_strategic = {
 		#volatile_motes
 		#exotic_gases
 		#rare_crystals
-		uranium
-		helium_3
-		hydrogen
 		eezo
 	}
 	subsidy_multiplier = @subsidy_multiplier_strategic

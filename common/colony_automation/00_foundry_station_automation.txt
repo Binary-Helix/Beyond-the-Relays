@@ -1,0 +1,30 @@
+automate_foundry_station = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_planetary_station_foundry
+	}
+
+	prio_districts = {
+		district_foundry_plant
+		district_living_metal_processing
+	}
+
+	buildings = {
+		1 = {
+			building = building_station_capital
+		}
+
+		2 = {
+			building = building_foundry_1
+		}
+
+		3 = {
+			building = building_ministry_production
+		}
+
+		4 = {
+			building = building_production_center
+		}
+	}
+}

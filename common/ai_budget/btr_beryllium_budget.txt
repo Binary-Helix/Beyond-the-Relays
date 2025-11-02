@@ -1,3 +1,19 @@
+beryllium_upkeep_buffer = {
+	resource = beryllium
+	type = upkeep
+	category = buffer
+
+	potential = {
+		always = yes
+	}
+	weight = {
+		weight = 0.1
+	}
+	desired_max = {
+		base = 1000
+	}
+}
+
 beryllium_upkeep_planets = {
 	resource = beryllium
 	type = upkeep
@@ -10,4 +26,26 @@ beryllium_upkeep_planets = {
 	weight = {
 		weight = 0.70
 	}
+
+	desired_max = {
+		base = 2000
+	}
 }
+
+# beryllium_expenditure_ship_components = {
+# 	resource = beryllium
+# 	type = expenditure
+# 	category = ship_components
+#
+# 	potential = {
+# 		has_technology = tech_beryllium_sensors
+# 	}
+#
+# 	weight = {
+# 		weight = 0.15
+# 	}
+#
+# 	desired_max = {
+# 		base = 600
+# 	}
+# }

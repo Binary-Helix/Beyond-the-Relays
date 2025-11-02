@@ -1,0 +1,148 @@
+############################
+#
+# Terraforming Events ( Conversion for Real Terraforming Mod)
+#
+# Written by Annatar
+#
+############################
+
+namespace = planetarystations_terraforming_event
+
+
+#Terraform Planetary Station
+planet_event = {
+	id = planetarystations_terraforming_event.1
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		terraform_planetary_station = yes
+	}
+}
+
+#Complete Barren Terraforming Project 1
+planet_event = {
+	id = planetarystations_terraforming_event.2
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { has_planet_flag = mars }
+			set_planet_entity = {
+				picture = pc_barren_terraformed_station
+				entity = barren_terraformed_planet_mars_entity
+				atmosphere_color = hsv { 0.50 0.3 0.7 }
+				atmosphere_intensity = 1.0
+				atmosphere_width = 0.5
+			}
+		}
+		else = {
+			set_planet_entity = {
+				picture = pc_barren_terraformed_station
+				entity = barren_terraformed_planet_01_entity
+				atmosphere_color = hsv { 0.50 0.3 0.7 }
+				atmosphere_intensity = 1.0
+				atmosphere_width = 0.5
+			}
+		}
+		add_modifier = { modifier = barren_terraformed days = -1 }
+	}
+}
+
+#Complete Barren Cold Terraforming Project 1
+planet_event = {
+	id = planetarystations_terraforming_event.3
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_planet_entity = {
+			picture = pc_barren_cold_terraformed_station
+			entity = barren_cold_terraformed_planet_01_entity
+			atmosphere_color = hsv { 0.58 0.3 0.8 }
+			atmosphere_intensity = 1.0
+			atmosphere_width = 0.5
+		}
+		add_modifier = { modifier = barren_cold_terraformed days = -1 }
+	}
+}
+
+#Complete Frozen Terraforming Project 1
+planet_event = {
+	id = planetarystations_terraforming_event.4
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_planet_entity = {
+			picture = pc_frozen_terraformed_station
+			entity = frozen_terraformed_planet_01_entity
+			atmosphere_color = hsv { 0.48 0.15 0.8 }
+			atmosphere_intensity = 1.0
+			atmosphere_width = 0.5
+		}
+		add_modifier = { modifier = frozen_terraformed days = -1 }
+	}
+}
+
+#Complete Toxic Terraforming Project 1
+planet_event = {
+	id = planetarystations_terraforming_event.5
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_planet_entity = {
+			picture = pc_toxic_terraformed_station
+			entity = toxic_terraformed_planet_01_entity
+			atmosphere_color = hsv { 0.50 0.3 0.7 }
+			atmosphere_intensity = 1.0
+			atmosphere_width = 0.5
+		}
+		add_modifier = { modifier = toxic_terraformed days = -1 }
+	}
+}
+
+#Complete Greenhouse Terraforming Project 1
+planet_event = {
+	id = planetarystations_terraforming_event.6
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_planet_entity = {
+			picture = pc_greenhouse_terraformed_station
+			entity = greenhouse_terraformed_planet_01_entity
+			atmosphere_color = hsv { 0.50 0.3 0.7 }
+			atmosphere_intensity = 1.0
+			atmosphere_width = 0.5
+		}
+		add_modifier = { modifier = greenhouse_terraformed days = -1 }
+	}
+}
+
+#Complete Methane Terraforming Project 1
+planet_event = {
+	id = planetarystations_terraforming_event.7
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_planet_entity = {
+			picture = pc_methane_terraformed_station
+			entity = methane_terraformed_planet_01_entity
+			atmosphere_color = hsv { 0.50 0.3 0.7 }
+			atmosphere_intensity = 1.0
+			atmosphere_width = 0.5
+		}
+		add_modifier = { modifier = methane_terraformed days = -1 }
+	}
+}

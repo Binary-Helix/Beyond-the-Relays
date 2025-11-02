@@ -1,0 +1,1952 @@
+##########################################################################
+# Decisions
+##########################################################################
+
+decision_deep_exploration = {
+	owned_planets_only = yes
+	sound = event_scanner
+	icon = decision_deep_exploration
+	
+	enactment_time = 300
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+	
+	potential = {
+		has_planet_flag = planetary_station
+		NOT = { has_planet_flag = exploration_executed }
+	}
+	
+	allow = {
+		is_controlled_by = owner
+		has_ground_combat = no
+		has_orbital_bombardment = no
+	}
+	
+	effect = {
+		custom_tooltip = decision_deep_exploration_effect_desc
+		hidden_effect = {
+			set_planet_flag = exploration_executed
+			random_list = {
+				19 = {
+					#Null
+					planet_event =  { id = planetarystations_decision_event.1 days = 1 }
+				}
+				 7 = {
+					#Minerals
+					modifier = {
+						factor = 0
+						AND = { 
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Minerals 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.2 days = 1 }
+						}
+						#Minerals 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.3 days = 1 }
+						}
+						#Minerals 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.4 days = 1 }
+						}
+					}
+				}
+				4 = {
+					#Helium-3 Regolith
+					modifier = {
+						factor = 0
+						NOR = { 
+							is_barren_cold_station = yes
+							is_planet_class = pc_asteroid_station
+						}
+					}
+					random_list = {
+						#Regolith 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.5 days = 1 }
+						}
+						#Regolith 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.6 days = 1 }
+						}
+						#Regolith 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.7 days = 1 }
+						}
+					}
+				}
+				4 = {
+					#Helium-3
+					modifier = {
+						factor = 0
+						NOR = { 
+							is_gas_giant_station = yes
+							is_ice_giant_station = yes
+							is_planet_class = pc_hot_giant_station
+						}
+					}
+					random_list = {
+						#Helium-3 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.20 days = 1 }
+						}
+						#Helium-3 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.21 days = 1 }
+						}
+						#Helium-3 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.22 days = 1 }
+						}
+					}
+				}
+				4 = {
+					#Energy
+					modifier = {
+						factor = 0
+						NOR = { 
+							is_planet_class = pc_molten_station
+							is_planet_class = pc_methane_station
+							is_gas_giant_station = yes
+							is_ice_giant_station = yes
+							is_planet_class = pc_hot_giant_station
+							is_planet_class = pc_greenhouse_station
+							is_planet_class = pc_scorched_station
+							is_planet_class = pc_sulfur_station
+						}
+					}
+					random_list = {
+						#Energy 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.15 days = 1 }
+						}
+						#Energy 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.16 days = 1 }
+						}
+						#Energy 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.17 days = 1 }
+						}
+					}
+				}
+				# 5 = {
+				# 	#Alloys
+				# 	modifier = {
+				# 		factor = 0
+				# 		NOR = {
+				# 			is_planet_class = pc_asteroid
+				# 			is_planet_class = pc_molten
+				# 		}
+				# 	}
+				# 	random_list = {
+				# 		#Alloys 1
+				# 		70 = {
+				# 			planet_event =  { id = planetarystations_decision_event.23 days = 1 }
+				# 		}
+				# 		#Alloys 2
+				# 		30 = {
+				# 			planet_event =  { id = planetarystations_decision_event.24 days = 1 }
+				# 		}
+				# 	}
+				# }
+				# 4 = {
+				# 	#Motes
+				# 	modifier = {
+				# 		factor = 1.5
+				# 		is_planet_class = pc_scorched_station
+				# 	}
+				# 	planet_event =  { id = planetarystations_decision_event.9 days = 1 }
+				# }
+				# 4 = {
+				# 	#Crystals
+				# 	planet_event =  { id = planetarystations_decision_event.10 days = 1 }
+				# }
+				# 4 = {
+				# 	#Gas
+				# 	modifier = {
+				# 		factor = 2
+				# 		OR = {
+				# 			is_planet_class = pc_toxic_station
+				# 			is_gas_giant_station = yes
+				# 			is_ice_giant_station = yes
+				# 			is_planet_class = pc_hot_giant_station
+				# 		}
+				# 	}
+				# 	modifier = {
+				# 		factor = 1.5
+				# 		is_planet_class = pc_sulfur_station
+				# 	}
+				# 	planet_event =  { id = planetarystations_decision_event.11 days = 1 }
+				# }
+				# 1 = {
+				# 	#Zro
+				# 	planet_event =  { id = planetarystations_decision_event.12 days = 1 }
+				# }
+				# 1 = {
+				# 	#Dark Matter
+				# 	planet_event =  { id = planetarystations_decision_event.13 days = 1 }
+				# }
+				# 1 = {
+				# 	#Living Metal
+				# 	planet_event =  { id = planetarystations_decision_event.14 days = 1 }
+				# }
+				#
+				7 = {
+					#Beryllium
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Beryllium 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.30 days = 1 }
+						}
+						#Beryllium 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.31 days = 1 }
+						}
+						#Beryllium 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.32 days = 1 }
+						}
+					}
+				}
+				7 = {
+					#Lithium
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Lithium 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.33 days = 1 }
+						}
+						#Lithium 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.34 days = 1 }
+						}
+						#Lithium 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.35 days = 1 }
+						}
+					}
+				}
+				7 = {
+					#Titanium
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Titanium 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.36 days = 1 }
+						}
+						#Titanium 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.37 days = 1 }
+						}
+						#Titanium 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.38 days = 1 }
+						}
+					}
+				}
+				7 = {
+					#Palladium
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Palladium 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.39 days = 1 }
+						}
+						#Palladium 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.40 days = 1 }
+						}
+						#Palladium 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.42 days = 1 }
+						}
+					}
+				}
+				7 = {
+					#Platinum
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Platinum 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.43 days = 1 }
+						}
+						#Platinum 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.44 days = 1 }
+						}
+						#Platinum 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.45 days = 1 }
+						}
+					}
+				}
+				7 = {
+					#Iridium
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Iridium 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.46 days = 1 }
+						}
+						#Iridium 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.47 days = 1 }
+						}
+						#Iridium 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.48 days = 1 }
+						}
+					}
+				}
+				5 = {
+					#Uranium
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Uranium 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.49 days = 1 }
+						}
+						#Uranium 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.50 days = 1 }
+						}
+						#Uranium 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.51 days = 1 }
+						}
+					}
+				}
+				4 = {
+					#Hydrogen
+					modifier = {
+						factor = 0
+						NOR = {
+							is_gas_giant_station = yes
+							is_ice_giant_station = yes
+							is_planet_class = pc_hot_giant_station
+						}
+					}
+					random_list = {
+						#Helium-3 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.52 days = 1 }
+						}
+						#Helium-3 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.53 days = 1 }
+						}
+						#Helium-3 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.54 days = 1 }
+						}
+					}
+				}
+				4 = {
+					#Hydrogen Regolith
+					modifier = {
+						factor = 0
+						NOR = {
+							is_barren_cold_station = yes
+							is_planet_class = pc_asteroid_station
+						}
+					}
+					random_list = {
+						#Regolith 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.55 days = 1 }
+						}
+						#Regolith 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.56 days = 1 }
+						}
+						#Regolith 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.57 days = 1 }
+						}
+					}
+				}
+				2 = {
+					#Antimatter Fuel
+					modifier = {
+						factor = 0
+						AND = {
+							OR = {
+								is_gas_giant_station = yes
+								is_ice_giant_station = yes
+								is_planet_class = pc_hot_giant_station
+							}
+							has_ring = no
+						}
+					}
+					random_list = {
+						#Antimatter Fuel 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.58 days = 1 }
+						}
+						#Antimatter Fuel 2
+						30 = {
+							planet_event =  { id = planetarystations_decision_event.59 days = 1 }
+						}
+					}
+				}
+				2 = {
+					# Light Alloys
+					modifier = {
+						factor = 0
+						NOR = {
+							is_planet_class = pc_asteroid
+							is_planet_class = pc_molten
+						}
+					}
+					random_list = {
+						#Alloys 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.60 days = 1 }
+						}
+						#Alloys 2
+						30 = {
+							planet_event =  { id = planetarystations_decision_event.61 days = 1 }
+						}
+					}
+				}
+				2 = {
+					#Heavy Alloys
+					modifier = {
+						factor = 0
+						NOR = {
+							is_planet_class = pc_asteroid
+							is_planet_class = pc_molten
+						}
+					}
+					random_list = {
+						#Alloys 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.62 days = 1 }
+						}
+						#Alloys 2
+						30 = {
+							planet_event =  { id = planetarystations_decision_event.63 days = 1 }
+						}
+					}
+				}
+				1 = {
+					#EEZO
+					random_list = {
+						80 = {
+							planet_event =  { id = planetarystations_decision_event.64 days = 1 }
+						}
+						15 = {
+							planet_event =  { id = planetarystations_decision_event.65 days = 1 }
+						}
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.66 days = 1 }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 100
+	}
+}
+
+decision_resort_station = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_resort_station
+	
+	enactment_time = 150
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			unity = 500
+		}
+	}
+	
+	potential = {
+		has_planet_flag = planetary_station
+		exists = owner
+		owner = { 
+			is_gestalt = no 
+		}
+		NOT = { has_modifier = resort_station }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = other_station_type
+			is_specific_station_type = no
+		}
+		custom_tooltip = {
+			fail_text = bad_place_to_rest
+			NOR = {
+				has_mining_deposit = yes
+				has_energy_deposit = yes
+			}
+		}
+	}
+	
+	abort_trigger = {
+		OR = {
+			owner = { is_gestalt = yes }
+			has_modifier = prison_station
+			has_modifier = military_outpost
+			has_modifier = resort_station
+		}
+ 	}
+	
+	effect = {
+		hidden_effect = {
+			custom_tooltip = district_casino_level_add
+			custom_tooltip = district_race_track_add
+			
+			add_modifier = {
+				modifier = resort_station
+				days = -1
+			}
+			
+			validate_planet_buildings_and_districts = yes
+		}
+	}
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.5
+			owner = {
+				any_owned_planet = {
+					has_modifier = resort_station
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				any_system_planet = {
+					has_modifier = resort_station
+				}
+			}
+		}
+	}
+}
+
+decision_confluence_station = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_confluence_station
+	
+	enactment_time = 150
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			unity = 500
+		}
+	}
+	
+	potential = {
+		has_planet_flag = planetary_station
+		exists = owner
+		owner = { is_hive_empire = yes }
+		NOT = { has_modifier = confluence_station }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = other_station_type
+			is_specific_station_type = no
+		}
+		custom_tooltip = {
+			fail_text = bad_place_to_confluence
+			NOR = {
+				has_mining_deposit = yes
+				has_energy_deposit = yes
+			}
+		}
+	}
+	
+	abort_trigger = {
+		OR = {
+			owner = { is_hive_empire = no }
+			has_modifier = confluence_station
+		}
+ 	}
+	
+	effect = {
+		hidden_effect = {
+			custom_tooltip = district_synaptic_node_add
+			
+			add_modifier = {
+				modifier = confluence_station
+				days = -1
+			}
+			
+			validate_planet_buildings_and_districts = yes
+		}
+	}
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.5
+			owner = {
+				any_owned_planet = {
+					has_modifier = confluence_station
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				any_system_planet = {
+					has_modifier = confluence_station
+				}
+			}
+		}
+	}
+}
+
+decision_simulation_station = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_simulation_station
+	
+	enactment_time = 150
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			unity = 500
+		}
+	}
+	
+	potential = {
+		has_planet_flag = planetary_station
+		exists = owner
+		owner = { is_machine_empire = yes }
+		NOT = { has_modifier = simulation_station }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = other_station_type
+			is_specific_station_type = no
+		}
+		custom_tooltip = {
+			fail_text = bad_place_to_simulation
+			NOR = {
+				has_mining_deposit = yes
+				has_energy_deposit = yes
+			}
+		}
+	}
+	
+	abort_trigger = {
+		OR = {
+			owner = { is_machine_empire = no }
+			has_modifier = simulation_station
+		}
+ 	}
+	
+	effect = {
+		hidden_effect = {
+			custom_tooltip = district_simulation_complex_add
+			
+			add_modifier = {
+				modifier = simulation_station
+				days = -1
+			}
+			
+			validate_planet_buildings_and_districts = yes
+		}
+	}
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.5
+			owner = {
+				any_owned_planet = {
+					has_modifier = simulation_station
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				any_system_planet = {
+					has_modifier = simulation_station
+				}
+			}
+		}
+	}
+}
+
+decision_military_outpost = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_derelict_interior
+	
+	enactment_time = 150
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			unity = 500
+		}
+	}
+	
+	potential = {
+		has_planet_flag = planetary_station
+		exists = owner
+		owner = { 
+			is_gestalt = no 
+		}
+		NOT = { has_modifier = military_outpost }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = other_station_type
+			is_specific_station_type = no
+		}
+		custom_tooltip = {
+			fail_text = bad_place_to_outpost
+			NOR = {
+				has_mining_deposit = yes
+				has_energy_deposit = yes
+			}
+		}
+	}
+	
+	abort_trigger = {
+		OR = {
+			owner = { is_gestalt = yes }
+			has_modifier = prison_station
+			has_modifier = military_outpost
+			has_modifier = resort_station
+		}
+ 	}
+	
+	effect = {
+		hidden_effect = {
+			custom_tooltip = district_observation_post_add
+			custom_tooltip = district_special_training_area_add
+		
+			add_modifier = {
+				modifier = military_outpost
+				days = -1
+			}
+			
+			validate_planet_buildings_and_districts = yes
+		}
+	}
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 2
+			solar_system = {
+				any_neighbor_system = {
+					exists = owner
+					NOT = { 
+						space_owner = { is_same_value = root.owner }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = {
+				any_owned_planet = {
+					has_modifier = military_outpost
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				any_system_planet = {
+					has_modifier = military_outpost
+				}
+			}
+		}
+	}
+}
+
+decision_prison_station = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_prison_station
+	
+	enactment_time = 150
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			unity = 500
+		}
+	}
+	
+	potential = {
+		has_planet_flag = planetary_station
+		exists = owner
+		owner = { 
+			is_gestalt = no 
+		}
+		NOT = { has_modifier = prison_station }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = other_station_type
+			is_specific_station_type = no
+		}
+		custom_tooltip = {
+			fail_text = bad_place_to_prison
+			NOR = {
+				has_trade_deposit = yes
+				has_physics_research_deposit = yes
+				has_society_research_deposit = yes
+				has_engineering_research_deposit = yes
+			}
+		}
+	}
+	
+	abort_trigger = {
+		OR = {
+			owner = { is_gestalt = yes }
+			has_modifier = prison_station
+			has_modifier = military_outpost
+			has_modifier = resort_station
+		}
+ 	}
+	
+	effect = {
+		hidden_effect = {
+			custom_tooltip = decision_prison_station_effect_desc
+			if = {
+				limit = { owner = { is_authoritarian = yes } }
+				custom_tooltip = add_political_persecution
+			}
+			if = {
+				limit = { owner = { is_spiritualist = yes } }
+				custom_tooltip = add_hunting_heretics
+			}
+			custom_tooltip = add_detention_operation
+			
+			add_modifier = {
+				modifier = prison_station
+				days = -1
+			}
+			
+			validate_planet_buildings_and_districts = yes
+		}
+	}
+	
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 2
+			owner = {
+				any_owned_planet = {
+					planet_crime > 30
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = {
+				any_owned_planet = {
+					has_modifier = resort_station
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					any_system_planet = {
+						has_modifier = prison_station
+					}
+					any_neighbor_system = {
+						any_system_planet = {
+							has_modifier = prison_station
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+decision_planet_cracking = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_shattered_planet
+	
+	enactment_time = 300
+	
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+			unity = 500
+		}
+	}
+	
+	potential = {
+		owner = { has_technology = tech_extreme_mining_methods }
+		OR = {
+			is_planet_class = pc_barren_station
+			is_barren_cold_station = yes
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = no_barren_world_for_cracking
+			OR = {
+				is_planet_class = pc_barren_station
+				is_barren_cold_station = yes
+			}
+		}
+	}
+	
+	effect = {
+		hidden_effect = {
+			custom_tooltip = decision_planet_cracking_effect_desc
+			
+			change_pc = { class = pc_cracking_station }
+			
+			clear_deposits = yes
+			
+			if = {
+				limit = { planet_size > 5 }
+				add_deposit = d_broken_blocker
+			}
+			
+			validate_planet_buildings_and_districts = yes
+			
+			if = {
+				limit = { owner = { has_country_flag = planet_crackers } }
+				owner = {
+					create_message = {
+						type = PLANET_CRACKING_COMPLETED
+						localization = PLANET_CRACKING_COMPLETED_DESC
+						days = 30
+						target = root
+						variable = {
+							type = name
+							localization = PLANET
+							scope = root
+						}
+						variable = {
+							type = name
+							localization = SYSTEM
+							scope = root.solar_system
+						}
+					}
+				}
+			}
+			else = {
+				planet_event =  { id = planetarystations_decision_event.25 days = 1 }
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2
+			NOR = {
+				has_physics_research_deposit = yes
+				has_society_research_deposit = yes
+				has_engineering_research_deposit = yes
+				has_trade_deposit = yes
+				has_mining_deposit = yes
+				has_energy_deposit = yes
+			}
+		}
+	}
+}
+
+decision_station_restructuring = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = default
+	
+	enactment_time = 300
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			unity = 500
+		}
+	}
+	
+	potential = {
+		has_planet_flag = planetary_station
+		is_specific_station_type = yes
+	}
+	
+	allow = {
+	}
+	
+	effect = {
+		hidden_effect = {
+			custom_tooltip = decision_station_restructuring_effect_desc
+			if = {
+				limit = { has_modifier = prison_station }
+				remove_modifier = prison_station
+			}
+			if = {
+				limit = { has_modifier = military_outpost }
+				remove_modifier = military_outpost
+			}
+			if = {
+				limit = { has_modifier = resort_station }
+				remove_modifier = resort_station
+			}
+			if = {
+				limit = { has_modifier = confluence_station }
+				remove_modifier = confluence_station
+			}
+			if = {
+				limit = { has_modifier = simulation_station }
+				remove_modifier = simulation_station
+			}
+			if = {
+				limit = { has_modifier = terraforming_station }
+				remove_modifier = terraforming_station
+				remove_planet_flag = terraforming_station_flag
+			}
+			
+			validate_planet_buildings_and_districts = yes
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_launch_political_persecution = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_political_persecution
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 500
+		}
+	}
+
+	potential = {
+		owner = { 
+			is_authoritarian = yes 
+			any_owned_planet = { has_modifier = prison_station }
+		}
+		NOR = {
+			has_modifier = prison_station
+			has_modifier = penal_colony
+			has_modifier = political_persecution
+		}
+	}
+
+	effect = {
+		add_modifier = { modifier = "political_persecution" days = -1 }
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+decision_end_political_persecution = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_political_persecution
+
+	resources = {
+		category = decisions
+	}
+
+	potential = {
+		has_modifier = political_persecution
+	}
+
+	effect = {
+		remove_modifier = political_persecution
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			weight = 1000
+			any_owned_pop_group = { NOT = { has_ethic = ethic_egalitarian } }
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				any_owned_planet = { 
+					has_modifier = prison_station
+					pop_amount < 500
+				}
+			}
+		}
+	}
+}
+
+decision_launch_hunting_heretics = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_alien_propaganda
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 500
+		}
+	}
+
+	potential = {
+		owner = { 
+			is_spiritualist = yes
+			any_owned_planet = { has_modifier = prison_station }
+		}
+		NOR = {
+			has_modifier = prison_station
+			has_modifier = penal_colony
+			has_modifier = hunting_heretics
+		}
+	}
+
+	effect = {
+		add_modifier = { modifier = "hunting_heretics" days = -1 }
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+decision_end_hunting_heretics = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_alien_propaganda
+
+	resources = {
+		category = decisions
+	}
+
+	potential = {
+		has_modifier = hunting_heretics
+	}
+
+	effect = {
+		remove_modifier = hunting_heretics
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			weight = 1000
+			any_owned_pop_group = { NOT = { has_ethic = ethic_materialist } }
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				any_owned_planet = { 
+					has_modifier = prison_station
+					pop_amount < 500
+				}
+			}
+		}
+	}
+}
+
+decision_detention_operation = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_crime
+	
+	enactment_time = 90
+	resources = {
+		category = decisions
+		cost = {
+			unity = 1000
+		}
+	}
+	
+	potential = {
+		owner = { 
+			any_owned_planet = { has_modifier = prison_station }
+		}
+		OR = {
+			AND = {
+				has_modifier = anticrime_campaign
+				any_owned_pop_job = { has_job_type = criminal }
+			}
+			AND = {
+				has_modifier = political_persecution
+				any_owned_pop_group = { has_ethic = ethic_egalitarian }
+			}
+			AND = {
+				has_modifier = hunting_heretics
+				any_owned_pop_group = { has_ethic = ethic_materialist }
+			}
+		}
+		any_owned_pop_job = { has_job_type = enforcer }
+	}
+	
+	allow = {
+		is_controlled_by = owner
+		has_ground_combat = no
+		has_orbital_bombardment = no
+	}
+	
+	effect = {
+		hidden_effect = {
+			owner = {
+				random_owned_planet = { 
+					limit = { 
+						has_modifier = prison_station
+						OR = {
+							pop_amount < 3000
+							NOT = { has_modifier = planet_population_control }
+						}
+					}
+					save_event_target_as = prison_station
+				}
+			}
+			
+			if = {
+				limit = { has_modifier = political_persecution }
+				custom_tooltip = decision_detention_egalitarian_effect_desc
+				weighted_random_owned_pop_group = {
+					limit = { has_ethic = ethic_egalitarian }
+					set_timed_pop_group_flag = {
+						flag = pop_convicted
+						years = 20
+					}
+					resettle_pop_group = {
+						pop = this
+						planet = event_target:prison_station
+					}
+				}
+			}
+			else_if ={
+				limit = { has_modifier = hunting_heretics }
+				custom_tooltip = decision_detention_materialist_effect_desc
+				weighted_random_owned_pop_group = {
+					limit = { has_ethic = ethic_materialist }
+					set_timed_pop_group_flag = {
+						flag = pop_convicted
+						years = 20
+					}
+					resettle_pop_group = {
+						pop = this
+						planet = event_target:prison_station
+					}
+				}
+			}
+			else = {
+				custom_tooltip = decision_detention_criminal_effect_desc
+				weighted_random_owned_pop_group = {
+					limit = {
+						is_pop_category = criminal
+					}
+					set_timed_pop_group_flag = {
+						flag = pop_convicted
+						years = 20
+					}
+					resettle_pop_group = {
+						pop = this
+						planet = event_target:prison_station
+					}
+				}
+			}
+			
+			owner = {
+				create_message = {
+					type = FELONY_TRANSPORT
+					localization = FELONY_TRANSPORT_DESC
+					days = 30
+					target = root
+					variable = {
+						type = name
+						localization = PLANET
+						scope = root
+					}
+					variable = {
+						type = name
+						localization = PRISON
+						scope = event_target:prison_station
+					}
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 20
+	}
+}
+
+decision_launch_staff_recruitment = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_federation_fleet
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+			unity = 500
+		}
+	}
+
+	potential = {
+		has_planet_flag = planetary_station
+		exists = owner
+		owner = { is_gestalt = no }
+		NOT = { has_modifier = staff_recruitment }
+	}
+
+	effect = {
+		add_modifier = { modifier = "staff_recruitment" days = -1 }
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			pop_amount > 3000
+		}
+		modifier = {
+			factor = 0.5
+			pop_amount > 1500
+		}
+	}
+}
+
+decision_end_staff_recruitment = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_federation_fleet
+
+	resources = {
+		category = decisions
+	}
+
+	potential = {
+		has_modifier = staff_recruitment
+	}
+
+	effect = {
+		remove_modifier = staff_recruitment
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			weight = 1000
+			pop_amount > 3000
+		}
+	}
+}
+
+decision_launch_station_close = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_station_close
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			unity = 500
+		}
+	}
+
+	potential = {
+		has_planet_flag = planetary_station
+	}
+
+	effect = {
+		custom_tooltip = decision_station_close_effect_desc
+		hidden_effect = {
+			if = {
+				limit = { owner = { is_gestalt = yes } }
+				add_modifier = { modifier = "station_close_gestalt" days = -1 }
+			}
+			else = {
+				add_modifier = { modifier = "station_close" days = -1 }
+			}
+			planet_event =  { id = planetarystations_decision_event.18 days = 1 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_end_station_close = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_station_close
+
+	resources = {
+		category = decisions
+	}
+
+	potential = {
+		OR = {
+			has_modifier = station_close
+			has_modifier = station_close_gestalt
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { has_modifier = station_close }
+			remove_modifier = station_close
+		}
+		if = {
+			limit = { has_modifier = station_close_gestalt }
+			remove_modifier = station_close_gestalt
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+# Real Terraforming
+
+decision_start_barren_terraforming_project_2 = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_arid_planet
+
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 5000
+		}
+	}
+
+	potential = {
+		has_modifier = terraforming_station
+		NOT = { has_planet_flag = barren_terraforming_project_2 }
+		is_planet_class = pc_barren_station
+		has_modifier = barren_terraformed
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = participates_in_another_terraforming_project
+			has_terraforming_project_flag = no
+		}
+	}
+
+	effect = {
+		#custom_tooltip = decision_start_barren_terraforming_project_2_effect_desc
+		hidden_effect = {
+			set_planet_flag = barren_station
+			fire_on_action = { on_action = on_situation_barren_terraforming_project_2_begun }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_start_barren_cold_terraforming_project_2 = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_start_barren_cold_terraforming_project_2
+
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 5000
+		}
+	}
+
+	potential = {
+		has_modifier = terraforming_station
+		NOT = { has_planet_flag = barren_cold_terraforming_project_2 }
+		is_barren_cold_station = yes
+		has_modifier = barren_cold_terraformed
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = participates_in_another_terraforming_project
+			has_terraforming_project_flag = no
+		}
+	}
+
+	effect = {
+		#custom_tooltip = decision_start_barren_cold_terraforming_project_2_effect_desc
+		hidden_effect = {
+			set_planet_flag = barren_cold_station
+			fire_on_action = { on_action = on_situation_barren_cold_terraforming_project_2_begun }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_start_frozen_terraforming_project_2 = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_arctic_planet
+
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 5000
+		}
+	}
+
+	potential = {
+		owner = {
+			OR = {
+				has_ascension_perk = ap_hydrocentric
+				has_technology = tech_planet_meltification
+			}
+		}
+		has_modifier = terraforming_station
+		NOT = { has_planet_flag = frozen_terraforming_project_2 }
+		is_frozen_station = yes
+		has_modifier = frozen_terraformed
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = participates_in_another_terraforming_project
+			has_terraforming_project_flag = no
+		}
+	}
+
+	effect = {
+		#custom_tooltip = decision_start_frozen_terraforming_project_2_effect_desc
+		hidden_effect = {
+			set_planet_flag = frozen_station
+			fire_on_action = { on_action = on_situation_frozen_terraforming_project_2_begun }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_start_toxic_terraforming_project_2 = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_start_toxic_terraforming_project_2
+
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 5000
+		}
+	}
+
+	potential = {
+		owner = { 
+			has_ascension_perk = ap_detox
+		}
+		has_modifier = terraforming_station
+		NOT = { has_planet_flag = toxic_terraforming_project_2 }
+		is_planet_class = pc_toxic_station
+		has_modifier = toxic_terraformed
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = participates_in_another_terraforming_project
+			has_terraforming_project_flag = no
+		}
+	}
+
+	effect = {
+		#custom_tooltip = decision_start_toxic_terraforming_project_2_effect_desc
+		hidden_effect = {
+			set_planet_flag = toxic_station
+			fire_on_action = { on_action = on_situation_toxic_terraforming_project_2_begun }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_start_greenhouse_terraforming_project_2 = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_start_greenhouse_terraforming_project_2
+
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 5000
+		}
+	}
+
+	potential = {
+		owner = {
+			has_ascension_perk = ap_detox
+		}
+		has_modifier = terraforming_station
+		NOT = { has_planet_flag = greenhouse_terraforming_project_2 }
+		is_planet_class = pc_greenhouse_station
+		has_modifier = greenhouse_terraformed
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = participates_in_another_terraforming_project
+			has_terraforming_project_flag = no
+		}
+	}
+
+	effect = {
+		#custom_tooltip = decision_start_greenhouse_terraforming_project_2_effect_desc
+		hidden_effect = {
+			set_planet_flag = greenhouse_station
+			fire_on_action = { on_action = on_situation_greenhouse_terraforming_project_2_begun }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_start_methane_terraforming_project_2 = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_start_methane_terraforming_project_2
+
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 5000
+		}
+	}
+
+	potential = {
+		owner = {
+			has_ascension_perk = ap_detox
+		}
+		has_modifier = terraforming_station
+		NOT = { has_planet_flag = methane_terraforming_project_2 }
+		is_planet_class = pc_methane_station
+		has_modifier = methane_terraformed
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = participates_in_another_terraforming_project
+			has_terraforming_project_flag = no
+		}
+	}
+
+	effect = {
+		#custom_tooltip = decision_start_methane_terraforming_project_2_effect_desc
+		hidden_effect = {
+			set_planet_flag = methane_station
+			fire_on_action = { on_action = on_situation_methane_terraforming_project_2_begun }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_terraforming_station = {
+	owned_planets_only = yes
+	sound = event_construction
+	icon = decision_terraforming_station
+	
+	enactment_time = 150
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			unity = 500
+		}
+	}
+	
+	potential = {
+		has_global_flag = has_real_terraforming_mod
+		has_planet_flag = planetary_station
+		NOT = { has_modifier = terraforming_station }
+		is_terraforming_candidate = yes
+		owner = { has_technology = tech_climate_restoration }
+		if = {
+			limit = { is_planet_class = pc_frozen_station }
+			owner = { 
+				OR = {
+					has_ascension_perk = ap_hydrocentric
+					has_technology = tech_planet_meltification
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					is_planet_class = pc_toxic_station
+					is_planet_class = pc_greenhouse_station
+					is_planet_class = pc_methane_station
+				}
+			}
+			owner = { has_ascension_perk = ap_detox }
+		}
+	}
+	
+	allow = {
+		is_specific_station_type = no
+		custom_tooltip = {
+			fail_text = participates_in_another_terraforming_project
+			has_terraforming_project_flag = no
+		}
+	}
+	
+	abort_trigger = {
+ 	}
+	
+	effect = {
+		hidden_effect = {
+			custom_tooltip = district_terraforming_complex_add
+			
+			add_modifier = {
+				modifier = terraforming_station
+				days = -1
+			}
+			
+			set_planet_flag = terraforming_station_flag
+			validate_planet_buildings_and_districts = yes
+			
+			if = {
+				limit = { 
+					is_planet_class = pc_barren_station
+					NOT = { has_modifier = barren_terraformed }
+				}
+				custom_tooltip = decision_start_barren_terraforming_project_1_effect_desc
+				set_planet_flag = barren_station
+				fire_on_action = { on_action = on_situation_barren_terraforming_project_1_begun }
+			}
+			else = {
+				limit = { 
+					is_planet_class = pc_barren_station
+					has_modifier = barren_terraformed
+				}
+				custom_tooltip = decision_start_barren_terraforming_project_2_effect_desc
+				set_planet_flag = barren_station
+				fire_on_action = { on_action = on_situation_barren_terraforming_project_2_begun }
+			}
+			
+			if = {
+				limit = { 
+					is_barren_cold_station = yes
+					NOT = { has_modifier = barren_cold_terraformed }
+				}
+				custom_tooltip = decision_start_barren_cold_terraforming_project_1_effect_desc
+				set_planet_flag = barren_cold_station
+				fire_on_action = { on_action = on_situation_barren_cold_terraforming_project_1_begun }
+			}
+			else = {
+				limit = { 
+					is_barren_cold_station = yes
+					has_modifier = barren_cold_terraformed
+				}
+				custom_tooltip = decision_start_barren_cold_terraforming_project_2_effect_desc
+				set_planet_flag = barren_cold_station
+				fire_on_action = { on_action = on_situation_barren_cold_terraforming_project_2_begun }
+			}
+			
+			if = {
+				limit = { 
+					is_frozen_station = yes
+					NOT = { has_modifier = frozen_terraformed }
+				}
+				custom_tooltip = decision_start_frozen_terraforming_project_1_effect_desc
+				set_planet_flag = frozen_station
+				fire_on_action = { on_action = on_situation_frozen_terraforming_project_1_begun }
+			}
+			else = {
+				limit = { 
+					is_frozen_station = yes
+					has_modifier = frozen_terraformed
+				}
+				custom_tooltip = decision_start_frozen_terraforming_project_2_effect_desc
+				set_planet_flag = frozen_station
+				fire_on_action = { on_action = on_situation_frozen_terraforming_project_2_begun }
+			}
+			
+			if = {
+				limit = { 
+					is_planet_class = pc_toxic_station
+					NOT = { has_modifier = toxic_terraformed }
+				}
+				custom_tooltip = decision_start_toxic_terraforming_project_1_effect_desc
+				set_planet_flag = toxic_station
+				fire_on_action = { on_action = on_situation_toxic_terraforming_project_1_begun }
+			}
+			else = {
+				limit = { 
+					is_planet_class = pc_toxic_station
+					has_modifier = toxic_terraformed
+				}
+				custom_tooltip = decision_start_toxic_terraforming_project_2_effect_desc
+				set_planet_flag = toxic_station
+				fire_on_action = { on_action = on_situation_toxic_terraforming_project_2_begun }
+			}
+			
+			if = {
+				limit = { 
+					is_planet_class = pc_greenhouse_station
+					NOT = { has_modifier = greenhouse_terraformed }
+				}
+				custom_tooltip = decision_start_greenhouse_terraforming_project_1_effect_desc
+				set_planet_flag = greenhouse_station
+				fire_on_action = { on_action = on_situation_greenhouse_terraforming_project_1_begun }
+			}
+			else = {
+				limit = { 
+					is_planet_class = pc_greenhouse_station
+					has_modifier = greenhouse_terraformed
+				}
+				custom_tooltip = decision_start_greenhouse_terraforming_project_2_effect_desc
+				set_planet_flag = greenhouse_station
+				fire_on_action = { on_action = on_situation_greenhouse_terraforming_project_2_begun }
+			}
+			
+			if = {
+				limit = { 
+					is_planet_class = pc_methane_station
+					NOT = { has_modifier = methane_terraformed }
+				}
+				custom_tooltip = decision_start_methane_terraforming_project_1_effect_desc
+				set_planet_flag = methane_station
+				fire_on_action = { on_action = on_situation_methane_terraforming_project_1_begun }
+			}
+			else = {
+				limit = { 
+					is_planet_class = pc_methane_station
+					has_modifier = methane_terraformed
+				}
+				custom_tooltip = decision_start_methane_terraforming_project_2_effect_desc
+				set_planet_flag = methane_station
+				fire_on_action = { on_action = on_situation_methane_terraforming_project_2_begun }
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}
+}
+

@@ -1,0 +1,1311 @@
+@buildings_t1 = 1
+@buildings_t2 = 2
+@buildings_t3 = 3
+@buildings_t4 = 4
+
+@tier_2_capital_defense_armies = 4
+@tier_3_capital_defense_armies = 8
+@tier_4_capital_defense_armies = 16
+
+#############
+# Outpost buildings
+#############
+
+# Station Control Unit
+building_station_capital = {
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	category = government
+	
+	building_sets = {
+		government
+	}
+
+	potential = {
+		has_planet_flag = planetary_station
+		NOT = { has_modifier = prison_station }
+		exists = owner
+		owner = {
+			is_fallen_empire = no
+			is_wilderness_empire = no
+		}
+	}
+
+	convert_to = {
+		building_prison_capital
+		building_station_fe_capital
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = @btr_govt_b0_energy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 200
+		planet_amenities_add = 100
+	}
+	
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 100
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		job_coordinator_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_evaluator_add = 100
+		job_replicator_add = 100
+		job_logistics_drone_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
+		}
+		job_roboticist_add = 100
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_private_healthcare_corporate }
+		}
+		job_healthcare_add = 100
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+			}
+		}
+		job_roboticist_add = 100
+	}
+
+	inline_script = {
+		script = "jobs/politician_add"
+		AMOUNT = @building_static_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_dystopian_society }
+		}
+		modifier = {
+			job_enforcer_add = 100
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_1 }
+		}
+		modifier = {
+			pop_bonus_workforce_mult = 0.1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_individual_machine = yes
+					AND = {
+						is_regular_empire = yes
+						has_active_tradition = tr_synthetics_prefabricated_components
+					}
+				}
+			}
+		}
+		text = job_roboticist_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+					is_regular_empire = yes
+					NOT = { has_valid_civic = civic_civil_education }
+			}
+			text = job_enforcer_effect_desc
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_valid_civic = civic_civil_education }
+		}
+		text = job_educator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_valid_civic = civic_private_healthcare_corporate }
+		}
+		text = job_healthcare_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_evaluator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_replicator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_logistics_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_synapse_drone_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_synapse_drone_effect_desc
+	}
+
+	upgrades = {
+		"building_station_major_capital"
+	}
+}
+
+# Station Administrative Center
+building_station_major_capital = {
+	base_buildtime = @b2_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	category = government
+	
+	building_sets = {
+		government
+	}
+
+	potential = {
+		has_planet_flag = planetary_station
+		NOT = { has_modifier = prison_station }
+		exists = owner
+		owner = {
+			is_fallen_empire = no
+			is_wilderness_empire = no
+		}
+	}
+
+	convert_to = {
+		building_prison_major_capital
+		building_station_fe_capital
+	}
+
+	allow = {
+		pop_amount >= 1000
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_govt_b2_mineral_cost
+			light_alloys = @btr_govt_b2_light_alloys_cost
+			heavy_alloys = @btr_govt_b2_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_govt_b2_energy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 400
+		planet_amenities_add = 200
+		planet_max_branch_office_buildings_add = 1
+		planet_defense_armies_add = @tier_2_capital_defense_armies
+	}
+	
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 100
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		job_coordinator_add = 300
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_evaluator_add = 200
+		job_replicator_add = 100
+		job_logistics_drone_add = 300
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
+		}
+		job_roboticist_add = 100
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_private_healthcare_corporate }
+		}
+		job_healthcare_add = 100
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+			}
+		}
+		job_roboticist_add = 100
+	}
+
+	inline_script = {
+		script = "jobs/politician_add"
+		AMOUNT = @building_static_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_enforcer_add = 100
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_1 }
+		}
+		modifier = {
+			pop_bonus_workforce_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_2 }
+		}
+		modifier = {
+			pop_bonus_workforce_mult = 0.1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_origin = origin_toxic_knights
+				NOR = {
+					has_country_flag = toxoids_7011_b
+					has_country_flag = toxoids_7040_b
+					has_country_flag = toxoids_7130_b
+				}
+			}
+			has_planet_flag = toxic_knights_habitat
+		}
+		text = job_knight_commander_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_origin = origin_toxic_knights
+				OR = {
+					has_country_flag = toxoids_7011_b
+					has_country_flag = toxoids_7040_b
+					has_country_flag = toxoids_7130_b
+				}
+			}
+			has_planet_flag = toxic_knights_habitat
+		}
+		text = job_knight_commander_research_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_origin = origin_toxic_knights
+			}
+			has_planet_flag = toxic_knights_habitat
+		}
+		text = job_knight_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_individual_machine = yes
+					AND = {
+						is_regular_empire = yes
+						has_active_tradition = tr_synthetics_prefabricated_components
+					}
+				}
+			}
+		}
+		text = job_roboticist_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+					is_regular_empire = yes
+					NOT = { has_valid_civic = civic_civil_education }
+			}
+			text = job_enforcer_effect_desc
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_valid_civic = civic_civil_education }
+		}
+		text = job_educator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_valid_civic = civic_private_healthcare_corporate }
+		}
+		text = job_healthcare_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_evaluator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_replicator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_logistics_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_synapse_drone_effect_desc
+	}
+	
+	upgrades = {
+		"building_station_system_capital"
+	}
+}
+
+# Ancient Station Center
+building_station_fe_capital = {
+	base_buildtime = @b2_time
+	capital = yes
+	can_build = no
+	can_demolish = yes
+	position_priority = 0
+
+	icon = building_station_capital
+	
+	category = government
+	
+	building_sets = {
+		fallen_empire
+	}
+
+	potential = {
+		has_planet_flag = planetary_station
+		exists = owner
+		owner = { is_fallen_empire = yes }
+	}
+
+	convert_to = {
+		building_hab_major_capital
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_govt_b2_mineral_cost
+			light_alloys = @btr_govt_b2_light_alloys_cost
+			heavy_alloys = @btr_govt_b2_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_govt_b2_energy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 300
+		planet_amenities_add = 500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = no }
+			owner = { is_fallen_empire_machine = no }
+		}
+		modifier = {
+			job_fe_overseer_add = 100
+			job_fe_protector_add = 100
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		modifier = {
+			job_fe_sky_cardinal_add = 100
+			job_fe_protector_add = 100
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_machine = yes }
+		}
+		job_fe_guardian_bot_add = 200
+		job_fe_maintenance_bot_add = 100
+	}
+
+	upgrades = {
+	}
+}
+
+
+# Prison Control Unit
+building_prison_capital = {
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	category = government
+
+	building_sets = {
+		government
+	}
+
+	potential = {
+		has_planet_flag = planetary_station
+		has_modifier = prison_station
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+
+	convert_to = {
+		building_station_capital
+		building_station_fe_capital
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = @btr_govt_b1_energy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 100
+		planet_amenities_add = 100
+		job_prison_warden_add = 100
+		job_guard_add = 100
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 100
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_dystopian_society }
+		}
+		modifier = {
+			job_guard_add = 100
+		}
+	}
+
+	triggered_desc = {
+		text = job_prison_warden_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_guard_effect_desc
+	}
+
+
+	upgrades = {
+		"building_prison_major_capital"
+	}
+}
+
+# Prison Administrative Center
+building_prison_major_capital = {
+	base_buildtime = @b2_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	category = government
+
+	building_sets = {
+		government
+	}
+
+	potential = {
+		has_planet_flag = planetary_station
+		has_modifier = prison_station
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+
+	convert_to = {
+		building_station_major_capital
+		building_station_fe_capital
+	}
+
+	allow = {
+		pop_amount >= 1000
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_govt_b2_mineral_cost
+			light_alloys = @btr_govt_b2_light_alloys_cost
+			heavy_alloys = @btr_govt_b2_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_govt_b2_energy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 400
+		planet_amenities_add = 200
+		planet_max_branch_office_buildings_add = 1
+		planet_defense_armies_add = @tier_2_capital_defense_armies
+		job_prison_warden_add = 200
+		job_guard_add = 300
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_1 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_dystopian_society }
+		}
+		modifier = {
+			job_guard_add = 100
+		}
+	}
+
+	triggered_desc = {
+		text = job_prison_warden_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_guard_effect_desc
+	}
+
+	upgrades = {
+		"building_prison_system_capital"
+	}
+}
+
+# Prison Capital-Complex
+building_prison_system_capital = {
+	base_buildtime = @b4_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	category = government
+
+	building_sets = {
+		government
+	}
+
+	potential = {
+		has_planet_flag = planetary_station
+		has_modifier = prison_station
+		NOT = { is_asteroid_station = yes }
+		exists = owner
+		owner = { is_fallen_empire = no }
+	}
+
+	convert_to = {
+		building_station_system_capital
+		building_station_fe_capital
+	}
+
+	allow = {
+		pop_amount >= 2000
+	}
+
+	prerequisites = {
+		"tech_colonial_station_protocol"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_govt_b4_mineral_cost
+			light_alloys = @btr_govt_b4_light_alloys_cost
+			heavy_alloys = @btr_govt_b4_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_govt_b4_energy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1000
+		planet_amenities_add = 400
+		planet_max_districts_add = 2
+		planet_max_branch_office_buildings_add = 2
+		planet_defense_armies_add = @tier_3_capital_defense_armies
+		job_prison_warden_add = 200
+		job_guard_add = 300
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_1 }
+		}
+		modifier = {
+			planet_jobs_productive_upkeep_mult = 0.1
+			planet_jobs_productive_produces_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_dystopian_society }
+		}
+		modifier = {
+			job_guard_add = 100
+		}
+	}
+
+	triggered_desc = {
+		text = job_prison_warden_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_guard_effect_desc
+	}
+}
+
+
+# Station Capital-Complex
+building_station_system_capital = {
+	base_buildtime = @b4_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	category = government
+	
+	building_sets = {
+		government
+	}
+
+	potential = {
+		has_planet_flag = planetary_station
+		NOT = { has_modifier = prison_station }
+		NOT = { is_asteroid_station = yes }
+		exists = owner
+		owner = {
+			is_fallen_empire = no
+			is_wilderness_empire = no
+		}
+	}
+
+	convert_to = {
+		building_prison_system_capital
+		building_station_fe_capital
+	}
+
+	allow = {
+		pop_amount >= 2000
+	}
+	
+	prerequisites = {
+		"tech_colonial_station_protocol"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b1_mineral_cost
+			light_alloys = @btr_civil_b1_light_alloys_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b1_energy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1000
+		planet_amenities_add = 400
+		planet_max_districts_add = 2
+		planet_max_branch_office_buildings_add = 2
+		planet_defense_armies_add = @tier_3_capital_defense_armies
+	}
+	
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+	
+	triggered_planet_modifier = {
+		modifier = { planet_stability_add = 1 }
+		mult = modifier:habitat_stability_add
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 100
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		job_coordinator_add = 400
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_evaluator_add = 300
+		job_replicator_add = 100
+		job_logistics_drone_add = 300
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
+		}
+		job_roboticist_add = 100
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_private_healthcare_corporate }
+		}
+		job_healthcare_add = 100
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+			}
+		}
+		job_roboticist_add = 100
+	}
+
+	inline_script = {
+		script = "jobs/politician_add"
+		AMOUNT = @building_static_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = toxic_knights_habitat
+			exists = owner
+			owner = {
+				has_origin = origin_toxic_knights
+			}
+		}
+		modifier = {
+			job_knight_commander_add = 1
+			job_knight_add = 200
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_enforcer_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_1 }
+		}
+		modifier = {
+			pop_bonus_workforce_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_2 }
+		}
+		modifier = {
+			pop_bonus_workforce_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_capital_productivity_3 }
+		}
+		modifier = {
+			pop_bonus_workforce_mult = 0.1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_origin = origin_toxic_knights
+			}
+			has_planet_flag = toxic_knights_habitat
+		}
+		text = job_knight_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_individual_machine = yes
+					AND = {
+						is_regular_empire = yes
+						has_active_tradition = tr_synthetics_prefabricated_components
+					}
+				}
+			}
+		}
+		text = job_roboticist_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+					is_regular_empire = yes
+					NOT = { has_valid_civic = civic_civil_education }
+			}
+			text = job_enforcer_effect_desc
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_valid_civic = civic_civil_education }
+		}
+		text = job_educator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_valid_civic = civic_private_healthcare_corporate }
+		}
+		text = job_healthcare_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_evaluator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_replicator_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_logistics_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_synapse_drone_effect_desc
+	}
+}
+
+#############
+# Government buildings
+#############
+
+#############
+# Resource buildings
+#############
+
+#############
+# Science buildings
+#############
+
+#############
+# Trade buildings
+#############
+
+#############
+# Amenities buildings
+#############
+
+building_monorail = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = amenity
+	
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		has_planet_flag = planetary_station
+	}
+
+	allow = {
+	}
+
+	destroy_trigger = {
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 200
+		planet_max_districts_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b1_mineral_cost
+			light_alloys = @btr_civil_b1_light_alloys_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b1_energy_upkeep
+		}
+	}
+	
+	upgrades = {
+		"building_transit_network"
+	}
+}
+
+building_transit_network = {
+	base_buildtime = @b1_time
+	can_build = no
+
+	category = amenity
+	
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		has_planet_flag = planetary_station
+	}
+
+	allow = {
+		OR = {
+			has_building = building_station_major_capital
+			has_building = building_prison_major_capital
+			has_building = building_station_system_capital
+			has_building = building_prison_system_capital
+		}
+	}
+
+	destroy_trigger = {
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 500
+		planet_max_districts_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b1_mineral_cost
+			light_alloys = @btr_civil_b1_light_alloys_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b1_energy_upkeep
+		}
+	}
+}
+
+##################
+# Unity buildings
+##################
+
+#############
+# Army buildings
+#############
+
+##################
+# Deposit buildings
+##################
+
+building_hotel = {
+	base_buildtime = @b1_time
+
+	is_capped_by_modifier = yes
+
+	category = amenity
+	
+	building_sets = {
+		government
+		urban
+		entertainment
+		resort
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = no
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b1_mineral_cost
+			light_alloys = @btr_civil_b1_light_alloys_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b1_energy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 200
+		planet_amenities_add = 300
+		job_tourist_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 100
+		}
+	}
+	
+	triggered_desc = {
+		text = job_tourist_effect_desc
+	}
+}

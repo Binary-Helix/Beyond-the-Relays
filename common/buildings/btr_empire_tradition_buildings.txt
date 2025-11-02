@@ -1,0 +1,808 @@
+building_remnants_rak_1 = {
+    base_buildtime = 700
+    base_cap_amount = 3
+    category = manufacturing
+    icon = building_waste_reprocessing_center
+
+    building_sets = {
+        urban
+        mining
+    }
+
+    potential = {
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+        }
+        is_capital = yes
+        owner = {
+            has_tradition = tr_btr_survival_reuse
+        }
+    }
+
+    destroy_trigger = {
+        OR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            AND = {
+                exists = owner
+                owner = {
+                    is_ai = yes
+                }
+                has_any_industry_zone = no
+            }
+        }
+    }
+
+    planet_modifier = {
+        job_miner_add = 200
+        planet_miners_light_alloys_produces_add = 0.25
+        planet_miners_heavy_alloys_produces_add = 0.25
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 700
+        }
+        upkeep = {
+            energy = 8
+        }
+    }
+
+    prerequisites = {
+        tech_basic_industry
+    }
+}
+
+
+building_anarchy_omg_gang_barracks = {
+    base_buildtime = @btr_govt_b1_time
+
+    building_sets = {
+        government
+        urban
+    }
+
+    category = government
+
+    potential = {
+        owner = { is_regular_empire = yes }
+        NOT = { has_modifier = slave_colony }
+        NOT = { has_planet_flag = planetary_station }
+        owner = {
+            has_tradition = tr_btr_anarchy_adoption
+        }
+    }
+
+    allow = {
+        hidden_trigger = {
+            OR = {
+                owner = { is_ai = no }
+                AND = {
+                    NOT = { has_forbidden_jobs = enforcer }
+                    NOT = { has_available_jobs = enforcer }
+                }
+            }
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            NOT = {	owner = { is_regular_empire = yes }	}
+            AND = {
+                owner = { is_ai = yes } #Players dont like random buildings blowing up
+                planet = { has_building = building_hall_judgment }
+            }#This way the AI gets to reclaim its building slots that it sunk into this expense
+        }
+    }
+
+    planet_modifier = {
+        job_gang_enforcer_add = 200
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 400
+        }
+        upkeep = {
+            energy = 15
+        }
+        produces = {
+            trigger = {
+                owner = { has_technology = tech_asari_architecture }
+            }
+            unity = 0.2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner= {	has_technology = tech_asari_architecture }
+        }
+        modifier = {
+            planet_amenities_add = 100
+        }
+    }
+
+    prerequisites = {
+        "tech_planetary_government"
+    }
+
+    triggered_desc = {
+        text = job_enforcer_effect_desc
+    }
+
+    show_tech_unlock_if = {
+        is_regular_empire = yes
+        has_origin = omega_emp_origin
+    }
+}
+
+building_geth_con_creator_remnants = {
+    base_buildtime = @btr_govt_b1_time
+    base_cap_amount = 1
+    category = government
+
+    building_sets = {
+        urban
+        government
+        research
+    }
+
+    potential = {
+        owner = { is_regular_empire = yes }
+        NOT = { has_modifier = slave_colony }
+        NOT = { has_planet_flag = planetary_station }
+        owner = {
+            has_tradition = tr_btr_existence_unintentional
+        }
+
+    }
+
+    allow = {
+        hidden_trigger = {
+            OR = {
+                owner = { is_ai = no }
+                AND = {
+                    NOT = { has_forbidden_jobs = enforcer }
+                    NOT = { has_available_jobs = enforcer }
+                }
+            }
+        }
+        is_artificial = no
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            NOT = {	owner = { is_regular_empire = yes }	}
+            AND = {
+                owner = { is_ai = yes } #Players dont like random buildings blowing up
+                planet = { has_building = building_hall_judgment }
+            }#This way the AI gets to reclaim its building slots that it sunk into this expense
+        }
+    }
+
+    planet_modifier = {
+        job_coordinator_add = 100
+        job_custodian_add = 200
+        planet_jobs_upkeep_mult = -0.1
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 600
+        }
+        upkeep = {
+            energy = 4
+        }
+        produces = {
+            trigger = {
+                owner = { has_technology = tech_asari_architecture }
+            }
+            unity = 0.2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner= {	has_technology = tech_asari_architecture }
+        }
+        modifier = {
+            planet_amenities_add = 100
+        }
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = { is_gestalt = yes }
+        }
+        text = "job_chronicle_drone_effect_desc"
+    }
+
+    prerequisites = {
+        "tech_planetary_government"
+    }
+    show_tech_unlock_if = {
+        is_regular_empire = yes
+        has_origin = geth_con_origin
+    }
+}
+
+building_entertainment_leisure_nexus = {
+    base_buildtime = @b2_time
+    base_cap_amount = 1
+    category = amenity
+
+    building_sets = {
+        government
+        unity
+    }
+
+    potential = {
+        owner = {
+            has_tradition = tr_btr_entertainment_finish
+        }
+    }
+
+    allow = {
+        has_upgraded_capital = yes
+        owner = {
+            NOT = { has_valid_civic = civic_dystopian_society }
+        }
+        OR = {
+            owner = {
+                NOT = { is_ai = yes }
+            }
+            AND = {
+                NOT = { has_available_jobs = entertainer }
+                NOT = { has_forbidden_jobs = entertainer }
+            }
+        }
+        NOR = {
+            has_modifier = slave_colony
+            has_modifier = penal_colony
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        owner = { has_valid_civic = civic_dystopian_society }
+        OR = {
+            owner = { is_regular_empire = no }
+            has_modifier = slave_colony
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            owner = {
+                has_tradition = tr_btr_entertainment_bread_circus
+            }
+        }
+        modifier = {
+            planet_amenities_add = 100
+        }
+    }
+
+    planet_modifier = {
+        pop_happiness = 0.05
+        job_celebrity_add = 100
+        job_bureaucrat_add = 200
+    }
+
+    inline_script = {
+        script = jobs/entertainers_add
+        AMOUNT = @b1_jobs
+    }
+   # inline_script = {
+   #     script = jobs/bureaucrat_add
+   #     AMOUNT = @b2_jobs
+   # }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            exotic_gases = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b2_upkeep
+            exotic_gases = @b2_rare_upkeep
+        }
+    }
+
+    prerequisites = {
+        "tech_hyper_entertainment_forum"
+    }
+}
+
+building_archeology_conservatory = {
+    base_buildtime = @b2_time
+
+    category = research
+
+    building_sets = {
+        government
+        research
+        urban
+    }
+
+    empire_limit = {
+        base = 1
+    }
+
+    potential = {
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            has_modifier = penal_colony
+        }
+        exists = owner
+        owner = {
+            has_tradition = tr_btr_archeology_communal
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            has_modifier = penal_colony
+        }
+    }
+
+    allow = {
+        has_upgraded_capital = yes
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            minor_artifacts = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b4_upkeep
+        }
+    }
+
+    #inline_script = {
+     #   script = jobs/archaeoengineers_add
+      #  BASE_AMOUNT = 300
+       # AP_AMOUNT = 200
+    #}
+
+    planet_modifier = {
+        planet_jobs_society_research_produces_mult = 0.1
+        planet_resettlement_unemployed_destination_mult = 0.1
+     #   planet_resettlement_unemployed_destination_mult = 0.1
+
+        job_head_researcher_add = 100
+        job_biologist_add = 200
+        job_physicist_add = 200
+        job_engineer_add = 200
+        job_culture_worker_add = 200
+    }
+
+    country_modifier = {
+        category_archaeostudies_research_speed_mult = 0.5
+        country_resource_max_minor_artifacts_add = 1000
+        pop_happiness = 5
+    }
+
+    triggered_country_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_ascension_perk = ap_archaeoengineers
+            }
+        }
+        country_resource_max_minor_artifacts_add = 2000
+    }
+
+    triggered_country_modifier = {
+        potential = { planet = { is_planet_class = pc_relic } }
+        category_archaeostudies_research_speed_mult = 0.5
+    }
+
+    #prerequisites = {
+
+  #  }
+
+    triggered_desc = {
+        text = building_archaeostudies_faculty_relic_effect
+    }
+}
+
+building_laisez_alo_1 = {
+    base_buildtime = @b2_time
+
+    category = research
+
+    building_sets = {
+        government
+        research
+        urban
+    }
+
+    empire_limit = {
+        base = 1
+    }
+
+    potential = {
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            has_modifier = penal_colony
+        }
+        exists = owner
+        owner = {
+            has_tradition = tr_btr_laisez_alone
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            has_modifier = penal_colony
+        }
+    }
+
+    allow = {
+        has_upgraded_capital = yes
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            minor_artifacts = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b4_upkeep
+        }
+    }
+
+    #inline_script = {
+    #   script = jobs/archaeoengineers_add
+    #  BASE_AMOUNT = 300
+    # AP_AMOUNT = 200
+    #}
+
+    planet_modifier = {
+        planet_jobs_society_research_produces_mult = 0.05
+        planet_jobs_physics_research_produces_mult = 0.05
+        planet_jobs_engineering_research_produces_mult = 0.05
+
+        job_head_researcher_add = 100
+        job_biologist_add = 300
+        job_physicist_add = 300
+        job_engineer_add = 300
+    }
+
+   # country_modifier = {
+    #    category_archaeostudies_research_speed_mult = 0.5
+     #   country_resource_max_minor_artifacts_add = 1000
+     #   pop_happiness = 5
+    #}
+
+  #  triggered_country_modifier = {
+  #      potential = {
+  #          exists = owner
+  #          owner = {
+  #              has_ascension_perk = ap_archaeoengineers
+  #          }
+   #     }
+   #     country_resource_max_minor_artifacts_add = 2000
+   # }
+
+    triggered_planet_modifier = {
+        potential = { planet = { is_planet_class = pc_relic } }
+        planet_jobs_society_research_produces_mult = 0.05
+        planet_jobs_physics_research_produces_mult = 0.05
+        planet_jobs_engineering_research_produces_mult = 0.05
+    }
+
+    #prerequisites = {
+
+    #  }
+
+  #  triggered_desc = {
+  #      text = building_archaeostudies_faculty_relic_effect
+  #  }
+}
+
+building_laisez_alo_2 = {
+    base_buildtime = @b2_time
+
+    category = research
+
+    building_sets = {
+        industrial
+        foundry
+        urban
+    }
+
+    empire_limit = {
+        base = 1
+    }
+
+    potential = {
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            has_modifier = penal_colony
+        }
+        exists = owner
+        owner = {
+            has_tradition = tr_btr_laisez_alone
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            has_modifier = penal_colony
+        }
+    }
+
+    allow = {
+        has_upgraded_capital = yes
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            minor_artifacts = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b4_upkeep
+        }
+    }
+
+    #inline_script = {
+    #   script = jobs/archaeoengineers_add
+    #  BASE_AMOUNT = 300
+    # AP_AMOUNT = 200
+    #}
+
+    planet_modifier = {
+        job_btr_industrial_titan_add = 100
+        job_foundry_add = 200
+        job_artisan_add = 200
+    }
+
+     country_modifier = {
+         country_ship_upgrade_cost_mult = -0.2
+    }
+
+    #  triggered_country_modifier = {
+    #      potential = {
+    #          exists = owner
+    #          owner = {
+    #              has_ascension_perk = ap_archaeoengineers
+    #          }
+    #     }
+    #     country_resource_max_minor_artifacts_add = 2000
+    # }
+
+    triggered_planet_modifier = {
+        potential = { planet = { is_planet_class = pc_relic } }
+        planet_jobs_light_alloys_produces_mult = 0.1
+        planet_jobs_heavy_alloys_produces_mult = 0.1
+        planet_jobs_consumer_goods_produces_mult = 0.1
+        planet_amenities_add = 1500
+    }
+
+    #prerequisites = {
+
+    #  }
+
+    #  triggered_desc = {
+    #      text = building_archaeostudies_faculty_relic_effect
+    #  }
+}
+
+building_laisez_alo_3 = {
+    base_buildtime = @b2_time
+
+    category = research
+
+    building_sets = {
+        trade
+        generator
+        mining
+        farming
+        urban
+    }
+
+    empire_limit = {
+        base = 1
+    }
+
+    potential = {
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            has_modifier = penal_colony
+        }
+        exists = owner
+        owner = {
+            has_tradition = tr_btr_laisez_alone
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            has_modifier = penal_colony
+        }
+    }
+
+    allow = {
+        has_upgraded_capital = yes
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            minor_artifacts = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b4_upkeep
+        }
+    }
+
+    #inline_script = {
+    #   script = jobs/archaeoengineers_add
+    #  BASE_AMOUNT = 300
+    # AP_AMOUNT = 200
+    #}
+
+    planet_modifier = {
+        job_politician_add = 100
+        job_farmer_add = 200
+        job_miner_add = 200
+        job_technician_add = 200
+        job_bureaucrat_add = 100
+        pop_happiness = -0.1
+        planet_stability_add = -5
+    }
+
+  #  country_modifier = {
+  #      country_ship_upgrade_cost_mult = -0.2
+  #  }
+
+    #  triggered_country_modifier = {
+    #      potential = {
+    #          exists = owner
+    #          owner = {
+    #              has_ascension_perk = ap_archaeoengineers
+    #          }
+    #     }
+    #     country_resource_max_minor_artifacts_add = 2000
+    # }
+
+    triggered_planet_modifier = {
+        potential = { planet = { is_planet_class = pc_relic } }
+        planet_resettlement_unemployed_destination_mult = 0.25
+    #    planet_resettlement_unemployed_destination_mult = 0.25
+        planet_amenities_add = 2500
+        job_engineer_add = 100
+        job_physicist_add = 100
+        job_biologist_add = 100
+    }
+
+    #prerequisites = {
+
+    #  }
+
+    #  triggered_desc = {
+    #      text = building_archaeostudies_faculty_relic_effect
+    #  }
+}
+
+building_planned_economic_coordination = {
+    base_buildtime = @b2_time
+
+    category = research
+
+    building_sets = {
+        government
+        urban
+    }
+
+    empire_limit = {
+        base = 1
+    }
+
+    potential = {
+        NOR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            has_modifier = penal_colony
+        }
+        exists = owner
+        owner = {
+            has_tradition = tr_btr_planned_oversight
+        }
+    }
+
+    destroy_trigger = {
+        exists = owner
+        OR = {
+            has_modifier = resort_colony
+            has_modifier = slave_colony
+            has_modifier = penal_colony
+        }
+    }
+
+    allow = {
+        has_upgraded_capital = yes
+    }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @b2_minerals
+            minor_artifacts = @b2_rare_cost
+        }
+        upkeep = {
+            energy = @b4_upkeep
+        }
+    }
+
+    #inline_script = {
+    #   script = jobs/archaeoengineers_add
+    #  BASE_AMOUNT = 300
+    # AP_AMOUNT = 200
+    #}
+
+    planet_modifier = {
+        job_bureaucrat_add = 300
+        job_economic_coordinator_add = 100
+    }
+
+    #  country_modifier = {
+    #      country_ship_upgrade_cost_mult = -0.2
+    #  }
+
+    #  triggered_country_modifier = {
+    #      potential = {
+    #          exists = owner
+    #          owner = {
+    #              has_ascension_perk = ap_archaeoengineers
+    #          }
+    #     }
+    #     country_resource_max_minor_artifacts_add = 2000
+    # }
+
+ #   triggered_planet_modifier = {
+  #      potential = { planet = { is_planet_class = pc_relic } }
+   #     planet_resettlement_unemployed_destination_mult = 0.25
+    #    planet_amenities_add = 25
+     #   job_engineer_add = 100
+      #  job_physcist_add = 100
+       # job_biologist_add = 100
+    #}
+
+    #prerequisites = {
+
+    #  }
+
+    #  triggered_desc = {
+    #      text = building_archaeostudies_faculty_relic_effect
+    #  }
+}

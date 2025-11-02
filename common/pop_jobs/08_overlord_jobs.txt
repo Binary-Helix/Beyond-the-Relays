@@ -1,0 +1,3034 @@
+overlord_propagandist = {
+	category = specialist
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_propaganda_office
+		}
+	}
+
+	tags = { }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_overlord_propagandists
+		upkeep = {
+			unity = 1
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_propagandists
+		produces = {
+			influence = 0.15
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_propagandist_drone = {
+	category = complex_drone
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_propaganda_office
+			icon = overlord_propagandist
+		}
+	}
+
+	tags = { }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+	}
+
+	resources = {
+		category = planet_overlord_propagandists
+		upkeep = {
+			unity = 1
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_propagandists
+		produces = {
+			influence = 0.15
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_academic = {
+	category = specialist
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_satellite_campus
+		}
+	}
+
+	tags = { research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_overlord_academics
+		produces = {
+			physics_research = 1
+			engineering_research = 1
+			society_research = 1
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_academics
+		produces = {
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_academic_drone = {
+	category = complex_drone
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_satellite_campus
+			icon = overlord_academic
+		}
+	}
+
+	tags = { research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+	}
+
+	resources = {
+		category = planet_overlord_academics
+		produces = {
+			physics_research = 1
+			engineering_research = 1
+			society_research = 1
+		}
+		upkeep = {
+			trigger = { owner = { is_machine_empire = yes } }
+			energy = 4
+		}
+		upkeep = {
+			trigger = { owner = { is_hive_empire = yes } }
+			minerals = 6
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_academics
+		produces = {
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_trader = {
+	category = specialist
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_emporium
+		}
+	}
+
+	tags = { trade }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 1000
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+
+	resources = {
+		category = planet_overlord_traders
+		upkeep = {
+			trade = 7
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_traders
+		produces = {
+			trade = 7
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_trade"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_trader_drone = {
+	category = complex_drone
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_emporium
+			icon = overlord_trader
+		}
+	}
+
+	tags = { trade }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_no_happiness_add = 1000
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+
+	resources = {
+		category = planet_overlord_traders
+		upkeep = {
+			energy = 7
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_traders
+		produces = {
+			energy = 7
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_trade"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+aid_worker = {
+	category = worker
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_aid_agency
+		}
+	}
+
+	tags = { amenities loyalty }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 500
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	overlord_resources = {
+		category = planet_aid_workers
+		produces = {
+			unity = 5
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+aid_worker_drone = {
+	category = simple_drone
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_aid_agency
+			icon = aid_worker
+		}
+	}
+
+	tags = { amenities loyalty }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_no_happiness_add = 500
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+
+	overlord_resources = {
+		category = planet_aid_workers
+		produces = {
+			unity = 5
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = simple_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_breeder = {
+	category = specialist
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_splinter_hive
+		}
+	}
+
+	tags = { }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_overlord_breeders
+		upkeep = {
+			trigger = {
+				exists = owner.overlord
+				owner.overlord = { is_lithoid = yes }
+			}
+			minerals = 6
+		}
+		upkeep = {
+			trigger = {
+				exists = owner.overlord
+				owner.overlord = {
+					OR = {
+						is_machine_empire = yes
+						is_mechanical_empire = yes
+					}
+				}
+			}
+			energy = 6
+		}
+		upkeep = {
+			trigger = {
+				exists = owner.overlord
+				owner.overlord = {
+					is_lithoid = no
+					is_machine_empire = no
+					is_mechanical_empire = no
+				}
+			}
+			food = 6
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_breeder_drone = {
+	category = complex_drone
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_splinter_hive
+			icon = overlord_breeder
+		}
+	}
+
+	tags = { }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+	}
+
+	resources = {
+		category = planet_overlord_breeders
+		upkeep = {
+			trigger = {
+				exists = owner.overlord
+				owner.overlord = { is_lithoid = yes }
+			}
+			minerals = 6
+		}
+		upkeep = {
+			trigger = {
+				exists = owner.overlord
+				owner.overlord = {
+					OR = {
+						is_machine_empire = yes
+						is_mechanical_empire = yes
+					}
+				}
+			}
+			energy = 6
+		}
+		upkeep = {
+			trigger = {
+				exists = owner.overlord
+				owner.overlord = {
+					is_lithoid = no
+					is_machine_empire = no
+					is_mechanical_empire = no
+				}
+			}
+			food = 6
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+mind_thrall = {
+	category = worker
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_distributed_processing
+		}
+	}
+
+	tags = { research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	overlord_resources = {
+		category = planet_mind_thralls
+		produces = {
+			physics_research = 1.5
+			engineering_research = 1.5
+			society_research = 1.5
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+mind_thrall_drone = {
+	category = simple_drone
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_distributed_processing
+			icon = mind_thrall
+		}
+	}
+
+	tags = { research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	overlord_resources = {
+		category = planet_mind_thralls
+		produces = {
+			physics_research = 1.5
+			engineering_research = 1.5
+			society_research = 1.5
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = simple_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_offspring_drone_feeder = {
+	category = specialist
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_offspring_nest
+			icon = spawning_drone
+		}
+	}
+
+	tags = { }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	planet_modifier = {
+		planet_jobs_worker_produces_mult = 0.05
+	}
+
+	resources = {
+		category = planet_overlord_offspring_drone_feeder
+		upkeep = {
+			trigger = {
+				exists = owner.overlord
+				owner.overlord = { is_lithoid = yes }
+			}
+			minerals = 6
+		}
+		upkeep = {
+			trigger = {
+				exists = owner.overlord
+				owner.overlord = {
+					country_uses_food = yes
+				}
+			}
+			food = 6
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	overlord_resources = {
+		category = planet_overlord_offspring_drone_feeder
+		produces = {
+			society_research = 8
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_offspring_drone_feeder_drone = {
+	category = complex_drone
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_offspring_nest
+			icon = spawning_drone
+		}
+	}
+
+	tags = { }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+	}
+
+	planet_modifier = {
+		planet_jobs_simple_drone_produces_mult = 0.05
+	}
+
+	resources = {
+		category = planet_overlord_offspring_drone_feeder
+		upkeep = {
+			trigger = {
+				exists = owner.overlord
+				owner.overlord = { is_lithoid = yes }
+			}
+			minerals = 6
+		}
+		upkeep = {
+			trigger = {
+				exists = owner.overlord
+				owner.overlord = {
+					country_uses_food = yes
+				}
+			}
+			food = 6
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	overlord_resources = {
+		category = planet_overlord_offspring_drone_feeder
+		produces = {
+			society_research = 8
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_metallurgist = {
+	can_set_priority = no
+	is_capped_by_modifier = yes
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = holding_offworld_foundry
+			icon = foundry
+		}
+	}
+
+	tags = { alloys }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	resources = {
+		category = planet_overlord_metallurgists
+		upkeep = {
+			minerals = 6
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_metallurgists
+		produces = {
+			alloys = 3
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+	inline_script = "jobs/automodding_priority_alloys"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_foundry_drone = {
+	can_set_priority = no
+	is_capped_by_modifier = yes
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = holding_offworld_foundry
+			icon = alloy_drone
+		}
+	}
+
+	tags = { alloys }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+	}
+
+	resources = {
+		category = planet_overlord_metallurgists
+		upkeep = {
+			minerals = 6
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_metallurgists
+		produces = {
+			alloys = 3
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+	inline_script = "jobs/automodding_priority_alloys"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_fabricator = {
+	can_set_priority = no
+	is_capped_by_modifier = yes
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = holding_offworld_foundry
+			icon = fabricator
+		}
+	}
+
+	tags = { alloys }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+	}
+
+	resources = {
+		category = planet_overlord_metallurgists
+		upkeep = {
+			minerals = 8
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_metallurgists
+		produces = {
+			alloys = 4
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+	inline_script = "jobs/automodding_priority_alloys"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_catalytic_technician = {
+	can_set_priority = no
+	is_capped_by_modifier = yes
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = holding_offworld_foundry
+			icon = catalytic_technician
+		}
+	}
+
+	tags = { alloys }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_metallurgists
+		produces = {
+			alloys = 3
+		}
+	}
+
+	resources = {
+		category = planet_overlord_metallurgists
+		upkeep = {
+			food = 9
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+	inline_script = "jobs/automodding_priority_alloys"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_catalytic_drone = {
+	can_set_priority = no
+	is_capped_by_modifier = yes
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = holding_offworld_foundry
+			icon = catalytic_drone
+		}
+	}
+
+	tags = { alloys }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = { can_think = yes }
+
+	resources = {
+		category = planet_overlord_metallurgists
+		upkeep = {
+			food = 9
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_robot_empire = yes
+				}
+			}
+			food = 3
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_metallurgists
+		produces = {
+			alloys = 3
+		}
+
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_robot_empire = yes
+				}
+			}
+			alloys = 1
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+	inline_script = "jobs/automodding_priority_alloys"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_beholder = {
+	category = specialist
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_overlord_vigil_command
+		}
+	}
+
+	tags = { }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_overlord_beholders
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_specialist_subject_tier = {
+						TYPE = bulwark
+						TIER = 1
+					}
+				}
+			}
+			alloys = 2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_specialist_subject_tier = {
+						TYPE = bulwark
+						TIER = 2
+					}
+				}
+			}
+			alloys = 4
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_specialist_subject_tier = {
+						TYPE = bulwark
+						TIER = 3
+					}
+				}
+			}
+			alloys = 8
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_beholder_drone = {
+	category = complex_drone
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_overlord_vigil_command
+			icon = overlord_beholder
+		}
+	}
+
+	tags = { }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+	}
+
+	resources = {
+		category = planet_overlord_beholders
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_specialist_subject_tier = {
+						TYPE = bulwark
+						TIER = 1
+					}
+				}
+			}
+			alloys = 2
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_specialist_subject_tier = {
+						TYPE = bulwark
+						TIER = 2
+					}
+				}
+			}
+			alloys = 4
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_specialist_subject_tier = {
+						TYPE = bulwark
+						TIER = 3
+					}
+				}
+			}
+			alloys = 8
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_necromancer = {
+	category = specialist
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_dread_encampment
+			icon = necromancer
+		}
+	}
+
+	tags = { soldier research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_overlord_necromancers
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid = yes }
+			}
+			minerals = 6
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid = no
+					is_machine_empire = no
+					is_mechanical_empire = no
+				}
+			}
+			food = 6
+		}
+	}
+
+	planet_modifier = {
+		planet_defense_armies_add = 2
+	}
+	overlord_resources = {
+		category = planet_overlord_necromancers
+		produces = {
+			physics_research = 6
+			society_research = 6
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_necromancer_drone = {
+	category = complex_drone
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_dread_encampment
+			icon = overlord_beholder
+		}
+	}
+
+	tags = { soldier research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+	}
+
+	resources = {
+		category = planet_overlord_necromancers
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid = yes }
+			}
+			minerals = 6
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid = no
+					is_machine_empire = no
+					is_mechanical_empire = no
+				}
+			}
+			food = 6
+		}
+	}
+
+	planet_modifier = {
+		planet_defense_armies_add = 2
+	}
+	overlord_resources = {
+		category = planet_overlord_necromancers
+		produces = {
+			physics_research = 6
+			society_research = 6
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+
+overlord_reassigner = {
+	category = specialist
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_posthumous_employment_center
+			icon = necromancer
+		}
+	}
+
+	tags = { }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_overlord_reassigners
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid = yes }
+			}
+			minerals = 6
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid = no
+					is_machine_empire = no
+					is_mechanical_empire = no
+				}
+			}
+			food = 6
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_reassigner_drone = {
+	category = complex_drone
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_dread_encampment
+			icon = overlord_beholder
+		}
+	}
+
+	tags = { }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+	}
+
+	resources = {
+		category = planet_overlord_reassigners
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid = yes }
+			}
+			minerals = 6
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid = no
+					is_machine_empire = no
+					is_mechanical_empire = no
+				}
+			}
+			food = 6
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_recruiter = {
+	category = specialist
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_recruitment_office
+			icon = soldier
+		}
+	}
+
+	tags = { soldier }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_overlord_recruiters
+		upkeep = {
+			energy = 5
+			unity = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_defense_armies_add = 3
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_recruiter_drone = {
+	category = complex_drone
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_recruitment_office
+			icon = overlord_beholder
+		}
+	}
+
+	tags = { soldier }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+	}
+
+	resources = {
+		category = planet_overlord_recruiters
+		upkeep = {
+			energy = 5
+			unity = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_defense_armies_add = 3
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_ranger = {
+	category = worker
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_park_ranger_lodge
+			icon = ranger
+		}
+	}
+
+	tags = { unity }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+
+	planet_modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.1
+	}
+
+	overlord_resources = {
+		category = planet_overlord_rangers
+		produces = {
+			unity = 10
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_ranger_drone = {
+	category = simple_drone
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_park_ranger_lodge
+			icon = ranger
+		}
+	}
+
+	tags = { unity }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				country_uses_consumer_goods = yes
+			}
+		}
+		planet_pops_consumer_goods_upkeep_mult = -0.1
+	}
+
+	overlord_resources = {
+		category = planet_overlord_rangers
+		produces = {
+			unity = 10
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = simple_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_arborist = {
+	category = worker
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_tree_of_life_sapling
+			icon = ranger
+		}
+	}
+
+	tags = { food }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+
+	resources = {
+		category = planet_overlord_arborists
+		upkeep = {
+			food = 10
+		}
+	}
+	overlord_resources = {
+		category = planet_overlord_arborists
+		produces = {
+			food = 15
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_food"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_arborist_drone = {
+	category = simple_drone
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_tree_of_life_sapling
+			icon = ranger
+		}
+	}
+
+	tags = { food }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	resources = {
+		category = planet_overlord_arborists
+		upkeep = {
+			food = 10
+		}
+	}
+	overlord_resources = {
+		category = planet_overlord_arborists
+		produces = {
+			food = 15
+		}
+	}
+
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_food"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = simple_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_bio_trophy = {
+	category = worker
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_organic_sanctuary
+			icon = bio_trophy
+		}
+	}
+
+	tags = { unity }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+
+	possible = {
+		is_robotic_species = no
+	}
+
+	resources = {
+		category = planet_overlord_bio_trophies
+		produces = {
+			unity = 2
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_bio_trophies
+		produces = {
+			unity = 3
+		}
+	}
+	planet_modifier = {
+		pop_happiness = 0.01
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_bio_trophy_drone = {
+	category = simple_drone
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_organic_sanctuary
+			icon = bio_trophy
+		}
+	}
+
+	tags = { unity }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = {
+		is_robotic_species = no
+	}
+
+	resources = {
+		category = planet_overlord_bio_trophies
+		produces = {
+			unity = 1
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_bio_trophies
+		produces = {
+			unity = 2
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = simple_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_manager = {
+	category = specialist
+
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = holding_franchise_headquarters
+			icon = manager
+		}
+	}
+
+	tags = { trade unity }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	resources = {
+		category = planet_overlord_managers
+		produces = {
+			unity = 4
+			trade = 1
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_managers
+		produces = {
+			unity = 0.25
+		}
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_trade"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_mortal_initiate = {
+	category = worker
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_sacrificial_temple_2
+			icon = mortal_initiate
+		}
+	}
+
+	tags = { unity research amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+
+	possible = {
+		is_robotic_species = no
+		NOT = { has_trait = trait_zombie } #How do you kill that which has no life?
+	}
+
+
+	resources = {
+		category = planet_overlord_mortal_initiates
+		produces = {
+			unity = 2
+			society_research = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_mortal_initiate_drone = {
+	category = simple_drone
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_sacrificial_temple_2
+			icon = mortal_initiate
+		}
+	}
+
+	tags = { unity research amenities }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = {
+		is_robotic_species = no
+		NOT = { has_trait = trait_zombie } #How do you kill that which has no life?
+	}
+
+	resources = {
+		category = planet_overlord_mortal_initiates
+		produces = {
+			unity = 2
+			society_research = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_no_happiness_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = simple_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_bath_attendant = {
+	category = specialist
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_toxic_bath
+			icon = bath_attendant
+		}
+	}
+
+	tags = { unity }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+
+	resources = {
+		category = planet_overlord_bath_attendants
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_bath_attendants
+		produces = {
+			unity = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		logistic_growth_mult = 0.015
+		pop_environment_tolerance = -0.005
+		pop_happiness = -0.005
+		mult = planet.value:toxic_attendant_growth
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_bath_attendant_hive = {
+	category = complex_drone
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_toxic_bath
+			icon = bath_attendant
+		}
+	}
+
+	tags = { unity }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+	}
+
+	resources = {
+		category = planet_overlord_bath_attendants_hive
+		upkeep = {
+			food = 2
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_bath_attendants_hive
+		produces = {
+			unity = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		bonus_pop_growth_mult = 0.02
+		pop_environment_tolerance = -0.0075
+		mult = planet.value:toxic_attendant_growth
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_bath_attendant_machine = {
+	category = complex_drone
+	can_set_priority = no
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_toxic_bath
+			icon = bath_attendant
+		}
+	}
+
+	tags = { unity }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	possible = {
+		can_think = yes
+	}
+
+	resources = {
+		category = planet_overlord_bath_attendants_machine
+		upkeep = {
+			minerals = 2
+		}
+	}
+
+	overlord_resources = {
+		category = planet_overlord_bath_attendants_machine
+		produces = {
+			unity = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_pop_assembly_mult = 0.015
+		pop_amenities_usage_mult = 0.01
+		mult = planet.value:toxic_attendant_growth
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_knight = {
+	category = specialist
+	can_set_priority = no
+
+	swappable_data = {
+		default = {
+			building_icon = building_order_keep
+			icon = knight
+		}
+	}
+
+	tags = { unity research soldier }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	overlord_resources = {
+		category = planet_knights
+		produces = {
+			unity = 2
+			mult = value:knights_unity_output_modifier
+		}
+		produces = {
+			physics_research = 2
+			engineering_research = 2
+			society_research = 2
+			mult = value:knights_research_output_modifier
+		}
+	}
+
+	resources = {
+		category = planet_knights
+		upkeep = {
+			alloys = 1
+			trigger = {
+				exists = owner.overlord
+				owner.overlord = {
+					NOT = {
+						has_modifier = luminous_blades
+					}
+				}
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_add = 3
+		planet_defense_armies_add = 2
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+		mult = value:job_weights_modifier|JOB|overlord_knight|RESOURCE|unity|
+		mult = value:job_weights_research_modifier|JOB|overlord_knight|
+		modifier = {
+			factor = 0
+			is_enslaved = yes
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_knight_drone = {
+	category = complex_drone
+	can_set_priority = no
+
+	swappable_data = {
+		default = {
+			building_icon = building_order_keep
+			icon = knight
+		}
+	}
+
+	tags = { unity research soldier }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = yes
+		}
+	}
+
+	overlord_resources = {
+		category = planet_knights
+		produces = {
+			unity = 2
+			mult = value:knights_unity_output_modifier
+		}
+		produces = {
+			physics_research = 2
+			engineering_research = 2
+			society_research = 2
+			mult = value:knights_research_output_modifier
+		}
+	}
+
+	resources = {
+		category = planet_knights
+		upkeep = {
+			alloys = 1
+			trigger = {
+				exists = owner.overlord
+				owner.overlord = {
+					NOT = {
+						has_modifier = luminous_blades
+					}
+				}
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_add = 3
+		planet_defense_armies_add = 2
+	}
+
+	weight = {
+		weight = @overlord_job_weight
+		modifier = {
+			factor = 0
+			is_enslaved = yes
+		}
+		mult = value:job_weights_modifier|JOB|overlord_knight_drone|RESOURCE|unity|
+		mult = value:job_weights_research_modifier|JOB|overlord_knight_drone|
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_healthcare = {
+	category = specialist
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_medical_2
+		}
+	}
+
+	tags = { }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+
+	planet_modifier = {
+		logistic_growth_mult = 0.05
+		bonus_pop_growth_mult = 0.05
+		pop_environment_tolerance = 0.025
+	}
+
+	resources = {
+		category = planet_doctors
+		upkeep = {
+			consumer_goods = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_private_healthcare_corporate }
+			}
+			trade = 4
+		}
+		produces = {
+			trigger = {
+				exists = planet
+				planet = { has_planet_flag = has_private_clinics }
+			}
+			trade = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				NOT = { has_valid_civic = civic_dystopian_society }
+			}
+		}
+		planet_amenities_add = 500
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_private_healthcare_corporate }
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			planet = { has_planet_flag = has_private_clinics }
+		}
+		planet_amenities_add = 100
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			owner = { has_valid_civic = civic_private_healthcare_corporate }
+		}
+		modifier = {
+			factor = 1.5
+			planet = {
+				has_branch_office = yes
+				branch_office_owner = {
+					has_valid_civic = civic_private_healthcare_corporate
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+
+		modifier = {
+			factor = 10
+			planet = {
+				free_amenities < 0
+				has_available_jobs = healthcare
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_replicator = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_robot_assembly_plant
+		}
+	}
+
+	tags = { }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = { can_think = yes }
+
+	planet_modifier = {
+		planet_pop_assembly_add = 1
+	}
+
+	resources = {
+		category = planet_pop_assemblers
+		upkeep = {
+			alloys = 1
+		}
+	}
+
+	weight = {
+		weight = @spawner_drone_job_weight
+		modifier = {
+			factor = 0.01 # crisis purge
+			exists = planet
+			exists = planet.controller
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_spawning_drone = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_spawning_pool
+		}
+	}
+
+	tags = { }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = {
+		can_think = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_no_happiness_add = 500
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			is_hive_species = yes
+		}
+		bonus_pop_growth = 2
+	}
+
+	triggered_planet_modifier = {
+		fake_pop_growth_mod = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_necrophage }
+			exists = planet.growing_species
+			planet.growing_species = {
+				NOT = { has_trait = trait_hive_mind }
+			}
+		}
+		modifier = {
+			logistic_growth_mult = 0.1
+		}
+	}
+
+	resources = {
+		category = planet_pop_assemblers
+		upkeep = {
+			trigger = {
+				exists = planet.assembling_species
+				planet.assembling_species = { is_lithoid = no }
+			}
+			food = 5
+		}
+		upkeep = {
+			trigger = {
+				exists = planet.assembling_species
+				planet.assembling_species = { is_lithoid = yes }
+			}
+			minerals = 5
+		}
+	}
+
+	weight = {
+		weight = @spawner_drone_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.5 # job is less useful if pop control is active, but still gives amenities
+			planet = {
+				has_modifier = planet_population_control_gestalt
+			}
+		}
+		modifier = {
+			factor = 0.01 # crisis purge
+			exists = planet
+			exists = planet.controller
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+overlord_spawning_drone_lithoid = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_spawning_pool
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = {
+		can_think = yes
+		is_lithoid = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_no_happiness_add = 500
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_pop_group_modifier_for_species = {
+		potential = {
+			is_hive_species = yes
+		}
+		bonus_pop_growth = 2
+	}
+
+	triggered_planet_modifier = {
+		fake_pop_growth_mod = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_necrophage }
+			exists = planet.growing_species
+			planet.growing_species = {
+				NOT = { has_trait = trait_hive_mind }
+			}
+		}
+		modifier = {
+			logistic_growth_mult = 0.1
+		}
+	}
+
+	resources = {
+		category = planet_jobs
+		upkeep = {
+			minerals = 5
+		}
+	}
+
+	weight = {
+		weight = @spawner_drone_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.5 # job is less useful if pop control is active, but still gives amenities
+			planet = {
+				has_modifier = planet_population_control_gestalt
+			}
+		}
+		modifier = {
+			factor = 0.01 # crisis purge
+			exists = planet
+			exists = planet.controller
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = complex_drone
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}

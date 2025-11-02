@@ -4,7 +4,7 @@ tr_btr_newcomers_adoption = {
     }
     unlocks_agenda = agenda_newcomers
     modifier = {
-        pop_demotion_time_mult = -0.15
+        pop_unemployment_demotion_time_mult = -0.15
   #      country_researchers_produces_mult = 0.15
         planet_researchers_produces_mult = 0.15
     }
@@ -52,7 +52,7 @@ tr_btr_newcomers_room_to_grow = {
     possible = { has_tradition = tr_btr_newcomers_buffet_of_advancement }
     modifier = {
         logistic_growth_mult = 0.1
-      #  pop_growth_speed = 0.1
+      #  founder_species_growth_mult = 0.1
         pop_housing_usage_mult = -0.05
     }
 }

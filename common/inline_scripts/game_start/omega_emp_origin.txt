@@ -1,0 +1,18 @@
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                has_origin = omega_emp_origin
+            }
+        }
+        has_planet_flag = omega_station
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_hab_major_capital
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_hab_housing }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_hab_science }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_hab_energy }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_hab_mining }
+}

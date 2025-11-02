@@ -24,7 +24,7 @@ tr_btr_acquisition_finish = {
 tr_btr_acquisition_flexible_society = {
     #Handled through galcom.300
     modifier = {
-        pop_demotion_time_mult = -1
+        pop_unemployment_demotion_time_mult = -1
         pop_amenities_usage_mult = -0.1
     }
     ai_weight = {
@@ -71,7 +71,7 @@ tr_btr_acquisition_everything_commerce = {
     modifier = {
         job_politician_per_pop = 0.033
         job_preacher_per_pop = 0.033
-      #  trade_value_mult = 0.2
+      #  planet_traders_trade_produces_mult = 0.2
         planet_jobs_trade_produces_mult = 0.2
     }
     #Handled through galcom.310-315

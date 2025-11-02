@@ -1,3 +1,19 @@
+helium_3_upkeep_buffer = {
+	resource = helium_3
+	type = upkeep
+	category = buffer
+
+	potential = {
+		always = yes
+	}
+	weight = {
+		weight = 0.1
+	}
+	desired_max = {
+		base = 1000
+	}
+}
+
 helium_3_upkeep_planets = {
 	resource = helium_3
 	type = upkeep
@@ -10,4 +26,38 @@ helium_3_upkeep_planets = {
 	weight = {
 		weight = 0.70
 	}
+
+	desired_max = { base = 2000 }
 }
+
+# helium_3_expenditure_ship_components = {
+# 	resource = helium_3
+# 	type = expenditure
+# 	category = ship_components
+#
+# 	potential = {
+# 		has_technology = tech_helium3_fusion
+# 	}
+# 	weight = {
+# 		weight = 0.20
+# 	}
+# 	desired_max = {
+# 		base = 800
+# 	}
+# }
+#
+# helium_3_expenditure_planets = {
+# 	resource = helium_3
+# 	type = expenditure
+# 	category = planets
+#
+# 	potential = {
+# 		has_technology = tech_helium3_fusion
+# 	}
+# 	weight = {
+# 		weight = 0.10
+# 	}
+# 	desired_max = {
+# 		base = 400
+# 	}
+# }

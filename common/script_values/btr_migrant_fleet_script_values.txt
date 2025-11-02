@@ -1,0 +1,509 @@
+#TRADE VALUE
+migrant_fle_system_trade_value_income = {
+	base = 1
+	set = migrant_fle_total_trade_value_production
+}
+migrant_fle_trade_value_1_production = {
+	base = 1
+	mult = prev.migrant_fle_trade_value_1_count
+}
+migrant_fle_trade_value_2_production = {
+	base = 2
+	mult = prev.migrant_fle_trade_value_2_count
+}
+migrant_fle_trade_value_3_production = {
+	base = 3
+	mult = prev.migrant_fle_trade_value_3_count
+}
+migrant_fle_trade_value_4_production = {
+	base = 4
+	mult = prev.migrant_fle_trade_value_4_count
+}
+migrant_fle_trade_value_5_production = {
+	base = 5
+	mult = prev.migrant_fle_trade_value_5_count
+}
+migrant_fle_trade_value_6_production = {
+	base = 6
+	mult = prev.migrant_fle_trade_value_6_count
+}
+migrant_fle_trade_value_7_production = {
+	base = 7
+	mult = prev.migrant_fle_trade_value_7_count
+}
+migrant_fle_trade_value_8_production = {
+	base = 8
+	mult = prev.migrant_fle_trade_value_8_count
+}
+migrant_fle_trade_value_9_production = {
+	base = 9
+	mult = prev.migrant_fle_trade_value_9_count
+}
+migrant_fle_trade_value_10_production = {
+	base = 10
+	mult = prev.migrant_fle_trade_value_10_count
+}
+#ENERGY
+migrant_fle_system_energy_income = {
+	base = 1
+	mult = migrant_fle_total_energy_production
+}
+migrant_fle_energy_1_production = {
+	base = 1
+	mult = prev.migrant_fle_energy_1_count
+}
+migrant_fle_energy_2_production = {
+	base = 2
+	mult = prev.migrant_fle_energy_2_count
+}
+migrant_fle_energy_3_production = {
+	base = 3
+	mult = prev.migrant_fle_energy_3_count
+}
+migrant_fle_energy_4_production = {
+	base = 4
+	mult = prev.migrant_fle_energy_4_count
+}
+migrant_fle_energy_5_production = {
+	base = 5
+	mult = prev.migrant_fle_energy_5_count
+}
+migrant_fle_energy_6_production = {
+	base = 6
+	mult = prev.migrant_fle_energy_6_count
+}
+migrant_fle_energy_7_production = {
+	base = 7
+	mult = prev.migrant_fle_energy_7_count
+}
+migrant_fle_energy_8_production = {
+	base = 8
+	mult = prev.migrant_fle_energy_8_count
+}
+migrant_fle_energy_9_production = {
+	base = 9
+	mult = prev.migrant_fle_energy_9_count
+}
+migrant_fle_energy_10_production = {
+	base = 10
+	mult = prev.migrant_fle_energy_10_count
+}
+#MINERALS
+migrant_fle_system_minerals_income = {
+	base = 1
+	set = migrant_fle_total_minerals_production
+}
+migrant_fle_minerals_1_production = {
+	base = 1
+	mult = prev.migrant_fle_minerals_1_count
+}
+migrant_fle_minerals_2_production = {
+	base = 2
+	mult = prev.migrant_fle_minerals_2_count
+}
+migrant_fle_minerals_3_production = {
+	base = 3
+	mult = prev.migrant_fle_minerals_3_count
+}
+migrant_fle_minerals_4_production = {
+	base = 4
+	mult = prev.migrant_fle_minerals_4_count
+}
+migrant_fle_minerals_5_production = {
+	base = 5
+	mult = prev.migrant_fle_minerals_5_count
+}
+migrant_fle_minerals_6_production = {
+	base = 6
+	mult = prev.migrant_fle_minerals_6_count
+}
+migrant_fle_minerals_7_production = {
+	base = 7
+	mult = prev.migrant_fle_minerals_7_count
+}
+migrant_fle_minerals_8_production = {
+	base = 8
+	mult = prev.migrant_fle_minerals_8_count
+}
+migrant_fle_minerals_9_production = {
+	base = 9
+	mult = prev.migrant_fle_minerals_9_count
+}
+migrant_fle_minerals_10_production = {
+	base = 10
+	mult = prev.migrant_fle_minerals_10_count
+}
+#FOOD
+migrant_fle_system_food_income = {
+	base = 1
+	set = migrant_fle_total_food_production
+}
+migrant_fle_food_3_production = {
+	base = 3
+	mult = prev.migrant_fle_food_3_count
+}
+migrant_fle_food_10_production = {
+	base = 10
+	mult = prev.migrant_fle_food_10_count
+}
+#ALLOYS
+migrant_fle_system_alloys_income = {
+	base = 1
+	set = migrant_fle_total_alloys_production
+}
+migrant_fle_alloys_1_production = {
+	base = 1
+	mult = prev.migrant_fle_alloys_1_count
+}
+migrant_fle_alloys_2_production = {
+	base = 2
+	mult = prev.migrant_fle_alloys_2_count
+}
+migrant_fle_alloys_3_production = {
+	base = 3
+	mult = prev.migrant_fle_alloys_3_count
+}
+migrant_fle_alloys_4_production = {
+	base = 4
+	mult = prev.migrant_fle_alloys_4_count
+}
+migrant_fle_alloys_5_production = {
+	base = 5
+	mult = prev.migrant_fle_alloys_5_count
+}
+migrant_fle_alloys_10_production = {
+	base = 10
+	mult = prev.migrant_fle_alloys_10_count
+}
+migrant_fle_alloys_25_production = {
+	base = 25
+	mult = prev.migrant_fle_alloys_25_count
+}
+#EXOTIC GASES
+migrant_fle_system_exotic_gases_income = {
+	base = 1
+	set = migrant_fle_total_exotic_gases_production
+}
+migrant_fle_exotic_gases_1_production = {
+	base = 1
+	mult = prev.migrant_fle_exotic_gases_1_count
+}
+migrant_fle_exotic_gases_2_production = {
+	base = 2
+	mult = prev.migrant_fle_exotic_gases_2_count
+}
+migrant_fle_exotic_gases_3_production = {
+	base = 3
+	mult = prev.migrant_fle_exotic_gases_3_count
+}
+migrant_fle_exotic_gases_4_production = {
+	base = 4
+	mult = prev.migrant_fle_exotic_gases_4_count
+}
+migrant_fle_exotic_gases_5_production = {
+	base = 5
+	mult = prev.migrant_fle_exotic_gases_5_count
+}
+#VOLATILE MOTES
+migrant_fle_system_volatile_motes_income = {
+	base = 1
+	set = migrant_fle_total_volatile_motes_production
+}
+migrant_fle_volatile_motes_1_production = {
+	base = 1
+	mult = prev.migrant_fle_volatile_motes_1_count
+}
+migrant_fle_volatile_motes_2_production = {
+	base = 2
+	mult = prev.migrant_fle_volatile_motes_2_count
+}
+migrant_fle_volatile_motes_3_production = {
+	base = 3
+	mult = prev.migrant_fle_volatile_motes_3_count
+}
+migrant_fle_volatile_motes_4_production = {
+	base = 4
+	mult = prev.migrant_fle_volatile_motes_4_count
+}
+migrant_fle_volatile_motes_5_production = {
+	base = 5
+	mult = prev.migrant_fle_volatile_motes_5_count
+}
+#RARE CRYSTALS
+migrant_fle_system_rare_crystals_income = {
+	base = 1
+	set = migrant_fle_total_rare_crystals_production
+}
+migrant_fle_rare_crystals_1_production = {
+	base = 1
+	mult = prev.migrant_fle_rare_crystals_1_count
+}
+migrant_fle_rare_crystals_2_production = {
+	base = 2
+	mult = prev.migrant_fle_rare_crystals_2_count
+}
+migrant_fle_rare_crystals_3_production = {
+	base = 3
+	mult = prev.migrant_fle_rare_crystals_3_count
+}
+migrant_fle_rare_crystals_4_production = {
+	base = 4
+	mult = prev.migrant_fle_rare_crystals_4_count
+}
+migrant_fle_rare_crystals_5_production = {
+	base = 5
+	mult = prev.migrant_fle_rare_crystals_5_count
+}
+#ZRO
+migrant_fle_system_sr_zro_income = {
+	base = 1
+	set = migrant_fle_total_sr_zro_production
+}
+migrant_fle_zro_deposit_1_production = {
+	base = 1
+	mult = prev.migrant_fle_zro_deposit_1_count
+}
+migrant_fle_zro_deposit_2_production = {
+	base = 2
+	mult = prev.migrant_fle_zro_deposit_2_count
+}
+migrant_fle_zro_deposit_3_production = {
+	base = 3
+	mult = prev.migrant_fle_zro_deposit_3_count
+}
+migrant_fle_zro_deposit_4_production = {
+	base = 4
+	mult = prev.migrant_fle_zro_deposit_4_count
+}
+migrant_fle_zro_deposit_5_production = {
+	base = 5
+	mult = prev.migrant_fle_zro_deposit_5_count
+}
+#DARK MATTER
+migrant_fle_system_sr_dark_matter_income = {
+	base = 1
+	set = migrant_fle_total_sr_dark_matter_production
+}
+migrant_fle_dark_matter_deposit_1_production = {
+	base = 1
+	mult = prev.migrant_fle_dark_matter_deposit_1_count
+}
+migrant_fle_dark_matter_deposit_2_production = {
+	base = 2
+	mult = prev.migrant_fle_dark_matter_deposit_2_count
+}
+migrant_fle_dark_matter_deposit_3_production = {
+	base = 3
+	mult = prev.migrant_fle_dark_matter_deposit_3_count
+}
+migrant_fle_dark_matter_deposit_4_production = {
+	base = 4
+	mult = prev.migrant_fle_dark_matter_deposit_4_count
+}
+migrant_fle_dark_matter_deposit_5_production = {
+	base = 5
+	mult = prev.migrant_fle_dark_matter_deposit_5_count
+}
+migrant_fle_dark_matter_deposit_10_production = {
+	base = 10
+	mult = prev.migrant_fle_dark_matter_deposit_10_count
+}
+#LIVING METAL
+migrant_fle_system_sr_living_metal_income = {
+	base = 1
+	set = migrant_fle_total_sr_living_metal_production
+}
+migrant_fle_living_metal_1_production = {
+	base = 1
+	mult = prev.migrant_fle_living_metal_1_count
+}
+#NANITES
+migrant_fle_system_nanites_income = {
+	base = 3
+	set = migrant_fle_nanites_3_production
+}
+#MINOR ARTIFACTS
+migrant_fle_system_minor_artifacts_income = {
+	base = 1
+	set = migrant_fle_total_minor_artifacts_production
+}
+migrant_fle_minor_artifacts_research_1_production = {
+	base = 1
+	mult = prev.migrant_fle_minor_artifacts_research_1_count
+}
+migrant_fle_minor_artifacts_research_2_production = {
+	base = 2
+	mult = prev.migrant_fle_minor_artifacts_research_2_count
+}
+migrant_fle_minor_artifacts_research_3_production = {
+	base = 3
+	mult = prev.migrant_fle_minor_artifacts_research_3_count
+}
+migrant_fle_minor_artifacts_mining_1_production = {
+	base = 1
+	mult = prev.migrant_fle_minor_artifacts_mining_1_count
+}
+migrant_fle_minor_artifacts_mining_2_production = {
+	base = 2
+	mult = prev.migrant_fle_minor_artifacts_mining_2_count
+}
+migrant_fle_minor_artifacts_mining_3_production = {
+	base = 3
+	mult = prev.migrant_fle_minor_artifacts_mining_3_count
+}
+#ASTRAL THREADS
+migrant_fle_system_astral_threads_income = {
+	base = 1
+	set = migrant_fle_total_astral_threads_production
+}
+migrant_fle_astral_threads_1_production = {
+	base = 1
+	mult = prev.migrant_fle_astral_threads_1_count
+}
+migrant_fle_astral_threads_2_production = {
+	base = 2
+	mult = prev.migrant_fle_astral_threads_2_count
+}
+migrant_fle_astral_threads_3_production = {
+	base = 3
+	mult = prev.migrant_fle_astral_threads_3_count
+}
+#SOCIETY RESEARCH
+migrant_fle_system_society_income = {
+	base = 1
+	set = migrant_fle_total_society_production
+}
+migrant_fle_society_1_production = {
+	base = 1
+	mult = prev.migrant_fle_society_1_count
+}
+migrant_fle_society_2_production = {
+	base = 2
+	mult = prev.migrant_fle_society_2_count
+}
+migrant_fle_society_3_production = {
+	base = 3
+	mult = prev.migrant_fle_society_3_count
+}
+migrant_fle_society_4_production = {
+	base = 4
+	mult = prev.migrant_fle_society_4_count
+}
+migrant_fle_society_5_production = {
+	base = 5
+	mult = prev.migrant_fle_society_5_count
+}
+migrant_fle_society_6_production = {
+	base = 6
+	mult = prev.migrant_fle_society_6_count
+}
+migrant_fle_society_7_production = {
+	base = 7
+	mult = prev.migrant_fle_society_7_count
+}
+migrant_fle_society_8_production = {
+	base = 8
+	mult = prev.migrant_fle_society_8_count
+}
+migrant_fle_society_9_production = {
+	base = 9
+	mult = prev.migrant_fle_society_9_count
+}
+migrant_fle_society_10_production = {
+	base = 10
+	mult = prev.migrant_fle_society_10_count
+}
+migrant_fle_society_15_production = {
+	base = 15
+	mult = prev.migrant_fle_society_15_count
+}
+#PHYSICS RESEARCH
+migrant_fle_system_physics_income = {
+	base = 1
+	set = migrant_fle_total_physics_production
+}
+migrant_fle_physics_1_production = {
+	base = 1
+	mult = prev.migrant_fle_physics_1_count
+}
+migrant_fle_physics_2_production = {
+	base = 2
+	mult = prev.migrant_fle_physics_2_count
+}
+migrant_fle_physics_3_production = {
+	base = 3
+	mult = prev.migrant_fle_physics_3_count
+}
+migrant_fle_physics_4_production = {
+	base = 4
+	mult = prev.migrant_fle_physics_4_count
+}
+migrant_fle_physics_5_production = {
+	base = 5
+	mult = prev.migrant_fle_physics_5_count
+}
+migrant_fle_physics_6_production = {
+	base = 6
+	mult = prev.migrant_fle_physics_6_count
+}
+migrant_fle_physics_7_production = {
+	base = 7
+	mult = prev.migrant_fle_physics_7_count
+}
+migrant_fle_physics_8_production = {
+	base = 8
+	mult = prev.migrant_fle_physics_8_count
+}
+migrant_fle_physics_9_production = {
+	base = 9
+	mult = prev.migrant_fle_physics_9_count
+}
+migrant_fle_physics_10_production = {
+	base = 10
+	mult = prev.migrant_fle_physics_10_count
+}
+#ENGINEERING  RESEARCH
+migrant_fle_system_engineering_income = {
+	base = 1
+	set = migrant_fle_total_engineering_production
+}
+migrant_fle_engineering_1_production = {
+	base = 1
+	mult = prev.migrant_fle_engineering_1_count
+}
+migrant_fle_engineering_2_production = {
+	base = 2
+	mult = prev.migrant_fle_engineering_2_count
+}
+migrant_fle_engineering_3_production = {
+	base = 3
+	mult = prev.migrant_fle_engineering_3_count
+}
+migrant_fle_engineering_4_production = {
+	base = 4
+	mult = prev.migrant_fle_engineering_4_count
+}
+migrant_fle_engineering_5_production = {
+	base = 5
+	mult = prev.migrant_fle_engineering_5_count
+}
+migrant_fle_engineering_6_production = {
+	base = 6
+	mult = prev.migrant_fle_engineering_6_count
+}
+migrant_fle_engineering_7_production = {
+	base = 7
+	mult = prev.migrant_fle_engineering_7_count
+}
+migrant_fle_engineering_8_production = {
+	base = 8
+	mult = prev.migrant_fle_engineering_8_count
+}
+migrant_fle_engineering_9_production = {
+	base = 9
+	mult = prev.migrant_fle_engineering_9_count
+}
+migrant_fle_engineering_10_production = {
+	base = 10
+	mult = prev.migrant_fle_engineering_10_count
+}

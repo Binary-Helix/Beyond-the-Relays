@@ -454,6 +454,78 @@ weapon_component_template = {
 	}
 }
 
+## Perdition Beam
+weapon_component_template = {
+	key = "PERDITION_BEAM_ION"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+
+	icon = "GFX_ship_part_perdition_beam"
+	icon_frame = 1
+
+	firing_arc = 10.0
+	use_ship_main_target = no
+
+	tags = { weapon_type_energy weapon_role_artillery t_slot }
+
+	prerequisites = { "tech_titans" }
+	component_set = "PERDITION_BEAM"
+	projectile_gfx = "ion_cannon"
+	potential = {
+		OR = {
+			ship_uses_ion_cannon_components = yes
+			ship_uses_dsc_components = yes
+		}
+	}
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @titanic_t6_cost
+			#rare_crystals = @titanic_t6_rare
+			light_alloys = @titanic_t6_cost
+			heavy_alloys = @titanic_t6_cost
+			eezo = @titanic_t6_rare
+		}
+		upkeep = {
+			#alloys = @titanic_t6_upkeep_alloys
+			iridium = @titanic_t6_upkeep_alloys
+		}
+		upkeep = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			energy = @titanic_t6_upkeep_energy
+		}
+		upkeep = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @titanic_t6_upkeep_energy
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 1.5
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 # ## Titan Lance
 weapon_component_template = {
 	key = "TITAN_LASER"

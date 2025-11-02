@@ -1,3 +1,19 @@
+hydrogen_upkeep_buffer = {
+	resource = hydrogen
+	type = upkeep
+	category = buffer
+
+	potential = {
+		always = yes
+	}
+	weight = {
+		weight = 0.1
+	}
+	desired_max = {
+		base = 1000
+	}
+}
+
 hydrogen_upkeep_planets = {
 	resource = hydrogen
 	type = upkeep
@@ -10,4 +26,22 @@ hydrogen_upkeep_planets = {
 	weight = {
 		weight = 0.70
 	}
+
+	desired_max = { base = 2000 }
 }
+
+# hydrogen_expenditure_ship_components = {
+# 	resource = hydrogen
+# 	type = expenditure
+# 	category = ship_components
+#
+# 	potential = {
+# 		has_technology = tech_hydrogen_fuel_cells
+# 	}
+# 	weight = {
+# 		weight = 0.15
+# 	}
+# 	desired_max = {
+# 		base = 600
+# 	}
+# }

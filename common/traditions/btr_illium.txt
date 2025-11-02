@@ -4,11 +4,11 @@ tr_btr_splendor_adoption = {
     }
     unlocks_agenda = agenda_splendor
     modifier = {
-       # trade_value_mult = 0.2
-       # planet_clerks_unity_produces_add = 2
+        planet_jobs_trade_produces_add = 0.2
+        planet_jobs_unity_produces_add = 2
         planet_pops_trade_produces_mult = 0.2
         planet_civilians_unity_produces_add = 2
-     #   pop_job_trade_mult = 0.2
+        planet_traders_trade_produces_mult = 0.2
 
     }
 }

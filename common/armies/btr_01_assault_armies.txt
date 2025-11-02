@@ -71,7 +71,7 @@ assault_army = {
 			set = 0
 			OR = {
 				is_fallen_empire = yes
-				has_technology = tech_telepathy
+				#has_technology = tech_telepathy
 				has_technology = tech_gene_seed_purification
 				AND = {
 					OR = {
@@ -413,21 +413,22 @@ psionic_army = {
 		is_btr_empire = no
 	}
 	potential = {
-		from = {
-			OR = {
-				NOT = { host_has_dlc = "Utopia" }
-				OR = {
-					has_trait = trait_latent_psionic
-					has_trait = trait_psionic
-				}
-			}
-			NOR = {
-				has_trait = "trait_mechanical"
-				has_trait = "trait_machine_unit"
-				has_trait = "trait_limited_cybernetic"
-				is_sapient = no
-			}
-		}
+		always = no
+		# from = {
+		# 	OR = {
+		# 		NOT = { host_has_dlc = "Utopia" }
+		# 		OR = {
+		# 			has_trait = trait_latent_psionic
+		# 			has_trait = trait_psionic
+		# 		}
+		# 	}
+		# 	NOR = {
+		# 		has_trait = "trait_mechanical"
+		# 		has_trait = "trait_machine_unit"
+		# 		has_trait = "trait_limited_cybernetic"
+		# 		is_sapient = no
+		# 	}
+		# }
 	}
 
 	ai_weight = {
@@ -458,6 +459,8 @@ xenomorph_army = {
 	time = 100
 	icon = GFX_army_type_xenomorph
 	has_species = no
+
+	potential = { always = no }
 
 	resources = {
 		category = armies
@@ -797,6 +800,7 @@ undead_army = {
 	disband_if_species_lacks_rights = no #i.e. if you resurrect your enemies, you get to keep these armies, even if you are a purifier
 	prerequisites = { "tech_assault_armies" }
 
+
 	resources = {
 		category = armies
 		cost = {
@@ -817,16 +821,17 @@ undead_army = {
 		is_btr_empire = no
 	}
 	potential = {
-		from = {
-			NOR = {
-				has_trait = "trait_mechanical"
-				has_trait = "trait_machine_unit"
-				is_sapient = no
-			}
-		}
-		planet = {
-			has_active_building = building_dread_encampment
-		}
+		always = no
+		# from = {
+		# 	NOR = {
+		# 		has_trait = "trait_mechanical"
+		# 		has_trait = "trait_machine_unit"
+		# 		is_sapient = no
+		# 	}
+		# }
+		# planet = {
+		# 	has_active_building = building_dread_encampment
+		# }
 	}
 
 	ai_weight = {
@@ -857,6 +862,8 @@ warpling_army = {
 		}
 	}
 
+	potential = { always = no }
+
 	potential_country = {
 		has_astral_planes_dlc = yes
 		has_country_flag = unlocked_warplings
@@ -878,6 +885,8 @@ flamestorm_troopers_army = {
 	war_exhaustion = 0.5
 	time = 150
 	icon = GFX_army_type_flamestorm
+
+	potential = { always = no }
 
 	resources = {
 		category = armies

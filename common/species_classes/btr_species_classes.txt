@@ -45,7 +45,7 @@ SAL = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_salarian_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
@@ -61,7 +61,7 @@ TUR = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_turian_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
@@ -79,7 +79,7 @@ ELC = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_elcor_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
@@ -95,7 +95,7 @@ VOL = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_volus_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
@@ -111,7 +111,7 @@ HAN = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_hanar_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
@@ -127,7 +127,7 @@ BAT = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_batarian_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
@@ -143,7 +143,7 @@ KRO = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_krogan_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
@@ -159,7 +159,7 @@ QUA = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_quarian_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
@@ -175,7 +175,7 @@ DRE = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_drell_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
@@ -191,25 +191,25 @@ VOR = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_vorcha_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
- FOR = {
-	 archetype = BIOLOGICAL
+FOR = {
+ archetype = BIOLOGICAL
 
-	 possible = {
-		 authority = {
-			 NOT = {
-				 value = auth_machine_intelligence
-				 text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE
-			 }
+ possible = {
+	 authority = {
+		 NOT = {
+			 value = auth_machine_intelligence
+			 text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE
 		 }
 	 }
-
-	 graphical_culture = btr_asari_01
-	 move_pop_sound_effect = "moving_pop_confirmation"
  }
+
+ graphical_culture = btr_forayan_01
+ move_pop_sound_effect = "moving_pop_confirmation"
+}
 
 LYS = {
 	archetype = BIOLOGICAL
@@ -223,7 +223,7 @@ LYS = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_lystheni_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
@@ -239,7 +239,7 @@ GOT = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_gothones_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
@@ -255,7 +255,7 @@ YAH = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_yahg_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
@@ -271,7 +271,7 @@ RAL = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_raloi_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
@@ -356,77 +356,24 @@ RAC = {
 		}
 	}
 
-	graphical_culture = btr_asari_01
+	graphical_culture = btr_rachni_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
 COL = {
-	archetype = MACHINE
+	archetype = BIOLOGICAL
 
 	possible = {
-		OR = {
-			AND = {
-				host_has_dlc = "The Machine Age"
-				authority = {
-					NOT = {
-						value = auth_hive_mind
-					}
-				}
-			}
-			authority = {
-				OR = {
-					value = auth_machine_intelligence
-					text = SPECIES_CLASS_MUST_USE_MACHINE_INTELLIGENCE
-				}
+		authority = {
+			NOT = {
+				value = auth_machine_intelligence
+				text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE
 			}
 		}
 	}
-	possible_secondary = {
-		OR = {
-			AND = {
-				host_has_dlc = "The Machine Age"
-				civics = {
-					NOT = {
-						value = civic_machine_servitor
-					}
-				}
-			}
-			OR = {
-				always = no
-				text = SECONDARY_SPECIES_CLASS_INVALID
-			}
-		}
-	}
-
-	playable = {
-		OR = {
-			host_has_dlc = "Synthetic Dawn Story Pack"
-			has_machine_age_dlc = yes
-		}
-	}
-	randomized = {
-		OR = {
-			host_has_dlc = "Synthetic Dawn Story Pack"
-			has_machine_age_dlc = yes
-		}
-		# The create_species effect can't properly take the possible trigger below into account.
-		# Work around this by disabling this class for species randomization after game start.
-		NOT = {
-			has_global_flag = game_started
-		}
-	}
-
-	trait = trait_machine_unit
-	gender = no
-	use_climate_preference = no
-	portrait_modding = yes
-
-	leader_age_min = 5
-	leader_age_max = 10
 
 	graphical_culture = btr_collector_01
-	move_pop_sound_effect = "robot_pops_move"
-	resources = {}
+	move_pop_sound_effect = "moving_pop_confirmation"
 }
 
 

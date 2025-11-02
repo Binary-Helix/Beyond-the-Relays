@@ -1,0 +1,532 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_planetarystations_colony_type"
+		textureFile = "gfx/interface/planetview/planetarystations_colony_type.dds"
+		noOfFrames = 24
+	}
+	spriteType = {
+		name = "GFX_colony_type_planetary_station"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 1
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_energy"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 2
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_mine"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 3
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_research"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 4
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_bureaucratic"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 5
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_trade"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 6
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_corporate"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 7
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_gateway"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 8
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_elevation"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 9
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_factory"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 10
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_foundry"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 11
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_assembly"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 12
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_fortress"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 13
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_leisure"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 14
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_temple"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 15
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_confluence"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 16
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_simulation"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 17
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_prison"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 18
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_penal"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 19
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_cracking"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 20
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_nest"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 21
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_helium"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 22
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_hunting"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 23
+	}
+	spriteType = {
+		name = "GFX_colony_type_station_terraforming"
+		sprite_sheet_sprite_type = "GFX_planetarystations_colony_type"
+		default_frame = 24
+	}
+	
+	#District Boxes
+
+	corneredTileSpriteType = {
+		name = "GFX_district_habitable_dome_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_habitable_dome_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_cell_block_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_cell_block_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_fortified_complex_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_fortified_complex_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_leisure_sector_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_leisure_sector_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_hive_sector_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_hive_sector_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_nexus_complex_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_nexus_complex_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_geothermal_power_plant_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_geothermal_power_plant_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_atmospheric_power_plant_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_atmospheric_power_plant_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_mining_complex_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_mining_complex_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_ore_processing_complex_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_ore_processing_complex_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_helium_extractor_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_helium_extractor_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_helium_mining_facility_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_helium_mining_facility_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_habitable_dome_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_habitable_dome_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_mote_mine_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_mote_mine_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_gas_refinery_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_gas_refinery_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_crystal_mining_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_crystal_mining_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_zro_harvesting_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_zro_harvesting_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_experimental_complex_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_experimental_complex_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_biolaboratory_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_biolaboratory_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_testing_site_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_testing_site_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_dark_matter_extractor_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_dark_matter_extractor_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_hunting_bay_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_hunting_bay_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_mining_bay_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_mining_bay_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_observation_post_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_observation_post_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_special_training_area_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_special_training_area_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_hab_commercial_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_hab_commercial_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_storage_yards_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_storage_yards_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_docking_bay_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_docking_bay_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_free_port_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_free_port_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_manufacturing_complex_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_manufacturing_complex_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_foundry_plant_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_foundry_plant_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_living_metal_processing_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_living_metal_processing_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_casino_level_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_casino_level_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_race_track_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_race_track_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_synaptic_node_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_synaptic_node_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_simulation_complex_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_simulation_complex_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	corneredTileSpriteType = {
+		name = "GFX_district_terraforming_complex_box_icon_rectangle"
+		texturefile = "gfx/interface/icons/districts/grid_box/district_terraforming_complex_rectangle.dds"
+		borderSize = { x = 1 y = 1 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+	
+	#City backgrouds
+	spriteType = {
+		name = "GFX_district_habitable_dome_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_hab_housing_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_cell_block_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_hab_housing_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_fortified_complex_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_hab_housing_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_leisure_sector_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_resort_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_hive_sector_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_hab_housing_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_nexus_complex_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_hab_housing_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_geothermal_power_plant_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_generator_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_atmospheric_power_plant_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_generator_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_helium_extractor_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_generator_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_helium_mining_facility_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_generator_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_mining_complex_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_mining_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_ore_processing_complex_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_mining_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_gas_refinery_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_mining_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_crystal_mining_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_mining_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_mote_mine_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_mining_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_zro_harvesting_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_mining_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_experimental_complex_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_hab_science_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_biolaboratory_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_hab_science_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_testing_site_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_hab_science_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_dark_matter_extractor_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_mining_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_hunting_bay_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_orchard_forests_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_mining_bay_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_mining_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_observation_post_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_metallic_dew_plains_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_special_training_area_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_hollow_mountains_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_storage_yards_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_generator_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_docking_bay_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_generator_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_free_port_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_resort_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_manufacturing_complex_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_hollow_mountains_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_foundry_plant_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_hollow_mountains_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_living_metal_processing_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_hollow_mountains_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_casino_level_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_resort_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_race_track_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_photosynthesis_fields_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_synaptic_node_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_hollow_mountains_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_simulation_complex_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_metallic_dew_plains_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_district_terraforming_complex_bg"
+		texturefile = "gfx/interface/planetview/district_backgrounds/district_hab_science_bg.dds"
+	}
+}

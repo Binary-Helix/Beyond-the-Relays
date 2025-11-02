@@ -1,0 +1,164 @@
+
+portraits = {
+	# Volus
+	
+	btr_volus_male = {	entity = "portrait_volus_01_entity"	clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "bta_volus_greeting"	
+		character_textures = {
+			"gfx/models/portraits/btr_06_volus/btr_volus_01.dds"
+			"gfx/models/portraits/btr_06_volus/btr_volus_02.dds"
+			"gfx/models/portraits/btr_06_volus/btr_volus_03.dds"
+			"gfx/models/portraits/btr_06_volus/btr_volus_04.dds"
+			"gfx/models/portraits/btr_06_volus/btr_volus_05.dds"
+			"gfx/models/portraits/btr_06_volus/btr_volus_06.dds"
+		}
+	}
+	
+	btr_volus_female = {	entity = "portrait_volus_01_entity"	clothes_selector = "no_texture" attachment_selector = "no_texture"	greeting_sound = "bta_volus_greeting"	
+		character_textures = {
+			"gfx/models/portraits/btr_06_volus/btr_volus_01.dds"
+			"gfx/models/portraits/btr_06_volus/btr_volus_02.dds"
+			"gfx/models/portraits/btr_06_volus/btr_volus_03.dds"
+			"gfx/models/portraits/btr_06_volus/btr_volus_04.dds"
+			"gfx/models/portraits/btr_06_volus/btr_volus_05.dds"
+			"gfx/models/portraits/btr_06_volus/btr_volus_06.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	btr_volus = {
+		default = btr_volus_male
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					btr_volus_male
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					btr_volus_female
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				trigger = {
+					is_species = "Volus"
+				}
+				portraits = {
+					btr_volus_male
+					btr_volus_female
+				}
+			}
+			add = {
+				trigger = { 
+					NOT = { 
+						is_species = "Volus"
+					}
+				}
+				portraits = {
+					btr_volus_male
+					btr_volus_female
+				}
+			}
+		}	
+		
+		#pop scope
+		pop_group = { #for a specific pop
+		add = {
+			trigger = {
+				is_species = "Volus"
+			}
+			portraits = {
+				btr_volus_male
+				btr_volus_female
+			}
+		}
+			add = {
+				trigger = { 
+					NOT = { 
+						is_species = "Volus"
+					}
+				}
+				portraits = {
+					btr_volus_male
+					btr_volus_female
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = male
+					is_species = "Volus"
+				}
+				portraits = {
+					btr_volus_male
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+					is_species = "Volus"
+				}
+				portraits = {
+					btr_volus_female
+				}
+			}
+			add = {
+				trigger = { 
+					NOT = { 
+						is_species = "Volus"
+					}
+				}
+				portraits = {
+					btr_volus_male
+					btr_volus_female
+				}
+			}
+		}
+
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = male
+					is_species = "Volus"
+				}
+				portraits = {
+					btr_volus_male
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+					is_species = "Volus"
+				}
+				portraits = {
+					btr_volus_female
+				}
+			}
+			add = {
+				trigger = { 
+					NOT = { 
+						is_species = "Volus"
+					}
+				}
+				portraits = {
+					btr_volus_male
+					btr_volus_female
+				}
+			}
+		}
+	}
+}

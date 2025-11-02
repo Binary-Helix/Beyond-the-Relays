@@ -1,0 +1,563 @@
+###################
+# Low Tech Jobs
+###################
+
+low_tech_laborer = {
+	category = worker
+
+	swappable_data = {
+		default = {
+			condition_string = WORKER_JOB_TRIGGER
+			building_icon = building_low_tech_scrap_refinery
+		}
+	}
+
+	tags = { consumer_goods alloys }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+
+	possible = {
+	}
+
+	resources = {
+		category = planet_laborer
+		produces = {
+			consumer_goods = 3
+			alloys = 1.5
+		}
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		mult = value:job_weights_multiple_resources_modifier|JOB|low_tech_laborer|RESOURCE1|consumer_goods|WEIGHT1|0.5|RESOURCE2|alloys|WEIGHT2|0.5|
+	}
+	inline_script = "jobs/automodding_priority_consumer_goods"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+low_tech_miner = {
+	category = worker
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_low_tech_scrap_refinery
+			icon = miner
+		}
+	}
+
+	tags = { minerals }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+
+	possible = {
+		owner = {
+			is_low_tech_start = yes
+		}
+	}
+
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 3
+		}
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		mult = value:job_weights_modifier|JOB|low_tech_miner|RESOURCE|minerals|
+	}
+	inline_script = "jobs/automodding_priority_minerals"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+low_tech_technician = {
+	category = worker
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_low_tech_power_plant
+			icon = technician
+		}
+	}
+
+	tags = { energy }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+
+	possible = {
+		owner = {
+			is_low_tech_start = yes
+		}
+	}
+
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 4
+		}
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		mult = value:job_weights_modifier|JOB|low_tech_technician|RESOURCE|energy|
+	}
+	inline_script = "jobs/automodding_priority_energy"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+low_tech_farmer = {
+	category = worker
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_low_tech_farm
+		}
+	}
+
+	tags = { food }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+
+	possible = {
+		owner = {
+			is_low_tech_start = yes
+		}
+	}
+
+	resources = {
+		category = planet_farmers
+		produces = {
+			food = 4
+		}
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		mult = value:job_weights_modifier|JOB|low_tech_farmer|RESOURCE|food|
+	}
+	inline_script = "jobs/automodding_priority_food"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+low_tech_researcher = {
+	category = specialist
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_low_tech_research_lab
+		}
+	}
+
+	tags = { research }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+
+	possible = {
+		owner = {
+			is_low_tech_start = yes
+		}
+	}
+
+	resources = {
+		category = planet_researchers
+		produces = {
+			physics_research = 1
+			engineering_research = 1
+			society_research = 1
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			local_or_sector_governor_has_trait = {
+				TRAIT = leader_trait_academia_recruiter
+			}
+		}
+		country_naval_cap_add = 1
+		mult = planet.modifier:job_researcher_naval_cap_add
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_research_modifier|JOB|low_tech_researcher|
+	}
+	inline_script = "jobs/automodding_priority_research"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+low_tech_priest = {
+	category = specialist
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_low_tech_admin_hub
+		}
+	}
+
+	tags = { unity }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+
+	possible = {
+		owner = {
+			is_low_tech_start = yes
+		}
+	}
+
+	resources = {
+		category = planet_bureaucrats
+		produces = {
+			unity = 2
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = {
+				exists = owner
+				owner = {
+					has_tradition = tr_modularity_4
+				}
+			}
+		}
+		planet_jobs_worker_produces_mult = 0.02
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_modifier|JOB|low_tech_priest|RESOURCE|unity|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+	}
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+low_tech_bureaucrat = {
+	category = specialist
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_low_tech_admin_hub
+		}
+	}
+
+	tags = { unity }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+
+	possible = {
+		owner = {
+			is_low_tech_start = yes
+		}
+	}
+
+	resources = {
+		category = planet_bureaucrats
+		produces = {
+			unity = 2
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = {
+				exists = owner
+				owner = {
+					has_tradition = tr_modularity_4
+				}
+			}
+		}
+		planet_jobs_worker_produces_mult = 0.02
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_modifier|JOB|low_tech_bureaucrat|RESOURCE|unity|
+	}
+	inline_script = "jobs/automodding_priority_unity"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+low_tech_manager = {
+	category = specialist
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_low_tech_admin_hub
+			icon = low_tech_bureaucrat
+		}
+	}
+
+	tags = { trade unity }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+
+	possible = {
+		owner = {
+			is_low_tech_start = yes
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = {
+				exists = owner
+				owner = {
+					has_tradition = tr_modularity_4
+				}
+			}
+		}
+		planet_jobs_worker_produces_mult = 0.02
+	}
+
+	resources = {
+		category = planet_managers
+		produces = {
+			unity = 2
+			trade = 2
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		mult = value:job_weights_multiple_resources_modifier|JOB|low_tech_bureaucrat|RESOURCE1|unity|WEIGHT1|0.5|RESOURCE2|trade|WEIGHT2|0.5|
+	}
+	inline_script = "jobs/automodding_priority_trade"
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+low_tech_warrior = {
+	category = specialist
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_low_tech_capital
+		}
+	}
+
+	tags = { crime enforcer soldier }
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+
+	possible = {
+		owner = {
+			is_low_tech_start = yes
+		}
+	}
+
+	planet_modifier = {
+		planet_crime_add = -10
+		planet_defense_armies_add = 1
+	}
+
+	weight = {
+		weight = @soldier_job_weight
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = specialist
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}
+
+broken_shackles_scavenger = {
+	category = worker
+
+	swappable_data = {
+		default = {
+			building_icon = building_crude_huts
+		}
+	}
+
+	tags = { alloys research amenities }
+
+	possible_pre_triggers = {
+		has_planet = yes
+		is_sapient = yes
+	}
+
+	possible = {
+		planet = { has_deposit = d_crashed_slaver_ship }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 200
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	resources = {
+		category = planet_researchers
+		produces = {
+			alloys = 1
+			physics_research = 0.5
+			engineering_research = 0.5
+			society_research = 0.5
+		}
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			local_or_sector_governor_has_trait = {
+				TRAIT = leader_trait_academia_recruiter
+			}
+		}
+		country_naval_cap_add = 1
+		mult = planet.modifier:job_researcher_naval_cap_add
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		mult = value:job_weights_research_modifier|JOB|broken_shackles_scavenger|
+		mult = value:job_weights_modifier|JOB|broken_shackles_scavenger|RESOURCE|alloys|
+	}
+
+	promotion = {
+		time = @standard_promotion_time
+		effect = {
+			pop_amount_change_category = {
+				CATEGORY = worker
+				AMOUNT = local_pop_amount
+			}
+		}
+	}
+}

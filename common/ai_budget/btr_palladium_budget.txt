@@ -1,3 +1,19 @@
+palladium_upkeep_buffer = {
+	resource = palladium
+	type = upkeep
+	category = buffer
+
+	potential = {
+		always = yes
+	}
+	weight = {
+		weight = 0.1
+	}
+	desired_max = {
+		base = 1000
+	}
+}
+
 palladium_upkeep_planets = {
 	resource = palladium
 	type = upkeep
@@ -10,4 +26,22 @@ palladium_upkeep_planets = {
 	weight = {
 		weight = 0.70
 	}
+
+	desired_max = { base = 2000 }
 }
+
+# palladium_expenditure_planets = {
+# 	resource = palladium
+# 	type = expenditure
+# 	category = decisions
+#
+# 	potential = {
+# 		has_technology = tech_palladium_energy_catalysts
+# 	}
+# 	weight = {
+# 		weight = 0.25
+# 	}
+# 	desired_max = {
+# 		base = 1200
+# 	}
+# }

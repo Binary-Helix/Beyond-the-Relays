@@ -1,0 +1,63 @@
+
+planetary_station = {
+	use_for_ai_budget = yes
+	parent = megastructures
+}
+
+station_complex = {
+	parent = planet_districts
+}
+
+pop_category_prisoners = {
+	parent = planet_pops
+}
+
+planet_helium_extractors = {
+	icon = "job_helium_extractor"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+	}
+	modifier_category = pop_group
+}
+
+planet_hunters = {
+	icon = "job_hunter"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		upkeep
+	}
+	modifier_category = pop_group
+}
+
+planet_prison_wardens = {
+	parent = planet_jobs
+}
+
+planet_tourists = {
+	parent = planet_jobs
+}
+
+planet_prospectors = {
+	parent = planet_jobs
+}
+
+planet_free_traders = {
+	parent = planet_jobs
+}
+
+planet_logistic_workers = {
+	parent = planet_jobs
+}
+
+planet_gladiators = {
+	parent = planet_jobs
+}
+
+planet_dockers = {
+	parent = planet_jobs
+}
+
+planet_croupiers = {
+	parent = planet_jobs
+}

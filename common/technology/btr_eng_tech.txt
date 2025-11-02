@@ -1,5 +1,315 @@
 
-tech_btr_beryllium_optimization = {
+##### RESOURCE TECHNOLOGIES - ACQUISTION #####
+
+#Beryllium
+tech_btr_beryllium_prospecting = {
+    icon = tech_beryllium
+    cost = 0
+    area = engineering
+    tier = 1
+    category = { materials }
+    prerequisites = { "tech_space_construction" }
+    weight = @tier1weight1
+    start_tech = yes
+
+    weight_modifier = {
+
+    }
+
+    ai_weight = {
+
+    }
+}
+
+#Lithium
+tech_btr_lithium_prospecting = {
+    icon = tech_lithium
+    cost = 0
+    area = engineering
+    tier = 1
+    category = { materials }
+    prerequisites = { "tech_space_construction" }
+    weight = @tier1weight1
+    start_tech = yes
+
+    weight_modifier = {
+
+    }
+
+    ai_weight = {
+
+    }
+}
+
+#Titanium
+tech_btr_titanium_extraction = {
+    icon = tech_titanium
+    cost = 0
+    area = engineering
+    tier = 1
+    category = { materials }
+    prerequisites = { "tech_space_construction" }
+    weight = @tier1weight1
+    start_tech = yes
+
+    weight_modifier = {
+
+    }
+
+    ai_weight = {
+
+    }
+}
+
+#Iridium
+tech_btr_iridium_prospecting = {
+    icon = tech_iridium
+    cost = 0
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_space_construction" }
+    weight = @tier1weight1
+    start_tech = yes
+
+    weight_modifier = {
+
+    }
+
+    ai_weight = {
+
+    }
+}
+
+#Palladium
+tech_btr_palladium_prospecting = {
+    icon = tech_palladium
+    cost = 0
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_space_construction" }
+    weight = @tier1weight1
+    start_tech = yes
+
+    weight_modifier = {
+
+    }
+
+    ai_weight = {
+
+    }
+}
+
+#Platinum
+tech_btr_platinum_prospecting = {
+    icon = tech_platinum
+    cost = 0
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_space_construction" }
+    weight = @tier1weight1
+    start_tech = yes
+
+    weight_modifier = {
+
+    }
+
+    ai_weight = {
+
+    }
+}
+
+#Hydrogen
+tech_btr_hydrogen_siphoning = {
+    icon = tech_hydrogen
+    cost = 0
+    area = engineering
+    tier = 1
+    category = { field_manipulation }
+    prerequisites = { "tech_space_construction" }
+    weight = @tier1weight1
+    start_tech = yes
+
+    weight_modifier = {
+
+    }
+
+    ai_weight = {
+
+    }
+}
+
+#Helium-3
+tech_btr_helium3_isotope_separation = {
+    icon = tech_helium_3
+    cost = 0
+    area = engineering
+    tier = 2
+    category = { particles }
+    prerequisites = { "tech_space_construction" }
+    weight = @tier1weight1
+    start_tech = yes
+
+    weight_modifier = {
+
+    }
+
+    ai_weight = {
+
+    }
+}
+
+#Uranium
+tech_btr_uranium_geosurveys = {
+    icon = tech_uranium
+    cost = 0
+    area = engineering
+    tier = 2
+    category = { materials }
+    prerequisites = { "tech_space_construction" }
+    weight = @tier1weight1
+    start_tech = yes
+
+    weight_modifier = {
+
+    }
+
+    ai_weight = {
+
+    }
+}
+
+#Element Zero
+tech_btr_eezo_detection = {
+    icon = tech_eezo
+    cost = 0
+    area = engineering
+    tier = 3
+    category = { particles }
+    prerequisites = { "tech_space_construction" }
+    weight = @tier1weight1
+    start_tech = yes
+
+    weight_modifier = {
+
+    }
+
+    ai_weight = {
+
+    }
+}
+
+##### RESOURCE TECHNOLOGIES - CRAFTING #####
+
+tech_btr_light_alloy_fabrication = {
+    cost = @tier1cost3
+    area = engineering
+    tier = 1
+    category = { materials }
+    prerequisites = { "tech_btr_beryllium_prospecting" tech_btr_lithium_prospecting tech_btr_titanium_extraction }
+    weight = @tier1weight3
+
+    weight_modifier = {
+        modifier = {
+            factor = 1.5
+            is_specialist_subject_type = { TYPE = prospectorium }
+        }
+    }
+
+    ai_weight = {
+        factor = @ai_alloy_factor_factor
+
+    }
+}
+
+tech_btr_heavy_alloy_fabrication = {
+    cost = @tier1cost3
+    area = engineering
+    tier = 1
+    category = { materials }
+    prerequisites = { "tech_btr_palladium_prospecting" tech_btr_platinum_prospecting tech_btr_iridium_prospecting }
+    weight = @tier1weight3
+
+    weight_modifier = {
+        modifier = {
+            factor = 1.5
+            is_specialist_subject_type = { TYPE = prospectorium }
+        }
+    }
+
+    ai_weight = {
+        factor = @ai_alloy_factor_factor
+
+    }
+}
+
+tech_btr_antimatter_fuel_refining = {
+    cost = @tier2cost1
+    area = engineering
+    tier = 1
+    category = { particles }
+    prerequisites = { "tech_btr_hydrogen_siphoning" tech_btr_helium3_isotope_separation }
+    weight = @tier1weight3
+
+    weight_modifier = {
+        modifier = {
+            factor = 1.5
+            is_specialist_subject_type = { TYPE = prospectorium }
+        }
+    }
+
+    ai_weight = {
+        factor = @ai_alloy_factor_factor
+
+    }
+}
+
+##### RESOURCE TECHNOLOGIES - UTILIZATION #####
+
+tech_btr_beryllium_sensors = {
+    tier = 1
+    cost = @tier0cost1
+    area = physics
+    start_tech = no
+    category = { computing }
+    ai_update_type = military
+
+    weight = 1
+}
+
+tech_btr_iridium_catalysis = {
+    tier = 1
+    cost = @tier0cost1
+    area = engineering
+    start_tech = no
+    category = { materials }
+
+    weight = 1
+}
+
+tech_btr_platinum_biomed = {
+    tier = 1
+    cost = @tier0cost1
+    area = society
+    start_tech = no
+    category = { biology }
+
+    weight = 1
+}
+
+tech_btr_titanium_infrastructure = {
+    tier = 1
+    cost = @tier0cost1
+    area = engineering
+    start_tech = no
+    category = { materials }
+
+    weight = 1
+}
+
+tech_btr_lithium_power_cells = {
     tier = 1
     cost = @tier0cost1
     area = engineering
@@ -10,101 +320,72 @@ tech_btr_beryllium_optimization = {
     weight = 1
 }
 
-tech_btr_iridium_reinforced_hull = {
+tech_btr_palladium_energy_catalysts = {
     tier = 1
     cost = @tier0cost1
-    area = engineering
+    area = physics
     start_tech = no
-    category = { materials }
-    ai_update_type = military
+    category = { particles }
 
     weight = 1
 }
 
-tech_btr_platinum_calibration = {
+tech_btr_uranium_fission = {
     tier = 1
     cost = @tier0cost1
-    area = engineering
+    area = physics
+    start_tech = no
+    category = { particles }
+
+    weight = 1
+}
+
+tech_btr_mass_effect_reactors = {
+    tier = 3
+    cost = @tier0cost1
+    area = physics
     start_tech = no
     category = { field_manipulation }
-    ai_update_type = military
 
     weight = 1
 }
 
-tech_btr_titanium_bulkhead = {
-    tier = 1
+tech_btr_biotics_infrastructure = {
+    tier = 3
     cost = @tier0cost1
-    area = engineering
-    start_tech = no
-    category = { materials }
-    ai_update_type = military
-
-    weight = 1
-}
-
-tech_btr_lithium_systems = {
-    tier = 1
-    cost = @tier0cost1
-    area = engineering
-    start_tech = no
-    category = { propulsion }
-    ai_update_type = military
-
-    weight = 1
-}
-
-tech_btr_palladium_shield_boost = {
-    tier = 1
-    cost = @tier0cost1
-    area = engineering
+    area = physics
     start_tech = no
     category = { field_manipulation }
-    ai_update_type = military
 
     weight = 1
 }
 
-tech_btr_palladium_armor = {
-    tier = 1
+tech_btr_relay_stabilizers = {
+    tier = 3
     cost = @tier0cost1
-    area = engineering
+    area = physics
     start_tech = no
-    category = { materials }
-    ai_update_type = military
+    category = { field_manipulation }
 
     weight = 1
 }
 
-tech_btr_uranium_warheads = {
+tech_btr_hydrogen_fuel_cells = {
     tier = 1
     cost = @tier0cost1
-    area = engineering
+    area = physics
     start_tech = no
-    category = { propulsion }
-    ai_update_type = military
+    category = { particles }
 
     weight = 1
 }
 
-tech_btr_high_efficiency_antimatter = {
+tech_btr_helium3_fusion = {
     tier = 1
     cost = @tier0cost1
-    area = engineering
+    area = physics
     start_tech = no
-    category = { propulsion }
-    ai_update_type = military
-
-    weight = 1
-}
-
-tech_btr_eezo_focus = {
-    tier = 1
-    cost = @tier0cost1
-    area = engineering
-    start_tech = no
-    category = { materials }
-    ai_update_type = military
+    category = { particles }
 
     weight = 1
 }

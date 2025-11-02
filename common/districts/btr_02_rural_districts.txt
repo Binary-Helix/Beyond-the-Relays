@@ -1,14 +1,16 @@
 @base_cost = 300
+@city_cost = 500
+@rural_district_ai_coefficient = 0.75
 @base_cost_minerals = 200
 @base_cost_light_alloys = 25
 @base_cost_heavy_alloys = 25
-@city_cost_minerals = 400heavy_alloys
+@city_cost_minerals = 400
 @city_cost_heavy_minerals = 50
 
 district_generator = {
 	expansion_planner = yes
-
 	base_buildtime = 240
+	overlay_icon = GFX_district_energy
 
 	min_for_deposits_on_planet = 3
 	max_for_deposits_on_planet = 15
@@ -70,6 +72,18 @@ district_generator = {
 		potential = {
 			exists = owner
 			owner = {
+				has_tradition = tr_btr_laisez_towns
+			}
+		}
+		modifier = {
+			planet_housing_add = 200
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
 				has_valid_civic = civic_agrarian_idyll
 			}
 		}
@@ -100,13 +114,14 @@ district_generator = {
 		tech_power_plant_1
 	}
 
-	ai_weight_coefficient = 0.8
+	ai_weight_coefficient = @rural_district_ai_coefficient
 }
 
 district_generator_uncapped = {
 	base_buildtime = 240
 	icon = district_generator
 	is_capped_by_modifier = no
+	overlay_icon = GFX_district_energy
 
 	zone_slots = {
 		slot_energy
@@ -167,6 +182,18 @@ district_generator_uncapped = {
 		potential = {
 			exists = owner
 			owner = {
+				has_tradition = tr_btr_laisez_towns
+			}
+		}
+		modifier = {
+			planet_housing_add = 200
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
 				has_valid_civic = civic_agrarian_idyll
 			}
 		}
@@ -193,12 +220,12 @@ district_generator_uncapped = {
 		script = districts/district_triggered_flavor_desc_generator
 	}
 
-	ai_weight_coefficient = 0.8
+	ai_weight_coefficient = @rural_district_ai_coefficient
 }
 
 district_mining = {
+	overlay_icon = GFX_district_minerals
 	expansion_planner = yes
-
 	base_buildtime = 240
 
 	min_for_deposits_on_planet = 1
@@ -272,6 +299,18 @@ district_mining = {
 		potential = {
 			exists = owner
 			owner = {
+				has_tradition = tr_btr_laisez_towns
+			}
+		}
+		modifier = {
+			planet_housing_add = 200
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
 				has_valid_civic = civic_agrarian_idyll
 			}
 		}
@@ -311,12 +350,13 @@ district_mining = {
 		tech_mechanized_mining
 	}
 
-	ai_weight_coefficient = 0.8
+	ai_weight_coefficient = @rural_district_ai_coefficient
 }
 
 district_mining_uncapped = {
 	base_buildtime = 240
 	icon = district_mining
+	overlay_icon = GFX_district_minerals
 	is_capped_by_modifier = no
 
 	zone_slots = {
@@ -405,6 +445,18 @@ district_mining_uncapped = {
 		potential = {
 			exists = owner
 			owner = {
+				has_tradition = tr_btr_laisez_towns
+			}
+		}
+		modifier = {
+			planet_housing_add = 200
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
 				has_valid_civic = civic_agrarian_idyll
 			}
 		}
@@ -443,10 +495,11 @@ district_mining_uncapped = {
 	prerequisites = {
 	}
 
-	ai_weight_coefficient = 0.8
+	ai_weight_coefficient = @rural_district_ai_coefficient
 }
 
 district_farming = {
+	overlay_icon = GFX_district_food
 	expansion_planner = yes
 	base_buildtime = 240
 
@@ -531,11 +584,54 @@ district_farming = {
 		upkeep = {
 			energy = 1
 		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_tradition = tr_btr_agrarianism_rural
+				}
+			}
+			unity = 1
+		}
+
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_tradition = tr_btr_agrarianism_rural
+				}
+			}
+			minerals = -150
+		}
 	}
 
 	inline_script = {
 		script = jobs/farmers_add
 		AMOUNT = @base_rural_district_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_btr_agrarianism_rural
+			}
+		}
+		modifier = {
+			pop_happiness = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_btr_laisez_towns
+			}
+		}
+		modifier = {
+			planet_housing_add = 200
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -603,12 +699,13 @@ district_farming = {
 		}
 	}
 
-	ai_weight_coefficient = 0.8
+	ai_weight_coefficient = @rural_district_ai_coefficient
 }
 
 district_farming_uncapped = {
 	base_buildtime = 240
 	icon = district_farming
+	overlay_icon = GFX_district_food
 	is_capped_by_modifier = no
 
 	zone_slots = {
@@ -669,6 +766,25 @@ district_farming_uncapped = {
 		upkeep = {
 			energy = 1
 		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_tradition = tr_btr_agrarianism_rural
+				}
+			}
+			unity = 1
+		}
+
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_tradition = tr_btr_agrarianism_rural
+				}
+			}
+			minerals = -150
+		}
 	}
 
 	triggered_desc = {
@@ -685,6 +801,30 @@ district_farming_uncapped = {
 
 	planet_modifier = {
 		planet_housing_add = 200
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_btr_agrarianism_rural
+			}
+		}
+		modifier = {
+			pop_happiness = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_btr_laisez_towns
+			}
+		}
+		modifier = {
+			planet_housing_add = 200
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -738,5 +878,5 @@ district_farming_uncapped = {
 		}
 	}
 
-	ai_weight_coefficient = 0.8
+	ai_weight_coefficient = @rural_district_ai_coefficient
 }

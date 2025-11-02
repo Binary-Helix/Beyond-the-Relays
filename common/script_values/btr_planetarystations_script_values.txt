@@ -1,0 +1,319 @@
+
+#To use one of them, refer to them elsewhere in script via "value:<value>" e.g. value:example_value
+#IMPORTANT NOTE: Be mindful of performance when using these in triggers that are checked often!
+
+# example_value = {
+# 	base = 10 #default: 0
+
+# 	# List of valid mathematical operations:
+# 	# 	Numerical (modifying by a number):
+# 	# 	- set/weight (both do the same, replaces the current result with this value)
+# 	# 	- add
+# 	# 	- subtract
+# 	# 	- factor/mult/multiply ("multiply" fits the name scheme of the rest better, but the other two were kept for historical reasons)
+# 	# 	- divide
+# 	# 	- modulo
+# 	# 	- round_to (rounds to nearest of that value, e.g. 10.7 round_to 5 gives you 10)
+# 	# 	- max (sets to specified value if currently above it)
+# 	# 	- min (sets to specified value if currently below it)
+# 	# 	- pow (value is multiplied by itself to the power of x; be careful, you can get overflows if you are not careful)
+# 	# 	Simple (do not need a number, but just "yes", e.g. "round = yes")
+# 	# 	- round (sets to nearest full number)
+# 	# 	- ceiling (rounds up)
+# 	# 	- floor (rounds down)
+# 	# 	- abs (multiply by -1 if negative)
+# 	# 	- square (multiply by itself)
+# 	# 	- square_root
+
+# 	#All mathematical operations except weight and factor can be used inline e.g.
+# 	#All mathematical operations except weight and factor can be used inline e.g.
+# 	add = 100
+# 	multiply = value:some_other_script_value
+# 	round = yes
+# 	#(Note: weight and factor will instead overwrite the base value - use set, mult or multiply instead)
+
+# 	#They can also be used in modifier = {} fields, which lets you only apply them if triggers are true
+# 	modifier = {
+# 		max = owner.max_example_variable 					#Variable set by set_variable
+# 		owner = { is_variable_set = max_example_variable }	#Only applied if this trigger is true
+# 	}
+# 	# What works for right hand side values of mathematical operations? See events/00_how_to_use_variables for full list.
+
+# 	complex_trigger_modifier = { 	#This lets you get the value of a trigger that you can't use in one-liners because it uses {}
+# 		trigger = count_owned_planet
+# 		trigger_scope = owner 		#Lets you get the result of the trigger on a different scope. Default is "this"
+# 		parameters = { 				#Stick any further information necessary in here, like you'd do within the {} of the trigger normally
+# 			limit = { pop_amount > 10 }
+# 		}
+# 		mode = add 					#Allows all numerical operations
+# 		mult = 5 					#Multiplies the outcome by this. In this example, this means adding 5 for each planet with more than 10 pops
+# 	}
+# }
+
+# Final note: script_values use the same metascript system as scripted_triggers and scripted_effects
+# This means that you can input parameters into them, in a similar fashion as described in scripted_effects/99_advanced_documentation.txt
+# For format for doing so is value:my_value|PARAM1|value1|PARAM2|value2|.
+# Then you can use $PARAM1$ in the script value and it will replace it with value1
+#
+# toxic_attendant_growth = {
+# 	base = 1
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_city
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_crashed_slaver_ship
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_resort
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_prison
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_slave
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_hab_housing
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_hive
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_hive_1
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_hive_2
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_hive_3
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_nexus
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_nexus_1
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_nexus_2
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_nexus_3
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_arcology_housing
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_arcology_urban_1
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_arcology_urban_2
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_arcology_urban_3
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_rw_city
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_rw_urban_1
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_rw_urban_2
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_rw_urban_3
+# 		}
+# 		mode = add
+# 	}
+# 	modifier = {
+# 		has_any_industry_zone = yes
+# 		mult = 2
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_manufacturing_complex
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_foundry_plant
+# 		}
+# 		mode = add
+# 	}
+# 	complex_trigger_modifier = {
+# 		trigger = num_districts
+# 		parameters = {
+# 			type = district_living_metal_processing
+# 		}
+# 		mode = add
+# 	}
+# 	modifier = {
+# 		has_any_station_industry_zone = yes
+# 		mult = 2
+# 	}
+# }
+
+ai_station_cap = {
+	base = 0
+
+	modifier = {
+		set = 2
+		galaxy_size = tiny
+	}
+
+	modifier = {
+		set = 4
+		galaxy_size = small
+	}
+
+	modifier = {
+		set = 6
+		galaxy_size = medium
+	}
+
+	modifier = {
+		set = 8
+		galaxy_size = large
+	}
+
+	modifier = {
+		set = 10
+		galaxy_size = huge
+	}
+
+	# Civilian
+	modifier = {
+		divide = 2
+		is_difficulty = 0
+	}
+
+	# Cadet
+	modifier = {
+		divide = 1.5
+		is_difficulty = 1
+	}
+
+	# Ensign
+	# Default values
+
+	# Captain
+	modifier = {
+		mult = 1.25
+		is_difficulty = 3
+	}
+
+	# Commodore
+	modifier = {
+		mult = 1.5
+		is_difficulty = 4
+	}
+
+	# Admiral
+	modifier = {
+		mult = 1.75
+		is_difficulty = 5
+	}
+
+	# Grand Admiral
+	modifier = {
+		mult = 2
+		is_difficulty = 6
+	}
+
+	modifier = {
+		mult = 3
+		NOT = { has_global_flag = limited_ai_stations_build }
+	}
+
+	round = yes
+	min = 1
+}

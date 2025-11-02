@@ -1,0 +1,45 @@
+
+namespace = btr_migrant_fleet_mech
+
+##### Update resource income and Change Star Name and Class to Match current Fleet Location
+fleet_event = {
+	id = btr_migrant_fleet_mech.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_fleet_flag = quarianCivilianFleet
+	}
+
+	immediate = {
+		root.owner = {
+			set_migrant_fle_total_production_variables = yes
+		}
+		solar_system = {
+			save_event_target_as = migrantfleetLocation
+			every_system_planet = {
+				limit = {
+					is_primary_star = yes
+				}
+				save_event_target_as = migrantfleetLocationStar
+				change_migrant_fleet_system_star = yes
+			}
+			every_system_planet = {
+				limit = {
+					has_deposit = yes
+				}
+				set_migrant_fleet_planet_deposit_variables = yes
+				calculate_total_resource_deposits = yes
+			}
+		}
+		#owner = {
+		#	every_owned_planet = {
+		#		limit = {
+		#			has_planet_flag = civilian_fleet_planet
+		#		}
+		#		reset_migrant_fleet_resource_deposits = yes
+		#	}
+		#}
+	}
+}
+

@@ -167,3 +167,172 @@ is_exotic = {
 		is_planet_class = pc_highgrav_primal
 	}
 }
+
+is_btr_habitable_world = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_arid
+		is_planet_class = pc_desert
+		is_planet_class = pc_savannah
+		is_planet_class = pc_tropical
+		is_planet_class = pc_swamp
+		is_planet_class = pc_continental
+		is_planet_class = pc_ocean
+		is_planet_class = pc_alpine
+		is_planet_class = pc_tundra
+		is_planet_class = pc_arctic
+		is_planet_class = pc_highgrav_arid
+		is_planet_class = pc_highgrav_desert
+		is_planet_class = pc_highgrav_savannah
+		is_planet_class = pc_highgrav_tropical
+		is_planet_class = pc_highgrav_swamp
+		is_planet_class = pc_highgrav_continental
+		is_planet_class = pc_highgrav_ocean
+		is_planet_class = pc_highgrav_alpine
+		is_planet_class = pc_highgrav_tundra
+		is_planet_class = pc_highgrav_arctic
+		is_planet_class = pc_dextro_arid
+		is_planet_class = pc_dextro_desert
+		is_planet_class = pc_dextro_savannah
+		is_planet_class = pc_dextro_tropical
+		is_planet_class = pc_dextro_swamp
+		is_planet_class = pc_dextro_continental
+		is_planet_class = pc_dextro_ocean
+		is_planet_class = pc_dextro_alpine
+		is_planet_class = pc_dextro_tundra
+		is_planet_class = pc_dextro_arctic
+		is_planet_class = pc_dextro_highgrav_arid
+		is_planet_class = pc_dextro_highgrav_desert
+		is_planet_class = pc_dextro_highgrav_savannah
+		is_planet_class = pc_dextro_highgrav_tropical
+		is_planet_class = pc_dextro_highgrav_swamp
+		is_planet_class = pc_dextro_highgrav_continental
+		is_planet_class = pc_dextro_highgrav_ocean
+		is_planet_class = pc_dextro_highgrav_alpine
+		is_planet_class = pc_dextro_highgrav_tundra
+		is_planet_class = pc_dextro_highgrav_arctic
+		is_planet_class = pc_chlorine
+		is_planet_class = pc_highgrav_chlorine
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_highgrav_ammonia
+		is_planet_class = pc_methane
+		is_planet_class = pc_highgrav_methane
+		is_planet_class = pc_mephitic
+		is_planet_class = pc_highgrav_mephitic
+		is_planet_class = pc_primal
+		is_planet_class = pc_highgrav_primal
+	}
+}
+
+is_btr_dextro_class = {
+	OR = {
+		is_planet_class = pc_dextro_arid
+		is_planet_class = pc_dextro_desert
+		is_planet_class = pc_dextro_savannah
+		is_planet_class = pc_dextro_tropical
+		is_planet_class = pc_dextro_swamp
+		is_planet_class = pc_dextro_continental
+		is_planet_class = pc_dextro_ocean
+		is_planet_class = pc_dextro_alpine
+		is_planet_class = pc_dextro_tundra
+		is_planet_class = pc_dextro_arctic
+		is_planet_class = pc_dextro_highgrav_arid
+		is_planet_class = pc_dextro_highgrav_desert
+		is_planet_class = pc_dextro_highgrav_savannah
+		is_planet_class = pc_dextro_highgrav_tropical
+		is_planet_class = pc_dextro_highgrav_swamp
+		is_planet_class = pc_dextro_highgrav_continental
+		is_planet_class = pc_dextro_highgrav_ocean
+		is_planet_class = pc_dextro_highgrav_alpine
+		is_planet_class = pc_dextro_highgrav_tundra
+		is_planet_class = pc_dextro_highgrav_arctic
+	}
+}
+
+is_btr_high_grav_class = {
+	OR = {
+		is_planet_class = pc_highgrav_arid
+		is_planet_class = pc_highgrav_desert
+		is_planet_class = pc_highgrav_savannah
+		is_planet_class = pc_highgrav_tropical
+		is_planet_class = pc_highgrav_swamp
+		is_planet_class = pc_highgrav_continental
+		is_planet_class = pc_highgrav_ocean
+		is_planet_class = pc_highgrav_alpine
+		is_planet_class = pc_highgrav_tundra
+		is_planet_class = pc_highgrav_arctic
+		is_planet_class = pc_dextro_highgrav_arid
+		is_planet_class = pc_dextro_highgrav_desert
+		is_planet_class = pc_dextro_highgrav_savannah
+		is_planet_class = pc_dextro_highgrav_tropical
+		is_planet_class = pc_dextro_highgrav_swamp
+		is_planet_class = pc_dextro_highgrav_continental
+		is_planet_class = pc_dextro_highgrav_ocean
+		is_planet_class = pc_dextro_highgrav_alpine
+		is_planet_class = pc_dextro_highgrav_tundra
+		is_planet_class = pc_dextro_highgrav_arctic
+	}
+}
+
+is_btr_capital_world = {
+	OR = {
+		has_planet_flag = thessia_planet
+		has_planet_flag = surkesh_planet
+		has_planet_flag = palaven_planet
+		has_planet_flag = earth_planet
+		has_planet_flag = dekuuna_planet
+		has_planet_flag = irune_planet
+		has_planet_flag = kahje_planet
+		has_planet_flag = kharshan_planet
+		has_planet_flag = tuchanka_planet
+		has_planet_flag = omega_station
+		has_planet_flag = illium_planet
+		has_planet_flag = caleston_planet
+		has_planet_flag = rakhana_planet
+		has_planet_flag = heshtok_planet
+		has_planet_flag = sedriicae_planet
+		has_planet_flag = sepkai_planet
+		has_planet_flag = vindicta_planet
+		has_planet_flag = parnack_planet
+		has_planet_flag = turvess_planet
+		has_planet_flag = rannoch_planet
+		has_planet_flag = heretic_station
+		has_planet_flag = utukku_planet
+		has_planet_flag = citadel_station
+	}
+}
+
+is_btr_sandbox_map = {
+	OR = {
+		galaxy_size = btr_sandbox_600
+		galaxy_size = btr_sandbox_1300
+		galaxy_size = btr_sandbox_1500
+	}
+}
+
+# is_btr_hybrid_map = {
+#	OR = {
+# 	galaxy_size = btr_hybrid_600
+# 	galaxy_size = btr_hybrid_1300
+# 	galaxy_size = btr_hybrid_1500
+#	}
+# }
+
+is_btr_canon_map = {
+	OR = {
+		galaxy_size = btr_canon_600
+		galaxy_size = btr_canon_1300
+		galaxy_size = btr_canon_1500
+	}
+}
+
+is_btr_non_sandbox_map = {
+	OR = {
+		galaxy_size = btr_canon_600
+		galaxy_size = btr_canon_1300
+		galaxy_size = btr_canon_1500
+		#galaxy_size = btr_hybrid_600
+		#galaxy_size = btr_hybrid_1300
+		#galaxy_size = btr_hybrid_1500
+	}
+}

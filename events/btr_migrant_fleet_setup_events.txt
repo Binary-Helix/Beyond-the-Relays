@@ -1,0 +1,65 @@
+
+namespace = btr_migrant_fleet_setup
+
+##### SPAWN MIGRANT FLEET SOLAR SYSTEM
+event = {
+	id = btr_migrant_fleet_setup.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = migrant_fleet_system_spawned
+
+		no_scope = {
+			spawn_system = {
+				#Spawn the system in the top right corner of the galaxy map, secluded from the rest of the galaxies and too far for jump drives.
+				min_distance = 750
+				max_distance = 750
+				min_orientation_angle = -45
+				max_orientation_angle = -45
+				initializer = sys_migrant_fleet_init
+				hyperlane = no
+				is_discovered = no
+				effect = {
+					save_global_event_target_as = migrantfleetMainSystem
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				has_origin = migrant_fle_origin
+			}
+			country_event = { id = btr_migrant_fleet_setup.2 days = 0 }
+		}
+	}
+}
+
+country_event = {
+	id = btr_migrant_fleet_setup.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = migrant_fleet_system_changed
+		set_migrant_fle_total_production_variables = yes
+		random_country = {
+			limit = {
+				has_origin = migrant_fle_origin
+			}
+			set_country_flag = migrant_fleet_player
+			save_global_event_target_as = migrant_fleet_player
+		}
+		change_migrant_fleet_system = yes
+		generate_migrant_fleet_fleets = yes
+	}
+}
+
+country_event = {
+	id = btr_migrant_fleet_setup.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+
+	}
+}

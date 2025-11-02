@@ -901,6 +901,10 @@ sys_sol_init = {
 		deposit_blockers = none
         modifiers = none
 		init_effect = {
+			add_modifier = {
+				modifier = temperate_world
+				days = -1
+			}
 			save_global_event_target_as = humanHomeworld
 			if = {
 				limit = {
@@ -911,9 +915,9 @@ sys_sol_init = {
             prevent_anomaly = yes
 
             check_for_human_player = yes
-            
+
             if = {
-				limit = { 
+				limit = {
 					any_country = {
 						has_country_flag = systems_alliance_player
 					}
@@ -924,15 +928,9 @@ sys_sol_init = {
 					}
 					save_global_event_target_as = systems_alliance
 				}
+				generate_empire_home_planet = yes
 			}
-			else_if = {
-				limit = { 
-					NOT = {
-						any_country = {
-							has_country_flag = systems_alliance_player
-						}
-					}
-				}
+			else = {
 				generate_systems_alliance_country = yes
 			}
             set_capital = yes
@@ -942,14 +940,16 @@ sys_sol_init = {
 				species = event_target:humanSpecies
 				ethos = owner
 			}
-            generate_sys_earth_pops = yes
-			add_modifier = {
-				modifier = temperate_world
-				days = -1
+			clear_blockers = yes
+			generate_btr_start_deposits_and_blockers = yes
+			btr_generate_canon_planetary_features = yes
+			inline_script = "game_start/systems_all_origin"
+			generate_sys_earth_pops = yes
+			event_target:systems_alliance = {
+				create_starting_leaders = yes
+				country_event = { id = game_start.9 }
 			}
-
-			generate_sys_earth_capital_buildings = yes
-		}			
+		}
 
 		moon = {
 			name = "Luna"
@@ -1421,51 +1421,51 @@ sys_anadius_init = {
         flags = { anadius_star }
     }
 
-	# planet = {
-	# 	name = "Cronos Station"
-	# 	class = pc_habitat
-	# 	orbit_distance = 250
-	# 	orbit_angle = 215
-	# 	size = 12
-	# 	has_ring = no
-	# 	starting_planet = yes
-	# 	flags = { cronos_station }
-	# 	entity = "cerberus_cronos_01_game_entity"
-	# 	deposit_blockers = none
-    #     modifiers = none
-	# 	# init_effect = {
-	# 	# 	save_global_event_target_as = cerberusHomeStation
-
-    #     #     prevent_anomaly = yes
-
-    #     #     check_for_human_player = yes
-            
-    #     #     if = {
-	# 	# 		limit = { 
-	# 	# 			any_country = {
-	# 	# 				has_country_flag = cerberus_empire_player
-	# 	# 			}
-	# 	# 		}
-	# 	# 		random_country = {
-	# 	# 			limit = {
-	# 	# 				has_country_flag = cerberus_empire_player
-	# 	# 			}
-	# 	# 			save_global_event_target_as = cerberus_empire
-	# 	# 		}
-	# 	# 	}
-	# 	# 	else = {
-	# 	# 		generate_cerberus_empire_country = yes
-	# 	# 	}
-    #     #     set_capital = yes
-	# 	# 	set_owner = event_target:cerberus_empire
-	# 	# 	create_colony = {
-	# 	# 		owner = event_target:cerberus_empire
-	# 	# 		species = event_target:humanSpecies
-	# 	# 		ethos = owner
-	# 	# 	}
-    #     #     generate_cerb_cronos_pops = yes
-	# 	# }
-	# }	
+	planet = {
+		name = "Cronos Station"
+		class = pc_habitat
+		orbit_distance = 250
+		orbit_angle = 215
+		size = 12
+		has_ring = no
+		starting_planet = yes
+		flags = { cronos_station }
+		entity = "cerberus_cronos_01_game_entity"
+		deposit_blockers = none
+        modifiers = none
+		# init_effect = {
+		# 	save_global_event_target_as = cerberusHomeStation
+		#
+        #     prevent_anomaly = yes
+		#
+        #     check_for_human_player = yes
+        #
+        #     if = {
+		# 		limit = {
+		# 			any_country = {
+		# 				has_country_flag = cerberus_empire_player
+		# 			}
+		# 		}
+		# 		random_country = {
+		# 			limit = {
+		# 				has_country_flag = cerberus_empire_player
+		# 			}
+		# 			save_global_event_target_as = cerberus_empire
+		# 		}
+		# 	}
+		# 	else = {
+		# 		cerberus_cronos_station_setup = yes
+		# 	}
+        #     set_capital = yes
+		# 	set_owner = event_target:cerberus_empire
+		# 	create_colony = {
+		# 		owner = event_target:cerberus_empire
+		# 		species = event_target:humanSpecies
+		# 		ethos = owner
+		# 	}
+        #     generate_cerb_cronos_pops = yes
+		# }
+	}
 
 	change_orbit = 50
 
@@ -1709,33 +1709,33 @@ sys_pax_init = {
 		modifiers = none
 		entity = "antarctic_planet_01_entity"
 		flags = { subclass_world noveria_planet }		
-		init_effect = {	
-			save_global_event_target_as = noveriaHomeworld
-            if = {
-                limit = {
-                    exists = event_target:citadelHomeworld
-                }
-                log = "Noveria Development Corporation Event Target Set"
-            }
-            prevent_anomaly = yes
-			
-			generate_noveria_development_corporation_country = yes
-
-			set_capital = yes
-			set_owner = event_target:noveria_development_corporation
-			create_colony = {
-				owner = event_target:noveria_development_corporation
-				species = event_target:salarianSpecies
-				ethos = owner
-			}
-
-			generate_noveria_pops = yes
-			
-			add_modifier = {
-				modifier = antar_world
-				days = -1
-			}
-		}			
+		# init_effect = {
+		# 	save_global_event_target_as = noveriaHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:citadelHomeworld
+        #         }
+        #         log = "Noveria Development Corporation Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+		#
+		# 	generate_noveria_development_corporation_country = yes
+		#
+		# 	set_capital = yes
+		# 	set_owner = event_target:noveria_development_corporation
+		# 	create_colony = {
+		# 		owner = event_target:noveria_development_corporation
+		# 		species = event_target:salarianSpecies
+		# 		ethos = owner
+		# 	}
+		#
+		# 	generate_noveria_pops = yes
+		#
+		# 	add_modifier = {
+		# 		modifier = antar_world
+		# 		days = -1
+		# 	}
+		# }
 	}
 
     planet = {
@@ -2405,33 +2405,33 @@ sys_crete_init = {
 		deposit_blockers = none
         modifiers = none
 		entity = "mesa_planet_01_entity"
-		init_effect = {
-			save_global_event_target_as = ishtarHomeworld
-            if = {
-                limit = {
-                    exists = event_target:ishtarHomeworld
-                }
-                log = "Ishtar Emporium Event Target Set"
-            }
-            prevent_anomaly = yes
-
-			generate_ishtar_emporium_country = yes
-
-			set_capital = yes
-			set_owner = event_target:ishtar_emporium
-			create_colony = {
-				owner = event_target:ishtar_emporium
-				species = event_target:salarianSpecies
-				ethos = owner
-			}
-
-			generate_ishtar_pops = yes
-
-			add_modifier = {
-				modifier = mesa_world
-				days = -1
-			}
-		}
+		# init_effect = {
+		# 	save_global_event_target_as = ishtarHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:ishtarHomeworld
+        #         }
+        #         log = "Ishtar Emporium Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+		#
+		# 	generate_ishtar_emporium_country = yes
+		#
+		# 	set_capital = yes
+		# 	set_owner = event_target:ishtar_emporium
+		# 	create_colony = {
+		# 		owner = event_target:ishtar_emporium
+		# 		species = event_target:salarianSpecies
+		# 		ethos = owner
+		# 	}
+		#
+		# 	generate_ishtar_pops = yes
+		#
+		# 	add_modifier = {
+		# 		modifier = mesa_world
+		# 		days = -1
+		# 	}
+		# }
     }
 
 	planet = {
@@ -3051,6 +3051,10 @@ sys_harsa_init = {
 		deposit_blockers = none
         modifiers = none
 		init_effect = {
+			add_modifier = {
+				modifier = steppe_world
+				days = -1
+			}
 			save_global_event_target_as = batarianHomeworld
 			if = {
 				limit = {
@@ -3061,9 +3065,9 @@ sys_harsa_init = {
             prevent_anomaly = yes
 
             check_for_batarian_player = yes
-            
+
             if = {
-				limit = { 
+				limit = {
 					any_country = {
 						has_country_flag = hegemony_of_kharshan_player
 					}
@@ -3074,6 +3078,7 @@ sys_harsa_init = {
 					}
 					save_global_event_target_as = hegemony_of_kharshan
 				}
+				generate_empire_home_planet = yes
 			}
 			else = {
 				generate_hegemony_of_kharshan_country = yes
@@ -3085,13 +3090,16 @@ sys_harsa_init = {
 				species = event_target:batarianSpecies
 				ethos = owner
 			}
-            generate_bat_kharshan_pops = yes
-			add_modifier = {
-				modifier = steppe_world
-				days = -1
+			clear_blockers = yes
+			generate_btr_start_deposits_and_blockers = yes
+			btr_generate_canon_planetary_features = yes
+			inline_script = "game_start/hegemony_kha_origin"
+			generate_bat_kharshan_pops = yes
+			event_target:hegemony_of_kharshan = {
+				create_starting_leaders = yes
+				country_event = { id = game_start.9 }
 			}
-			generate_bat_kharshan_capital_buildings = yes
-		}		
+		}
     }
 
     planet = {
@@ -4078,33 +4086,33 @@ sys_cavalcante_init = {
 		flags = { subclass_world anansi_planet }
 		deposit_blockers = none
         modifiers = none
-		init_effect = {
-			save_global_event_target_as = anansiHomeworld
-            if = {
-                limit = {
-                    exists = event_target:anansiHomeworld
-                }
-                log = "Anansi Manufacturing Event Target Set"
-            }
-            prevent_anomaly = yes
-
-			generate_anansi_manufacturing_country = yes
-
-			set_capital = yes
-			set_owner = event_target:anansi_manufacturing
-			create_colony = {
-				owner = event_target:anansi_manufacturing
-				species = event_target:hanarSpecies
-				ethos = owner
-			}
-
-			generate_anansi_pops = yes
-
-			add_modifier = {
-				modifier = biolum_world
-				days = -1
-			}
-		}
+		# init_effect = {
+		# 	save_global_event_target_as = anansiHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:anansiHomeworld
+        #         }
+        #         log = "Anansi Manufacturing Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+		#
+		# 	generate_anansi_manufacturing_country = yes
+		#
+		# 	set_capital = yes
+		# 	set_owner = event_target:anansi_manufacturing
+		# 	create_colony = {
+		# 		owner = event_target:anansi_manufacturing
+		# 		species = event_target:hanarSpecies
+		# 		ethos = owner
+		# 	}
+		#
+		# 	generate_anansi_pops = yes
+		#
+		# 	add_modifier = {
+		# 		modifier = biolum_world
+		# 		days = -1
+		# 	}
+		# }
 	}
 
 	init_effect = { 

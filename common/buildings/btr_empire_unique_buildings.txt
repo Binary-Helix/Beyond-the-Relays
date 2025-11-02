@@ -1,0 +1,2807 @@
+
+### ASARI REPUBLICS
+
+#Republic Communications Center
+building_asari_rep_comm_center = {
+    base_buildtime = @btr_govt_b3_time
+    base_cap_amount = 1
+	icon = building_residence
+    exempt_from_ai_planet_specialization = no
+
+	building_sets = { government urban }
+
+    category = government
+
+    potential = {
+        owner = {
+            has_origin = asari_rep_origin
+        }
+    }
+
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_origin = asari_rep_origin }
+		}
+	}
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_govt_b3_mineral_cost
+            light_alloys = @btr_govt_b3_light_alloys_cost
+			heavy_alloys = @btr_govt_b3_heavy_alloys_cost
+       }
+        upkeep = {
+            energy = @btr_govt_b3_energy_upkeep
+       }
+        produces = {
+            unity = 4
+        }
+    }
+
+    planet_modifier = {
+        job_culture_worker_add = 100
+		planet_amenities_mult = 0.25
+		pop_cat_specialist_political_power = 0.1
+		pop_cat_worker_political_power = 0.1
+    }
+
+    triggered_desc = {
+        text = job_culture_worker_effect_desc
+    }
+	
+}
+
+#Galactic Sports Center
+building_asari_galactic_sports_center = {
+    base_buildtime = @btr_civil_b4_time
+    exempt_from_ai_planet_specialization = no
+	icon = building_commercial_zone
+    empire_limit = 1
+
+	building_sets = { unity urban resort }
+
+    category = unity
+
+    potential = {
+        owner = {
+            has_origin = asari_rep_origin
+        }
+    }
+
+    destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { has_origin = asari_rep_origin }
+		}
+	}
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @btr_civil_b4_mineral_cost
+			light_alloys = @btr_civil_b4_light_alloys_cost
+			heavy_alloys = @btr_civil_b4_heavy_alloys_cost
+        }
+        upkeep = {
+            energy = @btr_civil_b4_energy_upkeep
+        }
+        produces = {
+            energy = 20
+            unity = 2
+        }
+    }
+
+    planet_modifier = {
+        job_entertainer_add = 1
+        job_duelist_add = 1
+        job_culture_worker_add =1
+		planet_amenities_mult = 0.05
+#		pop_happiness = 0.05
+    }
+	triggered_country_modifier = {
+		pop_happiness = 0.05
+	}
+
+    triggered_desc = {
+        text = job_entertainer_effect_desc
+    }
+    triggered_desc = {
+        text = job_duelist_effect_desc
+    }
+    triggered_desc = {
+        text = job_culture_worker_effect_desc
+    }
+
+}
+
+### SALARIAN UNION
+
+#Institute for Exo-Archaeological Research Outpost
+building_salarian_exo_arch_res_outpost = {
+	base_buildtime = @btr_research_b4_time
+	icon = building_research_lab_3
+	base_cap_amount = 1
+	empire_limit = 1
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = salarian_uni_origin
+		}
+	}
+
+	building_sets = { research }
+
+	category = research
+
+	allow = {
+		#buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = salarian_uni_origin } }
+		}
+	}
+
+	country_modifier = {
+		all_technology_research_speed = 0.15
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_research_b4_mineral_cost
+			light_alloys = @btr_research_b4_light_alloys_cost
+			heavy_alloys = @btr_research_b4_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_research_b4_energy_upkeep
+			eezo = @btr_research_b4_eezo_upkeep
+		}
+	}
+}
+
+building_salarian_covert_collection = {
+	base_buildtime = @btr_mili_b4_time
+	base_cap_amount = 1
+	icon = building_illicit_research_labs
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = salarian_uni_origin
+			has_technology = tech_colonial_centralization
+		}
+	}
+
+	building_sets = { research }
+
+	category = research
+
+	allow = {
+		exists = owner
+		has_major_upgraded_capital = yes
+		#buildings_simple_allow = yes
+		owner = {
+			has_technology = tech_colonial_centralization
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			### AI destruction logic
+			# AND = {
+			# 	free_building_slots = 0
+			#	free_jobs < 1
+			#	free_housing > 10
+			#	owner = {
+			#		is_ai = yes
+			#	}
+			# }
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = salarian_uni_origin } }
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_crime_add = -35
+		planet_jobs_unity_produces_mult = 0.1
+		job_technician_add = 6
+		army_defense_damage_mult = 0.2
+	}
+
+	country_modifier = {
+		envoys_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_mili_b4_mineral_cost
+			light_alloys = @btr_mili_b4_light_alloys_cost
+			heavy_alloys = @btr_mili_b4_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_mili_b4_energy_upkeep
+			eezo = @btr_mili_b4_eezo_upkeep
+		}
+	}
+}
+
+### TURIAN HIERARCHY
+
+#Planetary Kasrs
+building_turian_planetary_kasrs = {
+	base_buildtime = @btr_mili_b3_time
+	base_cap_amount = 1
+	icon = building_stronghold
+	category = army
+
+	building_sets = { government fortress }
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = turian_hie_origin
+			has_technology = tech_turian_planetary_kasrs
+		}
+	}
+
+	allow = {
+		exists = owner
+		has_major_upgraded_capital = yes
+		#buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			### AI destruction logic
+			# AND = {
+			# 	free_building_slots = 0
+			#	free_jobs < 1
+			#	free_housing > 10
+			#	owner = {
+			#		is_ai = yes
+			#	}
+			# }
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = turian_hie_origin  } }
+		}
+	}
+	
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.10
+		job_soldier_add = 2
+		planet_defense_armies_add = 4
+		army_defense_damage_mult = 0.25
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_mili_b3_mineral_cost
+			light_alloys = @btr_mili_b3_light_alloys_cost
+			heavy_alloys = @btr_mili_b3_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_mili_b3_energy_upkeep
+		}
+		produces = {
+			unity = 1
+		}
+	}
+}
+
+#Castra Auxilia
+building_turian_castra_auxilia = {
+	base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+	icon = building_guard_quarters
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = turian_hie_origin
+			has_technology = tech_turian_planetary_kasrs
+		}
+	}
+
+	building_sets = { government urban }
+
+	category = government
+
+	allow = {
+		exists = owner
+		has_major_upgraded_capital = yes
+		#buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			### AI destruction logic
+			# AND = {
+			# 	free_building_slots = 0
+			#	free_jobs < 1
+			#	free_housing > 10
+			#	owner = {
+			#		is_ai = yes
+			#	}
+			# }
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = turian_hie_origin  } }
+		}
+	}
+
+	planet_modifier = {
+		founder_species_growth_mult = 0.1
+		job_soldier_add = 1
+		planet_defense_armies_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b3_mineral_cost
+			light_alloys = @btr_civil_b3_light_alloys_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b3_energy_upkeep
+		}
+	}
+}
+
+###Systems Alliance
+building_systems_colonial_affairs_office = {
+	base_buildtime = @btr_civil_b1_time
+	base_cap_amount = 1
+	icon = building_public_relations_office
+	category = government
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = systems_all_origin
+		}
+	}
+
+	building_sets = { government urban }
+
+	allow = {
+		exists = owner
+		colony_age = 120
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			### AI destruction logic
+			# AND = {
+			# 	free_building_slots = 0
+			#	free_jobs < 1
+			#	free_housing > 10
+			#	owner = {
+			#		is_ai = yes
+			#	}
+			# }
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = systems_all_origin } }
+		}
+	}
+
+	planet_modifier = {
+		founder_species_growth_mult = 0.05
+		pop_resettlement_cost_mult = -0.15
+		job_bureaucrat_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b1_mineral_cost
+			light_alloys = @btr_civil_b1_light_alloys_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b1_energy_upkeep
+		}
+	}
+}
+
+building_systems_ict_academy = {
+	base_buildtime = @btr_mili_b4_time
+	empire_limit = 1
+	icon = building_military_academy
+	category = army
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = systems_all_origin
+		}
+	}
+
+	building_sets = {government fortress }
+
+	allow = {
+		exists = owner
+		has_planet_flag = earth_planet
+	}
+
+	destroy_trigger = {
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = systems_all_origin } }
+		}
+	}
+
+	planet_modifier = {
+		planet_defense_armies_add = 2
+		job_soldier_add = 1
+	}
+
+	army_modifier = {
+		army_starting_experience_add = 150
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_mili_b4_mineral_cost
+			light_alloys = @btr_mili_b4_light_alloys_cost
+			heavy_alloys = @btr_mili_b4_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_mili_b4_energy_upkeep
+			eezo = @btr_mili_b4_eezo_upkeep
+		}
+	}
+}
+
+###Courts of Dekuuna
+
+building_elcor_elders_assembly = {
+	base_buildtime = @btr_civil_b0_time
+	base_cap_amount = 1
+	icon = holding_park_ranger_lodge
+	category = government
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = courts_dek_origin
+		}
+	}
+
+	building_sets = { government }
+
+	destroy_trigger = {
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = courts_dek_origin } }
+		}
+	}	
+
+	planet_modifier = {
+		job_elcor_elder_add = 1
+		job_politician_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b0_mineral_cost
+			light_alloys = @btr_civil_b0_light_alloys_cost
+			heavy_alloys = @btr_civil_b0_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b0_energy_upkeep
+		}
+		produces = {
+			unity = 10
+		}
+	}
+}
+
+building_elcor_communal_croplands = {
+	base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+	icon = building_hydroponics_farm
+	category = resource
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = courts_dek_origin
+		}
+	}
+
+	building_sets = { unity farming }
+
+	destroy_trigger = {
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = courts_dek_origin } }
+		}
+	}	
+
+	planet_modifier = {
+		job_farmer_add = 2
+		planet_jobs_food_produces_mult = 0.25
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b3_mineral_cost
+			light_alloys = @btr_civil_b3_light_alloys_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b3_energy_upkeep
+		}
+	}
+}
+
+###Vol Protectorate
+building_volus_galactic_commercial_zone = {
+	base_buildtime = @btr_civil_b1_time
+	base_cap_amount = 1
+	icon = building_commercial_megaplex
+	exempt_from_ai_planet_specialization = no
+	category = trade
+
+	building_sets = { trade urban }
+
+	allow = {
+		has_major_upgraded_capital = yes 
+	}
+
+	potential = {
+		owner = {
+			has_origin = vol_pro_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = vol_pro_origin } }
+		}
+	}
+
+	planet_modifier = {
+		job_clerk_add = 3
+		job_manager_add = 2
+		job_executive_add = 1
+		planet_amenities_add = 15
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b1_mineral_cost
+			light_alloys = @btr_civil_b1_light_alloys_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b1_energy_upkeep
+		}
+	}
+
+	triggered_desc = {
+		text = job_clerk_effect_desc
+	}
+	triggered_desc = {
+		text = job_manager_effect_desc
+	}
+	triggered_desc = {
+		text = job_executive_effect_desc
+	}
+
+	prerequisites = {
+		"tech_galactic_markets"
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+}
+
+building_volus_economic_regulation_office = {
+	base_buildtime = @btr_civil_b1_time
+	base_cap_amount = 1
+	icon = holding_franchise_headquarters
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+
+	building_sets = { industrial trade }
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	potential = {
+		owner = {
+			has_origin = vol_pro_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = vol_pro_origin } }
+		}
+	}
+
+	planet_modifier = {
+		job_bureaucrat_add = 1
+		job_enforcer_add = 1
+		planet_artisans_produces_mult = 0.05
+		planet_metallurgists_produces_mult = 0.05
+		planet_farmers_produces_mult = 0.08
+		planet_miners_produces_mult = 0.08
+		planet_jobs_unity_produces_mult = 0.05
+		pop_happiness = -0.05
+		pop_unemployment_demotion_time_mult = -0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b1_mineral_cost
+			light_alloys = @btr_civil_b1_light_alloys_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b1_energy_upkeep
+			unity = 10
+		}
+	}
+
+	triggered_desc = {
+		text = job_bureaucrat_effect_desc
+	}
+		triggered_desc = {
+		text = job_enforcer_effect_desc
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+}
+
+###Illuminated Primacy
+building_hanar_enkindler_reliquary = {
+	base_buildtime = @btr_civil_b1_time
+	base_cap_amount = 1
+	icon = building_sentinel_posts
+	exempt_from_ai_planet_specialization = no
+	category = unity
+
+	building_sets = { unity	 }
+
+	allow = {
+		has_upgraded_capital = yes 
+	}
+
+	potential = {
+		owner = {
+			has_origin = illuminated_pri_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = illuminated_pri_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b1_mineral_cost
+			light_alloys = @btr_civil_b1_light_alloys_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b1_energy_upkeep
+			consumer_goods = 5
+		}
+	}
+
+	planet_modifier = {
+		job_high_priest_add = 1
+		job_hanar_caretaker_add = 3
+		planet_jobs_unity_produces_mult = 0.05
+		pop_ethic_fanatic_spiritualist_attraction_mult = 0.2
+	}
+
+	triggered_desc = {
+		text = job_high_priest_effect_desc
+	}
+	triggered_desc = {
+		text = job_caretaker_effect_desc
+	}
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+}
+
+building_hanar_drell_barracks = {
+	base_buildtime = @btr_mili_b1_time
+	base_cap_amount = 2
+	icon = building_stronghold
+	exempt_from_ai_planet_specialization = no
+	category = army
+
+	building_sets = { fortress }
+
+	allow = {
+		has_upgraded_capital = yes 
+	}
+
+	potential = {
+		owner = {
+			has_origin = illuminated_pri_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = illuminated_pri_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_mili_b1_mineral_cost
+			light_alloys = @btr_mili_b1_light_alloys_cost
+			heavy_alloys = @btr_mili_b1_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_mili_b1_energy_upkeep
+			eezo = @btr_mili_b1_eezo_upkeep
+		}
+	}
+
+	planet_modifier = {
+		job_soldier_add = 4
+		planet_orbital_bombardment_damage = -0.2
+	}
+
+	army_modifier = {
+		army_defense_morale_mult = 0.5
+	}
+
+	triggered_desc = {
+		text = job_soldier_effect_desc
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+}
+
+###Hegemony of Khar'shan
+building_batarian_slave_market = {
+	base_buildtime = @btr_civil_b4_time
+	base_cap_amount = 1
+	icon = building_crude_huts
+	exempt_from_ai_planet_specialization = no
+	category = government
+
+	building_sets = { government trade }
+
+	allow = {
+		has_upgraded_capital = yes 
+	}
+
+	potential = {
+		owner = {
+			has_origin = hegemony_kha_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = hegemony_kha_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+            minerals = @btr_civil_b4_mineral_cost
+			light_alloys = @btr_civil_b4_light_alloys_cost
+			heavy_alloys = @btr_civil_b4_heavy_alloys_cost
+		}
+		upkeep = {
+            energy = @btr_civil_b4_energy_upkeep
+			consumer_goods = 2
+		}
+	}
+
+	planet_modifier = {
+		pop_category_slave_upkeep_mult = -0.25
+		pop_cat_slave_political_power = -0.50
+		job_slave_overseer_add = 2
+	}
+}
+
+building_batarian_black_site = {
+	base_buildtime = @btr_mili_b3_time
+	base_cap_amount = 1
+	icon = building_slave_processing
+	exempt_from_ai_planet_specialization = no
+	category = government
+
+	building_sets = { government fortress }
+
+	allow = {
+		has_upgraded_capital = yes 
+	}
+
+	potential = {
+		owner = {
+			has_origin = hegemony_kha_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = hegemony_kha_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_mili_b3_mineral_cost
+			light_alloys = @btr_mili_b3_light_alloys_cost
+			heavy_alloys = @btr_mili_b3_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_mili_b3_energy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		job_enforcer_add = 2
+		planet_crime_add = -20
+		#planet_emigration_push_add = -0.5
+		pop_government_ethic_attraction = 0.33
+	}
+}
+
+###Aralakh Kahmat
+building_krogan_maw_hammers = {
+	base_buildtime = @btr_civil_b0_time
+	base_cap_amount = 1
+	icon = building_order_holding
+	exempt_from_ai_planet_specialization = no
+	category = government
+
+	building_sets = { government unity }
+
+	allow = {
+		has_deposit = d_wild_thresher_maws
+	}
+
+	potential = {
+		owner = {
+			has_origin = aralakh_kah_origin
+		}
+		planet = {
+			OR = {
+				has_deposit = d_territorial_thresher_maw
+				has_deposit = d_wild_thresher_maws
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = aralakh_kah_origin } }
+		}
+	}
+
+	planet_modifier = {
+		job_soldier_add = 1
+		#spawns 1 thresher maw defense army somehow
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b0_mineral_cost
+			light_alloys = @btr_civil_b0_light_alloys_cost
+			heavy_alloys = @btr_civil_b0_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b0_energy_upkeep
+		}
+	}
+}
+
+building_krogan_neutral_ground = {
+	base_buildtime = @btr_civil_b0_time
+	base_cap_amount = 1
+	icon = holding_experimental_crater
+	exempt_from_ai_planet_specialization = no
+	category = government
+
+	building_sets = { government unity	 }
+
+	potential = {
+		owner = {
+			has_origin = aralakh_kah_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = aralakh_kah_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b0_mineral_cost
+			light_alloys = @btr_civil_b0_light_alloys_cost
+			heavy_alloys = @btr_civil_b0_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b0_energy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_crime_mult = -0.25
+		job_soldier_add = 2
+		pop_government_ethic_attraction = 0.05
+		planet_amenities_add = 25
+		planet_defense_armies_add = 3
+	}
+}
+
+###Migrant Fleet
+
+###Cerberus
+
+
+###Omega
+building_omega_grey_market = {
+	base_buildtime = @btr_civil_b0_time
+	base_cap_amount = 1
+	icon = building_primitive_factory
+	exempt_from_ai_planet_specialization = no
+	category = government
+
+	building_sets = { government trade }
+
+	allow = {
+		has_upgraded_capital = yes 
+	}
+
+	potential = {
+		owner = {
+			has_origin = omega_emp_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = omega_emp_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b0_mineral_cost
+			light_alloys = @btr_civil_b0_light_alloys_cost
+			heavy_alloys = @btr_civil_b0_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b0_energy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_add = 5
+		planet_jobs_unity_produces_mult = 0.05
+		planet_crime_add = 10
+		job_merchant_add = 1
+		job_clerk_add = 2
+	}
+}
+
+building_omega_scrap_garage = {
+	base_buildtime = @btr_civil_b1_time
+	base_cap_amount = 2
+	icon = building_junkheap
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+
+	building_sets = { industrial trade }
+
+	allow = {
+		has_upgraded_capital = yes 
+	}
+
+	potential = {
+		owner = {
+			has_origin = omega_emp_origin
+			root = {
+				is_planet_class = pc_habitat
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = omega_emp_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b1_mineral_cost
+			light_alloys = @btr_civil_b1_light_alloys_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
+		}
+		produces = {
+			energy = @btr_civil_b1_energy_upkeep
+		}
+		upkeep = {
+			food = 2
+		}
+	}
+
+	planet_modifier = {
+		job_artificer_add = 2
+		job_scrap_miner_add = 2
+	}
+}
+
+###Illium Corporate Interests
+building_illium_stock_exchange = {
+	base_buildtime = @btr_civil_b4_time
+	empire_limit = 1
+	icon = building_commercial_megaplex
+	exempt_from_ai_planet_specialization = no
+	category = trade
+
+	building_sets = { trade urban }
+
+	allow = {
+		AND = {
+			planet = {
+				has_planet_flag = illium_planet
+			}
+			has_upgraded_capital = yes 
+		}
+	}
+
+	potential = {
+		owner = {
+			has_origin = illium_cor_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = illium_cor_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+            minerals = @btr_civil_b4_mineral_cost
+			light_alloys = @btr_civil_b4_light_alloys_cost
+			heavy_alloys = @btr_civil_b4_heavy_alloys_cost
+		}
+		upkeep = {
+            energy = @btr_civil_b4_energy_upkeep
+		}
+	}
+
+	country_modifier = {
+		planet_traders_trade_produces_mult = 0.33
+		envoys_add = 1
+		empire_size_branch_office_mult = -0.5
+	}
+
+	planet_modifier = {
+		job_executive_add = 2
+		job_manager_add = 3
+		job_merchant_add = 3
+	}
+}
+
+building_illium_information_broker_network = {
+	base_buildtime = @btr_civil_b4_time
+	empire_limit = 1
+	icon = building_posthumous_employment_center
+	exempt_from_ai_planet_specialization = no
+	category = government
+
+	building_sets = { government }
+
+	allow = {
+		AND = {
+			planet = {
+				has_planet_flag = illium_planet
+			}
+			has_upgraded_capital = yes 
+		}
+	}
+
+	potential = {
+		owner = {
+			has_origin = illium_cor_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = illium_cor_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+            minerals = @btr_civil_b4_mineral_cost
+			light_alloys = @btr_civil_b4_light_alloys_cost
+			heavy_alloys = @btr_civil_b4_heavy_alloys_cost
+		}
+		upkeep = {
+            energy = @btr_civil_b4_energy_upkeep
+		}
+	}
+
+	country_modifier = {
+		spy_network_daily_value_mult = 0.2
+		counter_intel_gain_speed = 0.2
+		intel_decryption_add = 3
+		intel_encryption_add = 3
+		planet_crime_add = 5
+	}
+
+	planet_modifier = {
+		job_criminal_add = 2
+	}
+}
+
+building_illium_trade_center = {
+	base_buildtime = @btr_civil_b4_time
+	empire_limit = 1
+	icon = building_commercial_forum
+	exempt_from_ai_planet_specialization = no
+	category = trade
+
+	building_sets = { trade urban }
+
+	allow = {
+		AND = {
+			planet = {
+				has_planet_flag = illium_planet
+			}
+			has_upgraded_capital = yes 
+		}
+	}
+
+	potential = {
+		owner = {
+			has_origin = illium_cor_origin
+		}
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = illium_cor_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+            minerals = @btr_civil_b4_mineral_cost
+            light_alloys = @btr_civil_b4_light_alloys_cost
+            heavy_alloys = @btr_civil_b4_heavy_alloys_cost
+		}
+		upkeep = {
+            energy = @btr_civil_b4_energy_upkeep
+			consumer_goods = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+		planet_researchers_produces_mult = 0.05
+		pop_happiness = 0.15
+		planet_stability_add = 10
+		planet_housing_add = 3
+		job_merchant_add = 3
+		job_entertainer_add = 3
+		job_clerk_add = 2
+		job_culture_worker_add = 1
+	}
+}
+
+###Caleston Directorate
+# building_advanced_element_zero_refinery = {
+# 	base_buildtime = 400
+# 	icon = building_refinery
+# 	exempt_from_ai_planet_specialization = no
+# 	category = resource	
+
+# }
+
+building_caleston_great_dome = {
+	base_buildtime = @btr_govt_b3_time
+	icon = building_hydroponics_farm
+	exempt_from_ai_planet_specialization = no
+	base_cap_amount = 2
+
+	building_sets = { government trade }
+	
+	category = government
+
+	allow = {
+		AND = {
+			planet = {
+				has_planet_flag = caleston_planet
+			}
+			has_upgraded_capital = yes 
+		}
+	}
+
+	potential = {
+		owner = {
+			has_origin = caleston_dir_origin
+		}
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = caleston_dir_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_govt_b3_mineral_cost
+			light_alloys = @btr_govt_b3_light_alloys_cost
+			heavy_alloys = @btr_govt_b3_heavy_alloys_cost
+			consumer_goods = 150
+		}
+		upkeep = {
+			energy = @btr_govt_b3_energy_upkeep
+			consumer_goods = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+		planet_researchers_produces_mult = 0.05
+		pop_happiness = 0.15
+		planet_stability_add = 10
+		planet_max_districts_add = 2
+		planet_max_buildings_add = 1
+		job_politician_add = 1
+		job_enforcer_add = 1
+		job_bureaucrat_add = 1
+	}
+}
+
+building_caleston_energy_pits = {
+	base_buildtime = @btr_civil_b2_time
+	icon = building_archaeo_refinery
+	exempt_from_ai_planet_specialization = no
+	base_cap_amount = 2
+
+	building_sets = { industrial }
+	
+	category = resource
+
+	allow = {
+		AND = {
+			planet = {
+				has_planet_flag = caleston_planet
+			}
+			has_upgraded_capital = yes 
+		}
+	}
+
+	potential = {
+		owner = {
+			has_origin = caleston_dir_origin
+		}
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = caleston_dir_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			eezo = 5
+		}
+		cost = {
+			minerals = @btr_civil_b2_mineral_cost
+			light_alloys = @btr_civil_b2_light_alloys_cost
+			heavy_alloys = @btr_civil_b2_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b2_energy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_miners_produces_mult = 0.05
+	#	planet_jobs_minerals_produces_mult = 0.05
+	#	planet_jobs_beryllium_produces_mult = 0.05
+	#	planet_jobs_lithium_produces_mult = 0.05
+	#	planet_jobs_titanium_produces_mult = 0.05
+	#	planet_jobs_iridium_produces_mult = 0.05
+	#	planet_jobs_platinum_produces_mult = 0.05
+	#	planet_jobs_palladium_produces_mult = 0.05
+	#	planet_jobs_eezo_produces_mult = 0.05
+		job_miner_add = 4
+		job_foundry_add = 1
+	}	
+}
+
+###Remnants of Rakhana
+building_drell_museum_wander = {
+	base_buildtime = @btr_civil_b3_time
+	empire_limit = 1
+	icon = building_institute
+	exempt_from_ai_planet_specialization = no
+	category = unity
+
+	building_sets = { unity	urban }
+
+	allow = {
+		planet = {
+			NOT = {
+				has_planet_flag = rakhana_planet_dying
+			}
+		}
+	}
+
+	potential = {
+		owner = {
+			has_origin = remnants_rak_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = remnants_rak_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b3_mineral_cost
+			light_alloys = @btr_civil_b3_light_alloys_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b3_energy_upkeep
+		}
+	}
+
+	country_modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+	}
+
+	planet_modifier = {
+		job_culture_worker_add = 2
+	}
+}
+
+building_drell_bureau_resources_labor = {
+	base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+	icon = building_bureaucratic_1
+	exempt_from_ai_planet_specialization = no
+	category = unity
+
+	building_sets = { unity	government }
+
+	allow = {
+		planet = {
+			NOT = {
+				has_planet_flag = rakhana_planet_dying
+			}
+		}
+	}
+
+	potential = {
+		owner = {
+			has_origin = remnants_rak_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = remnants_rak_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b3_mineral_cost
+			light_alloys = @btr_civil_b3_light_alloys_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b3_energy_upkeep
+			consumer_goods = 3
+		}
+	}
+
+	planet_modifier = {
+		job_bureaucrat_add = 2
+		job_politician_add = 2
+		planet_miners_produces_mult = 0.05
+		planet_artisans_consumer_goods_produces_add = 1
+		planet_farmers_food_produces_add = 2
+		planet_miners_energy_upkeep_add = 0.2
+		planet_artisans_energy_upkeep_add = 0.2
+		planet_farmers_energy_upkeep_add = 0.2
+	}
+}
+
+###Vorcha Clandom
+building_vorcha_pyro_training = {
+	base_buildtime = @btr_mili_b0_time
+	base_cap_amount = 1
+	icon = building_pirate_haven
+	exempt_from_ai_planet_specialization = no
+	category = army
+
+	building_sets = { fortress  }
+
+#	allow = {
+#		owner = {
+#			has_technology = tech_vorcha_call_of_heshtok
+#		}
+#	}
+
+	potential = {
+		owner = {
+			has_origin = vorcha_cla_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = vorcha_cla_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_mili_b0_mineral_cost
+			light_alloys = @btr_mili_b0_light_alloys_cost
+			heavy_alloys = @btr_mili_b0_heavy_alloys_cost
+			food = 25
+		}
+		upkeep = {
+			energy = @btr_mili_b0_energy_upkeep
+		#	eezo = @btr_mili_b0_eezo_upkeep
+		}
+	}
+
+	planet_modifier = {
+		job_soldier_add = 3
+	}
+	prerequisites = {
+		tech_vorcha_call_of_heshtok
+	}
+}
+
+building_vorcha_communal_spawning_pits = {
+	base_buildtime = @btr_civil_b0_time
+	base_cap_amount = 1
+	icon = building_toxic_bath
+	exempt_from_ai_planet_specialization = no
+	category = pop_assembly
+
+	building_sets = { urban medical }
+
+#	allow = {
+#		owner = {
+#			has_technology = tech_vorcha_tribe_of_tribes
+#		}
+#	}
+
+	potential = {
+		owner = {
+			has_origin = vorcha_cla_origin
+		}
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = vorcha_cla_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b0_mineral_cost
+			light_alloys = @btr_civil_b0_light_alloys_cost
+			heavy_alloys = @btr_civil_b0_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b0_energy_upkeep
+			food = 3
+		}
+		produces = {
+			unity = 3
+		}
+	}
+
+	planet_modifier = {
+		job_culture_worker_add = 2
+		founder_species_growth_mult = 0.1
+		planet_stability_add = 15
+	}
+	prerequisites = {
+		tech_vorcha_tribe_of_tribes
+	}
+}
+
+###Sed'riicae Collective
+building_sedriicae_foreign_trade = {
+	base_buildtime = @btr_civil_b4_time
+	base_cap_amount = 1
+	icon = building_corporate_embassy
+	exempt_from_ai_planet_specialization = no
+	category = trade
+
+	building_sets = { trade	government }
+
+	potential = {
+		owner = {
+			has_origin = sedriicae_col_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = sedriicae_col_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+            minerals = @btr_civil_b4_mineral_cost
+            light_alloys = @btr_civil_b4_light_alloys_cost
+            heavy_alloys = @btr_civil_b4_heavy_alloys_cost
+		}
+		upkeep = {
+            energy = @btr_civil_b4_energy_upkeep
+			minerals = 2
+			food = 2
+		}
+	}
+
+	planet_modifier = {
+		job_merchant_add = 3
+		job_manager_add = 1
+		planet_researchers_produces_mult = 0.05
+		planet_jobs_consumer_goods_produces_mult = 0.05
+		planet_amenities_mult = 0.05
+	}
+}
+
+building_sedriicae_central_plaza = {
+	base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+	icon = building_public_relations_office
+	exempt_from_ai_planet_specialization = no
+	category = government
+
+	building_sets = { government urban }
+
+	potential = {
+		owner = {
+			has_origin = sedriicae_col_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = sedriicae_col_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b3_mineral_cost
+			light_alloys = @btr_civil_b3_light_alloys_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b3_energy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		job_entertainer_add = 2
+		job_clerk_add = 1
+		planet_jobs_unity_produces_mult = 0.05
+		pop_happiness = 0.05
+		planet_amenities_add = 6
+	}
+}
+
+###Lystheni Order
+building_lystheni_fortress_one = {
+	base_buildtime = @btr_govt_b4_time
+	empire_limit = 1
+	icon = holding_overlord_garrison
+	exempt_from_ai_planet_specialization = no
+	category = government
+
+	building_sets = { government fortress }
+
+#	allow = {
+#		owner = {
+#			has_technology = tech_galactic_bureaucracy
+#		}
+#	}
+
+	potential = {
+		owner = {
+			has_origin = lystheni_ord_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = lystheni_ord_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_govt_b4_mineral_cost
+			light_alloys = @btr_govt_b4_light_alloys_cost
+			heavy_alloys = @btr_govt_b4_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_govt_b4_energy_upkeep
+		}
+	}
+
+	planet_modifier = {
+		job_league_one_add = 1
+#		planet_stability_add = 25
+		pop_happiness = 0.1
+#		country_unity_produces_mult = 0.1
+		pop_government_ethic_attraction = 0.1
+	}
+	prerequisites = {
+		tech_galactic_bureaucracy
+	}
+}
+
+building_lystheni_league_monastery = {
+	base_buildtime = @btr_govt_b3_time
+	base_cap_amount = 1
+	icon = building_sacrificial_temple_2
+	exempt_from_ai_planet_specialization = no
+	category = government
+
+	building_sets = { government unity }
+
+#	allow = {
+#		owner = {
+#			has_technology = tech_galactic_bureaucracy
+#		}
+#	}
+
+	potential = {
+		owner = {
+			has_origin = lystheni_ord_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = lystheni_ord_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_govt_b3_mineral_cost
+			light_alloys = @btr_govt_b3_light_alloys_cost
+			heavy_alloys = @btr_govt_b3_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_govt_b3_energy_upkeep
+			food = 4
+		}
+	}
+
+	planet_modifier = {
+		job_bureaucrat_add= 2
+		pop_ethic_spritiualist_attraction_mult = 0.15
+		planet_jobs_unity_produces_mult = 0.1
+		planet_crime_mult = -0.1
+
+	}
+}
+
+building_lystheni_ai_training_center = {
+	base_buildtime = @btr_mili_b2_time
+	base_cap_amount = 1
+	icon = building_military_contractors
+	exempt_from_ai_planet_specialization = no
+	category = army
+
+	building_sets = { research fortress }
+
+#	allow = {
+#		owner = {
+#			has_technology = tech_lystheni_oracle_class_ai
+#		}
+#	}
+
+	potential = {
+		owner = {
+			has_origin = lystheni_ord_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = lystheni_ord_origin } }
+		}
+	}
+	
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_mili_b2_mineral_cost
+			light_alloys = @btr_mili_b2_light_alloys_cost
+			heavy_alloys = @btr_mili_b2_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_mili_b2_energy_upkeep
+			palladium = 2
+		}
+	}
+	prerequisites = {
+		tech_lystheni_oracle_class_ai }
+}
+
+building_lystheni_temple_mother = {
+	base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+	icon = building_sacrificial_temple_3
+	exempt_from_ai_planet_specialization = no
+	category = research
+
+	building_sets = { research unity }
+
+	potential = {
+		owner = {
+			has_origin = lystheni_ord_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = lystheni_ord_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b3_mineral_cost
+			light_alloys = @btr_civil_b3_light_alloys_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b3_energy_upkeep
+			platinum = 4
+		}
+	}
+
+	planet_modifier = {
+		job_bureaucrat_add = 2
+		pop_ethic_spiritualist_attraction_mult = 0.15
+		planet_crime_mult = -0.1
+		planet_jobs_unity_produces_mult = 0.1
+	}
+
+}
+
+###Gothones Remnant
+building_gothones_beastmasters_quarters = {
+	base_buildtime = @btr_civil_b3_time
+	base_cap_amount = 1
+	icon = holding_park_ranger_lodge
+	exempt_from_ai_planet_specialization = no
+
+	building_sets = { research }
+
+	category = research
+
+	potential = {
+		owner = {
+			has_origin = gothones_rem_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = gothones_rem_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b3_mineral_cost
+			light_alloys = @btr_civil_b3_light_alloys_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b3_energy_upkeep
+		}
+		produces = {
+			society_research = 3
+		}
+	}
+
+	planet_modifier = {
+		job_soldier_add = 1
+		job_beastmaster_add = 1
+		planet_defense_armies_add = 2
+	}
+}	
+
+building_gothones_longhouse = {
+	base_buildtime = @btr_civil_b3_time
+	icon = building_precinct_house
+	exempt_from_ai_planet_specialization = no
+
+	building_sets = { urban	unity }
+
+	category = research
+
+	potential = {
+		owner = {
+			has_origin = gothones_rem_origin
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = gothones_rem_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b3_mineral_cost
+			light_alloys = @btr_civil_b3_light_alloys_cost
+			heavy_alloys = @btr_civil_b3_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b3_energy_upkeep
+		}
+		produces = {
+			unity = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3
+		planet_amenities_add = 5
+	}
+}
+
+###Parnack Regime
+building_yahg_blood_arena = {
+	base_buildtime = @btr_mili_b3_time
+	base_cap_amount = 1
+	icon = building_xeno_zoo
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = parnack_reg_origin
+		}
+	}
+
+	building_sets = { entertainment government unity }
+
+	category = army
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = parnack_reg_origin } }
+		}
+	}
+
+	planet_modifier = {
+		job_duelist_add = 3
+		job_soldier_add = 2
+		job_enforcer_add = 1
+		planet_amenities_add = 10
+		planet_traders_trade_produces_mult = 0.05
+	}
+
+	army_modifier = {
+		army_starting_experience_add = 1001
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_mili_b3_mineral_cost
+			light_alloys = @btr_mili_b3_light_alloys_cost
+			heavy_alloys = @btr_mili_b3_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = 10
+			consumer_goods = 2
+			light_alloys = 0.5
+			heavy_alloys = 0.5
+		}
+	}
+}
+
+###Raloi Republic
+building_raloi_foreign_instructor_center = {
+	base_buildtime = @btr_govt_b4_time
+	base_cap_amount = 1
+	icon = building_embassy
+	exempt_from_ai_planet_specialization = no
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = raloi_rep_origin
+		}
+	}
+
+	building_sets = { government fortress }
+
+	category = army
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = raloi_rep_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_govt_b4_mineral_cost
+			light_alloys = @btr_govt_b4_light_alloys_cost
+			heavy_alloys = @btr_govt_b4_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_govt_b4_energy_upkeep
+		}
+	}
+
+	army_modifier = {
+		army_starting_experience_add = 200
+		army_defense_health_mult = 1
+	}
+
+	planet_modifier = {
+		job_soldier_add = 2
+	}
+}
+
+building_raloi_development_coop_institute = {
+	base_buildtime = @btr_govt_b4_time
+	empire_limit = 1
+	icon = building_offspring_nest
+	exempt_from_ai_planet_specialization = no
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = raloi_rep_origin
+		}
+		planet = {
+			is_capital = yes
+		}
+	}
+
+	building_sets = { research }
+
+	category = research
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = raloi_rep_origin } }
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+            minerals = @btr_civil_b4_mineral_cost
+            light_alloys = @btr_civil_b4_light_alloys_cost
+            heavy_alloys = @btr_civil_b4_heavy_alloys_cost
+		}
+		upkeep = {
+            energy = @btr_civil_b4_energy_upkeep
+			consumer_goods = 2
+			antimatter_fuel = 1
+		}
+	}
+
+	planet_modifier = {
+		job_politician_add = 1
+		job_merchant_add = 2
+		job_head_researcher_add = 1
+		job_researcher_add = 2
+		planet_traders_trade_produces_mult = 0.2
+		planet_researchers_produces_mult = 0.2
+	}
+}
+
+###Geth Consensus
+building_geth_uplink_node = {
+	base_buildtime = @btr_civil_b1_time
+	icon = building_master_archive
+
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			has_origin = geth_con_origin
+			has_origin = disciples_naz_origin
+		}
+	}
+
+	building_sets = { research unity }
+
+	category = amenity
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = geth_con_origin } }
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_mult = 0.1
+		job_coordinator_add = 1
+		job_evaluator_add = 1
+		job_synapse_drone_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @btr_civil_b1_mineral_cost
+			light_alloys = @btr_civil_b1_light_alloys_cost
+			heavy_alloys = @btr_civil_b1_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b1_energy_upkeep
+		}
+	}
+}
+
+building_geth_production_center = {
+	base_buildtime = @btr_civil_b2_time
+	icon = building_hypercomms_forum
+
+	empire_limit = 1
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			OR = {
+				has_origin = geth_con_origin
+				has_origin = disciples_naz_origin
+			}
+		}
+		planet = {
+			is_capital = yes
+		}
+	}
+
+	building_sets = { industrial urban }
+
+	category = manufacturing
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { 
+				NOR = { 
+					has_origin = geth_con_origin 
+					has_origin = disciples_naz_origin 
+				} 
+			}
+		}
+	}
+
+	planet_modifier = {
+		job_replicator_add = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			unity = 10
+		}
+		cost = {
+			minerals = @btr_branch_offices_b2_mineral_cost
+			light_alloys = @btr_branch_offices_b2_light_alloys_cost
+			heavy_alloys = @btr_branch_offices_b2_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_branch_offices_b2_energy_upkeep
+		}
+	}
+}
+
+###Disciples of Nazara
+building_nazara_altar = {
+	base_buildtime = @btr_research_b2_time
+	icon = building_nazara_altar
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			has_origin = disciples_naz_origin
+		}
+	}
+
+	building_sets = { unity	 }
+	
+	category = unity
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOR = { has_origin = disciples_naz_origin } }
+		}
+	}
+
+	planet_modifier = {
+		job_chronicle_drone_add = 1
+		job_evaluator_add = 1
+		job_coordinator_add = 1
+		planet_jobs_unity_produces_mult = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			unity = 10
+		}
+		cost = {
+			minerals = @btr_research_b2_mineral_cost
+			light_alloys = @btr_research_b2_light_alloys_cost
+			heavy_alloys = @btr_research_b2_heavy_alloys_cost
+			eezo = @btr_research_b2_eezo_cost
+		}
+		upkeep = {
+			energy = @btr_research_b2_energy_upkeep
+			iridium = @btr_research_b2_energy_upkeep
+
+		}
+	}
+}
+
+###Rachni Hive
+building_rachni_subsurface_palace = {
+	base_buildtime = @btr_civil_b2_time
+	icon = building_rachni_subsurface_palace
+	empire_limit = 1
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = rachni_hiv_origin
+		}
+	}
+
+	building_sets = { government urban }
+
+	category = unity
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOR = { has_origin = rachni_hiv_origin } }
+		}
+	}
+
+	planet_modifier = {
+
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			unity = 10
+		}
+		cost = {
+			minerals = @btr_civil_b2_mineral_cost
+			light_alloys = @btr_civil_b2_light_alloys_cost
+			heavy_alloys = @btr_civil_b2_heavy_alloys_cost
+		}
+		upkeep = {
+			energy = @btr_civil_b2_energy_upkeep
+			minerals = 2
+			food = 2
+		}
+	}
+}
+
+building_rachni_swarmshop = {
+	base_buildtime = @btr_civil_b2_time
+	icon = building_rachni_subsurface_palace
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = rachni_hiv_origin
+		}
+	}
+
+	building_sets = { government	research }
+
+	category = unity
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOR = { has_origin = rachni_hiv_origin } }
+		}
+	}
+
+	planet_modifier = {
+job_rachni_engineer = 5
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+		}
+		cost = {
+			minerals = @btr_civil_b4_mineral_cost
+			light_alloys = @btr_civil_b2_light_alloys_cost
+			heavy_alloys = @btr_civil_b2_heavy_alloys_cost
+			energy = @btr_civil_b4_energy_upkeep
+		}
+		upkeep = {
+			energy = @btr_civil_b3_energy_upkeep
+		}
+	}
+	upgrades = {
+		building_rachni_swarmshop_2
+	}
+}
+
+building_rachni_swarmshop_2 = {
+	base_buildtime = @btr_civil_b4_time
+	icon = building_rachni_subsurface_palace
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = rachni_hiv_origin
+		}
+	}
+
+	building_sets = { research government }
+
+	category = unity
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOR = { has_origin = rachni_hiv_origin } }
+		}
+	}
+
+	planet_modifier = {
+		job_rachni_engineer = 10
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+		}
+		cost = {
+			minerals = @btr_civil_b4_mineral_cost
+			light_alloys = @btr_civil_b2_light_alloys_cost
+			heavy_alloys = @btr_civil_b2_heavy_alloys_cost
+			energy = @btr_civil_b4_energy_upkeep
+		}
+		upkeep = {
+			energy = @btr_civil_b4_energy_upkeep
+		}
+	}
+}
+
+###Collectors
+
+###Citadel Council
+building_citadel_tower = {
+	base_buildtime = @btr_govt_b1_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	empire_limit = 1
+	icon = building_major_capital
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = citadel_council_origin
+		}
+	}
+
+	building_sets = { government }
+
+	category = government
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5
+		planet_amenities_add = 5
+		planet_max_buildings_add = 5
+		planet_max_branch_office_buildings_add = 1
+		job_politician_add = 2
+		job_executive_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			unity = 5
+		}
+		upkeep = {
+            energy = @btr_govt_b1_energy_upkeep
+			consumer_goods = 2
+		}
+	}
+}
+
+building_citadel_embassies = {
+	base_buildtime = @btr_govt_b0_time
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	icon = building_bureaucratic_1
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			has_origin = citadel_council_origin
+		}
+		planet = {
+			is_capital = yes
+		}
+	}
+
+	building_sets = { government }
+
+	category = government
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOR = { has_origin = citadel_council_origin } }
+		}
+	}
+
+	planet_modifier = {
+		job_bureaucrat_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			unity = 2
+			influence = 1
+		}
+		upkeep = {
+            energy = @btr_govt_b0_energy_upkeep
+		}
+	}
+}
+
+building_citadel_commons= {
+	base_buildtime = @btr_civil_b1_time
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	icon = building_commercial_zone
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			has_origin = citadel_council_origin
+		}
+		planet = {
+			is_capital = yes
+		}
+	}
+
+	building_sets = { urban	unity }
+
+	category = trade
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOR = { has_origin = citadel_council_origin } }
+		}
+	}
+
+	planet_modifier = {
+		job_clerk_add = 3
+		job_entertainer_add = 1
+		planet_housing_add = 4
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			energy = 30
+		}
+		upkeep = {
+			consumer_goods = 5
+		}
+	}
+}
+
+building_citadel_financial= {
+	base_buildtime = @btr_civil_b1_time
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	icon = building_commercial_zone
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			has_origin = citadel_council_origin
+		}
+		planet = {
+			is_capital = yes
+		}
+	}
+
+	building_sets = { trade	 }
+
+	category = trade
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOR = { has_origin = citadel_council_origin } }
+		}
+	}
+
+	planet_modifier = {
+		job_bureaucrat_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			energy = 50
+		}
+		upkeep = {
+			consumer_goods = 2
+			energy = @btr_civil_b1_energy_upkeep
+		}
+	}
+}
+
+building_citadel_docks= {
+	base_buildtime = @btr_civil_b1_time
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	icon = building_commercial_zone
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			has_origin = citadel_council_origin
+		}
+		planet = {
+			is_capital = yes
+		}
+	}
+
+	building_sets = { fortress }
+
+	category = army
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOR = { has_origin = citadel_council_origin } }
+		}
+	}
+
+	country_modifier = {
+		ship_orbit_upkeep_mult = -0.25
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			consumer_goods = 100
+			food = 100
+			minerals = 100
+		}
+		upkeep = {
+			energy = @btr_civil_b1_energy_upkeep
+		}
+	}
+}
+
+building_citadel_csec= {
+	base_buildtime = @btr_mili_b0_time
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	icon = building_precinct_house
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			has_origin = citadel_council_origin
+		}
+		planet = {
+			is_capital = yes
+		}
+	}
+
+	building_sets = { fortress government }
+
+	category = government
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOR = { has_origin = citadel_council_origin } }
+		}
+	}
+
+	planet_modifier = {
+		planet_crime_mult = -0.5
+		job_enforcer_add = 4
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			minerals = @btr_mili_b1_mineral_cost
+			light_alloys = @btr_mili_b1_light_alloys_cost
+			heavy_alloys = @btr_mili_b1_heavy_alloys_cost
+		}
+	}
+}
+
+building_citadel_park = {
+	base_buildtime = @btr_civil_b1_time
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	icon = holding_park_ranger_lodge
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			has_origin = citadel_council_origin
+		}
+		planet = {
+			is_capital = yes
+		}
+	}
+
+	building_sets = { unity	urban }
+
+	category = unity
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOR = { has_origin = citadel_council_origin } }
+		}
+	}
+
+	planet_modifier = {
+		job_culture_worker_add = 1
+		pop_happiness = 0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = @btr_civil_b1_energy_upkeep
+		}
+	}
+}

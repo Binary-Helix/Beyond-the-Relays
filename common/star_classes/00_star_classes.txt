@@ -7462,6 +7462,13 @@ sc_toxoid_star = {
 	}
 }
 
+sc_deep_space = {
+	class = p_green_star
+	planet = { key = pc_invisible_star }
+	icon = deep_space
+	spawn_odds = 0
+}
+
 sc_rift_star = {
 	class			= rift_star
 	planet			= { key = pc_rift_star }

@@ -1,0 +1,29 @@
+automate_factory_station = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_designation = col_planetary_station_factory
+	}
+
+	prio_districts = {
+		district_manufacturing_complex
+	}
+
+	buildings = {
+		1 = {
+			building = building_station_capital
+		}
+
+		2 = {
+			building = building_factory_1
+		}
+
+		3 = {
+			building = building_ministry_production
+		}
+
+		4 = {
+			building = building_production_center
+		}
+	}
+}
