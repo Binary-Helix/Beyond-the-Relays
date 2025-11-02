@@ -1,0 +1,599 @@
+agenda_vigilance_finish = {
+    intel_decryption_add = 2
+    intel_encryption_add = 2
+    planet_sensor_range_add = 1
+    planet_colony_development_speed_mult = 0.50
+    country_starbase_influence_cost_mult = -0.25
+    country_starbase_influence_cost_distance_mult = -0.15
+}
+
+agenda_infiltration_finish = {
+    intel_encryption_add = 4
+    intel_decryption_add = 6
+    spy_network_daily_value_mult = 0.5
+    espionage_operation_cost_mult = -0.5
+    spy_network_decay_mult = -0.25
+}
+
+agenda_discipline_finish = {
+    ship_military_upkeep_mult = -0.20
+    planet_army_build_speed_mult = -0.2
+    starbase_shipyard_build_speed_mult = -0.2
+    ship_starting_experience_add = 200
+    army_starting_experience_add = 200
+    ship_fire_rate_mult = 0.25
+    ship_orbital_bombardment_mult = 0.25
+}
+
+agenda_elegance_finish = {
+    envoy_improve_relations_mult = 0.5
+    diplomacy_upkeep_mult = -0.30
+    starbase_upgrade_speed_mult = 0.40
+    starbase_upgrade_cost_mult = -0.40
+    ship_speed_mult = 0.2
+}
+
+agenda_bitterness_finish = {
+    country_claim_influence_cost_mult = -0.3
+    ship_military_upkeep_mult = -0.2
+    ship_emergency_ftl_mult = -0.15
+    ship_fire_rate_mult = 0.3
+    ship_speed_mult = 0.25
+}
+
+agenda_machinism_finish = {
+    ship_sensor_range_add = 1
+    ship_speed_mult = 0.5
+    ship_emergency_ftl_mult = 0.3
+    planet_jobs_upkeep_mult = -0.2
+    planet_districts_upkeep_mult = -0.10
+}
+
+agenda_isolation_finish = {
+    planet_resettlement_unemployed_destination_mult = 0.50
+    bonus_pop_growth = 0.50
+    planet_pops_trade_produces_mult = 0.2
+    pop_demotion_time_mult = -0.5
+}
+
+agenda_tribalism_finish = {
+    country_claim_influence_cost_mult = -0.2
+    starbase_shipyard_build_speed_mult = -0.2
+    starbase_upgrade_cost_mult = -0.2
+    planet_army_build_speed_mult = -0.2
+    army_starting_experience_add = 100
+    ship_starting_experience_add = 100
+}
+
+agenda_splendor_finish = {
+    country_unity_produces_mult = 0.2
+    planet_jobs_ruler_produces_mult = 0.5
+    country_trade_fee = -0.2
+    planet_resettlement_unemployed_destination_mult = 0.5
+    diplo_action_acceptance_add = 5
+}
+
+agenda_cyberdreams_finish = {
+    pop_happiness = 0.2
+    pop_amenities_usage_mult = 0.25
+    planet_jobs_produces_mult = 0.4
+    bonus_pop_growth = -0.1
+    entertainer_jobs_bonus_workforce_mult = 0.1
+    pop_culture_worker_bonus_workforce_mult = 0.1
+  #  planet_entertainer_produces_mult = 0.1
+   # planet_culture_worker_mult = 0.1
+}
+
+agenda_aquisition_finish = {
+    diplo_weight_economy_mult = 0.4
+    diplo_action_acceptance_add = 10
+    envoy_improve_relations_mult = 1
+    country_trade_fee = -0.5
+    planet_pops_trade_produces_mult = 0.1
+   # local_trade_protection_add = 5
+}
+
+agenda_impulse_finish = {
+    ship_orbital_bombardment_mult = 0.5
+    ship_emergency_ftl_mult = 0.2
+    ship_speed_mult = 0.2
+    starbase_shipyard_build_cost_mult = -0.15
+}
+
+agenda_survival_finish = {
+    pop_amenities_usage_mult = -0.1
+    planet_jobs_upkeep_mult = -0.2
+    planet_building_build_speed_mult = 0.5
+    pop_resettlement_cost_mult = -0.5
+    planet_stability_add = 5
+}
+
+agenda_necessity_finish = {
+    spy_network_daily_value_add = 6
+    spy_network_decay_mult = -0.5
+    planet_sensor_range_add = 2
+    ship_speed_mult = 0.2
+    ship_disengage_opportunities_add = 1
+}
+
+agenda_service_finish = {
+    starbase_shipyard_build_speed_mult = -0.2
+    starbase_upgrade_cost_mult = -0.2
+    starbase_upgrade_speed_mult = -0.2
+    ship_emergency_ftl_mult = -0.4
+    ship_engagement_range_mult = 0.15
+}
+
+agenda_hive_finish = {
+    planet_stability_add = 5
+    pop_resettlement_cost_mult = -0.5
+    planet_resettlement_unemployed_destination_mult = 0.4
+    bonus_pop_growth = 0.2
+    diplo_weight_pops_mult = 0.2
+}
+
+agenda_sanctity_finish = {
+    deposit_blockers_natural_unity_produces_add = 10
+    modify_species_cost_mult = -0.4
+    planet_structures_cost_mult = -0.2
+    planet_building_build_speed_mult = -0.2
+    planetary_ascension_effect_mult = 0.25
+}
+
+agenda_purity_finish = {
+    country_claim_influence_cost_mult = -0.2
+    country_starbase_influence_cost_mult = -0.2
+    country_starbase_influence_cost_distance_mult = -0.2
+    army_damage_mult = 0.5
+    planet_army_build_speed_mult = 0.2
+    ship_fire_rate_mult = 0.2
+}
+
+agenda_dominance_finish = {
+    monthly_loyalty = 10
+    diplo_action_acceptance_add = 10
+    country_base_influence_produces_add = 2
+    starbase_shipyard_build_speed_mult = 0.5
+    planet_soldiers_unity_produces_add = 1
+   # planet_jobs_soldier_unity_produces_add = 1
+}
+
+agenda_newcomers_finish = {
+    external_leader_pool_add = 5
+    planet_resettlement_unemployed_destination_mult = 0.5
+    #planet_resettlement_unemployed_destination_mult = 0.5
+    citizen_pop_different_species_class_happiness = 0.2
+    leader_initial_skill = 1
+}
+
+agenda_anarchy_finish = {
+    diplomacy_upkeep_mult = -0.5
+    country_trade_fee = -0.4
+    country_trade_attractiveness = 0.4
+    planet_branch_offices_cost_mult = -0.5
+    planet_max_branch_office_buildings_un = 5
+    planet_branch_offices_society_research_produces_add = 5
+   # planet_branch_offices_unity_produces_mult = 0.5
+   # planet_branch_offices_society_research_produces_mult = 0.5
+}
+
+agenda_existence_finish = {
+    edict_length_mult = 0.2
+    country_edict_fund_mult = 0.2
+    council_agenda_finishing_effect_duration_mult = 0.2
+    council_agenda_progress_speed = 0.2
+    species_leader_exp_gain = 0.2
+}
+
+agenda_illumination_finish = {
+    pop_government_ethic_attraction = 0.5
+    pop_happiness = 0.4
+    planet_amenities_add = 5
+    country_unity_produces_mult = 0.2
+    bonus_pop_growth = 0.2
+}
+
+agenda_zeal_finish = {
+    planet_researchers_produces_mult = 0.4
+    starbase_upgrade_speed_mult = 0.2
+    starbase_upgrade_cost_mult = 0.2
+    spy_network_daily_value_mult = 0.2
+    pop_amenities_usage_mult = -0.2
+}
+
+agenda_zeal_war_finish = {
+    starbase_shipyard_build_speed_mult = 0.5
+    ship_engagement_range_mult = 0.25
+    ship_fire_rate_mult = 0.4
+    shipclass_starbase_damage_mult = 0.4
+}
+
+agenda_together_finish = {
+    country_claim_influence_cost_mult = -0.4
+    country_starbase_influence_cost_mult = -0.4
+    planet_colony_development_speed_mult = 0.4
+    colony_start_urban_districts_add = 2
+    empire_size_colonies_mult = -0.2
+    empire_size_pops_mult = -0.2
+}
+
+agenda_planned_finish = {
+    planet_resettlement_unemployed_destination_mult = 0.5
+    pop_amenities_usage_mult = -0.3
+    country_unity_produces_mult = 0.3
+    pop_government_ethic_attraction = 0.3
+    pop_ethics_shift_speed_mult = 0.2
+}
+
+agenda_oversight_finish = {
+    country_base_energy_produces_add = 1500
+    pop_demotion_time_mult = -0.3
+    planet_jobs_ruler_produces_mult = 0.3
+    planet_building_build_speed_mult = 0.3
+    pop_cat_ruler_happiness = -0.5
+}
+
+agenda_trade_finish = {
+    country_trade_fee = -0.2
+    country_trade_attractiveness = 15
+    diplomacy_upkeep_mult = -0.4
+    country_edict_fund_mult = 0.3
+    pop_happiness = 0.1
+}
+
+agenda_syndicysim_finish = {
+    country_border_friction_mult = 0.25
+    country_trade_fee = -0.1
+    counter_intel_gain_speed = 0.4
+    planet_sensor_range_add = 2
+    pop_ethics_shift_speed_mult = 0.2
+}
+
+agenda_synthetic_finish = {
+    robotic_pop_bonus_workforce_mult = 0.2
+    planet_pops_robotics_upkeep_mult = 0.4
+ #   planet_jobs_robotic_produces_mult = 0.2
+ #   planet_pops_robotic_upkeep_mult = 0.4
+    ship_accuracy_mult = 0.3
+    planet_crime_mult = -0.2
+    planet_jobs_engineering_research_produces_mult = 0.1
+    planet_jobs_physics_research_produces_mult = 0.1
+    planet_jobs_society_research_produces_mult = 0.1
+}
+
+agenda_entertainment_finish = {
+    pop_happiness = 0.3
+    bonus_pop_growth = 0.2
+    planet_amenities_mult = 0.2
+    country_unity_produces_mult = 0.3
+    planet_resettlement_unemployed_destination_mult = 0.5
+}
+
+agenda_security_finish = {
+    job_enforcer_per_crime = 0.25
+    job_response_coordinator_per_crime = 0.5
+    intel_decryption_add = 5
+    intel_gain_speed = 0.3
+    espionage_operation_cost_mult = -0.25
+    espionage_operation_speed_mult = 0.15
+}
+
+agenda_silicone_finish = {
+    starbase_shipyard_build_speed_mult = 0.4
+    planet_building_build_speed_mult = 0.4
+    planet_colony_development_speed_mult = 0.5
+    planet_jobs_engineering_research_produces_mult = 0.2
+    planet_jobs_physics_research_produces_mult = 0.2
+    planet_jobs_society_research_produces_mult = 0.2
+    planet_pop_assembly_mult = 0.1
+}
+
+agenda_galactism_finish = {
+    diplomacy_upkeep_mult = -0.25
+    country_trust_growth = 0.2
+    diplo_weight_delegate_mult = 0.3
+    ship_speed_mult = 0.3
+    country_trade_fee = -0.05
+}
+
+agenda_self_finish = {
+    pop_citizen_happiness = 0.2
+    country_border_friction_mult = 0.3
+    country_claim_influence_cost_mult = -0.3
+    country_hostile_claim_influence_cost_mult = -0.3
+    pop_government_ethic_attraction = 0.4
+    pop_ethics_shift_speed_mult = 0.2
+}
+
+agenda_intervention_finish = {
+    starbase_shipyard_build_speed_mult = 0.3
+    ship_starting_experience_add = 100
+    army_starting_experience_add = 100
+    commander_exp_gain = 0.5
+    ship_federation_territory_speed_mult = 0.3
+    ship_community_territory_speed_mult = 0.2
+    country_war_exhaustion_mult = -0.15
+}
+
+agenda_multicultural_finish = {
+   # planet_culture_workers_produces_mult = 0.5 #TODO
+    pop_culture_worker_bonus_workforce_mult = 0.2
+    job_culture_worker_add = 200
+    pop_ethic_xenophile_attraction_mult = 0.4
+    pop_ethics_shift_speed_mult = 0.2
+}
+
+agenda_nationalism_finish = {
+    planet_pops_consumer_goods_upkeep_mult = -0.3
+    pop_amenities_usage_mult = -0.2
+    pop_citizen_happiness = 0.5
+    planet_building_build_speed_mult = 0.2
+    planet_soldiers_unity_produces_add = 1.5
+}
+
+agenda_domination_finish = {
+    #planet_stability_add = 10
+    pop_cat_ruler_political_power = 0.2
+    planet_crime_mult = -0.2
+    planet_structures_upkeep_mult = -0.4
+    planet_districts_upkeep_mult = -0.2
+}
+
+agenda_archeology_finish = {
+    #relics_cost_mult = -0.5
+    #relics_biomass_cost_mult = -0.5
+    #relics_nanites_cost_mult = -0.5
+    #relics_advanced_logic_cost_mult = -0.5
+    #relics_astral_threads_cost_mult = -0.5
+    #relics_exotic_gases_cost_mult = -0.5
+    #relics_feral_insight_cost_mult = -0.5
+    #relics_rare_crystals_cost_mult = -0.5
+    #relics_sr_zro_cost_mult = -0.5
+    #relics_volatile_motes_cost_mult = -0.5
+    #relics_sr_dark_matter_cost_mult = -0.5
+    #relics_sr_living_metal_cost_mult = -0.5
+    relics_alloys_cost_mult = -0.5
+    relics_light_alloys_cost_mult = -0.5
+    relics_heavy_alloys_cost_mult = -0.5
+    relics_energy_cost_mult = -0.5
+    relics_food_cost_mult = -0.5
+    relics_influence_cost_mult = -0.5
+    relics_menace_cost_mult = -0.5
+    relics_minerals_cost_mult = -0.5
+    relics_beryllium_cost_mult = -0.5
+    relics_lithium_cost_mult = -0.5
+    relics_titanium_cost_mult = -0.5
+    relics_palladium_cost_mult = -0.5
+    relics_iridium_cost_mult = -0.5
+    relics_platinum_cost_mult = -0.5
+    relics_uranium_cost_mult = -0.5
+    relics_hydrogen_cost_mult = -0.5
+    relics_helium_3_cost_mult = -0.5
+    relics_antimatter_fuel_cost_mult = -0.5
+    relics_eezo_cost_mult = -0.5
+    relics_trade_cost_mult = -0.5
+    relics_unity_cost_mult = -0.5
+    relics_consumer_goods_cost_mult = -0.5
+    relics_engineering_research_cost_mult = -0.5
+    relics_minor_artifacts_cost_mult = -0.5
+    relics_physics_research_cost_mult = -0.5
+    relics_society_research_cost_mult = -0.5
+    ship_archaeological_site_excavation_speed_mult = 0.3
+    ship_archaeological_site_clues_add = 3
+    leader_scientists_minor_artifacts_produces_add = 3
+    scientist_initial_skill = 1
+}
+
+agenda_systems_finish = {
+    starbase_shipyard_build_speed_mult = 0.3
+    starbase_shipyard_build_cost_mult = -0.2
+    ship_disengage_chance_mult = -0.2
+    ship_engagement_range_mult = 0.2
+    shipsize_destroyer_hull_mult = 0.15
+}
+
+agenda_cruiser_finish = {
+    ship_emergency_ftl_mult = -0.3
+    ship_repair_hull_mult = 0.1
+    ship_repair_armor_mult = 0.1
+    ship_engagement_range_mult = 0.2
+    ship_damage_against_starbases_mult = 0.2
+}
+
+agenda_battleship_finish = {
+    ship_engagement_range_mult = 0.4
+    ship_tracking_mult = 0.1
+    ship_accuracy_mult = 0.1
+    ship_fire_rate_mult = -0.1
+    ship_damage_against_starbases_mult = 0.3
+}
+
+agenda_carrier_finish = {
+    weapon_type_strike_craft_speed_mult = 0.3
+    weapon_type_strike_craft_weapon_fire_rate_mult = 0.2
+    ship_winddown_mult = -0.1
+    ship_windup_mult = -0.1
+    ship_disengage_opportunities_add = 1
+    ship_repair_hull_mult = 0.05
+    ship_repair_armor_mult = 0.05
+}
+
+agenda_military_finish = {
+    planet_soldiers_unity_produces_add = 2
+   # planet_soldier_unity_produces_add = 2
+    pop_happiness = 0.1
+    planet_amenities_add = 10
+    leader_commanders_unity_produces_add = 5
+    pop_ethic_militarist_attraction_mult = 0.1
+    army_starting_experience_add = 100
+}
+
+agenda_renegade_finish = {
+    starbase_upgrade_speed_mult = 0.5
+    shipclass_starbase_damage_mult = 0.3
+    shipclass_starbase_hull_mult = 0.3
+    ship_disengage_chance_mult = -0.2
+    planet_sensor_range_add = 1
+}
+
+agenda_paragon_finish = {
+    diplomacy_upkeep_mult = -1
+    envoy_improve_relations_mult = 1
+    planet_resettlement_unemployed_destination_mult = 0.3
+    country_trade_fee = -0.2
+    country_trade_attractiveness = 0.25
+}
+
+agenda_reverence_finish = {
+    country_unity_produces_mult = 0.3
+    pop_happiness = 0.6
+    planet_amenities_add = 20
+    planet_resettlement_unemployed_destination_mult = 0.5
+    bonus_pop_growth = 0.3
+    planet_stability_add = 10
+}
+
+agenda_autarky_finish = {
+    pop_foundry_bonus_workforce_mult = 0.3
+    planet_metallurgists_energy_upkeep_add = 0.3
+    planet_artisans_energy_upkeep_add = 0.3
+    pop_artisan_bonus_workforce_mult = 0.3
+    pop_category_specialists_energy_upkeep_add = 0.3
+  #  planet_translucers_energy_upkeep_add = 0.3
+    pop_translucer_bonus_workforce_mult = 0.3
+  #  planet_refiners_energy_upkeep_add = 0.3
+    pop_gas_refiner_workforce_mult = 0.3
+    pop_chemist_bonus_workforce_mult = 0.3
+   # planet_chemists_energy_upkeep_add = 0.3
+    pop_happiness = 0.2
+}
+
+agenda_care_finish = {
+    bonus_pop_growth = 0.3
+    planet_pops_upkeep_mult = 0.4
+    pop_happiness = 0.3
+    pop_amenities_usage_mult = -0.2
+    pop_factions_produces_mult = 0.2
+}
+
+agenda_determination_finish = {
+    ship_disengage_chance_mult = -0.5
+    army_disengage_chance_mult = -0.5
+    job_soldier_add = 200
+    army_defense_damage_mult = 0.5
+    planet_orbital_bombardment_damage = -0.5
+}
+
+agenda_spacer_finish = {
+    starbase_shipyard_artificial_build_cost_mult = -0.2
+    starbase_shipyard_artificial_build_speed_mult = 0.2
+    station_gatherers_produces_mult = 0.3
+    ship_speed_mult = 0.4
+    ship_military_upkeep_mult = -0.2
+}
+
+agenda_raiding_finish = {
+    ship_orbital_bombardment_mult = 0.4
+    ship_disengage_opportunities_add = 2
+    ship_disengage_chance_mult = 0.2
+    ship_emergency_ftl_mult = -0.4
+    ship_windup_mult = -0.1
+    ship_winddown_mult = -0.1
+}
+
+agenda_laisez_finish = {
+    planet_crime_add = 30
+    planet_stability_add = -10
+    planet_buildings_cost_mult = -0.5
+    pop_cat_ruler_happiness = 0.6
+    planet_clear_blocker_speed_mult = 0.25
+    planet_jobs_specialist_produces_mult = 0.1
+}
+
+agenda_intelligence_finish = {
+    operations_energy_cost_mult = -0.4
+    operation_steal_technology_skill_mult = 0.3
+    operation_sabotage_starbase_skill_mult = 0.3
+    operation_steal_technology_skill_mult = 0.3
+    operation_extort_favors_skill_mult = 0.3
+    operation_acquire_asset_skill_mult = 0.3
+    planet_sensor_range_add = 1
+}
+
+agenda_frontier_finish = {
+    planet_colony_development_speed_mult = 0.5
+    colony_start_urban_districts_add = 2
+   # colony_start_num_pops_add = 200
+    planet_building_build_speed_mult = 0.3
+    pop_amenities_usage_mult = -0.2
+    planet_resettlement_unemployed_destination_mult = 0.5
+}
+
+agenda_belicosity_finish = {
+    planet_soldiers_unity_produces_add = 2
+   # planet_soldier_unity_produces_add = 2
+    country_war_exhaustion_mult = -0.3
+    planet_army_build_speed_mult = 0.2
+    leader_commanders_unity_produces_add = 3
+    leader_commanders_influence_produces_add = 0.15
+}
+
+agenda_advancement_finish = {
+    leader_scientists_unity_produces_add = 2
+    shipclass_science_ship_disengage_mult = 0.3
+    shipclass_science_ship_evasion_add = 10
+    planet_biologists_unity_produces_add = 2
+    planet_physicists_unity_produces_add = 2
+    planet_engineers_unity_produces_add = 2
+    pop_biologist_bonus_workforce_add = 100
+    pop_physicist_bonus_workforce_add = 100
+    pop_engineer_bonus_workforce_add = 100
+}
+
+agenda_decentralization_finish = {
+    pop_happiness = 0.4
+    official_initial_skill = 3
+    leader_officials_cost_mult = -0.4
+    pop_ethics_shift_speed_mult = 0.3
+    faction_approval = 0.2
+}
+
+agenda_centralization_finish = {
+    planet_stability_add = 10
+    edict_length_mult = 0.3
+    leader_officials_influence_produces_add = 0.5
+    official_exp_gain = 0.3
+    planet_building_build_speed_mult = 0.25
+}
+
+agenda_agrarian_finish = {
+    #TODO make farmers increase stability by 0.25 per 100 farmers
+    planet_farmers_unity_produces_add = 2
+    bonus_pop_growth = 0.1
+    planet_resettlement_unemployed_destination_mult = 0.2
+    country_food_produces_mult = 0.3
+}
+
+agenda_communal_finish = {
+    pop_resettlement_cost_mult = -1
+    country_war_exhaustion_mult = -0.5
+    planet_researchers_produces_mult = 0.2
+    #planet_biologist_produces_mult = 0.2
+    #planet_physicist_produces_mult = 0.2
+    #planet_engineer_produces_mult = 0.2
+    pop_demotion_time_mult = -0.3
+    planet_metallurgists_produces_mult = 0.1
+    planet_artisans_produces_mult = 0.1
+#    planet_artisan_produces_mult = 0.1
+#    planet_foundry_produces_mult = 0.1
+}
+
+agenda_mercenary_finish = {
+    planet_soldiers_unity_produces_add = 2
+   # planet_soldier_energy_produces_add = 2
+    commander_exp_gain = 0.3
+    starbase_shipyard_build_speed_mult = 0.3
+    intel_decryption_mult = 0.4
+    intel_encryption_mult = 0.4
+    ship_speed_mult = 0.2
+}

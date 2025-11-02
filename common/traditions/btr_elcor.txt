@@ -1,0 +1,57 @@
+tr_btr_isolation_adoption = {
+    possible = {
+        has_origin = courts_dek_origin
+    }
+    unlocks_agenda = agenda_isolation
+    modifier = {
+        intel_encryption_add = 2
+    }
+}
+
+tr_btr_isolation_finish = {
+    modifier = {
+        planet_crime_mult = -0.1
+        ascension_perks_add = 1
+    }
+}
+
+tr_btr_isolation_domestic_affairs = {
+    modifier = {
+        pop_government_ethic_attraction = 0.25
+    }
+}
+
+tr_btr_isolation_self_perfection = {
+    modifier = {
+        planet_stability_add = 25
+    }
+}
+
+tr_btr_isolation_internal_management = {
+    possible = {
+        has_tradition = tr_btr_isolation_domestic_affairs
+        has_tradition = tr_btr_isolation_self_perfection
+    }
+    modifier = {
+        country_trade_fee = -0.05
+        planet_jobs_trade_produces_mult = 0.15
+       # trade_value_mult = 0.15
+    }
+}
+
+tr_btr_isolation_austerity = {
+    possible = { has_tradition = tr_btr_isolation_internal_management }
+    modifier = {
+        planet_jobs_upkeep_mult = -0.2
+        pop_happiness = -5
+        planet_pops_produces_mult = 0.10
+    }
+}
+
+tr_btr_isolation_limited_diplomacy = {
+    possible = { has_tradition = tr_btr_isolation_austerity }
+    modifier = {
+        diplo_weight_mult = 0.15
+        envoys_add = 1
+    }
+}

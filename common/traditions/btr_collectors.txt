@@ -1,0 +1,62 @@
+tr_btr_service_adoption = {
+    possible = {
+        has_origin = collectors_emp_origin
+    }
+    unlocks_agenda = agenda_service
+    modifier = {
+        pop_purge_speed = 0.5
+
+    }
+}
+
+tr_btr_service_finish = {
+    modifier = {
+        ship_orbital_bombardment_army_damage_mult = 0.2
+        ascension_perks_add = 1
+    }
+}
+
+tr_btr_service_contacts = {
+    modifier = {
+        spy_network_daily_value_mult = 0.3
+        country_energy_produces_mult = 0.2
+    }
+}
+
+tr_btr_service_purpose = {
+    possible = {
+        has_tradition = tr_btr_service_contacts
+    }
+    modifier = {
+        country_society_tech_research_speed = 0.2
+        num_tech_alternatives_add = 1
+    }
+}
+
+tr_btr_service_without_fear = {
+    possible = {
+        has_tradition = tr_btr_service_purpose
+    }
+    modifier = {
+        army_damage_mult = 1
+        army_morale = 1
+        ship_disengage_chance_mult = -0.5
+        ship_fire_rate_mult = 0.25
+    }
+}
+
+tr_btr_service_sent = {
+    possible = { has_tradition = tr_btr_service_without_fear }
+    modifier = {
+        leader_initial_skill = 3
+        species_leader_exp_gain = 0.1
+    }
+}
+
+tr_btr_service_unending_labor = {
+    possible = { has_tradition = tr_btr_service_purpose }
+    modifier = {
+        planet_pops_produces_mult = 0.10
+        planet_building_build_speed_mult = 0.2
+    }
+}
