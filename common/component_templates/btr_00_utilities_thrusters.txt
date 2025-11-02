@@ -1,0 +1,2595 @@
+# Icons set here are the ones show in the actual slot.
+
+@cost1 = 3
+@cost2 = 6
+@cost3 = 9
+@cost4 = 12
+@cost5 = 15
+
+@power_1 = -10
+@power_2 = -15
+@power_3 = -20
+@power_4 = -25
+@power_5 = -30
+
+@destroyer_power_1 = -20
+@destroyer_power_2 = -30
+@destroyer_power_3 = -40
+@destroyer_power_4 = -50
+@destroyer_power_5 = -60
+
+@cruiser_power_1 = -40
+@cruiser_power_2 = -60
+@cruiser_power_3 = -80
+@cruiser_power_4 = -100
+@cruiser_power_5 = -120
+
+@battleship_power_1 = -80
+@battleship_power_2 = -120
+@battleship_power_3 = -160
+@battleship_power_4 = -200
+@battleship_power_5 = -240
+
+@titan_power_1 = -160
+@titan_power_2 = -240
+@titan_power_3 = -320
+@titan_power_4 = -400
+@titan_power_5 = -480
+
+@colossus_power_1 = -200
+@colossus_power_2 = -300
+@colossus_power_3 = -400
+@colossus_power_4 = -500
+@colossus_power_5 = -600
+
+@destroyer_cost1 = 6
+@destroyer_cost2 = 12
+@destroyer_cost3 = 18
+@destroyer_cost4 = 24
+@destroyer_cost5 = 30
+
+@cruiser_cost1 = 12
+@cruiser_cost2 = 24
+@cruiser_cost3 = 36
+@cruiser_cost4 = 48
+@cruiser_cost5 = 60
+
+@battleship_cost1 = 24
+@battleship_cost2 = 48
+@battleship_cost3 = 72
+@battleship_cost4 = 96
+@battleship_cost5 = 120
+
+@titan_cost1 = 48
+@titan_cost2 = 96
+@titan_cost3 = 144
+@titan_cost4 = 192
+@titan_cost5 = 240
+
+@colossus_cost1 = 60
+@colossus_cost2 = 120
+@colossus_cost3 = 180
+@colossus_cost4 = 240
+@colossus_cost5 = 300
+
+
+#############
+# THRUSTERS #
+#############
+
+### 1
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = @power_1
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @cost1
+			light_alloys = 2.1
+			heavy_alloys = 0.9
+		}
+	}
+
+	modifier = {
+	}
+
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_corvette_components = yes
+	}
+	upgrades_to = "SHIP_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = @destroyer_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @destroyer_cost1
+			light_alloys = 4.2
+			heavy_alloys = 1.8
+		}
+	}
+
+	modifier = {
+	}
+
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_destroyer_components = yes
+	}
+	upgrades_to = "DESTROYER_SHIP_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = @cruiser_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @cruiser_cost1
+			light_alloys = 8.4
+			heavy_alloys = 3.6
+		}
+	}
+
+	modifier = {
+	}
+
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_cruiser_components = yes
+	}
+	upgrades_to = "CRUISER_SHIP_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = @battleship_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @battleship_cost1
+			light_alloys = 16.8
+			heavy_alloys = 7.2
+		}
+	}
+
+	modifier = {
+	}
+
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_battleship_thrusters = yes
+	}
+	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = @titan_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @titan_cost1
+			light_alloys = 33.6
+			heavy_alloys = 14.4
+		}
+	}
+
+	modifier = {
+	}
+
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_titan_thrusters = yes
+	}
+	upgrades_to = "TITAN_SHIP_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = @colossus_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @colossus_cost1
+			light_alloys = 67.2
+			heavy_alloys = 28.8
+		}
+	}
+
+	modifier = {
+	}
+
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_colossus_thrusters = yes
+	}
+	upgrades_to = "COLOSSUS_SHIP_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+### 2
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = @power_2
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @cost2
+			light_alloys = 3
+			heavy_alloys = 3
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_evasion_add = 5
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_corvette_components = yes
+	}
+	upgrades_to = "SHIP_THRUSTER_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = @destroyer_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @destroyer_cost2
+			light_alloys = 6
+			heavy_alloys = 6
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_evasion_add = 4
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_destroyer_components = yes
+	}
+	upgrades_to = "DESTROYER_SHIP_THRUSTER_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = @cruiser_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @cruiser_cost2
+			light_alloys = 12
+			heavy_alloys = 12
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_evasion_add = 3
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_cruiser_components = yes
+	}
+	upgrades_to = "CRUISER_SHIP_THRUSTER_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = @battleship_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @battleship_cost2
+			light_alloys = 24
+			heavy_alloys = 24
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_evasion_add = 2
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_battleship_thrusters = yes
+	}
+	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = @titan_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @titan_cost2
+			light_alloys = 48
+			heavy_alloys = 48
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_evasion_add = 1
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_titan_thrusters = yes
+	}
+	upgrades_to = "TITAN_SHIP_THRUSTER_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_thruster_2"
+	icon_frame = 1
+	power = @colossus_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @colossus_cost2
+			light_alloys = 60
+			heavy_alloys = 60
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 0.25
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_colossus_thrusters = yes
+	}
+	upgrades_to = "COLOSSUS_SHIP_THRUSTER_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+
+### 3
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = @power_3
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @cost3
+			light_alloys = 4.5
+			heavy_alloys = 4.5
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_evasion_add = 10
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_corvette_components = yes
+	}
+	upgrades_to = "SHIP_THRUSTER_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = @destroyer_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @destroyer_cost3
+			light_alloys = 9
+			heavy_alloys = 9
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_evasion_add = 8
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_destroyer_components = yes
+	}
+	upgrades_to = "DESTROYER_SHIP_THRUSTER_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = @cruiser_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @cruiser_cost3
+			light_alloys = 18
+			heavy_alloys = 18
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_evasion_add = 6
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_cruiser_components = yes
+	}
+	upgrades_to = "CRUISER_SHIP_THRUSTER_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = @battleship_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @battleship_cost3
+			light_alloys = 36
+			heavy_alloys = 36
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_evasion_add = 4
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_battleship_thrusters = yes
+	}
+	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = @titan_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @titan_cost3
+			light_alloys = 72
+			heavy_alloys = 72
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_evasion_add = 2
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_titan_thrusters = yes
+	}
+	upgrades_to = "TITAN_SHIP_THRUSTER_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_thruster_3"
+	icon_frame = 1
+	power = @colossus_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @colossus_cost3
+			light_alloys = 90
+			heavy_alloys = 90
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_colossus_thrusters = yes
+	}
+	upgrades_to = "COLOSSUS_SHIP_THRUSTER_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+### 4
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = @power_4
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @cost4
+			light_alloys = 6
+			heavy_alloys = 6
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_evasion_add = 15
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_corvette_components = yes
+	}
+	upgrades_to = "SHIP_THRUSTER_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = @destroyer_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @destroyer_cost4
+			light_alloys = 12
+			heavy_alloys = 12
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_evasion_add = 12
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_destroyer_components = yes
+	}
+	upgrades_to = "DESTROYER_SHIP_THRUSTER_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = @cruiser_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @cruiser_cost4
+			light_alloys = 24
+			heavy_alloys = 24
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_evasion_add = 9
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_cruiser_components = yes
+	}
+	upgrades_to = "CRUISER_SHIP_THRUSTER_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = @battleship_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @battleship_cost4
+			light_alloys = 48
+			heavy_alloys = 48
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_evasion_add = 6
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_battleship_thrusters = yes
+	}
+	upgrades_to = "BATTLESHIP_SHIP_THRUSTER_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = @titan_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @titan_cost4
+			light_alloys = 96
+			heavy_alloys = 96
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_evasion_add = 3
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_titan_thrusters = yes
+	}
+	upgrades_to = "TITAN_SHIP_THRUSTER_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+
+utility_component_template = {
+	key = "COLOSSUS_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_thruster_4"
+	icon_frame = 1
+	power = @colossus_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @colossus_cost4
+			light_alloys = 120
+			heavy_alloys = 120
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_colossus_thrusters = yes
+	}
+	upgrades_to = "COLOSSUS_SHIP_THRUSTER_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+### 5
+
+utility_component_template = {
+	key = "SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @power_5
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @cost4
+			#sr_dark_matter = 1
+			light_alloys = 6
+			heavy_alloys = 6
+			eezo = 1
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 20
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_corvette_components = yes
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = eezo }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @destroyer_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @destroyer_cost4
+			#sr_dark_matter = 2
+			light_alloys = 12
+			heavy_alloys = 12
+			eezo = 2	
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 16
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_destroyer_components = yes
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = eezo }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @cruiser_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @cruiser_cost4
+			#sr_dark_matter = 4
+			light_alloys = 24
+			heavy_alloys = 24
+			eezo = 4
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 12
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_cruiser_components = yes
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = eezo }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @battleship_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @battleship_cost4
+			#sr_dark_matter = 8
+			light_alloys = 48
+			heavy_alloys = 48
+			eezo = 8
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 8
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_battleship_thrusters = yes
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = eezo }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @titan_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @titan_cost4
+			#sr_dark_matter = 16
+			light_alloys = 96
+			heavy_alloys = 96
+			eezo = 16
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 4
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_titan_thrusters = yes
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = eezo }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+
+utility_component_template = {
+	key = "COLOSSUS_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_thruster_5"
+	icon_frame = 1
+	power = @colossus_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = @colossus_cost5
+			#sr_dark_matter = 32
+			light_alloys = 150
+			heavy_alloys = 150
+			eezo = 32
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = no
+		}
+		ship_uses_colossus_thrusters = yes
+	}
+
+	ai_weight = {
+		weight = 5
+
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = eezo }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+##########################
+# Space Fauna Components #
+##########################
+#TODO: Everything below here
+# To be used as default for anything that cannot be cloned
+utility_component_template = {
+	key = "BIO_PROPULSION"
+	size = small
+	icon = "GFX_ship_part_bio_thruster_1"
+	icon_frame = 1
+	power = 0
+
+	component_set = "thruster_components_bio"
+
+	potential = {
+		ship_uses_space_fauna_corvette_thrusters = no
+		ship_uses_space_fauna_destroyer_thrusters = no
+		ship_uses_space_fauna_cruiser_thrusters = no
+		ship_uses_space_fauna_battleship_thrusters = no
+		ship_uses_space_fauna_titan_thrusters = no
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 1
+		CORRESPONDING_SIZE = CORVETTE
+		PREREQUISITE = ""
+		COST = 0
+		DARK_MATTER = 0
+		SPEED = 0
+		EVASION = 0
+		POTENTIAL = "ship_uses_space_fauna_corvette_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 1
+		CORRESPONDING_SIZE = DESTROYER
+		PREREQUISITE = ""
+		COST = 0
+		DARK_MATTER = 0
+		SPEED = 0
+		EVASION = 0
+		POTENTIAL = "ship_uses_space_fauna_destroyer_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 1
+		CORRESPONDING_SIZE = CRUISER
+		PREREQUISITE = ""
+		COST = 0
+		DARK_MATTER = 0
+		SPEED = 0
+		EVASION = 0
+		POTENTIAL = "ship_uses_space_fauna_cruiser_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 1
+		CORRESPONDING_SIZE = BATTLESHIP
+		PREREQUISITE = ""
+		COST = 0
+		DARK_MATTER = 0
+		SPEED = 0
+		EVASION = 0
+		POTENTIAL = "ship_uses_space_fauna_battleship_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 1
+		CORRESPONDING_SIZE = TITAN
+		PREREQUISITE = ""
+		COST = 0
+		DARK_MATTER = 0
+		SPEED = 0
+		EVASION = 0
+		POTENTIAL = "ship_uses_space_fauna_titan_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 2
+		CORRESPONDING_SIZE = CORVETTE
+		PREREQUISITE = "tech_thrusters_2 tech_thrusters_bio_integration"
+		COST = 24
+		DARK_MATTER = 0
+		SPEED = 0.2
+		EVASION = 5
+		POTENTIAL = "ship_uses_space_fauna_corvette_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 2
+		CORRESPONDING_SIZE = DESTROYER
+		PREREQUISITE = "tech_thrusters_2 tech_thrusters_bio_integration"
+		COST = 48
+		DARK_MATTER = 0
+		SPEED = 0.2
+		EVASION = 4
+		POTENTIAL = "ship_uses_space_fauna_destroyer_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 2
+		CORRESPONDING_SIZE = CRUISER
+		PREREQUISITE = "tech_thrusters_2 tech_thrusters_bio_integration"
+		COST = 96
+		DARK_MATTER = 0
+		SPEED = 0.2
+		EVASION = 3
+		POTENTIAL = "ship_uses_space_fauna_cruiser_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 2
+		CORRESPONDING_SIZE = BATTLESHIP
+		PREREQUISITE = "tech_thrusters_2 tech_thrusters_bio_integration"
+		COST = 192
+		DARK_MATTER = 0
+		SPEED = 0.2
+		EVASION = 2
+		POTENTIAL = "ship_uses_space_fauna_battleship_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 2
+		CORRESPONDING_SIZE = TITAN
+		PREREQUISITE = "tech_thrusters_2 tech_thrusters_bio_integration"
+		COST = 384
+		DARK_MATTER = 0
+		SPEED = 0.2
+		EVASION = 1
+		POTENTIAL = "ship_uses_space_fauna_titan_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 3
+		CORRESPONDING_SIZE = CORVETTE
+		PREREQUISITE = "tech_thrusters_3 tech_thrusters_bio_integration"
+		COST = 36
+		DARK_MATTER = 0
+		SPEED = 0.4
+		EVASION = 10
+		POTENTIAL = "ship_uses_space_fauna_corvette_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 3
+		CORRESPONDING_SIZE = DESTROYER
+		PREREQUISITE = "tech_thrusters_3 tech_thrusters_bio_integration"
+		COST = 72
+		DARK_MATTER = 0
+		SPEED = 0.4
+		EVASION = 8
+		POTENTIAL = "ship_uses_space_fauna_destroyer_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 3
+		CORRESPONDING_SIZE = CRUISER
+		PREREQUISITE = "tech_thrusters_3 tech_thrusters_bio_integration"
+		COST = 144
+		DARK_MATTER = 0
+		SPEED = 0.4
+		EVASION = 6
+		POTENTIAL = "ship_uses_space_fauna_cruiser_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 3
+		CORRESPONDING_SIZE = BATTLESHIP
+		PREREQUISITE = "tech_thrusters_3 tech_thrusters_bio_integration"
+		COST = 288
+		DARK_MATTER = 0
+		SPEED = 0.4
+		EVASION = 4
+		POTENTIAL = "ship_uses_space_fauna_battleship_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 3
+		CORRESPONDING_SIZE = TITAN
+		PREREQUISITE = "tech_thrusters_3 tech_thrusters_bio_integration"
+		COST = 576
+		DARK_MATTER = 0
+		SPEED = 0.4
+		EVASION = 2
+		POTENTIAL = "ship_uses_space_fauna_titan_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 4
+		CORRESPONDING_SIZE = CORVETTE
+		PREREQUISITE = "tech_thrusters_4 tech_thrusters_bio_integration"
+		COST = 48
+		DARK_MATTER = 0
+		SPEED = 0.6
+		EVASION = 15
+		POTENTIAL = "ship_uses_space_fauna_corvette_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 4
+		CORRESPONDING_SIZE = DESTROYER
+		PREREQUISITE = "tech_thrusters_4 tech_thrusters_bio_integration"
+		COST = 96
+		DARK_MATTER = 0
+		SPEED = 0.6
+		EVASION = 12
+		POTENTIAL = "ship_uses_space_fauna_destroyer_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 4
+		CORRESPONDING_SIZE = CRUISER
+		PREREQUISITE = "tech_thrusters_4 tech_thrusters_bio_integration"
+		COST = 192
+		DARK_MATTER = 0
+		SPEED = 0.6
+		EVASION = 9
+		POTENTIAL = "ship_uses_space_fauna_cruiser_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 4
+		CORRESPONDING_SIZE = BATTLESHIP
+		PREREQUISITE = "tech_thrusters_4 tech_thrusters_bio_integration"
+		COST = 384
+		DARK_MATTER = 0
+		SPEED = 0.6
+		EVASION = 6
+		POTENTIAL = "ship_uses_space_fauna_battleship_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 4
+		CORRESPONDING_SIZE = TITAN
+		PREREQUISITE = "tech_thrusters_4 tech_thrusters_bio_integration"
+		COST = 768
+		DARK_MATTER = 0
+		SPEED = 0.6
+		EVASION = 3
+		POTENTIAL = "ship_uses_space_fauna_titan_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 5
+		CORRESPONDING_SIZE = CORVETTE
+		PREREQUISITE = "tech_dark_matter_propulsion tech_thrusters_bio_integration"
+		COST = 48
+		DARK_MATTER = 1
+		SPEED = 1
+		EVASION = 20
+		POTENTIAL = "ship_uses_space_fauna_corvette_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 5
+		CORRESPONDING_SIZE = DESTROYER
+		PREREQUISITE = "tech_dark_matter_propulsion tech_thrusters_bio_integration"
+		COST = 96
+		DARK_MATTER = 2
+		SPEED = 1
+		EVASION = 16
+		POTENTIAL = "ship_uses_space_fauna_destroyer_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 5
+		CORRESPONDING_SIZE = CRUISER
+		PREREQUISITE = "tech_dark_matter_propulsion tech_thrusters_bio_integration"
+		COST = 192
+		DARK_MATTER = 3
+		SPEED = 1
+		EVASION = 12
+		POTENTIAL = "ship_uses_space_fauna_cruiser_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 5
+		CORRESPONDING_SIZE = BATTLESHIP
+		PREREQUISITE = "tech_dark_matter_propulsion tech_thrusters_bio_integration"
+		COST = 384
+		DARK_MATTER = 4
+		SPEED = 1
+		EVASION = 8
+		POTENTIAL = "ship_uses_space_fauna_battleship_thrusters = yes"
+	}
+}
+
+utility_component_template = {
+	inline_script = {
+		script = grand_archive/mutations/core_components/component_thrusters_bio
+		LEVEL = 5
+		CORRESPONDING_SIZE = TITAN
+		PREREQUISITE = "tech_dark_matter_propulsion tech_thrusters_bio_integration"
+		COST = 768
+		DARK_MATTER = 5
+		SPEED = 1
+		EVASION = 4
+		POTENTIAL = "ship_uses_space_fauna_titan_thrusters = yes"
+	}
+}
+
+###############################
+# Biological Ship  Components #
+###############################
+
+utility_component_template = {
+	key = "BIO_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_1"
+	icon_frame = 1
+	power = @power_1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	modifier = {
+	}
+
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_corvette_components = yes
+	}
+	upgrades_to = "BIO_SHIP_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_BIO_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_1"
+	icon_frame = 1
+	power = @destroyer_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @destroyer_cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	modifier = {
+	}
+
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_destroyer_components = yes
+	}
+	upgrades_to = "DESTROYER_BIO_SHIP_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_BIO_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_1"
+	icon_frame = 1
+	power = @cruiser_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cruiser_cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	modifier = {
+	}
+
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_cruiser_components = yes
+	}
+	upgrades_to = "CRUISER_BIO_SHIP_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_BIO_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_1"
+	icon_frame = 1
+	power = @battleship_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @battleship_cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	modifier = {
+	}
+
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_battleship_thrusters = yes
+	}
+	upgrades_to = "BATTLESHIP_BIO_SHIP_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_BIO_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_1"
+	icon_frame = 1
+	power = @titan_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @titan_cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	modifier = {
+	}
+
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_titan_thrusters = yes
+	}
+	upgrades_to = "TITAN_BIO_SHIP_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_BIO_SHIP_THRUSTER_1"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_1"
+	icon_frame = 1
+	power = @colossus_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			food = @colossus_cost1
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	modifier = {
+	}
+
+	prerequisites = { "tech_thrusters_1" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_colossus_thrusters = yes
+	}
+	upgrades_to = "COLOSSUS_BIO_SHIP_THRUSTER_2"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+### 2
+
+utility_component_template = {
+	key = "BIO_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_2"
+	icon_frame = 1
+	power = @power_2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_evasion_add = 5
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_corvette_components = yes
+	}
+	upgrades_to = "BIO_SHIP_THRUSTER_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_BIO_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_2"
+	icon_frame = 1
+	power = @destroyer_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @destroyer_cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_evasion_add = 4
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_destroyer_components = yes
+	}
+	upgrades_to = "DESTROYER_BIO_SHIP_THRUSTER_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_BIO_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_2"
+	icon_frame = 1
+	power = @cruiser_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cruiser_cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_evasion_add = 3
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_cruiser_components = yes
+	}
+	upgrades_to = "CRUISER_BIO_SHIP_THRUSTER_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_BIO_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_2"
+	icon_frame = 1
+	power = @battleship_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @battleship_cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_evasion_add = 2
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_battleship_thrusters = yes
+	}
+	upgrades_to = "BATTLESHIP_BIO_SHIP_THRUSTER_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_BIO_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_2"
+	icon_frame = 1
+	power = @titan_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @titan_cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 0.25
+		ship_evasion_add = 1
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_titan_thrusters = yes
+	}
+	upgrades_to = "TITAN_BIO_SHIP_THRUSTER_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_BIO_SHIP_THRUSTER_2"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_2"
+	icon_frame = 1
+	power = @colossus_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			food = @colossus_cost2
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 0.25
+	}
+
+	prerequisites = { "tech_thrusters_2" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_colossus_thrusters = yes
+	}
+	upgrades_to = "COLOSSUS_BIO_SHIP_THRUSTER_3"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+
+### 3
+
+utility_component_template = {
+	key = "BIO_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_3"
+	icon_frame = 1
+	power = @power_3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_evasion_add = 10
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_corvette_components = yes
+	}
+	upgrades_to = "BIO_SHIP_THRUSTER_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_BIO_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_3"
+	icon_frame = 1
+	power = @destroyer_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @destroyer_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_evasion_add = 8
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_destroyer_components = yes
+	}
+	upgrades_to = "DESTROYER_BIO_SHIP_THRUSTER_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_BIO_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_3"
+	icon_frame = 1
+	power = @cruiser_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cruiser_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_evasion_add = 6
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_cruiser_components = yes
+	}
+	upgrades_to = "CRUISER_BIO_SHIP_THRUSTER_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_BIO_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_3"
+	icon_frame = 1
+	power = @battleship_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @battleship_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_evasion_add = 4
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_battleship_thrusters = yes
+	}
+	upgrades_to = "BATTLESHIP_BIO_SHIP_THRUSTER_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_BIO_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_3"
+	icon_frame = 1
+	power = @titan_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @titan_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+		ship_evasion_add = 2
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_titan_thrusters = yes
+	}
+	upgrades_to = "TITAN_BIO_SHIP_THRUSTER_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_BIO_SHIP_THRUSTER_3"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_3"
+	icon_frame = 1
+	power = @colossus_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			food = @colossus_cost3
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.50
+	}
+
+	prerequisites = { "tech_thrusters_3" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_colossus_thrusters = yes
+	}
+	upgrades_to = "COLOSSUS_BIO_SHIP_THRUSTER_4"
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+### 4
+
+utility_component_template = {
+	key = "BIO_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_4"
+	icon_frame = 1
+	power = @power_4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cost4
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_evasion_add = 15
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_corvette_components = yes
+	}
+	upgrades_to = "BIO_SHIP_THRUSTER_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_BIO_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_4"
+	icon_frame = 1
+	power = @destroyer_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @destroyer_cost4
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_evasion_add = 12
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_destroyer_components = yes
+	}
+	upgrades_to = "DESTROYER_BIO_SHIP_THRUSTER_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_BIO_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_4"
+	icon_frame = 1
+	power = @cruiser_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cruiser_cost4
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_evasion_add = 9
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_cruiser_components = yes
+	}
+	upgrades_to = "CRUISER_BIO_SHIP_THRUSTER_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_BIO_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_4"
+	icon_frame = 1
+	power = @battleship_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @battleship_cost4
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_evasion_add = 6
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_battleship_thrusters = yes
+	}
+	upgrades_to = "BATTLESHIP_BIO_SHIP_THRUSTER_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_BIO_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_4"
+	icon_frame = 1
+	power = @titan_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @titan_cost4
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+		ship_evasion_add = 3
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_titan_thrusters = yes
+	}
+	upgrades_to = "TITAN_BIO_SHIP_THRUSTER_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+
+utility_component_template = {
+	key = "COLOSSUS_BIO_SHIP_THRUSTER_4"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_4"
+	icon_frame = 1
+	power = @colossus_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			food = @colossus_cost4
+			mult = @alloy_to_food_cost_ratio
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 0.75
+	}
+
+	prerequisites = { "tech_thrusters_4" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_colossus_thrusters = yes
+	}
+	upgrades_to = "COLOSSUS_BIO_SHIP_THRUSTER_5"
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+### 5
+
+utility_component_template = {
+	key = "BIO_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_5"
+	icon_frame = 1
+	power = @power_5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cost4
+			mult = @alloy_to_food_cost_ratio
+		}
+		cost = {
+			sr_dark_matter = 1
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 20
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_corvette_components = yes
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_BIO_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_5"
+	icon_frame = 1
+	power = @destroyer_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @destroyer_cost4
+			mult = @alloy_to_food_cost_ratio
+		}
+		cost = {
+			sr_dark_matter = 2
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 16
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_destroyer_components = yes
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_BIO_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_5"
+	icon_frame = 1
+	power = @cruiser_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cruiser_cost4
+			mult = @alloy_to_food_cost_ratio
+		}
+		cost = {
+			sr_dark_matter = 4
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 12
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_cruiser_components = yes
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_BIO_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_5"
+	icon_frame = 1
+	power = @battleship_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @battleship_cost4
+			mult = @alloy_to_food_cost_ratio
+		}
+		cost = {
+			sr_dark_matter = 8
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 8
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_battleship_thrusters = yes
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_BIO_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_5"
+	icon_frame = 1
+	power = @titan_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @titan_cost4
+			mult = @alloy_to_food_cost_ratio
+		}
+		cost = {
+			sr_dark_matter = 16
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 4
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_titan_thrusters = yes
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+
+utility_component_template = {
+	key = "COLOSSUS_BIO_SHIP_THRUSTER_5"
+	size = small
+	icon = "GFX_ship_part_bioship_thruster_5"
+	icon_frame = 1
+	power = @colossus_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			food = @colossus_cost5
+			mult = @alloy_to_food_cost_ratio
+		}
+		cost = {
+			sr_dark_matter = 32
+		}
+	}
+	modifier = {
+		ship_base_speed_mult = 1.25
+	}
+
+	prerequisites = { "tech_dark_matter_propulsion" }
+	component_set = "thruster_components"
+	potential = {
+		from = {
+			country_uses_bio_ships = yes
+		}
+		ship_uses_colossus_thrusters = yes
+	}
+
+	ai_weight = {
+		weight = 5
+
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}

@@ -48,6 +48,7 @@ sys_tartarusdebrisfield_init = {
 		orbit_distance = 0
 		orbit_angle = 1
 		size = 70
+		flags = { tartarus_debris_field_planet }
 		has_ring = no
 		init_effect = {
 
@@ -80,6 +81,7 @@ sys_tartarusdebrisfield_init = {
 		orbit_distance = 35
 		orbit_angle = { min = 1 max = 360 }
 		size = 2
+		flags = { polus_planet }
 		has_ring = no
 	}
 	
@@ -89,6 +91,7 @@ sys_tartarusdebrisfield_init = {
 		orbit_distance = 35
 		orbit_angle = { min = 1 max = 360 }
 		size = 1
+		flags = { inid_planet }
 		has_ring = no
 	}
 
@@ -101,7 +104,7 @@ sys_tartarusdebrisfield_init = {
 		has_ring = no
 		starting_planet = yes
 		entity = "collector_base_01_game_entity"
-		flags = { collector_base }
+		flags = {collector_base collector_base_station}
 		deposit_blockers = none
         modifiers = none
 		# init_effect = {
@@ -184,7 +187,7 @@ sys_migrant_fleet_init = {
         has_ring = no
 		size = 13
 		starting_planet = yes
-		flags = { rayya_ship_planet }
+		flags = {rayya_ship_planet rayya_planet}
 		deposit_blockers = none
         modifiers = none
 		# init_effect = {
@@ -233,7 +236,7 @@ sys_migrant_fleet_init = {
         orbit_angle = -5
         has_ring = no
 		size = 13
-		flags = { chayym_ship_planet }
+		flags = {chayym_ship_planet chayym_planet}
     }
 	
     planet = {
@@ -243,7 +246,7 @@ sys_migrant_fleet_init = {
         orbit_angle = 10
         has_ring = no
 		size = 13
-		flags = { shellen_ship_planet }
+		flags = {shellen_ship_planet shellen_planet}
     }
 
 
@@ -264,7 +267,7 @@ sys_migrant_fleet_init = {
         orbit_angle = 0
         has_ring = no
 		size = 4
-		flags = { special_projects_fleet_planet }
+		flags = {special_projects_fleet_planet special_projects_planet}
     }
 
 

@@ -2,7 +2,7 @@
 ### BTR Basic Resources ###
 ###########################
 
-#Light Metals
+#Light Alloys
 beryllium = {
 	tradable = yes
 	category = basic
@@ -66,7 +66,7 @@ titanium = {
 	}
 }
 
-#Heavy Metals
+#Heavy Alloys
 iridium = {
 	tradable = yes
 	category = basic
@@ -176,15 +176,15 @@ hydrogen = {
 ### BTR Advanced Resources ###
 ##############################
 
-# Light Metals
-light_metals = {
+# Light Alloys
+light_alloys = {
 	tradable = yes
 	category = advanced
 	market_amount = 50
 	market_price = 100
 	max = 15000
 
-	deficit_situation = situation_light_metals_deficit
+	deficit_situation = situation_light_alloys_deficit
 	deficit_trade_conversion_mult = -0.50
 
 	culling_conversion_value = 4
@@ -198,15 +198,15 @@ light_metals = {
 	}
 }
 
-# Heavy Metals
-heavy_metals = {
+# Heavy Alloys
+heavy_alloys = {
 	tradable = yes
 	category = advanced
 	market_amount = 25
 	market_price = 100
 	max = 15000
 
-	deficit_situation = situation_heavy_metals_deficit
+	deficit_situation = situation_heavy_alloys_deficit
 	deficit_trade_conversion_mult = -0.50
 
 	culling_conversion_value = 4

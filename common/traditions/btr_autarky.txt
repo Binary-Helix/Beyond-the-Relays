@@ -1,0 +1,114 @@
+tr_btr_autarky_adoption = {
+    #possible = {
+    #}
+    unlocks_agenda = agenda_autarky
+    modifier = {
+        country_resource_max_add = 5000
+        #Officials generate influence, handled in the leaders script
+    }
+}
+
+tr_btr_autarky_finish = {
+    modifier = {
+        #custom_tooltip = btr_vigilance_finish_desc
+        pop_demotion_time_mult = -1
+        planet_jobs_produces_mult = 0.05
+        ascension_perks_add = 1
+        #Also unlocks 4 special resolutions
+    }
+}
+
+tr_btr_autarky_standing = {
+    #Handled through galcom.300
+    triggered_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                    is_subject = no
+                    num_defensive_pacts = 0
+            }
+        }
+        modifier = {
+            planet_jobs_worker_produces_mult = 0.5
+            station_gatherers_produces_mult = 0.5
+            #TODO Make this require independence and not in a defensive pact
+        }
+    }
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_autarky_homeland = {
+    possible = {
+        has_tradition = tr_btr_autarky_standing
+    }
+    modifier = {
+        planet_artisans_produces_mult = 0.5
+        planet_metallurgists_produces_mult = 0.5
+        #planet_jobs_artisan_produces_mult = 0.5
+        #planet_jobs_metallurgists_produces_mult = 0.5
+    }
+
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_autarky_local = {
+    possible = {
+        has_tradition = tr_btr_autarky_homeland
+    }
+    modifier = {
+        country_trade_fee = 1
+        ship_military_upkeep_mult = -0.1
+        planet_pops_upkeep_mult = -0.1
+    }
+    #Handled through galcom.305
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_autarky_strategic = {
+    possible = {
+        has_tradition = tr_btr_autarky_homeland
+    }
+    modifier = {
+        # planet_jobs_rare_crystals_produces_mult = 0.1
+        # planet_jobs_sr_living_metal_produces_mult = 0.1
+        # planet_jobs_sr_zro_produces_mult = 0.1
+        # planet_jobs_sr_dark_matter_produces_mult = 0.1
+        # planet_jobs_nanites_produces_mult = 0.1
+        # planet_jobs_astral_threads_produces_mult = 0.1
+        # planet_jobs_volatile_motes_produces_mult = 0.1
+        # planet_jobs_exotic_gases_produces_mult = 0.1
+        planet_jobs_minor_artifacts_produces_mult = 0.1
+        planet_jobs_antimatter_fuel_produces_mult = 0.1
+        planet_jobs_uranium_produces_mult = 0.1
+        planet_jobs_eezo_produces_mult = 0.1
+    }
+    #Handled through galcom.310-315
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+"tr_btr_autarky_blood" = {
+    possible = {
+        has_tradition = tr_btr_autarky_strategic
+        has_tradition = tr_btr_autarky_local
+    }
+
+    modifier = {
+        planet_building_build_speed_mult = 0.5
+        planet_buildings_cost_mult = -0.5
+       # planet_jobs_specialist_upkeep_mult = -0.2
+    }
+
+    ai_weight = {
+        factor = 5000
+    }
+}
