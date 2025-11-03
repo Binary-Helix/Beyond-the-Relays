@@ -70,26 +70,6 @@ btr_05_elcor_clothes_01 = {
 
         random = {
             trigger = {
-                leader_class = commander
-                leader_should_wear_general_uniform = no
-            }
-            list = {
-                "gfx/models/portraits/btr_05_elcor/btr_elcor_05_body_admiral.dds"
-            }
-        }
-
-        random = {
-            trigger = {
-                leader_class = commander
-                leader_should_wear_general_uniform = yes
-            }
-            list = {
-                "gfx/models/portraits/btr_05_elcor/btr_elcor_05_body_general.dds"
-            }
-        }
-
-        random = {
-            trigger = {
                 leader_class = scientist
             }
             list = {
@@ -107,7 +87,7 @@ btr_05_elcor_clothes_01 = {
 
     #leader scope
     ruler = { #for rulers
-        default = "gfx/models/portraits/btr_05_elcor/btr_05_elcor_ruler.dds"
+        default = "gfx/models/portraits/btr_05_elcor/btr_elcor_05_body_under_gold.dds"
 
         "gfx/models/portraits/btr_05_elcor/btr_elcor_05_body_under_gold.dds" = { owner = { has_generic_government = yes NOT = { has_authority = auth_imperial } } }
         "gfx/models/portraits/btr_05_elcor/btr_elcor_05_body_under_gold.dds" = { owner = { has_militarist_government = yes NOT = { has_authority = auth_imperial } } }
