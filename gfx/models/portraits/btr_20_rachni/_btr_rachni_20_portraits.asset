@@ -5,5 +5,23 @@ entity = {
 	
 	default_state = "idle"
 	state = { name = "idle"       animation = "idle"    chance = 3.0 looping = no next_state = idle}
-	scale = 1.35
+	scale = 2.5
+}
+
+entity = {
+	name = "portrait_btr_rachni_20_brood_warrior_entity"
+	pdxmesh = "portrait_btr_rachni_20_brood_warrior_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"    chance = 3.0 looping = no next_state = idle}
+	scale = 3
+}
+
+entity = {
+	name = "portrait_btr_rachni_20_queen_entity"
+	pdxmesh = "portrait_btr_rachni_20_queen_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"    chance = 3.0 looping = no next_state = idle}
+	scale = 3.5
 }

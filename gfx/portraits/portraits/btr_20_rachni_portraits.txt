@@ -1,23 +1,23 @@
 portraits = {
 	btr_rachni = {	entity = "portrait_btr_rachni_20_entity"	clothes_selector = "no_texture" attachment_selector = "btr_rachni_20_stripes"	greeting_sound = "arthropoid_01_greetings"
 		character_textures = {
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_aqua.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_black.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_blue.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_dark_rust.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_gold.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_green.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_grey.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_light_blue.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_light_purple.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_magenta.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_pink.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_purple.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_rust.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_teal.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_violet.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_yellow.dds"
-			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body_yellow_green.dds"
+			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_body.dds"
+		}
+
+		custom_attachment_label = "Stripes"
+	}
+
+	btr_rachni_queen = {	entity = "portrait_btr_rachni_20_queen_entity"	clothes_selector = "no_texture" attachment_selector = "btr_rachni_20_queen_stripes"	greeting_sound = "arthropoid_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_queen.dds"
+		}
+
+		custom_attachment_label = "Stripes"
+	}
+
+	btr_rachni_brood_warrior = {	entity = "portrait_btr_rachni_20_brood_warrior_entity"	clothes_selector = "no_texture" attachment_selector = "btr_rachni_20_brood_warrior_stripes"	greeting_sound = "arthropoid_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/btr_20_rachni/btr_rachni_20_brood_warrior.dds"
 		}
 
 		custom_attachment_label = "Stripes"
@@ -30,6 +30,8 @@ portrait_groups = {
 		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
 			add = {
 				portraits = {
+					btr_rachni_queen
+					btr_rachni_brood_warrior
 					btr_rachni
 				}
 			}
@@ -86,7 +88,7 @@ portrait_groups = {
 					is_species = "RAC"
 				}
 				portraits = {
-					btr_rachni
+					btr_rachni_brood_warrior
 				}
 			}
 			add = {
@@ -96,7 +98,7 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					btr_rachni
+					btr_rachni_brood_warrior
 				}
 			}
 		}
@@ -108,7 +110,7 @@ portrait_groups = {
 					is_species = "RAC"
 				}
 				portraits = {
-					btr_rachni
+					btr_rachni_queen
 				}
 			}
 			add = {
@@ -118,7 +120,7 @@ portrait_groups = {
 					}
 				}
 				portraits = {
-					btr_rachni
+					btr_rachni_queen
 				}
 			}
 		}
