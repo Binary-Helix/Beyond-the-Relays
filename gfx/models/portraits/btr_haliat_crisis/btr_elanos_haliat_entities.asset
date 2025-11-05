@@ -4,8 +4,8 @@ entity = {
     pdxmesh = "btr_elanos_haliat_civil_01_portrait_mesh"
 
     default_state = "idle"
-    state = { name = "idle"       animation = "idle1"    animation_blend_time = 0 chance = 5.0 looping = yes next_state = idle}
-    scale = 1
+    state = { name = "idle"       animation = "idle"    animation_blend_time = 0 chance = 5.0 looping = no next_state = idle}
+    scale = 4.85
 }
 
 entity = {
@@ -13,6 +13,6 @@ entity = {
     pdxmesh = "btr_elanos_haliat_war_01_portrait_mesh"
 
     default_state = "idle"
-    state = { name = "idle"       animation = "idle1"    animation_blend_time = 1 chance = 5.0 looping = yes next_state = idle}
-    scale = 1
+    state = { name = "idle"       animation = "idle"    animation_blend_time = 1 chance = 5.0 looping = no next_state = idle}
+    scale = 4.85
 }

@@ -1,4 +1,176 @@
-# namespace = btr_skyllian_blitz_1
+namespace = btr_skyllian_blitz_1
+
+ country_event = {
+     id = btr_skyllian_blitz_1.1
+     title = btr_skyllian_blitz_1.1.name
+     hide_window = yes
+     is_triggered_only = yes
+
+     trigger = {
+         has_paragon_dlc = yes
+         NOT = { exists = event_target:elanos_haliat }
+         NOT = { has_country_flag = skyllian_blitz_chain_started }
+         has_country_flag = caleston_directorate
+     }
+
+     immediate = {
+         random_list = {
+             50 = {}
+             50 = { owner = { country_event = { id = btr_skyllian_blitz_1.2 days = 1 random = 900 } } }
+         }
+     }
+ }
+
+country_event = {
+    id =  btr_skyllian_blitz_1.2
+    title = "btr_skyllian_blitz_1.2.name"
+    desc = "btr_skyllian_blitz_1.2.desc"
+    show_sound = event_conversation
+    is_triggered_only = yes
+    fire_only_once = yes
+    diplomatic_title = BLANK_STRING
+
+    trigger = {
+        has_paragon_dlc = yes
+        NOT = { exists = event_target:elanos_haliat }
+        has_country_flag = caleston_directorate
+    }
+
+    picture_event_data = {
+        room = paragon_skrand_room
+        portrait = btr_elanos_haliat_civil
+    }
+
+    diplomatic = yes
+
+    option = {
+        name = btr_skyllian_blitz_1.2.a
+        response_text = btr_skyllian_blitz_1.2.a.response
+        is_dialog_only = yes
+    }
+    option = {
+        name = btr_skyllian_blitz_1.2.b
+        response_text = btr_skyllian_blitz_1.2.b.response
+        is_dialog_only = yes
+    }
+    option = {
+        name = btr_skyllian_blitz_1.2.c
+        set_country_flag = btr_elanos_haliat_hired
+        hidden_effect = { country_event = { id = btr_skyllian_blitz_3 } }
+        response_text = btr_skyllian_blitz_1.2.c.response
+    }
+    option = {
+        name = btr_skyllian_blitz_1.2.d
+        set_country_flag = btr_elanos_haliat_denied
+        hidden_effect = { country_event = { id = btr_skyllian_blitz_3 } }
+        response_text = btr_skyllian_blitz_1.2.d.response
+
+    }
+}
+#
+#
+#
+# diplomatic = yes
+#
+# picture_event_data = {
+#     room = paragon_skrand_room
+#     portrait = btr_elanos_haliat_civil
+# }
+#      desc = btr_skyllian_blitz_1.1.desc
+#      picture = GFX_evt_throne_room # TODO: Replace with appropriate event picture
+#      show_sound = event_default
+#
+#      picture = GFX_leader_recruitment_bg_renowned
+#      auto_opens = no
+#      notification_event_icon = "GFX_message_leader_recruitment_vyctor"
+#
+#      event_window_type = leader_recruit
+#
+#      immediate = {
+#          ethic_leader_creator = {
+#              SPECIES_CLASS = random_non_machine
+#              LEADER_PORTRAIT = par_renown_01 # militarist_leader_adm
+#              CLASS = commander
+#              TIER = leader_tier_renowned
+#              NAME = NAME_militarist1
+#              LEVEL = 4
+#              GENDER = male
+#              IMMORTAL = no
+#              ETHIC = militarist
+#              DESC = militarist1
+#              CATCH_PHRASE = militarist1_catch_phrase
+#          }
+#          last_created_leader = {
+#              add_trait = {
+#                  trait = subclass_commander_councilor
+#                  consume_selection = yes
+#              }
+#              add_trait = {
+#                  trait = leader_trait_military_overseer
+#                  consume_selection = yes
+#              }
+#              add_trait = {
+#                  trait = leader_trait_melancholic
+#                  consume_selection = yes
+#              }
+#              add_trait = {
+#                  trait = leader_trait_fleet_organizer
+#                  consume_selection = yes
+#              }
+#              add_trait = {
+#                  trait = leader_trait_artillerist
+#                  consume_selection = yes
+#              }
+#              set_age = 45
+#          }
+#      }
+#
+#      picture_event_data = {
+#          portrait = event_target:ethic_leader
+#          room = ethic_spaceship_room
+#      }
+#
+#      option = {
+#          name = DISMISS
+#          tag = dismiss_leader
+#          hidden_effect = {
+#              remove_global_flag = militarist_leader_1
+#              ethic_leader_kill_effect = yes
+#              set_country_flag = dismissed_militarist_leader_1
+#          }
+#      }
+#      option = {
+#          name = paragon.40300.a
+#          response_text = paragon.40300.a.response
+#          is_dialog_only = yes
+#      }
+#      option = {
+#          name = paragon.40300.b
+#          response_text = paragon.40300.b.response
+#          is_dialog_only = yes
+#      }
+#      option = {
+#          name = paragon.40300.c
+#          response_text = paragon.40300.c.response
+#          is_dialog_only = yes
+#      }
+#      option = {
+#          name = HIRE
+#          tag = hire_leader
+#          custom_tooltip = paragon.40300.hire_custom_tooltip
+#          hidden_effect = {
+#              ethic_leader_hire_effect = {
+#                  GLOBAL_EVENT_TARGET = renowned_militarist1
+#              }
+#          }
+#      }
+#  }
+#
+#
+#
+
+
+
 #
 # # Initial Haliat Offer Event
 # country_event = {
