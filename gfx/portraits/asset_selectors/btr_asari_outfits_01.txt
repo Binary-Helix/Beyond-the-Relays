@@ -1,10 +1,10 @@
 # This is a template which multiple species can use.
 
 bte_asari_02_clothes_01 = {
-    default = "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds"
+    default = "gfx/models/portraits/bte_asari_02/bte_asari_02_civilian.dds"
 
     game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
-        default = "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds"
+        default = "gfx/models/portraits/bte_asari_02/bte_asari_02_civilian.dds"
     }
 
     #species scope
@@ -14,7 +14,7 @@ bte_asari_02_clothes_01 = {
 
     #pop scope
     pop_group = { #for a specific pop
-        default = "gfx/models/portraits/bte_asari_02/bte_asari_02_governor_02.dds"
+        default = "gfx/models/portraits/bte_asari_02/bte_asari_02_civilian.dds"
 
         random = {
             trigger = { always = no }
@@ -43,23 +43,40 @@ bte_asari_02_clothes_01 = {
             }
         }
 
-        "gfx/models/portraits/bte_asari_02/bte_asari_02_slave.dds" = {
-            is_pop_category = slave
+        random = {
+            trigger = {
+                is_pop_category = ruler
+            }
+            list = {
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds"
+            }
         }
 
-        "gfx/models/portraits/bte_asari_02/bte_asari_02_civilian.dds" = {
-            is_pop_category = civilian
+        random = {
+            trigger = {
+                is_pop_category = specialist
+            }
+            list = {
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_scientist.dds"
+            }
         }
 
-        "gfx/models/portraits/bte_asari_02/bte_asari_02_worker.dds" = {
-            is_pop_category = worker
+        random = {
+            trigger = {
+                is_pop_category = worker
+            }
+            list = {
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_worker.dds"
+            }
         }
 
-        "gfx/models/portraits/bte_asari_02/bte_asari_02_scientist.dds" 	= {
-            is_pop_category = specialist
-        }
-        "gfx/models/portraits/bte_asari_02/bte_asari_02_ruler.dds" 	= {
-            is_pop_category = ruler
+        random = {
+            trigger = {
+                is_pop_category = civilian
+            }
+            list = {
+                "gfx/models/portraits/bte_asari_02/bte_asari_02_civilian.dds"
+            }
         }
 
         random = {
@@ -87,7 +104,6 @@ bte_asari_02_clothes_01 = {
 
         random = {
             trigger = {
-                has_total_skill >= 7
                 leader_class = commander
                 leader_should_wear_general_uniform = no
             }
