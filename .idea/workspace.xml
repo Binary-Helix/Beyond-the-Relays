@@ -5,8 +5,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08664527-6757-472e-b0f6-9970e531260c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/common/solar_system_initializers/canon/add_planet_flags.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/solar_system_initializers/canon/00_attican_traverse_initializers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/solar_system_initializers/canon/00_attican_traverse_initializers.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/game_rules/independent_worlds_game_rules.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/game_rules/z_planet_states_game_rules.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/scripted_triggers/planet_states_scripted_triggers.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/independent_worlds_events.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/independent_worlds_first_contact_events.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/independent_worlds_on_action_events.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/planet_states_events.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/planet_states_first_contact_events.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events/planet_states_on_action_events.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_a_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_a_super_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_b_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_b_super_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_c_giant_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_c_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_d_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_f_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_f_super_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_g_giant_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_g_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_gm_giant_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_k_giant_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_k_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_k_super_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_lbv_blue_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_lbv_green_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_lbv_red_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_m_giant_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_m_hyper_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_m_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_m_super_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_neutron_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_o_hyper_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_o_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_o_super_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_s_giant_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_s_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_tt_red_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_w_azure_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_w_green_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_w_purple_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gfx/particles/btr_me_lens_w_red_star_flare.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface/planet_states_pictures.gfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/planet_states_events_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/planet_states_l_english.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/localisation/english/planet_states_names_l_english.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/anomalies/btr_anomalies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/anomalies/btr_anomalies.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/on_actions/btr_on_actions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/on_actions/btr_on_actions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_game_start_empire_creation_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/btr_game_start_empire_creation_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_game_start_empire_territory_effects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/btr_game_start_empire_territory_effects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/scripted_effects/btr_game_start_pop_scripts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/common/scripted_effects/btr_game_start_pop_scripts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interface/frontend.gui" beforeDir="false" afterPath="$PROJECT_DIR$/interface/frontend.gui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,38 +87,36 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Feature-Anomalies",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/Repositories/btr_skunkworks/gfx/models/planets",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2954023",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature-truely-independent-worlds&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Repositories/btr_skunkworks/common&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2954023&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Repositories\btr_skunkworks\gfx\models\planets" />
-      <recent name="E:\Repositories\btr_skunkworks\gfx\particles\stars_and_planets" />
-      <recent name="F:\SteamLibrary\steamapps\common\Stellaris\gfx\particles\btr_particles\gfx\particles" />
-      <recent name="F:\SteamLibrary\steamapps\common\Stellaris\gfx\particles\btr_particles\particles" />
-      <recent name="E:\Repositories\btr_skunkworks\gfx\particles" />
+      <recent name="E:\Repositories\btr_skunkworks\common" />
+      <recent name="E:\Repositories\btr_skunkworks\localisation\english" />
+      <recent name="E:\Repositories\btr_skunkworks\common\edicts" />
+      <recent name="E:\Repositories\btr_skunkworks\common\economic_plans" />
+      <recent name="E:\Repositories\btr_skunkworks\common\scripted_variables" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Repositories\btr_skunkworks\fonts" />
-      <recent name="E:\Repositories\btr_skunkworks\gfx\interface" />
-      <recent name="E:\Repositories\btr_skunkworks\common\static_modifiers" />
-      <recent name="E:\Repositories\btr_skunkworks\common\scripted_effects" />
-      <recent name="E:\Repositories\btr_skunkworks\common\government\civics" />
+      <recent name="E:\Repositories\btr_skunkworks\_OLD" />
+      <recent name="E:\Repositories\btr_skunkworks" />
+      <recent name="E:\Repositories\btr_skunkworks\common\_OLD" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
