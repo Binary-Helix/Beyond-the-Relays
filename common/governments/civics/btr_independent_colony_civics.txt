@@ -1,7 +1,7 @@
 independent_civic_fractured_domain = {
 	modification = no
 	potential = {
-		country_type = { value = independent_colony }
+		country_type = { value = planet_state }
 	}
 	random_weight = {
 		base = 0
@@ -16,7 +16,7 @@ independent_civic_fractured_domain = {
 independent_civic_citadel_setup = {
 	modification = no
 	potential = {
-		country_type = { value = independent_colony }
+		country_type = { value = planet_state }
 	}
 	random_weight = {
 		base = 0
@@ -32,7 +32,7 @@ independent_civic_citadel_setup = {
 independent_civic_corporate_ownership = {
 	modification = no
 	potential = {
-		country_type = { value = independent_colony }
+		country_type = { value = planet_state }
 	}
 	random_weight = {
 		base = 0
@@ -47,7 +47,7 @@ independent_civic_corporate_ownership = {
 independent_civic_free_autonomous = {
 	modification = no
 	potential = {
-		country_type = { value = independent_colony }
+		country_type = { value = planet_state }
 	}
 	random_weight = {
 		base = 0
@@ -62,7 +62,7 @@ independent_civic_free_autonomous = {
 independent_civic_isolationist = {
 	modification = no
 	potential = {
-		country_type = { value = independent_colony }
+		country_type = { value = planet_state }
 	}
 	random_weight = {
 		base = 0
@@ -79,13 +79,14 @@ independent_civic_isolationist = {
 independent_civic_industrialists = {
 	modification = no
 	potential = {
-		country_type = { value = independent_colony }
+		country_type = { value = planet_state }
 	}
 	random_weight = {
 		base = 0
 	}
 
 	modifier = {
+        #TODO neighboring empires gain -5% consumer goods, amenities upkeep, and +5% alloy and +10% mineral output
 	}
 
 	description = "independent_industrialists_EFFECT"
@@ -94,7 +95,7 @@ independent_civic_industrialists = {
 independent_civic_suspicious_untrusting = {
 	modification = no
 	potential = {
-		country_type = { value = independent_colony }
+		country_type = { value = planet_state }
 	}
 	random_weight = {
 		base = 0
@@ -111,7 +112,7 @@ independent_civic_suspicious_untrusting = {
 independent_civic_fearful_alone = {
 	modification = no
 	potential = {
-		country_type = { value = independent_colony }
+		country_type = { value = planet_state }
 	}
 	random_weight = {
 		base = 0
@@ -129,7 +130,7 @@ independent_civic_fearful_alone = {
 independent_civic_research_outpost = {
 	modification = no
 	potential = {
-		country_type = { value = independent_colony }
+		country_type = { value = planet_state }
 	}
 	random_weight = {
 		base = 0
@@ -145,7 +146,7 @@ independent_civic_research_outpost = {
 independent_civic_labor_camp = {
 	modification = no
 	potential = {
-		country_type = { value = independent_colony }
+		country_type = { value = planet_state }
 	}
 	random_weight = {
 		base = 0
@@ -161,7 +162,7 @@ independent_civic_labor_camp = {
 independent_civic_hedonists = {
 	modification = no
 	potential = {
-		country_type = { value = independent_colony }
+		country_type = { value = planet_state }
 	}
 	random_weight = {
 		base = 0
