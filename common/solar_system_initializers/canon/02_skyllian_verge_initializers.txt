@@ -1709,33 +1709,33 @@ sys_pax_init = {
 		modifiers = none
 		entity = "antarctic_planet_01_entity"
 		flags = { subclass_world noveria_planet }		
-		# init_effect = {
-		# 	save_global_event_target_as = noveriaHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:citadelHomeworld
-        #         }
-        #         log = "Noveria Development Corporation Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-		#
-		# 	generate_noveria_development_corporation_country = yes
-		#
-		# 	set_capital = yes
-		# 	set_owner = event_target:noveria_development_corporation
-		# 	create_colony = {
-		# 		owner = event_target:noveria_development_corporation
-		# 		species = event_target:salarianSpecies
-		# 		ethos = owner
-		# 	}
-		#
-		# 	generate_noveria_pops = yes
-		#
-		# 	add_modifier = {
-		# 		modifier = antar_world
-		# 		days = -1
-		# 	}
-		# }
+		 init_effect = {
+		 	save_global_event_target_as = noveriaHomeworld
+             if = {
+                 limit = {
+                     exists = event_target:noveriaHomeworld
+                 }
+                 log = "Noveria Development Corporation Event Target Set"
+             }
+             prevent_anomaly = yes
+
+		 	generate_noveria_development_corporation_country = yes
+
+		 	set_capital = yes
+		 	set_owner = event_target:noveria_development_corporation
+		 	create_colony = {
+		 		owner = event_target:noveria_development_corporation
+		 		species = event_target:salarianSpecies
+		 		ethos = owner
+		 	}
+
+		 	generate_noveria_pops = yes
+
+		 	add_modifier = {
+		 		modifier = antar_world
+		 		days = -1
+		 	}
+		 }
 	}
 
     planet = {
