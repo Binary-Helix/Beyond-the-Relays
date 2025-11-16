@@ -7237,6 +7237,12 @@ sys_caspian_init = {
         has_ring = no
 		size = 22
 		flags = { farnuri_planet }
+       init_effect = {
+           add_anomaly = {
+               category = BTR_FARNURI_RAPID_GLASS
+               target = THIS
+           }
+       }
     }
 
     planet = {
@@ -7247,6 +7253,12 @@ sys_caspian_init = {
         has_ring = no
 		size = 11	
 		flags = { almarcrux_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_ALMARCRUX_ALMOST_PERFECT
+                target = THIS
+            }
+        }
     }
 
     planet = {
@@ -7323,6 +7335,10 @@ sys_matano_init = {
 				modifier = tidal_locked
 				days = -1
 			}
+            add_anomaly = {
+                category = BTR_CHASCA_KALEIDOSCOPE
+                target = THIS
+            }
 		}
     }
 
@@ -7348,7 +7364,11 @@ sys_matano_init = {
 				modifier = unstable_tectonics
 				days = -1
 			}
-		}	
+            add_anomaly = {
+                category = BTR_APO_SHAKING
+                target = THIS
+            }
+        }
     }
 
     planet = {
@@ -7374,6 +7394,12 @@ sys_matano_init = {
             has_ring = no
 			size = 4
 			flags = { illapa_a_planet }
+            init_effect = {
+                add_anomaly = {
+                    category = BTR_APO_GIANT_GEM
+                    target = THIS
+                }
+            }
         }
 
         moon = {
@@ -7480,6 +7506,10 @@ sys_vostok_init = {
 				modifier = wild_storms
 				days = -1
 			}
+            add_anomaly = {
+                category = BTR_NORDACRUX_POLLEN_PAIN
+                target = THIS
+            }
 		}
     }
 

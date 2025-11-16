@@ -7181,7 +7181,13 @@ sys_aysur_init = {
         orbit_angle = 198
         has_ring = no
 		size = 3
-		flags = {subclass_world shasu_planet}		
+		flags = {subclass_world shasu_planet}
+        init_effect = {
+            add_anomaly = {
+                category = BTR_SHASU_MAGMA
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -7197,6 +7203,10 @@ sys_aysur_init = {
 				modifier = extensive_moon_system
 				days = -1
 			}
+            add_anomaly = {
+                category = BTR_DRANEN_GREAT_SPOT
+                target = this
+            }
 		}
 
 		moon = {
@@ -7207,35 +7217,39 @@ sys_aysur_init = {
             has_ring = no
 			size = 16
 			flags = { subclass_world arvuna_planet }
-			# init_effect = {
-			# 	save_global_event_target_as = arvunaHomeworld
-			# 	if = {
-			# 		limit = {
-			# 			exists = event_target:arvunaHomeworld
-			# 		}
-			# 		log = "Arvunan Administration Zone Event Target Set"
-			# 	}
-			# 	prevent_anomaly = yes
-            #
-			# 	generate_arvunan_administration_country = yes
-            #
-			# 	set_capital = yes
-			# 	set_owner = event_target:arvunan_administration
-			# 	create_colony = {
-			# 		owner = event_target:arvunan_administration
-			# 		species = event_target:humanSpecies
-			# 		ethos = owner
-			# 	}
-            #
-			# 	generate_arvuna_pops = yes
-            #
-			# 	add_modifier = {
-			# 		modifier = dangerous_wildlife
-			# 		days = -1
-			# 	}
-            #
-			# 	add_deposit = d_eezo_trace
-			# }
+			 init_effect = {
+			 	save_global_event_target_as = arvunaHomeworld
+			 	if = {
+			 		limit = {
+			 			exists = event_target:arvunaHomeworld
+			 		}
+			 		log = "Arvunan Administration Zone Event Target Set"
+			 	}
+			 	prevent_anomaly = yes
+
+			 	generate_arvunan_administration_country = yes
+
+			 	set_capital = yes
+			 	set_owner = event_target:arvunan_administration
+			 	create_colony = {
+			 		owner = event_target:arvunan_administration
+			 		species = event_target:humanSpecies
+			 		ethos = owner
+			 	}
+
+			 	generate_arvuna_pops = yes
+
+			 	add_modifier = {
+			 		modifier = dangerous_wildlife
+			 		days = -1
+			 	}
+
+			 	add_deposit = d_eezo_trace
+			    add_anomaly = {
+                    category = BTR_ARVUNA_PRIMORDIAL
+                    target = this
+                }
+			 }
 		}	
 
 		moon = {
@@ -7760,6 +7774,10 @@ sys_yakawa_init = {
 				modifier = strong_magnetic_field
 				days = -1
 			}
+            add_anomaly = {
+                category = BTR_SAKATA_CRUSHER
+                target = this
+            }
 		}
     }
 
@@ -7778,6 +7796,12 @@ sys_yakawa_init = {
 			has_ring = no
 			size = 6
 			flags = {sumiko_planet nambu_planet}
+            init_effect = {
+                add_anomaly = {
+                    category = BTR_SUMIKO_TECTONISM
+                    target = this
+                }
+            }
         }
 
 		moon = {
@@ -7831,6 +7855,10 @@ sys_yakawa_init = {
 				modifier = unstable_tectonics
 				days = -1
 			}
+            add_anomaly = {
+                category = BTR_KARUMTO_RUINS_OF_RUIN
+                target = this
+            }
 		}
     }
 
@@ -8771,33 +8799,37 @@ sys_hekate_init = {
 		flags = { subclass_world asteria_planet }
 		deposit_blockers = none
         modifiers = none
-		# init_effect = {
-        #     save_global_event_target_as = asteriaHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:citadelHomeworld
-        #         }
-        #         log = "Republic of Asteria Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-		# 	generate_republic_of_asteria_country = yes
-        #
-		# 	set_capital = yes
-		# 	set_owner = event_target:republic_of_asteria
-		# 	create_colony = {
-		# 		owner = event_target:republic_of_asteria
-		# 		species = event_target:asariSpecies
-		# 		ethos = owner
-		# 	}
-        #
-		# 	generate_asteria_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = dune_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+            save_global_event_target_as = asteriaHomeworld
+            if = {
+                limit = {
+                    exists = event_target:citadelHomeworld
+                }
+                log = "Republic of Asteria Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_republic_of_asteria_country = yes
+
+			set_capital = yes
+			set_owner = event_target:republic_of_asteria
+			create_colony = {
+				owner = event_target:republic_of_asteria
+				species = event_target:asariSpecies
+				ethos = owner
+			}
+
+			generate_asteria_pops = yes
+
+			add_modifier = {
+				modifier = dune_world
+				days = -1
+			}
+            add_anomaly = {
+                category = BTR_ASTERIA_FALSE_GARDEN
+                target = this
+            }
+		}
     }
 
     planet = {
@@ -8966,6 +8998,10 @@ sys_hekate_init = {
 				days = -1
 			}
 			add_deposit = d_eezo_trace
+            add_anomaly = {
+                category = BTR_BOTHROS_FORCED_EXTINCTION
+                target = this
+            }
 		}
 	}   	
 }
@@ -9041,7 +9077,11 @@ sys_hoplos_init = {
 				add_modifier = {
 					modifier = low_gravity
 					days = -1
-				}				
+				}
+                add_anomaly = {
+                    category = BTR_KOPIS_HEATED_RACE
+                    target = this
+                }
 			}
 		}
     }
@@ -14540,6 +14580,10 @@ sys_gagarin_init = {
 				modifier = extensive_moon_system
 					days = -1
 			}
+            add_anomaly = {
+                category = BTR_PRESSHA
+                target = THIS
+            }
 		}
 
 		moon = {
@@ -14614,7 +14658,11 @@ sys_gagarin_init = {
 			add_modifier = {
 				modifier = carbon_world
 				days = -1
-			}	
+			}
+            add_anomaly = {
+                category = BTR_ANTIRUMGOM_LIQUOR
+                target = THIS
+            }
    		}
 	}
 }	
@@ -14727,6 +14775,10 @@ sys_grissom_init = {
 				modifier = extensive_moon_system
 					days = -1
 			}
+            add_anomaly = {
+                category = BTR_NOTANBAN_SHOALS
+                target = THIS
+            }
 		}
 	
 		moon = {
@@ -14975,6 +15027,12 @@ sys_tereshkova_init = {
         has_ring = no
 		size = 14
 		flags = { patamalrus_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_PATAMALRUS
+                target = THIS
+            }
+        }
 	}		
 
     planet = {
@@ -14999,7 +15057,11 @@ sys_tereshkova_init = {
 			add_modifier = {
 				modifier = tidal_locked
 				days = -1
-			}			
+			}
+            add_anomaly = {
+                category = BTR_THEGEUSE_KAMAKAZI
+                target = THIS
+            }
 		}			
 	}
 
@@ -15025,7 +15087,11 @@ sys_tereshkova_init = {
 			add_modifier = {
 				modifier = low_gravity
 				days = -1
-			}			
+			}
+            add_anomaly = {
+                category = BTR_MAWINOR_EXILE
+                target = this
+            }
 		}				
 	}
 }
@@ -15083,6 +15149,10 @@ sys_vamshi_init = {
 				modifier = dune_world
 				days = -1
 			}
+            add_anomaly = {
+                category = BTR_MAJI_FLOATERS
+                target = this
+            }
 		}				
     }
 

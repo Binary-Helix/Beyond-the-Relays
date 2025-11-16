@@ -1,4 +1,4 @@
-PRESSHA = {
+BTR_PRESSHA = {
     desc = pressha_desc
     picture = #TODO
     level = 1
@@ -8,13 +8,9 @@ PRESSHA = {
     #        #TODO make this spawn only on Pressha b Gargarin, Armstrong Nebula
     #    }
     #}
- #   spawn_chance = {
-  #      base = 0
-   #     modifier = {
-    #        add = 10
-     #       has_planet_flag = pressha_b_planet
-      #  }
-    #}
+   spawn_chance = {
+       base = 0
+    }
 
     on_success = {
         1 = {
@@ -23,7 +19,7 @@ PRESSHA = {
     }
 }
 
-LIQUOR = {
+BTR_ANTIRUMGOM_LIQUOR = {
     desc = liquor_desc
     picture = #TODO
     level = 1
@@ -34,13 +30,9 @@ LIQUOR = {
 #        }
 #    }
 
-    # spawn_chance = {
-    #     base = 0
-    #     modifier = {
-    #         add = 10
-    #         has_planet_flag = antirumgom_planet
-    #     }
-    # }
+    spawn_chance = {
+        base = 0
+    }
 
     on_success = {
         1 = {
@@ -49,7 +41,7 @@ LIQUOR = {
     }
 }
 
-SHOALS = {
+BTR_NOTANBAN_SHOALS = {
     desc = shoals_life_desc
     picture = #TODO
     level = 1
@@ -60,13 +52,9 @@ SHOALS = {
   #      }
   #  }
 
-    # spawn_chance = {
-    #     base = 0
-    #     modifier = {
-    #         add = 10
-    #         has_planet_flag = notanban_planet
-    #     }
-    # }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.2
@@ -74,23 +62,19 @@ SHOALS = {
     }
 }
 
-PATAMALRUS = {
+BTR_PATAMALRUS = {
     desc = patamalrus_desc
     picture = #TODO
     level = 1
 
-    spawn_chance = {
-        modifier = {
+   # spawn_chance = {
+    #    modifier = {
             #TODO Make this spawn only on patamalrus tereshkova, Armstrong nebula
-        }
-    }
-    # spawn_chance = {
-    #     base = 0
-    #     modifier = {
-    #         add = 10
-    #         has_planet_flag = patamalrus_planet
-    #     }
-    # }
+    #    }
+   # }
+spawn_chance = {
+base = 0
+}
 
     on_success = {
         8 = {
@@ -102,7 +86,7 @@ PATAMALRUS = {
     }
 }
 
-KAMAKAZI = {
+BTR_THEGEUSE_KAMAKAZI = {
     desc = kamakazi_desc
     picture = #TODO
     level = 1
@@ -112,13 +96,9 @@ KAMAKAZI = {
  #           #TODO Make this spawn only on Thegeuse Tereshkova, Armstrong Nebula
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = thegeuse_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.5
@@ -126,7 +106,7 @@ KAMAKAZI = {
     }
 }
 
-EXILE = {
+BTR_MAWINOR_EXILE = {
     desc = exile_desc
     picture = #TODO
     level = 1
@@ -137,13 +117,9 @@ EXILE = {
 #        }
 #    }
 
-    # spawn_chance = {
-    #     base = 0
-    #     modifier = {
-    #         add = 10
-    #         has_planet_flag = mawinor_planet
-    #     }
-    # }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.6
@@ -151,7 +127,7 @@ EXILE = {
     }
 }
 
-FLOATERS = {
+BTR_MAJI_FLOATERS = {
     desc = floaters_desc
     picture = #TODO
     level = 1
@@ -161,13 +137,9 @@ FLOATERS = {
 #            #TODO Make this spawn only on Maji Vamshi, Armstrong Nebula
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = maji_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.7
@@ -175,7 +147,7 @@ FLOATERS = {
     }
 }
 
-MAGAMA = {
+BTR_SHASU_MAGAMA = {
     desc = magma_desc
     picture = #TODO
     level = 1
@@ -185,13 +157,9 @@ MAGAMA = {
  #           #TODO Make this spawn only on Shasu Aysur, Caleston Rift
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = shasu_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.8
@@ -199,7 +167,7 @@ MAGAMA = {
     }
 }
 
-GREAT_SPOT = {
+BTR_DRANEN_GREAT_SPOT = {
     desc = great_spot_desc
     picture = #TODO
     level = 1
@@ -210,13 +178,9 @@ GREAT_SPOT = {
  #       }
  #   }
 
-    # spawn_chance = {
-    #     base = 0
-    #     modifier = {
-    #         add = 10
-    #         has_planet_flag = dranen_planet
-    #     }
-    # }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.9
@@ -224,7 +188,7 @@ GREAT_SPOT = {
     }
 }
 
-PRIMORDIAL = {
+BTR_ARVUNA_PRIMORDIAL = {
     desc = primordial_desc
     picture = #TODO
     level = 1
@@ -234,13 +198,9 @@ PRIMORDIAL = {
 #            #TODO Make this spawn only on Arvuna Aysur Caleston Rift
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = arvuna_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.10
@@ -248,7 +208,7 @@ PRIMORDIAL = {
     }
 }
 
-UNIQUE = {
+BTR_CLAESTON_UNIQUE = {
     desc = unique_desc
     picture = #TODO
     level = 1
@@ -258,13 +218,9 @@ UNIQUE = {
 #            #TODO Make this spawn only on Caleston, Balor, Caleston Rift
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = caleston_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.11
@@ -272,7 +228,7 @@ UNIQUE = {
     }
 }
 
-CRUSHER = {
+BTR_SAKATA_CRUSHER = {
     desc = crusher_desc
     picture = #TODO
     level = 1
@@ -282,13 +238,9 @@ CRUSHER = {
   #          #TODO Make this spawn only on Sakata, Yakawa, Caleston Rift
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = sakata_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.12
@@ -296,7 +248,7 @@ CRUSHER = {
     }
 }
 
-TECTONISM = {
+BTR_SUMIKO_TECTONISM = {
     desc = tectonism_desc
     picture = #TODO
     level = 1
@@ -306,13 +258,9 @@ TECTONISM = {
  #           #TODO Make this spawn only on Sumiko, Yakawa, Caleston Rift
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = sumiko_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.13
@@ -320,7 +268,7 @@ TECTONISM = {
     }
 }
 
-RUINS_OF_RUIN = {
+BTR_KARUMTO_RUINS_OF_RUIN = {
     desc = ruin_desc
     picture = #TODO
     level = 1
@@ -330,13 +278,9 @@ RUINS_OF_RUIN = {
   #          #TODO Make this spawn only on karumto, Yakawa, Caleston Rift
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = karumto_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.14
@@ -344,7 +288,7 @@ RUINS_OF_RUIN = {
     }
 }
 
-FALSE_GARDEN = {
+BTR_ASTERIA_FALSE_GARDEN = {
     desc = false_garden_desc
     picture = #TODO
     level = 1
@@ -354,13 +298,9 @@ FALSE_GARDEN = {
   #          #TODO Make this spawn only on Asteria, Hekate, Hades Nexus
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = asteria_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.15
@@ -368,7 +308,7 @@ FALSE_GARDEN = {
     }
 }
 
-FORCED_EXTINCTION = {
+BTR_BOTHROS_FORCED_EXTINCTION = {
     desc = forced_extiction_desc
     picture = #TODO
     level = 1
@@ -378,13 +318,9 @@ FORCED_EXTINCTION = {
   #          #TODO Make this spawn only on Bothros, Hekate, Hades Nexus
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = bothros_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.16
@@ -392,7 +328,7 @@ FORCED_EXTINCTION = {
     }
 }
 
-HEATED_RACE = {
+BTR_KOPIS_HEATED_RACE = {
     desc = heated_race_desc
     picture = #TODO
     level = 1
@@ -402,13 +338,9 @@ HEATED_RACE = {
  #           #TODO Make this spawn only on kopis, hoplos, hades nexus
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = kopis_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.17
@@ -416,7 +348,7 @@ HEATED_RACE = {
     }
 }
 
-BIG_SQUID = {
+BTR_TRIDENT_BIG_SQUID = {
     desc = big_squid_desc
     picture = #TODO
     level = 1
@@ -426,13 +358,9 @@ BIG_SQUID = {
   #          #TODO Make this spawn only on trident, hoplos, hades nexus
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = trident_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.18
@@ -440,7 +368,7 @@ BIG_SQUID = {
     }
 }
 
-SPACE_WORDS = {
+BTR_PATSAYEV_SPACE_WORDS = {
     desc = space_words_desc
     picture = #TODO
     level = 1
@@ -450,13 +378,9 @@ SPACE_WORDS = {
  #           #TODO Make this spawn only on patsayev, pamyat, hades nexus
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = patsayev_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.19
@@ -464,7 +388,7 @@ SPACE_WORDS = {
     }
 }
 
-UNDER_FIRE = {
+BTR_VOLKOV_UNDER_FIRE = {
     desc = under_fire_desc
     picture = #TODO
     level = 1
@@ -474,13 +398,9 @@ UNDER_FIRE = {
   #          #TODO Make this spawn only on Volkov, pamyat, hades nexus
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = volkov_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.20
@@ -488,7 +408,7 @@ UNDER_FIRE = {
     }
 }
 
-CAT_EARS = {
+BTR_ASTEROID_BELT_CAT_EARS = {
     desc = cat_ears_desc
     picture = #TODO
     level = 1
@@ -498,13 +418,9 @@ CAT_EARS = {
   #          #TODO Make this spawn only on asteroid belt, pamyat, hades nexus
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = pamyat_belt
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.21
@@ -512,7 +428,7 @@ CAT_EARS = {
     }
 }
 
-GRAVEROBBING = {
+BTR_GEI_HINNOM_GRAVEROBBING = {
     desc = graverobbing_desc
     picture = #TODO
     level = 1
@@ -522,13 +438,9 @@ GRAVEROBBING = {
   #          #TODO Make this spawn only on Gei Hinnom, Sheol, Hades Nexus
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = gei_hinnom_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.22
@@ -536,7 +448,7 @@ GRAVEROBBING = {
     }
 }
 
-SALTY = {
+BTR_NEITH_SALTY = {
     desc = salty_desc
     picture = #TODO
     level = 1
@@ -546,13 +458,9 @@ SALTY = {
  #           #TODO Make this spawn only on neith, amun, Eagle Nebula
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = neith_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.23
@@ -560,7 +468,7 @@ SALTY = {
     }
 }
 
-SOARING_SOLAR = {
+BTR_OSARI_SOARING_SOLAR = {
     desc = soaring_solar_desc
     picture = #TODO
     level = 1
@@ -570,13 +478,9 @@ SOARING_SOLAR = {
  #           #TODO Make this spawn only on Osari, Imir, Eagle
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = osari_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.24
@@ -584,7 +488,7 @@ SOARING_SOLAR = {
     }
 }
 
-BREATHING_ROCK = {
+BTR_GREGAS_BREATHING_ROCK = {
     desc = breathing_rock_desc
     picture = #TODO
     level = 1
@@ -594,13 +498,9 @@ BREATHING_ROCK = {
  #           #TODO Make this spawn only on Gregas, Imir, Eagle Nebula
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = gregas_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.25
@@ -608,7 +508,7 @@ BREATHING_ROCK = {
     }
 }
 
-GAS_EXPLOSION = {
+BTR_UZIN_GAS_EXPLOSION = {
     desc = gas_explosion_desc
     picture = #TODO
     level = 1
@@ -618,13 +518,9 @@ GAS_EXPLOSION = {
   #          #TODO Make this spawn only on Uzin, Malgus, Eagle Nebula
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = uzin_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.26
@@ -632,7 +528,7 @@ GAS_EXPLOSION = {
     }
 }
 
-PAST_PRIME = {
+BTR_TAMAHERA_PAST_PRIME = {
     desc = past_prime_desc
     picture = #TODO
     level = 1
@@ -642,13 +538,9 @@ PAST_PRIME = {
  #           #TODO Make this spawn only on Tamahera, Century, Eagle Nebula
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = tamahera_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.27
@@ -656,7 +548,7 @@ PAST_PRIME = {
     }
 }
 
-SCOURGED = {
+BTR_KENDAGON_SCOURGED = {
     desc = scourged_desc
     picture = #TODO
     level = 1
@@ -666,13 +558,9 @@ SCOURGED = {
   #          #TODO Make this spawn only on Klendagon, Century, Eagle Nebula
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = kelndagon_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.28
@@ -680,7 +568,7 @@ SCOURGED = {
     }
 }
 
-CLOUDED_HELL = {
+BTR_ATAHIL_CLOUDED_HELL = {
     desc = clouded_hell_desc
     picture = #TODO
     level = 1
@@ -690,13 +578,9 @@ CLOUDED_HELL = {
   #          #TODO Make this spawn only on atahil, schwarzchild, Hawking eta
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = atahil_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.29
@@ -704,7 +588,7 @@ CLOUDED_HELL = {
     }
 }
 
-TRAMPLED_FLOWERS = {
+BTR_ETAMIS_TRAMPLED_FLOWERS = {
     desc = trampled_flowers_desc
     picture = #TODO
     level = 1
@@ -714,13 +598,9 @@ TRAMPLED_FLOWERS = {
   #          #TODO Make this spawn only on etamis, schwarzchild, Hawking eta
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = etamis_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.30
@@ -728,7 +608,7 @@ TRAMPLED_FLOWERS = {
     }
 }
 
-NANO_RINGS = {
+BTR_LINOSSA_NANO_RINGS = {
     desc = nano_rings_desc
     picture = #TODO
     level = 1
@@ -738,13 +618,9 @@ NANO_RINGS = {
   #          #TODO Make this spawn only on linossa, schwarzchild, Hawking eta
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = linossa_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.31
@@ -752,7 +628,7 @@ NANO_RINGS = {
     }
 }
 
-STABLE_PLASMA = {
+BTR_MNEMOSYNE_STABLE_PLASMA = {
     desc = stable_plasma_desc
     picture = #TODO
     level = 1
@@ -762,13 +638,9 @@ STABLE_PLASMA = {
   #          #TODO Make this spawn only on mnemosyne, thorne, hawking eta
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = mnemosyne_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.32
@@ -776,7 +648,7 @@ STABLE_PLASMA = {
     }
 }
 
-PULLED_APART = {
+BTR_LETHE_PULLED_APART = {
     desc = pulled_apart_desc
     picture = #TODO
     level = 1
@@ -788,10 +660,6 @@ PULLED_APART = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = lethe_planet
-        }
     }
     on_success = {
         1 = {
@@ -800,7 +668,7 @@ PULLED_APART = {
     }
 }
 
-SMOG_WORLD = {
+BTR_CORANG_SMOG_WORLD = {
     desc = smog_world_desc
     picture = #TODO
     level = 1
@@ -810,13 +678,9 @@ SMOG_WORLD = {
  #           #TODO Make this spawn only on Corang, Verr, Hawking Eta
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = corang_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.34
@@ -824,7 +688,7 @@ SMOG_WORLD = {
     }
 }
 
-STORM_TWINS = {
+BTR_SERAO_STORM_TWINS = {
     desc = storm_twins_desc
     picture = #TODO
     level = 1
@@ -834,13 +698,9 @@ STORM_TWINS = {
 #            #TODO Make this spawn only on Serao, Verr, Hawking Eta
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = serao_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.35
@@ -848,7 +708,7 @@ STORM_TWINS = {
     }
 }
 
-SHALLOW_GRAVES = {
+BTR_VECCHIO_SHALLOW_GRAVES = {
     desc = shallow_graves_desc
     picture = #TODO
     level = 1
@@ -858,13 +718,9 @@ SHALLOW_GRAVES = {
  #           #TODO Make this spawn only on vecchio, Aquila, Ismar Frontier
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = vecchio_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.36
@@ -872,7 +728,7 @@ SHALLOW_GRAVES = {
     }
 }
 
-SUPER_FROZNE = {
+BTR_VOLTURNO_SUPER_FROZNE = {
     desc = super_frozen_desc
     picture = #TODO
     level = 1
@@ -882,13 +738,9 @@ SUPER_FROZNE = {
  #           #TODO Make this spawn only on volturno, Aquila, Ismar Frontier
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = volturno_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.37
@@ -896,7 +748,7 @@ SUPER_FROZNE = {
     }
 }
 
-EEZO_FRAUD = {
+BTR_POLLINO_EEZO_FRAUD = {
     desc = eezo_fraud_desc
     picture = #TODO
     level = 1
@@ -906,13 +758,9 @@ EEZO_FRAUD = {
 #            #TODO Make this spawn only on pollino, Aquila, Ismar Frontier
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = pollino_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.38
@@ -920,7 +768,7 @@ EEZO_FRAUD = {
     }
 }
 
-ZEONA = {
+BTR_ZEONA_ZEONA = {
     desc = zeona_desc
     picture = #TODO
     level = 1
@@ -930,13 +778,9 @@ ZEONA = {
  #           #TODO Make this spawn only on zeona, Elystra, Ismar Frontier
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = zeona_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.39
@@ -944,7 +788,7 @@ ZEONA = {
     }
 }
 
-ODASST = {
+BTR_ODASST_ODASST = {
     desc = odasst_desc
     picture = #TODO
     level = 1
@@ -954,13 +798,9 @@ ODASST = {
  #           #TODO Make this spawn only on odasst, Elystra, Ismar Frontier
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = odasst_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.40
@@ -968,7 +808,7 @@ ODASST = {
     }
 }
 
-PROTHEAN_PILFERING = {
+BTR_HESANO_PROTHEAN_PILFERING = {
     desc = prothean_pilfering_desc
     picture = #TODO
     level = 1
@@ -978,13 +818,9 @@ PROTHEAN_PILFERING = {
  #           #TODO Make this spawn only on hesano, Elystra, Ismar Frontier
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = hesano_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.41
@@ -992,7 +828,7 @@ PROTHEAN_PILFERING = {
     }
 }
 
-GREEN_FLAMES = {
+BTR_ZORYA_GREEN_FLAMES = {
     desc = green_flames_desc
     picture = #TODO
     level = 1
@@ -1002,13 +838,9 @@ GREEN_FLAMES = {
  #           #TODO Make this spawn only on zorya, faia, Ismar Frontier
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = zorya_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.42
@@ -1016,7 +848,7 @@ GREEN_FLAMES = {
     }
 }
 
-BALL_OF_ICE = {
+BTR_VINTAEL_BALL_OF_ICE = {
     desc = ball_of_ice_desc
     picture = #TODO
     level = 1
@@ -1026,13 +858,9 @@ BALL_OF_ICE = {
  #           #TODO Make this spawn only on vintael, faia, Ismar Frontier
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = vintael_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.43
@@ -1040,7 +868,7 @@ BALL_OF_ICE = {
     }
 }
 
-MATOL = {
+BTR_MATOL_MATOL = {
     desc = matol_desc
     picture = #TODO
     level = 1
@@ -1050,13 +878,9 @@ MATOL = {
   #          #TODO Make this spawn only on matol, herschel, kepler verge
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = matol_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.44
@@ -1064,7 +888,7 @@ MATOL = {
     }
 }
 
-DECEPTIVE_GIANT = {
+BTR_CLUNGON_DECEPTIVE_GIANT = {
     desc = deceptive_giant_desc
     picture = #TODO
     level = 1
@@ -1074,13 +898,9 @@ DECEPTIVE_GIANT = {
  #           #TODO Make this spawn only on clungon, herschel, kepler verge
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = clungon_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.45
@@ -1088,7 +908,7 @@ DECEPTIVE_GIANT = {
     }
 }
 
-BACKSPRAY = {
+BTR_SESMOSE_BACKSPRAY = {
     desc = backspray_desc
     picture = #TODO
     level = 1
@@ -1098,13 +918,9 @@ BACKSPRAY = {
 #            #TODO Make this spawn only on sesmose, newton, kepler verge
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = sesmose_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.46
@@ -1112,7 +928,7 @@ BACKSPRAY = {
     }
 }
 
-RAPID_GLASS = {
+BTR_FARNURI_RAPID_GLASS = {
     desc = rapid_glass_desc
     picture = #TODO
     level = 1
@@ -1122,13 +938,9 @@ RAPID_GLASS = {
  #           #TODO Make this spawn only on farnuri, caspain, maroon sea
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = faruni_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.47
@@ -1136,7 +948,7 @@ RAPID_GLASS = {
     }
 }
 
-ALMOST_PERFECT = {
+BTR_ALMARCRUX_ALMOST_PERFECT = {
     desc = almost_perfect_desc
     picture = #TODO
     level = 1
@@ -1146,13 +958,9 @@ ALMOST_PERFECT = {
   #          #TODO Make this spawn only on almarcrux, caspain, maroon sea
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = almarcrux_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.48
@@ -1160,7 +968,7 @@ ALMOST_PERFECT = {
     }
 }
 
-KALEIDOSCOPE = {
+BTR_CHASCA_KALEIDOSCOPE = {
     desc = kaleidoscope_desc
     picture = #TODO
     level = 1
@@ -1170,13 +978,9 @@ KALEIDOSCOPE = {
   #          #TODO Make this spawn only on chasca, matano, maroon sea
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = chasca_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.49
@@ -1184,7 +988,7 @@ KALEIDOSCOPE = {
     }
 }
 
-SHAKING = {
+BTR_APO_SHAKING = {
     desc = shaking_desc
     picture = #TODO
     level = 1
@@ -1194,13 +998,9 @@ SHAKING = {
 #            #TODO Make this spawn only on apo, matano, maroon sea
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = apo_matano_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.50
@@ -1208,7 +1008,7 @@ SHAKING = {
     }
 }
 
-GIANT_GEM = {
+BTR_APO_GIANT_GEM = {
     desc = giant_gem_desc
     picture = #TODO
     level = 1
@@ -1218,13 +1018,9 @@ GIANT_GEM = {
 #            #TODO Make this spawn only on apo, illapa, maroon sea
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = apo_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.51
@@ -1232,7 +1028,7 @@ GIANT_GEM = {
     }
 }
 
-POLLEN_PAIN = {
+BTR_NORDACRUX_POLLEN_PAIN = {
     desc = pollen_pain_desc
     picture = #TODO
     level = 1
@@ -1242,13 +1038,9 @@ POLLEN_PAIN = {
   #          #TODO Make this spawn only on nordacrux, vostok, maroon sea
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = nordacrux_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.52
@@ -1256,7 +1048,7 @@ POLLEN_PAIN = {
     }
 }
 
-OPERA_PHANTOM = {
+BTR_SUEN_OPERA_PHANTOM = {
     desc = opera_phantom_desc
     picture = #TODO
     level = 1
@@ -1266,13 +1058,9 @@ OPERA_PHANTOM = {
  #           #TODO Make this spawn only on suen, maskim xul, nimah cluster
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = suen_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.53
@@ -1280,7 +1068,7 @@ OPERA_PHANTOM = {
     }
 }
 
-ANCIENT_EEZO = {
+BTR_KASHSHAPTU_ANCIENT_EEZO = {
     desc = ancient_eezo_desc
     picture = #TODO
     level = 1
@@ -1290,13 +1078,9 @@ ANCIENT_EEZO = {
  #           #TODO Make this spawn only on kashshaptu, maskim xul, nimah cluster
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = kashshaptu_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.54
@@ -1304,7 +1088,7 @@ ANCIENT_EEZO = {
     }
 }
 
-EXILE_POST = {
+BTR_LISTENING_POST_X-19_EXILE_POST = {
     desc = exile_post_desc
     picture = #TODO
     level = 1
@@ -1314,13 +1098,9 @@ EXILE_POST = {
 #            #TODO Make this spawn only on listening post x-19, maskim xul, nimah cluster
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = listening_post_x_19_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.55
@@ -1328,7 +1108,7 @@ EXILE_POST = {
     }
 }
 
-WIND_SWEPT = {
+BTR_UTTUKU_WIND_SWEPT = {
     desc = wind_swept_desc
     picture = #TODO
     level = 1
@@ -1338,13 +1118,9 @@ WIND_SWEPT = {
  #           #TODO Make this spawn only on uttuku, maskim xul, nimah cluster
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = uttuku_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.56
@@ -1352,7 +1128,7 @@ WIND_SWEPT = {
     }
 }
 
-DISAPPEARING_REFINERIES = {
+BTR_KEPH_DISAPPEARING_REFINERIES = {
     desc = disappearing_refineries_desc
     picture = #TODO
     level = 1
@@ -1362,13 +1138,9 @@ DISAPPEARING_REFINERIES = {
  #           #TODO Make this spawn only on keph, maskim xul, nimah cluster
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = keph_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.57
@@ -1376,7 +1148,7 @@ DISAPPEARING_REFINERIES = {
     }
 }
 
-BLUE_ROCKS = {
+BTR_BANNIK_BLUE_ROCKS = {
     desc = blue_rocks_desc
     picture = #TODO
     level = 1
@@ -1386,13 +1158,9 @@ BLUE_ROCKS = {
  #           #TODO Make this spawn only on bannik, dakka, nubian expanse
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = bannik_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.58
@@ -1400,7 +1168,7 @@ BLUE_ROCKS = {
     }
 }
 
-VAULT22 = {
+BTR_PRAGIA_VAULT22 = {
     desc = vault22_desc
     picture = #TODO
     level = 1
@@ -1410,13 +1178,9 @@ VAULT22 = {
  #           #TODO Make this spawn only on pragia, dakka, nubian expanse
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = pragia_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.59
@@ -1424,7 +1188,7 @@ VAULT22 = {
     }
 }
 
-THALASSOPHOBIA = {
+BTR_YAMM_THALASSOPHOBIA = {
     desc = thalassophobia_desc
     picture = #TODO
     level = 1
@@ -1434,13 +1198,9 @@ THALASSOPHOBIA = {
   #          #TODO Make this spawn only on yamm, kalabsha, nubian expanse
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = yamm_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.60
@@ -1448,7 +1208,7 @@ THALASSOPHOBIA = {
     }
 }
 
-STELLAR_LONELINESS = {
+BTR_NORESHA_STELLAR_LONELINESS = {
     desc = stellar_loneliness_desc
     picture = #TODO
     level = 1
@@ -1458,13 +1218,9 @@ STELLAR_LONELINESS = {
   #          #TODO Make this spawn only on noresha, qertassi, nubian expanse
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = noresha_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.61
@@ -1472,7 +1228,7 @@ STELLAR_LONELINESS = {
     }
 }
 
-FINAL_FLAMES = {
+BTR_433_SPIDAU_FINAL_FLAMES = {
     desc = final_flames_desc
     picture = #TODO
     level = 1
@@ -1482,13 +1238,9 @@ FINAL_FLAMES = {
  #           #TODO Make this spawn only on 433 spidau, nx-2185, nubian expanse
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = 433_spidau_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.62
@@ -1496,7 +1248,7 @@ FINAL_FLAMES = {
     }
 }
 
-QUIET_OUTPOST = {
+BTR_PHILAE_QUIET_OUTPOST = {
     desc = quiet_outpost_desc
     picture = #TODO
     level = 1
@@ -1506,13 +1258,9 @@ QUIET_OUTPOST = {
   #          #TODO Make this spawn only on philae, debod, nubian expanse
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = philae_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.63
@@ -1520,7 +1268,7 @@ QUIET_OUTPOST = {
     }
 }
 
-DOWNED_SAT = {
+BTR_AGETON_DOWNED_SAT = {
     desc = downed_sat_desc
     picture = #TODO
     level = 1
@@ -1530,13 +1278,9 @@ DOWNED_SAT = {
   #          #TODO Make this spawn only on ageton, refuge, pangaea expanse
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = agetoton_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.64
@@ -1544,7 +1288,7 @@ DOWNED_SAT = {
     }
 }
 
-LAST_AND_LOST = {
+BTR_ILOS_LAST_AND_LOST = {
     desc = last_and_lost_desc
     picture = #TODO
     level = 1
@@ -1554,13 +1298,9 @@ LAST_AND_LOST = {
   #          #TODO Make this spawn only on ilos, refuge, pangaea expanse
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = ilos_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.65
@@ -1568,7 +1308,7 @@ LAST_AND_LOST = {
     }
 }
 
-BELTS = {
+BTR_ZAFE_BELTS = {
     desc = belts_desc
     picture = #TODO
     level = 1
@@ -1578,13 +1318,9 @@ BELTS = {
  #           #TODO Make this spawn only on zafe, refuge, pangaea expanse
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = zafe_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.66
@@ -1592,7 +1328,7 @@ BELTS = {
     }
 }
 
-BUNKERS = {
+BTR_SIANO_BUNKERS = {
     desc = bunkers_desc
     picture = #TODO
     level = 1
@@ -1602,13 +1338,9 @@ BUNKERS = {
     #         #TODO Make this spawn only on siano, dirada, pylos nebula
     #     }
     # }
-    # spawn_chance = {
-    #     base = 0
-    #     modifier = {
-    #         add = 10
-    #         has_planet_flag = siano_planet
-    #     }
-    # }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.67
@@ -1616,7 +1348,7 @@ BUNKERS = {
     }
 }
 
-HOT_SPIN = {
+BTR_CANALUS_HOT_SPIN = {
     desc = hot_spin_desc
     picture = #TODO
     level = 1
@@ -1626,13 +1358,9 @@ HOT_SPIN = {
  #           #TODO Make this spawn only on canalus, dirada, pylos nebula
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = canalus_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.68
@@ -1640,7 +1368,7 @@ HOT_SPIN = {
     }
 }
 
-FROZEN_LOCKED = {
+BTR_NEIDUS_FROZEN_LOCKED = {
     desc = frozen_locked_desc
     picture = #TODO
     level = 1
@@ -1650,13 +1378,9 @@ FROZEN_LOCKED = {
  #           #TODO Make this spawn only on neidus, kriseroi, pylos nebula
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = neidus_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.69
@@ -1664,7 +1388,7 @@ FROZEN_LOCKED = {
     }
 }
 
-ICE_PAVED = {
+BTR_THEONAX_ICE_PAVED = {
     desc = ice_paved_desc
     picture = #TODO
     level = 1
@@ -1674,13 +1398,9 @@ ICE_PAVED = {
  #           #TODO Make this spawn only on theonax, kriseroi, pylos nebula
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = theonax_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.70
@@ -1688,7 +1408,7 @@ ICE_PAVED = {
     }
 }
 
-FROZN_PAST = {
+BTR_CHITHESS_FROZN_PAST = {
     desc = frozen_past_desc
     picture = #TODO
     level = 1
@@ -1698,13 +1418,9 @@ FROZN_PAST = {
  #           #TODO Make this spawn only on chithess, kriseroi, pylos nebula
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = chithess_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.71
@@ -1712,7 +1428,7 @@ FROZN_PAST = {
     }
 }
 
-STRONG_MAGNET = {
+BTR_ISALE_STRONG_MAGNET = {
     desc = strong_magnet_desc
     picture = #TODO
     level = 1
@@ -1722,13 +1438,9 @@ STRONG_MAGNET = {
   #          #TODO Make this spawn only on isale, nariph, pylos nebula
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = isale_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.72
@@ -1736,7 +1448,7 @@ STRONG_MAGNET = {
     }
 }
 
-HOT_JUPITER = {
+BTR_RESCEL_HOT_JUPITER = {
     desc = hot_jupiter_desc
     picture = #TODO
     level = 1
@@ -1746,13 +1458,9 @@ HOT_JUPITER = {
  #           #TODO Make this spawn only on rescel, satent, pylos nebula
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = rescel_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.73
@@ -1760,7 +1468,7 @@ HOT_JUPITER = {
     }
 }
 
-ICE_BANDITS = {
+BTR_ANEDIA_ICE_BANDITS = {
     desc = ice_bandits_desc
     picture = #TODO
     level = 1
@@ -1770,13 +1478,9 @@ ICE_BANDITS = {
  #           #TODO Make this spawn only on anedia, satent, pylos nebula
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = anedia_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.74
@@ -1784,7 +1488,7 @@ ICE_BANDITS = {
     }
 }
 
-VORCHA_FARM = {
+BTR_NAMAKLI_VORCHA_FARM = {
     desc = vorcha_farm_desc
     picture = #TODO
     level = 1
@@ -1794,13 +1498,9 @@ VORCHA_FARM = {
  #           #TODO Make this spawn only on namakli, zaherin, pylos nebula
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = namakli_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.75
@@ -1808,7 +1508,7 @@ VORCHA_FARM = {
     }
 }
 
-ANCIENT_RESEARCH = {
+BTR_AZRAHAS_ANCIENT_RESEARCH = {
     desc = ancient_research_desc
     picture = #TODO
     level = 1
@@ -1818,13 +1518,9 @@ ANCIENT_RESEARCH = {
  #           #TODO Make this spawn only on azrahas, zaherin, pylos nebula
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = azrahas_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.76
@@ -1832,7 +1528,7 @@ ANCIENT_RESEARCH = {
     }
 }
 
-DERELICT_FUEL = {
+BTR_ROSTESK_DERELICT_FUEL = {
     desc = derelict_fuel_desc
     picture = #TODO
     level = 1
@@ -1842,13 +1538,9 @@ DERELICT_FUEL = {
  #           #TODO Make this spawn only on rostesk, zaheron, pylos nebula
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = rostesk_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.77
@@ -1856,7 +1548,7 @@ DERELICT_FUEL = {
     }
 }
 
-WINDY_WORLD = {
+BTR_JARFOR_WINDY_WORLD = {
     desc = windy_world_desc
     picture = #TODO
     level = 1
@@ -1866,13 +1558,9 @@ WINDY_WORLD = {
   #          #TODO Make this spawn only on jarfor, hoc, sentry omega
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = jarfor_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.78
@@ -1880,7 +1568,7 @@ WINDY_WORLD = {
     }
 }
 
-VIRMIRE = {
+BTR_VIRMIRE = {
     desc = VIRMIRE_desc
     picture = #TODO
     level = 1
@@ -1890,13 +1578,9 @@ VIRMIRE = {
  #           #TODO Make this spawn only on vermire, hoc, sentry omega
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = vermire_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.79
@@ -1904,7 +1588,7 @@ VIRMIRE = {
     }
 }
 
-A_MESSAGE = {
+BTR_PRESCYLA_A_MESSAGE = {
     desc = a_message_desc
     picture = #TODO
     level = 1
@@ -1914,13 +1598,9 @@ A_MESSAGE = {
  #           #TODO Make this spawn only on prescyla, hoc, sentry omega
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = prescyla_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.80
@@ -1928,7 +1608,7 @@ A_MESSAGE = {
     }
 }
 
-GEM_WORLD = {
+BTR_SAPFIR_GEM_WORLD = {
     desc = gem_world_desc
     picture = #TODO
     level = 1
@@ -1938,13 +1618,9 @@ GEM_WORLD = {
 #            #TODO Make this spawn only on sapfir, telith, sentry omega
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = sapfir_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.81
@@ -1952,7 +1628,7 @@ GEM_WORLD = {
     }
 }
 
-SPINNING_GRAVES = {
+BTR_PROSPECT_SPINNING_GRAVES = {
     desc = spinning_graves_desc
     picture = #TODO
     level = 1
@@ -1962,13 +1638,9 @@ SPINNING_GRAVES = {
 #            #TODO Make this spawn only on prospect, lera, shadow sea
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = prospect_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.82
@@ -1976,7 +1648,7 @@ SPINNING_GRAVES = {
     }
 }
 
-NEW_PARADISE = {
+BTR_HORIZON_NEW_PARADISE = {
     desc = new_paradise_desc
     picture = #TODO
     level = 1
@@ -1986,13 +1658,9 @@ NEW_PARADISE = {
  #           #TODO Make this spawn only on horizon, lera, shadow sea
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = horizon_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.83
@@ -2000,7 +1668,7 @@ NEW_PARADISE = {
     }
 }
 
-SHINING_WORLD = {
+BTR_IMANEYA_SHINING_WORLD = {
     desc = shining_world_desc
     picture = #TODO
     level = 1
@@ -2010,13 +1678,9 @@ SHINING_WORLD = {
  #           #TODO Make this spawn only on imaneya, acheron, styx theta
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = imaneya_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.84
@@ -2024,7 +1688,7 @@ SHINING_WORLD = {
     }
 }
 
-HIGH_GROUND = {
+BTR_NEPMOS_HIGH_GROUND = {
     desc = high_ground_desc
     picture = #TODO
     level = 1
@@ -2034,13 +1698,9 @@ HIGH_GROUND = {
 #            #TODO Make this spawn only on nepmos, erebus, styx theta
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = nepmos_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.85
@@ -2048,7 +1708,7 @@ HIGH_GROUND = {
     }
 }
 
-FAIRY_PATERNS = {
+BTR_QUAJI_FAIRY_PATERNS = {
     desc = fairy_paterns_desc
     picture = #TODO
     level = 1
@@ -2058,13 +1718,9 @@ FAIRY_PATERNS = {
  #           #TODO Make this spawn only on quaji, erebus, styx theta
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = quaji_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.86
@@ -2072,7 +1728,7 @@ FAIRY_PATERNS = {
     }
 }
 
-FALSE_LIFE = {
+BTR_CHOFEN_FALSE_LIFE = {
     desc = false_life_desc
     picture = #TODO
     level = 1
@@ -2082,13 +1738,9 @@ FALSE_LIFE = {
  #           #TODO Make this spawn only on chofen, erebus, styx theta
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = chofen_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         15 = {
             anomaly_event = btr_anomaly.87
@@ -2099,7 +1751,7 @@ FALSE_LIFE = {
     }
 }
 
-HIDDEN_STAR = {
+BTR_TIMSHAR_HIDDEN_STAR = {
     desc = hidden_star_desc
     picture = #TODO
     level = 1
@@ -2109,13 +1761,9 @@ HIDDEN_STAR = {
  #           #TODO Make this spawn only on timshar, timshar, styx theta
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = timshar_star
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.89
@@ -2123,7 +1771,7 @@ HIDDEN_STAR = {
     }
 }
 
-LIGHTSHOW_RESEARCH = {
+BTR_ADOUNIA_E_LIGHTSHOW_RESEARCH = {
     desc = lightshow_research_desc
     picture = #TODO
     level = 1
@@ -2133,13 +1781,9 @@ LIGHTSHOW_RESEARCH = {
 #            #TODO Make this spawn only on adounia e, timshar, styx theta
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = adounia_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.90
@@ -2147,7 +1791,7 @@ LIGHTSHOW_RESEARCH = {
     }
 }
 
-DANGEROUS_PARADISE = {
+BTR_MINDOIR_DANGEROUS_PARADISE = {
     desc = dangerous_paradise_desc
     picture = #TODO
     level = 1
@@ -2157,13 +1801,9 @@ DANGEROUS_PARADISE = {
 #            #TODO Make this spawn only on mindoir, baldr, yggdrasil nebula
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = mindoir_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.91
@@ -2171,7 +1811,7 @@ DANGEROUS_PARADISE = {
     }
 }
 
-LOW_G = {
+BTR_AMAR_LOW_G = {
     desc = low_g_desc
     picture = #TODO
     level = 1
@@ -2181,13 +1821,9 @@ LOW_G = {
  #           #TODO Make this spawn only on amar, fen, yggdrasil nebula
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = amar_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.92
@@ -2195,7 +1831,7 @@ LOW_G = {
     }
 }
 
-LOST_HOMES = {
+BTR_KET'OSH_LOST_HOMES = {
     desc = lost_homes_desc
     picture = #TODO
     level = 1
@@ -2205,13 +1841,9 @@ LOST_HOMES = {
  #           #TODO Make this spawn only on ket'osh, plenesh, hindara globular
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = ketosh_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.93
@@ -2219,7 +1851,7 @@ LOST_HOMES = {
     }
 }
 
-SILENT_GRAVES = {
+BTR_SIAN_SILENT_GRAVES = {
     desc = silent_graves_desc
     picture = #TODO
     level = 1
@@ -2229,13 +1861,9 @@ SILENT_GRAVES = {
  #           #TODO Make this spawn only on sian, plenesh, hindara globular
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = sian_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.94
@@ -2243,7 +1871,7 @@ SILENT_GRAVES = {
     }
 }
 
-RED_WIPE = {
+BTR_DH1993_RED_WIPE = {
     desc = red_wipe_desc
     picture = #TODO
     level = 1
@@ -2253,13 +1881,9 @@ RED_WIPE = {
   #          #TODO Make this spawn only on DH1993, SM2183 Rua, Arcturus System
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = dh_1993_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.95
@@ -2267,7 +1891,7 @@ RED_WIPE = {
     }
 }
 
-WRONG_MINERALS = {
+BTR_L/2183_WRONG_MINERALS = {
     desc = wrong_minerals_desc
     picture = #TODO
     level = 1
@@ -2277,13 +1901,9 @@ WRONG_MINERALS = {
  #           #TODO Make this spawn only on L/2183, SM2183 Rua, Arcturus System
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = l2183_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.96
@@ -2291,7 +1911,7 @@ WRONG_MINERALS = {
     }
 }
 
-SHATTERED_WORLD = {
+BTR_DC1938_SHATTERED_WORLD = {
     desc = shattered_world_desc
     picture = #TODO
     level = 1
@@ -2301,13 +1921,9 @@ SHATTERED_WORLD = {
  #           #TODO Make this spawn only on DC1938, SM2183 Rua, Arcturus System
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = dc_1939_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.97
@@ -2315,7 +1931,7 @@ SHATTERED_WORLD = {
     }
 }
 
-GHOST_MINING = {
+BTR_MV1963_GHOST_MINING = {
     desc = ghost_mining_desc
     picture = #TODO
     level = 1
@@ -2325,13 +1941,9 @@ GHOST_MINING = {
   #          #TODO Make this spawn only on MV1963, SM2183 Rua, Arcturus System
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = mv_1963_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.98
@@ -2339,7 +1951,7 @@ GHOST_MINING = {
     }
 }
 
-MASSIVE_COMMET = {
+BTR_VECTRA_MASSIVE_COMMET = {
     desc = massive_commet_desc
     picture = #TODO
     level = 1
@@ -2349,13 +1961,9 @@ MASSIVE_COMMET = {
  #           #TODO Make this spawn only on Vectra, Gorgor, Argos Rho
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = vectra_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.99
@@ -2363,7 +1971,7 @@ MASSIVE_COMMET = {
     }
 }
 
-MOLE_MEN = {
+BTR_VARMALUS_MOLE_MEN = {
     desc = mole_men_desc
     picture = #TODO
     level = 1
@@ -2373,13 +1981,9 @@ MOLE_MEN = {
  #           #TODO Make this spawn only on Varmalus, hydra, Argos Rho
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = varmalus_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.100
@@ -2387,7 +1991,7 @@ MOLE_MEN = {
     }
 }
 
-WOMEN_WARRIOR = {
+BTR_CANRUM_WOMEN_WARRIOR = {
     desc = women_warrior_desc
     picture = #TODO
     level = 1
@@ -2397,13 +2001,9 @@ WOMEN_WARRIOR = {
    #         #TODO Make this spawn only on canrum, hydra, Argos Rho
    #     }
    # }
-   #  spawn_chance = {
-   #      base = 0
-   #      modifier = {
-   #          add = 10
-   #          has_planet_flag = canrum_planet
-   #      }
-   #  }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.101
@@ -2411,7 +2011,7 @@ WOMEN_WARRIOR = {
     }
 }
 
-HOT_GARDEN = {
+BTR_INTAI'SEI_HOT_GARDEN = {
     desc = hot_garden_desc
     picture = #TODO
     level = 1
@@ -2421,13 +2021,9 @@ HOT_GARDEN = {
   #          #TODO Make this spawn only on intai'sei, phoenix, Argos Rho
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = intaisei_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.102
@@ -2435,7 +2031,7 @@ HOT_GARDEN = {
     }
 }
 
-CRASH_SPILL = {
+BTR_VEBINOK_CRASH_SPILL = {
     desc = crash_spill_desc
     picture = #TODO
     level = 1
@@ -2445,13 +2041,9 @@ CRASH_SPILL = {
   #          #TODO Make this spawn only on vebinok, phoenix, Argos Rho
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = vebinok_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.103
@@ -2459,7 +2051,7 @@ CRASH_SPILL = {
     }
 }
 
-MOLTEN_CRUST = {
+BTR_SALAMIS_MOLTEN_CRUST = {
     desc = molten_crust_desc
     picture = #TODO
     level = 1
@@ -2469,13 +2061,9 @@ MOLTEN_CRUST = {
  #           #TODO Make this spawn only on salamis, Athens, artemis tau
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = salamis_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.104
@@ -2483,7 +2071,7 @@ MOLTEN_CRUST = {
     }
 }
 
-HUMIDIFIER = {
+BTR_PROTEUS_HUMIDIFIER = {
     desc = humidifier_desc
     picture = #TODO
     level = 1
@@ -2493,13 +2081,9 @@ HUMIDIFIER = {
  #           #TODO Make this spawn only on proteus, Athens, artemis tau
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = proteus_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.105
@@ -2507,7 +2091,7 @@ HUMIDIFIER = {
     }
 }
 
-LOST_TROVE = {
+BTR_THERUM_LOST_TROVE = {
     desc = lost_trove_desc
     picture = #TODO
     level = 1
@@ -2517,13 +2101,9 @@ LOST_TROVE = {
  #           #TODO Make this spawn only on therum, knossos, artemis tau
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = therum_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.106
@@ -2531,7 +2111,7 @@ LOST_TROVE = {
     }
 }
 
-CRYPTIC_MAZE = {
+BTR_ZAKROS_CRYPTIC_MAZE = {
     desc = cyrptic_maze_desc
     picture = #TODO
     level = 1
@@ -2541,13 +2121,9 @@ CRYPTIC_MAZE = {
  #           #TODO Make this spawn only on zakros, knossos, artemis tau
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = zakros_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.107
@@ -2555,7 +2131,7 @@ CRYPTIC_MAZE = {
     }
 }
 
-SILICA_LIFE = {
+BTR_SHARJILA_SILICA_LIFE = {
     desc = silica_life_desc
     picture = #TODO
     level = 1
@@ -2565,13 +2141,9 @@ SILICA_LIFE = {
   #          #TODO Make this spawn only on sharjila, macedon, artemis tau
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = sharjila_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.108
@@ -2579,7 +2151,7 @@ SILICA_LIFE = {
     }
 }
 
-Ammonia_AIR = {
+BTR_PATAVIG_Ammonia_AIR = {
     desc = ammonia_air_desc
     picture = #TODO
     level = 1
@@ -2589,13 +2161,9 @@ Ammonia_AIR = {
   #          #TODO Make this spawn only on patavig, macedon, artemis tau
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = patavig_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.109
@@ -2603,7 +2171,7 @@ Ammonia_AIR = {
     }
 }
 
-LOST_ATMOSPHERE = {
+BTR_ALTAAYA_LOST_ATMOSPHERE = {
     desc = lost_atmosphere_desc
     picture = #TODO
     level = 1
@@ -2613,13 +2181,9 @@ LOST_ATMOSPHERE = {
  #           #TODO Make this spawn only on altaaya, sparta, artemis tau
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = altaaya_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.110
@@ -2627,7 +2191,7 @@ LOST_ATMOSPHERE = {
     }
 }
 
-CROWDED_SPACE = {
+BTR_ONTAMALCA_CROWDED_SPACE = {
     desc = crowded_space_desc
     picture = #TODO
     level = 1
@@ -2637,13 +2201,9 @@ CROWDED_SPACE = {
  #           #TODO Make this spawn only on ontamalca, sparta, artemis tau
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = ontamalca_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.111
@@ -2651,7 +2211,7 @@ CROWDED_SPACE = {
     }
 }
 
-CAVE_LIFE = {
+BTR_SYIDED_CAVE_LIFE = {
     desc = cave_life_desc
     picture = #TODO
     level = 1
@@ -2661,13 +2221,9 @@ CAVE_LIFE = {
 #            #TODO Make this spawn only on Syided, Hercules, Attica Beta
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = syided_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.112
@@ -2675,7 +2231,7 @@ CAVE_LIFE = {
     }
 }
 
-DEATH_BREATH = {
+BTR_ELETANIA_DEATH_BREATH = {
     desc = death_breath_desc
     picture = #TODO
     level = 1
@@ -2685,13 +2241,9 @@ DEATH_BREATH = {
  #           #TODO Make this spawn only on Eletania, Hercules, Attica Beta
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = eletania_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.113
@@ -2699,7 +2251,7 @@ DEATH_BREATH = {
     }
 }
 
-ALL_THAT_GLISTENS = {
+BTR_SYTAU_ALL_THAT_GLISTENS = {
     desc = all_that_glistens_desc
     picture = #TODO
     level = 1
@@ -2709,13 +2261,9 @@ ALL_THAT_GLISTENS = {
   #          #TODO Make this spawn only on sytau, theseus, Attica Beta
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = sytau_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.114
@@ -2723,7 +2271,7 @@ ALL_THAT_GLISTENS = {
     }
 }
 
-FEROS = {
+BTR_FEROS = {
     desc = feros_desc
     picture = #TODO
     level = 1
@@ -2733,13 +2281,9 @@ FEROS = {
  #           #TODO Make this spawn only on feros, theseus, Attica Beta
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = feros_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.115
@@ -2747,7 +2291,7 @@ FEROS = {
     }
 }
 
-OLD_FUEL = {
+BTR_SHARRING_OLD_FUEL = {
     desc = old_fuel_desc
     picture = #TODO
     level = 1
@@ -2757,13 +2301,9 @@ OLD_FUEL = {
 #            #TODO Make this spawn only on sharring, theseus, Attica Beta
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = sharring_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.116
@@ -2771,7 +2311,7 @@ OLD_FUEL = {
     }
 }
 
-GHOST_MINES = {
+BTR_QUANA_GHOST_MINES = {
     desc = ghost_mines_desc
     picture = #TODO
     level = 1
@@ -2781,13 +2321,9 @@ GHOST_MINES = {
 #            #TODO Make this spawn only on quana, theseus, Attica Beta
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = quana_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.117
@@ -2795,7 +2331,7 @@ GHOST_MINES = {
     }
 }
 
-BLOOPS = {
+BTR_LOGAN_BLOOPS = {
     desc = bloops_desc
     picture = #TODO
     level = 1
@@ -2805,13 +2341,9 @@ BLOOPS = {
  #           #TODO Make this spawn only on logan, theseus, Attica Beta
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = logan_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.118
@@ -2819,7 +2351,7 @@ BLOOPS = {
     }
 }
 
-THE_START = {
+BTR_EDEN_PRIME_THE_START = {
     desc = the_Start_desc
     picture = #TODO
     level = 1
@@ -2829,13 +2361,9 @@ THE_START = {
 #            #TODO Make this spawn only on eden prime, utopia, exodus cluster
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = eden_prime_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.119
@@ -2843,7 +2371,7 @@ THE_START = {
     }
 }
 
-PLANETARY_STATIC = {
+BTR_HUNINGTO_PLANETARY_STATIC = {
     desc = planetary_static_desc
     picture = #TODO
     level = 1
@@ -2853,13 +2381,9 @@ PLANETARY_STATIC = {
   #          #TODO Make this spawn only on huningto, Han, Gemini Sigma
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = huningto_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.120
@@ -2867,7 +2391,7 @@ PLANETARY_STATIC = {
     }
 }
 
-PARALLEL_LIFE = {
+BTR_MAVINGON_PARALLEL_LIFE = {
     desc = parallel_life_desc
     picture = #TODO
     level = 1
@@ -2877,13 +2401,9 @@ PARALLEL_LIFE = {
  #           #TODO Make this spawn only on mavingon, han, gemini sigma
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = mavingon_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.121
@@ -2891,7 +2411,7 @@ PARALLEL_LIFE = {
     }
 }
 
-LIFE_SIZED = {
+BTR_FARCROTHU_C_LIFE_SIZED = {
     desc = life_sized_desc
     picture = #TODO
     level = 1
@@ -2901,13 +2421,9 @@ LIFE_SIZED = {
  #           #TODO Make this spawn only on farcrothu c, han, gemini sigma
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = farcrothu_c_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.122
@@ -2915,7 +2431,7 @@ LIFE_SIZED = {
     }
 }
 
-NO_AIR = {
+BTR_PATATANLIS_NO_AIR = {
     desc = no_air_desc
     picture = #TODO
     level = 1
@@ -2925,13 +2441,9 @@ NO_AIR = {
 #            #TODO Make this spawn only on patatanlis, han, gemini sigma
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = patatanlis_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.123
@@ -2939,7 +2451,7 @@ NO_AIR = {
     }
 }
 
-GLOW_BALL = {
+BTR_ANTIROPRUS_GLOW_BALL = {
     desc = glow_ball_desc
     picture = #TODO
     level = 1
@@ -2949,13 +2461,9 @@ GLOW_BALL = {
 #            #TODO Make this spawn only on antiroprus, han, gemini sigma
 #        }
 #    }
-#     spawn_chance = {
-#         base = 0
-#         modifier = {
-#             add = 10
-#             has_planet_flag = antiroprus_planet
-#         }
-#     }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.124
@@ -2963,7 +2471,7 @@ GLOW_BALL = {
     }
 }
 
-BIG_BRAIN = {
+BTR_PLOBA_BIG_BRAIN = {
     desc = big_brain_desc
     picture = #TODO
     level = 1
@@ -2973,13 +2481,9 @@ BIG_BRAIN = {
  #           #TODO Make this spawn only on ploba, antaeus, Hades Gamma
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = ploba_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.125
@@ -2987,7 +2491,7 @@ BIG_BRAIN = {
     }
 }
 
-WATER_BOY = {
+BTR_TREBIN_WATER_BOY = {
     desc = water_boy_desc
     picture = #TODO
     level = 1
@@ -2997,13 +2501,9 @@ WATER_BOY = {
  #           #TODO Make this spawn only on trebin, antaeus, Hades Gamma
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = trebin_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.126
@@ -3011,7 +2511,7 @@ WATER_BOY = {
     }
 }
 
-SMOOTH_WORLD = {
+BTR_HUNIDOR_SMOOTH_WORLD = {
     desc = smooth_world_desc
     picture = #TODO
     level = 1
@@ -3021,13 +2521,9 @@ SMOOTH_WORLD = {
  #           #TODO Make this spawn only on hunidor, antaeus, Hades Gamma
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = hunidor_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.127
@@ -3035,7 +2531,7 @@ SMOOTH_WORLD = {
     }
 }
 
-ALL_OF_THE_LIGHTS = {
+BTR_ZAYARTER_ALL_OF_THE_LIGHTS = {
     desc = all_of_the_lights_desc
     picture = #TODO
     level = 1
@@ -3045,13 +2541,9 @@ ALL_OF_THE_LIGHTS = {
  #           #TODO Make this spawn only on zayarter, cacus, Hades Gamma
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = zayarter_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.128
@@ -3059,7 +2551,7 @@ ALL_OF_THE_LIGHTS = {
     }
 }
 
-FAMILY_THERMOSTAT = {
+BTR_COHE_FAMILY_THERMOSTAT = {
     desc = family_thermostat_desc
     picture = #TODO
     level = 1
@@ -3069,13 +2561,9 @@ FAMILY_THERMOSTAT = {
   #          #TODO Make this spawn only on cohe, cacus, Hades Gamma
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = cohe_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.129
@@ -3083,7 +2571,7 @@ FAMILY_THERMOSTAT = {
     }
 }
 
-SPOOKY_SQUID = {
+BTR_JARTAR_SPOOKY_SQUID = {
     desc = spooky_squid_desc
     picture = #TODO
     level = 1
@@ -3093,13 +2581,9 @@ SPOOKY_SQUID = {
   #          #TODO Make this spawn only on jartar, dis, Hades Gamma
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = jartar_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.130
@@ -3107,7 +2591,7 @@ SPOOKY_SQUID = {
     }
 }
 
-FOOLS_GOLD = {
+BTR_KLENSAL_FOOLS_GOLD = {
     desc = fools_gold_desc
     picture = #TODO
     level = 1
@@ -3117,13 +2601,9 @@ FOOLS_GOLD = {
   #          #TODO Make this spawn only on klensal, dis, Hades Gamma
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = klensal_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.131
@@ -3131,7 +2611,7 @@ FOOLS_GOLD = {
     }
 }
 
-FOUL_WATERS = {
+BTR_GREMAR_FOUL_WATERS = {
     desc = foul_waters_desc
     picture = #TODO
     level = 1
@@ -3141,13 +2621,9 @@ FOUL_WATERS = {
   #          #TODO Make this spawn only on gremar, dis, Hades Gamma
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = gremar_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.132
@@ -3155,7 +2631,7 @@ FOUL_WATERS = {
     }
 }
 
-HIDDEN_MOONS = {
+BTR_TUNSHAGON_HIDDEN_MOONS = {
     desc = hidden_moons_desc
     picture = #TODO
     level = 1
@@ -3165,13 +2641,9 @@ HIDDEN_MOONS = {
  #           #TODO Make this spawn only on tunshagon, farinata, Hades Gamma
  #       }
  #   }
- #    spawn_chance = {
- #        base = 0
- #        modifier = {
- #            add = 10
- #            has_planet_flag = tunshagon_planet
- #        }
- #    }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.133
@@ -3179,7 +2651,7 @@ HIDDEN_MOONS = {
     }
 }
 
-BLUE_LAVA = {
+BTR_NONVEL_BLUE_LAVA = {
     desc = blue_lava_desc
     picture = #TODO
     level = 1
@@ -3189,13 +2661,9 @@ BLUE_LAVA = {
   #          #TODO Make this spawn only on nonuel, plutus, Hades Gamma
   #      }
   #  }
-  #   spawn_chance = {
-  #       base = 0
-  #       modifier = {
-  #           add = 10
-  #           has_planet_flag = nonuel_planet
-  #       }
-  #   }
+    spawn_chance = {
+        base = 0
+    }
     on_success = {
         1 = {
             anomaly_event = btr_anomaly.134
