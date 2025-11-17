@@ -198,6 +198,12 @@ sys_rua_init = {
         orbit_distance = 125
 		size = 18
 		flags = { dc_1939_planet }
+        init_effect = {
+            add_anomaly = {
+                category =BTR_DC1938_SHATTERED_WORLD
+                target = this
+            }
+        }
 	}
 
 	change_orbit = 50
@@ -215,6 +221,12 @@ sys_rua_init = {
         orbit_distance = 75
 		size = 9
 		flags = { l2183_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_L/2183_WRONG_MINERALS
+                target = this
+            }
+        }
 	}	
 
 	planet = {
@@ -223,6 +235,12 @@ sys_rua_init = {
         orbit_distance = 125
 		size = 37
 		flags = { mv_1963_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_MV1963_GHOST_MINING
+                target = this
+            }
+        }
 	}
 	
 	init_effect = { 
@@ -639,6 +657,12 @@ sys_utopia_init = {
 		size = 17
         has_ring = no
 		flags = { eden_prime_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_EDEN_PRIME_THE_START
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -2301,6 +2325,12 @@ sys_athens_init = {
         has_ring = no
 		size = 17
 		flags = { salamis_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_SALAMIS_MOLTEN_CRUST
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -2316,6 +2346,10 @@ sys_athens_init = {
 				modifier = storm_world
 				days = -1
 			}
+            add_anomaly = {
+                category = BTR_PROTEUS_HUMIDIFIER
+                target = this
+            }
 		}
     }
 
@@ -2507,6 +2541,12 @@ sys_knossos_init = {
         has_ring = no
 		size = 16
 		flags = { therum_planet }
+        init_effect = {
+            add_anomaly = {
+                target = this
+                category = BTR_THERUM_LOST_TROVE
+            }
+        }
     }
 
     planet = {
@@ -2517,6 +2557,12 @@ sys_knossos_init = {
         has_ring = no
 		size = 11	
 		flags = { zakros_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_ZAKROS_CRYPTIC_MAZE
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -2577,6 +2623,12 @@ sys_macedon_init = {
         has_ring = no
 		size = 14
 		flags = { sharjila_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_SHARJILA_SILICA_LIFE
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -2597,6 +2649,12 @@ sys_macedon_init = {
         has_ring = no
 		size = 25	
 		flags = { patavig_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_PATAVIG_Ammonia_AIR
+                target = this
+            }
+        }
     }
 
 	change_orbit = 50
@@ -2691,6 +2749,12 @@ sys_sparta_init = {
         has_ring = no
 		size = 25
 		flags = { altaaya_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_ALTAAYA_LOST_ATMOSPHERE
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -2701,6 +2765,12 @@ sys_sparta_init = {
         has_ring = no
 		size = 37
 		flags = { ontamalca_planet }
+        init_effect = {
+            add_anomaly = {
+                target = this
+                category = BTR_ONTAMALCA_CROWDED_SPACE
+            }
+        }
     }
 
 	change_orbit = 50
@@ -3901,6 +3971,12 @@ sys_antaeus_init = {
         has_ring = no
 		size = 37
 		flags = { ploba_planet }
+        init_effect = {
+            add_anomaly = {
+                category =BTR_PLOBA_BIG_BRAIN
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -3917,6 +3993,10 @@ sys_antaeus_init = {
 				modifier = dune_world
 				days = -1
 			}
+            add_anomaly = {
+                category = BTR_TREBIN_WATER_BOY
+                target = this
+            }
 		}
 
 		moon = {
@@ -3947,6 +4027,12 @@ sys_antaeus_init = {
         has_ring = no
 		size = 9
 		flags = { hunidor_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_HUNIDOR_SMOOTH_WORLD
+                target = this
+            }
+        }
 	}
 }
 
@@ -3979,6 +4065,12 @@ sys_cacus_init = {
 		size = 13
 		flags = {subclass_world zayarter_planet}
 		entity = "mephitic_arid_planet_03_entity"
+        init_effect = {
+            add_anomaly = {
+                category = BTR_ZAYARTER_ALL_OF_THE_LIGHTS
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -3988,6 +4080,12 @@ sys_cacus_init = {
         orbit_angle = 220
         has_ring = no
 		size = 20
+init_effect = {
+    add_anomaly = {
+        category = BTR_COHE_FAMILY_THERMOSTAT
+        target = this
+    }
+}
 
 		moon = {
 			name = "Chohe a"
@@ -4153,6 +4251,12 @@ sys_dis_init = {
         has_ring = no
 		size = 3
 		flags = { jartar_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_JARTAR_SPOOKY_SQUID
+            target = this
+            }
+        }
     }
 
     planet = {
@@ -4179,6 +4283,12 @@ sys_dis_init = {
         orbit_angle = 283
         has_ring = no
 		size = 13
+    init_effect = {
+        add_anomaly = {
+            category = BTR_KLENSAL_FOOLS_GOLD
+            target = this
+        }
+    }
 
 		moon = {
 			name = "Klensal a"
@@ -4207,6 +4317,12 @@ sys_dis_init = {
 		size = 9
 		flags = {subclass_world gremar_planet}
 		entity = "ammonia_tundra_planet_07_entity"
+        init_effect = {
+            add_anomaly = {
+                category = BTR_GREMAR_FOUL_WATERS
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -4285,6 +4401,10 @@ sys_farinata_init = {
 			add_anomaly = {
 				category = GAS_CLOUDY_CAT
 			}
+            add_anomaly = {
+                category = BTR_TUNSHAGON_HIDDEN_MOONS
+                target = this
+            }
 		}
     }
 
@@ -4404,6 +4524,10 @@ sys_plutus_init = {
 
 		init_effect = {
 			add_deposit = d_eezo_scarce
+            add_anomaly = {
+                category = BTR_NONVEL_BLUE_LAVA
+                target = this
+            }
 		}
     }
 
@@ -5765,6 +5889,12 @@ sys_han_init = {
         has_ring = yes
 		size = 37
 		flags = { huningto_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_HUNINGTO_PLANETARY_STATIC
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -5776,6 +5906,12 @@ sys_han_init = {
 		size = 12
 		flags = {subclass_world mavigon_planet}
 		entity = "ammonia_arctic_planet_12_entity"
+        init_effect = {
+            add_anomaly = {
+                category = BTR_MAVINGON_PARALLEL_LIFE
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -5808,6 +5944,12 @@ sys_han_init = {
 			orbit_distance = 5
 			size = 14
 			flags = { farcrothu_c_planet }
+            init_effect = {
+                add_anomaly = {
+                    category = BTR_FARCROTHU_C_LIFE_SIZED
+                    target = this
+                }
+            }
 		}		
     }
 
@@ -5819,6 +5961,12 @@ sys_han_init = {
         has_ring = no
 		size = 22
 		flags = { patatanlis_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_PATATANLIS_NO_AIR
+                target = this
+            }
+        }
     }
 
 	init_effect = { 
@@ -5859,6 +6007,12 @@ sys_ming_init = {
         has_ring = no
 		size = 34
 		flags = { antiroprus_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_ANTIROPRUS_GLOW_BALL
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -6664,6 +6818,12 @@ sys_gorgon_init = {
         has_ring = no
 		size = 36	
 		flags = { vectra_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_VECTRA_MASSIVE_COMMET
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -6729,6 +6889,12 @@ sys_hydra_init = {
         has_ring = no
 		size = 24
 		flags = { varmalus_planet }
+        init_effect = {
+            add_anomaly = {
+                category =BTR_VARMALUS_MOLE_MEN
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -6765,6 +6931,12 @@ sys_hydra_init = {
         has_ring = no
 		size = 13
 		flags = { canrum_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_CANRUM_WOMEN_WARRIOR
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -6865,6 +7037,10 @@ sys_phoenix_init = {
 				modifier = dune_world
 				days = -1
 			}
+            add_anomaly = {
+                category = BTR_INTAI'SEI_HOT_GARDEN
+                target = this
+            }
 	    }
     }
 
@@ -6902,6 +7078,12 @@ sys_phoenix_init = {
         has_ring = yes
 		size = 8
 		flags = { vebinok_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_VEBINOK_CRASH_SPILL
+                target = this
+            }
+        }
 	}	
 	
 	init_effect = { 
@@ -7589,6 +7771,12 @@ sys_baldr_init = {
 		orbit_distance = 125
 		size = 17
 		flags = { mindoir_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_MINDOIR_DANGEROUS_PARADISE
+                target = this
+            }
+        }
 	}
 
 	change_orbit = 125
@@ -7696,6 +7884,10 @@ sys_fen_init = {
 					modifier = low_gravity
 					days = -1
 				}
+                add_anomaly = {
+                    category = BTR_AMAR_LOW_G
+                    target = this
+                }
 			}
 		}	
 	}
@@ -7965,6 +8157,10 @@ sys_hercules_init = {
 				modifier = btr_scorching_surface
 				days = -1
 			}
+            add_anomaly = {
+                category = BTR_SYIDED_CAVE_LIFE
+                target = this
+            }
 		}
     }
 
@@ -7985,6 +8181,10 @@ sys_hercules_init = {
 				modifier = lichen_world
 				days = -1
 			}
+            add_anomaly = {
+                category = BTR_ELETANIA_DEATH_BREATH
+                target = this
+            }
 		}
 
 		moon = {
@@ -8054,6 +8254,12 @@ sys_theseus_init = {
         has_ring = no
 		size = 24
 		flags = { sytau_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_SYTAU_ALL_THAT_GLISTENS
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -8064,6 +8270,12 @@ sys_theseus_init = {
         size = 6
         has_ring = no
 		size = 21
+        init_effect = {
+            add_anomaly = {
+                category = BTR_FEROS
+                target = this
+            }
+        }
 
         moon = {
             name = "Vardet"
@@ -8093,6 +8305,12 @@ sys_theseus_init = {
         orbit_angle = 15
         has_ring = no
 		size = 34
+init_effect = {
+    add_anomaly = {
+    category = BTR_SHARRING_OLD_FUEL
+        target = this
+    }
+}
 
 		moon = {
 			name = "Reval"
@@ -8120,6 +8338,12 @@ sys_theseus_init = {
 		size = 18
 		flags = {subclass_world quana_planet}
 		entity = "mephitic_arctic_planet_06_entity"
+        init_effect = {
+            add_anomaly = {
+                category = BTR_QUANA_GHOST_MINES
+                target = this
+            }
+        }
     }
 
     planet = {
@@ -8130,6 +8354,12 @@ sys_theseus_init = {
         has_ring = no
 		size = 36
 		flags = { logan_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_LOGAN_BLOOPS
+                target = this
+            }
+        }
     }	
 
 	init_effect = { 
