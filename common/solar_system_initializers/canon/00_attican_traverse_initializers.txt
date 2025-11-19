@@ -7628,6 +7628,10 @@ sys_balor_init = {
                     create_starting_leaders = yes
                     country_event = { id = game_start.9 }
                 }
+                add_anomaly = {
+                    category = BTR_CLAESTON_UNIQUE
+                    target = this
+                }
 			}
         }
 	} 
@@ -9873,6 +9877,10 @@ sys_hoc_init = {
 			add_modifier = {
 				modifier = atoll_world
 			}
+            add_anomaly = {
+                category = BTR_VIRMIRE
+                target = this
+            }
 		}
     }
 
@@ -12202,6 +12210,10 @@ sys_iera_init = {
 			}
 
 			add_deposit = d_eezo_1
+            add_anomaly = {
+                category = BTR_PROSPECT_SPINNING_GRAVES
+                target = this
+            }
 		}
 
 		moon = {
@@ -14774,6 +14786,12 @@ sys_qertassi_init = {
         orbit_angle = 22
         has_ring = no
 		size = 32
+        init_effect = {
+            add_anomaly = {
+                category = BTR_NORESHA_STELLAR_LONELINESS
+                target = this
+            }
+        }
 
 		moon = {
 			name = "Norehsa a"

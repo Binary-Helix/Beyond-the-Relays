@@ -190,6 +190,12 @@ sys_rua_init = {
         orbit_distance = 125
 		size = 12
 		flags = { dh_1993_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_DH1993_RED_WIPE
+                target = this
+            }
+        }
 	}
 
 	planet = {
@@ -223,7 +229,7 @@ sys_rua_init = {
 		flags = { l2183_planet }
         init_effect = {
             add_anomaly = {
-                category = BTR_L/2183_WRONG_MINERALS
+                category = BTR_L2183_WRONG_MINERALS
                 target = this
             }
         }
