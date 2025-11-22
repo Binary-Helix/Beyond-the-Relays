@@ -23,7 +23,12 @@ ship_event = {
 
     trigger = {
         host_has_dlc = "Ancient Relics Story Pack"
-
+        habitable_planet = yes
+        OR = {
+        has_special_star_flag_trigger = terminus_systems
+        has_special_star_flag_trigger = skyllian_verge
+            has_special_star_flag_trigger = attican_traverse
+            }
     }
 
     immediate = {

@@ -974,6 +974,7 @@ sys_sol_init = {
 		entity = "barren_planet_mars_entity"	
 		init_effect = {
 			add_deposit = d_eezo_trace
+            create_archaeological_site = btr_precursor_mars_triangle
 		}
 	}
 	
@@ -3132,6 +3133,14 @@ sys_harsa_init = {
 			orbit_distance = 5
 			size = 10
 			flags = { bira_planet }
+            init_effect = {
+                if = {
+                    limit = {
+                        check_for_batarian_player = yes
+                    }
+                    create_archaeological_site = btr_precursor_ancient_return
+                }
+            }
 		}				
     }
 

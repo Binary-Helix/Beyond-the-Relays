@@ -6861,6 +6861,9 @@ sys_tiikren_init = {
 		size = 10
 		flags = { fumimi_planet }
 		has_ring = no
+        init_effect = {
+            create_archaeological_site = btr_precursor_artificial_jewel
+        }
 	}
 
     change_orbit = 125

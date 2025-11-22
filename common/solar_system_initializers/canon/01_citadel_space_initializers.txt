@@ -812,6 +812,9 @@ sys_judor_init = {
         size = 21
         flags = { judor_iv_planet }
 		has_ring = no
+        init_effect = {
+            create_archaeological_site = btr_precursor_ice_canals
+        }
 	}
 
 	planet = {
@@ -1263,6 +1266,7 @@ sys_kanala_init = {
                 create_starting_leaders = yes
                 country_event = { id = game_start.9 }
             }
+            create_archaeological_site = btr_precursor_everywhere
 		}
 
         moon = {
@@ -10692,6 +10696,7 @@ sys_parnitha_init = {
                 create_starting_leaders = yes
                 country_event = { id = game_start.9 }
             }
+            create_archaeological_site = btr_precursor_original_pillar
 		}
 	}
 
@@ -11853,6 +11858,9 @@ sys_phontes_init = {
         has_ring = no
 		size = 25
 		flags = { lenuamund_planet }
+        init_effect = {
+            create_archaeological_site = btr_precursor_new_report
+        }
     }
 
     planet = {
