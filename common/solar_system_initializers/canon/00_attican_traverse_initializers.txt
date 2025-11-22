@@ -961,33 +961,33 @@ sys_faia_init = {
 		deposit_blockers = none
         modifiers = none
 		flags = { subclass_world zorya_planet }
-		# init_effect = {
-		# 	save_global_event_target_as = zoryaHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:zoryaHomeworld
-        #         }
-        #         log = "Zoryan Sovereignty Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-		# 	generate_zoryan_sovereignty_country = yes
-        #
-		# 	set_capital = yes
-		# 	set_owner = event_target:zoryan_sovereignty
-		# 	create_colony = {
-		# 		owner = event_target:zoryan_sovereignty
-		# 		species = event_target:batarianSpecies
-		# 		ethos = owner
-		# 	}
-        #
-		# 	generate_zorya_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = jungle_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+			save_global_event_target_as = zoryaHomeworld
+            if = {
+                limit = {
+                    exists = event_target:zoryaHomeworld
+                }
+                log = "Zoryan Sovereignty Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_zoryan_sovereignty_country = yes
+
+			set_capital = yes
+			set_owner = event_target:zoryan_sovereignty
+			create_colony = {
+				owner = event_target:zoryan_sovereignty
+				species = event_target:batarianSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+			generate_zorya_pops = yes
+
+			add_modifier = {
+				modifier = jungle_world
+				days = -1
+			}
+		}
 
 		moon = {
 			name = "Utrenn"
@@ -2449,35 +2449,35 @@ sys_amun_init = {
 		modifiers = none
 		flags = { subclass_world anhur_planet }
 		entity = "boreal_planet_01_entity"
-		# init_effect = {
-		# 	save_global_event_target_as = anhurHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:anhurHomeworld
-        #         }
-        #         log = "Polity of Anhur Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-		#
-		# 	generate_polity_of_anhur_country = yes
-        #
-		# 	set_capital = yes
-		# 	set_owner = event_target:polity_of_anhur
-		# 	create_colony = {
-		# 		owner = event_target:polity_of_anhur
-		# 		species = event_target:asariSpecies
-		# 		ethos = owner
-		# 	}
-        #
-		# 	generate_anhur_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = boreal_world
-		# 		days = -1
-		# 	}
-        #
-		# 	add_deposit = d_eezo_scarce
-		# }
+		init_effect = {
+			save_global_event_target_as = anhurHomeworld
+            if = {
+                limit = {
+                    exists = event_target:anhurHomeworld
+                }
+                log = "Polity of Anhur Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_polity_of_anhur_country = yes
+
+			set_capital = yes
+			set_owner = event_target:polity_of_anhur
+			create_colony = {
+				owner = event_target:polity_of_anhur
+				species = event_target:asariSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+			generate_anhur_pops = yes
+
+			add_modifier = {
+				modifier = boreal_world
+				days = -1
+			}
+
+			add_deposit = d_eezo_scarce
+		}
 	}	
 
     planet = {
@@ -2738,33 +2738,33 @@ sys_malgus_init = {
 		flags = { subclass_world wrill_planet }
 		deposit_blockers = none
         modifiers = none
-		# init_effect = {
-		# 	save_global_event_target_as = wrillHomeworld
-		# 	if = {
-        #         limit = {
-        #             exists = event_target:wrillHomeworld
-        #         }
-        #         log = "Wrill Mining Consortium Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-		# 	generate_wrill_mining_consortium_country = yes
-        #
-		# 	set_capital = yes
-		# 	set_owner = event_target:wrill_mining_consortium
-		# 	create_colony = {
-		# 		owner = event_target:wrill_mining_consortium
-		# 		species = event_target:kroganSpecies
-		# 		ethos = owner
-		# 	}
-        #
-		# 	generate_wrill_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = dune_world
-		# 		days = -1
-		# 	}
-    	# }
+		init_effect = {
+			save_global_event_target_as = wrillHomeworld
+			if = {
+                limit = {
+                    exists = event_target:wrillHomeworld
+                }
+                log = "Wrill Mining Consortium Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_wrill_mining_consortium_country = yes
+
+			set_capital = yes
+			set_owner = event_target:wrill_mining_consortium
+			create_colony = {
+				owner = event_target:wrill_mining_consortium
+				species = event_target:kroganSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+			generate_wrill_pops = yes
+
+			add_modifier = {
+				modifier = dune_world
+				days = -1
+			}
+    	}
 	}	
 
     planet = {
@@ -2897,28 +2897,28 @@ sys_relic_init = {
 			flags = { drifting_skies_station }
 			deposit_blockers = none
 			modifiers = none
-			# init_effect = {
-			# 	save_global_event_target_as = driftingskiesHomeworld
-			# 	if = {
-			# 		limit = {
-			# 			exists = event_target:driftingskiesHomeworld
-			# 		}
-			# 		log = "Drifting Skies Event Target Set"
-			# 	}
-			# 	prevent_anomaly = yes
-            #
-			# 	generate_relic_mineral_works_country = yes
-            #
-			# 	set_capital = yes
-			# 	set_owner = event_target:relic_mineral_works
-			# 	create_colony = {
-			# 		owner = event_target:relic_mineral_works
-			# 		species = event_target:hanarSpecies
-			# 		ethos = owner
-			# 	}
-            #
-			# 	generate_drifting_skies_pops = yes
-			# }
+			init_effect = {
+				save_global_event_target_as = driftingskiesHomeworld
+				if = {
+					limit = {
+						exists = event_target:driftingskiesHomeworld
+					}
+					log = "Drifting Skies Event Target Set"
+				}
+				prevent_anomaly = yes
+
+				generate_relic_mineral_works_country = yes
+
+				set_capital = yes
+				set_owner = event_target:relic_mineral_works
+				create_colony = {
+					owner = event_target:relic_mineral_works
+					species = event_target:hanarSpecies
+					ethos = owner
+				}
+                inline_script = game_start/independnet_world
+				generate_drifting_skies_pops = yes
+			}
 		}
     }
 
@@ -4350,33 +4350,33 @@ sys_agnes_init = {
 		deposit_blockers = none
         modifiers = none
 		entity = "temperate_planet_04_entity"
-		# init_effect = {
-		# 	save_global_event_target_as = tyvorHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:tyvorHomeworld
-        #         }
-        #         log = "Authority of Tyvor Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-		# 	generate_peoples_authority_of_tyvor_country = yes
-        #
-		# 	set_capital = yes
-		# 	set_owner = event_target:peoples_authority_of_tyvor
-		# 	create_colony = {
-		# 		owner = event_target:peoples_authority_of_tyvor
-		# 		species = event_target:turianSpecies
-		# 		ethos = owner
-		# 	}
-        #
-		# 	generate_tyvor_pops = yes
-		#
-		# 	add_modifier = {
-		# 		modifier = temperate_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+			save_global_event_target_as = tyvorHomeworld
+            if = {
+                limit = {
+                    exists = event_target:tyvorHomeworld
+                }
+                log = "Authority of Tyvor Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_peoples_authority_of_tyvor_country = yes
+
+			set_capital = yes
+			set_owner = event_target:peoples_authority_of_tyvor
+			create_colony = {
+				owner = event_target:peoples_authority_of_tyvor
+				species = event_target:turianSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+			generate_tyvor_pops = yes
+
+			add_modifier = {
+				modifier = temperate_world
+				days = -1
+			}
+		}
     }
 
     planet = {
@@ -7247,28 +7247,28 @@ sys_aysur_init = {
 			flags = { subclass_world alahya_planet }		
 			deposit_blockers = none
 			modifiers = none
-			# init_effect = {
-			# 	save_global_event_target_as = alahyaHomeworld
-			# 	if = {
-			# 		limit = {
-			# 			exists = event_target:alahyaHomeworld
-			# 		}
-			# 		log = "Alahyan Terraformation Zone Event Target Set"
-			# 	}
-			# 	prevent_anomaly = yes
-            #
-			# 	generate_alahyan_terraformation_zone_country = yes
-            #
-			# 	set_capital = yes
-			# 	set_owner = event_target:alahyan_terraformation_zone
-			# 	create_colony = {
-			# 		owner = event_target:alahyan_terraformation_zone
-			# 		species = event_target:volusSpecies
-			# 		ethos = owner
-			# 	}
-            #
-			# 	generate_alahya_pops = yes
-			# }
+			init_effect = {
+				save_global_event_target_as = alahyaHomeworld
+				if = {
+					limit = {
+						exists = event_target:alahyaHomeworld
+					}
+					log = "Alahyan Terraformation Zone Event Target Set"
+				}
+				prevent_anomaly = yes
+
+				generate_alahyan_terraformation_zone_country = yes
+
+				set_capital = yes
+				set_owner = event_target:alahyan_terraformation_zone
+				create_colony = {
+					owner = event_target:alahyan_terraformation_zone
+					species = event_target:volusSpecies
+					ethos = owner
+				}
+                inline_script = game_start/independnet_world
+				generate_alahya_pops = yes
+			}
 		}	
 		
 		moon = {
@@ -8771,33 +8771,33 @@ sys_hekate_init = {
 		flags = { subclass_world asteria_planet }
 		deposit_blockers = none
         modifiers = none
-		# init_effect = {
-        #     save_global_event_target_as = asteriaHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:citadelHomeworld
-        #         }
-        #         log = "Republic of Asteria Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-		# 	generate_republic_of_asteria_country = yes
-        #
-		# 	set_capital = yes
-		# 	set_owner = event_target:republic_of_asteria
-		# 	create_colony = {
-		# 		owner = event_target:republic_of_asteria
-		# 		species = event_target:asariSpecies
-		# 		ethos = owner
-		# 	}
-        #
-		# 	generate_asteria_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = dune_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+            save_global_event_target_as = asteriaHomeworld
+            if = {
+                limit = {
+                    exists = event_target:citadelHomeworld
+                }
+                log = "Republic of Asteria Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_republic_of_asteria_country = yes
+
+			set_capital = yes
+			set_owner = event_target:republic_of_asteria
+			create_colony = {
+				owner = event_target:republic_of_asteria
+				species = event_target:asariSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+			generate_asteria_pops = yes
+
+			add_modifier = {
+				modifier = dune_world
+				days = -1
+			}
+		}
     }
 
     planet = {
@@ -9057,39 +9057,39 @@ sys_hoplos_init = {
 		deposit_blockers = none
         modifiers = none
 		flags = { subclass_world trident_planet }
-		# init_effect = {
-		# 	save_global_event_target_as = tridentHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:tridentHomeworld
-        #         }
-        #         log = "Trident Exports Limited Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-		# 	generate_trident_exports_limited_country = yes
-        #
-		# 	set_capital = yes
-		# 	set_owner = event_target:trident_exports_limited
-		# 	create_colony = {
-		# 		owner = event_target:trident_exports_limited
-		# 		species = event_target:humanSpecies
-		# 		ethos = owner
-		# 	}
-        #
-		# 	generate_trident_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = hazardous_weather
-		# 		days = -1
-		# 	}
-		# 	add_modifier = {
-		# 		modifier = mineral_rich
-		# 		days = -1
-		# 	}
-        #
-		# 	add_deposit = d_eezo_trace
-		# }
+		init_effect = {
+			save_global_event_target_as = tridentHomeworld
+            if = {
+                limit = {
+                    exists = event_target:tridentHomeworld
+                }
+                log = "Trident Exports Limited Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_trident_exports_limited_country = yes
+
+			set_capital = yes
+			set_owner = event_target:trident_exports_limited
+			create_colony = {
+				owner = event_target:trident_exports_limited
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+			generate_trident_pops = yes
+
+			add_modifier = {
+				modifier = hazardous_weather
+				days = -1
+			}
+			add_modifier = {
+				modifier = mineral_rich
+				days = -1
+			}
+
+			add_deposit = d_eezo_trace
+		}
     }
 
     planet = {
@@ -9143,29 +9143,29 @@ sys_pamyat_init = {
 		flags = { subclass_world dobrovolski_planet }
 		deposit_blockers = none
         modifiers = none
-		# init_effect = {
-		# 	save_global_event_target_as = dobrovolskiHomeworld
-		# 	if = {
-        #         limit = {
-        #             exists = event_target:dobrovolskiHomeworld
-        #         }
-        #         log = "Altai Mineral Works Event Target Set"
-        #     }
-        #
-		# 	generate_altai_mineral_works_country = yes
-        #
-		# 	set_capital = yes
-		# 	set_owner = event_target:altai_mineral_works
-		# 	create_colony = {
-		# 		owner = event_target:altai_mineral_works
-		# 		species = event_target:humanSpecies
-		# 		ethos = owner
-		# 	}
-        #
-		# 	generate_dobrovolski_pops = yes
-        #
-		# 	add_deposit = d_eezo_scarce
-		# }
+		init_effect = {
+			save_global_event_target_as = dobrovolskiHomeworld
+			if = {
+                limit = {
+                    exists = event_target:dobrovolskiHomeworld
+                }
+                log = "Altai Mineral Works Event Target Set"
+            }
+
+			generate_altai_mineral_works_country = yes
+
+			set_capital = yes
+			set_owner = event_target:altai_mineral_works
+			create_colony = {
+				owner = event_target:altai_mineral_works
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+			generate_dobrovolski_pops = yes
+
+			add_deposit = d_eezo_scarce
+		}
     }
 
     planet = {
@@ -14125,42 +14125,42 @@ sys_kalabsha_init = {
 		deposit_blockers = none
         modifiers = none
 		entity = "storm_planet_07_entity"
-		# init_effect = {
-		# 	save_global_event_target_as = yammHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:yammHomeworld
-        #         }
-        #         log = "Yamm Free Trade Zone Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-		# 	generate_yamm_free_trade_zone_country = yes
-        #
-		# 	set_capital = yes
-		# 	set_owner = event_target:yamm_free_trade_zone
-		# 	create_colony = {
-		# 		owner = event_target:yamm_free_trade_zone
-		# 		species = event_target:hanarSpecies
-		# 		ethos = owner
-		# 	}
-        #
-		# 	generate_yamm_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = storm_world
-		# 	}
-		# 	add_modifier = {
-		# 		modifier = hazardous_weather
-		# 		days = -1
-		# 	}
-		# 	add_modifier = {
-		# 		modifier = wild_storms
-		# 		days = -1
-		# 	}
-        #
-		# 	add_deposit = d_eezo_scarce
-		# }
+		init_effect = {
+			save_global_event_target_as = yammHomeworld
+            if = {
+                limit = {
+                    exists = event_target:yammHomeworld
+                }
+                log = "Yamm Free Trade Zone Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_yamm_free_trade_zone_country = yes
+
+			set_capital = yes
+			set_owner = event_target:yamm_free_trade_zone
+			create_colony = {
+				owner = event_target:yamm_free_trade_zone
+				species = event_target:hanarSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+			generate_yamm_pops = yes
+
+			add_modifier = {
+				modifier = storm_world
+			}
+			add_modifier = {
+				modifier = hazardous_weather
+				days = -1
+			}
+			add_modifier = {
+				modifier = wild_storms
+				days = -1
+			}
+
+			add_deposit = d_eezo_scarce
+		}
     }
 
     planet = {

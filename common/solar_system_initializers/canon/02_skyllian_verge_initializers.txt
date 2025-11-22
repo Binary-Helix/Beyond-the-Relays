@@ -4086,33 +4086,33 @@ sys_cavalcante_init = {
 		flags = { subclass_world anansi_planet }
 		deposit_blockers = none
         modifiers = none
-		# init_effect = {
-		# 	save_global_event_target_as = anansiHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:anansiHomeworld
-        #         }
-        #         log = "Anansi Manufacturing Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-		#
-		# 	generate_anansi_manufacturing_country = yes
-		#
-		# 	set_capital = yes
-		# 	set_owner = event_target:anansi_manufacturing
-		# 	create_colony = {
-		# 		owner = event_target:anansi_manufacturing
-		# 		species = event_target:hanarSpecies
-		# 		ethos = owner
-		# 	}
-		#
-		# 	generate_anansi_pops = yes
-		#
-		# 	add_modifier = {
-		# 		modifier = biolum_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+			save_global_event_target_as = anansiHomeworld
+            if = {
+                limit = {
+                    exists = event_target:anansiHomeworld
+                }
+                log = "Anansi Manufacturing Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_anansi_manufacturing_country = yes
+
+			set_capital = yes
+			set_owner = event_target:anansi_manufacturing
+			create_colony = {
+				owner = event_target:anansi_manufacturing
+				species = event_target:hanarSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+			generate_anansi_pops = yes
+
+			add_modifier = {
+				modifier = biolum_world
+				days = -1
+			}
+		}
 	}
 
 	init_effect = { 

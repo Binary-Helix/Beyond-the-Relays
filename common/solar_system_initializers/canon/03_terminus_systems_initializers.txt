@@ -1181,37 +1181,37 @@ sys_thal_init = {
 		size = 14
 		flags = { subclass_world altakiril_planet }
 		entity = "fungal_planet_01_entity"
-		# init_effect = {
-        #     save_global_event_target_as = altakirilHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:altakirilHomeworld
-        #         }
-        #         log = "Altakiril Union Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_altakiril_union_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:altakiril_union
-		# 	create_colony = {
-		# 		owner = event_target:altakiril_union
-		# 		species = event_target:turianSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_altakiril_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = fungal_world
-		# 		days = -1
-		# 	}
-		# 	add_modifier = {
-		# 		modifier = dextro_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+            save_global_event_target_as = altakirilHomeworld
+            if = {
+                limit = {
+                    exists = event_target:altakirilHomeworld
+                }
+                log = "Altakiril Union Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_altakiril_union_country = yes
+
+            set_capital = yes
+			set_owner = event_target:altakiril_union
+			create_colony = {
+				owner = event_target:altakiril_union
+				species = event_target:turianSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_altakiril_pops = yes
+
+			add_modifier = {
+				modifier = fungal_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = dextro_world
+				days = -1
+			}
+		}
     }
 
     planet = {
@@ -1295,35 +1295,35 @@ sys_urlarast_init = {
 		deposit_blockers = none
         modifiers = none        
 		entity = "ammonia_continental_planet_02_entity"
-		# init_effect = {
-        #     save_global_event_target_as = talisfiaHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:talisfiaHomeworld
-        #         }
-        #         log = "Thalassocracy of Talis Fia Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_thalassocracy_of_talis_fia_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:thalassocracy_of_talis_fia
-		# 	create_colony = {
-		# 		owner = event_target:thalassocracy_of_talis_fia
-		# 		species = event_target:volusSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_talis_fia_pops = yes
-        #
-        #     add_modifier = {
-		# 		modifier = forest_world
-		# 		days = -1
-		# 	}
-        #
-        #     add_deposit = d_eezo_trace
-		# }
+		init_effect = {
+            save_global_event_target_as = talisfiaHomeworld
+            if = {
+                limit = {
+                    exists = event_target:talisfiaHomeworld
+                }
+                log = "Thalassocracy of Talis Fia Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_thalassocracy_of_talis_fia_country = yes
+
+            set_capital = yes
+			set_owner = event_target:thalassocracy_of_talis_fia
+			create_colony = {
+				owner = event_target:thalassocracy_of_talis_fia
+				species = event_target:volusSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_talis_fia_pops = yes
+
+            add_modifier = {
+				modifier = forest_world
+				days = -1
+			}
+
+            add_deposit = d_eezo_trace
+		}
     }
 
     planet = {
@@ -2430,34 +2430,34 @@ sys_paz_init = {
         deposit_blockers = none
         modifiers = none
 		flags = { subclass_world garvug_planet }
-		# init_effect = {
-        #     save_global_event_target_as = garvugHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:garvugHomeworld
-        #         }
-        #         log = "State of Garvug Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_state_of_garvug_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:state_of_garvug
-		# 	create_colony = {
-		# 		owner = event_target:state_of_garvug
-		# 		species = event_target:kroganSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_garvug_pops = yes
-        #
-        #     add_modifier = {
-		# 		modifier = snow_world
-		# 		days = -1
-		# 	}
-        #     add_deposit = d_eezo_scarce
-		# }
+		init_effect = {
+            save_global_event_target_as = garvugHomeworld
+            if = {
+                limit = {
+                    exists = event_target:garvugHomeworld
+                }
+                log = "State of Garvug Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_state_of_garvug_country = yes
+
+            set_capital = yes
+			set_owner = event_target:state_of_garvug
+			create_colony = {
+				owner = event_target:state_of_garvug
+				species = event_target:kroganSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_garvug_pops = yes
+
+            add_modifier = {
+				modifier = snow_world
+				days = -1
+			}
+            add_deposit = d_eezo_scarce
+		}
     }	
 }
 
@@ -4029,33 +4029,33 @@ sys_brikhaun_init = {
         deposit_blockers = none
         modifiers = none
         flags = { thrednakka_planet subclass_world }
-		# init_effect = {
-        #     save_global_event_target_as = thrednakkaHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:citadelHomeworld
-        #         }
-        #         log = "Citadel Station Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_thrednakka_autonomy_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:thrednakka_autonomy
-		# 	create_colony = {
-		# 		owner = event_target:thrednakka_autonomy
-		# 		species = event_target:batarianSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_thrednakka_pops = yes
-        #
-        #     add_modifier = {
-		# 		modifier = dune_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+            save_global_event_target_as = thrednakkaHomeworld
+            if = {
+                limit = {
+                    exists = event_target:citadelHomeworld
+                }
+                log = "Citadel Station Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_thrednakka_autonomy_country = yes
+
+            set_capital = yes
+			set_owner = event_target:thrednakka_autonomy
+			create_colony = {
+				owner = event_target:thrednakka_autonomy
+				species = event_target:batarianSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_thrednakka_pops = yes
+
+            add_modifier = {
+				modifier = dune_world
+				days = -1
+			}
+		}
 	}	
 	
 	init_effect = { 
@@ -6129,33 +6129,33 @@ sys_jintanei_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "outback_planet_01_entity"
-		# init_effect = {
-        #     save_global_event_target_as = ferrisfieldsHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:ferrisfieldsHomeworld
-        #         }
-        #         log = "Ferris Fields Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_union_of_ferris_fields_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:union_of_ferris_fields
-		# 	create_colony = {
-		# 		owner = event_target:union_of_ferris_fields
-		# 		species = event_target:humanSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_ferris_fields_pops = yes
-        #
-        #     add_modifier = {
-		# 		modifier = outback_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+            save_global_event_target_as = ferrisfieldsHomeworld
+            if = {
+                limit = {
+                    exists = event_target:ferrisfieldsHomeworld
+                }
+                log = "Ferris Fields Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_union_of_ferris_fields_country = yes
+
+            set_capital = yes
+			set_owner = event_target:union_of_ferris_fields
+			create_colony = {
+				owner = event_target:union_of_ferris_fields
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_ferris_fields_pops = yes
+
+            add_modifier = {
+				modifier = outback_world
+				days = -1
+			}
+		}
 	}
 
 	planet = {
@@ -8279,7 +8279,7 @@ sys_typhon_init = {
 				species = event_target:batarianSpecies
 				ethos = owner
 			}
-
+            inline_script = game_start/independnet_world
             generate_aite_pops = yes
 
 			add_modifier = {
@@ -9937,33 +9937,33 @@ sys_olonnais_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "basalt_planet_06_entity"
-		# init_effect = {
-        #     save_global_event_target_as = tortugaHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:tortugaHomeworld
-        #         }
-        #         log = "Free Port of Tortuga Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_free_port_of_tortuga_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:free_port_of_tortuga
-		# 	create_colony = {
-		# 		owner = event_target:free_port_of_tortuga
-		# 		species = event_target:batarianSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_tortuga_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = basalt_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+            save_global_event_target_as = tortugaHomeworld
+            if = {
+                limit = {
+                    exists = event_target:tortugaHomeworld
+                }
+                log = "Free Port of Tortuga Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_free_port_of_tortuga_country = yes
+
+            set_capital = yes
+			set_owner = event_target:free_port_of_tortuga
+			create_colony = {
+				owner = event_target:free_port_of_tortuga
+				species = event_target:batarianSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_tortuga_pops = yes
+
+			add_modifier = {
+				modifier = basalt_world
+				days = -1
+			}
+		}
 
         moon = {
 			name = "Batsch"
@@ -11805,35 +11805,35 @@ sys_decoris_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "snow_planet_03_entity"
-		# init_effect = {
-        #     save_global_event_target_as = sanctumHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:sanctumHomeworld
-        #         }
-        #         log = "Sanctum Metals Group Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_sanctum_metals_group_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:sanctum_metals_group
-		# 	create_colony = {
-		# 		owner = event_target:sanctum_metals_group
-		# 		species = event_target:turianSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_sanctum_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = snow_world
-		# 		days = -1
-		# 	}
-        #
-        #     add_deposit = d_eezo_scarce
-		# }
+		init_effect = {
+            save_global_event_target_as = sanctumHomeworld
+            if = {
+                limit = {
+                    exists = event_target:sanctumHomeworld
+                }
+                log = "Sanctum Metals Group Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_sanctum_metals_group_country = yes
+
+            set_capital = yes
+			set_owner = event_target:sanctum_metals_group
+			create_colony = {
+				owner = event_target:sanctum_metals_group
+				species = event_target:turianSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_sanctum_pops = yes
+
+			add_modifier = {
+				modifier = snow_world
+				days = -1
+			}
+
+            add_deposit = d_eezo_scarce
+		}
     }	
 }
 
@@ -11910,33 +11910,33 @@ sys_lenal_init = {
 		entity = "badlands_planet_08_entity"
         deposit_blockers = none
         modifiers = none
-		# init_effect = {
-        #     save_global_event_target_as = trigintapetraHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:trigintapetraHomeworld
-        #         }
-        #         log = "Trigintan League Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_trigintan_league_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:trigintan_league
-		# 	create_colony = {
-		# 		owner = event_target:trigintan_league
-		# 		species = event_target:turianSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_triginta_petra_pops = yes
-        #
-        #     add_modifier = {
-		# 		modifier = badlands_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+            save_global_event_target_as = trigintapetraHomeworld
+            if = {
+                limit = {
+                    exists = event_target:trigintapetraHomeworld
+                }
+                log = "Trigintan League Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_trigintan_league_country = yes
+
+            set_capital = yes
+			set_owner = event_target:trigintan_league
+			create_colony = {
+				owner = event_target:trigintan_league
+				species = event_target:turianSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_triginta_petra_pops = yes
+
+            add_modifier = {
+				modifier = badlands_world
+				days = -1
+			}
+		}
     }
 
     planet = {
