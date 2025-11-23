@@ -31,3 +31,54 @@ if = {
     add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
     add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_mining }
 }
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = noveria_dev_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_research_lab_3
+    add_building = building_research_lab_3
+    add_building = building_precinct_house
+    add_building = building_bureaucratic_3
+    add_building = building_commercial_zone
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = haven_pea_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_medical_2
+    add_building = building_hyper_entertainment_forum
+    add_building = building_commercial_zone
+    add_building = building_autochthon_monument
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_mining }
+}

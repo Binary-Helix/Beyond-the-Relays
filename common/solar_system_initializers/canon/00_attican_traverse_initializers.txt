@@ -2595,35 +2595,35 @@ sys_imir_init = {
 		deposit_blockers = none
         modifiers = none
 		flags = { subclass_world korlus_planet }
-		# init_effect = {
-		# 	save_global_event_target_as = korlusHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:citadelHomeworld
-        #         }
-        #         log = "Korlus Recycling Union Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-		# 	generate_korlus_recycling_union_country = yes
-        #
-		# 	set_capital = yes
-		# 	set_owner = event_target:korlus_recycling_union
-		# 	create_colony = {
-		# 		owner = event_target:korlus_recycling_union
-		# 		species = event_target:kroganSpecies
-		# 		ethos = owner
-		# 	}
-        #
-		# 	generate_korlus_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = dust_world
-		# 		days = -1
-		# 	}
-        #
-		# 	add_deposit = d_eezo_scarce
-    	# }
+		init_effect = {
+			save_global_event_target_as = korlusHomeworld
+            if = {
+                limit = {
+                    exists = event_target:citadelHomeworld
+                }
+                log = "Korlus Recycling Union Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_korlus_recycling_union_country = yes
+
+			set_capital = yes
+			set_owner = event_target:korlus_recycling_union
+			create_colony = {
+				owner = event_target:korlus_recycling_union
+				species = event_target:kroganSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+			generate_korlus_pops = yes
+
+			add_modifier = {
+				modifier = dust_world
+				days = -1
+			}
+
+			add_deposit = d_eezo_scarce
+    	}
 	}
 
 	change_orbit = 50
@@ -2778,28 +2778,28 @@ sys_malgus_init = {
 		deposit_blockers = none
         modifiers = none
 		entity = "mephitic_planet_04_entity"
-		# init_effect = {
-		# 	save_global_event_target_as = flettHomeworld
-		# 	if = {
-        #         limit = {
-        #             exists = event_target:flettHomeworld
-        #         }
-        #         log = "Flett Transport Union Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-		# 	generate_flett_transport_union_country = yes
-        #
-		# 	set_capital = yes
-		# 	set_owner = event_target:flett_transport_union
-		# 	create_colony = {
-		# 		owner = event_target:flett_transport_union
-		# 		species = event_target:kroganSpecies
-		# 		ethos = owner
-		# 	}
-        #
-		# 	generate_flett_pops = yes
-		# }
+		init_effect = {
+			save_global_event_target_as = flettHomeworld
+			if = {
+                limit = {
+                    exists = event_target:flettHomeworld
+                }
+                log = "Flett Transport Union Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_flett_transport_union_country = yes
+
+			set_capital = yes
+			set_owner = event_target:flett_transport_union
+			create_colony = {
+				owner = event_target:flett_transport_union
+				species = event_target:kroganSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+			generate_flett_pops = yes
+		}
     }	
 
 	init_effect = { 
@@ -3687,33 +3687,33 @@ sys_webel_init = {
 		deposit_blockers = none
         modifiers = none
 		flags = { subclass_world kosh_planet }
-		# init_effect = {
-		# 	save_global_event_target_as = koshHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:citadelHomeworld
-        #         }
-        #         log = "Citadel Station Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-		# 	generate_kosh_development_corporation_country = yes
-        #
-		# 	set_capital = yes
-		# 	set_owner = event_target:kosh_development_corporation
-		# 	create_colony = {
-		# 		owner = event_target:kosh_development_corporation
-		# 		species = event_target:asariSpecies
-		# 		ethos = owner
-		# 	}
-        #
-		# 	generate_kosh_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = temperate_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+			save_global_event_target_as = koshHomeworld
+            if = {
+                limit = {
+                    exists = event_target:citadelHomeworld
+                }
+                log = "Citadel Station Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_kosh_development_corporation_country = yes
+
+			set_capital = yes
+			set_owner = event_target:kosh_development_corporation
+			create_colony = {
+				owner = event_target:kosh_development_corporation
+				species = event_target:asariSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+			generate_kosh_pops = yes
+
+			add_modifier = {
+				modifier = temperate_world
+				days = -1
+			}
+		}
 	}	
 
 	planet = {
@@ -7207,35 +7207,35 @@ sys_aysur_init = {
             has_ring = no
 			size = 16
 			flags = { subclass_world arvuna_planet }
-			# init_effect = {
-			# 	save_global_event_target_as = arvunaHomeworld
-			# 	if = {
-			# 		limit = {
-			# 			exists = event_target:arvunaHomeworld
-			# 		}
-			# 		log = "Arvunan Administration Zone Event Target Set"
-			# 	}
-			# 	prevent_anomaly = yes
-            #
-			# 	generate_arvunan_administration_country = yes
-            #
-			# 	set_capital = yes
-			# 	set_owner = event_target:arvunan_administration
-			# 	create_colony = {
-			# 		owner = event_target:arvunan_administration
-			# 		species = event_target:humanSpecies
-			# 		ethos = owner
-			# 	}
-            #
-			# 	generate_arvuna_pops = yes
-            #
-			# 	add_modifier = {
-			# 		modifier = dangerous_wildlife
-			# 		days = -1
-			# 	}
-            #
-			# 	add_deposit = d_eezo_trace
-			# }
+			init_effect = {
+				save_global_event_target_as = arvunaHomeworld
+				if = {
+					limit = {
+						exists = event_target:arvunaHomeworld
+					}
+					log = "Arvunan Administration Zone Event Target Set"
+				}
+				prevent_anomaly = yes
+
+				generate_arvunan_administration_country = yes
+
+				set_capital = yes
+				set_owner = event_target:arvunan_administration
+				create_colony = {
+					owner = event_target:arvunan_administration
+					species = event_target:humanSpecies
+					ethos = owner
+				}
+                inline_script = game_start/independnet_world
+				generate_arvuna_pops = yes
+
+				add_modifier = {
+					modifier = dangerous_wildlife
+					days = -1
+				}
+
+				add_deposit = d_eezo_trace
+			}
 		}	
 
 		moon = {
@@ -11920,37 +11920,37 @@ sys_iera_init = {
 		flags = { subclass_world horizon_planet }	
 		deposit_blockers = none
         modifiers = none
-		# init_effect = {
-		# 	save_global_event_target_as = horizonHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:horizonHomeworld
-        #         }
-        #         log = "Commune of Horizon Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-		# 	generate_commune_of_horizon_country = yes
-        #
-		# 	set_capital = yes
-		# 	set_owner = event_target:commune_of_horizon
-		# 	create_colony = {
-		# 		owner = event_target:commune_of_horizon
-		# 		species = event_target:humanSpecies
-		# 		ethos = owner
-		# 	}
-        #
-		# 	generate_horizon_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = lush_planet
-		# 		days = -1
-		# 	}
-		# 	add_modifier = {
-		# 		modifier = prairie_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+			save_global_event_target_as = horizonHomeworld
+            if = {
+                limit = {
+                    exists = event_target:horizonHomeworld
+                }
+                log = "Commune of Horizon Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_commune_of_horizon_country = yes
+
+			set_capital = yes
+			set_owner = event_target:commune_of_horizon
+			create_colony = {
+				owner = event_target:commune_of_horizon
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+			generate_horizon_pops = yes
+
+			add_modifier = {
+				modifier = lush_planet
+				days = -1
+			}
+			add_modifier = {
+				modifier = prairie_world
+				days = -1
+			}
+		}
     }
 
     planet = {

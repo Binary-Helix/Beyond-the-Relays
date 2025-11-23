@@ -1600,35 +1600,35 @@ sys_osun_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "bog_planet_02_entity"
-		# init_effect = {
-        #     save_global_event_target_as = erinleHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:erinleHomeworld
-        #         }
-        #         log = "Erinle Conservancy Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_erinle_conservancy_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:erinle_conservancy
-		# 	create_colony = {
-		# 		owner = event_target:erinle_conservancy
-		# 		species = event_target:salarianSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_erinle_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = bog_world
-		# 		days = -1
-		# 	}
-        #
-        #     add_deposit = d_eezo_scarce
-		# }
+		init_effect = {
+            save_global_event_target_as = erinleHomeworld
+            if = {
+                limit = {
+                    exists = event_target:erinleHomeworld
+                }
+                log = "Erinle Conservancy Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_erinle_conservancy_country = yes
+
+            set_capital = yes
+			set_owner = event_target:erinle_conservancy
+			create_colony = {
+				owner = event_target:erinle_conservancy
+				species = event_target:salarianSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_erinle_pops = yes
+
+			add_modifier = {
+				modifier = bog_world
+				days = -1
+			}
+
+            add_deposit = d_eezo_scarce
+		}
     }
 
     planet = {
@@ -4162,33 +4162,33 @@ sys_tkachyov_init = {
 			entity = "steppe_planet_02_entity"
             deposit_blockers = none
             modifiers = none
-			# init_effect = {
-            #     save_global_event_target_as = cyreneHomeworld
-            #     if = {
-            #         limit = {
-            #             exists = event_target:cyreneHomeworld
-            #         }
-            #         log = "Autonomy of Cyrene Event Target Set"
-            #     }
-            #     prevent_anomaly = yes
-            #
-            #     generate_autonomy_of_cyrene_country = yes
-            #
-            #     set_capital = yes
-            #     set_owner = event_target:autonomy_of_cyrene
-            #     create_colony = {
-            #         owner = event_target:autonomy_of_cyrene
-            #         species = event_target:humanSpecies
-            #         ethos = owner
-            #     }
-            #
-            #     generate_cyrene_pops = yes
-            #
-			# 	add_modifier = {
-			# 		modifier = steppe_world
-			# 		days = -1
-			# 	}
-			# }
+			init_effect = {
+                save_global_event_target_as = cyreneHomeworld
+                if = {
+                    limit = {
+                        exists = event_target:cyreneHomeworld
+                    }
+                    log = "Autonomy of Cyrene Event Target Set"
+                }
+                prevent_anomaly = yes
+
+                generate_autonomy_of_cyrene_country = yes
+
+                set_capital = yes
+                set_owner = event_target:autonomy_of_cyrene
+                create_colony = {
+                    owner = event_target:autonomy_of_cyrene
+                    species = event_target:humanSpecies
+                    ethos = owner
+                }
+                inline_script = game_start/independnet_world
+                generate_cyrene_pops = yes
+
+				add_modifier = {
+					modifier = steppe_world
+					days = -1
+				}
+			}
 		}
 	}
 
@@ -4757,35 +4757,35 @@ sys_enoch_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "mire_planet_06_entity"
-		# init_effect = {
-        #     save_global_event_target_as = joabHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:joabHomeworld
-        #         }
-        #         log = "Commonwealth of Joab Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_commonwealth_of_joab_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:commonwealth_of_joab
-		# 	create_colony = {
-		# 		owner = event_target:commonwealth_of_joab
-		# 		species = event_target:humanSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_joab_pops = yes
-        #
-        #     add_modifier = {
-		# 		modifier = mire_world
-		# 		days = -1
-		# 	}
-        #
-        #     add_deposit = d_eezo_scarce
-		# }
+		init_effect = {
+            save_global_event_target_as = joabHomeworld
+            if = {
+                limit = {
+                    exists = event_target:joabHomeworld
+                }
+                log = "Commonwealth of Joab Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_commonwealth_of_joab_country = yes
+
+            set_capital = yes
+			set_owner = event_target:commonwealth_of_joab
+			create_colony = {
+				owner = event_target:commonwealth_of_joab
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_joab_pops = yes
+
+            add_modifier = {
+				modifier = mire_world
+				days = -1
+			}
+
+            add_deposit = d_eezo_scarce
+		}
 
 		moon = {
 			name = "Esther"
@@ -6302,33 +6302,33 @@ sys_razhek_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "snow_planet_05_entity"
-		# init_effect = {
-        #     save_global_event_target_as = newcantonHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:newcantonHomeworld
-        #         }
-        #         log = "New Canton Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_authority_of_new_canton_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:authority_of_new_canton
-		# 	create_colony = {
-		# 		owner = event_target:authority_of_new_canton
-		# 		species = event_target:humanSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_new_canton_pops = yes
-        #
-        #     add_modifier = {
-		# 		modifier = snow_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+            save_global_event_target_as = newcantonHomeworld
+            if = {
+                limit = {
+                    exists = event_target:newcantonHomeworld
+                }
+                log = "New Canton Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_authority_of_new_canton_country = yes
+
+            set_capital = yes
+			set_owner = event_target:authority_of_new_canton
+			create_colony = {
+				owner = event_target:authority_of_new_canton
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_new_canton_pops = yes
+
+            add_modifier = {
+				modifier = snow_world
+				days = -1
+			}
+		}
 	}	
 
     change_orbit = 50
@@ -8498,33 +8498,33 @@ sys_tydeous_init = {
 		modifiers = none
 		entity = "badlands_planet_01_entity"
 		flags = { subclass_world freedoms_progress_planet }
-		# init_effect = {
-        #     save_global_event_target_as = freedomsprogressHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:freedomsprogressHomeworld
-        #         }
-        #         log = "Freehold of Freedom's Progress Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_freehold_of_freedoms_progress_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:freehold_of_freedoms_progress
-		# 	create_colony = {
-		# 		owner = event_target:freehold_of_freedoms_progress
-		# 		species = event_target:humanSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_freedoms_progress_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = badlands_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+            save_global_event_target_as = freedomsprogressHomeworld
+            if = {
+                limit = {
+                    exists = event_target:freedomsprogressHomeworld
+                }
+                log = "Freehold of Freedom's Progress Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_freehold_of_freedoms_progress_country = yes
+
+            set_capital = yes
+			set_owner = event_target:freehold_of_freedoms_progress
+			create_colony = {
+				owner = event_target:freehold_of_freedoms_progress
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_freedoms_progress_pops = yes
+
+			add_modifier = {
+				modifier = badlands_world
+				days = -1
+			}
+		}
 
 		moon = {
 			name = "Freedom's Progress a"
@@ -9202,33 +9202,33 @@ sys_adiratna_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "mire_planet_01_entity"
-		# init_effect = {
-        #     save_global_event_target_as = monriniHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:monriniHomeworld
-        #         }
-        #         log = "Monrini Syndicate Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_monrini_syndicate_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:monrini_syndicate
-		# 	create_colony = {
-		# 		owner = event_target:monrini_syndicate
-		# 		species = event_target:salarianSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_monrini_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = mire_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+            save_global_event_target_as = monriniHomeworld
+            if = {
+                limit = {
+                    exists = event_target:monriniHomeworld
+                }
+                log = "Monrini Syndicate Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_monrini_syndicate_country = yes
+
+            set_capital = yes
+			set_owner = event_target:monrini_syndicate
+			create_colony = {
+				owner = event_target:monrini_syndicate
+				species = event_target:salarianSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_monrini_pops = yes
+
+			add_modifier = {
+				modifier = mire_world
+				days = -1
+			}
+		}
 	}
 
 	planet = {
@@ -9727,7 +9727,7 @@ sys_cheng_init = {
 				species = event_target:batarianSpecies
 				ethos = owner
 			}
-
+            inline_script = game_start/independnet_world
             generate_jenera_pops = yes
 
             add_modifier = {
@@ -9846,30 +9846,30 @@ sys_fal_init = {
         deposit_blockers = none
         modifiers = none
         flags = { yalson_planet }
-        # init_effect = {
-        #     save_global_event_target_as = yalsonHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:yalsonHomeworld
-        #         }
-        #         log = "Fal III Manufactory Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_fal_iii_manufactory_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:fal_iii_manufactory
-		# 	create_colony = {
-		# 		owner = event_target:fal_iii_manufactory
-		# 		species = event_target:salarianSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_yalson_pops = yes
-        #
-        #     add_deposit = d_eezo_trace
-        # }
+        init_effect = {
+            save_global_event_target_as = yalsonHomeworld
+            if = {
+                limit = {
+                    exists = event_target:yalsonHomeworld
+                }
+                log = "Fal III Manufactory Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_fal_iii_manufactory_country = yes
+
+            set_capital = yes
+			set_owner = event_target:fal_iii_manufactory
+			create_colony = {
+				owner = event_target:fal_iii_manufactory
+				species = event_target:salarianSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_yalson_pops = yes
+
+            add_deposit = d_eezo_trace
+        }
 	}
 	
 	planet = {
@@ -10328,33 +10328,33 @@ sys_essul_init = {
 			flags = {subclass_world sahidau_planet sahi_dau_planet}
             orbit_distance = 15
             modifiers = none
-			# init_effect = {
-            #     save_global_event_target_as = sahidauHomeworld
-            #     if = {
-            #         limit = {
-            #             exists = event_target:sahidauHomeworld
-            #         }
-            #         log = "League of Sahi Dau Event Target Set"
-            #     }
-            #     prevent_anomaly = yes
-            #
-            #     generate_league_of_sahi_dau_country = yes
-            #
-            #     set_capital = yes
-            #     set_owner = event_target:league_of_sahi_dau
-            #     create_colony = {
-            #         owner = event_target:league_of_sahi_dau
-            #         species = event_target:volusSpecies
-            #         ethos = owner
-            #     }
-            #
-            #     generate_sahi_dau_pops = yes
-            #
-            #     add_modifier = {
-			# 		modifier = supercon_world
-			# 		days = -1
-			# 	}
-			# }
+			init_effect = {
+                save_global_event_target_as = sahidauHomeworld
+                if = {
+                    limit = {
+                        exists = event_target:sahidauHomeworld
+                    }
+                    log = "League of Sahi Dau Event Target Set"
+                }
+                prevent_anomaly = yes
+
+                generate_league_of_sahi_dau_country = yes
+
+                set_capital = yes
+                set_owner = event_target:league_of_sahi_dau
+                create_colony = {
+                    owner = event_target:league_of_sahi_dau
+                    species = event_target:volusSpecies
+                    ethos = owner
+                }
+                inline_script = game_start/independnet_world
+                generate_sahi_dau_pops = yes
+
+                add_modifier = {
+					modifier = supercon_world
+					days = -1
+				}
+			}
 		}
 	}	
 }	
@@ -12044,7 +12044,7 @@ sys_mil_init = {
 				species = event_target:asariSpecies
 				ethos = owner
 			}
-
+            inline_script = game_start/independnet_world
             generate_chalkhos_pops = yes
 
         }
@@ -12891,33 +12891,33 @@ sys_batalla_init = {
         deposit_blockers = none
         modifiers = none
 		entity = "mephitic_arid_planet_03_entity"
-		# init_effect = {
-        #     save_global_event_target_as = logarisiHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:logarisiHomeworld
-        #         }
-        #         log = "Logarisi Development Corporation Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_logarisi_development_corporation_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:logarisi_development_corporation
-		# 	create_colony = {
-		# 		owner = event_target:logarisi_development_corporation
-		# 		species = event_target:batarianSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_logarisi_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = outback_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+            save_global_event_target_as = logarisiHomeworld
+            if = {
+                limit = {
+                    exists = event_target:logarisiHomeworld
+                }
+                log = "Logarisi Development Corporation Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_logarisi_development_corporation_country = yes
+
+            set_capital = yes
+			set_owner = event_target:logarisi_development_corporation
+			create_colony = {
+				owner = event_target:logarisi_development_corporation
+				species = event_target:batarianSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_logarisi_pops = yes
+
+			add_modifier = {
+				modifier = outback_world
+				days = -1
+			}
+		}
     }
 
     planet = {
@@ -12930,39 +12930,39 @@ sys_batalla_init = {
         flags = { subclass_world thunawanuro_planet }
         deposit_blockers = none
         modifiers = none
-		# init_effect = {
-        #     save_global_event_target_as = thunawanuroHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:thunawanuroHomeworld
-        #         }
-        #         log = "Confederation of Thunawanuro Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-        #
-        #     generate_confederation_of_thunawanuro_country = yes
-        #
-        #     set_capital = yes
-		# 	set_owner = event_target:confederation_of_thunawanuro
-		# 	create_colony = {
-		# 		owner = event_target:confederation_of_thunawanuro
-		# 		species = event_target:elcorSpecies
-		# 		ethos = owner
-		# 	}
-        #
-        #     generate_thunawanuro_pops = yes
-        #
-		# 	add_modifier = {
-		# 		modifier = high_gravity
-		# 		days = -1
-		# 	}
-		# 	add_modifier = {
-		# 		modifier = forest_world
-		# 		days = -1
-		# 	}
-        #
-        #     add_deposit = d_eezo_scarce
-		# }
+		init_effect = {
+            save_global_event_target_as = thunawanuroHomeworld
+            if = {
+                limit = {
+                    exists = event_target:thunawanuroHomeworld
+                }
+                log = "Confederation of Thunawanuro Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_confederation_of_thunawanuro_country = yes
+
+            set_capital = yes
+			set_owner = event_target:confederation_of_thunawanuro
+			create_colony = {
+				owner = event_target:confederation_of_thunawanuro
+				species = event_target:elcorSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+            generate_thunawanuro_pops = yes
+
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+			add_modifier = {
+				modifier = forest_world
+				days = -1
+			}
+
+            add_deposit = d_eezo_scarce
+		}
     }
 
     planet = {

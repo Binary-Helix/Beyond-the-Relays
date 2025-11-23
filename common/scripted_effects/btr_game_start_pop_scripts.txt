@@ -1603,7 +1603,7 @@ generate_tortuga_pops = {
     }
     while = {
         count = 10
-        generate_sed_sedriicae_pops = yes
+        generate_forayanPop = yes
     }
     every_owned_pop_group = { set_pop_group_flag = init_spawn }
 }
@@ -1630,11 +1630,11 @@ generate_alahya_pops = {
 
 generate_drifting_skies_pops = {
     while = {
-        count = 40
+        count = 25
         generate_hanarPop = yes
     }
     while = {
-        count = 50
+        count = 30
         generate_drellPop = yes
     }
     while = {
@@ -1646,7 +1646,7 @@ generate_drifting_skies_pops = {
         generate_vorchaPop = yes
     }
     while = {
-        count = 10
+        count = 40
         generate_humanPop = yes
     }
     while = {
@@ -1689,6 +1689,411 @@ generate_anansi_pops = {
         count = 1
         generate_volusPop = yes
     }
+    while = {
+        count = 20
+        generate_hanarPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_arvuna_pops = {
+    while = {
+        count = 80
+        generate_humanPop = yes
+    }
+    while = {
+        count = 5
+        generate_asariPop = yes
+    }
+    while = {
+        count = 5
+        generate_salarianPop = yes
+    }
+    while = {
+        count = 5
+        generate_volusPop = yes
+    }
+    while = {
+        count = 5
+        generate_turianPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_new_canton_pops = {
+    while = {
+        count = 90
+        generate_humanPop = yes
+    }
+    while = {
+        count = 5
+        generate_volusPop = yes
+    }
+    while = {
+        count = 5
+        generate_asariPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_cyrene_pops ={
+    while = {
+        count = 85
+        generate_humanPop = yes
+    }
+    while = {
+        count = 5
+        generate_salarianPop = yes
+    }
+    while = {
+        count = 5
+        generate_asariPop = yes
+    }
+    while = {
+        count = 5
+        generate_volusPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_chalkhos_pops = {
+    while = {
+        count = 60
+        generate_salarianPop = yes
+    }
+    while = {
+        count = 10
+        generate_kroganPop = yes
+    }
+    while = {
+        count = 5
+        generate_vorchaPop = yes
+    }
+    while = {
+        count = 10
+        generate_asariPop = yes
+    }
+    while = {
+        count = 10
+        generate_humanPop = yes
+    }
+    while = {
+        count = 5
+        generate_turianPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_horizon_pops = {
+    while = {
+        count = 80
+        generate_humanPop = yes
+    }
+    while = {
+        count = 5
+        generate_asariPop = yes
+    }
+    while = {
+        count = 5
+        generate_hanarPop = yes
+    }
+    while = {
+        count = 5
+        generate_drellPop = yes
+    }
+    while = {
+        count = 5
+        generate_volusPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_joab_pops = {
+    while = {
+        count = 80
+        generate_salarianPop = yes
+    }
+    while = {
+        count = 10
+        generate_batarianPop = yes
+    }
+    while = {
+        count = 5
+        generate_humanPop = yes
+    }
+    while = {
+        count = 5
+        generate_asariPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_thunawanuro_pops = {
+    while = {
+        count = 90
+        generate_elcorPop = yes
+    }
+    while = {
+        count = 5
+        generate_volusPop = yes
+    }
+    while = {
+        count = 5
+        generate_asariPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_erinle_pops = {
+    while = {
+        count = 90
+        generate_salarianPop = yes
+    }
+    while = {
+        count = 5
+        generate_volusPop = yes
+    }
+    while = {
+        count = 5
+        generate_asariPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_yalson_pops = {
+    while = {
+        count = 45
+        generate_salarianPop = yes
+    }
+    while = {
+        count = 20
+        generate_turianPop = yes
+    }
+    while = {
+        count = 20
+        generate_humanPop = yes
+    }
+    while = {
+        count = 15
+        generate_asariPop = yes
+    }
+    while = {
+        count = 5
+        generate_volusPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_flett_pops = {
+    while = {
+        count = 70
+        generate_vorchaPop = yes
+    }
+    while = {
+        count = 25
+        generate_kroganPop = yes
+    }
+    while = {
+        count = 5
+        generate_batarianPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_freedoms_progress_pops = {
+    while = {
+        count = 85
+        generate_humanPop = yes
+    }
+    while = {
+        count = 5
+        generate_asariPop = yes
+    }
+    while = {
+        count = 5
+        generate_volusPop = yes
+    }
+    while = {
+        count = 5
+        generate_salarianPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_ishtar_pops = {
+    while = {
+        count = 55
+        generate_salarianPop = yes
+    }
+    while = {
+        count = 20
+        generate_humanPop = yes
+    }
+    while = {
+        count = 10
+        generate_asariPop = yes
+    }
+    while = {
+        count = 10
+        generate_volusPop = yes
+    }
+    while = {
+        count = 5
+        generate_turianPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_jenera_pops = {
+    while = {
+        count = 60
+        generate_batarianPop = yes
+    }
+    while = {
+        count = 10
+        generate_salarianPop = yes
+    }
+    while = {
+        count = 5
+        generate_volusPop = yes
+    }
+    while = {
+        count = 10
+        generate_humanPop = yes
+    }
+    while = {
+        count = 10
+        generate_asariPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_korlus_pops = {
+    while = {
+        count = 65
+        generate_kroganPop = yes
+    }
+    while = {
+        count = 30
+        generate_vorchaPop = yes
+    }
+    while = {
+        count = 10
+        generate_batarianPop = yes
+    }
+    while = {
+        count = 10
+        generate_humanPop = yes
+    }
+    while = {
+        count = 5
+        generate_asariPop = yes
+    }
+    while = {
+        count = 5
+        generate_volusPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_kosh_pops = {
+    while = {
+        count = 60
+        generate_asariPop = yes
+    }
+    while = {
+        count = 10
+        generate_humanPop = yes
+    }
+    while = {
+        count = 10
+        generate_salarianPop = yes
+    }
+    while = {
+        count = 10
+        generate_volusPop = yes
+    }
+    while = {
+        count = 5
+        generate_turianPop = yes
+    }
+    while = {
+        count = 5
+        generate_hanarPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_sahi_dau_pops = {
+    while = {
+        count = 65
+        generate_volusPop = yes
+    }
+    while = {
+        count = 10
+        generate_kroganPop = yes
+    }
+    while = {
+        count = 10
+        generate_turianPop = yes
+    }
+    while = {
+        count = 5
+        generate_asariPop = yes
+    }
+    while = {
+        count = 5
+        generate_humanPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_logarisi_pops = {
+    while = {
+        count = 65
+        generate_batarianPop = yes
+    }
+    while = {
+        count = 10
+        generate_humanPop = yes
+    }
+    while = {
+        count = 10
+        generate_asariPop = yes
+    }
+    while = {
+        count = 5
+        generate_turianPop = yes
+    }
+    while = {
+        count = 5
+        generate_volusPop = yes
+    }
+    while = {
+        count = 5
+        generate_quarianPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
+}
+
+generate_monrini_pops = {
+    while = {
+        count = 75
+        generate_salarianPop = yes
+    }
+    while = {
+        count = 10
+        generate_asariPop = yes
+    }
+    while = {
+        count = 10
+        generate_humanPop = yes
+    }
+    while = {
+        count = 5
+        generate_volusPop = yes
+    }
+    every_owned_pop_group = { set_pop_group_flag = init_spawn }
 }
 
 generate_namakli_pops = {

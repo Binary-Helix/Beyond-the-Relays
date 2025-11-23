@@ -2405,33 +2405,33 @@ sys_crete_init = {
 		deposit_blockers = none
         modifiers = none
 		entity = "mesa_planet_01_entity"
-		# init_effect = {
-		# 	save_global_event_target_as = ishtarHomeworld
-        #     if = {
-        #         limit = {
-        #             exists = event_target:ishtarHomeworld
-        #         }
-        #         log = "Ishtar Emporium Event Target Set"
-        #     }
-        #     prevent_anomaly = yes
-		#
-		# 	generate_ishtar_emporium_country = yes
-		#
-		# 	set_capital = yes
-		# 	set_owner = event_target:ishtar_emporium
-		# 	create_colony = {
-		# 		owner = event_target:ishtar_emporium
-		# 		species = event_target:salarianSpecies
-		# 		ethos = owner
-		# 	}
-		#
-		# 	generate_ishtar_pops = yes
-		#
-		# 	add_modifier = {
-		# 		modifier = mesa_world
-		# 		days = -1
-		# 	}
-		# }
+		init_effect = {
+			save_global_event_target_as = ishtarHomeworld
+            if = {
+                limit = {
+                    exists = event_target:ishtarHomeworld
+                }
+                log = "Ishtar Emporium Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_ishtar_emporium_country = yes
+
+			set_capital = yes
+			set_owner = event_target:ishtar_emporium
+			create_colony = {
+				owner = event_target:ishtar_emporium
+				species = event_target:salarianSpecies
+				ethos = owner
+			}
+            inline_script = game_start/independnet_world
+			generate_ishtar_pops = yes
+
+			add_modifier = {
+				modifier = mesa_world
+				days = -1
+			}
+		}
     }
 
 	planet = {
