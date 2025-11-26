@@ -82,3 +82,503 @@ if = {
     add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
     add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_mining }
 }
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = aite_war_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_stronghold
+    add_building = building_precinct_house
+    add_building = building_commercial_zone
+    add_building = building_factory_2
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = reign_pri_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_commercial_megaplex
+    add_building = building_galactic_stock_exchange
+    add_building = building_hyper_entertainment_forum
+    add_building = building_factory_2
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = reign_pri_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_gaiaseeders_1
+    add_building = building_gaiaseeders_2
+    add_building = building_communal_housing_large
+    add_building = building_medical_2
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = mining_ope_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_mineral_purification_plant
+    add_building = building_foundry_2
+    add_building = building_communal_housing_large
+    add_building = building_hyper_entertainment_forum
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 6 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = libertarian_fou_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_stronghold
+    add_building = building_foundry_2
+    add_building = building_autochthon_monument
+    add_building = building_hyper_entertainment_forum
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 6 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = reign_pri_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_factory_3
+    add_building = building_foundry_2
+    add_building = building_commercial_zone
+    add_building = building_hyper_entertainment_forum
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = antialliance_com_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_factory_3
+    add_building = building_foundry_2
+    add_building = building_medical_2
+    add_building = building_hyper_entertainment_forum
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 6 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = sovereign_blo_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_research_lab_3
+    add_building = building_medical_2
+    add_building = building_commercial_zone
+    add_building = building_hyper_entertainment_forum
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = unethical_res_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_research_lab_3
+    add_building = building_medical_2
+    add_building = building_research_efficiency_1
+    add_building = building_research_lab_2
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = flett_tra_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_communal_housing_large
+    add_building = building_medical_2
+    add_building = building_foundry_1
+    add_building = building_stronghold
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = free_port_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_hyper_entertainment_forum
+    add_building = building_holo_theatres
+    add_building = building_commercial_zone
+    add_building = building_stronghold
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = korlus_rec_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_low_tech_scrap_refinery
+    add_building = building_omega_scrap_garage
+    add_building = building_commercial_zone
+    add_building = building_stronghold
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = defensive_tra_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_holo_theatres
+    add_building = building_commercial_megaplex
+    add_building = building_galactic_stock_exchange
+    add_building = building_fortress
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = criminal_den_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_slave_major_capital
+    add_building = building_slave_processing
+    add_building = building_batarian_slave_market
+    add_building = building_precinct_house
+    add_building = building_mineral_purification_hub
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = polity_anh_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_stronghold
+    add_building = building_batarian_slave_market
+    add_building = building_commercial_zone
+    add_building = building_factory_2
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = mining_ope_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_mineral_purification_plant
+    add_building = building_foundry_2
+    add_building = building_commercial_zone
+    add_building = building_factory_2
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 6 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = unchecked_rep_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_holo_theatres
+    add_building = building_autochthon_monument
+    add_building = building_commercial_zone
+    add_building = building_luxury_residence
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 6 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = state_gar_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_stronghold
+    add_building = building_foundry_1
+    add_building = building_commercial_zone
+    add_building = building_mineral_purification_plant
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 6 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = trident_exp_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_holo_theatres
+    add_building = building_hyper_entertainment_forum
+    add_building = building_commercial_zone
+    add_building = building_mineral_purification_plant
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 6 district = district_mining }
+}
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                is_country_type = planet_state
+            }
+            owner = {
+                has_origin = zorya_sov_origin
+            }
+        }
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+    add_building = building_capital
+    add_building = building_fortress
+    add_building = building_autochthon_monument
+    add_building = building_commercial_zone
+    add_building = building_foundry_2
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_ps_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_farming }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 6 district = district_mining }
+}
