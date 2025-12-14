@@ -1,0 +1,61 @@
+namespace = btr_independent_worlds
+
+#btr_independent_worlds.1: Establish citizenship and living standards for Independent Worlds
+#Reference btr_game_start.11
+country_event = {
+	id = btr_independent_worlds.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+        #Every Independent World Main Species Citizenship and Standards
+        random_country = {
+            limit = {
+                has_country_flag = btr_independent_colony
+            }
+            every_owned_pop_species = {
+                limit = {
+                    is_same_species = owner_species
+                }
+                set_citizenship_type = {
+                    country = root
+                    type = citizenship_full
+                    cooldown = yes
+                }
+                set_living_standard = {
+                    country = root
+                    type = living_standard_utopian
+                    cooldown = yes
+                }
+            }
+        }
+        # Noveria
+        # Anhur
+	}
+}
+
+#########################
+### Opinion Modifiers ###
+#########################
+
+# IW.10 & IW.11 & IW.17
+country_event = {
+    id = btr_independent_worlds.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+
+    }
+}
+
+#####################
+### FIRST CONTACT ###
+#####################
+
+#IW.13 - repurpose as generic planet state first contact
+
+###############################
+### Trade Deals & Diplomacy ###
+###############################
+#Use IW.100 through IW1005 is your individual colony framework put into country specific event file.
