@@ -414,6 +414,16 @@ country_event = {
 				}
 			}
 		}
+        if = {
+            limit = { has_active_aite_trade_deal = yes }
+            every_country = {
+                limit = { has_country_flag = ps_aite }
+                add_trust = {
+                    who = Root
+                    amount = 2
+                }
+            }
+        }
 	}
 }
 
@@ -524,6 +534,10 @@ country_event = {
 			limit = { From = { has_country_flag = ps_pacifist } }
 			country_event = { id = iw.4000 }
 		}
+        if = {
+            limit = { from = { has_country_flag = ps_aite } }
+            country_event = { id = iw.3000 }
+        }
 	}
 }
 

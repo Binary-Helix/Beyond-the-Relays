@@ -208,6 +208,7 @@ country_event = {
 			ps_authoritarian = { from = { country_event = { id = ps.14 } } }
 			ps_militarist = { from = { country_event = { id = ps.15 } } }
 			ps_pacifist = { from = { country_event = { id = ps.16 } } }
+            ps_aite = { from = { country_event = { id = ps.14 } } }
 		}
 	}
 }
@@ -414,6 +415,18 @@ country_event = {
 				}
 			}
 		}
+        if = {
+            limit = { has_active_aite_trade_deal = yes }
+            every_country = {
+                limit = {
+                    has_country_flag = ps_aite
+                }
+                add_trust = {
+                    who = root
+                    amount = 2
+                }
+            }
+        }
 	}
 }
 
@@ -431,6 +444,7 @@ country_event = {
 			has_active_ps_authoritarian_trade_deal = yes
 			has_active_ps_militarist_trade_deal = yes
 			has_active_ps_pacifist_trade_deal = yes
+            has_active_aite_trade_deal = yes
 		}
 	}
 
@@ -446,6 +460,17 @@ country_event = {
 				}
 			}
 		}
+        if = {
+            limit = { has_active_aite_trade_deal = yes }
+            remove_aite_trade_deal = yes
+            every_country = {
+                limit = { has_country_flag = ps_aite }
+                add_trust = {
+                    who = Root
+                    amount = -20
+                }
+            }
+        }
 		if = {
 			limit = { has_active_ps_authoritarian_trade_deal = yes }
 			remove_ps_authoritarian_trade_deal = yes
@@ -524,6 +549,10 @@ country_event = {
 			limit = { From = { has_country_flag = ps_pacifist } }
 			country_event = { id = ps.4000 }
 		}
+        if = {
+            limit = { From = { has_country_flag = ps_aite } }
+            country_event = { id = ps.3000 }
+        }
 	}
 }
 
@@ -1907,19 +1936,25 @@ country_event = {
 		from = {
 			is_country_type = planet_state
 			has_country_flag = ps_militarist
+            has_country_flag = ps_aite
 		}
 		NOT = { has_country_flag = ps_militarist_diplomacy_engaged }
+        NOT = { has_country_flag = ps_aite_diplomacy_engaged }
 		NOT = { has_country_flag = attacked_ps_militarist }
+        NOT = { has_country_flag = attacked_ps_aite }
 	}
 
 	immediate = {
 		set_country_flag = ps_militarist_diplomacy_engaged
+        set_country_flag = ps_aite_diplomacy_engaged
 		From = { save_event_target_as = target_ps_militarist }
+        From = { save_event_target_as = target_ps_aite }
 	}
 
 	after = {
 		hidden_effect = {
 			remove_country_flag = ps_militarist_diplomacy_engaged
+            remove_country_flag = ps_aite_diplomacy_engaged
 		}
 	}
 
@@ -1930,7 +1965,7 @@ country_event = {
 		allow = {
 			custom_tooltip = {
 				fail_text = ps.300.a.alreadyhired
-				has_active_ps_militarist_trade_deal = no
+				has_active_aite_trade_deal = no
 			}
 		}
 		hidden_effect = {
@@ -1942,9 +1977,9 @@ country_event = {
 		name = ps.300.ab
 		response_text = ps.300.ab.reply
 		is_dialog_only = yes
-		trigger = { has_active_ps_militarist_trade_deal = yes }
+		trigger = { has_active_aite_trade_deal = yes }
 		custom_tooltip = ps.300.ab.tooltip
-		hidden_effect = { remove_ps_militarist_trade_deal = yes }
+		hidden_effect = { remove_aite_trade_deal = yes }
 	}
 
 	# Commercial pact (ps.320)
@@ -1954,7 +1989,7 @@ country_event = {
 		allow = {
 			custom_tooltip = {
 				fail_text = ps.300.b.opinion
-				event_target:target_ps_militarist = {
+				event_target:target_ps_aite = {
 					trust = {
 						who = Root
 						value >= 50
@@ -1977,7 +2012,7 @@ country_event = {
 		default_hide_option = yes
 		trigger = { is_homicidal = no }
 		hidden_effect = {
-			remove_country_flag = ps_militarist_diplomacy_engaged
+			remove_country_flag = ps_aite_diplomacy_engaged
 		}
 	}
 
@@ -1985,21 +2020,21 @@ country_event = {
 		name = SCUM
 		trigger = { has_valid_civic = civic_fanatic_purifiers }
 		hidden_effect = {
-			remove_country_flag = ps_militarist_diplomacy_engaged
+			remove_country_flag = ps_aite_diplomacy_engaged
 		}
 	}
 	option = {
 		name = TASTY
 		trigger = { has_valid_civic = civic_hive_devouring_swarm }
 		hidden_effect = {
-			remove_country_flag = ps_militarist_diplomacy_engaged
+			remove_country_flag = ps_aite_diplomacy_engaged
 		}
 	}
 	option = {
 		name = EXTERMINATE
 		trigger = { has_valid_civic = civic_machine_terminator }
 		hidden_effect = {
-			remove_country_flag = ps_militarist_diplomacy_engaged
+			remove_country_flag = ps_aite_diplomacy_engaged
 		}
 	}
 }
@@ -2091,6 +2126,131 @@ country_event = {
 		}
 	}
 }
+#Aite Deal
+country_event = {
+    id = ps.3101
+    title = ps.3101.name
+    desc = ps.3101.desc
+    location = event_target:ps_militarist_planet
+
+    is_triggered_only = yes
+    diplomatic = yes
+
+    picture_event_data = {
+        portrait = event_target:target_ps_militarist
+        planet_background = event_target:target_ps_militarist
+        graphical_culture = event_target:target_ps_militarist
+        city_level = event_target:target_ps_militarist
+        room = personality_honorbound_warriors_room
+    }
+
+    immediate = {
+        set_country_flag = ps_aite_diplomacy_engaged
+    }
+
+    after = {
+        hidden_effect = {
+            remove_country_flag = ps_aite_diplomacy_engaged
+        }
+    }
+
+    # 10 Alloys for 40 Energy
+    option = {
+        name = ps.3101.a
+        allow = {
+            hidden_trigger = {
+                NOT = { has_country_flag = attacked_ps_aite }
+            }
+        }
+        add_modifier = {
+            modifier = modifier_aite_trade_deal_1
+        }
+        custom_tooltip = ps.yearly.opinion
+        hidden_effect = {
+            country_event = { id = ps.311 }
+        }
+    }
+    # 20 Alloys for 80 Energy
+    option = {
+        name = ps.3101.b
+        allow = {
+            hidden_trigger = {
+                NOT = { has_country_flag = attacked_ps_aite }
+            }
+        }
+        add_modifier = {
+            modifier = modifier_aite_trade_deal_2
+        }
+        custom_tooltip = ps.yearly.opinion
+        hidden_effect = {
+            country_event = { id = ps.311 }
+        }
+    }
+    # 30 Alloys for 120 Energy
+    option = {
+        name = ps.3101.c
+        allow = {
+            hidden_trigger = {
+                NOT = { has_country_flag = attacked_ps_aite }
+            }
+        }
+        add_modifier = {
+            modifier = modifier_aite_trade_deal_3
+        }
+        custom_tooltip = ps.yearly.opinion
+        hidden_effect = {
+            country_event = { id = ps.311 }
+        }
+    }
+    # 40 Alloys for 160 Energy
+    option = {
+        name = ps.3101.d
+        allow = {
+            hidden_trigger = {
+                NOT = { has_country_flag = attacked_ps_aite }
+            }
+        }
+        add_modifier = {
+            modifier = modifier_aite_trade_deal_4
+        }
+        custom_tooltip = ps.yearly.opinion
+        hidden_effect = {
+            country_event = { id = ps.311 }
+        }
+    }
+    # 50 Alloys for 200 Energy
+    option = {
+        name = ps.3101.e
+        allow = {
+            hidden_trigger = {
+                NOT = { has_country_flag = attacked_ps_aite }
+            }
+        }
+        add_modifier = {
+            modifier = modifier_aite_trade_deal_5
+        }
+        custom_tooltip = ps.yearly.opinion
+        hidden_effect = {
+            country_event = { id = ps.311 }
+        }
+    }
+
+    # Back to the main menu
+    option = {
+        name = ps.310.back
+        hidden_effect = {
+            country_event = { id = ps.301 }
+        }
+    }
+    # End
+    option = {
+        name = ps.300.goodbye
+        default_hide_option = yes
+    }
+}
+
+
+
 
 # ps.310: Resource Deal
 country_event = {

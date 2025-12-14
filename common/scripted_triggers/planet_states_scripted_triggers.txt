@@ -16,6 +16,16 @@ is_appropriate_planet_state_system = {
 		has_anomaly = no
 	}
 }
+#TODO Give ability to hire 5 ground armies from mercenary companies and the ability to hire commanders from marauders to Aite
+has_active_aite_trade_deal = {
+    OR = {
+        has_modifier = modifier_aite_trade_deal_1
+        has_modifier = modifier_aite_trade_deal_2
+        has_modifier = modifier_aite_trade_deal_3
+        has_modifier = modifier_aite_trade_deal_4
+        has_modifier = modifier_aite_trade_deal_5
+    }
+}
 
 has_active_ps_egalitarian_trade_deal = {
 	OR = {
