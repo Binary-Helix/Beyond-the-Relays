@@ -6,7 +6,6 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_ship_part_reactor_booster_1"
 	icon_frame = 1
-	power = 20
 	resources = {
 		category = ship_components
 		cost = {
@@ -22,6 +21,10 @@ utility_component_template = {
 	component_set = "REACTOR_BOOSTER_1"
 	upgrades_to = "REACTOR_BOOSTER_2"
 
+	modifier = {
+		ship_reactor_power_mult = 0.20
+	}
+
 	ai_weight = {
 		weight = 1
 	}
@@ -32,7 +35,6 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_ship_part_reactor_booster_2"
 	icon_frame = 1
-	power = 50
 	resources = {
 		category = ship_components
 		cost = {
@@ -48,6 +50,10 @@ utility_component_template = {
 	component_set = "REACTOR_BOOSTER_2"
 	upgrades_to = "REACTOR_BOOSTER_3"
 
+	modifier = {
+		ship_reactor_power_mult = 0.33
+	}
+
 	ai_weight = {
 		weight = 3
 	}
@@ -58,7 +64,6 @@ utility_component_template = {
 	size = aux
 	icon = "GFX_ship_part_reactor_booster_3"
 	icon_frame = 1
-	power = 100
 	resources = {
 		category = ship_components
 		cost = {
@@ -72,6 +77,10 @@ utility_component_template = {
 
 	prerequisites = { "tech_reactor_boosters_3" }
 	component_set = "REACTOR_BOOSTER_3"
+
+	modifier = {
+		ship_reactor_power_mult = 0.50
+	}
 
 	ai_weight = {
 		weight = 5
@@ -474,6 +483,46 @@ utility_component_template = {
 }
 
 utility_component_template = {
+	key = "CRADLE_MARK"
+	size = aux
+	icon = "GFX_ship_part_cradle_covenant_aux"
+	icon_frame = 1
+	power = -20
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = 20
+			#sr_zro = 2
+			light_alloys = 14
+			heavy_alloys = 6
+			eezo = 0.25
+		}
+	}
+
+	ship_modifier = {
+		diplo_weight_ship_mult = 0.5
+		ship_shield_mult = 0.10
+	}
+
+	potential = {
+		is_ship_class = shipclass_military
+	}
+	prerequisites = { tech_covenant_cradle }
+	component_set = "CRADLE_MARK"
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			has_country_resource = {
+				type = eezo
+				amount < 100
+			}
+		}
+	}
+}
+
+utility_component_template = {
 	key = "WHISPERERS_MARK"
 	size = aux
 	icon = "GFX_ship_part_whisperers_covenant_aux"
@@ -562,7 +611,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -10
 
-	ship_modifier = {
+	modifier = {
 		ship_armor_mult = 0.08
 	}
 

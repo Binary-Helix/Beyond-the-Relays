@@ -238,17 +238,6 @@ building_maintenance_depot = {
 		exists = owner
 		owner = { is_gestalt = yes }
 		owner = { is_wilderness_empire = no }
-		
-		OR = {
-			has_planet_flag = ignore_ai_building_limitations
-			owner = {
-				is_ai = no					
-			}
-			
-			# AI is allowed to build one of these unless this is a trade planet
-			has_any_trade_zone = yes
-			NOT = {	has_building = building_maintenance_depot }
-		}	
 	}
 
 	destroy_trigger = {

@@ -1457,7 +1457,7 @@ d_trade_value_1 = {
 			trade = 1
 		}
 	}
-
+	station = shipclass_mining_station
 	potential = {
 		can_have_trade_deposits = yes
 	}
@@ -1477,7 +1477,7 @@ d_trade_value_2 = {
 			trade = 2
 		}
 	}
-
+	station = shipclass_mining_station
 	potential = {
 		can_have_trade_deposits = yes
 	}
@@ -1505,7 +1505,7 @@ d_trade_value_3 = {
 			trade = 3
 		}
 	}
-
+	station = shipclass_mining_station
 	potential = {
 		can_have_trade_deposits = yes
 	}
@@ -1533,7 +1533,7 @@ d_trade_value_4 = {
 			trade = 4
 		}
 	}
-
+	station = shipclass_mining_station
 	potential = {
 		can_have_trade_deposits = yes
 	}
@@ -1561,7 +1561,7 @@ d_trade_value_5 = {
 			trade = 5
 		}
 	}
-
+	station = shipclass_mining_station
 	potential = {
 		can_have_trade_deposits = yes
 	}
@@ -1589,7 +1589,7 @@ d_trade_value_6 = {
 			trade = 6
 		}
 	}
-
+	station = shipclass_mining_station
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -1604,7 +1604,7 @@ d_trade_value_7 = {
 			trade = 7
 		}
 	}
-
+	station = shipclass_mining_station
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -1619,7 +1619,7 @@ d_trade_value_8 = {
 			trade = 8
 		}
 	}
-
+	station = shipclass_mining_station
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -1634,7 +1634,7 @@ d_trade_value_9 = {
 			trade = 9
 		}
 	}
-
+	station = shipclass_mining_station
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -1649,7 +1649,7 @@ d_trade_value_10 = {
 			trade = 10
 		}
 	}
-
+	station = shipclass_mining_station
 	potential = { always = no }
 	drop_weight = { weight = 0 }
 }
@@ -1867,6 +1867,21 @@ d_food_5 = {
 		category = orbital_mining_deposits
 		produces = {
 			food = 5
+		}
+	}
+
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_food_6 = {
+	station = shipclass_mining_station
+	is_for_colonizable = no
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			food = 6
 		}
 	}
 
