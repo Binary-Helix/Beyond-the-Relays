@@ -1,0 +1,562 @@
+btr_precursor_mars_triangle = {
+    desc = btr_precursor_mars_triangle_site_desc
+    picture = #TODO
+    stages = 6
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        owner = {
+            has_origin = systems_all_origin
+        }
+    }
+    visible = {
+        default_site_visible_trigger = yes
+        has_origin = systems_all_origin
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_precursor_all.1
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = btr_precursor_all.2
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_all.3
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_all.4
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_all.5
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_all.6
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+btr_precursor_original_pillar = {
+    desc = btr_precursor_original_pillar_site_desc
+    picture = #TODO
+    stages = 6
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        owner = {
+            has_origin = asari_rep_origin
+        }
+    }
+    visible = {
+        default_site_visible_trigger = yes
+        has_origin = asari_rep_origin
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_precursor_asari.1
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = btr_precursor_asari.2
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_asari.3
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_asari.4
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_asari.5
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_asari.6
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+btr_precursor_ancient_return = {
+    desc = btr_precursor_ancient_return_site_desc
+    picture = #TODO
+    stages = 6
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        owner = {
+            has_origin = hegemony_kha_origin
+        }
+    }
+    visible = {
+        default_site_visible_trigger = yes
+        has_origin = hegemony_kha_origin
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_precursor_hegemony.1
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = btr_precursor_hegemony.2
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_hegemony.3
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_hegemony.4
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_hegemony.5
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_hegemony.6
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+btr_precursor_new_report = {
+    desc = btr_precursor_new_report_site_desc
+    picture = #TODO
+    stages = 6
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        owner = {
+            has_origin = courts_dek_origin
+        }
+    }
+    visible = {
+        default_site_visible_trigger = yes
+        has_origin = courts_dek_origin
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_precursor_elcor.1
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = btr_precursor_elcor.2
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_elcor.3
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_elcor.4
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_elcor.5
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_elcor.6
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+btr_precursor_everywhere = {
+    desc = btr_precursor_everywhere_site_desc
+    picture = #TODO
+    stages = 6
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        owner = {
+            has_origin = illuminated_pri_origin
+        }
+    }
+    visible = {
+        default_site_visible_trigger = yes
+        has_origin = illuminated_pri_origin
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_precursor_hanar.1
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = btr_precursor_hanar.2
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_hanar.3
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_hanar.4
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_hanar.5
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_hanar.6
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+btr_precursor_ice_canals = {
+    desc = btr_precursor_ice_canals_site_desc
+    picture = #TODO
+    stages = 6
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        owner = {
+            has_origin = salarian_uni_origin
+        }
+    }
+    visible = {
+        default_site_visible_trigger = yes
+        has_origin = salarian_uni_origin
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_precursor_salarian.1
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = btr_precursor_salarian.2
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_salarian.3
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_salarian.4
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_salarian.5
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_salarian.6
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+btr_precursor_preexisting_cover = {
+    desc = btr_precursor_preexisting_cover_site_desc
+    picture = #TODO
+    stages = 5
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        owner = {
+            has_origin = turian_hier_origin
+        }
+    }
+    visible = {
+        default_site_visible_trigger = yes
+        has_origin = turian_hier_origin
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_precursor_turian.1
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = btr_precursor_turian.2
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_turian.3
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_turian.4
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_turian.5
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+
+#btr_precursor_forgotten_sibling = {
+#    desc = btr_precursor_forgotten_sibling_site_desc
+#    picture = #TODO
+#    stages = 5
+#    max_instances = 1
+#    allow = {
+#        is_a_planet = yes
+#        exists = owner
+#        owner = {
+#            has_origin = vol_pro_origin
+#        }
+#    }
+#    visible = {
+#        default_site_visible_trigger = yes
+#        has_origin = vol_pro_origin
+#    }
+#
+#    stage = {
+#        difficulty = 1
+#        icon = GFX_archaeology_runes_F1
+#        event = btr_precursor_volus.1
+#    }
+#    stage = {
+#        difficulty = 1
+#        icon = GFX_archaeology_runes_F2
+#        event = btr_precursor_volus.2
+#    }
+#    stage = {
+#        difficulty = 2
+#        icon = GFX_archaeology_runes_F3
+#        event = btr_precursor_volus.3
+#    }
+#
+#    stage = {
+#        difficulty = 2
+#        icon = GFX_archaeology_runes_F3
+#        event = btr_precursor_volus.4
+#    }
+#
+#    stage = {
+#        difficulty = 2
+#        icon = GFX_archaeology_runes_F3
+#        event = btr_precursor_volus.5
+#    }
+#
+#    on_roll_failed = {
+#        from = {
+#            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+#        }
+#    }
+#}
+
+btr_precursor_artificial_jewel = {
+    desc = btr_precursor_artificial_jewel_site_desc
+    picture = #TODO
+    stages = 6
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        owner = {
+            has_origin = sedriicae_col_origin
+        }
+    }
+    visible = {
+        default_site_visible_trigger = yes
+        has_origin = sedriicae_col_origin
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_precursor_collective.1
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = btr_precursor_collective.2
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_collective.3
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_collective.4
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_collective.5
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_collective.6
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+btr_precursor_unnatural_mountains = {
+    desc = btr_precursor_unnatural_mountains_site_desc
+    picture = #TODO
+    stages = 5
+    max_instances = 1
+    allow = {
+        is_a_planet = yes
+        exists = owner
+        owner = {
+            has_origin = sedriicae_col_origin
+        }
+    }
+    visible = {
+        default_site_visible_trigger = yes
+        has_origin = sedriicae_col_origin
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F1
+        event = btr_precursor_collective.7
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_F2
+        event = btr_precursor_collective.8
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_collective.9
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_collective.10
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F3
+        event = btr_precursor_collective.11
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}

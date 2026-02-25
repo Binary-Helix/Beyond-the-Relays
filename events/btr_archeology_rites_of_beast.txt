@@ -1,0 +1,137 @@
+################################
+#
+# Beyond the Relays Rites of the Beast
+#
+# Written by Diamond
+#
+#
+################################
+
+namespace = btr_archeology_rites_of_beast
+
+# Zroni Introduction
+# via on_survey = {} | this = surveying vessel
+ship_event = {
+    id = btr_archeology_rites_of_beast.1
+    title = "btr_archeology_rites_of_beast.name"
+    desc = "btr_archeology_rites_of_beast.desc"
+    picture = #TODO
+    location = from
+    show_sound = event_wind_ruins
+    fire_only_once = yes
+    #   is_triggered_only = yes
+
+    trigger = {
+        host_has_dlc = "Ancient Relics Story Pack"
+        FROM = {
+            has_anomaly = no
+            is_colony = yes
+            planet = {
+                is_capital = yes
+            }
+            habitable_planet = yes
+            owner = {
+                has_origin = aralakh_kah_origin
+            }
+        }
+    }
+
+    immediate = {
+        from = { prevent_anomaly = yes }
+    }
+
+    option = {
+        name = btr_archeology_rites_of_beast.a
+    }
+}
+
+#zroni_digsite_1
+fleet_event = {
+    id = btr_archeology_rites_of_beast.2
+    title = "btr_archeology_rites_of_beast.1.name"
+    desc = btr_archeology_rites_of_beast.1.desc
+    picture = #TODO
+    show_sound = event_wind_ruins
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_archeology_rites_of_beast.1.a
+        medium_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = btr_archeology_rites_of_beast.3
+    title = "btr_archeology_rites_of_beast.2.name"
+    desc = btr_archeology_rites_of_beast.2.desc
+    picture = #TODO
+    show_sound = event_whispering
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_archeology_rites_of_beast.2.a
+        medium_artifact_reward = yes
+    }
+}
+
+fleet_event = {
+    id = btr_archeology_rites_of_beast.4
+    title = btr_archeology_rites_of_beast.3.name
+    desc = btr_archeology_rites_of_beast.3.desc
+    picture = GFX_evt_zro_1
+    show_sound = event_energy_field
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+
+    option = {
+        name = btr_archeology_rites_of_beast.3.a
+        large_artifact_reward = yes
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = @tier2unityreward
+                max = @tier2unitymax
+                min = @tier2unitymin
+            }
+        }
+    }
+}
+fleet_event = {
+    id = btr_archeology_rites_of_beast.5
+    title = btr_archeology_rites_of_beast.4.name
+    desc = btr_archeology_rites_of_beast.4.desc
+    picture = GFX_evt_zro_1
+    show_sound = event_energy_field
+    location = from
+
+    archaeology = yes
+
+    is_triggered_only = yes
+
+
+    option = {
+        name = btr_archeology_rites_of_beast.4.a
+        large_artifact_reward = yes
+        owner = {
+            add_monthly_resource_mult = {
+                resource = unity
+                value = @tier2unityreward
+                min = @tier2unitymin
+                max = @tier2unitymax
+            }
+            add_modifier = { modifier = rite_of_beast }
+        }
+    }
+}

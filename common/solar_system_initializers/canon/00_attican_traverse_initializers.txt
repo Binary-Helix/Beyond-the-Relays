@@ -22,6 +22,7 @@ sys_ietus_init = {
         class = pc_l_star
         orbit_distance = 0
         size = 20
+        flags = { ietus_star }
     }
 
     planet = {
@@ -30,6 +31,7 @@ sys_ietus_init = {
         orbit_distance = 70
         orbit_angle = 86
         size = 8
+        flags = { khofas_planet }
         has_ring = no
     }
 
@@ -39,6 +41,7 @@ sys_ietus_init = {
         orbit_distance = 70
         orbit_angle = 10
         size = 13
+        flags = { nisissinia_planet }
         has_ring = no
     }
 
@@ -48,6 +51,7 @@ sys_ietus_init = {
         orbit_distance = 70
         orbit_angle = 266
         size = 21
+        flags = { keijin_planet }
         has_ring = no
     }
 
@@ -57,6 +61,7 @@ sys_ietus_init = {
         orbit_distance = 70
         orbit_angle = 193
         size = 15
+        flags = { matora_planet }
         has_ring = no
     }
 
@@ -66,6 +71,7 @@ sys_ietus_init = {
         orbit_distance = 70
         orbit_angle = 102
         size = 37
+        flags = { kalenthia_planet }
         has_ring = no
     }
 
@@ -75,6 +81,7 @@ sys_ietus_init = {
         orbit_distance = 70
         orbit_angle = 105
         size = 12
+        flags = { tlonus_planet }
         has_ring = no
     }
 
@@ -84,6 +91,7 @@ sys_ietus_init = {
         orbit_distance = 80
         orbit_angle = 90
         size = 7
+        flags = { haro_planet }
         has_ring = no
     }
 }
@@ -105,6 +113,7 @@ sys_lucnetra_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 20
+        flags = { lucnetra_star }
     }
 	
 	change_orbit = 80
@@ -122,6 +131,7 @@ sys_lucnetra_init = {
         orbit_distance = 80
         orbit_angle = 83
         size = 10
+        flags = { jannior_planet }
         has_ring = no
     }
 
@@ -131,6 +141,7 @@ sys_lucnetra_init = {
         orbit_distance = 80
         orbit_angle = 352
         size = 15
+        flags = { eundolos_planet }
         has_ring = no
     }
 
@@ -140,6 +151,7 @@ sys_lucnetra_init = {
         orbit_distance = 80
         orbit_angle = 327
         size = 22
+        flags = { gikratea_planet }
         has_ring = no
     }
 
@@ -149,6 +161,7 @@ sys_lucnetra_init = {
         orbit_distance = 80
         orbit_angle = 345
         size = 14
+        flags = { deraios_planet }
         has_ring = no
 
     }
@@ -159,6 +172,7 @@ sys_lucnetra_init = {
         orbit_distance = 80
         orbit_angle = 359
         size = 12
+        flags = { beran_planet }
         has_ring = no
 
     }
@@ -176,6 +190,7 @@ sys_matoshi_init = {
         class = pc_g_giant_star
         orbit_distance = 0
         size = 20
+        flags = { matoshi_star }
     }
 
     planet = {
@@ -184,6 +199,7 @@ sys_matoshi_init = {
         orbit_distance = 125
         orbit_angle = 310
         size = 9
+        flags = { lucyrmey_planet }
         has_ring = no
     }
 
@@ -201,6 +217,7 @@ sys_matoshi_init = {
             orbit_distance = 20
             orbit_angle = 53
             size = 3
+            flags = {shylme_planet numebian_planet}
             has_ring = no
         }
 
@@ -210,6 +227,7 @@ sys_matoshi_init = {
             orbit_distance = 5
             orbit_angle = 137
             size = 5
+            flags = { lidxeyia_planet }
             has_ring = no
         }
 
@@ -219,6 +237,7 @@ sys_matoshi_init = {
             orbit_distance = 5
             orbit_angle = 88
             size = 5
+            flags = { calyt_planet }
             has_ring = no
         }
     }
@@ -229,6 +248,7 @@ sys_matoshi_init = {
         orbit_distance = 125
         orbit_angle = 86
         size = 19
+        flags = { dikomia_planet }
         has_ring = no
     }
 
@@ -238,6 +258,7 @@ sys_matoshi_init = {
         orbit_distance = 125
         orbit_angle = 268
         size = 7
+        flags = { voezza_planet }
         has_ring = no
     }
 
@@ -268,6 +289,7 @@ sys_vodous_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 20
+        flags = { vodous_star }
     }
 
     planet = {
@@ -276,6 +298,7 @@ sys_vodous_init = {
         orbit_distance = 125
         orbit_angle = 277
         size = 11
+        flags = { kasiama_planet }
         has_ring = no
 
     }
@@ -286,6 +309,7 @@ sys_vodous_init = {
         orbit_distance = 125
         orbit_angle = 216
         size = 25
+        flags = { jalyti_planet }
         has_ring = no
 
     }
@@ -305,6 +329,7 @@ sys_vodous_init = {
         orbit_distance = 125
         orbit_angle = 226
         size = 16
+        flags = { chalik_planet }
         has_ring = no
 
     }
@@ -336,6 +361,7 @@ sys_chabtan_init = {
         class = pc_m_super_star
         orbit_distance = 0
         size = 45
+        flags = { chabtan_star }
 		has_ring = no
     }
 	
@@ -353,6 +379,7 @@ sys_chabtan_init = {
 			orbit_distance = 20
 			orbit_angle = { min = 90 max = 270 }
 			size = 1
+			flags = {twuiq_planet moscon_planet}
 		}
 	}
 
@@ -418,6 +445,7 @@ sys_chabtan_init = {
 		orbit_distance = 125
 		orbit_angle = { min = 1 max = 360 }
 		size = 5
+		flags = { libel_planet }
 		has_ring = no
 	}
 
@@ -461,6 +489,7 @@ sys_fragotz_init = {
         class = pc_a_star
         orbit_distance = 0
         size = 40
+        flags = { fragotz_star }
     }
 
 	change_orbit = 145
@@ -494,6 +523,7 @@ sys_koryfi_init = {
         class = pc_b_star
         orbit_distance = 0
         size = 40
+        flags = { koryfi_star }
     }
 
 	planet = {
@@ -502,6 +532,7 @@ sys_koryfi_init = {
         orbit_distance = 250
         orbit_angle = 131
 		size = 3
+		flags = { theoratas_planet }
         has_ring = no
 	}	
 
@@ -511,6 +542,7 @@ sys_koryfi_init = {
         orbit_distance = 250
         orbit_angle = 131
 		size = 3
+		flags = { agrypnia_station_station }
         has_ring = no
     }
 
@@ -520,6 +552,7 @@ sys_koryfi_init = {
         orbit_distance = 250
         orbit_angle = 141
 		size = 8
+		flags = { kor_planet }
         has_ring = no
     }
 }
@@ -537,6 +570,7 @@ sys_ubroni_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 22
+        flags = { ubroni_star }
 	} 
 
     planet = {
@@ -558,6 +592,7 @@ sys_ubroni_init = {
 			orbit_angle = random
 			orbit_distance = 8
 			size = 4
+			flags = {zankep_a_planet zankep_planet}
 		}	
 
 		moon = {
@@ -566,6 +601,7 @@ sys_ubroni_init = {
 			orbit_angle = random
 			orbit_distance = 6
 			size = 6
+			flags = { zankep_b_planet }
 		}
 
 		moon = {
@@ -574,6 +610,7 @@ sys_ubroni_init = {
 			orbit_angle = random
 			orbit_distance = 5
 			size = 3
+			flags = { zankep_c_planet }
 		}		
     }
 
@@ -614,6 +651,7 @@ sys_aquila_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 30
+        flags = { aquila_star }
     }
 
     planet = {
@@ -622,7 +660,7 @@ sys_aquila_init = {
         orbit_distance = 80
         orbit_angle = 322
         size = 34
-		flags = { subclass_world }
+		flags = {subclass_world lepini_planet}
         has_ring = no
 
 		moon = {
@@ -631,6 +669,7 @@ sys_aquila_init = {
 			orbit_angle = 175
 			orbit_distance = 20
 			size = 5
+			flags = { lepini_a_planet }
 		}	
 
 		moon = {
@@ -640,7 +679,7 @@ sys_aquila_init = {
 			orbit_distance = 5
 			size = 5
 			entity = "dust_planet_01_entity"
-			flags = { subclass_world }
+			flags = {subclass_world lepini_b_planet}
 			init_effect = {
 				add_modifier = {
 					modifier = dust_world
@@ -657,7 +696,7 @@ sys_aquila_init = {
         orbit_angle = 174
         size = 16
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world vecchio_planet}
 		entity = "dune_planet_07_entity"
 		init_effect = {
 			add_modifier = {
@@ -674,7 +713,7 @@ sys_aquila_init = {
         orbit_angle = 207
         size = 25
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world volturno_planet}
 		entity = "lichen_planet_09_entity"
 		init_effect = {
 			add_modifier = {
@@ -699,7 +738,7 @@ sys_aquila_init = {
         orbit_angle = 214
         size = 37
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world metaponto_planet}
 	}
 
     planet = {
@@ -709,7 +748,7 @@ sys_aquila_init = {
         orbit_angle = 332
         size = 30
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world pollino_planet}
 
 		moon = {
 			name = "Pollino a"
@@ -718,7 +757,7 @@ sys_aquila_init = {
 			orbit_distance = 20
 			size = 4
 			entity = "ammonia_continental_planet_08_entity"
-			flags = { subclass_world }
+			flags = {subclass_world pollino_a_planet}
 			init_effect = {
 				add_modifier = {
 					modifier = prairie_world
@@ -733,6 +772,7 @@ sys_aquila_init = {
 			orbit_angle = 164
 			orbit_distance = 5
 			size = 3
+			flags = { pollino_b_planet }
 		}		
     }
 
@@ -768,7 +808,7 @@ sys_elysta_init = {
         orbit_angle = 252
         size = 8
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world saleas_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = tidal_locked
@@ -784,7 +824,7 @@ sys_elysta_init = {
         orbit_angle = 185
         size = 11
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world zeona_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = unstable_tectonics
@@ -804,7 +844,7 @@ sys_elysta_init = {
         orbit_angle = 168
         size = 17
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world odasst_planet}
     }
 
     planet = {
@@ -814,7 +854,7 @@ sys_elysta_init = {
         orbit_angle = 84
         size = 29
         has_ring = yes
-		flags = { subclass_world }
+		flags = {subclass_world hesano_planet}
 
 		moon = {
 			name = "Hesano a"
@@ -822,6 +862,7 @@ sys_elysta_init = {
 			orbit_angle = 120
 			orbit_distance = 8
 			size = 3
+			flags = { hesano_a_planet }
 		}	
 
 		moon = {
@@ -830,6 +871,7 @@ sys_elysta_init = {
 			orbit_angle = 265
 			orbit_distance = 8
 			size = 3
+			flags = { hesano_b_planet }
 		}		
     }
 
@@ -840,7 +882,7 @@ sys_elysta_init = {
         orbit_angle = 248
         size = 28
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world melile_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = extensive_moon_system
@@ -855,7 +897,7 @@ sys_elysta_init = {
 			orbit_distance = 8
 			size = 3
 			entity = "basalt_planet_11_entity"
-			flags = { subclass_world }
+			flags = {subclass_world melile_a_planet}
 			init_effect = {
 				add_modifier = {
 					modifier = basalt_world
@@ -869,6 +911,7 @@ sys_elysta_init = {
 			orbit_angle = 17
 			orbit_distance = 8
 			size = 3
+			flags = { melile_b_planet }
 		}
     }	
 
@@ -904,7 +947,7 @@ sys_faia_init = {
         orbit_angle = 210
         size = 5
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world imaen_planet}
     }
 
     planet = {
@@ -952,7 +995,7 @@ sys_faia_init = {
 			orbit_angle = 254
 			orbit_distance = 20
 			size = 5
-			flags = { subclass_world }
+			flags = {subclass_world utrenn_planet}
 
 		}
 
@@ -962,7 +1005,7 @@ sys_faia_init = {
 			orbit_angle = 16
 			orbit_distance = 5
 			size = 4
-			flags = { subclass_world }
+			flags = {subclass_world vechern_planet}
 		}		
     }
 
@@ -973,7 +1016,7 @@ sys_faia_init = {
         orbit_angle = 235
         size = 3
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world viantel_planet}
     }
 
     planet = {
@@ -983,7 +1026,7 @@ sys_faia_init = {
         orbit_angle = 115
         size = 27
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world hito_planet}
 		
 		moon = {
 			name = "Hito a"
@@ -991,6 +1034,7 @@ sys_faia_init = {
 			orbit_angle = 90
 			orbit_distance = 20
 			size = 7
+			flags = { hito_a_planet }
 		}	
 
 		moon = {
@@ -999,6 +1043,7 @@ sys_faia_init = {
 			orbit_angle = 210
 			orbit_distance = 5
 			size = 5
+			flags = { hito_b_planet }
 		}
 
 		moon = {
@@ -1007,6 +1052,7 @@ sys_faia_init = {
 			orbit_angle = 90
 			orbit_distance = 5
 			size = 6
+			flags = { hito_c_planet }
 		}		
 	}	
 }
@@ -1033,7 +1079,7 @@ sys_polienda_init = {
         orbit_angle = 252
         size = 11
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world quintani_planet}
     }
 
 	planet = {
@@ -1043,7 +1089,7 @@ sys_polienda_init = {
         orbit_angle = 252
         size = 11
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world justicas_planet}
 
 		moon = {
 			name = "Cerisoi"
@@ -1051,7 +1097,7 @@ sys_polienda_init = {
 			orbit_distance = 20
 			size = 6
 			has_ring = no
-			flags = { subclass_world}
+			flags = {subclass_world cerisoi_planet}
 		}	
 
 		moon = {
@@ -1060,7 +1106,7 @@ sys_polienda_init = {
 			orbit_distance = 5
 			size = 4
 			has_ring = no
-			flags = { subclass_world}
+			flags = {subclass_world goliandas_planet}
    		}
 	}	
 
@@ -1071,7 +1117,7 @@ sys_polienda_init = {
         orbit_angle = 252
         size = 28
         has_ring = yes
-		flags = { subclass_world }
+		flags = {subclass_world sarumum_planet}
 
 		moon = {
 			name = "Ferbeli"
@@ -1079,7 +1125,7 @@ sys_polienda_init = {
 			orbit_distance = 20
 			size = 2
 			has_ring = no
-			flags = { subclass_world}
+			flags = {subclass_world ferbeli_planet}
 		}	
 
 		moon = {
@@ -1088,7 +1134,7 @@ sys_polienda_init = {
 			orbit_distance = 20
 			size = 5
 			has_ring = no
-			flags = { subclass_world}
+			flags = {subclass_world sansato_planet}
 		}
 	}	
 
@@ -1099,7 +1145,7 @@ sys_polienda_init = {
         orbit_angle = 168
         size = 17
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world norimen_planet}
     }
 
 	planet = {
@@ -1109,7 +1155,7 @@ sys_polienda_init = {
         orbit_angle = 168
         size = 17
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world yayam_planet}
 	}		
 }
 
@@ -1140,6 +1186,7 @@ sys_lusarn_init = {
         orbit_distance = 0
 		orbit_angle = 1
 		size = 25
+		flags = { lusarn_star }
 		has_ring = no
 
 	}
@@ -1151,7 +1198,7 @@ sys_lusarn_init = {
 		orbit_angle = 20
 		size = 36
 		has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world jontan_planet}
 	}
 	
 	planet = {
@@ -1160,6 +1207,7 @@ sys_lusarn_init = {
         orbit_distance = 100
 		orbit_angle = -160
 		size = 19
+		flags = { euntanta_planet }
 		has_ring = no
 	}
 	
@@ -1168,6 +1216,7 @@ sys_lusarn_init = {
 		class = pc_carb_asteroid
         orbit_distance = 50
 		size = 1
+		flags = { beyalt_planet }
 		orbit_angle = { min = 10 max = 190 }
 	}
 
@@ -1184,6 +1233,7 @@ sys_lusarn_init = {
         orbit_distance = 50
 		orbit_angle = 35
 		size = 21
+		flags = { doriae_planet }
 		has_ring = no
 	}
 
@@ -1194,7 +1244,7 @@ sys_lusarn_init = {
 		orbit_angle = -30
 		size = 14
 		has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world tarith_planet}
 		entity = "chlorine_continental_planet_01_entity"
 		init_effect = {
 			add_modifier = {
@@ -1213,7 +1263,7 @@ sys_lusarn_init = {
 		orbit_angle = 25
 		size = 29
 		has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world xetic_planet}
 
 		moon = {
 			name = "Gesis"
@@ -1221,7 +1271,7 @@ sys_lusarn_init = {
 			orbit_angle = { min = 45 max = 270 }
 			orbit_distance = 20
 			size = 6
-			flags = { subclass_world }
+			flags = {subclass_world gesis_planet}
 		}
 	}
 	
@@ -1248,6 +1298,7 @@ sys_ondeste_init = {
         orbit_distance = 0
 		orbit_angle = 1
 		size = 20
+		flags = { ondeste_star }
 		has_ring = no
 	}
 	
@@ -1258,7 +1309,7 @@ sys_ondeste_init = {
 		orbit_angle = 150
 		size = 14
 		has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world zesmeni_planet}
 		entity = "methane_arctic_planet_06_entity"
 		init_effect = {
 			add_modifier = {
@@ -1282,6 +1333,7 @@ sys_ondeste_init = {
 			orbit_angle = { min = 45 max = 270 }
 			orbit_distance = 20
 			size = 10	
+			flags = {acaeria_a_planet acaeria_planet}
 		}
 	}
 	
@@ -1291,6 +1343,7 @@ sys_ondeste_init = {
         orbit_distance = 150
 		orbit_angle = 120
 		size = 9
+		flags = { maisuth_planet }
 		has_ring = no
 	}	
 }
@@ -1318,6 +1371,7 @@ sys_tasale_init = {
 		orbit_distance = 0
 		orbit_angle = 1
 		size = 35
+		flags = { tasale_star }
 		has_ring = no
 	}
 	
@@ -1327,6 +1381,7 @@ sys_tasale_init = {
 		orbit_distance = 100
 		orbit_angle = 15
 		size = 25
+		flags = { beregale_planet }
 		has_ring = no
 	}
 
@@ -1402,6 +1457,7 @@ sys_tasale_init = {
 		orbit_distance = 100
 		orbit_angle = 180
 		size = 14
+		flags = { ponolus_planet }
 		has_ring = no
 	}
 	
@@ -1426,6 +1482,7 @@ sys_tasale_init = {
 		orbit_distance = 0
 		orbit_angle = { min = 40 max = 100 }
 		size = 2
+		flags = { teukria_planet }
 	}
 	
 	planet = {
@@ -1434,6 +1491,7 @@ sys_tasale_init = {
 		orbit_distance = 50
 		orbit_angle = 170
 		size = 38
+		flags = { thail_planet }
 		has_ring = yes
 	}
 	
@@ -1443,6 +1501,7 @@ sys_tasale_init = {
 		orbit_distance = 100
 		orbit_angle = -75
 		size = 34
+		flags = { naxell_planet }
 		has_ring = no
 	}	
 
@@ -1469,6 +1528,7 @@ sys_zelene_init = {
 		orbit_distance = 0
 		orbit_angle = 1
 		size = 20
+		flags = { zelene_star }
 		has_ring = no
 	}
 	
@@ -1479,7 +1539,7 @@ sys_zelene_init = {
 		orbit_angle = 15
 		size = 11
 		has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world nepyma_planet}
 		entity = "chlorine_continental_planet_02_entity"
 		init_effect = {
 			add_modifier = {
@@ -1500,7 +1560,7 @@ sys_zelene_init = {
 		orbit_angle = 45
 		size = 13
 		has_ring = no
-		flags = { subclass_world }	
+		flags = {subclass_world helyme_planet}	
 		entity = "mephitic_tundra_planet_09_entity"
 		init_effect = {
 			add_modifier = {
@@ -1519,7 +1579,7 @@ sys_zelene_init = {
 		orbit_angle = 150
 		size = 20
 		has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world epho_planet}
 		entity = "mephitic_arid_planet_06_entity"
 		init_effect = {
 			add_modifier = {
@@ -1535,6 +1595,7 @@ sys_zelene_init = {
         orbit_distance = 125
 		orbit_angle = -60
 		size = 35
+		flags = { gaelon_planet }
 		has_ring = yes
 	}
 
@@ -1573,6 +1634,7 @@ sys_andril_init = {
         class = pc_b_star
         orbit_distance = 0
         size = 20
+        flags = { andril_star }
     }
 
     planet = {
@@ -1581,6 +1643,7 @@ sys_andril_init = {
         orbit_distance = 70
         orbit_angle = 228
         size = 19
+        flags = { yinnindril_planet }
         has_ring = no
 
     }
@@ -1591,6 +1654,7 @@ sys_andril_init = {
         orbit_distance = 70
         orbit_angle = 222
         size = 32
+        flags = { handerusi_planet }
         has_ring = no
 
     }
@@ -1601,6 +1665,7 @@ sys_andril_init = {
         orbit_distance = 70
         orbit_angle = 94
         size = 1
+        flags = { torsia_planet }
         has_ring = no
     }
 
@@ -1617,6 +1682,7 @@ sys_andril_init = {
         orbit_distance = 70
         orbit_angle = 151
         size = 9
+        flags = { tagnes_planet }
         has_ring = no
 
     }
@@ -1627,6 +1693,7 @@ sys_andril_init = {
         orbit_distance = 70
         orbit_angle = 296
         size = 22
+        flags = { bannas_planet }
         has_ring = no
 
     }
@@ -1637,6 +1704,7 @@ sys_andril_init = {
         orbit_distance = 70
         orbit_angle = 132
         size = 13
+        flags = { opeldeis_planet }
         has_ring = no
 
     }
@@ -1647,6 +1715,7 @@ sys_andril_init = {
         orbit_distance = 70
         orbit_angle = 165
         size = 37
+        flags = { quevfis_planet }
         has_ring = no
 
     }
@@ -1673,6 +1742,7 @@ sys_dalal_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 20
+        flags = { dalal_star }
     }
 
     planet = {
@@ -1689,6 +1759,7 @@ sys_dalal_init = {
             orbit_distance = 20
             orbit_angle = 180
             size = 3
+            flags = {gindirael_planet taluse_planet}
             has_ring = no
         }
     }
@@ -1699,6 +1770,7 @@ sys_dalal_init = {
         orbit_distance = 150
         orbit_angle = 122
         size = 11
+        flags = { mindas_planet }
         has_ring = no
     }
 
@@ -1729,6 +1801,7 @@ sys_jispae_init = {
         class = pc_t_star
         orbit_distance = 0
         size = 20
+        flags = { jispae_star }
     }
 
     planet = {
@@ -1737,6 +1810,7 @@ sys_jispae_init = {
         orbit_distance = 100
         orbit_angle = 141
         size = 2
+        flags = { aslan_b60_planet }
         has_ring = no
     }
 	
@@ -1753,6 +1827,7 @@ sys_jispae_init = {
         orbit_distance = 100
         orbit_angle = 20
         size = 8
+        flags = { anubdan_planet }
         has_ring = no
     }
 
@@ -1762,6 +1837,7 @@ sys_jispae_init = {
         orbit_distance = 100
         orbit_angle = 45
         size = 10
+        flags = { larindae_planet }
         has_ring = no
     }
 
@@ -1771,6 +1847,7 @@ sys_jispae_init = {
         orbit_distance = 100
         orbit_angle = 150
         size = 27
+        flags = { ipiscas_planet }
         has_ring = no
     }
 
@@ -1780,6 +1857,7 @@ sys_jispae_init = {
         orbit_distance = 100
         orbit_angle = 276
         size = 7
+        flags = { blanda_planet }
         has_ring = no
     }
 }
@@ -1796,6 +1874,7 @@ sys_loruscha_init = {
         class = pc_l_star
         orbit_distance = 0
         size = 20
+        flags = { loruscha_star }
     }
 
     planet = {
@@ -1813,6 +1892,7 @@ sys_loruscha_init = {
         orbit_distance = 63
         orbit_angle = 346
         size = 8
+        flags = { estella_planet }
         has_ring = no
 
     }
@@ -1823,6 +1903,7 @@ sys_loruscha_init = {
         orbit_distance = 100
         orbit_angle = 149
         size = 13
+        flags = { yandruval_planet }
         has_ring = no
 
     }
@@ -1842,6 +1923,7 @@ sys_loruscha_init = {
             orbit_distance = 20
             orbit_angle = 180
             size = 5
+            flags = {gudurili_planet manndos_planet}
             has_ring = no
 
         }
@@ -1853,6 +1935,7 @@ sys_loruscha_init = {
         orbit_distance = 100
         orbit_angle = 152
         size = 16
+        flags = { fiatalae_planet }
         has_ring = no
 
     }
@@ -1863,6 +1946,7 @@ sys_loruscha_init = {
         orbit_distance = 100
         orbit_angle = 142
         size = 18
+        flags = { rimandril_planet }
         has_ring = no
 
     }
@@ -1901,6 +1985,7 @@ sys_saleste_init = {
         class = pc_b_super_star
         orbit_distance = 0
         size = 30
+        flags = { saleste_star }
     }
 
 	planet = {
@@ -1908,6 +1993,7 @@ sys_saleste_init = {
         class = pc_hothouse	
         orbit_distance = 125
         size = 13
+        flags = { veria_planet }
     }
 
 	planet = {
@@ -1915,6 +2001,7 @@ sys_saleste_init = {
         class = pc_barren_cold
         orbit_distance = 125
         size = 15
+        flags = { darlandes_planet }
     }
 
 	change_orbit = 125
@@ -1948,6 +2035,7 @@ sys_tamara_init = {
         class = pc_g_giant_star
         orbit_distance = 0
         size = 30
+        flags = { tamara_star }
     }
 
 	planet = {
@@ -1955,6 +2043,7 @@ sys_tamara_init = {
         class = pc_hothouse	
         orbit_distance = 125
         size = 13
+        flags = { relactria_planet }
     }
 
 	planet = {
@@ -1962,6 +2051,7 @@ sys_tamara_init = {
         class = pc_iron
         orbit_distance = 125
         size = 15
+        flags = { fastenos_planet }
     }
 	
 	planet = {
@@ -1969,6 +2059,7 @@ sys_tamara_init = {
         class = pc_gas_giant
         orbit_distance = 125
         size = 11		
+        flags = { mulos_planet }
     }
 
 	planet = {
@@ -1976,6 +2067,7 @@ sys_tamara_init = {
         class = pc_iron
         orbit_distance = 125
         size = 14
+        flags = { bistroe_planet }
     }
 }
 
@@ -1995,6 +2087,7 @@ sys_teleukria_init = {
         class = pc_a_super_star
         orbit_distance = 0
         size = 30
+        flags = { teleukria_star }
     }
 
 	planet = {
@@ -2002,6 +2095,7 @@ sys_teleukria_init = {
         class = pc_barren	
         orbit_distance = 70
         size = 6
+        flags = { perazor_planet }
     }
 
 	planet = {
@@ -2009,6 +2103,7 @@ sys_teleukria_init = {
         class = pc_arid
         orbit_distance = 70
         size = 15
+        flags = { edavo_planet }
     }
 	
 	planet = {
@@ -2022,6 +2117,7 @@ sys_teleukria_init = {
 			class = pc_iron
 			orbit_distance = 20
 			size = 8
+			flags = {lisana_planet lessajah_planet}
 		}
     }
 
@@ -2030,6 +2126,7 @@ sys_teleukria_init = {
         class = pc_ice_giant
         orbit_distance = 70
         size = 27
+        flags = { matis_planet }
     }
 
 	planet = {
@@ -2037,6 +2134,7 @@ sys_teleukria_init = {
         class = pc_ice_giant
         orbit_distance = 70
         size = 27
+        flags = { xanmeley_planet }
     }
 	
 	planet = {
@@ -2044,6 +2142,7 @@ sys_teleukria_init = {
         class = pc_methane
         orbit_distance = 70
         size = 18
+        flags = { skanus_planet }
     }
 
 	planet = {
@@ -2051,6 +2150,7 @@ sys_teleukria_init = {
         class = pc_frozen
         orbit_distance = 70
         size = 11
+        flags = { jianle_planet }
     }
 }	
 
@@ -2066,6 +2166,7 @@ sys_ustende_init = {
         class = pc_m_hyper_star
         orbit_distance = 0
         size = 28
+        flags = { ustende_star }
     }
 
 	planet = {
@@ -2073,6 +2174,7 @@ sys_ustende_init = {
         class = pc_hot_giant
         orbit_distance = 80
         size = 39
+        flags = { makelis_planet }
     }
 
 	planet = {
@@ -2080,6 +2182,7 @@ sys_ustende_init = {
         class = pc_iron
         orbit_distance = 80
         size = 9
+        flags = { muraava_planet }
     }
 	
 	planet = {
@@ -2087,6 +2190,7 @@ sys_ustende_init = {
         class = pc_alpine
         orbit_distance = 80
         size = 16
+        flags = { henae_planet }
 		has_ring = yes
     }
 
@@ -2095,6 +2199,7 @@ sys_ustende_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 8
+        flags = { kyari_planet }
     }
 
 	planet = {
@@ -2102,6 +2207,7 @@ sys_ustende_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 9
+        flags = { beneseer_planet }
     }
 
 	planet = {
@@ -2109,6 +2215,7 @@ sys_ustende_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 4
+        flags = { teseri_planet }
     }
 
 	init_effect = { 
@@ -2133,6 +2240,7 @@ sys_virmana_init = {
         class = pc_b_super_star
         orbit_distance = 0
         size = 28
+        flags = { virmana_star }
     }
 
 	planet = {
@@ -2140,6 +2248,7 @@ sys_virmana_init = {
         class = pc_hothouse	
         orbit_distance = 80
         size = 17
+        flags = { kanmala_planet }
     }
 
 	planet = {
@@ -2147,6 +2256,7 @@ sys_virmana_init = {
         class = pc_carbon
         orbit_distance = 80
         size = 12
+        flags = { janre_planet }
     }
 	
 	planet = {
@@ -2160,6 +2270,7 @@ sys_virmana_init = {
 			class = pc_hothouse	
 			orbit_distance = 20
 			size = 6
+			flags = {lucnete_planet falamavia_planet}
 		}
     }
 
@@ -2168,6 +2279,7 @@ sys_virmana_init = {
         class = pc_hothouse	
         orbit_distance = 80
         size = 10
+        flags = { pralas_planet }
     }
 
 	planet = {
@@ -2175,6 +2287,7 @@ sys_virmana_init = {
         class = pc_barren_cold
         orbit_distance = 80
         size = 15
+        flags = { holintia_planet }
     }
 
 	planet = {
@@ -2182,6 +2295,7 @@ sys_virmana_init = {
         class = pc_gas_giant
         orbit_distance = 80
         size = 35
+        flags = { moith_planet }
 		has_ring = yes
     }
 
@@ -2211,6 +2325,7 @@ sys_amun_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 28
+        flags = { amun_star }
 		init_effect = {
 			create_ambient_object = {
 				type = "nebula_4"
@@ -2234,7 +2349,7 @@ sys_amun_init = {
         orbit_angle = 198
         has_ring = yes
 		size = 30
-		flags = { subclass_world }
+		flags = {subclass_world sekhmet_planet}
 
 		init_effect = {
 			add_deposit = d_eezo_4
@@ -2248,7 +2363,7 @@ sys_amun_init = {
         orbit_angle = 192
         has_ring = no
 		size = 35
-		flags = { subclass_world }
+		flags = {subclass_world sobek_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = extensive_moon_system
@@ -2264,6 +2379,7 @@ sys_amun_init = {
 			orbit_distance = 20
 			size = 4
 
+			flags = { sobek_a_planet }
 		}
 
 		moon = {
@@ -2273,6 +2389,7 @@ sys_amun_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			size = 6
+			flags = { sobek_b_planet }
 		}
 
         moon = {
@@ -2283,7 +2400,7 @@ sys_amun_init = {
 			has_ring = no
 			size = 6
 			entity = "forest_planet_01_entity"
-			flags = { subclass_world }
+			flags = {subclass_world heqet_planet}
 			init_effect = {
 				add_modifier = {
 					modifier = forest_world
@@ -2300,7 +2417,7 @@ sys_amun_init = {
 			orbit_distance = 5
 			size = 4
 			entity = "mephitic_lichen_planet_01_entity"
-			flags = { subclass_world }
+			flags = {subclass_world xarla_planet}
 			init_effect = {
 				add_modifier = {
 					modifier = lichen_world
@@ -2315,7 +2432,7 @@ sys_amun_init = {
 			class = pc_barren_cold
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
-			flags = {  subclass_world }
+			flags = {subclass_world turrga_planet}
 			size = 8
 		}
     }
@@ -2370,7 +2487,7 @@ sys_amun_init = {
         orbit_angle = 61
         has_ring = no
 		size = 17
-		flags = { subclass_world }
+		flags = {subclass_world neith_planet}
 
 		moon = {
 			name = "Neith a"
@@ -2379,6 +2496,7 @@ sys_amun_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 20
 			size = 3
+			flags = { neith_a_planet }
 		}		
     }
 
@@ -2389,7 +2507,7 @@ sys_amun_init = {
         orbit_angle = 175
         has_ring = no
 		size = 26
-		flags = { subclass_world }
+		flags = {subclass_world bast_planet}
 
 		moon = {
 			name = "Bast a"
@@ -2398,6 +2516,7 @@ sys_amun_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 20
 			size = 6
+			flags = { bast_a_planet }
 		}
 
 		moon = {
@@ -2407,6 +2526,7 @@ sys_amun_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			size = 8
+			flags = { bast_b_planet }
 		}	
     }	
 }
@@ -2428,6 +2548,7 @@ sys_imir_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 29
+        flags = { imir_star }
 		init_effect = {
 			create_ambient_object = {
 				type = "nebula_3"
@@ -2451,7 +2572,7 @@ sys_imir_init = {
         orbit_angle = 324
         has_ring = no
 		size = 6
-		flags = { subclass_world }
+		flags = {subclass_world osalri_planet}
     }
 
 	change_orbit = 20
@@ -2521,7 +2642,7 @@ sys_imir_init = {
         orbit_angle = 203
         has_ring = no
 		size = 32
-		flags = { subclass_world }
+		flags = {subclass_world quodis_planet}
     }
 
     planet = {
@@ -2531,7 +2652,7 @@ sys_imir_init = {
         orbit_angle = 191
         has_ring = no
 		size = 13
-		flags = { subclass_world }
+		flags = {subclass_world gregas_planet}
     }
 	
 	init_effect = { 
@@ -2556,6 +2677,7 @@ sys_malgus_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 25
+        flags = { malgus_star }
 		init_effect = {
 			create_ambient_object = {
 				type = "nebula_3"
@@ -2579,7 +2701,7 @@ sys_malgus_init = {
         orbit_angle = 186
         has_ring = no
 		size = 37
-		flags = { subclass_world }
+		flags = {subclass_world uzin_planet}
 
 		moon = {
 			name = "Uzin a"
@@ -2588,6 +2710,7 @@ sys_malgus_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 20
 			size = 7
+			flags = { uzin_a_planet }
 		}
 		
 		moon = {
@@ -2597,6 +2720,7 @@ sys_malgus_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			size = 6
+			flags = { uzin_b_planet }
 		}	
 	}
 	
@@ -2705,6 +2829,7 @@ sys_relic_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 26
+        flags = { relic_star }
 		init_effect = {
 			create_ambient_object = {
 				type = "nebula_4"
@@ -2728,7 +2853,7 @@ sys_relic_init = {
         orbit_angle = 243
         has_ring = no
 		size = 25
-		flags = { subclass_world }
+		flags = {subclass_world murky_water_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = high_gravity
@@ -2744,7 +2869,7 @@ sys_relic_init = {
         orbit_angle = 284
         has_ring = no
 		size = 23
-		flags = { subclass_world }
+		flags = {subclass_world fitful_current_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = high_gravity
@@ -2761,7 +2886,7 @@ sys_relic_init = {
         has_ring = yes
 		size = 33
 
-		flags = { subclass_world drifting_skies_planet }
+		flags = {subclass_world drifting_skies_planet first_land_planet}
 
 		moon = {
 			name = "Drifting Skies"
@@ -2769,6 +2894,7 @@ sys_relic_init = {
 			class = pc_habitat
 			orbit_distance = 20
 			size = 8
+			flags = { drifting_skies_station }
 			deposit_blockers = none
 			modifiers = none
 			# init_effect = {
@@ -2803,7 +2929,7 @@ sys_relic_init = {
         orbit_angle = 86
         has_ring = no
 		size = 37
-		flags = { subclass_world }
+		flags = {subclass_world island_wind_planet}
 	}
 
 	change_orbit = 10
@@ -2822,7 +2948,7 @@ sys_relic_init = {
         orbit_angle = 192
         has_ring = no
 		size = 5
-		flags = { subclass_world }
+		flags = {subclass_world rough_tide_planet}
 		entity = "mephitic_desert_planet_01_entity"
 		init_effect = {
 			add_modifier = {
@@ -2839,7 +2965,7 @@ sys_relic_init = {
         orbit_angle = 351
         has_ring = yes
 		size = 31
-		flags = { subclass_world }
+		flags = {subclass_world preying_mouth_planet}
 
 		init_effect = {
 			add_deposit = d_eezo_3
@@ -2853,7 +2979,7 @@ sys_relic_init = {
         orbit_angle = 39
         has_ring = no
 		size = 18
-		flags = { subclass_world }
+		flags = {subclass_world beach_thunder_planet}
     }
 }
 
@@ -2874,6 +3000,7 @@ sys_strabo_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 30
+        flags = { strabo_star }
 		init_effect = {
 			create_ambient_object = {
 				type = "nebula_2"
@@ -2917,6 +3044,7 @@ sys_strabo_init = {
 			name = "Antigar a"
 			class = pc_frozen
 			size = 2
+			flags = {antigar_a_planet antigar_planet}
 			orbit_distance = 20
 			orbit_angle = 23
 		}
@@ -2925,6 +3053,7 @@ sys_strabo_init = {
 			name = "Antigar b"
 			class = pc_asteroid
 			size = 1
+			flags = { antigar_b_planet }
 			orbit_distance = 5
 			orbit_angle = 230
 		}
@@ -2933,6 +3062,7 @@ sys_strabo_init = {
 			name = "Antigar c"
 			class = pc_frozen
 			size = 3
+			flags = { antigar_c_planet }
 			orbit_distance = 5
 			orbit_angle = 97
 		}
@@ -2941,6 +3071,7 @@ sys_strabo_init = {
 			name = "Antigar d"
 			class = pc_frozen
 			size = 2
+			flags = { antigar_d_planet }
 			orbit_distance = 5
 			orbit_angle = 110
 		}
@@ -2949,6 +3080,7 @@ sys_strabo_init = {
 			name = "Antigar e"
 			class = pc_asteroid
 			size = 2
+			flags = { antigar_e_planet }
 			orbit_distance = 5
 			orbit_angle = 46
 		}	
@@ -2957,6 +3089,7 @@ sys_strabo_init = {
 			name = "Antigar f"
 			class = pc_frozen
 			size = 2
+			flags = { antigar_f_planet }
 			orbit_distance = 5
 			orbit_angle = 13
 		}
@@ -2965,6 +3098,7 @@ sys_strabo_init = {
 			name = "Antigar g"
 			class = pc_frozen
 			size = 2
+			flags = { antigar_g_planet }
 			orbit_distance = 5
 			orbit_angle = 185
 		}	
@@ -2973,6 +3107,7 @@ sys_strabo_init = {
 			name = "Antigar h"
 			class = pc_frozen
 			size = 1
+			flags = { antigar_h_planet }
 			orbit_distance = 5
 			orbit_angle = 214
 		}
@@ -2981,6 +3116,7 @@ sys_strabo_init = {
 			name = "Antigar i"
 			class = pc_asteroid
 			size = 1
+			flags = { antigar_i_planet }
 			orbit_distance = 5
 			orbit_angle = 73
 		}
@@ -2989,6 +3125,7 @@ sys_strabo_init = {
 			name = "Antigar j"
 			class = pc_asteroid
 			size = 2
+			flags = { antigar_j_planet }
 			orbit_distance = 5
 			orbit_angle = 126
 		}
@@ -2997,6 +3134,7 @@ sys_strabo_init = {
 			name = "Antigar k"
 			class = pc_barren_cold
 			size = 3
+			flags = { antigar_k_planet }
 			orbit_distance = 5
 			orbit_angle = 99
 		}
@@ -3008,7 +3146,7 @@ sys_strabo_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 10
 			size = 4
-			flags = { jarrahe_station }
+			flags = {jarrahe_station jarrahe_station_station}
 		}		
     }	
 }
@@ -3033,6 +3171,7 @@ sys_ggulu_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 20
+        flags = { ggulu_star }
     }
 
     planet = {
@@ -3130,6 +3269,7 @@ sys_kintu_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 20
+        flags = { kintu_star }
     }
 
     planet = {
@@ -3138,6 +3278,7 @@ sys_kintu_init = {
         orbit_distance = 100
         orbit_angle = 4
 		size = 8
+		flags = { andea_planet }
         has_ring = no
     }
 
@@ -3147,6 +3288,7 @@ sys_kintu_init = {
         orbit_distance = 100
         orbit_angle = 144
         size = 12
+        flags = { amaia_planet }
 		has_ring = no
     }
 
@@ -3156,6 +3298,7 @@ sys_kintu_init = {
         orbit_distance = 100
         orbit_angle = 235
 		size = 17
+		flags = { lussu_planet }
         has_ring = no
     }
 
@@ -3165,6 +3308,7 @@ sys_kintu_init = {
         orbit_distance = 100
         orbit_angle = 218
 		size = 5
+		flags = { korbas_planet }
         has_ring = no
     }
 
@@ -3174,6 +3318,7 @@ sys_kintu_init = {
         orbit_distance = 100
         orbit_angle = 199
         size = 28
+        flags = { tejas_planet }
 		has_ring = no
     }
 }
@@ -3190,6 +3335,7 @@ sys_nambi_init = {
         class = pc_magnetar
         orbit_distance = 0
         size = 20
+        flags = { nambi_planet }
     }
 }
 
@@ -3205,6 +3351,7 @@ sys_naslo_init = {
         class = pc_a_super_star
         orbit_distance = 0
         size = 20
+        flags = { naslo_star }
     }
 
     planet = {
@@ -3213,6 +3360,7 @@ sys_naslo_init = {
         orbit_distance = 125
         orbit_angle = 195
 		size = 8
+		flags = { kadaga_planet }
         has_ring = no
     }
 
@@ -3222,6 +3370,7 @@ sys_naslo_init = {
         orbit_distance = 125
         orbit_angle = 181
 		size = 11
+		flags = { mangeni_planet }
         has_ring = no
     }
 
@@ -3231,6 +3380,7 @@ sys_naslo_init = {
         orbit_distance = 125
         orbit_angle = 131
 		size = 3
+		flags = { jinja_planet }
         has_ring = no
     }
 
@@ -3240,6 +3390,7 @@ sys_naslo_init = {
         orbit_distance = 125
         orbit_angle = 141
 		size = 8
+		flags = { aleixo_planet }
         has_ring = no
     }	
 	
@@ -3274,6 +3425,7 @@ sys_cubseh_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 30
+        flags = { cubseh_star }
     }
 	
 	planet = {
@@ -3281,6 +3433,7 @@ sys_cubseh_init = {
 		class = pc_molten
         orbit_distance = 70
 		size = 6
+		flags = { qualog_planet }
 	}
 	
 	planet = { 
@@ -3288,6 +3441,7 @@ sys_cubseh_init = {
 		class = pc_hothouse
         orbit_distance = 70
 		size = 16
+		flags = { toaloc_planet }
 	}	
 
 	change_orbit = 30
@@ -3304,6 +3458,7 @@ sys_cubseh_init = {
 		class = pc_dextro_ocean
         orbit_distance = 40
 		size = 17
+		flags = { phelinia_planet }
 	}	
 	
 	planet = {
@@ -3311,6 +3466,7 @@ sys_cubseh_init = {
 		class = pc_gas_giant
         orbit_distance = 70
 		size = 39
+		flags = { jarg_planet }
 		has_ring = yes
 	}
 
@@ -3319,6 +3475,7 @@ sys_cubseh_init = {
 		class = pc_tropical
         orbit_distance = 70
 		size = 16
+		flags = { ythwoem_planet }
 	}
 
 	planet = {
@@ -3326,6 +3483,7 @@ sys_cubseh_init = {
 		class = pc_frozen
         orbit_distance = 70
 		size = 8
+		flags = { asta_planet }
 	}	
 
 	planet = {
@@ -3333,6 +3491,7 @@ sys_cubseh_init = {
 		class = pc_frozen
         orbit_distance = 70
 		size = 4
+		flags = { tonat_planet }
 	}	
 }
 
@@ -3348,6 +3507,7 @@ sys_klin_init = {
         class = pc_pulsar
         orbit_distance = 0
         size = 15
+        flags = { klin_planet }
     }
 	
 	planet = {
@@ -3355,6 +3515,7 @@ sys_klin_init = {
 		class = pc_iron
         orbit_distance = 250
 		size = 20
+		flags = { orbid_planet }
 		init_effect = {
 			add_modifier = {
 				modifier = mineral_rich
@@ -3390,6 +3551,7 @@ sys_sardi_init = {
         class = pc_t_star
         orbit_distance = 0
         size = 30
+        flags = { sardi_star }
 	}
 
 	planet = {
@@ -3399,6 +3561,7 @@ sys_sardi_init = {
         orbit_angle = 142
         has_ring = no
 		size = 10
+		flags = { ruskrat_planet }
 	}	
 
 	planet = {
@@ -3408,6 +3571,7 @@ sys_sardi_init = {
         orbit_angle = 142
         has_ring = no
 		size = 13
+		flags = { ferti_planet }
 	}	
 
 	planet = {
@@ -3417,6 +3581,7 @@ sys_sardi_init = {
         orbit_angle = 142
         has_ring = no
 		size = 17
+		flags = { lloral_planet }
 	}	
 
 	change_orbit = 30
@@ -3435,6 +3600,7 @@ sys_sardi_init = {
         orbit_angle = 142
         has_ring = no
 		size = 10
+		flags = { bilvas_planet }
     }
 
 	planet = {
@@ -3444,6 +3610,7 @@ sys_sardi_init = {
         orbit_angle = 142
         has_ring = no
 		size = 7
+		flags = { moreinha_planet }
 	}	
 
 	planet = {
@@ -3453,6 +3620,7 @@ sys_sardi_init = {
         orbit_angle = 142
         has_ring = yes
 		size = 35
+		flags = { gasclosa_planet }
     }
 
 	planet = {
@@ -3470,6 +3638,7 @@ sys_sardi_init = {
 			orbit_angle = 15
 			has_ring = no
 			size = 6
+			flags = {quscao_planet yimdi_planet}
     	}
 	}	
 
@@ -3495,6 +3664,7 @@ sys_webel_init = {
         class = pc_m_hyper_star
         orbit_distance = 0
         size = 38
+        flags = { webel_star }
     }
 
 	planet = {
@@ -3504,6 +3674,7 @@ sys_webel_init = {
         orbit_angle = 142
         has_ring = yes
 		size = 10
+		flags = { tifta_planet }
     }
 
 	planet = {
@@ -3552,6 +3723,7 @@ sys_webel_init = {
         orbit_angle = 142
         has_ring = yes
 		size = 12
+		flags = { fasulei_planet }
     }
 
 	init_effect = { 
@@ -3580,6 +3752,7 @@ sys_falastan_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 32
+        flags = { falastan_star }
     }
 
 	planet = {
@@ -3587,6 +3760,7 @@ sys_falastan_init = {
         class = pc_hothouse
         orbit_distance = 70
         size = 6
+        flags = { vnaus_planet }
     }
 
 	planet = {
@@ -3594,6 +3768,7 @@ sys_falastan_init = {
         class = pc_iron
         orbit_distance = 70
         size = 8
+        flags = { iallorev_planet }
     }
 	
 	planet = {
@@ -3601,6 +3776,7 @@ sys_falastan_init = {
         class = pc_dextro_savannah
         orbit_distance = 70
         size = 17
+        flags = { jeollna_planet }
     }
 
 	planet = {
@@ -3608,6 +3784,7 @@ sys_falastan_init = {
         class = pc_highgrav_mephitic
         orbit_distance = 70
         size = 19	
+        flags = { heurnthea_planet }
 		has_ring = yes
     }
 
@@ -3616,6 +3793,7 @@ sys_falastan_init = {
         class = pc_gas_giant
         orbit_distance = 70
         size = 34
+        flags = { leldux_planet }
     }
 
 	planet = {
@@ -3623,6 +3801,7 @@ sys_falastan_init = {
         class = pc_ice_giant
         orbit_distance = 70
         size = 32
+        flags = { miolalio_planet }
 		has_ring = yes
     }
 	
@@ -3631,6 +3810,7 @@ sys_falastan_init = {
         class = pc_gas_giant
         orbit_distance = 70
         size = 33
+        flags = { dier_planet }
 		has_ring = yes
     }
 }
@@ -3652,6 +3832,7 @@ sys_lotora_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 27
+        flags = { lotora_a_star }
     }
 
 	planet = {
@@ -3659,6 +3840,7 @@ sys_lotora_init = {
         class = pc_k_star
         orbit_distance = 30
         size = 34
+        flags = { lotora_b_star }
     }
 
 	planet = {
@@ -3666,6 +3848,7 @@ sys_lotora_init = {
         class = pc_mephitic
         orbit_distance = 70
         size = 10
+        flags = { eulalalia_planet }
     }
 
 	planet = {
@@ -3673,6 +3856,7 @@ sys_lotora_init = {
         class = pc_iron
         orbit_distance = 100
         size = 18
+        flags = { yainae_planet }
     }
 	
 	planet = {
@@ -3686,6 +3870,7 @@ sys_lotora_init = {
 			class = pc_barren_cold
 			orbit_distance = 20
 			size = 3
+			flags = {nostra_planet ruus_planet}
 		}
     }
 
@@ -3696,6 +3881,7 @@ sys_lotora_init = {
         class = pc_frozen
         orbit_distance = 50
         size = 6
+        flags = { porais_planet }
     }
 
 	planet = {
@@ -3703,6 +3889,7 @@ sys_lotora_init = {
         class = pc_barren_cold
         orbit_distance = 100
         size = 8
+        flags = { vofintia_planet }
     }
 
 	init_effect = { 
@@ -3727,6 +3914,7 @@ sys_makelele_init = {
         class = pc_nova_2
         orbit_distance = 0
         size = 28
+        flags = { makelele_planet }
     }
 
 	planet = {
@@ -3734,6 +3922,7 @@ sys_makelele_init = {
         class = pc_arid
         orbit_distance = 400
         size = 20
+        flags = { tris_planet }
     }
 
 	init_effect = { 
@@ -3758,6 +3947,7 @@ sys_undayme_init = {
         class = pc_o_hyper_star
         orbit_distance = 0
         size = 32
+        flags = { undayme_star }
     }
 
 	planet = {
@@ -3765,6 +3955,7 @@ sys_undayme_init = {
         class = pc_barren
         orbit_distance = 125
         size = 4
+        flags = { prina_planet }
     }
 
 	planet = {
@@ -3772,6 +3963,7 @@ sys_undayme_init = {
         class = pc_hothouse
         orbit_distance = 125
         size = 12
+        flags = { jatar_planet }
     }
 	
 	planet = {
@@ -3779,6 +3971,7 @@ sys_undayme_init = {
         class = pc_barren_cold
         orbit_distance = 125
         size = 7
+        flags = { ledahi_planet }
     }
 
 	planet = {
@@ -3791,6 +3984,7 @@ sys_undayme_init = {
 			class = pc_iron
 			orbit_distance = 20
 			size = 4
+			flags = {pheezla_planet joesse_planet}
 		}
     }
 }
@@ -3815,6 +4009,7 @@ sys_farladis_init = {
         class = pc_k_giant_star
         orbit_distance = 0
         size = 20
+        flags = { farladis_star }
     }
 
     planet = {
@@ -3823,6 +4018,7 @@ sys_farladis_init = {
         orbit_distance = 100
         orbit_angle = 213
         size = 16
+        flags = { dragsilras_planet }
         has_ring = no
     }
 
@@ -3832,6 +4028,7 @@ sys_farladis_init = {
         orbit_distance = 100
         orbit_angle = 176
         size = 31
+        flags = { kargath_planet }
         has_ring = yes
 	}
 
@@ -3841,6 +4038,7 @@ sys_farladis_init = {
         orbit_distance = 100
         orbit_angle = 259
         size = 13
+        flags = { yghse_planet }
         has_ring = no
     }
 
@@ -3850,6 +4048,7 @@ sys_farladis_init = {
         orbit_distance = 100
         orbit_angle = 161
         size = 6
+        flags = { brabarrar_planet }
         has_ring = no
     }
 
@@ -3859,6 +4058,7 @@ sys_farladis_init = {
         orbit_distance = 100
         orbit_angle = 86
         size = 34
+        flags = { ganjak_planet }
         has_ring = no
     }
 
@@ -3884,6 +4084,7 @@ sys_juel_init = {
         class = pc_ae_star
         orbit_distance = 0
         size = 20
+        flags = { juel_star }
     }
 
     planet = {
@@ -3892,6 +4093,7 @@ sys_juel_init = {
         orbit_distance = 80
         orbit_angle = 203
         size = 14
+        flags = { juel_i_planet }
         has_ring = no
     }
 
@@ -3908,6 +4110,7 @@ sys_juel_init = {
             orbit_distance = 20
             orbit_angle = 109
             size = 6
+            flags = {juel_iia_planet juel_ii_planet}
             has_ring = no
         }
     }
@@ -3918,6 +4121,7 @@ sys_juel_init = {
         orbit_distance = 80
         orbit_angle = 297
         size = 17
+        flags = { juel_iii_planet }
         has_ring = no
     }
 
@@ -3935,6 +4139,7 @@ sys_juel_init = {
         orbit_distance = 80
         orbit_angle = 172
         size = 14
+        flags = { juel_v_planet }
         has_ring = no
     }
 
@@ -3944,6 +4149,7 @@ sys_juel_init = {
         orbit_distance = 80
         orbit_angle = 231
         size = 29
+        flags = { juel_vi_planet }
         has_ring = yes
     }
 
@@ -3969,6 +4175,7 @@ sys_neil_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 20
+        flags = { neil_star }
     }
 
     planet = {
@@ -3977,6 +4184,7 @@ sys_neil_init = {
         orbit_distance = 150
         orbit_angle = 296
         size = 33
+        flags = { ponparr_planet }
         has_ring = yes
     }
 
@@ -3986,6 +4194,7 @@ sys_neil_init = {
         orbit_distance = 150
         orbit_angle = 259
         size = 18
+        flags = { mordezhan_planet }
         has_ring = no
     }
 
@@ -3995,6 +4204,7 @@ sys_neil_init = {
         orbit_distance = 150
         orbit_angle = 193
         size = 20
+        flags = { ubeth_planet }
         has_ring = no
     }
 
@@ -4020,6 +4230,7 @@ sys_qorda_init = {
         class = pc_c_giant_star
         orbit_distance = 0
         size = 20
+        flags = { qorda_star }
     }
 
     planet = {
@@ -4028,6 +4239,7 @@ sys_qorda_init = {
         orbit_distance = 125
         orbit_angle = 322
         size = 7
+        flags = { khalrok_planet }
         has_ring = no
     }
 
@@ -4037,6 +4249,7 @@ sys_qorda_init = {
         orbit_distance = 125
         orbit_angle = 158
         size = 14
+        flags = { krakon_planet }
         has_ring = no
     }
 
@@ -4046,6 +4259,7 @@ sys_qorda_init = {
         orbit_distance = 125
         orbit_angle = 90
         size = 10
+        flags = { bepmaral_planet }
         has_ring = no
     }
 
@@ -4055,6 +4269,7 @@ sys_qorda_init = {
         orbit_distance = 125
         orbit_angle = 176
         size = 30
+        flags = { agandras_planet }
         has_ring = no
     }
 }
@@ -4071,6 +4286,7 @@ sys_venoss_init = {
         class = pc_b_super_star
         orbit_distance = 0
         size = 20
+        flags = { venoss_star }
     }
 
 	planet = {
@@ -4078,6 +4294,7 @@ sys_venoss_init = {
 		class = pc_mephitic
 		orbit_distance = 250
 		size = 21
+		flags = { shelba_planet }
 		has_ring = yes
 		entity = "mephitic_tropical_planet_01_entity"
 		init_effect = {
@@ -4109,6 +4326,7 @@ sys_agnes_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 20
+        flags = { agnes_star }
     }
 	
     planet = {
@@ -4118,6 +4336,7 @@ sys_agnes_init = {
         orbit_angle = 266
         has_ring = no
 		size = 7
+		flags = { plipila_planet }
     }
 
     planet = {
@@ -4167,6 +4386,7 @@ sys_agnes_init = {
         orbit_angle = 177
         has_ring = no
 		size = 14
+		flags = { trivio_planet }
     }
 
     planet = {
@@ -4176,6 +4396,7 @@ sys_agnes_init = {
         orbit_angle = 93
         has_ring = yes
 		size = 28
+		flags = { tanania_planet }
     }
 
 	init_effect = { 
@@ -4205,6 +4426,7 @@ sys_apann_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 20
+        flags = { apann_star }
     }
 
 	planet = {
@@ -4214,7 +4436,7 @@ sys_apann_init = {
         orbit_angle = 266
         has_ring = no
 		size = 12
-		flags = { subclass_world }
+		flags = {subclass_world daemin_planet}
 		entity = "mephitic_tropical_planet_07_entity"
 		init_effect = {
 			add_modifier = {
@@ -4231,6 +4453,7 @@ sys_apann_init = {
         orbit_angle = 318
         has_ring = no
 		size = 17
+		flags = { sifurman_planet }
 		init_effect = {
 			add_modifier = {
 				modifier = low_gravity
@@ -4246,7 +4469,7 @@ sys_apann_init = {
         orbit_angle = 177
         has_ring = no
 		size = 20
-		flags = { subclass_world }
+		flags = {subclass_world vaenisia_planet}
 		entity = "ammonia_ocean_planet_04_entity"
 		init_effect = {
 			add_modifier = {
@@ -4292,6 +4515,7 @@ sys_dee_init = {
         class = pc_f_star
         orbit_distance = 0
         size = 20
+        flags = { dee_star }
     }
 
 	planet = {
@@ -4301,6 +4525,7 @@ sys_dee_init = {
         orbit_angle = 266
         has_ring = no
 		size = 12
+		flags = { ramar_planet }
    	}
 
     planet = {
@@ -4310,6 +4535,7 @@ sys_dee_init = {
         orbit_angle = 318
         has_ring = no
 		size = 20
+		flags = { ciben_planet }
     }
 
     planet = {
@@ -4319,7 +4545,7 @@ sys_dee_init = {
         orbit_angle = 177
         has_ring = no
 		size = 18
-		flags = { subclass_world }
+		flags = {subclass_world emini_planet}
 		entity = "jungle_planet_06_entity"
 		init_effect = {
 			add_modifier = {
@@ -4335,7 +4561,7 @@ sys_dee_init = {
 			orbit_angle = 93
 			has_ring = yes
 			size = 28
-			flags = { subclass_world }
+			flags = {subclass_world daewarp_planet}
 			entity = "methane_arid_planet_11_entity"
 			init_effect = {
 				add_modifier = {
@@ -4362,6 +4588,7 @@ sys_dee_init = {
         orbit_angle = 93
         has_ring = yes
 		size = 28	
+		flags = { dusip_planet }
     }
 }
 
@@ -4377,6 +4604,7 @@ sys_eureka_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 20
+        flags = { eureka_star }
     }
 
 	planet = {
@@ -4386,6 +4614,7 @@ sys_eureka_init = {
         orbit_angle = 266
         has_ring = no
 		size = 5
+		flags = { meltanthos_planet }
 	}	
 
     planet = {
@@ -4395,7 +4624,7 @@ sys_eureka_init = {
         orbit_angle = 318
         has_ring = no
 		size = 16
-		flags = { subclass_world }
+		flags = {subclass_world iolanda_planet}
 		entity = "chlorine_alpine_planet_08_entity"
 		init_effect = {
 			add_modifier = {
@@ -4412,7 +4641,7 @@ sys_eureka_init = {
         orbit_angle = 177
         has_ring = no
 		size = 21
-		flags = { subclass_world }
+		flags = {subclass_world hellanik_planet}
 		entity = "retinal_planet_01_entity"
 		init_effect = {
 			add_modifier = {
@@ -4429,6 +4658,7 @@ sys_eureka_init = {
         orbit_angle = 93
         has_ring = no
 		size = 34
+		flags = { berenia_planet }
     }
 }
 
@@ -4444,6 +4674,7 @@ sys_maxiponia_init = {
         class = pc_pulsar
         orbit_distance = 0
         size = 40
+        flags = { maxiponia_planet }
     }
 
 	planet = {
@@ -4453,6 +4684,7 @@ sys_maxiponia_init = {
         orbit_angle = 177
         has_ring = no
 		size = 20
+		flags = { duranbio_planet }
     }
 }
 
@@ -4468,6 +4700,7 @@ sys_myez_init = {
         class = pc_d_star
         orbit_distance = 0
         size = 20
+        flags = { myez_star }
     }
 
 	planet = {
@@ -4477,6 +4710,7 @@ sys_myez_init = {
         orbit_angle = 266
         has_ring = no
 		size = 10
+		flags = { sarus_planet }
     }
 
     planet = {
@@ -4486,6 +4720,7 @@ sys_myez_init = {
         orbit_angle = 318
         has_ring = yes
 		size = 33
+		flags = { ieix_planet }
     }
 
     planet = {
@@ -4495,6 +4730,7 @@ sys_myez_init = {
         orbit_angle = 177
         has_ring = no
 		size = 4
+		flags = { mazor_planet }
     }
 }
 
@@ -4514,6 +4750,7 @@ sys_failjon_init = {
         class = pc_g_super_star
         orbit_distance = 0
         size = 30
+        flags = { gift_star }
     }
 
 	planet = {
@@ -4521,6 +4758,7 @@ sys_failjon_init = {
         class = pc_chthonian
         orbit_distance = 80
         size = 9
+        flags = { beldas_planet }
     }
 
 	planet = {
@@ -4528,6 +4766,7 @@ sys_failjon_init = {
         class = pc_molten
         orbit_distance = 80
         size = 10
+        flags = { kalnir_planet }
     }
 	
 	planet = {
@@ -4535,6 +4774,7 @@ sys_failjon_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 3		
+        flags = { zylas_planet }
     }
 
 	planet = {
@@ -4542,6 +4782,7 @@ sys_failjon_init = {
         class = pc_arctic
         orbit_distance = 80
         size = 16
+        flags = { terder_planet }
     }
 
 	planet = {
@@ -4549,6 +4790,7 @@ sys_failjon_init = {
         class = pc_barren_cold
         orbit_distance = 80
         size = 12
+        flags = { lybnir_planet }
     }
 
 	planet = {
@@ -4556,6 +4798,7 @@ sys_failjon_init = {
         class = pc_barren
         orbit_distance = 80
         size = 11
+        flags = { inon_planet }
     }
 	init_effect = { 
 		spawn_megastructure = { 
@@ -4584,6 +4827,7 @@ sys_gift_init = {
         class = pc_d_star
         orbit_distance = 0
         size = 27
+        flags = { gift_star }
     }
 
 	planet = {
@@ -4591,6 +4835,7 @@ sys_gift_init = {
         class = pc_barren
         orbit_distance = 100
         size = 5
+        flags = { kireen_planet }
     }
 
 	planet = {
@@ -4598,6 +4843,7 @@ sys_gift_init = {
         class = pc_hothouse
         orbit_distance = 100
         size = 12
+        flags = { thilryn_planet }
     }
 	
 	planet = {
@@ -4605,6 +4851,7 @@ sys_gift_init = {
         class = pc_chlorine
         orbit_distance = 100
         size = 13		
+        flags = { kellonin_planet }
     }
 
 	change_orbit = 50
@@ -4621,6 +4868,7 @@ sys_gift_init = {
         class = pc_carbon
         orbit_distance = 50
         size = 9
+        flags = { linin_planet }
     }
 
 	planet = {
@@ -4628,6 +4876,7 @@ sys_gift_init = {
         class = pc_barren_cold
         orbit_distance = 100
         size = 6
+        flags = { tranquil_sea_planet }
     }
 }
 
@@ -4643,6 +4892,7 @@ sys_tranquil_init = {
         class = pc_o_star
         orbit_distance = 0
         size = 27
+        flags = { tranquil_star }
     }
 
 	planet = {
@@ -4650,6 +4900,7 @@ sys_tranquil_init = {
         class = pc_hot_giant
         orbit_distance = 150
         size = 36
+        flags = { hardy_coral_planet }
     }
 
 	planet = {
@@ -4657,6 +4908,7 @@ sys_tranquil_init = {
         class = pc_iron
         orbit_distance = 150
         size = 7
+        flags = { belender_planet }
     }
 	
 	planet = {
@@ -4664,6 +4916,7 @@ sys_tranquil_init = {
         class = pc_frozen
         orbit_distance = 150
         size = 19		
+        flags = { oplen_planet }
     }
 
 		init_effect = { 
@@ -4696,6 +4949,7 @@ sys_century_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 26
+        flags = { century_star }
     }
 
 	asteroid_belt = {
@@ -4710,7 +4964,7 @@ sys_century_init = {
         orbit_angle = 165
         has_ring = no
 		size = 15
-		flags = { subclass_world }
+		flags = {subclass_world tamahera_planet}
     }
 
     planet = {
@@ -4720,7 +4974,7 @@ sys_century_init = {
         orbit_angle = 164
         has_ring = no
 		size = 18
-		flags = { subclass_world }
+		flags = {subclass_world klendagon_planet}
 
 		moon = {
             name = "Presrop"
@@ -4729,7 +4983,7 @@ sys_century_init = {
             orbit_angle = 180
             has_ring = no
 			size = 10
-			flags = { subclass_world }
+			flags = {subclass_world presrop_planet}
 			init_effect = {
 				add_modifier = {
 					modifier = mineral_rich
@@ -4745,6 +4999,7 @@ sys_century_init = {
         orbit_distance = 50
 		orbit_angle = 100
 		size = 5
+		flags = { lukap_planet }
 		has_ring = no
 	}
 
@@ -4761,6 +5016,7 @@ sys_century_init = {
         orbit_distance = 0
 		orbit_angle = 160
 		size = 5
+		flags = { morule_planet }
 		has_ring = no
 	}
 	
@@ -4771,7 +5027,7 @@ sys_century_init = {
         orbit_angle = 1
         has_ring = no
 		size = 13
-		flags = { subclass_world }
+		flags = {subclass_world canctra_planet}
 		entity = "cryovolcanic_planet_08_entity"
 		init_effect = {
 			add_modifier = {
@@ -4788,7 +5044,7 @@ sys_century_init = {
         orbit_angle = 268
         has_ring = yes
 		size = 36
-		flags = { subclass_world }
+		flags = {subclass_world tharopto_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = extensive_moon_system
@@ -4802,6 +5058,7 @@ sys_century_init = {
 			orbit_angle = 46
 			orbit_distance = 20
 			size = 2
+			flags = { tharopto_a_planet }
 		}
 
 		moon = {
@@ -4810,6 +5067,7 @@ sys_century_init = {
 			orbit_angle = 180
 			orbit_distance = 5
 			size = 2
+			flags = { tharopto_b_planet }
 		}	
 
 		moon = {
@@ -4818,6 +5076,7 @@ sys_century_init = {
 			orbit_angle = 300
 			orbit_distance = 5
 			size = 2
+			flags = { tharopto_c_planet }
 		}		
 	}
 
@@ -4843,6 +5102,7 @@ sys_chandrasekhar_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 20
+        flags = { chandrasekhar_star }
     }
 
     planet = {
@@ -4852,7 +5112,7 @@ sys_chandrasekhar_init = {
         orbit_angle = 208
         has_ring = no
 		size = 35
-		flags = { subclass_world }
+		flags = {subclass_world teshub_planet}
     }
 
     planet = {
@@ -4862,7 +5122,7 @@ sys_chandrasekhar_init = {
         orbit_angle = 118
         has_ring = no
 		size = 30
-		flags = { subclass_world }
+		flags = {subclass_world hebat_planet}
     }
 }
 
@@ -4901,6 +5161,7 @@ sys_schwarzschild_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 26
+        flags = { schwarzschild_star }
     }
 
     planet = {
@@ -4910,7 +5171,7 @@ sys_schwarzschild_init = {
         orbit_angle = 214
         has_ring = no
 		size = 13
-		flags = { subclass_world }
+		flags = {subclass_world atahil_planet}
     }
 
     planet = {
@@ -4920,7 +5181,7 @@ sys_schwarzschild_init = {
         orbit_angle = 115
         has_ring = no
 		size = 24
-		flags = { subclass_world }
+		flags = {subclass_world etamis_planet}
 
 		init_effect = {
 			add_deposit = d_eezo_3
@@ -4934,7 +5195,7 @@ sys_schwarzschild_init = {
         orbit_angle = 49
         has_ring = yes
 		size = 34
-		flags = { subclass_world }
+		flags = {subclass_world linossa_planet}
     }
 
     planet = {
@@ -4944,7 +5205,7 @@ sys_schwarzschild_init = {
         orbit_angle = 335
         has_ring = yes
 		size = 37
-		flags = { subclass_world }
+		flags = {subclass_world rihali_planet}
 
         moon = {
             name = "Rihali a"
@@ -4953,6 +5214,7 @@ sys_schwarzschild_init = {
             orbit_angle = 325
             has_ring = no
 			size = 1
+			flags = { rihali_a_planet }
         }
 
         moon = {
@@ -4962,6 +5224,7 @@ sys_schwarzschild_init = {
             orbit_angle = 325
             has_ring = no
 			size = 1
+			flags = { rihali_b_planet }
         }
     }
 
@@ -4987,6 +5250,7 @@ sys_thorne_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 27
+        flags = { thorne_star }
     }
 
     planet = {
@@ -4996,7 +5260,7 @@ sys_thorne_init = {
         orbit_angle = 344
         has_ring = no
 		size = 37
-		flags = { subclass_world }
+		flags = {subclass_world mnemosyne_star}
 
 		moon = {
             name = "Lethe"
@@ -5005,7 +5269,7 @@ sys_thorne_init = {
             orbit_angle = 325
             has_ring = no
 			size = 14
-			flags = { subclass_world }
+			flags = {subclass_world lethe_planet}
 			init_effect = {
 				add_modifier = {
 					modifier = tidal_locked
@@ -5021,6 +5285,7 @@ sys_thorne_init = {
             orbit_angle = 325
             has_ring = no
 			size = 5
+			flags = { mnemosyne_b_planet }
         }		
     }
 }
@@ -5037,6 +5302,7 @@ sys_verr_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 20
+        flags = { verr_star }
     }
 
     planet = {
@@ -5046,7 +5312,7 @@ sys_verr_init = {
         orbit_angle = 19
         has_ring = no
 		size = 12
-		flags = { subclass_world }
+		flags = {subclass_world corang_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = unstable_tectonics
@@ -5066,7 +5332,7 @@ sys_verr_init = {
         orbit_angle = 102
         has_ring = no
 		size = 28
-		flags = { subclass_world }
+		flags = {subclass_world allusah_planet}
     }
 
     planet = {
@@ -5076,7 +5342,7 @@ sys_verr_init = {
         orbit_angle = 228
         has_ring = no
 		size = 37
-		flags = { subclass_world }
+		flags = {subclass_world serao_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = extensive_moon_system
@@ -5091,6 +5357,7 @@ sys_verr_init = {
             orbit_angle = 360
             has_ring = no
 			size = 4
+			flags = { serao_a_planet }
         }
 
         moon = {
@@ -5100,6 +5367,7 @@ sys_verr_init = {
             orbit_angle = 177
             has_ring = no
 			size = 5
+			flags = { serao_b_planet }
         }
 
         moon = {
@@ -5109,6 +5377,7 @@ sys_verr_init = {
             orbit_angle = 304
             has_ring = no
 			size = 4
+			flags = { serao_c_planet }
         }
 
         moon = {
@@ -5118,6 +5387,7 @@ sys_verr_init = {
             orbit_angle = 296
             has_ring = no
 			size = 4
+			flags = { serao_d_planet }
         }
     } 
 }
@@ -5138,6 +5408,7 @@ sys_babylonia_init = {
         class = pc_lbv_green_star
         orbit_distance = 0
         size = 30
+        flags = { babylonia_star }
     }
 
 	planet = {
@@ -5145,6 +5416,7 @@ sys_babylonia_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 4
+        flags = { tigris_planet }
     }
 
 	planet = {
@@ -5152,6 +5424,7 @@ sys_babylonia_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 5
+        flags = { euphrates_planet }
     }
 
 	init_effect = { 
@@ -5176,6 +5449,7 @@ sys_canaan_init = {
         class = pc_w_azure_star
         orbit_distance = 0
         size = 34
+        flags = { canaan_star }
     }
 
 	planet = {
@@ -5183,6 +5457,7 @@ sys_canaan_init = {
         class = pc_hothouse
         orbit_distance = 80
         size = 14
+        flags = { moloch_planet }
     }
 
 	planet = {
@@ -5190,6 +5465,7 @@ sys_canaan_init = {
         class = pc_iron
         orbit_distance = 80
         size = 5
+        flags = { asherah_planet }
     }
 	
 	planet = {
@@ -5197,6 +5473,7 @@ sys_canaan_init = {
         class = pc_gas_giant
         orbit_distance = 80
         size = 31
+        flags = { baalah_planet }
 		has_ring = no		
     }
 
@@ -5206,6 +5483,7 @@ sys_canaan_init = {
         orbit_distance = 80
         size = 12
 
+        flags = { bel_planet }
 		init_effect = {
 			add_deposit = d_eezo_3
 		}
@@ -5216,6 +5494,7 @@ sys_canaan_init = {
         class = pc_iron
         orbit_distance = 80
         size = 8
+        flags = { chemosh_planet }
     }
 
 	planet = {
@@ -5229,6 +5508,7 @@ sys_canaan_init = {
 			class = pc_frozen
 			orbit_distance = 20
 			size = 5
+			flags = {sydyk_planet qos_planet}
 		}
 
 		moon = {
@@ -5236,6 +5516,7 @@ sys_canaan_init = {
 			class = pc_barren
 			orbit_distance = 5
 			size = 3
+			flags = { yarikh_planet }
 		}
     }
 
@@ -5261,6 +5542,7 @@ sys_hittite_init = {
         class = pc_y_star
         orbit_distance = 0
         size = 35
+        flags = { hittite_star }
     }
 
 	planet = {
@@ -5268,6 +5550,7 @@ sys_hittite_init = {
         class = pc_arctic
         orbit_distance = 80
         size = 9
+        flags = { tudhaliya_planet }
     }
 
 	planet = {
@@ -5275,6 +5558,7 @@ sys_hittite_init = {
         class = pc_barren_cold
         orbit_distance = 80
         size = 5
+        flags = { hattusili_planet }
     }
 	
 	planet = {
@@ -5282,6 +5566,7 @@ sys_hittite_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 7
+        flags = { kurunta_planet }
     }
 
 	planet = {
@@ -5289,6 +5574,7 @@ sys_hittite_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 12
+        flags = { amuwanda_planet }
     }
 
 	planet = {
@@ -5296,6 +5582,7 @@ sys_hittite_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 9
+        flags = { mursili_planet }
     }
 
 	init_effect = { 
@@ -5320,6 +5607,7 @@ sys_sumer_init = {
         class = pc_g_super_star
         orbit_distance = 0
         size = 30
+        flags = { sumer_star }
     }
 
 	planet = {
@@ -5327,6 +5615,7 @@ sys_sumer_init = {
         class = pc_barren
         orbit_distance = 80
         size = 4
+        flags = { nammu_planet }
     }
 
 	planet = {
@@ -5334,6 +5623,7 @@ sys_sumer_init = {
         class = pc_molten
         orbit_distance = 80
         size = 5
+        flags = { ki_planet }
     }
 	
 	planet = {
@@ -5341,6 +5631,7 @@ sys_sumer_init = {
         class = pc_molten
         orbit_distance = 80
         size = 13		
+        flags = { an_planet }
     }
 
 	planet = {
@@ -5348,6 +5639,7 @@ sys_sumer_init = {
         class = pc_hothouse
         orbit_distance = 80
         size = 12
+        flags = { enlil_planet }
     }
 
 	planet = {
@@ -5355,6 +5647,7 @@ sys_sumer_init = {
         class = pc_gas_giant
         orbit_distance = 80
         size = 32
+        flags = { enki_planet }
 		has_ring = yes
     }
 
@@ -5363,6 +5656,7 @@ sys_sumer_init = {
         class = pc_barren_cold
         orbit_distance = 80
         size = 11
+        flags = { kur_planet }
     }
 }
 
@@ -5381,6 +5675,7 @@ sys_refuge_init = {
 		name = "Refuge A"
         class = pc_t_star
         size = 15
+        flags = { refuge_a_star }
         orbit_distance = 20
     }
 
@@ -5388,6 +5683,7 @@ sys_refuge_init = {
 		name = "Refuge B"
         class = pc_g_star
         size = 30
+        flags = { refuge_b_star }
         orbit_distance = 25
         orbit_angle = 180
     }
@@ -5399,7 +5695,7 @@ sys_refuge_init = {
         orbit_angle = 142
         has_ring = no
 		size = 15
-		flags = { subclass_world }
+		flags = {subclass_world agetoton_planet}
     }
 
     planet = {
@@ -5409,7 +5705,7 @@ sys_refuge_init = {
     	orbit_angle = 258
     	has_ring = no
     	size = 21
-		flags = { subclass_world }		
+		flags = {subclass_world ilos_planet}		
 	}	
 
     planet = {
@@ -5419,7 +5715,7 @@ sys_refuge_init = {
         orbit_angle = 191
         has_ring = no
 		size = 29
-		flags = { subclass_world }
+		flags = {subclass_world zafe_planet}
     }
 
 	init_effect = { 
@@ -5452,6 +5748,7 @@ sys_anashiri_init = {
         class = pc_g_giant_star
         orbit_distance = 0
         size = 30
+        flags = { anashiri_star }
     }
 
 	planet = {
@@ -5459,7 +5756,7 @@ sys_anashiri_init = {
 		class = pc_highgrav_continental
         orbit_distance = 250
 		size = 22
-		flags = { subclass_world }
+		flags = {subclass_world yaviais_planet}
 		entity = "supercon_planet_03_entity"
 		init_effect = {
 			add_modifier = {
@@ -5473,6 +5770,7 @@ sys_anashiri_init = {
 		class = pc_ice_giant
         orbit_distance = 250
 		size = 22
+		flags = { repele_planet }
 	}
 }
 
@@ -5497,6 +5795,7 @@ sys_belas_init = {
         class = pc_tt_orange_star
         orbit_distance = 0
         size = 30	
+        flags = { belas_star }
     }
 
 	planet = {
@@ -5523,6 +5822,7 @@ sys_osari_init = {
         class = pc_b_star
         orbit_distance = 0
         size = 30
+        flags = { osari_star }
     }
 
 	planet = {
@@ -5530,6 +5830,7 @@ sys_osari_init = {
 		class = pc_molten
         orbit_distance = 150
 		size = 12
+		flags = { powar_planet }
 	}
 
 	planet = {
@@ -5538,13 +5839,14 @@ sys_osari_init = {
         orbit_distance = 150
 		size = 33
 		has_ring = yes
-		flags = { subclass_world }
+		flags = {subclass_world turupia_planet}
 
 		moon = {
 			name = "Rast'daa"
 			class = pc_toxic
 			orbit_distance = 10
 			size = 5
+			flags = { rastdaa_planet }
 		}
 	}
 
@@ -5553,7 +5855,7 @@ sys_osari_init = {
 		class = pc_frozen
         orbit_distance = 150
 		size = 6
-		flags = { subclass_world }
+		flags = {subclass_world nhascama_planet}
 	}
 }
 
@@ -5569,6 +5871,7 @@ sys_plenesh_init = {
         class = pc_a_star
         orbit_distance = 0
         size = 30
+        flags = { plenesh_star }
     }
 
 	planet = {
@@ -5576,7 +5879,7 @@ sys_plenesh_init = {
 		class = pc_dextro_savannah
         orbit_distance = 250
 		size = 18
-		flags = { subclass_world }
+		flags = {subclass_world ketosh_planet}
 		entity = "retinal_planet_07_entity"
 		init_effect = {
 			add_modifier = {
@@ -5591,6 +5894,7 @@ sys_plenesh_init = {
 		class = pc_methane
         orbit_distance = 250
 		size = 20
+		flags = { sian_planet }
 	}
 
 	init_effect = { 
@@ -5620,6 +5924,7 @@ sys_ranbaas_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 30
+        flags = { ranbaas_star }
     }
 
 	planet = {
@@ -5627,6 +5932,7 @@ sys_ranbaas_init = {
 		class = pc_hothouse
         orbit_distance = 125
 		size = 12
+		flags = { madatirashu_planet }
 	}
 
 	planet = {
@@ -5634,6 +5940,7 @@ sys_ranbaas_init = {
 		class = pc_iron
         orbit_distance = 125
 		size = 11
+		flags = { vasdiayur_planet }
 	}
 
 	planet = {
@@ -5641,6 +5948,7 @@ sys_ranbaas_init = {
 		class = pc_barren_cold
         orbit_distance = 125
 		size = 11
+		flags = { ralokxi_planet }
 	}
 
 	planet = {
@@ -5648,6 +5956,7 @@ sys_ranbaas_init = {
 		class = pc_ice_asteroid
         orbit_distance = 50
 		size = 2
+		flags = { sanaa_planet }
 	}
 
 	planet = {
@@ -5662,6 +5971,7 @@ sys_ranbaas_init = {
 		class = pc_ice_asteroid
         orbit_distance = 0
 		size = 2
+		flags = { qetior_planet }
 	}
 
 	planet = {
@@ -5669,6 +5979,7 @@ sys_ranbaas_init = {
 		class = pc_frozen
         orbit_distance = 125
 		size = 6
+		flags = { basdir_planet }
 	}
 }
 
@@ -5684,6 +5995,7 @@ sys_shaihulud_init = {
         class = pc_o_hyper_star
         orbit_distance = 0
         size = 30
+        flags = { shaihulud_star }
     }
 
 	planet = {
@@ -5691,7 +6003,7 @@ sys_shaihulud_init = {
 		class = pc_desert
         orbit_distance = 45
 		size = 14
-		flags = { subclass_world }
+		flags = {subclass_world arrakis_planet}
 		entity = "dune_planet_04_entity"
 		init_effect = {
 			add_modifier = {
@@ -5705,7 +6017,7 @@ sys_shaihulud_init = {
 		class = pc_dextro_alpine
         orbit_distance = 55
 		size = 19
-		flags = { subclass_world }
+		flags = {subclass_world leto_planet}
 		entity = "alpine_planet_07_entity"
 		init_effect = {
 			add_modifier = {
@@ -5721,13 +6033,14 @@ sys_shaihulud_init = {
         orbit_distance = 35
 		size = 34
 		has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world siaynoq_planet}
 
 		moon = {
 			name = "Siona"
 			class = pc_frozen
 			orbit_distance = 35
 			size = 8			
+			flags = { siona_planet }
 		}
 	}
 
@@ -5736,7 +6049,7 @@ sys_shaihulud_init = {
 		class = pc_highgrav_mephitic
         orbit_distance = 30
 		size = 22
-		flags = { subclass_world }
+		flags = {subclass_world kwisatz_haderach_planet}
 		entity = "ocean_planet_10_entity"
 		init_effect = {
 			add_modifier = {
@@ -5773,6 +6086,7 @@ sys_shanasuud_init = {
         class = pc_w_azure_star
         orbit_distance = 0
         size = 30
+        flags = { shanasuud_star }
 	}	
 
 	change_orbit = 165
@@ -5810,6 +6124,7 @@ sys_aap3421119_init = {
         class = pc_magnetar
         orbit_distance = 0
         size = 30
+        flags = { aap3421119_planet }
 	}
 
 	planet = {
@@ -5819,6 +6134,7 @@ sys_aap3421119_init = {
         orbit_angle = 350
         has_ring = no
 		size = 18
+		flags = { aap34211+19_i_planet }
     }
 
 	planet = {
@@ -5828,6 +6144,7 @@ sys_aap3421119_init = {
         orbit_angle = 350
         has_ring = no
 		size = 20
+		flags = { aap34211+19_ii_planet }
     }
 
 	init_effect = { 
@@ -5862,6 +6179,7 @@ sys_dirada_init = {
         class = pc_b_super_star
         orbit_distance = 0
         size = 45
+        flags = { dirada_star }
     }
 
 	change_orbit = 45
@@ -5889,7 +6207,7 @@ sys_dirada_init = {
         orbit_angle = 329
         has_ring = no
 		size = 12
-		flags = { subclass_world }
+		flags = {subclass_world siano_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = tidal_locked
@@ -5907,7 +6225,7 @@ sys_dirada_init = {
         orbit_angle = 112
         has_ring = no
 		size = 9
-		flags = { subclass_world }
+		flags = {subclass_world thenusi_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = tidal_locked
@@ -5923,7 +6241,7 @@ sys_dirada_init = {
         orbit_angle = 272
         has_ring = no
 		size = 11
-		flags = { subclass_world }
+		flags = {subclass_world canalus_planet}
     }
 
     planet = {
@@ -5933,7 +6251,7 @@ sys_dirada_init = {
         orbit_angle = 318
         has_ring = no
 		size = 35
-		flags = { subclass_world }
+		flags = {subclass_world zeth_planet}
     }
 
     planet = {
@@ -5943,7 +6261,7 @@ sys_dirada_init = {
         orbit_angle = 310
         has_ring = yes
 		size = 33
-		flags = { subclass_world }
+		flags = {subclass_world sineus_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = extensive_moon_system
@@ -5957,6 +6275,7 @@ sys_dirada_init = {
 			orbit_angle = 170
 			orbit_distance = 20
 			size = 6
+			flags = { sineus_a_planet }
 		}	
 
 		moon = {
@@ -5965,6 +6284,7 @@ sys_dirada_init = {
 			orbit_angle = 240
 			orbit_distance = 5
 			size = 6
+			flags = { sineus_b_planet }
 		}
 
 		moon = {
@@ -5973,6 +6293,7 @@ sys_dirada_init = {
 			orbit_angle = 35
 			orbit_distance = 5
 			size = 8
+			flags = { sineus_c_planet }
 		}		
     }
 
@@ -5983,7 +6304,7 @@ sys_dirada_init = {
         orbit_angle = 295
         has_ring = no
 		size = 28
-		flags = { subclass_world }
+		flags = {subclass_world vioresa_planet}
 
 		moon = {
 			name = "Vioresa a"
@@ -5991,6 +6312,7 @@ sys_dirada_init = {
 			orbit_angle = 60
 			orbit_distance = 20
 			size = 4
+			flags = { vioresa_a_planet }
 		}	
 
 		moon = {
@@ -5999,6 +6321,7 @@ sys_dirada_init = {
 			orbit_angle = 260
 			orbit_distance = 5
 			size = 4
+			flags = { vioresa_b_planet }
 		}			
     }
 }
@@ -6015,6 +6338,7 @@ sys_kriseroi_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 25
+        flags = { kriseroi_star }
     }
 
     planet = {
@@ -6024,7 +6348,7 @@ sys_kriseroi_init = {
         orbit_angle = 11
         has_ring = no
 		size = 12
-		flags = { subclass_world }
+		flags = {subclass_world neidus_planet}
 		entity = "antarctic_planet_05_entity"
 		init_effect = {
 			add_modifier = {
@@ -6049,7 +6373,7 @@ sys_kriseroi_init = {
         orbit_angle = 202
         has_ring = no
 		size = 25
-		flags = { subclass_world }
+		flags = {subclass_world theonax_planet}
 		entity = "cryovolcanic_planet_07_entity"
 		init_effect = {
 			add_modifier = {
@@ -6066,7 +6390,7 @@ sys_kriseroi_init = {
         orbit_angle = 313
         has_ring = no
 		size = 29
-		flags = { subclass_world }
+		flags = {subclass_world uzin_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = extensive_moon_system
@@ -6080,6 +6404,7 @@ sys_kriseroi_init = {
 			orbit_angle = 90
 			orbit_distance = 20
 			size = 9
+			flags = { chithess_planet }
 		}
     }
 
@@ -6090,7 +6415,7 @@ sys_kriseroi_init = {
         orbit_angle = 219
         has_ring = no
 		size = 29
-		flags = { subclass_world }
+		flags = {subclass_world geus_planet}
     }
 
     planet = {
@@ -6100,6 +6425,7 @@ sys_kriseroi_init = {
         orbit_angle = 4
         has_ring = no
 		size = 3
+		flags = { tenoth_planet }
     }	
 }
 
@@ -6115,6 +6441,7 @@ sys_nariph_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 20
+        flags = { nariph_star }
     }
 
     planet = {
@@ -6124,7 +6451,7 @@ sys_nariph_init = {
         orbit_angle = 339
         has_ring = yes
 		size = 35
-		flags = { subclass_world }
+		flags = {subclass_world isale_planet}
     }
 
     planet = {
@@ -6134,7 +6461,7 @@ sys_nariph_init = {
         orbit_angle = 190
         has_ring = no
 		size = 25
-		flags = { subclass_world }
+		flags = {subclass_world jonus_planet}
 
 		moon = {
 			name = "Fargone"
@@ -6142,6 +6469,7 @@ sys_nariph_init = {
 			orbit_angle = 100
 			orbit_distance = 20
 			size = 8
+			flags = { fargone_planet }
 		}		
     }
 }
@@ -6158,6 +6486,7 @@ sys_satent_init = {
         class = "pc_m_star"
         orbit_distance = 0
         size = 25
+        flags = { satent_star }
     }
 
     planet = {
@@ -6167,7 +6496,7 @@ sys_satent_init = {
         orbit_angle = 172
         has_ring = no
 		size = 36
-		flags = { subclass_world }
+		flags = {subclass_world rescel_planet}
     }
 
     planet = {
@@ -6177,7 +6506,7 @@ sys_satent_init = {
         orbit_angle = 231
         has_ring = no
 		size = 9
-		flags = { subclass_world }
+		flags = {subclass_world raisaris_planet}
 
 		init_effect = {
 			add_deposit = d_eezo_3
@@ -6191,7 +6520,7 @@ sys_satent_init = {
         orbit_angle = 198
         has_ring = no
 		size = 7
-		flags = { subclass_world }
+		flags = {subclass_world anedia_planet}
     }
 
     planet = {
@@ -6201,7 +6530,7 @@ sys_satent_init = {
         orbit_angle = 148
         has_ring = no
 		size = 25
-		flags = { subclass_world }
+		flags = {subclass_world boro_planet}
 
 		init_effect = {
 			add_deposit = d_eezo_scarce
@@ -6215,7 +6544,7 @@ sys_satent_init = {
         orbit_angle = 306
         has_ring = no
 		size = 26
-		flags = { subclass_world }
+		flags = {subclass_world nataisa_planet}
     }
 }
 
@@ -6231,6 +6560,7 @@ sys_zaherin_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 30
+        flags = { zaherin_star }
 		init_effect = {
 			create_ambient_object = {
 				type = "nebula_2"
@@ -6254,7 +6584,7 @@ sys_zaherin_init = {
         orbit_angle = 326
         has_ring = no
 		size = 17
-		flags = { subclass_world }
+		flags = {subclass_world ehstag_planet}
 		entity = "dune_planet_03_entity"
 		init_effect = {
 			add_modifier = {
@@ -6275,7 +6605,7 @@ sys_zaherin_init = {
         orbit_angle = 75
         has_ring = no
 		size = 25
-		flags = { subclass_world }
+		flags = {subclass_world namakli_planet}
 		entity = "mesa_planet_03_entity"	
     }
 
@@ -6286,7 +6616,7 @@ sys_zaherin_init = {
         orbit_angle = 181
         has_ring = no
 		size = 11
-		flags = { subclass_world }
+		flags = {subclass_world azrahas_planet}
     }
 
     planet = {
@@ -6296,7 +6626,7 @@ sys_zaherin_init = {
         orbit_angle = 112
         has_ring = yes
 		size = 26
-		flags = { subclass_world }
+		flags = {subclass_world rotesk_planet}
     }
 
 	init_effect = { 
@@ -6325,6 +6655,7 @@ sys_edheras_init = {
         class = pc_l_star
         orbit_distance = 0
         size = 20
+        flags = { edheras_star }
     }
 
     planet = {
@@ -6333,6 +6664,7 @@ sys_edheras_init = {
         orbit_distance = 125
         orbit_angle = 219
         size = 18
+        flags = { ufmas_planet }
         has_ring = no
     }
 
@@ -6342,6 +6674,7 @@ sys_edheras_init = {
         orbit_distance = 125
         orbit_angle = 45
         size = 7
+        flags = { alathor_planet }
         has_ring = no
     }
 
@@ -6351,6 +6684,7 @@ sys_edheras_init = {
         orbit_distance = 125
         orbit_angle = 244
         size = 24
+        flags = { khem_planet }
         has_ring = no
     }
 
@@ -6368,6 +6702,7 @@ sys_edheras_init = {
             orbit_distance = 20
             orbit_angle = 201
             size = 7
+            flags = {prartor_planet creckak_planet}
             has_ring = no
         }
 
@@ -6377,6 +6712,7 @@ sys_edheras_init = {
             orbit_distance = 5
             orbit_angle = 346
             size = 2
+            flags = { sothor_planet }
             has_ring = no
 
         }
@@ -6395,6 +6731,7 @@ sys_erentis_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 20
+        flags = { erentis_star }
     }
 
     planet = {
@@ -6403,6 +6740,7 @@ sys_erentis_init = {
         orbit_distance = 80
         orbit_angle = 41
         size = 40
+        flags = { arashu_planet }
         has_ring = no
     }
 
@@ -6412,6 +6750,7 @@ sys_erentis_init = {
         orbit_distance = 80
         orbit_angle = 255
         size = 16
+        flags = { pistren_planet }
         has_ring = no
     }
 
@@ -6421,6 +6760,7 @@ sys_erentis_init = {
         orbit_distance = 80
         orbit_angle = 290
         size = 22
+        flags = { yimire_planet }
         has_ring = no
     }
 
@@ -6430,6 +6770,7 @@ sys_erentis_init = {
         orbit_distance = 80
         orbit_angle = 280
         size = 11
+        flags = { hustrika_planet }
         has_ring = no
     }
 
@@ -6439,6 +6780,7 @@ sys_erentis_init = {
         orbit_distance = 80
         orbit_angle = 238
         size = 35
+        flags = { lorintia_planet }
         has_ring = no
     }
 
@@ -6448,6 +6790,7 @@ sys_erentis_init = {
         orbit_distance = 80
         orbit_angle = 162
         size = 11
+        flags = { tasza_planet }
         has_ring = no
     }
 }
@@ -6469,6 +6812,7 @@ sys_numunas_init = {
         class = pc_a_super_star
         orbit_distance = 0
         size = 20
+        flags = { numun_as_star }
     }
 
     planet = {
@@ -6477,6 +6821,7 @@ sys_numunas_init = {
         orbit_distance = 80
         orbit_angle = 172
         size = 8
+        flags = { sasho_planet }
         has_ring = no
     }
 
@@ -6493,6 +6838,7 @@ sys_numunas_init = {
         orbit_distance = 80
         orbit_angle = 125
         size = 17
+        flags = { nimi_planet }
         has_ring = no
     }
 
@@ -6502,6 +6848,7 @@ sys_numunas_init = {
         orbit_distance = 80
         orbit_angle = 59
         size = 10
+        flags = { opus_mas_planet }
         has_ring = no
     }
 
@@ -6511,6 +6858,7 @@ sys_numunas_init = {
         orbit_distance = 80
         orbit_angle = 172
         size = 16
+        flags = { iblil_gin_planet }
         has_ring = no
     }
 
@@ -6520,6 +6868,7 @@ sys_numunas_init = {
         orbit_distance = 80
         orbit_angle = 297
         size = 19
+        flags = { kowu_planet }
         has_ring = no
     }
 
@@ -6550,6 +6899,7 @@ sys_rastriux_init = {
         class = pc_a_star
         orbit_distance = 0
         size = 20
+        flags = { rastriux_star }
     }
 
     planet = {
@@ -6558,6 +6908,7 @@ sys_rastriux_init = {
         orbit_distance = 45
         orbit_angle = 164
         size = 9
+        flags = { quaril_planet }
         has_ring = no
     }
 
@@ -6567,6 +6918,7 @@ sys_rastriux_init = {
         orbit_distance = 45
         orbit_angle = 66
         size = 11
+        flags = { esterton_planet }
         has_ring = no
     }
 
@@ -6576,6 +6928,7 @@ sys_rastriux_init = {
         orbit_distance = 45
         orbit_angle = 306
         size = 15
+        flags = { tremortus_planet }
         has_ring = no
     }
 
@@ -6585,6 +6938,7 @@ sys_rastriux_init = {
         orbit_distance = 45
         orbit_angle = 91
         size = 10
+        flags = { poptite_planet }
         has_ring = no
     }
 
@@ -6594,6 +6948,7 @@ sys_rastriux_init = {
         orbit_distance = 45
         orbit_angle = 326
         size = 16
+        flags = { victronis_planet }
         has_ring = no
     }
 
@@ -6603,6 +6958,7 @@ sys_rastriux_init = {
         orbit_distance = 45
         orbit_angle = 145
         size = 33
+        flags = { aititus_planet }
         has_ring = yes
     }
 
@@ -6612,6 +6968,7 @@ sys_rastriux_init = {
         orbit_distance = 45
         orbit_angle = 289
         size = 37
+        flags = { seveda_planet }
         has_ring = no
     }
 
@@ -6629,6 +6986,7 @@ sys_rastriux_init = {
         orbit_distance = 45
         orbit_angle = 178
         size = 2
+        flags = { konoha_planet }
         has_ring = no
     }
 
@@ -6645,6 +7003,7 @@ sys_rastriux_init = {
         orbit_distance = 45
         orbit_angle = 292
         size = 16
+        flags = { opigi_planet }
         has_ring = no
     }
 
@@ -6654,6 +7013,7 @@ sys_rastriux_init = {
         orbit_distance = 45
         orbit_angle = 153
         size = 19
+        flags = { caskli_planet }
         has_ring = no
     }
 
@@ -6684,6 +7044,7 @@ sys_ubila_init = {
         class = pc_neutron_star
         orbit_distance = 0
         size = 20
+        flags = { ubila_star }
     }
 
     planet = {
@@ -6692,6 +7053,7 @@ sys_ubila_init = {
         orbit_distance = 60
         orbit_angle = 96
         size = 16
+        flags = { jalki_planet }
         has_ring = no
     }
 
@@ -6701,6 +7063,7 @@ sys_ubila_init = {
         orbit_distance = 60
         orbit_angle = 181
         size = 19
+        flags = { lilant_planet }
         has_ring = no
     }
 
@@ -6710,6 +7073,7 @@ sys_ubila_init = {
         orbit_distance = 60
         orbit_angle = 269
         size = 14
+        flags = { borborm_planet }
         has_ring = no
     }
 
@@ -6719,6 +7083,7 @@ sys_ubila_init = {
         orbit_distance = 60
         orbit_angle = 157
         size = 8
+        flags = { dondae_planet }
         has_ring = no
     }
 
@@ -6737,6 +7102,7 @@ sys_ubila_init = {
         orbit_distance = 60
         orbit_angle = 135
         size = 20
+        flags = { samirai_planet }
         has_ring = no
     }
 
@@ -6746,6 +7112,7 @@ sys_ubila_init = {
         orbit_distance = 60
         orbit_angle = 153
         size = 7
+        flags = { tertoki_planet }
         has_ring = no
     }
 
@@ -6755,6 +7122,7 @@ sys_ubila_init = {
         orbit_distance = 60
         orbit_angle = 210
         size = 12
+        flags = { delorn_planet }
         has_ring = no
     }
 
@@ -6788,6 +7156,7 @@ sys_aysur_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 25
+        flags = { aysur_star }
     }
 	
 	asteroid_belt = {
@@ -6802,7 +7171,7 @@ sys_aysur_init = {
         orbit_angle = 316
         has_ring = no
 		size = 12
-		flags = { subclass_world }
+		flags = {subclass_world agnin_planet}
     }
 
     planet = {
@@ -6812,7 +7181,7 @@ sys_aysur_init = {
         orbit_angle = 198
         has_ring = no
 		size = 3
-		flags = { subclass_world }		
+		flags = {subclass_world shasu_planet}		
     }
 
     planet = {
@@ -6822,7 +7191,7 @@ sys_aysur_init = {
         orbit_angle = 186
         has_ring = no
 		size = 37
-		flags = { subclass_world }
+		flags = {subclass_world dranen_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = extensive_moon_system
@@ -6909,6 +7278,7 @@ sys_aysur_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			size = 6
+			flags = { dranen_d_planet }
 		}
 		
 		moon = {
@@ -6918,6 +7288,7 @@ sys_aysur_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			size = 4
+			flags = { dranen_e_planet }
 		}		
 	}
 
@@ -6944,7 +7315,7 @@ sys_aysur_init = {
         orbit_angle = 206
         has_ring = no
 		size = 36
-		flags = { subclass_world }
+		flags = {subclass_world alformus_planet}
     }
 
     planet = {
@@ -6954,7 +7325,7 @@ sys_aysur_init = {
         orbit_angle = 34
         has_ring = no
 		size = 12
-		flags = { subclass_world }
+		flags = {subclass_world shir_planet}
     }
 
     planet = {
@@ -6964,7 +7335,7 @@ sys_aysur_init = {
         orbit_angle = 289
         has_ring = no
 		size = 8
-		flags = { subclass_world }
+		flags = {subclass_world tamgauta_planet}
     }
 }
 
@@ -6987,6 +7358,7 @@ sys_balor_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 15
+        flags = { balor_star }
     }
 	
 	asteroid_belt = {
@@ -7010,7 +7382,7 @@ sys_balor_init = {
             has_ring = no
 			size = 16
 			starting_planet = yes
-			flags = { caleston_planet subclass_world }
+			flags = {caleston_planet subclass_world cernunnos_planet}
 			deposit_blockers = none
 			modifiers = none
 			init_effect = {
@@ -7069,6 +7441,7 @@ sys_balor_init = {
         orbit_angle = 141
         has_ring = no
 		size = 2
+		flags = { bres_planet }
     }
 
 	planet = {
@@ -7085,6 +7458,7 @@ sys_balor_init = {
         orbit_angle = 102
         has_ring = no
         size = 4		
+        flags = { elatha_planet }
     }
 
     planet = {
@@ -7095,6 +7469,7 @@ sys_balor_init = {
         has_ring = no
 		size = 25
 
+		flags = { partholon_planet }
 		init_effect = {
 			add_deposit = d_eezo_2
 		}
@@ -7118,6 +7493,7 @@ sys_eilor_init = {
         class = pc_b_star
         orbit_distance = 0
         size = 28
+        flags = { eilor_star }
     }
 
     planet = {
@@ -7127,7 +7503,7 @@ sys_eilor_init = {
         orbit_angle = 198
         has_ring = no
 		size = 30
-		flags = { subclass_world }
+		flags = {subclass_world rupaico_planet}
 
 	}	
 
@@ -7138,7 +7514,7 @@ sys_eilor_init = {
         orbit_angle = 198
         has_ring = yes
 		size = 34
-		flags = { subclass_world }
+		flags = {subclass_world lomanup_planet}
 
 		moon = {
 			name = "Lomanup a"
@@ -7147,6 +7523,7 @@ sys_eilor_init = {
 			orbit_angle = 198
 			has_ring = no
 			size = 3
+			flags = { lomanup_a_planet }
 		}
 
 		moon = {
@@ -7156,6 +7533,7 @@ sys_eilor_init = {
 			orbit_angle = 198
 			has_ring = no
 			size = 6
+			flags = { lomanup_b_planet }
 		}
     }
 
@@ -7184,6 +7562,7 @@ sys_eilor_init = {
 		orbit_angle = 198
 		has_ring = no
 		size = 18
+		flags = { trewia_planet }
 	}
 
 	init_effect = { 
@@ -7208,6 +7587,7 @@ sys_solveig_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 25
+        flags = { solveig_star }
 	}	
 
     planet = {
@@ -7217,7 +7597,7 @@ sys_solveig_init = {
         orbit_angle = 179
         has_ring = no
 		size = 11
-		flags = { subclass_world }
+		flags = {subclass_world surtur_planet}
 
         moon = {
             name = "Sinmara"
@@ -7237,7 +7617,7 @@ sys_solveig_init = {
         orbit_angle = 189
         has_ring = yes
 		size = 30
-		flags = { subclass_world }
+		flags = {subclass_world thrivaldi_planet}
 
 		moon = {
 			name = "Thrivaldi a"
@@ -7247,6 +7627,7 @@ sys_solveig_init = {
 			orbit_distance = 20
 			size = 6
 
+			flags = { thrivaldi_a_planet }
 		}		
 		moon = {
 			name = "Thrivaldi b"
@@ -7256,6 +7637,7 @@ sys_solveig_init = {
 			orbit_distance = 0
 			size = 8
 
+			flags = { thrivaldi_b_planet }
 		}
     }
 	
@@ -7282,6 +7664,7 @@ sys_talava_init = {
         class = pc_f_star
         orbit_distance = 0
         size = 20
+        flags = { talava_star }
     }
 
     planet = {
@@ -7291,6 +7674,7 @@ sys_talava_init = {
         orbit_angle = 304
         has_ring = no
 		size = 22
+		flags = { aitarus_planet }
 		init_effect = {
 			add_modifier = {
 				modifier = high_gravity
@@ -7314,6 +7698,7 @@ sys_talava_init = {
         orbit_angle = 177
         has_ring = no
 		size = 15
+		flags = { kaushus_planet }
 		init_effect = {
 			add_modifier = {
 				modifier = btr_unwise_mining_venture
@@ -7343,6 +7728,7 @@ sys_talava_init = {
         orbit_angle = 142
         has_ring = no
 		size = 11
+		flags = { taitus_planet }
     }	
 }
 
@@ -7358,6 +7744,7 @@ sys_yakawa_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 24
+        flags = { yakawa_star }
     }
 
     planet = {
@@ -7367,6 +7754,7 @@ sys_yakawa_init = {
         orbit_angle = 98
         has_ring = no
 		size = 25
+		flags = { sakata_planet }
 		init_effect = {
 			add_modifier = {
 				modifier = strong_magnetic_field
@@ -7389,6 +7777,7 @@ sys_yakawa_init = {
 			orbit_distance = 20
 			has_ring = no
 			size = 6
+			flags = {sumiko_planet nambu_planet}
         }
 
 		moon = {
@@ -7398,6 +7787,7 @@ sys_yakawa_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 20
 			size = 6
+			flags = { nambu_b_planet }
 		}
 
 		moon = {
@@ -7407,6 +7797,7 @@ sys_yakawa_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			size = 8
+			flags = { nambu_c_planet }
 		}	
     }
 
@@ -7434,6 +7825,7 @@ sys_yakawa_init = {
         orbit_angle = 151
         has_ring = no
 		size = 16
+		flags = { karumto_planet }
 		init_effect = {
 			add_modifier = {
 				modifier = unstable_tectonics
@@ -7456,6 +7848,7 @@ sys_yakawa_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 20
 			size = 8
+			flags = {kobayashi_a_planet kobayashi_planet}
 		}
 		
 		moon = {
@@ -7464,6 +7857,7 @@ sys_yakawa_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			size = 4
+			flags = { kobayashi_b_planet }
 		}		
     }	
 }
@@ -7488,6 +7882,7 @@ sys_dulayix_init = {
         class = pc_g_giant_star
         orbit_distance = 0
         size = 34
+        flags = { dula_yix_star }
     }
 
 	planet = {
@@ -7495,6 +7890,7 @@ sys_dulayix_init = {
         class = pc_barren
         orbit_distance = 125
         size = 6
+        flags = { maskit_planet }
     }
 
 	planet = {
@@ -7508,6 +7904,7 @@ sys_dulayix_init = {
 			class = pc_barren
 			orbit_distance = 20
 			size = 7
+			flags = {zasoph_planet fartuiog_planet}
 		}
 
 		moon = {
@@ -7515,6 +7912,7 @@ sys_dulayix_init = {
 			class = pc_barren_cold
 			orbit_distance = 5
 			size = 4
+			flags = { wertokh_planet }
 		}
     }
 
@@ -7523,6 +7921,7 @@ sys_dulayix_init = {
         class = pc_iron
         orbit_distance = 125
         size = 12
+        flags = { ralkhos_planet }
 	}
 
 	planet = {
@@ -7536,6 +7935,7 @@ sys_dulayix_init = {
 			class = pc_frozen
 			orbit_distance = 20
 			size = 3
+			flags = {reshaptu_planet onaxos_planet}
 		}
 
 		moon = {
@@ -7543,6 +7943,7 @@ sys_dulayix_init = {
 			class = pc_methane
 			orbit_distance = 5
 			size = 7
+			flags = { borast_planet }
 		}
 
 		moon = {
@@ -7550,6 +7951,7 @@ sys_dulayix_init = {
 			class = pc_carbon
 			orbit_distance = 5
 			size = 5
+			flags = { kiljas_planet }
 		}
     }
 
@@ -7576,6 +7978,7 @@ sys_kiskuter_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 27
+        flags = { kisku_ter_star }
     }
 
 	planet = {
@@ -7583,6 +7986,7 @@ sys_kiskuter_init = {
         class = pc_molten
         orbit_distance = 80
         size = 12
+        flags = { vus_planet }
     }
 
 	planet = {
@@ -7590,6 +7994,7 @@ sys_kiskuter_init = {
         class = pc_hothouse
         orbit_distance = 80
         size = 16
+        flags = { qerdo_planet }
 	}
 
 	planet = {
@@ -7603,6 +8008,7 @@ sys_kiskuter_init = {
 			class = pc_frozen
 			orbit_distance = 20
 			size = 5			
+			flags = {disko_planet wendoph_planet}
 		}
     }
 
@@ -7611,6 +8017,7 @@ sys_kiskuter_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 6
+        flags = { lotruv_planet }
     }
 
 	planet = {
@@ -7618,6 +8025,7 @@ sys_kiskuter_init = {
         class = pc_barren_cold
         orbit_distance = 80
         size = 3
+        flags = { volundro_planet }
     }
 
 	planet = {
@@ -7625,6 +8033,7 @@ sys_kiskuter_init = {
         class = pc_iron
         orbit_distance = 80
         size = 3
+        flags = { xisjos_planet }
     }
 }
 
@@ -7655,6 +8064,7 @@ sys_mollivix_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 27
+        flags = { molli_vix_star }
     }
 
 	planet = {
@@ -7662,6 +8072,7 @@ sys_mollivix_init = {
         class = pc_molten
         orbit_distance = 100
         size = 9
+        flags = { jerkilatg_planet }
     }
 
 	planet = {
@@ -7669,6 +8080,7 @@ sys_mollivix_init = {
         class = pc_hothouse
         orbit_distance = 100
         size = 14
+        flags = { tuph_planet }
 	}
 
 	change_orbit = 50
@@ -7685,6 +8097,7 @@ sys_mollivix_init = {
         class = pc_frozen
         orbit_distance = 50
         size = 16
+        flags = { ioskas_planet }
     }
 
 	change_orbit = 50
@@ -7701,6 +8114,7 @@ sys_mollivix_init = {
         class = pc_frozen
         orbit_distance = 50
         size = 7
+        flags = { xokhap_planet }
     }
 
 	planet = {
@@ -7708,6 +8122,7 @@ sys_mollivix_init = {
         class = pc_gas_giant
         orbit_distance = 50
         size = 38
+        flags = { eremuwan_planet }
 		has_ring = yes
     }
 
@@ -7733,6 +8148,7 @@ sys_qopifas_init = {
         class = pc_b_super_star
         orbit_distance = 0
         size = 36
+        flags = { qopi_fas_star }
     }
 
 	planet = {
@@ -7740,6 +8156,7 @@ sys_qopifas_init = {
         class = pc_iron
         orbit_distance = 125
         size = 15
+        flags = { kuis_planet }
     }
 
 	planet = {
@@ -7747,6 +8164,7 @@ sys_qopifas_init = {
         class = pc_hothouse
         orbit_distance = 125
         size = 14
+        flags = { triph_planet }
 	}
 
 	planet = {
@@ -7754,6 +8172,7 @@ sys_qopifas_init = {
         class = pc_dextro_tundra
         orbit_distance = 125
         size = 10
+        flags = { heyufs_planet }
     }
 
 	planet = {
@@ -7761,6 +8180,7 @@ sys_qopifas_init = {
         class = pc_ice_giant
         orbit_distance = 125
         size = 30
+        flags = { olimpakna_planet }
 		has_ring = yes
     }
 
@@ -7795,6 +8215,7 @@ sys_eldialdioc_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 25
+        flags = { eldialdioc_star }
     }
 
 	planet = {
@@ -7802,6 +8223,7 @@ sys_eldialdioc_init = {
         class = pc_molten
         orbit_distance = 80
         size = 12
+        flags = { zurlilok_planet }
     }
 
 	change_orbit = 40
@@ -7818,6 +8240,7 @@ sys_eldialdioc_init = {
         class = pc_hothouse
         orbit_distance = 40
         size = 17
+        flags = { nossoloeb_planet }
     }
 
 	planet = {
@@ -7825,6 +8248,7 @@ sys_eldialdioc_init = {
         class = pc_barren
         orbit_distance = 80
         size = 12
+        flags = { wiarda_planet }
     }
 
 	planet = {
@@ -7832,6 +8256,7 @@ sys_eldialdioc_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 6
+        flags = { wethmy_planet }
     }
 
 	planet = {
@@ -7839,6 +8264,7 @@ sys_eldialdioc_init = {
         class = pc_iron	
         orbit_distance = 80
         size = 3
+        flags = { melmim_planet }
     }
 
 	planet = {
@@ -7846,6 +8272,7 @@ sys_eldialdioc_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 13
+        flags = { junush_planet }
     }
 	
 	init_effect = { 
@@ -7875,6 +8302,7 @@ sys_kartulm_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 35
+        flags = { kartulm_star }
     }
 
 	planet = {
@@ -7882,6 +8310,7 @@ sys_kartulm_init = {
         class = pc_hothouse
         orbit_distance = 100
         size = 10
+        flags = { blolgi_planet }
     }
 	
 	planet = {
@@ -7889,6 +8318,7 @@ sys_kartulm_init = {
         class = pc_nuked
         orbit_distance = 100
         size = 15
+        flags = { shargren_planet }
     }
 
 	planet = {
@@ -7896,6 +8326,7 @@ sys_kartulm_init = {
         class = pc_gas_giant
         orbit_distance = 100
         size = 34
+        flags = { uhgurgri_planet }
 		has_ring = no
     }
 
@@ -7904,6 +8335,7 @@ sys_kartulm_init = {
         class = pc_asteroid
         orbit_distance = 50
         size = 3
+        flags = { ghibrulbun_planet }
     }
 
 	planet = {
@@ -7918,6 +8350,7 @@ sys_kartulm_init = {
         class = pc_gas_giant
         orbit_distance = 50
         size = 37
+        flags = { crirdoanzutch_planet }
 		has_ring = yes
     }
 
@@ -7926,6 +8359,7 @@ sys_kartulm_init = {
         class = pc_frozen
         orbit_distance = 100
         size = 14
+        flags = { skihlu_planet }
     }
 
 	init_effect = { 
@@ -7960,6 +8394,7 @@ sys_kruxtruxak_init = {
         class = pc_collapsar
         orbit_distance = 25
         size = 35
+        flags = { kruxtruxak_planet }
     }
 
 	planet = {
@@ -7967,6 +8402,7 @@ sys_kruxtruxak_init = {
         class = pc_molten
         orbit_distance = 150
         size = 13
+        flags = { blolgi_planet }
     }
 	
 	planet = {
@@ -7974,6 +8410,7 @@ sys_kruxtruxak_init = {
         class = pc_chthonian
         orbit_distance = 150
         size = 20
+        flags = { shargren_planet }
     }
 
 	planet = {
@@ -7981,6 +8418,7 @@ sys_kruxtruxak_init = {
         class = pc_molten
         orbit_distance = 150
         size = 10
+        flags = { uhgurgri_planet }
     }
 
 	init_effect = { 
@@ -8005,6 +8443,7 @@ sys_tultil_init = {
         class = pc_b_star
         orbit_distance = 0
         size = 35
+        flags = { tultil_star }
     }
 
 	planet = {
@@ -8012,6 +8451,7 @@ sys_tultil_init = {
         class = pc_iron
         orbit_distance = 80
         size = 6
+        flags = { egil_planet }
     }
 
 	planet = {
@@ -8019,6 +8459,7 @@ sys_tultil_init = {
         class = pc_hothouse
         orbit_distance = 80
         size = 12
+        flags = { biphius_planet }
     }
 	
 	planet = {
@@ -8026,6 +8467,7 @@ sys_tultil_init = {
         class = pc_barren_cold
         orbit_distance = 80
         size = 5
+        flags = { sunnyius_planet }
     }
 
 	planet = {
@@ -8033,6 +8475,7 @@ sys_tultil_init = {
         class = pc_ice_giant
         orbit_distance = 80
         size = 29
+        flags = { drodraedrael_planet }
 		has_ring = yes
     }
 
@@ -8041,6 +8484,7 @@ sys_tultil_init = {
         class = pc_barren_cold
         orbit_distance = 80
         size = 13
+        flags = { yidronnil_planet }
     }
 
 	planet = {
@@ -8048,6 +8492,7 @@ sys_tultil_init = {
         class = pc_barren
         orbit_distance = 80
         size = 4
+        flags = { cehnel_planet }
     }
 }	
 
@@ -8072,6 +8517,7 @@ sys_azedes_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 33
+        flags = { azedes_star }
     }	
 	
 	planet = {
@@ -8081,13 +8527,14 @@ sys_azedes_init = {
         orbit_angle = 208
         has_ring = no		
 		size = 12
-		flags = { subclass_world }
+		flags = {subclass_world vesskur_planet}
 
 		moon = {
 			name = "Mass'kur"
 			class = pc_barren
 			orbit_distance = 20
 			size = 4
+			flags = { masskur_planet }
 		}
 	}
 
@@ -8151,6 +8598,7 @@ sys_azedes_init = {
 			class = pc_barren_cold
 			orbit_distance = 20
 			size = 4
+			flags = { ino_planet }
 		}
 
 		moon = {
@@ -8158,6 +8606,7 @@ sys_azedes_init = {
 			class = pc_iron
 			orbit_distance = 5
 			size = 5
+			flags = { opi_planet }
 		}		
 	}
 
@@ -8174,6 +8623,7 @@ sys_azedes_init = {
 			class = pc_frozen
 			orbit_distance = 20
 			size = 4
+			flags = {ikura_a_planet ikura_planet}
 		}
 
 		moon = {
@@ -8181,6 +8631,7 @@ sys_azedes_init = {
 			class = pc_iron
 			orbit_distance = 5
 			size = 3
+			flags = { ikura_b_planet }
 		}
 
 		moon = {
@@ -8188,6 +8639,7 @@ sys_azedes_init = {
 			class = pc_asteroid
 			orbit_distance = 5
 			size = 1
+			flags = { ikura_c_planet }
 		}		
 	}
 
@@ -8204,6 +8656,7 @@ sys_azedes_init = {
 			class = pc_frozen
 			orbit_distance = 20
 			size = 3
+			flags = {lolp_planet vaal_planet}
 		}
 
 		moon = {
@@ -8211,6 +8664,7 @@ sys_azedes_init = {
 			class = pc_iron
 			orbit_distance = 5
 			size = 3
+			flags = { rarkas_planet }
 		}		
 
 		moon = {
@@ -8218,6 +8672,7 @@ sys_azedes_init = {
 			class = pc_frozen
 			orbit_distance = 5
 			size = 3
+			flags = { vaal_c_planet }
 		}		
 	}	
 
@@ -8234,6 +8689,7 @@ sys_azedes_init = {
 			class = pc_frozen
 			orbit_distance = 20
 			size = 3
+			flags = {sakur_a_planet sakur_planet}
 		}
 
 		moon = {
@@ -8241,6 +8697,7 @@ sys_azedes_init = {
 			class = pc_iron
 			orbit_distance = 5
 			size = 5
+			flags = { sakur_b_planet }
 		}
 	}
 
@@ -8251,7 +8708,7 @@ sys_azedes_init = {
         orbit_angle = 120
         has_ring = no		
 		size = 5
-		flags = { subclass_world }
+		flags = {subclass_world kuroi_planet}
 		entity = "methane_ocean_planet_08_entity"
 		init_effect = {
 			add_modifier = {
@@ -8265,6 +8722,7 @@ sys_azedes_init = {
 			class = pc_iron
 			orbit_distance = 20
 			size = 2
+			flags = { kuroi_a_planet }
 		}
 
 		moon = {
@@ -8272,6 +8730,7 @@ sys_azedes_init = {
 			class = pc_arctic
 			orbit_distance = 5
 			size = 2
+			flags = { kuroi_b_planet }
 		}		
     }    
 	
@@ -8298,6 +8757,7 @@ sys_hekate_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 30
+        flags = { hekate_star }
     }
 
     planet = {
@@ -8347,7 +8807,7 @@ sys_hekate_init = {
         orbit_angle = 296
         has_ring = no
 		size = 16
-		flags = { subclass_world }
+		flags = {subclass_world ker_planet}
 	}
 
     planet = {
@@ -8357,7 +8817,7 @@ sys_hekate_init = {
         orbit_angle = 293
         has_ring = no
 		size = 27
-		flags = { subclass_world }
+		flags = {subclass_world triodia_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = extensive_moon_system
@@ -8371,6 +8831,7 @@ sys_hekate_init = {
 			orbit_distance = 20
 			orbit_angle = 96
 			size = 3
+			flags = { keare_planet }
 		}
 
 		moon = {
@@ -8379,6 +8840,7 @@ sys_hekate_init = {
 			orbit_distance = 5
 			orbit_angle = 128
 			size = 2
+			flags = { alovau_planet }
 		}	
 
 		moon = {
@@ -8387,6 +8849,7 @@ sys_hekate_init = {
 			orbit_distance = 5
 			orbit_angle = 128
 			size = 1
+			flags = { emgao_planet }
 		}		
 
 		moon = {
@@ -8395,6 +8858,7 @@ sys_hekate_init = {
 			orbit_distance = 5
 			orbit_angle = 3
 			size = 3
+			flags = { phearlea_planet }
 		}
 
 		moon = {
@@ -8403,6 +8867,7 @@ sys_hekate_init = {
 			orbit_distance = 5
 			orbit_angle = 53
 			size = 1
+			flags = { lysrynia_planet }
 		}	
 
 		moon = {
@@ -8411,6 +8876,7 @@ sys_hekate_init = {
 			orbit_distance = 5
 			orbit_angle = 128
 			size = 1
+			flags = { janariya_planet }
 		}
 
 		moon = {
@@ -8419,6 +8885,7 @@ sys_hekate_init = {
 			orbit_distance = 5
 			orbit_angle = 256
 			size = 1
+			flags = { seno_planet }
 		}
 
 		moon = {
@@ -8427,6 +8894,7 @@ sys_hekate_init = {
 			orbit_distance = 5
 			orbit_angle = 180
 			size = 1
+			flags = { zeucka_planet }
 		}
 
 		moon = {
@@ -8435,6 +8903,7 @@ sys_hekate_init = {
 			orbit_distance = 5
 			orbit_angle = 10
 			size = 6
+			flags = { falelthea_planet }
 		}
 
 		moon = {
@@ -8443,6 +8912,7 @@ sys_hekate_init = {
 			orbit_distance = 5
 			orbit_angle = 100
 			size = 1
+			flags = { biumha_planet }
 		}	
 
 		moon = {
@@ -8451,6 +8921,7 @@ sys_hekate_init = {
 			orbit_distance = 5
 			orbit_angle = 145
 			size = 1
+			flags = { ushilea_planet }
 		}	
 
 		moon = {
@@ -8459,6 +8930,7 @@ sys_hekate_init = {
 			orbit_distance = 5
 			orbit_angle = 256
 			size = 1
+			flags = { chaessley_planet }
 		}
 
 		moon = {
@@ -8467,6 +8939,7 @@ sys_hekate_init = {
 			orbit_distance = 5
 			orbit_angle = 73
 			size = 1
+			flags = { alaname_planet }
 		}
 
 		moon = {
@@ -8475,6 +8948,7 @@ sys_hekate_init = {
 			orbit_distance = 5
 			orbit_angle = 22
 			size = 1
+			flags = { telestze_planet }
 		}			
     }
 
@@ -8485,7 +8959,7 @@ sys_hekate_init = {
         orbit_angle = 194
         has_ring = no
 		size = 18
-		flags = { subclass_world }
+		flags = {subclass_world bothros_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = asteroid_impacts
@@ -8508,6 +8982,7 @@ sys_hoplos_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 30
+        flags = { hoplos_star }
     }
 
     planet = {
@@ -8517,7 +8992,7 @@ sys_hoplos_init = {
         orbit_angle = 126
         has_ring = no
 		size = 8
-		flags = { subclass_world }
+		flags = {subclass_world talaria_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = tidal_locked
@@ -8551,6 +9026,7 @@ sys_hoplos_init = {
 			orbit_angle = 96
 			has_ring = no
 			size = 3
+			flags = {makhaira_a_planet makhaira_planet}
 		}
 
 		moon = {
@@ -8560,6 +9036,7 @@ sys_hoplos_init = {
             orbit_angle = 180
             has_ring = no
 			size = 4
+			flags = { kopis_planet }
 			init_effect = {
 				add_modifier = {
 					modifier = low_gravity
@@ -8622,7 +9099,7 @@ sys_hoplos_init = {
         orbit_angle = 221
         has_ring = yes
 		size = 33
-		flags = { subclass_world }
+		flags = {subclass_world aegis_planet}
     }
 }
 
@@ -8638,6 +9115,7 @@ sys_pamyat_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 30
+        flags = { pamyat_star }
     }
 	
 	asteroid_belt = {
@@ -8652,7 +9130,7 @@ sys_pamyat_init = {
         orbit_angle = 128
         has_ring = no
 		size = 17
-		flags = { subclass_world }
+		flags = {subclass_world komarov_planet}
     }
 
     planet = {
@@ -8697,7 +9175,7 @@ sys_pamyat_init = {
         orbit_angle = 260
         has_ring = no
 		size = 15
-		flags = { subclass_world }
+		flags = {subclass_world patsayev_planet}
 		entity = "cryovolcanic_planet_01_entity"
 		init_effect = {
 			add_modifier = {
@@ -8714,7 +9192,7 @@ sys_pamyat_init = {
         orbit_angle = 195
         has_ring = no
 		size = 4
-		flags = { subclass_world } 
+		flags = {subclass_world volkov_planet} 
 		init_effect = {
 			add_modifier = {
 				modifier = lichen_world
@@ -8726,6 +9204,7 @@ sys_pamyat_init = {
 			name = "Zenevieva"
 			class = pc_asteroid
 			size = 2
+			flags = { zenevieva_planet }
 			orbit_angle = 36
 			orbit_distance = 20
 		}
@@ -8734,6 +9213,7 @@ sys_pamyat_init = {
 			name = "Alena"
 			class = pc_asteroid
 			size = 3
+			flags = { alena_planet }
 			orbit_angle = 36
 			orbit_distance = 5
 		}		
@@ -8746,15 +9226,21 @@ sys_pamyat_init = {
         orbit_angle = 276
         has_ring = no
 		size = 4
-		flags = { subclass_world }
+		flags = {subclass_world quiet_eddy_planet}
     }
 
 	planet = {
-		count = { min = 1 max = 4 }
+		count = { min = 1 max = 3 }
 		class = pc_asteroid
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
 	}
+    planet = {
+        class = pc_asteroid
+        orbit_distance = 0
+        orbit_angle = { min = 90 max = 270 }
+        flags = { pamyat_belt }
+    }
 }
 
 sys_sheol_init = {
@@ -8769,6 +9255,7 @@ sys_sheol_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 15
+        flags = { sheol_star }
     }
 
     planet = {
@@ -8778,7 +9265,7 @@ sys_sheol_init = {
         orbit_angle = 220
         has_ring = no
 		size = 6
-		flags = { subclass_world }
+		flags = {subclass_world gei_hinnom_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = low_gravity
@@ -8829,6 +9316,7 @@ sys_avas_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 25
+        flags = { avas_star }
     }
 
 	change_orbit = 50
@@ -8845,6 +9333,7 @@ sys_avas_init = {
         class = pc_dextro_continental
         orbit_distance = 50
         size = 16
+        flags = { tresnoch_planet }
     }
 
 	change_orbit = 25
@@ -8861,6 +9350,7 @@ sys_avas_init = {
         class = pc_ice_giant
         orbit_distance = 100
         size = 27
+        flags = { zofer_planet }
     }
 
 	planet = {
@@ -8868,6 +9358,7 @@ sys_avas_init = {
         class = pc_barren
         orbit_distance = 100
         size = 6
+        flags = { hadda_planet }
     }
 
 	planet = {
@@ -8875,6 +9366,7 @@ sys_avas_init = {
         class = pc_carbon
         orbit_distance = 100
         size = 12
+        flags = { vabratos_planet }
     }
 
 	init_effect = { 
@@ -8904,6 +9396,7 @@ sys_geeder_init = {
         class = pc_m_giant_star
         orbit_distance = 0
         size = 32
+        flags = { geeder_star }
     }
 
 	planet = {
@@ -8911,6 +9404,7 @@ sys_geeder_init = {
         class = pc_molten
         orbit_distance = 80
         size = 9
+        flags = { mil_planet }
     }
 
 	planet = {
@@ -8918,6 +9412,7 @@ sys_geeder_init = {
         class = pc_hothouse
         orbit_distance = 80
         size = 13
+        flags = { nalun_planet }
     }
 	
 	planet = {
@@ -8925,6 +9420,7 @@ sys_geeder_init = {
         class = pc_hothouse
         orbit_distance = 80
         size = 11
+        flags = { yadarum_planet }
     }
 
 	planet = {
@@ -8932,6 +9428,7 @@ sys_geeder_init = {
         class = pc_barren
         orbit_distance = 80
         size = 4
+        flags = { saelgun_planet }
     }
 
 	planet = {
@@ -8939,6 +9436,7 @@ sys_geeder_init = {
         class = pc_hothouse
         orbit_distance = 80
         size = 10
+        flags = { qwiz_planet }
 	}
 
 	planet = {
@@ -8952,6 +9450,7 @@ sys_geeder_init = {
 			class = pc_frozen
 			orbit_distance = 20
 			size = 7
+			flags = {resdifalas_planet xileyn_planet}
 		}
 		
 		moon = {
@@ -8959,6 +9458,7 @@ sys_geeder_init = {
 			class = pc_carbon
 			orbit_distance = 5
 			size = 5
+			flags = { shitalir_planet }
 		}
     }
 
@@ -8989,6 +9489,7 @@ sys_zoca_init = {
         class = pc_m_giant_star
         orbit_distance = 0
         size = 32
+        flags = { zoca_star }
     }
 
 	planet = {
@@ -8996,6 +9497,7 @@ sys_zoca_init = {
         class = pc_iron
         orbit_distance = 100
         size = 9
+        flags = { shehali_planet }
     }
 
 	planet = {
@@ -9003,6 +9505,7 @@ sys_zoca_init = {
         class = pc_iron
         orbit_distance = 100
         size = 6
+        flags = { shen_planet }
     }
 	
 	planet = {
@@ -9010,6 +9513,7 @@ sys_zoca_init = {
         class = pc_hothouse
         orbit_distance = 100
         size = 17
+        flags = { shubra_planet }
     }
 
 	change_orbit = 50
@@ -9026,6 +9530,7 @@ sys_zoca_init = {
         class = pc_gas_giant
         orbit_distance = 50
         size = 36
+        flags = { waabran_planet }
 		has_ring = yes
     }
 
@@ -9034,6 +9539,7 @@ sys_zoca_init = {
         class = pc_frozen
         orbit_distance = 100
         size = 12
+        flags = { yipos_planet }
     }
 }
 
@@ -9053,6 +9559,7 @@ sys_hoc_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 30
+        flags = { hoc_star }
 	}
 
     planet = {
@@ -9062,7 +9569,7 @@ sys_hoc_init = {
         orbit_angle = 350
         has_ring = no
 		size = 35
-		flags = { subclass_world }
+		flags = {subclass_world jarfor_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = tidal_locked
@@ -9078,7 +9585,7 @@ sys_hoc_init = {
         orbit_angle = 302
         has_ring = no
 		size = 18
-		flags = { subclass_world }
+		flags = {subclass_world nemata_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = btr_scorching_surface
@@ -9102,7 +9609,7 @@ sys_hoc_init = {
         orbit_angle = 296
         has_ring = no
 		size = 16
-		flags = { subclass_world }
+		flags = {subclass_world virmire_planet}
 		entity = "tropical_planet_01_entity"
 		init_effect = {		
 			add_modifier = {
@@ -9126,7 +9633,7 @@ sys_hoc_init = {
         orbit_angle = 148
         has_ring = no
 		size = 29
-		flags = { subclass_world }
+		flags = {subclass_world cloroplon_planet}
     }
 
     planet = {
@@ -9136,7 +9643,7 @@ sys_hoc_init = {
         orbit_angle = 142
         has_ring = no
 		size = 5
-		flags = { subclass_world }
+		flags = {subclass_world prescyla_planet}
     }
 	
 	init_effect = { 
@@ -9161,7 +9668,7 @@ sys_sn046_init = {
 		class = pc_gas_giant
         orbit_distance = 0
 		size = 36
-		flags = { subclass_world }	
+		flags = {subclass_world sn_046_planet}	
 		has_ring = no
 
 		moon = {
@@ -9169,6 +9676,7 @@ sys_sn046_init = {
 			class = pc_asteroid
 			orbit_distance = 20
 			size = 3
+			flags = { s/2186_046_i_planet }
 		}	
 
 		moon = {
@@ -9176,6 +9684,7 @@ sys_sn046_init = {
 			class = pc_iron
 			orbit_distance = 5
 			size = 8
+			flags = { s/2186_046_ii_planet }
 		}	
 
 		moon = {
@@ -9183,6 +9692,7 @@ sys_sn046_init = {
 			class = pc_met_asteroid
 			orbit_distance = 5
 			size = 3
+			flags = { s/2186_046_iii_planet }
 		}
 
 		moon = {
@@ -9190,6 +9700,7 @@ sys_sn046_init = {
 			class = pc_sil_asteroid
 			orbit_distance = 5
 			size = 8
+			flags = { s/2186_046_iv_planet }
 		}
 
 		moon = {
@@ -9197,6 +9708,7 @@ sys_sn046_init = {
 			class = pc_iron
 			orbit_distance = 5
 			size = 8
+			flags = { s/2186_046_v_planet }
 		}	
 	}
 }
@@ -9213,6 +9725,7 @@ sys_telith_init = {
 		class = pc_b_super_star
         orbit_distance = 0
 		size = 45
+		flags = { telith_star }
 	}
 	
 	planet = {
@@ -9221,7 +9734,7 @@ sys_telith_init = {
         orbit_distance = 250
 		has_ring = no
 		size = 12
-		flags = { subclass_world }
+		flags = {subclass_world sapfir_planet}
     }
 
 	init_effect = { 
@@ -9250,6 +9763,7 @@ sys_haelazi_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 20
+        flags = { haelazi_star }
     }
 
     planet = {
@@ -9258,6 +9772,7 @@ sys_haelazi_init = {
         orbit_distance = 150
 		orbit_angle = { min = 40 max = 180 }
         size = 10
+        flags = { henbay_planet }
 		has_ring = no
 	}
 
@@ -9266,6 +9781,7 @@ sys_haelazi_init = {
 		class = pc_gas_giant
 		orbit_distance = 150
 		size = 34
+		flags = { yimorn_planet }
 		has_ring = yes
 	}	
 
@@ -9276,7 +9792,7 @@ sys_haelazi_init = {
         orbit_angle = 171
         has_ring = no
 		size = 12
-        flags = { subclass_world }
+        flags = {subclass_world ceeharu_planet}
         entity = "mephitic_ocean_planet_11_entity"
         init_effect = {
             add_modifier = {
@@ -9308,6 +9824,7 @@ sys_seefisgaca_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 25
+        flags = { seefisgaca_star }
     }
 
 	planet = {
@@ -9317,6 +9834,7 @@ sys_seefisgaca_init = {
 		orbit_angle = 119
         has_ring = no
 		size = 12
+		flags = { ceeleya_planet }
     }
 	
 	planet = {
@@ -9326,6 +9844,7 @@ sys_seefisgaca_init = {
         orbit_angle = 119
         has_ring = no
 		size = 14
+		flags = { shaefirn_planet }
     }
 
 	planet = {
@@ -9352,6 +9871,7 @@ sys_seefisgaca_init = {
         orbit_angle = 119
         has_ring = no
 		size = 9
+		flags = { jael_planet }
     }
 
 	planet = {
@@ -9361,6 +9881,7 @@ sys_seefisgaca_init = {
         orbit_angle = 119
         has_ring = no
 		size = 6
+		flags = { yaestrom_planet }
     }
 
 	planet = {
@@ -9370,6 +9891,7 @@ sys_seefisgaca_init = {
         orbit_angle = 119
         has_ring = no
 		size = 11
+		flags = { xandeka_planet }
     }
 	
 	planet = {
@@ -9380,7 +9902,7 @@ sys_seefisgaca_init = {
         has_ring = no
 		size = 18
         entity = "ammonia_ocean_planet_08_entity"
-        flags = { subclass_world }
+        flags = {subclass_world zeetalir_planet}
         init_effect = {
             add_modifier = {
                 modifier = coldocean_world
@@ -9396,6 +9918,7 @@ sys_seefisgaca_init = {
         orbit_angle = 119
         has_ring = no
 		size = 3
+		flags = { fito_planet }
     }
 
 	planet = {
@@ -9405,6 +9928,7 @@ sys_seefisgaca_init = {
         orbit_angle = 119
         has_ring = no
 		size = 5
+		flags = { waamornh_planet }
     }
 
     init_effect = { 
@@ -9429,6 +9953,7 @@ sys_sesost_init = {
         class = pc_m_giant_star
         orbit_distance = 0
         size = 35
+        flags = { sesost_star }
     }
 
 	planet = {
@@ -9438,6 +9963,7 @@ sys_sesost_init = {
         orbit_angle = 119
         has_ring = no
 		size = 12
+		flags = { heeris_planet }
     }
 	
 	planet = {
@@ -9496,6 +10022,7 @@ sys_xelazi_init = {
         orbit_angle = 119
         has_ring = no
 		size = 32
+		flags = { raanbay_planet }
     }
 	
 	planet = {
@@ -9505,6 +10032,7 @@ sys_xelazi_init = {
         orbit_angle = 119
         has_ring = no
 		size = 10
+		flags = { rofohomma_planet }
     }
 	
 	planet = {
@@ -9514,6 +10042,7 @@ sys_xelazi_init = {
         orbit_angle = 119
         has_ring = no
 		size = 7
+		flags = { wesost_planet }
     }
 
 	change_orbit = 40
@@ -9532,6 +10061,7 @@ sys_xelazi_init = {
         orbit_angle = 119
         has_ring = no
 		size = 10
+		flags = { genn_planet }
     }
 
 	change_orbit = 40
@@ -9550,6 +10080,7 @@ sys_xelazi_init = {
         orbit_angle = 119
         has_ring = no
 		size = 2
+		flags = { fasoyul_planet }
 	}
 
 	change_orbit = 40
@@ -9568,6 +10099,7 @@ sys_xelazi_init = {
         orbit_angle = 119
         has_ring = yes
 		size = 28
+		flags = { jiman_planet }
 	}
 }
 
@@ -9583,6 +10115,7 @@ sys_yassu_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 30
+        flags = { yassu_star }
     }
 
 	planet = {
@@ -9592,6 +10125,7 @@ sys_yassu_init = {
         orbit_angle = 119
         has_ring = no
 		size = 8
+		flags = { hasha_planet }
     }
 	
 	planet = {
@@ -9601,6 +10135,7 @@ sys_yassu_init = {
         orbit_angle = 119
         has_ring = no
 		size = 16
+		flags = { shomos_planet }
     }
 
 	planet = {
@@ -9610,6 +10145,7 @@ sys_yassu_init = {
         orbit_angle = 119
         has_ring = no
 		size = 38
+		flags = { fael_planet }
     }
 	
 	planet = {
@@ -9628,7 +10164,7 @@ sys_yassu_init = {
 			has_ring = no
 			size = 4
             entity = "cryovolcanic_planet_06_entity"
-            flags = { subclass_world }
+            flags = {subclass_world jarul_planet tunna_planet}
             init_effect = {
                 add_modifier = {
                     modifier = cryovolcanic_world
@@ -9651,6 +10187,7 @@ sys_yeelixeeme_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 25
+        flags = { yeelixeeme_star }
     }
 
 	planet = {
@@ -9660,6 +10197,7 @@ sys_yeelixeeme_init = {
         orbit_angle = 119
         has_ring = no
 		size = 7
+		flags = { viko_planet }
     }
 	
 	planet = {
@@ -9669,6 +10207,7 @@ sys_yeelixeeme_init = {
         orbit_angle = 119
         has_ring = no
 		size = 14
+		flags = { jahi_planet }
     }
 
 	planet = {
@@ -9678,6 +10217,7 @@ sys_yeelixeeme_init = {
         orbit_angle = 119
         has_ring = no
 		size = 7
+		flags = { shewan_planet }
     }
 	
 	planet = {
@@ -9687,6 +10227,7 @@ sys_yeelixeeme_init = {
         orbit_angle = 119
         has_ring = no
 		size = 10
+		flags = { quiko_planet }
     }
 }
 
@@ -9715,6 +10256,7 @@ sys_gaenirma_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 34
+        flags = { gaenirma_star }
     }
 
     planet = {
@@ -9723,6 +10265,7 @@ sys_gaenirma_init = {
         orbit_distance = 100
         orbit_angle = 197
         size = 9
+        flags = { mardim_planet }
         has_ring = no
     }
 
@@ -9732,6 +10275,7 @@ sys_gaenirma_init = {
         orbit_distance = 100
         orbit_angle = 103
         size = 13
+        flags = { femora_planet }
         has_ring = no
     }
 
@@ -9750,6 +10294,7 @@ sys_gaenirma_init = {
         orbit_distance = 50
         orbit_angle = 93
         size = 35
+        flags = { hezmono_planet }
         has_ring = no
     }
 
@@ -9759,6 +10304,7 @@ sys_gaenirma_init = {
         orbit_distance = 100
         orbit_angle = 95
         size = 37
+        flags = { ileba_planet }
         has_ring = no
     }
 
@@ -9768,6 +10314,7 @@ sys_gaenirma_init = {
         orbit_distance = 100
         orbit_angle = 102
         size = 19
+        flags = { simono_planet }
         has_ring = no
     }
 
@@ -9793,6 +10340,7 @@ sys_ilbene_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 35
+        flags = { ilbene_star }
     }
 
     planet = {
@@ -9809,6 +10357,7 @@ sys_ilbene_init = {
         orbit_distance = 70
         orbit_angle = 239
         size = 9
+        flags = { wurton_planet }
         has_ring = no
     }
 
@@ -9818,6 +10367,7 @@ sys_ilbene_init = {
         orbit_distance = 70
         orbit_angle = 254
         size = 13
+        flags = { paessino_planet }
         has_ring = no
 
     }
@@ -9828,6 +10378,7 @@ sys_ilbene_init = {
         orbit_distance = 70
         orbit_angle = 87
         size = 15
+        flags = { sumar_planet }
         has_ring = no
     }
 
@@ -9845,6 +10396,7 @@ sys_ilbene_init = {
         orbit_distance = 70
         orbit_angle = 117
         size = 20
+        flags = { saerpan_planet }
         has_ring = no
     }
 
@@ -9854,6 +10406,7 @@ sys_ilbene_init = {
         orbit_distance = 70
         orbit_angle = 124
         size = 18
+        flags = { maniso_planet }
         has_ring = no
     }
 }
@@ -9870,6 +10423,7 @@ sys_maelol_init = {
         class = pc_tt_white_star
         orbit_distance = 0
         size = 38
+        flags = { maelol_star }
     }
 
     planet = {
@@ -9878,6 +10432,7 @@ sys_maelol_init = {
         orbit_distance = 150
         orbit_angle = 225
         size = 10
+        flags = { beljie_planet }
         has_ring = no
     }
 
@@ -9887,6 +10442,7 @@ sys_maelol_init = {
         orbit_distance = 150
         orbit_angle = 122
         size = 19
+        flags = { dozza_planet }
         has_ring = no
     }
 
@@ -9896,6 +10452,7 @@ sys_maelol_init = {
         orbit_distance = 150
         orbit_angle = 147
         size = 18
+        flags = { laekan_planet }
         has_ring = no
     }
 }
@@ -9917,6 +10474,7 @@ sys_todroki_init = {
         class = pc_a_star
         orbit_distance = 0
         size = 30
+        flags = { todroki_star }
     }
 
     planet = {
@@ -9925,6 +10483,7 @@ sys_todroki_init = {
         orbit_distance = 125
         orbit_angle = 217
         size = 14
+        flags = { rerok_planet }
         has_ring = no
     }
 
@@ -9934,6 +10493,7 @@ sys_todroki_init = {
         orbit_distance = 125
         orbit_angle = 87
         size = 19
+        flags = { wozen_planet }
         has_ring = no
     }
 
@@ -9951,6 +10511,7 @@ sys_todroki_init = {
             orbit_distance = 20
             orbit_angle = 180
             size = 6
+            flags = {ribera_planet lyori_planet}
             has_ring = no
         }
     }
@@ -9970,6 +10531,7 @@ sys_todroki_init = {
         orbit_distance = 75
         orbit_angle = 99
         size = 16
+        flags = { tolse_planet }
         has_ring = no
     }
 
@@ -10009,6 +10571,7 @@ sys_iustadal_init = {
         class = pc_m_hyper_star
         orbit_distance = 0
         size = 30
+        flags = { iusta_dal_star }
     }
 
 	planet = {
@@ -10018,7 +10581,7 @@ sys_iustadal_init = {
         orbit_angle = 350
         has_ring = no
 		size = 37
-		flags = { subclass_world }
+		flags = {subclass_world lomgaraskha_planet}
     }
 
 	planet = {
@@ -10028,7 +10591,7 @@ sys_iustadal_init = {
         orbit_angle = 350
         has_ring = no
 		size = 17
-		flags = { subclass_world }
+		flags = {subclass_world virtufaf_planet}
 		entity = "boreal_planet_01_entity"
 		init_effect = {
 			add_modifier = {
@@ -10044,6 +10607,7 @@ sys_iustadal_init = {
         orbit_angle = 350
         has_ring = no
 		size = 13
+		flags = { ximulak_planet }
 	}	
 
 	change_orbit = 25
@@ -10071,6 +10635,7 @@ sys_iustadal_init = {
         orbit_angle = 350
         has_ring = no
 		size = 35
+		flags = { jretigakhas_planet }
 	}	
 
 	planet = {
@@ -10080,7 +10645,7 @@ sys_iustadal_init = {
         orbit_angle = 350
         has_ring = no
 		size = 29
-		flags = { subclass_world }
+		flags = {subclass_world amankka_planet}
 	}	
 }
 
@@ -10096,6 +10661,7 @@ sys_maskimxul_init = {
         class = "pc_m_star"
         orbit_distance = 0
         size = 22
+        flags = { maskim_xul_star }
     }
 	
 	asteroid_belt = {
@@ -10114,7 +10680,7 @@ sys_maskimxul_init = {
 		deposit_blockers = none		
 		modifiers = none
 		entity = "mephitic_desert_planet_09_entity"
-		flags = { subclass_world }	
+		flags = {subclass_world suen_planet}	
 		init_effect = {
 			add_modifier = {
 				modifier = badlands_world
@@ -10128,11 +10694,17 @@ sys_maskimxul_init = {
     }
 
 	planet = {
-		count = { min = 1 max = 4 }
+		count = { min = 1 max = 3 }
 		class = pc_asteroid
 		orbit_distance = 0
 		orbit_angle = { min = 90 max = 270 }
 	}
+    planet = {
+        class = pc_asteroid
+        orbit_distance = 0
+        orbit_angle = { min = 90 max = 270 }
+        flags = { listening_post_x_19_planet }
+    }
 
     planet = {
         name = "Kashshaptu"
@@ -10142,7 +10714,7 @@ sys_maskimxul_init = {
         has_ring = no
 		size = 3
 		entity = "mephitic_arid_planet_10_entity"
-		flags = { subclass_world }
+		flags = {subclass_world kashshaptu_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = dust_world
@@ -10160,6 +10732,7 @@ sys_maskimxul_init = {
         orbit_angle = 242
         has_ring = no
 		size = 28
+		flags = { damkianna_planet }
     }
 }
 
@@ -10180,6 +10753,7 @@ sys_mullaxul_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 25
+        flags = { mulla_xul_star }
     }
     
     asteroid_belt = {
@@ -10194,6 +10768,7 @@ sys_mullaxul_init = {
         orbit_angle = 202
         has_ring = no
 		size = 21
+		flags = { maldor_planet }
 		init_effect = {
 			add_modifier = {
 				modifier = btr_scorching_surface
@@ -10271,6 +10846,7 @@ sys_mullaxul_init = {
 		orbit_angle = 136
 		orbit_distance = 75
 		size = 1
+		flags = { inakhos_planet }
 	}	
 
 	planet = {
@@ -10287,6 +10863,7 @@ sys_mullaxul_init = {
         orbit_angle = 213
         has_ring = yes
 		size = 37
+		flags = { keph_planet }
     }
 }
 
@@ -10307,6 +10884,7 @@ sys_taskumxil_init = {
         class = pc_m_hyper_star
         orbit_distance = 0
         size = 30
+        flags = { taskum_xil_star }
     }
 
 	planet = {
@@ -10316,6 +10894,7 @@ sys_taskumxil_init = {
         orbit_angle = 350
         has_ring = no
 		size = 10
+		flags = { quoristik_planet }
 	}	
 
 	change_orbit = 25
@@ -10334,6 +10913,7 @@ sys_taskumxil_init = {
         orbit_angle = 350
         has_ring = no
 		size = 7
+		flags = { xutulas_planet }
 	}	
 	
 	planet = {
@@ -10343,6 +10923,7 @@ sys_taskumxil_init = {
         orbit_angle = 350
         has_ring = no
 		size = 10
+		flags = { dertros_planet }
 	}	
 
 	planet = {
@@ -10357,6 +10938,7 @@ sys_taskumxil_init = {
 			name = "Fandars"
 			class = pc_frozen
 			size = 7
+			flags = {fandars_planet heguakhas_planet}
 			orbit_distance = 20
 			has_ring = no
 		}
@@ -10369,6 +10951,7 @@ sys_taskumxil_init = {
         orbit_angle = 350
         has_ring = no
 		size = 29
+		flags = { muxaxak_planet }
 	}
 	
 	init_effect = { 
@@ -10398,6 +10981,7 @@ sys_worsazak_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 30
+        flags = { worsa_zak_star }
     }
 
 	planet = {
@@ -10407,6 +10991,7 @@ sys_worsazak_init = {
         orbit_angle = 350
         has_ring = no
 		size = 6
+		flags = { trafph_planet }
 	}	
 
 	change_orbit = 25
@@ -10425,6 +11010,7 @@ sys_worsazak_init = {
         orbit_angle = 350
         has_ring = no
 		size = 10
+		flags = { jamdaktua_planet }
     }
 	
 	planet = {
@@ -10434,6 +11020,7 @@ sys_worsazak_init = {
         orbit_angle = 350
         has_ring = no
 		size = 10
+		flags = { fislatera_planet }
     }
 
 	planet = {
@@ -10443,6 +11030,7 @@ sys_worsazak_init = {
         orbit_angle = 350
         has_ring = no
 		size = 10
+		flags = { omakhros_planet }
     }
 
 	init_effect = { 
@@ -10476,6 +11064,7 @@ sys_acheron_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 30
+        flags = { acheron_star }
     }
 
 	change_orbit = 110
@@ -10494,7 +11083,7 @@ sys_acheron_init = {
         orbit_angle = 174
         has_ring = no
 		size = 16
-		flags = { subclass_world }	
+		flags = {subclass_world farthorl_planet}	
 		init_effect = {
 			add_modifier = {
 				modifier = tidal_locked
@@ -10510,7 +11099,7 @@ sys_acheron_init = {
         orbit_angle = 134
         has_ring = no
 		size = 11
-		flags = { subclass_world }	
+		flags = {subclass_world altahe_planet}	
 		init_effect = {
 			add_modifier = {
 				modifier = wild_storms
@@ -10523,6 +11112,7 @@ sys_acheron_init = {
 			class = pc_mephitic
 			orbit_distance = 2
 			size = 10
+			flags = { ontahe_planet }
 		}	
     }
 
@@ -10533,6 +11123,7 @@ sys_acheron_init = {
         orbit_angle = 27
         has_ring = no
 		size = 13		
+		flags = { grosalgen_planet }
     }
 
     planet = {
@@ -10542,6 +11133,7 @@ sys_acheron_init = {
         orbit_angle = 213
         has_ring = no
 		size = 25
+		flags = { imaneya_planet }
     }
 
 	init_effect = { 
@@ -10571,6 +11163,7 @@ sys_erebus_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 35
+        flags = { erebus_star }
     }
 
 	change_orbit = 85
@@ -10589,6 +11182,7 @@ sys_erebus_init = {
         orbit_angle = 12
         has_ring = no
 		size = 19
+		flags = { nepmos_planet }
 		init_effect = {
 			add_modifier = {
 				modifier = unstable_tectonics
@@ -10608,6 +11202,7 @@ sys_erebus_init = {
         orbit_angle = 143
         has_ring = no
 		size = 12
+		flags = { quaji_planet }
     }
 
     planet = {
@@ -10617,6 +11212,7 @@ sys_erebus_init = {
         orbit_angle = 163
         has_ring = no
 		size = 37
+		flags = { wermani_planet }
     }
 
     planet = {
@@ -10626,6 +11222,7 @@ sys_erebus_init = {
         orbit_angle = 310
         has_ring = no
 		size = 21
+		flags = { chofen_planet }
     }	
 
 	init_effect = { 
@@ -10654,6 +11251,7 @@ sys_karaht_init = {
 		name = "Karaht"
 		class = pc_g_star
 		size = 20
+		flags = { karaht_star }
 	}	
 	
 	planet = {
@@ -10661,6 +11259,7 @@ sys_karaht_init = {
 		class = pc_molten
         orbit_distance = 125
 		size = 12
+		flags = { murch_planet }
 	}
 
 	change_orbit = 25
@@ -10677,6 +11276,7 @@ sys_karaht_init = {
 		class = pc_dextro_desert
         orbit_distance = 100
 		size = 14
+		flags = { vida_planet }
 	}
 
 	planet = {
@@ -10691,6 +11291,7 @@ sys_karaht_init = {
 			class = pc_barren
 			orbit_distance = 20
 			size = 6
+			flags = {torfan_planet nymbar_planet}
 		}
 	}
 
@@ -10699,6 +11300,7 @@ sys_karaht_init = {
 		class = pc_ice_giant
         orbit_distance = 125
 		size = 28
+		flags = { flin_planet }
 		has_ring = yes
 	}
 }	
@@ -10714,6 +11316,7 @@ sys_phlegethon_init = {
 		name = "Phlegethon"
 		class = pc_g_star
 		size = 30
+		flags = { phlegethon_star }
 	}
 
 	planet = {
@@ -10721,6 +11324,7 @@ sys_phlegethon_init = {
 		class = pc_methane
         orbit_distance = 250
 		size = 8
+		flags = { alectu_planet }
 	}
 
 	planet = {
@@ -10728,6 +11332,7 @@ sys_phlegethon_init = {
 		class = pc_ice_giant
         orbit_distance = 250
 		size = 30
+		flags = { tisiphone_planet }
 		has_ring = yes
 	}
 
@@ -10752,6 +11357,7 @@ sys_timshar_init = {
 		name = "Timshar"
 		class = pc_neutron_star
 		size = 15
+		flags = { timshar_star }
 	}	
 
 	planet = {
@@ -10759,6 +11365,7 @@ sys_timshar_init = {
 		class = pc_barren
         orbit_distance = 100
 		size = 8
+		flags = { timshar_i_planet }
 	}
 
 	planet = {
@@ -10766,6 +11373,7 @@ sys_timshar_init = {
 		class = pc_barren_cold
         orbit_distance = 100
 		size = 13
+		flags = { timshar_ii_planet }
 	}
 
 	planet = {
@@ -10773,6 +11381,7 @@ sys_timshar_init = {
 		class = pc_iron
         orbit_distance = 100
 		size = 7
+		flags = { timshar_iii_planet }
 	}	
 
 	planet = {
@@ -10780,6 +11389,7 @@ sys_timshar_init = {
 		class = pc_barren
         orbit_distance = 100
 		size = 16
+		flags = { timshar_iv_planet }
 	}	
 
 	planet = {
@@ -10787,6 +11397,7 @@ sys_timshar_init = {
 		class = pc_gas_giant
         orbit_distance = 100
 		size = 34
+		flags = { adounia_planet }
         moon = {
             count = 3
             orbit_distance = 15
@@ -10815,6 +11426,7 @@ sys_ahuramazda_init = {
         class = pc_d_star
         orbit_distance = 0
         size = 32
+        flags = { ahura_mazda_star }
     }
 
 	planet = {
@@ -10822,6 +11434,7 @@ sys_ahuramazda_init = {
         class = pc_hot_giant
         orbit_distance = 100
         size = 38
+        flags = { zoroaster_planet }
     }
 
 	planet = {
@@ -10829,6 +11442,7 @@ sys_ahuramazda_init = {
         class = pc_barren
         orbit_distance = 100
         size = 12
+        flags = { asha_planet }
 	}
 
 	planet = {
@@ -10836,6 +11450,7 @@ sys_ahuramazda_init = {
         class = pc_barren
         orbit_distance = 100
         size = 9
+        flags = { aka_manah_planet }
     }
 
 	planet = {
@@ -10843,6 +11458,7 @@ sys_ahuramazda_init = {
         class = pc_iron
         orbit_distance = 100
         size = 10
+        flags = { angra_mainyu_planet }
     }
 
 	planet = {
@@ -10855,12 +11471,14 @@ sys_ahuramazda_init = {
 			class = pc_ammonia
 			orbit_distance = 20
 			size = 9
+			flags = {druj_planet spenta_mainyu_planet}
 		}
 		moon = {
 			name = "Avesta"
 			class = pc_frozen
 			orbit_distance = 5
 			size = 4
+			flags = { avesta_planet }
 		}
     }
 	init_effect = { 
@@ -10900,6 +11518,7 @@ sys_axiom_init = {
         class = pc_b_star
         orbit_distance = 0
         size = 33
+        flags = { axiom_star }
     }
 
 	change_orbit = 50
@@ -10916,6 +11535,7 @@ sys_axiom_init = {
         class = pc_molten
         orbit_distance = 50
         size = 7
+        flags = { vatsyana_planet }
     }
 
 	planet = {
@@ -10923,6 +11543,7 @@ sys_axiom_init = {
         class = pc_hothouse
         orbit_distance = 100
         size = 13
+        flags = { confucious_planet }
 	}
 
 	planet = {
@@ -10935,6 +11556,7 @@ sys_axiom_init = {
 			class = pc_barren
 			orbit_distance = 20
 			size = 5
+			flags = {mani_planet plato_planet}
 		}
     }
 
@@ -10952,6 +11574,7 @@ sys_axiom_init = {
         class = pc_gas_giant
         orbit_distance = 50
         size = 36
+        flags = { seneca_planet }
     }
 
 	planet = {
@@ -10959,6 +11582,7 @@ sys_axiom_init = {
         class = pc_gas_giant
         orbit_distance = 50
         size = 33
+        flags = { gaudapada_planet }
 		has_ring = yes
     }
 
@@ -10993,6 +11617,7 @@ sys_iufrik_init = {
         class = pc_a_star
         orbit_distance = 0
         size = 30
+        flags = { iufrik_star }
     }
 
 	planet = {
@@ -11000,6 +11625,7 @@ sys_iufrik_init = {
         class = pc_hothouse
         orbit_distance = 80
         size = 9
+        flags = { vifta_planet }
     }
 
 	planet = {
@@ -11007,6 +11633,7 @@ sys_iufrik_init = {
         class = pc_arctic
         orbit_distance = 80
         size = 18
+        flags = { venom_anjelik_planet }
 	}
 
 	planet = {
@@ -11014,6 +11641,7 @@ sys_iufrik_init = {
         class = pc_barren_cold
         orbit_distance = 80
         size = 12
+        flags = { maskut_planet }
     }
 
 	planet = {
@@ -11021,6 +11649,7 @@ sys_iufrik_init = {
         class = pc_iron
         orbit_distance = 80
         size = 14
+        flags = { jendrik_planet }
     }
 
 	planet = {
@@ -11028,6 +11657,7 @@ sys_iufrik_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 7
+        flags = { cordrak_planet }
     }
 
 	planet = {
@@ -11035,6 +11665,7 @@ sys_iufrik_init = {
         class = pc_ice_giant
         orbit_distance = 80
         size = 32
+        flags = { wustril_planet }
     }
 
 	init_effect = { 
@@ -11063,6 +11694,7 @@ sys_anauroch_init = {
         class = pc_f_star
         orbit_distance = 0
         size = 25
+        flags = { anauroch_star }
     }
 
 	planet = {
@@ -11070,6 +11702,7 @@ sys_anauroch_init = {
 		class = pc_mephitic
         orbit_distance = 250
 		size = 15
+		flags = { thultanthar_planet }
 	}
 
 	planet = {
@@ -11084,6 +11717,7 @@ sys_anauroch_init = {
 			orbit_angle = 74
 			orbit_distance = 20
 			size = 11
+			flags = {drannor_a_planet drannor_planet}
 		}
 
 		moon = {
@@ -11092,6 +11726,7 @@ sys_anauroch_init = {
 			orbit_angle = 136
 			orbit_distance = 5
 			size = 4
+			flags = { drannor_b_planet }
 		}	
 	}
 }
@@ -11108,6 +11743,7 @@ sys_bahanak_init = {
         class = pc_m_super_star
         orbit_distance = 0
         size = 45
+        flags = { bahanak_star }
     }
 	
 	planet = {
@@ -11115,6 +11751,7 @@ sys_bahanak_init = {
 		class = pc_hot_giant
         orbit_distance = 250
 		size = 35
+		flags = { elgarnan_planet }
 		has_ring = no
 	}	
 	
@@ -11137,7 +11774,7 @@ sys_bahanak_init = {
 			orbit_angle = 120
 			orbit_distance = 6
 			size = 12
-			flags = { subclass_world }	
+			flags = {subclass_world falondin_planet mythad_planet}	
 			entity = "aquifer_planet_01_entity"
 			init_effect = {
 				add_modifier = {
@@ -11152,7 +11789,7 @@ sys_bahanak_init = {
 			orbit_angle = 120
 			orbit_distance = 8
 			size = 6
-			flags = { subclass_world }	
+			flags = {subclass_world dirthamen_planet}	
 			entity = "supercon_planet_06_entity"
 			init_effect = {
 				add_modifier = {
@@ -11167,7 +11804,7 @@ sys_bahanak_init = {
 			orbit_angle = 120
 			orbit_distance = 7
 			size = 6
-			flags = { subclass_world }	
+			flags = {subclass_world andruil_planet}	
 			init_effect = {
 				add_modifier = {
 					modifier = veld_world
@@ -11182,6 +11819,7 @@ sys_bahanak_init = {
 			orbit_angle = 120
 			orbit_distance = 7
 			size = 3
+			flags = { sylaise_planet }
 		}
 
 		moon = {
@@ -11190,6 +11828,7 @@ sys_bahanak_init = {
 			orbit_angle = 120
 			orbit_distance = 7
 			size = 6
+			flags = { june_planet }
 		}
 	}
 
@@ -11215,6 +11854,7 @@ sys_iera_init = {
         class = pc_f_star
         orbit_distance = 0
         size = 23
+        flags = { iera_star }
     }
 
     planet = {
@@ -11224,7 +11864,7 @@ sys_iera_init = {
         orbit_angle = 163
         has_ring = no
 		size = 25
-		flags = { subclass_world }	
+		flags = {subclass_world venture_planet}	
     }
 
     planet = {
@@ -11234,7 +11874,7 @@ sys_iera_init = {
         orbit_angle = 58
         has_ring = no
 		size = 32
-		flags = { subclass_world }	
+		flags = {subclass_world prospect_planet}	
 		init_effect = {
 			add_modifier = {
 				modifier = extensive_moon_system
@@ -11249,6 +11889,7 @@ sys_iera_init = {
 			class = pc_iron
 			orbit_distance = 20
 			size = 7
+			flags = { prospect_a_planet }
 		}
 
 		moon = {
@@ -11256,6 +11897,7 @@ sys_iera_init = {
 			class = pc_iron
 			orbit_distance = 5
 			size = 3
+			flags = { prospect_b_planet }
 		}	
 
 		moon = {
@@ -11263,6 +11905,7 @@ sys_iera_init = {
 			class = pc_asteroid
 			orbit_distance = 5
 			size = 2
+			flags = { prospect_c_planet }
 		}		
     }
 
@@ -11329,6 +11972,7 @@ sys_iera_init = {
 			class = pc_asteroid
 			orbit_distance = 20
 			size = 2
+			flags = {watchman_a_planet watchman_planet}
 		}
 
 		moon = {
@@ -11336,6 +11980,7 @@ sys_iera_init = {
 			class = pc_asteroid
 			orbit_distance = 5
 			size = 3
+			flags = { watchman_b_planet }
 		}
 	}
 
@@ -11361,6 +12006,7 @@ sys_netheril_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 33
+        flags = { netheril_star }
     }	
 
 	planet = {
@@ -11368,6 +12014,7 @@ sys_netheril_init = {
 		class = pc_molten
         orbit_distance = 250
 		size = 16
+		flags = { landeth_planet }
 	}
 
 	# planet = {
@@ -11384,6 +12031,7 @@ sys_netheril_init = {
 		class = pc_hothouse
         orbit_distance = 125
 		size = 14
+		flags = { oreme_planet }
 	}	
 }
 
@@ -11430,6 +12078,7 @@ sys_mer_gor_init = {
         class = pc_black_hole
         orbit_distance = 0
         size = 20
+        flags = { mer_gor_planet }
     }
 
     planet = {
@@ -11438,6 +12087,7 @@ sys_mer_gor_init = {
         orbit_distance = 125
         orbit_angle = 166
         size = 15
+        flags = { buth_planet }
         has_ring = no
     }
 
@@ -11447,6 +12097,7 @@ sys_mer_gor_init = {
         orbit_distance = 125
         orbit_angle = 88
         size = 18
+        flags = { gik_planet }
         has_ring = yes
     }
 
@@ -11456,6 +12107,7 @@ sys_mer_gor_init = {
         orbit_distance = 125
         orbit_angle = 172
         size = 20
+        flags = { juz_mum_planet }
         has_ring = no
     }
 
@@ -11465,6 +12117,7 @@ sys_mer_gor_init = {
         orbit_distance = 125
         orbit_angle = 249
         size = 30
+        flags = { gib_tap_planet }
         has_ring = no
     }
 
@@ -11495,6 +12148,7 @@ sys_nalu_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 20
+        flags = { nalu_star }
     }
 
     planet = {
@@ -11503,6 +12157,7 @@ sys_nalu_init = {
         orbit_distance = 80
         orbit_angle = 155
         size = 14
+        flags = { buzto_planet }
         has_ring = no
     }
 
@@ -11512,6 +12167,7 @@ sys_nalu_init = {
         orbit_distance = 80
         orbit_angle = 62
         size = 16
+        flags = { barp_planet }
         has_ring = no
     }
 
@@ -11521,6 +12177,7 @@ sys_nalu_init = {
         orbit_distance = 80
         orbit_angle = 181
         size = 24
+        flags = { rard_planet }
         has_ring = no
     }
 
@@ -11530,6 +12187,7 @@ sys_nalu_init = {
         orbit_distance = 80
         orbit_angle = 266
         size = 38
+        flags = { horb_planet }
         has_ring = yes
     }
 
@@ -11548,6 +12206,7 @@ sys_nalu_init = {
         orbit_distance = 80
         orbit_angle = 103
         size = 14
+        flags = { duft_planet }
         has_ring = no
     }
 }
@@ -11564,6 +12223,7 @@ sys_thuva_init = {
         class = pc_f_star
         orbit_distance = 0
         size = 20
+        flags = { thuva_star }
     }
 
     planet = {
@@ -11572,6 +12232,7 @@ sys_thuva_init = {
         orbit_distance = 100
         orbit_angle = 130
         size = 11
+        flags = { hagumai_planet }
         has_ring = no
     }
 
@@ -11589,6 +12250,7 @@ sys_thuva_init = {
         orbit_distance = 100
         orbit_angle = 172
         size = 23
+        flags = { dharomen_planet }
         has_ring = yes
     }
 
@@ -11598,6 +12260,7 @@ sys_thuva_init = {
         orbit_distance = 100
         orbit_angle = 85
         size = 16
+        flags = { montak_planet }
         has_ring = no
     }
 
@@ -11632,6 +12295,7 @@ sys_ultio_init = {
         class = pc_o_super_star
         orbit_distance = 0
         size = 25
+        flags = { ultio_star }
     }
 
     planet = {
@@ -11641,6 +12305,7 @@ sys_ultio_init = {
         orbit_angle = 313
         has_ring = no
 		size = 10	
+		flags = { vis_planet }
     }
 
 	change_orbit = 25
@@ -11659,6 +12324,7 @@ sys_ultio_init = {
         orbit_angle = 313
         has_ring = no
 		size = 17
+		flags = { mollitiam_planet }
     }
 
 	planet = {
@@ -11735,6 +12401,7 @@ sys_ultio_init = {
         orbit_angle = 313
         has_ring = yes
 		size = 38
+		flags = { evol_planet }
     }
 	
 	planet = {
@@ -11744,6 +12411,7 @@ sys_ultio_init = {
         orbit_angle = 313
         has_ring = no
 		size = 30
+		flags = { absolutus_planet }
     }
 }
 
@@ -11768,6 +12436,7 @@ sys_aryabhata_init = {
         class = pc_b_super_star
         orbit_distance = 0
         size = 30
+        flags = { aryabhata_star }
     }
 
 	planet = {
@@ -11777,6 +12446,7 @@ sys_aryabhata_init = {
         orbit_angle = 292
         has_ring = no
 		size = 36
+		flags = { dhriti_planet }
 	}	
 
 	change_orbit = 50
@@ -11795,7 +12465,7 @@ sys_aryabhata_init = {
         orbit_angle = 196
         has_ring = no
 		size = 14
-		flags = { subclass_world }
+		flags = {subclass_world ekram_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = aquifer_world
@@ -11807,6 +12477,7 @@ sys_aryabhata_init = {
 			class = pc_asteroid
 			orbit_distance = 20
 			size = 7
+			flags = { alpa_planet }
 			has_ring = no
 
 			init_effect = {
@@ -11822,12 +12493,13 @@ sys_aryabhata_init = {
         orbit_angle = 211
         has_ring = yes
 		size = 31
-		flags = { subclass_world }
+		flags = {subclass_world charvi_planet}
 
 		moon = {
 			name = "Amav"
 			class = pc_barren
 			size = 6
+			flags = { amav_planet }
 			orbit_distance = 20
 			has_ring = no
 		}
@@ -11840,7 +12512,7 @@ sys_aryabhata_init = {
         orbit_angle = 196
         has_ring = no
 		size = 14
-		flags = { subclass_world }
+		flags = {subclass_world manit_planet}
 	}	
 
 	planet = {
@@ -11850,7 +12522,7 @@ sys_aryabhata_init = {
         orbit_angle = 196
         has_ring = no
 		size = 14
-		flags = { subclass_world }
+		flags = {subclass_world gautam_planet}
 	}	
 
 	init_effect = { 
@@ -11875,6 +12547,7 @@ sys_herschel_init = {
         class = pc_o_super_star
         orbit_distance = 0
         size = 38
+        flags = { herschel_star }
     }
 	
 	asteroid_belt = {
@@ -11889,7 +12562,7 @@ sys_herschel_init = {
         orbit_angle = 14
         has_ring = no
 		size = 25
-		flags = { subclass_world }
+		flags = {subclass_world tungel_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = mineral_rich
@@ -11918,7 +12591,7 @@ sys_herschel_init = {
         orbit_angle = 265
         has_ring = no
 		size = 10
-		flags = { subclass_world }
+		flags = {subclass_world matol_planet}
 		init_effect = {
 			# add_modifier = {
 			# 	modifier = terraforming_candidate
@@ -11942,7 +12615,7 @@ sys_herschel_init = {
         orbit_angle = 234
         has_ring = no
 		size = 26
-		flags = { subclass_world }
+		flags = {subclass_world clugon_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = extensive_moon_system
@@ -11960,6 +12633,7 @@ sys_herschel_init = {
             orbit_angle = 118
             has_ring = no
 			size = 4
+			flags = { clugon_a_planet }
         }
 
         moon = {
@@ -11969,6 +12643,7 @@ sys_herschel_init = {
             orbit_angle = 99
             has_ring = no
 			size = 5
+			flags = { clugon_b_planet }
         }
 
         moon = {
@@ -11978,6 +12653,7 @@ sys_herschel_init = {
             orbit_angle = 116
             has_ring = no
 			size = 3
+			flags = { clugon_c_planet }
         }
     }
 
@@ -11988,6 +12664,7 @@ sys_herschel_init = {
         orbit_angle = 186
         has_ring = yes
 		size = 20
+		flags = { clobaka_planet }
     }	
 }
 
@@ -12003,6 +12680,7 @@ sys_newton_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 30
+        flags = { newton_star }
     }
 
     planet = {
@@ -12012,7 +12690,7 @@ sys_newton_init = {
         orbit_angle = 32
         has_ring = no
 		size = 16
-		flags = { subclass_world }
+		flags = {subclass_world ontarom_planet}
 
 		moon = {
 			name = "Thonal"
@@ -12020,6 +12698,7 @@ sys_newton_init = {
 			orbit_angle = 86
 			orbit_distance = 5
 			size = 5
+			flags = { thonal_planet }
 		}	
 
 		moon = {
@@ -12028,6 +12707,7 @@ sys_newton_init = {
 			orbit_angle = 246
 			orbit_distance = 9
 			size = 4
+			flags = { ontarom_b_planet }
 		}		
     }
 
@@ -12038,7 +12718,7 @@ sys_newton_init = {
         orbit_angle = 292
         has_ring = no
 		size = 19
-		flags = { subclass_world }		
+		flags = {subclass_world klencory_planet}		
 		init_effect = {
 			add_modifier = {
 				modifier = bleak_planet
@@ -12054,6 +12734,7 @@ sys_newton_init = {
         orbit_angle = 196
         has_ring = no
 		size = 36
+		flags = { juncrom_planet }
     }
 
     planet = {
@@ -12063,6 +12744,7 @@ sys_newton_init = {
         orbit_angle = 211
         has_ring = yes
 		size = 7
+		flags = { sesmose_planet }
     }
 
 	init_effect = { 
@@ -12092,6 +12774,7 @@ sys_tombaugh_init = {
         class = pc_a_star
         orbit_distance = 0
         size = 30
+        flags = { tombaugh_star }
     }
 
 	planet = {
@@ -12100,6 +12783,7 @@ sys_tombaugh_init = {
         orbit_distance = 150
         orbit_angle = 168
         size = 17
+        flags = { plundo_planet }
         has_ring = no
     }
 
@@ -12109,6 +12793,7 @@ sys_tombaugh_init = {
         orbit_distance = 150
         orbit_angle = 168
         size = 17
+        flags = { disferia_planet }
         has_ring = no
 	}	
 
@@ -12127,6 +12812,7 @@ sys_tombaugh_init = {
         orbit_distance = 75
         orbit_angle = 168
         size = 17
+        flags = { balmury_planet }
         has_ring = no
 	}
 }	
@@ -12147,6 +12833,7 @@ sys_aurelian_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 30
+        flags = { aurelian_star }
     }
 
     planet = {
@@ -12155,6 +12842,7 @@ sys_aurelian_init = {
         orbit_distance = 100
         orbit_angle = 27
         size = 10
+        flags = { julina_planet }
         has_ring = no
     }
 
@@ -12164,6 +12852,7 @@ sys_aurelian_init = {
         orbit_distance = 100
         orbit_angle = 100
         size = 17
+        flags = { cecilio_planet }
         has_ring = no
     }
 
@@ -12173,6 +12862,7 @@ sys_aurelian_init = {
         orbit_distance = 100
         orbit_angle = 86
         size = 18
+        flags = { milaus_planet }
         has_ring = no
     }
 
@@ -12198,6 +12888,7 @@ sys_aurelian_init = {
             orbit_distance = 20
             orbit_angle = 226
             size = 8
+            flags = {valentie_planet espadaux_planet}
             has_ring = no
 
         }
@@ -12208,6 +12899,7 @@ sys_aurelian_init = {
             orbit_distance = 5
             orbit_angle = 314
             size = 5
+            flags = { remolon_planet }
             has_ring = no
 
         }
@@ -12231,6 +12923,7 @@ sys_cassios_init = {
         class = pc_f_star
         orbit_distance = 0
         size = 25
+        flags = { cassios_star }
     }
 
     planet = {
@@ -12239,6 +12932,7 @@ sys_cassios_init = {
         orbit_distance = 125
         orbit_angle = 218
         size = 11
+        flags = { opideus_planet }
         has_ring = no
     }
 
@@ -12248,6 +12942,7 @@ sys_cassios_init = {
         orbit_distance = 125
         orbit_angle = 280
         size = 17
+        flags = { dostria_planet }
         has_ring = no
     }
 
@@ -12265,6 +12960,7 @@ sys_cassios_init = {
             orbit_distance = 20
             orbit_angle = 180
             size = 5
+            flags = {sason_planet petronia_planet}
             has_ring = no
         }
     }
@@ -12284,6 +12980,7 @@ sys_cassios_init = {
         orbit_distance = 50
         orbit_angle = 250
         size = 21
+        flags = { zalumia_planet }
         has_ring = no
     }
 
@@ -12314,6 +13011,7 @@ sys_cerindia_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 29
+        flags = { cerindia_star }
     }
 
     planet = {
@@ -12322,6 +13020,7 @@ sys_cerindia_init = {
         orbit_distance = 125
         orbit_angle = 197
         size = 9
+        flags = { manasclas_planet }
         has_ring = no
     }
 
@@ -12340,6 +13039,7 @@ sys_cerindia_init = {
         orbit_distance = 70
         orbit_angle = 108
         size = 11
+        flags = { restrum_planet }
         has_ring = no
     }
 
@@ -12349,6 +13049,7 @@ sys_cerindia_init = {
         orbit_distance = 125
         orbit_angle = 104
         size = 35
+        flags = { uota_planet }
         has_ring = no
     }
 
@@ -12358,6 +13059,7 @@ sys_cerindia_init = {
         orbit_distance = 125
         orbit_angle = 86
         size = 34
+        flags = { valrum_planet }
         has_ring = no
     }
 
@@ -12383,6 +13085,7 @@ sys_felix_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 30
+        flags = { felix_star }
     }
 
     planet = {
@@ -12391,6 +13094,7 @@ sys_felix_init = {
         orbit_distance = 100
         orbit_angle = 201
         size = 14
+        flags = { felekli_planet }
         has_ring = no
     }
 
@@ -12400,6 +13104,7 @@ sys_felix_init = {
         orbit_distance = 100
         orbit_angle = 85
         size = 16
+        flags = { tornau_planet }
         has_ring = no
     }
 
@@ -12409,6 +13114,7 @@ sys_felix_init = {
         orbit_distance = 100
         orbit_angle = 123
         size = 17
+        flags = { xandis_planet }
         has_ring = no
     }
 
@@ -12426,6 +13132,7 @@ sys_felix_init = {
             orbit_distance = 20
             orbit_angle = 92
             size = 8
+            flags = {tande_planet gioliae_planet}
             has_ring = no
         }
     }
@@ -12436,6 +13143,7 @@ sys_felix_init = {
         orbit_distance = 100
         orbit_angle = 93
         size = 19
+        flags = { nimeno_planet }
         has_ring = no
 
     }
@@ -12473,6 +13181,7 @@ sys_magna_init = {
         orbit_distance = 80
         orbit_angle = 222
         size = 15
+        flags = { saltas_planet }
         has_ring = no
     }
 
@@ -12482,6 +13191,7 @@ sys_magna_init = {
         orbit_distance = 80
         orbit_angle = 111
         size = 17
+        flags = { jopine_planet }
         has_ring = no
     }
 
@@ -12491,6 +13201,7 @@ sys_magna_init = {
         orbit_distance = 80
         orbit_angle = 174
         size = 14
+        flags = { bolima_planet }
         has_ring = no
     }
 
@@ -12509,6 +13220,7 @@ sys_magna_init = {
         orbit_distance = 40
         orbit_angle = 250
         size = 29
+        flags = { yimtre_planet }
         has_ring = no
     }
 
@@ -12518,6 +13230,7 @@ sys_magna_init = {
         orbit_distance = 80
         orbit_angle = 197
         size = 18
+        flags = { calustos_planet }
         has_ring = no
     }
 
@@ -12527,6 +13240,7 @@ sys_magna_init = {
         orbit_distance = 80
         orbit_angle = 121
         size = 13
+        flags = { yondue_planet }
         has_ring = no
     }
 }
@@ -12551,6 +13265,7 @@ sys_jwess_init = {
         class = pc_o_super_star
         orbit_distance = 0
         size = 38
+        flags = { jwess_star }
     }
 
 	planet = {
@@ -12558,6 +13273,7 @@ sys_jwess_init = {
         class = pc_iron
         orbit_distance = 80
         size = 8
+        flags = { zothozla_planet }
     }
 
 	planet = {
@@ -12565,6 +13281,7 @@ sys_jwess_init = {
         class = pc_hothouse
         orbit_distance = 80
         size = 11
+        flags = { corlq_planet }
 	}
 
 	planet = {
@@ -12572,6 +13289,7 @@ sys_jwess_init = {
         class = pc_molten
         orbit_distance = 80
         size = 12
+        flags = { buaddee_planet }
     }
 
 	planet = {
@@ -12579,6 +13297,7 @@ sys_jwess_init = {
         class = pc_gas_giant
         orbit_distance = 80
         size = 36
+        flags = { cores_planet }
     }
 	
 	planet = {
@@ -12586,6 +13305,7 @@ sys_jwess_init = {
         class = pc_ice_giant	
         orbit_distance = 80
         size = 29
+        flags = { fokka_planet }
 		has_ring = yes
     }
 
@@ -12595,6 +13315,7 @@ sys_jwess_init = {
         orbit_distance = 80
         size = 30
 
+        flags = { vid_planet }
     }
 
 	init_effect = { 
@@ -12624,6 +13345,7 @@ sys_radd_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 25
+        flags = { radd_star }
     }
 
 	planet = {
@@ -12631,6 +13353,7 @@ sys_radd_init = {
         class = pc_gas_giant
         orbit_distance = 80
         size = 31
+        flags = { goratt_planet }
     }
 
 	planet = {
@@ -12638,6 +13361,7 @@ sys_radd_init = {
         class = pc_gas_giant
         orbit_distance = 80
         size = 36
+        flags = { kun_planet }
 		has_ring = yes
 	}
 
@@ -12646,6 +13370,7 @@ sys_radd_init = {
         class = pc_barren_cold
         orbit_distance = 80
         size = 9
+        flags = { umagg_planet }
     }
 
 	change_orbit = 30
@@ -12662,6 +13387,7 @@ sys_radd_init = {
         class = pc_frozen
         orbit_distance = 50
         size = 11
+        flags = { nazen_planet }
     }
 	
 	planet = {
@@ -12669,6 +13395,7 @@ sys_radd_init = {
         class = pc_barren_cold	
         orbit_distance = 80
         size = 13
+        flags = { ruddosid_planet }
     }
 
 	planet = {
@@ -12676,6 +13403,7 @@ sys_radd_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 8
+        flags = { pozas_planet }
     }
 }
 
@@ -12692,6 +13420,7 @@ sys_thita_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 25
+        flags = { thita_star }
     }
 
 	planet = {
@@ -12699,6 +13428,7 @@ sys_thita_init = {
         class = pc_hothouse
         orbit_distance = 125
         size = 12
+        flags = { kal_planet }
     }
 
 	planet = {
@@ -12706,6 +13436,7 @@ sys_thita_init = {
         class = pc_hothouse
         orbit_distance = 125
         size = 13
+        flags = { drifal_planet }
 	}
 
 	planet = {
@@ -12713,6 +13444,7 @@ sys_thita_init = {
         class = pc_savannah
         orbit_distance = 125
         size = 14
+        flags = { tenu_planet }
     }
 
 	planet = {
@@ -12726,6 +13458,7 @@ sys_thita_init = {
 			class = pc_iron
 			orbit_distance = 20
 			size = 11
+			flags = {tassed_planet sabat_planet}
 		}
     }
 }
@@ -12747,6 +13480,7 @@ sys_thwik_init = {
         class = pc_m_giant_star
         orbit_distance = 0
         size = 31
+        flags = { thwik_star }
     }
 
 	planet = {
@@ -12754,6 +13488,7 @@ sys_thwik_init = {
         class = pc_ocean
         orbit_distance = 150
         size = 13
+        flags = { nek_planet }
     }	
 
 	change_orbit = 120
@@ -12770,6 +13505,7 @@ sys_thwik_init = {
         class = pc_molten
         orbit_distance = 30
         size = 9
+        flags = { ais_planet }
 	}
 
 	planet = {
@@ -12777,6 +13513,7 @@ sys_thwik_init = {
         class = pc_barren
         orbit_distance = 150
         size = 6
+        flags = { hu_planet }
     }
 }
 
@@ -12796,6 +13533,7 @@ sys_ayukan_init = {
         class = pc_o_hyper_star
         orbit_distance = 0
         size = 27
+        flags = { ayukan_star }
     }
 
 	planet = {
@@ -12803,6 +13541,7 @@ sys_ayukan_init = {
         class = pc_hothouse
         orbit_distance = 50
         size = 10
+        flags = { yupolai_planet }
     }
 
 	planet = {
@@ -12810,6 +13549,7 @@ sys_ayukan_init = {
         class = pc_carbon
         orbit_distance = 50
         size = 11
+        flags = { jaskrett_planet }
 	}
 
 	planet = {
@@ -12817,6 +13557,7 @@ sys_ayukan_init = {
         class = pc_barren
         orbit_distance = 50
         size = 16
+        flags = { indosi_planet }
     }
 
 	planet = {
@@ -12824,6 +13565,7 @@ sys_ayukan_init = {
         class = pc_barren
         orbit_distance = 50
         size = 15
+        flags = { fasdaas_planet }
     }
 
 	planet = {
@@ -12831,6 +13573,7 @@ sys_ayukan_init = {
         class = pc_molten
         orbit_distance = 50
         size = 10
+        flags = { orum_planet }
     }
 	
 	planet = {
@@ -12838,6 +13581,7 @@ sys_ayukan_init = {
         class = pc_gas_giant
         orbit_distance = 50
         size = 34
+        flags = { telukra_planet }
 		has_ring = yes
 	}
 
@@ -12846,6 +13590,7 @@ sys_ayukan_init = {
         class = pc_barren_cold
         orbit_distance = 50
         size = 5
+        flags = { namapp_planet }
     }
 
 	planet = {
@@ -12853,6 +13598,7 @@ sys_ayukan_init = {
         class = pc_frozen
         orbit_distance = 50
         size = 7
+        flags = { cioletas_planet }
     }
 
 	planet = {
@@ -12860,6 +13606,7 @@ sys_ayukan_init = {
         class = pc_gas_giant
         orbit_distance = 50
         size = 30
+        flags = { toldasp_planet }
     }
 }
 
@@ -12875,6 +13622,7 @@ sys_iostapa_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 27
+        flags = { iostapa_star }
     }
 
 	planet = {
@@ -12882,6 +13630,7 @@ sys_iostapa_init = {
         class = pc_molten
         orbit_distance = 100
         size = 12
+        flags = { yarnat_planet }
     }
 
 	planet = {
@@ -12889,6 +13638,7 @@ sys_iostapa_init = {
         class = pc_carbon
         orbit_distance = 100
         size = 8
+        flags = { vaduas_planet }
 	}
 
 	planet = {
@@ -12896,6 +13646,7 @@ sys_iostapa_init = {
         class = pc_dextro_continental
         orbit_distance = 100
         size = 18
+        flags = { opiolo_planet }
     }
 
 	planet = {
@@ -12903,6 +13654,7 @@ sys_iostapa_init = {
         class = pc_barren
         orbit_distance = 100
         size = 5
+        flags = { carcus_planet }
     }
 
 	planet = {
@@ -12910,6 +13662,7 @@ sys_iostapa_init = {
         class = pc_barren_cold
         orbit_distance = 100
         size = 8
+        flags = { sartaem_planet }
     }
 
 	init_effect = { 
@@ -12934,6 +13687,7 @@ sys_papapp_init = {
         class = pc_k_giant_star
         orbit_distance = 0
         size = 33
+        flags = { papapp_star }
     }
 
 	planet = {
@@ -12941,6 +13695,7 @@ sys_papapp_init = {
         class = pc_hothouse
         orbit_distance = 250
         size = 10
+        flags = { kondoris_planet }
     }
 
 	planet = {
@@ -12948,6 +13703,7 @@ sys_papapp_init = {
         class = pc_continental
         orbit_distance = 250
         size = 19
+        flags = { vameccan_planet }
 	}
 	init_effect = { 
 		spawn_megastructure = { 
@@ -12971,6 +13727,7 @@ sys_turipan_init = {
         class = pc_a_star
         orbit_distance = 0
         size = 32
+        flags = { turipan_star }
     }
 
 	planet = {
@@ -12978,6 +13735,7 @@ sys_turipan_init = {
         class = pc_gas_giant
         orbit_distance = 150
         size = 37
+        flags = { jarmao_planet }
 		has_ring = yes
     }
 
@@ -12986,6 +13744,7 @@ sys_turipan_init = {
         class = pc_gas_giant
         orbit_distance = 150
         size = 38
+        flags = { festerur_planet }
 		has_ring = yes
 	}
 
@@ -12994,6 +13753,7 @@ sys_turipan_init = {
         class = pc_ice_giant
         orbit_distance = 150
         size = 34
+        flags = { jelkkenda_planet }
 		has_ring = yes
     }
 }
@@ -13020,6 +13780,7 @@ sys_welvap_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 27
+        flags = { welvap_star }
     }
 
 	planet = {
@@ -13027,6 +13788,7 @@ sys_welvap_init = {
         class = pc_hot_giant
         orbit_distance = 70
         size = 38
+        flags = { gastrass_planet }
     }
 
 	planet = {
@@ -13034,6 +13796,7 @@ sys_welvap_init = {
         class = pc_hothouse
         orbit_distance = 70
         size = 14
+        flags = { opisdurr_planet }
 	}
 
 	planet = {
@@ -13041,6 +13804,7 @@ sys_welvap_init = {
         class = pc_hothouse
         orbit_distance = 70
         size = 17
+        flags = { barsarias_planet }
     }
 
 	planet = {
@@ -13048,6 +13812,7 @@ sys_welvap_init = {
         class = pc_highgrav_chlorine
         orbit_distance = 70
         size = 22
+        flags = { kipick_planet }
 		has_ring = yes
     }
 
@@ -13065,6 +13830,7 @@ sys_welvap_init = {
         class = pc_barren_cold
         orbit_distance = 35
         size = 10
+        flags = { iondar_planet }
     }
 	
 	planet = {
@@ -13072,6 +13838,7 @@ sys_welvap_init = {
         class = pc_frozen
         orbit_distance = 70
         size = 14
+        flags = { hietass_planet }
 	}
 
 	planet = {
@@ -13079,6 +13846,7 @@ sys_welvap_init = {
         class = pc_ice_giant
         orbit_distance = 70
         size = 25
+        flags = { valdum_planet }
     }
 
 	change_orbit = 10
@@ -13103,6 +13871,7 @@ sys_xodiss_init = {
         class = pc_d_star
         orbit_distance = 0
         size = 27
+        flags = { xodiss_star }
     }
 
 	planet = {
@@ -13110,6 +13879,7 @@ sys_xodiss_init = {
         class = pc_molten
         orbit_distance = 80
         size = 10
+        flags = { kondoris_planet }
     }
 
 	planet = {
@@ -13117,6 +13887,7 @@ sys_xodiss_init = {
         class = pc_hothouse
         orbit_distance = 80
         size = 12
+        flags = { vameccan_planet }
 	}
 
 	planet = {
@@ -13124,6 +13895,7 @@ sys_xodiss_init = {
         class = pc_mephitic
         orbit_distance = 80
         size = 14
+        flags = { yurvass_planet }
     }
 
 	planet = {
@@ -13131,6 +13903,7 @@ sys_xodiss_init = {
         class = pc_tundra
         orbit_distance = 80
         size = 15
+        flags = { iostas_planet }
     }
 
 	planet = {
@@ -13138,6 +13911,7 @@ sys_xodiss_init = {
         class = pc_gas_giant
         orbit_distance = 80
         size = 38
+        flags = { vesston_planet }
 		has_ring = yes
     }
 
@@ -13146,6 +13920,7 @@ sys_xodiss_init = {
         class = pc_frozen
         orbit_distance = 80
         size = 8
+        flags = { bastupp_planet }
     }
 }
 
@@ -13165,6 +13940,7 @@ sys_dakka_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 30
+        flags = { dakka_star }
 	}
 
     planet = {
@@ -13174,6 +13950,7 @@ sys_dakka_init = {
         orbit_angle = 22
         has_ring = no
 		size = 20
+		flags = { bannik_planet }
     }
 
     planet = {
@@ -13182,7 +13959,7 @@ sys_dakka_init = {
         orbit_distance = 100
         orbit_angle = 156
         has_ring = no
-		flags = { subclass_world }
+		flags = {subclass_world pragia_planet}
 		size = 12
 		entity = "jungle_planet_10_entity"
         init_effect = {
@@ -13200,6 +13977,7 @@ sys_dakka_init = {
         orbit_angle = 64
         has_ring = no
 		size = 26
+		flags = { alkonost_planet }
     }
 
     planet = {
@@ -13216,6 +13994,7 @@ sys_dakka_init = {
 			orbit_angle = 145
 			orbit_distance = 20
 			size = 3
+			flags = {gamayun_a_planet gamayun_planet}
 		}	
 
 		moon = { 
@@ -13224,6 +14003,7 @@ sys_dakka_init = {
 			orbit_angle = 82
 			orbit_distance = 5
 			size = 2
+			flags = { gamayun_b_planet }
 		}
 
 		moon = { 
@@ -13232,6 +14012,7 @@ sys_dakka_init = {
 			orbit_angle = 340
 			orbit_distance = 5
 			size = 2
+			flags = { gamayun_c_planet }
 		}
 
 		moon = { 
@@ -13240,6 +14021,7 @@ sys_dakka_init = {
 			orbit_angle = 1
 			orbit_distance = 5
 			size = 5
+			flags = { gamayun_d_planet }
 		}
 
 		moon = { 
@@ -13248,6 +14030,7 @@ sys_dakka_init = {
 			orbit_angle = 160
 			orbit_distance = 5
 			size = 2
+			flags = { gamayun_e_planet }
 		}
 
 		moon = { 
@@ -13256,6 +14039,7 @@ sys_dakka_init = {
 			orbit_angle = 16
 			orbit_distance = 5
 			size = 4
+			flags = { gigula_planet }
 		}		
     }
 
@@ -13266,6 +14050,7 @@ sys_dakka_init = {
         orbit_angle = 264
         has_ring = no
 		size = 6
+		flags = { zirnitra_planet }
     }
 }
 
@@ -13281,6 +14066,7 @@ sys_debod_init = {
         class = pc_m_star
         orbit_distance = 0
         size = 30
+        flags = { debod_star }
     }
 
     planet = {
@@ -13290,6 +14076,7 @@ sys_debod_init = {
         orbit_angle = 350
         has_ring = no
 		size = 10
+		flags = { philae_planet }
     }
 
     planet = {
@@ -13299,6 +14086,7 @@ sys_debod_init = {
         orbit_angle = 205
         has_ring = yes
 		size = 30		
+		flags = { agilkia_planet }
     }
 
 	init_effect = { 
@@ -13323,6 +14111,7 @@ sys_kalabsha_init = {
         class = pc_g_star
         orbit_distance = 0
         size = 30
+        flags = { kalabsha_star }
     }
 
     planet = {
@@ -13381,6 +14170,7 @@ sys_kalabsha_init = {
         orbit_angle = 296
         has_ring = no
 		size = 34
+		flags = { tefnut_planet }
     }
 
 	init_effect = { 
@@ -13405,6 +14195,7 @@ sys_nx2176_init = {
         class = pc_k_star
         orbit_distance = 0
         size = 35
+        flags = { nx_2176_star }
     }	
 
 	asteroid_belt = {
@@ -13419,6 +14210,7 @@ sys_nx2176_init = {
         orbit_angle = 142
         has_ring = no
 		size = 13		
+		flags = { nx_2176_i_planet }
     }
     
 	planet = {
@@ -13428,6 +14220,7 @@ sys_nx2176_init = {
         orbit_angle = 76
         has_ring = no
 		size = 13	
+		flags = { nx_2176_ii_planet }
     }
 
 	planet = {
@@ -13444,7 +14237,7 @@ sys_nx2176_init = {
         orbit_angle = 280
         has_ring = no
 		size = 13
-		flags = { subclass_world }
+		flags = {subclass_world nx_2176_iii_planet}
 		entity = "storm_planet_02_entity"
 		init_effect = {
 			add_modifier = {
@@ -13461,6 +14254,7 @@ sys_nx2176_init = {
         orbit_angle = 300
         has_ring = no
 		size = 17		
+		flags = { nx_2176_iv_planet }
     }	
 	
 	planet = {
@@ -13477,6 +14271,7 @@ sys_nx2176_init = {
 			orbit_angle = random
 			orbit_distance = 8
 			size = 12
+			flags = {nx_2176_va_planet nx_2176_v_planet}
 		}	
 		moon = {
 			name = "NX-2176 Vb"
@@ -13484,6 +14279,7 @@ sys_nx2176_init = {
 			orbit_angle = random
 			orbit_distance = 9
 			size = 8
+			flags = { nx_2176_vb_planet }
 		}
 	}	
 
@@ -13519,6 +14315,7 @@ sys_nx2185_init = {
         class = pc_m_giant_star
         orbit_distance = 0
         size = 45
+        flags = { nx_2185_star }
     }
 
     planet = {
@@ -13528,6 +14325,7 @@ sys_nx2185_init = {
         orbit_angle = 353
         has_ring = no
 		size = 6
+		flags = { 113_kerad_planet }
     }
 
     planet = {
@@ -13544,6 +14342,7 @@ sys_nx2185_init = {
 			orbit_angle = random
 			orbit_distance = 20
 			size = 5
+			flags = {433_spidau_a_planet 433_spidau_planet}
 		}
     }
 
@@ -13561,6 +14360,7 @@ sys_nx2185_init = {
 			orbit_angle = random
 			orbit_distance = 6
 			size = 8
+			flags = {704_jawinor_a_planet 704_jarwinar_planet}
 		}
 
 		moon = {
@@ -13569,6 +14369,7 @@ sys_nx2185_init = {
 			orbit_angle = random
 			orbit_distance = 8
 			size = 4
+			flags = { 704_jawinor_b_planet }
 		}			
     }
 
@@ -13603,6 +14404,7 @@ sys_qertassi_init = {
         class = pc_g_giant_star
         orbit_distance = 0
         size = 60
+        flags = { qertassi_star }
     }
 
     planet = {
@@ -13619,6 +14421,7 @@ sys_qertassi_init = {
 			orbit_angle = 76
 			orbit_distance = 6
 			size = 4
+			flags = {norehsa_a_planet norehsa_planet}
 		}
 
 		moon = {
@@ -13627,6 +14430,7 @@ sys_qertassi_init = {
 			orbit_angle = 114
 			orbit_distance = 7
 			size = 3
+			flags = { norehsa_b_planet }
 		}
 	
 		moon = {
@@ -13635,6 +14439,7 @@ sys_qertassi_init = {
 			orbit_angle = 196
 			orbit_distance = 6
 			size = 4
+			flags = { norehsa_c_planet }
 		}		
     }
 }
@@ -13664,6 +14469,7 @@ sys_gagarin_init = {
         orbit_distance = 0
 		orbit_angle = 1
 		size = 33
+		flags = { gagarin_star }
 		has_ring = no
 		init_effect = {
 			create_ambient_object = {
@@ -13701,6 +14507,7 @@ sys_gagarin_init = {
 			class = pc_iron
 			orbit_distance = 20
 			size = 5	
+			flags = {junthor_a_planet junthor_planet}
 		}
 
 		moon = {
@@ -13708,6 +14515,7 @@ sys_gagarin_init = {
 			class = pc_frozen
 			orbit_distance = 5
 			size = 3			
+			flags = { junthor_b_planet }
 		}
 
 		moon = {
@@ -13715,6 +14523,7 @@ sys_gagarin_init = {
 			class = pc_barren
 			orbit_distance = 5
 			size = 3			
+			flags = { junthor_c_planet }
 		}		
     }
 
@@ -13738,6 +14547,7 @@ sys_gagarin_init = {
 			class = pc_iron
 			orbit_distance = 20
 			size = 7		
+			flags = {pressha_a_planet pressha_planet}
 		}
 
 		moon = {
@@ -13745,6 +14555,7 @@ sys_gagarin_init = {
 			class = pc_frozen
 			orbit_distance = 5
 			size = 8
+			flags = { pressha_b_planet }
 		}
 
 		moon = {
@@ -13754,6 +14565,7 @@ sys_gagarin_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			size = 9
+			flags = { pressha_c_planet }
 		}		
     }
 
@@ -13776,6 +14588,7 @@ sys_gagarin_init = {
 			class = pc_iron
 			orbit_distance = 20
 			size = 6					
+			flags = {vahtz_planet rayingri_planet}
 		}
     }
 
@@ -13786,6 +14599,7 @@ sys_gagarin_init = {
         orbit_angle = 286
         has_ring = no
 		size = 11
+		flags = { sogelrus_planet }
     }
 
     planet = {
@@ -13795,6 +14609,7 @@ sys_gagarin_init = {
         orbit_angle = 289
         has_ring = no
 		size = 23
+		flags = { antirumgon_planet }
 		init_effect = {
 			add_modifier = {
 				modifier = carbon_world
@@ -13827,6 +14642,7 @@ sys_grissom_init = {
         orbit_distance = 0
 		orbit_angle = 1
 		size = 40
+		flags = { grissom_star }
 		has_ring = no
 
 		init_effect = {
@@ -13852,6 +14668,7 @@ sys_grissom_init = {
         orbit_angle = 340
         has_ring = no
 		size = 17
+		flags = { benda_planet }
 		init_effect = {
 			add_modifier = {
 				modifier = unstable_tectonics
@@ -13868,7 +14685,7 @@ sys_grissom_init = {
         has_ring = no
 		size = 16
 		entity = "dune_planet_01_entity"
-		flags = { subclass_world }
+		flags = {subclass_world zaherux_planet}
 		init_effect = {
 			add_modifier = {
 				modifier = btr_scorching_surface
@@ -13885,6 +14702,7 @@ sys_grissom_init = {
 			class = pc_iron
 			orbit_distance = 20
 			size = 5
+			flags = { zaherux_a_planet }
 		}
 	}
 	
@@ -13916,6 +14734,7 @@ sys_grissom_init = {
 			class = pc_iron
 			orbit_distance = 20			
 			size = 7
+			flags = {notanban_a_planet notanban_planet}
 		}
 
 		moon = {
@@ -13923,6 +14742,7 @@ sys_grissom_init = {
 			class = pc_barren_cold
 			orbit_distance = 5
 			size = 11
+			flags = { solcrum_planet }
 			init_effect = {
 				add_modifier = {
 					modifier = tidal_locked
@@ -13938,6 +14758,7 @@ sys_grissom_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			size = 4
+			flags = { notanban_c_planet }
 		}
 		
 		moon = {
@@ -13947,6 +14768,7 @@ sys_grissom_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			size = 6
+			flags = { notanban_d_planet }
 		}		
     }
 
@@ -13982,6 +14804,7 @@ sys_hong_init = {
         orbit_distance = 0
 		orbit_angle = 1
 		size = 25
+		flags = { hong_star }
 		has_ring = no
 		init_effect = {
 			create_ambient_object = {
@@ -14006,6 +14829,7 @@ sys_hong_init = {
         orbit_angle = 150
         has_ring = no
 		size = 24
+		flags = { pomal_planet }
     }
 
     planet = {
@@ -14015,6 +14839,7 @@ sys_hong_init = {
         orbit_angle = 116
         has_ring = no
 		size = 19
+		flags = { casbin_planet }
     }
 
     planet = {
@@ -14024,6 +14849,7 @@ sys_hong_init = {
         orbit_angle = 59
         has_ring = no
 		size = 11
+		flags = { matar_planet }
 	}	
 
     planet = {
@@ -14045,6 +14871,7 @@ sys_hong_init = {
 			class = pc_iron
 			orbit_distance = 20			
 			size = 6
+			flags = {theshaca_a_planet theshaca_planet}
 		}
 
 		moon = {
@@ -14052,6 +14879,7 @@ sys_hong_init = {
 			class = pc_frozen
 			orbit_distance = 5			
 			size = 9
+			flags = { theshaca_b_planet }
 		}		
 
 		moon = {
@@ -14059,6 +14887,7 @@ sys_hong_init = {
 			class = pc_frozen
 			orbit_distance = 5			
 			size = 4
+			flags = { theshaca_c_planet }
 		}					
     }
 
@@ -14069,6 +14898,7 @@ sys_hong_init = {
         orbit_angle = 136
         has_ring = no
 		size = 3
+		flags = { treagir_planet }
 	}   
 }
 
@@ -14091,7 +14921,7 @@ sys_tereshkova_init = {
 		orbit_angle = 90
 		size = 30
 		has_ring = no
-		flags = { tereshkovaa_star }
+		flags = {tereshkovaa_star tereshkova_a_star}
 		init_effect = {
 			create_ambient_object = {
 				type = "nebula_1"
@@ -14114,6 +14944,7 @@ sys_tereshkova_init = {
         orbit_distance = 25
 		orbit_angle = 180
 		size = 20
+		flags = { tereshkova_b_star }
 		has_ring = no
 	}
 
@@ -14133,6 +14964,7 @@ sys_tereshkova_init = {
         orbit_angle = 148
         has_ring = no
 		size = 16		
+		flags = { antibaar_planet }
 	}
 
     planet = {
@@ -14142,6 +14974,7 @@ sys_tereshkova_init = {
         orbit_angle = 242
         has_ring = no
 		size = 14
+		flags = { patamalrus_planet }
 	}		
 
     planet = {
@@ -14151,6 +14984,7 @@ sys_tereshkova_init = {
         orbit_angle = 202
         has_ring = no
 		size = 25		
+		flags = { hunsalra_planet }
 	}
 
     planet = {
@@ -14160,6 +14994,7 @@ sys_tereshkova_init = {
         orbit_angle = 202
         has_ring = no
 		size = 12
+		flags = { thegeuse_planet }
 		init_effect = {
 			add_modifier = {
 				modifier = tidal_locked
@@ -14175,6 +15010,7 @@ sys_tereshkova_init = {
         orbit_angle = 94
         has_ring = no
 		size = 36			
+		flags = { solmarlon_planet }
 	}
 
     planet = {
@@ -14184,6 +15020,7 @@ sys_tereshkova_init = {
         orbit_angle = 326
         has_ring = no
 		size = 3
+		flags = { mawinor_planet }
 		init_effect = {
 			add_modifier = {
 				modifier = low_gravity
@@ -14206,7 +15043,7 @@ sys_vamshi_init = {
         size = 60
         orbit_distance = 10
         orbit_angle = 180
-		flags = { vamshib_star }
+		flags = {vamshib_star vamshi_b_star}
 		init_effect = {
 			create_ambient_object = {
 				type = "nebula_2"
@@ -14227,6 +15064,7 @@ sys_vamshi_init = {
 		name = "Vamshi A"		
         class = pc_a_star
         size = 20
+        flags = { vamshi_a_star }
         orbit_distance = 30  
     }
 
@@ -14238,6 +15076,7 @@ sys_vamshi_init = {
         orbit_angle = 167
         has_ring = no
 		size = 14
+		flags = { maji_planet }
 		entity = "methane_arid_planet_08_entity"
 		init_effect = {
 			add_modifier = {
@@ -14254,7 +15093,7 @@ sys_vamshi_init = {
         orbit_angle = 202
         has_ring = no
 		size = 25
-		flags = { subclass_world }
+		flags = {subclass_world pregel_planet}
 		entity = "chlorine_ocean_planet_08_entity"
 		init_effect = {
 			add_modifier = {
@@ -14271,6 +15110,7 @@ sys_vamshi_init = {
         orbit_angle = 118
         has_ring = no
 		size = 35	
+		flags = { almos_planet }
     } 
 
 	init_effect = { 
@@ -14299,6 +15139,7 @@ sys_err_init = {
         class = pc_m_hyper_star
         orbit_distance = 0
         size = 39
+        flags = { err_star }
     }
 
 	planet = {
@@ -14306,6 +15147,7 @@ sys_err_init = {
         class = pc_barren
         orbit_distance = 80
         size = 10
+        flags = { sqon_planet }
     }
 
 	planet = {
@@ -14313,6 +15155,7 @@ sys_err_init = {
         class = pc_barren
         orbit_distance = 80
         size = 10
+        flags = { vrugg_planet }
 	}
 
 	planet = {
@@ -14320,6 +15163,7 @@ sys_err_init = {
         class = pc_hothouse
         orbit_distance = 80
         size = 14
+        flags = { bnerrp_planet }
     }
 
 	planet = {
@@ -14334,6 +15178,7 @@ sys_err_init = {
 			class = pc_asteroid
 			orbit_distance = 20
 			size = 2
+			flags = {wass_planet snalk_planet}
 		}
 
 		moon = {
@@ -14341,6 +15186,7 @@ sys_err_init = {
 			class = pc_frozen
 			orbit_distance = 5
 			size = 4
+			flags = { vrors_planet }
 		}
 
 		moon = {
@@ -14348,6 +15194,7 @@ sys_err_init = {
 			class = pc_frozen	
 			orbit_distance = 5
 			size = 6
+			flags = { glut_planet }
 		}
     }
 }
@@ -14369,6 +15216,7 @@ sys_gatetothedark_init = {
         class = pc_w_purple_star
         orbit_distance = 0
         size = 20
+        flags = { geata_dorch_star }
     }
 
     planet = {
@@ -14377,6 +15225,7 @@ sys_gatetothedark_init = {
         orbit_distance = 110
         orbit_angle = 90
         size = 30
+        flags = { nasem_planet }
         has_ring = no
     }
 
@@ -14401,6 +15250,7 @@ sys_jocir_init = {
         class = pc_b_star
         orbit_distance = 0
         size = 30
+        flags = { jocir_star }
     }
 
 	planet = {
@@ -14408,6 +15258,7 @@ sys_jocir_init = {
         class = pc_iron
         orbit_distance = 60
         size = 7
+        flags = { hugo_planet }
     }
 
 	planet = {
@@ -14415,6 +15266,7 @@ sys_jocir_init = {
         class = pc_tropical
         orbit_distance = 60
         size = 19
+        flags = { nibiro_planet }
 	}
 
 	planet = {
@@ -14422,6 +15274,7 @@ sys_jocir_init = {
         class = pc_ice_giant
         orbit_distance = 60
         size = 29
+        flags = { zosti_planet }
 		has_ring = yes
     }
 
@@ -14430,6 +15283,7 @@ sys_jocir_init = {
         class = pc_barren_cold
         orbit_distance = 60
         size = 8
+        flags = { wegais_planet }
     }
 
 	planet = {
@@ -14437,6 +15291,7 @@ sys_jocir_init = {
         class = pc_ammonia
         orbit_distance = 60
         size = 20
+        flags = { akturg_planet }
     }
 
 	planet = {
@@ -14444,6 +15299,7 @@ sys_jocir_init = {
         class = pc_frozen
         orbit_distance = 60
         size = 11
+        flags = { chonn_planet }
     }
 
 	planet = {
@@ -14451,6 +15307,7 @@ sys_jocir_init = {
         class = pc_frozen
         orbit_distance = 60
         size = 4
+        flags = { ouroch_planet }
     }
 
 	planet = {
@@ -14458,6 +15315,7 @@ sys_jocir_init = {
         class = pc_barren
         orbit_distance = 60
         size = 8
+        flags = { drax_planet }
     }
 
 	init_effect = { 
@@ -14482,6 +15340,7 @@ sys_sygg_init = {
         class = pc_black_hole
         orbit_distance = 0
         size = 38
+        flags = { sygg_planet }
     }
 
 	init_effect = { 
