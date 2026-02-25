@@ -576,3 +576,110 @@ weapon_component_template = {
 		}
 	}
 }
+
+# ## Lens-Flare Beam
+weapon_component_template = {
+	key = "LENS_FLARE_BEAM"
+	size = extra_large
+	type = instant
+
+	icon = "GFX_ship_part_energy_lens_beam"
+	icon_frame = 1
+
+	firing_arc = 25.0
+	use_ship_main_target = no
+	potential = {
+		OR = {
+			is_ship_size = ember_battleship
+			is_ship_size = entropy_conduit
+			is_ship_size = conduit_station
+		}
+	}
+
+	component_set = "LENS_FLARE_BEAM"
+	projectile_gfx = "lens_flare_beam"
+	tags = { weapon_type_energy weapon_role_artillery x_slot }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+
+	on_hit = {
+		custom_tooltip = "lfb_on_hit_stun_tt"
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = this
+					NOT = { has_ship_flag = conduit_paralyzed }
+				}
+				set_timed_ship_flag = { flag = conduit_paralyzed days = 35 }
+				add_modifier = {
+					modifier = lf_weapon_stun_effect
+					days = 7 # If this changes, adjust the tt
+				}
+			}
+			from.owner = { complete_crisis_objective = crisobj_lens_beam_impact }
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 1.5
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1.25
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = entropy_crystals }
+		}
+	}
+}
+
+# Solarflare Emitter
+weapon_component_template = {
+	key = "SOLARFLARE_EMITTER"
+	size = extra_large
+	type = instant
+	prio_projectile = yes
+
+	icon = "GFX_ship_part_energy_lens_beam"
+	icon_frame = 1
+
+	firing_arc = 10.0
+	use_ship_main_target = no
+
+	tags = { weapon_type_energy weapon_role_artillery x_slot }
+
+	potential = { is_ship_size = starfire_cannon }
+	component_set = "SOLARFLARE_EMITTER"
+	projectile_gfx = "starfire_cannon"
+
+	target_type = target_enemies
+	target_focus = spread
+	on_hit = {
+		custom_tooltip = "sfe_on_hit_stun_tt"
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = this
+					NOT = { has_ship_flag = starfire_emp }
+				}
+				set_timed_ship_flag = { flag = starfire_emp days = 15 }
+				add_modifier = {
+					modifier = sfe_weapon_stun_effect
+					days = 5 # If this changes, adjust the tt
+				}
+			}
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 1.5
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+}

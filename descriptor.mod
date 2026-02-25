@@ -12,4 +12,4 @@ tags={
 	"Spaceships"
 }
 name="BTR Skunkworks"
-supported_version="3.11.*"
+supported_version="v4.0.23"

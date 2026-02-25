@@ -145,9 +145,6 @@ utility_component_template = {
 			ship_shield_reduction = 1
 		}
 	}
-
-	inline_script = ship_components/cloaking_ship_shield_reduction
-
 	custom_tooltip = "CLOAKING_2_TOOLTIP"
 
 	ship_limit = 1
@@ -322,8 +319,14 @@ utility_component_template = {
 		ship_cloaking_strength_add = @cloaking_high_strength
 	}
 
-	inline_script = ship_components/cloaking_ship_shield_reduction
-
+	triggered_ship_modifier = {
+		potential = {
+			is_cloaked = yes
+		}
+		modifier = {
+			ship_shield_reduction = 0.5
+		}
+	}
 	custom_tooltip = "CLOAKING_DARK_MATTER_TOOLTIP"
 
 	ship_limit = 1

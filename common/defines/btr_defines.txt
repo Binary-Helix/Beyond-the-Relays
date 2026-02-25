@@ -75,8 +75,75 @@
 
         LEADER_LIFESPAN_DEATH_CHANCE_AGE	= 100			# 80			# Before this age the chance wont increase
 
-        HABITABILITY_WRONG_PLANET		= 60			# 0.70			# Below which point we color habitability icons and text yellow
-        HABITABILITY_OPPOSITE_PLANET	= 0.25			# 0.40			# Below which point we color habitability icons and text red
+        DEFAULT_HOME_PLANETS = {
+        
+            #btr_00_planet_classes
+            "pc_desert" 
+            "pc_ocean"	
+            "pc_arctic"   
+            "pc_arid"  
+            "pc_continental"
+            "pc_alpine" 
+            "pc_savannah" 
+            "pc_tropical" 
+            "pc_tundra"
+            "pc_habitat"
+            "pc_nuked"
+
+            ##btr_exotic_planet_classes
+            "pc_ammonia"
+            "pc_primal"
+            
+            ##btr_dextro_planet_classes
+            "pc_dextro_desert" 
+            "pc_dextro_ocean"	
+            "pc_dextro_arctic"   
+            "pc_dextro_arid"  
+            "pc_dextro_continental"
+            "pc_dextro_alpine" 
+            "pc_dextro_savannah" 
+            "pc_dextro_tropical" 
+            "pc_dextro_tundra"
+
+            ##btr_highgrav_dextro_planet_classes
+            "pc_highgrav_dextro_desert" 
+            "pc_highgrav_dextro_ocean"	
+            "pc_highgrav_dextro_arctic"   
+            "pc_highgrav_dextro_arid"  
+            "pc_highgrav_dextro_continental"
+            "pc_highgrav_dextro_alpine" 
+            "pc_highgrav_dextro_savannah" 
+            "pc_highgrav_dextro_tropical" 
+            "pc_highgrav_dextro_tundra"
+
+            ##btr_highgrav_planet_classes
+            "pc_highgrav_desert" 
+            "pc_highgrav_ocean"	
+            "pc_highgrav_arctic"   
+            "pc_highgrav_arid"  
+            "pc_highgrav_continental"
+            "pc_highgrav_alpine" 
+            "pc_highgrav_savannah" 
+            "pc_highgrav_tropical" 
+            "pc_highgrav_tundra"
+
+            ##btr_highgrav_exotic_planet_classes
+            "pc_highgrav_ammonia"
+            "pc_highgrav_primal"
+
+            ##btr_spacestation_classes
+            "pc_omega"
+            "pc_heretic_station"
+            "pc_collector_base"
+            "pc_quarian_liveship"
+
+            ##btr_planetarystations_planet_classes
+            "pc_molten_station"
+
+        }
+
+        DEFAULT_CLIMATE_LABELS = { "TYPE_HEADER_01" "TYPE_HEADER_02" "TYPE_HEADER_03" }
+
     }
 
     NSpecies = {

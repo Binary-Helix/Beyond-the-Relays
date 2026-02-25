@@ -38,6 +38,7 @@ d_arid_highlands = {
 	terraforming_swap_types = {
 		d_hot_springs
 		d_buzzing_plains # gaia
+		d_volcanic_rich_mountain
 	}
 
 	category = deposit_cat_energy
@@ -47,7 +48,7 @@ d_arid_highlands = {
 	}
 
 	potential = {
-		is_dry = yes
+		is_dry_non_volcanic = yes
 	}
 
 	drop_weight = {
@@ -70,6 +71,7 @@ d_hot_springs = {
 	terraforming_swap_types = {
 		d_arid_highlands
 		d_buzzing_plains # gaia
+		d_volcanic_lava_river
 	}
 
 	planet_modifier = {
@@ -102,6 +104,7 @@ d_rushing_waterfalls = {
 	terraforming_swap_types = {
 		d_searing_desert
 		d_frozen_gas_lake
+		d_volcanic_weak_crust
 	}
 
 	category = deposit_cat_energy
@@ -134,6 +137,7 @@ d_searing_desert = {
 	terraforming_swap_types = {
 		d_frozen_gas_lake
 		d_rushing_waterfalls
+		d_volcanic_weak_crust
 	}
 
 	planet_modifier = {
@@ -145,7 +149,7 @@ d_searing_desert = {
 			is_planet_class = pc_gaia
 			is_planet_class = pc_nuked
 			is_planet_class = pc_relic
-			is_dry = yes
+			is_dry_non_volcanic = yes
 		}
 	}
 
@@ -169,6 +173,7 @@ d_frozen_gas_lake = {
 	terraforming_swap_types = {
 		d_searing_desert
 		d_rushing_waterfalls
+		d_volcanic_weak_crust
 	}
 
 	planet_modifier = {
@@ -203,6 +208,7 @@ d_geothermal_vent = {
 	terraforming_swap_types = {
 		d_tempestous_mountain
 		d_underwater_vent
+		d_volcanic_mineral_layers
 	}
 
 	planet_modifier = {
@@ -216,6 +222,7 @@ d_geothermal_vent = {
 			is_planet_class = pc_savannah
 			is_planet_class = pc_desert
 			is_planet_class = pc_arid
+			is_planet_class = pc_volcanic
 			is_planet_class = pc_dextro_arctic
 			is_planet_class = pc_dextro_tundra
 			is_planet_class = pc_dextro_savannah
@@ -258,6 +265,7 @@ d_underwater_vent = {
 	terraforming_swap_types = {
 		d_geothermal_vent
 		d_tempestous_mountain
+		d_volcanic_mineral_layers
 	}
 
 	planet_modifier = {
@@ -300,6 +308,7 @@ d_tempestous_mountain = {
 	terraforming_swap_types = {
 		d_geothermal_vent
 		d_underwater_vent
+		d_volcanic_mineral_layers
 	}
 
 	planet_modifier = {
@@ -313,6 +322,7 @@ d_tempestous_mountain = {
 			is_planet_class = pc_gaia
 			is_planet_class = pc_relic
 			is_planet_class = pc_continental
+			is_planet_class = pc_volcanic
 			is_planet_class = pc_dextro_tropical
 			is_planet_class = pc_dextro_alpine
 			is_planet_class = pc_dextro_continental
@@ -349,6 +359,7 @@ d_veiny_cliffs = {
 	terraforming_swap_types = {
 		d_mineral_fields
 		d_mineral_striations # gaia
+		d_volcanic_ore_veins
 	}
 
 	planet_modifier = {
@@ -397,6 +408,7 @@ d_mineral_fields = {
 	terraforming_swap_types = {
 		d_veiny_cliffs
 		d_mineral_striations # gaia
+		d_volcanic_ore_veins
 	}
 
 	planet_modifier = {
@@ -451,6 +463,7 @@ d_prosperous_mesa = {
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
 		d_ore_rich_caverns
+		d_volcanic_stable_plateaus
 	}
 
 	planet_modifier = {
@@ -499,6 +512,7 @@ d_ore_rich_caverns = {
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
 		d_prosperous_mesa
+		d_volcanic_ore_caverns
 	}
 
 	planet_modifier = {
@@ -513,7 +527,7 @@ d_ore_rich_caverns = {
 			}
 		}
 		modifier = {
-			district_mining_max_add= 1
+			district_mining_max_add = 1
 		}
 	}
 
@@ -568,6 +582,7 @@ d_rich_mountain = {
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
 		d_submerged_ore_veins
+		d_volcanic_rich_mountain
 	}
 
 	planet_modifier = {
@@ -628,6 +643,7 @@ d_submerged_ore_veins = {
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
 		d_rich_mountain
+		d_volcanic_rich_mountain
 	}
 
 	planet_modifier = {
@@ -686,6 +702,7 @@ d_lichen_fields = {
 		d_boggy_fens
 		d_nutritious_mudland
 		d_natural_farmland # gaia
+		d_volcanic_tranquil_flatlands
 	}
 
 	planet_modifier = {
@@ -731,6 +748,7 @@ d_bountiful_plains = {
 		d_boggy_fens
 		d_nutritious_mudland
 		d_natural_farmland # gaia
+		d_volcanic_tranquil_flatlands
 	}
 
 	planet_modifier = {
@@ -773,6 +791,7 @@ d_rugged_woods = {
 		d_forgiving_tundra
 		d_boggy_fens
 		d_nutritious_mudland
+		d_volcanic_intraplate
 	}
 
 	planet_modifier = {
@@ -808,6 +827,7 @@ d_green_hills = {
 		d_boggy_fens
 		d_nutritious_mudland
 		d_natural_farmland # gaia
+		d_volcanic_dried_lavariver
 	}
 
 	planet_modifier = {
@@ -852,6 +872,7 @@ d_forgiving_tundra = {
 		d_boggy_fens
 		d_nutritious_mudland
 		d_natural_farmland # gaia
+		d_volcanic_basalt_plains
 	}
 
 	planet_modifier = {
@@ -896,6 +917,7 @@ d_boggy_fens = {
 		d_forgiving_tundra
 		d_nutritious_mudland
 		d_natural_farmland # gaia
+		d_volcanic_basalt_plains
 	}
 
 	planet_modifier = {
@@ -938,6 +960,7 @@ d_nutritious_mudland = {
 		d_forgiving_tundra
 		d_boggy_fens
 		d_natural_farmland # gaia
+		d_volcanic_ore_veins
 	}
 
 	planet_modifier = {
@@ -976,6 +999,7 @@ d_fungal_caves = {
 		d_lush_jungle
 		d_fertile_lands
 		d_great_river
+		d_volcanic_ore_caverns
 	}
 
 	planet_modifier = {
@@ -1014,6 +1038,7 @@ d_lush_jungle = {
 		d_fungal_caves
 		d_fertile_lands
 		d_great_river
+		d_volcanic_mineral_fields
 	}
 
 	planet_modifier = {
@@ -1059,6 +1084,7 @@ d_fertile_lands = {
 		d_fungal_caves
 		d_lush_jungle
 		d_great_river
+		d_volcanic_mineral_fields
 	}
 
 	planet_modifier = {
@@ -1104,6 +1130,7 @@ d_great_river = {
 		d_fungal_caves
 		d_lush_jungle
 		d_fertile_lands
+		d_volcanic_mineral_fields
 	}
 
 	planet_modifier = {
@@ -1145,6 +1172,7 @@ d_black_soil = {
 		d_marvelous_oasis
 		d_tropical_island
 		d_fungal_forest
+		d_volcanic_lava_river
 	}
 
 	planet_modifier = {
@@ -1191,6 +1219,7 @@ d_teeming_reef = {
 		d_marvelous_oasis
 		d_tropical_island
 		d_fungal_forest
+		d_volcanic_lava_river
 	}
 
 	planet_modifier = {
@@ -1229,6 +1258,7 @@ d_marvelous_oasis = {
 		d_teeming_reef
 		d_tropical_island
 		d_fungal_forest
+		d_volcanic_lava_river
 	}
 
 	planet_modifier = {
@@ -1270,6 +1300,7 @@ d_tropical_island = {
 		d_teeming_reef
 		d_marvelous_oasis
 		d_fungal_forest
+		d_volcanic_lava_river
 	}
 
 	planet_modifier = {
@@ -1313,6 +1344,7 @@ d_fungal_forest = {
 		d_teeming_reef
 		d_marvelous_oasis
 		d_tropical_island
+		d_volcanic_lava_river
 	}
 
 	category = deposit_cat_food
@@ -1873,6 +1905,14 @@ d_alien_pets_deposit = {
 
 	potential = {
 		can_have_habitable_deposits = yes
+		NOT = {
+			is_planet_class = pc_volcanic
+		}
+	}
+
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_volcanic_ore_veins
 	}
 
 	triggered_planet_modifier = {
@@ -1918,7 +1958,7 @@ d_buzzing_plains = {
 	terraforming_swap_types = {
 		d_arid_highlands
 		d_hot_springs
-
+		d_volcanic_rich_mountain
 	}
 
 	category = deposit_cat_energy
@@ -1948,6 +1988,7 @@ d_mineral_striations = {
 	terraforming_swap_types = {
 		d_mineral_fields
 		d_veiny_cliffs
+		d_volcanic_ore_veins
 	}
 
 	planet_modifier = {
@@ -1980,6 +2021,7 @@ d_natural_farmland = {
 		d_forgiving_tundra
 		d_boggy_fens
 		d_nutritious_mudland
+		d_volcanic_dried_lavariver
 	}
 
 	planet_modifier = {

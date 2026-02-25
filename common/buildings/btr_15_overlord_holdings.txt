@@ -250,10 +250,7 @@ holding_aid_agency = {
 			fail_text = overlord_is_xenophobe
 			exists = owner.overlord
 			owner.overlord = {
-				NOR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = no
 			}
 		}
 	}
@@ -1714,7 +1711,7 @@ holding_franchise_headquarters = {
 	triggered_planet_modifier = {
 		potential = {
 			owner.overlord = {
-				has_ethic = ethic_fanatic_spiritualist
+				is_fanatic_spiritualist = yes
 			}
 		}
 		pop_ethic_spiritualist_attraction_mult = 1
@@ -1723,7 +1720,7 @@ holding_franchise_headquarters = {
 	triggered_planet_modifier = {
 		potential = {
 			owner.overlord = {
-				has_ethic = ethic_fanatic_materialist
+				is_fanatic_materialist = yes
 			}
 		}
 		pop_ethic_materialist_attraction_mult = 1
@@ -1732,7 +1729,7 @@ holding_franchise_headquarters = {
 	triggered_planet_modifier = {
 		potential = {
 			owner.overlord = {
-				has_ethic = ethic_fanatic_xenophobe
+				is_fanatic_xenophobe = yes
 			}
 		}
 		pop_ethic_xenophobe_attraction_mult = 1
@@ -1741,7 +1738,7 @@ holding_franchise_headquarters = {
 	triggered_planet_modifier = {
 		potential = {
 			owner.overlord = {
-				has_ethic = ethic_fanatic_xenophile
+				is_fanatic_xenophile = yes
 			}
 		}
 		pop_ethic_xenophile_attraction_mult = 1
@@ -1751,7 +1748,7 @@ holding_franchise_headquarters = {
 	triggered_planet_modifier = {
 		potential = {
 			owner.overlord = {
-				has_ethic = ethic_fanatic_authoritarian
+				is_fanatic_authoritarian = yes
 			}
 		}
 		pop_ethic_authoritarian_attraction_mult = 1
@@ -1761,7 +1758,7 @@ holding_franchise_headquarters = {
 	triggered_planet_modifier = {
 		potential = {
 			owner.overlord = {
-				has_ethic = ethic_fanatic_egalitarian
+				is_fanatic_egalitarian = yes
 			}
 		}
 		pop_ethic_egalitarian_attraction_mult = 1
@@ -2052,7 +2049,7 @@ holding_knight_commandery = {
 
 	country_modifier = {
 		country_naval_cap_add = 4
-		knight_quest_progress_add = 0.05
+		knight_quest_progress_add = 0.025
 	}
 }
 

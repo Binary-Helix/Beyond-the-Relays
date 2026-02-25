@@ -9,6 +9,7 @@ district_city = {
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
 	default_starting_district = yes
+	overlay_icon = GFX_district_government
 
 	zone_slots = {
 		slot_city_government
@@ -26,6 +27,7 @@ district_city = {
 			uses_district_set = hive_world
 			uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
+			uses_district_set = volcanic_world
 		}
 		is_special_colony_type = no
 	}
@@ -53,6 +55,7 @@ district_city = {
 			uses_district_set = hive_world
 			uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
+			uses_district_set = volcanic_world
 		}
 		is_special_colony_type = no
 
@@ -66,7 +69,11 @@ district_city = {
 	}
 
 	allow = {
-		is_special_colony_type = no
+		hidden_trigger = { is_special_colony_type = no }
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -115,7 +122,7 @@ district_city = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 1000
+		planet_housing_add = 1500
 	}
 
 	triggered_planet_modifier = {
@@ -165,6 +172,18 @@ district_city = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		modifier = {
+			job_production_overseer_add = 100
+		}
+	}
+
 	inline_script = {
 		script = districts/district_triggered_name_urban
 	}
@@ -179,9 +198,10 @@ district_city = {
 }
 
 district_crashed_slaver_ship = {
-	is_capped_by_modifier = yes
+	is_uncapped = {	always = no }
 	can_demolish = no
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_government
 
 	zone_slots = {
 		slot_city_government
@@ -211,8 +231,16 @@ district_crashed_slaver_ship = {
 	}
 
 	allow = {
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = slave_colony }
+		hidden_trigger = {
+			NAND = {
+				has_modifier = resort_colony
+				has_modifier = slave_colony
+			}
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -297,38 +325,46 @@ district_crashed_slaver_ship = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_country_flag = origin_broken_shackles_crashed_slaver_ship_depleted }
+			owner = {
+				has_country_flag = origin_broken_shackles_crashed_slaver_ship_depleted
+				is_tankbound_empire = no
+			}
 		}
 		modifier = {
 			job_clerk_add = 100
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
+	triggered_planet_modifier = {
+		potential = {
 			exists = owner
 			owner = {
-				NOT = { has_country_flag = origin_broken_shackles_crashed_slaver_ship_depleted }
+				is_tankbound_empire = yes
 			}
 		}
-		text = job_broken_shackles_scavenger_effect_desc
+		modifier = {
+			job_production_overseer_add = 100
+		}
 	}
-
-	triggered_desc = {
-		trigger = {
+	triggered_planet_modifier = {
+		potential = {
 			exists = owner
 			owner = {
 				has_country_flag = origin_broken_shackles_crashed_slaver_ship_depleted
+				is_tankbound_empire = yes
 			}
 		}
-		text = job_clerk_effect_desc
+		modifier = {
+			job_production_overseer_add = 100
+		}
 	}
 }
 
 district_resort = {
 	base_buildtime = 480
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_trade
 
 	zone_slots = {
 		slot_city_government
@@ -349,7 +385,13 @@ district_resort = {
 	}
 
 	allow = {
-		NOT = { has_modifier = slave_colony }
+		hidden_trigger = {
+			NOT = { has_modifier = slave_colony }
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -470,12 +512,14 @@ district_resort = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
+	triggered_planet_modifier = {
+		potential = {
 			exists = owner
-			owner = { is_regular_empire = yes }
+			owner = { is_tankbound_empire = yes }
 		}
-		text = job_resort_worker_effect_desc
+		modifier = {
+			job_production_overseer_add = 100
+		}
 	}
 
 	triggered_name = {
@@ -490,8 +534,9 @@ district_resort = {
 district_resort_1 = {
 	icon = district_resort_secondary
 	base_buildtime = 480
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_amenities
 
 	zone_slots = {
 		slot_resort_attraction_01
@@ -510,6 +555,10 @@ district_resort_1 = {
 	}
 
 	allow = {
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	resources = {
@@ -570,8 +619,9 @@ district_resort_1 = {
 district_resort_2 = {
 	icon = district_resort_secondary
 	base_buildtime = 480
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_amenities
 
 	zone_slots = {
 		slot_resort_attraction_01
@@ -590,6 +640,10 @@ district_resort_2 = {
 	}
 
 	allow = {
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	resources = {
@@ -650,8 +704,9 @@ district_resort_2 = {
 district_resort_3 = {
 	icon = district_resort_secondary
 	base_buildtime = 480
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_amenities
 
 	zone_slots = {
 		slot_resort_attraction_01
@@ -670,6 +725,10 @@ district_resort_3 = {
 	}
 
 	allow = {
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	resources = {
@@ -729,9 +788,10 @@ district_resort_3 = {
 
 district_prison = {
 	base_buildtime = 480
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
 	icon = district_city
+	overlay_icon = GFX_district_government
 
 	zone_slots = {
 		slot_city_government
@@ -752,7 +812,13 @@ district_prison = {
 	}
 
 	allow = {
-		has_modifier = penal_colony
+		hidden_trigger = {
+			has_modifier = penal_colony
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -840,31 +906,23 @@ district_prison = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
+	triggered_planet_modifier = {
+		potential = {
 			exists = owner
-			owner = {
-				is_regular_empire = yes
-				NOT = { has_valid_civic = civic_civil_education }
-			}
+			owner = { is_tankbound_empire = yes }
 		}
-		text = job_enforcer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_valid_civic = civic_civil_education }
+		modifier = {
+			job_production_overseer_add = 100
 		}
-		text = job_educator_effect_desc
 	}
 }
 
 district_slave = {
 	base_buildtime = 480
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
 	icon = district_city
+	overlay_icon = GFX_district_government
 
 	zone_slots = {
 		slot_city_government
@@ -885,7 +943,13 @@ district_slave = {
 	}
 
 	allow = {
-		has_modifier = slave_colony
+		hidden_trigger = {
+			has_modifier = slave_colony
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -973,19 +1037,22 @@ district_slave = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
+	triggered_planet_modifier = {
+		potential = {
 			exists = owner
-			owner = { is_regular_empire = yes }
+			owner = { is_tankbound_empire = yes }
 		}
-		text = job_slave_overseer_effect_desc
+		modifier = {
+			job_production_overseer_add = 100
+		}
 	}
 }
 
 district_hive = {
 	base_buildtime = 480
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_government
 
 	zone_slots = {
 		slot_city_government
@@ -998,6 +1065,7 @@ district_hive = {
 		from = { is_hive_empire = yes }
 		OR = {
 			uses_district_set = standard
+			uses_district_set = volcanic_world
 			uses_district_set = hive_world
 			uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
@@ -1014,6 +1082,7 @@ district_hive = {
 		}
 		OR = {
 			uses_district_set = standard
+			uses_district_set = volcanic_world
 			uses_district_set = hive_world
 			uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
@@ -1027,7 +1096,13 @@ district_hive = {
 	}
 
 	allow = {
-		NOT = { has_modifier = resort_colony }
+		hidden_trigger = {
+			NOT = { has_modifier = resort_colony }
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -1095,6 +1170,16 @@ district_hive = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_tankbound_empire = yes }
+		}
+		modifier = {
+			job_production_overseer_add = 100
+		}
+	}
+
 	inline_script = {
 		script = districts/district_triggered_name_hive
 	}
@@ -1111,8 +1196,9 @@ district_hive = {
 district_hive_1 = {
 	icon = district_hive_secondary
 	base_buildtime = 480
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
 
 	zone_slots = {
 		slot_hive
@@ -1127,15 +1213,17 @@ district_hive_1 = {
 	}
 
 	allow = {
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
 	convert_to = {
 		district_nexus_1
 		district_generator
-		district_generator_uncapped
 		district_photosynthesis_fields
-		district_photosynthesis_fields_uncapped
 	}
 
 	resources = {
@@ -1191,14 +1279,19 @@ district_hive_1 = {
 		modifier = {
 			planet_housing_add = 100
 		}
+	}
+
+	triggered_name = {
+		text = district_hive
 	}
 }
 
 district_hive_2 = {
 	icon = district_hive_secondary
 	base_buildtime = 480
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
 
 	zone_slots = {
 		slot_hive
@@ -1213,15 +1306,17 @@ district_hive_2 = {
 	}
 
 	allow = {
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
 	convert_to = {
 		district_nexus_2
 		district_mining
-		district_mining_uncapped
 		district_hollow_mountains
-		district_hollow_mountains_uncapped
 	}
 
 	resources = {
@@ -1278,13 +1373,18 @@ district_hive_2 = {
 			planet_housing_add = 100
 		}
 	}
+
+	triggered_name = {
+		text = district_hive
+	}
 }
 
 district_hive_3 = {
 	icon = district_hive_secondary
 	base_buildtime = 480
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
 
 	zone_slots = {
 		slot_hive
@@ -1299,15 +1399,17 @@ district_hive_3 = {
 	}
 
 	allow = {
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
 	convert_to = {
 		district_nexus_3
 		district_farming
-		district_farming_uncapped
 		district_orchard_forests
-		district_orchard_forests_uncapped
 	}
 
 	resources = {
@@ -1364,12 +1466,17 @@ district_hive_3 = {
 			planet_housing_add = 100
 		}
 	}
+
+	triggered_name = {
+		text = district_hive
+	}
 }
 
 district_nexus = {
 	base_buildtime = 480
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_government
 
 	zone_slots = {
 		slot_city_government
@@ -1384,6 +1491,7 @@ district_nexus = {
 		}
 		OR = {
 			uses_district_set = standard
+			uses_district_set = volcanic_world
 			uses_district_set = hive_world
 			uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
@@ -1397,6 +1505,7 @@ district_nexus = {
 		}
 		OR = {
 			uses_district_set = standard
+			uses_district_set = volcanic_world
 			uses_district_set = hive_world
 			uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
@@ -1410,7 +1519,13 @@ district_nexus = {
 	}
 
 	allow = {
-		NOT = { has_modifier = resort_colony }
+		hidden_trigger = {
+			NOT = { has_modifier = resort_colony }
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -1478,11 +1593,14 @@ district_nexus = {
 		}
 	}
 
-	triggered_desc = {
-		trigger = {
-			has_modifier = gestation_colony
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_tankbound_empire = yes }
 		}
-		text = job_gestation_drone_effect_desc
+		modifier = {
+			job_production_overseer_add = 100
+		}
 	}
 
 	inline_script = {
@@ -1501,8 +1619,9 @@ district_nexus = {
 district_nexus_1 = {
 	icon = district_nexus_secondary
 	base_buildtime = 600
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
 
 	zone_slots = {
 		slot_nexus
@@ -1520,9 +1639,7 @@ district_nexus_1 = {
 	convert_to = {
 		district_hive_1
 		district_generator
-		district_generator_uncapped
 		district_photosynthesis_fields
-		district_photosynthesis_fields_uncapped
 	}
 
 	resources = {
@@ -1533,7 +1650,18 @@ district_nexus_1 = {
 			heavy_alloys = 100
 		}
 		upkeep = {
+			trigger = {
+				NOT = {
+					has_deposit = d_machine_prototype_pc_machine
+				}
+			}
 			energy = 5
+		}
+		upkeep = {
+			trigger = {
+				has_deposit = d_machine_prototype_pc_machine
+			}
+			energy = 2
 		}
 	}
 
@@ -1571,20 +1699,17 @@ district_nexus_1 = {
 		}
 	}
 
-	inline_script = {
-		script = districts/district_triggered_name_machine
-	}
-
-	inline_script = {
-		script = districts/district_triggered_flavor_desc_machine
+	triggered_name = {
+		text = district_nexus_name
 	}
 }
 
 district_nexus_2 = {
 	icon = district_nexus_secondary
 	base_buildtime = 600
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
 
 	zone_slots = {
 		slot_nexus
@@ -1602,9 +1727,7 @@ district_nexus_2 = {
 	convert_to = {
 		district_hive_2
 		district_mining
-		district_mining_uncapped
 		district_hollow_mountains
-		district_hollow_mountains_uncapped
 	}
 
 	resources = {
@@ -1615,7 +1738,18 @@ district_nexus_2 = {
 			heavy_alloys = 100
 		}
 		upkeep = {
+			trigger = {
+				NOT = {
+					has_deposit = d_machine_prototype_pc_machine
+				}
+			}
 			energy = 5
+		}
+		upkeep = {
+			trigger = {
+				has_deposit = d_machine_prototype_pc_machine
+			}
+			energy = 2
 		}
 	}
 
@@ -1653,20 +1787,17 @@ district_nexus_2 = {
 		}
 	}
 
-	inline_script = {
-		script = districts/district_triggered_name_machine
-	}
-
-	inline_script = {
-		script = districts/district_triggered_flavor_desc_machine
+	triggered_name = {
+		text = district_nexus_name
 	}
 }
 
 district_nexus_3 = {
 	icon = district_nexus_secondary
 	base_buildtime = 600
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_housing
 
 	zone_slots = {
 		slot_nexus
@@ -1684,9 +1815,7 @@ district_nexus_3 = {
 	convert_to = {
 		district_hive_3
 		district_farming
-		district_farming_uncapped
 		district_orchard_forests
-		district_orchard_forests_uncapped
 	}
 
 	resources = {
@@ -1697,7 +1826,18 @@ district_nexus_3 = {
 			heavy_alloys = 100
 		}
 		upkeep = {
+			trigger = {
+				NOT = {
+					has_deposit = d_machine_prototype_pc_machine
+				}
+			}
 			energy = 5
+		}
+		upkeep = {
+			trigger = {
+				has_deposit = d_machine_prototype_pc_machine
+			}
+			energy = 2
 		}
 	}
 
@@ -1735,19 +1875,16 @@ district_nexus_3 = {
 		}
 	}
 
-	inline_script = {
-		script = districts/district_triggered_name_machine
-	}
-
-	inline_script = {
-		script = districts/district_triggered_flavor_desc_machine
+	triggered_name = {
+		text = district_nexus_name
 	}
 }
 
 district_prison_industrial = {
 	base_buildtime = 480
-	is_capped_by_modifier = no
+
 	icon = district_industrial
+	overlay_icon = GFX_district_mixed_industry
 
 	zone_slots = {
 		slot_city_government
@@ -1793,16 +1930,6 @@ district_prison_industrial = {
 		upkeep = {
 			energy = 2
 		}
-
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = {
-					has_edict = industrial_maintenance
-				}
-			}
-			energy = 2
-		}
 	}
 
 	planet_modifier = {
@@ -1822,7 +1949,8 @@ district_prison_industrial = {
 
 district_battle_thrall = {
 	base_buildtime = 480
-	is_capped_by_modifier = no
+
+	overlay_icon = GFX_district_fortress
 
 	zone_slots = {
 		slot_city_government
@@ -1844,7 +1972,13 @@ district_battle_thrall = {
 	}
 
 	allow = {
-		has_modifier = slave_colony
+		hidden_trigger = {
+			has_modifier = slave_colony
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -1859,16 +1993,6 @@ district_battle_thrall = {
 			heavy_alloys = @city_cost_heavy_alloys
 		}
 		upkeep = {
-			energy = 2
-		}
-
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = {
-					has_edict = industrial_maintenance
-				}
-			}
 			energy = 2
 		}
 	}
@@ -1889,19 +2013,12 @@ district_battle_thrall = {
 			job_battle_thrall_add = @base_district_jobs
 		}
 	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		text = job_battle_thrall_effect_desc
-	}
 }
 
 district_srw_commercial = {
 	base_buildtime = 240
-	is_capped_by_modifier = no
+
+	overlay_icon = GFX_district_trade
 
 	min_for_deposits_on_planet = 3
 	max_for_deposits_on_planet = 15
@@ -1925,12 +2042,17 @@ district_srw_commercial = {
 	}
 
 	allow = {
-		NOT = { has_modifier = resort_colony }
+		hidden_trigger = {
+			NOT = { has_modifier = resort_colony }
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_planet_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
 	convert_to = {
-		district_generator_uncapped
 		district_rw_commercial
 	}
 
@@ -1990,31 +2112,5 @@ district_srw_commercial = {
 		modifier = {
 			job_trader_add = 100
 		}
-	}
-
-	triggered_desc = {
-		text = job_trader_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = no
-			}
-		}
-		text = job_artisan_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = yes
-			}
-		}
-		text = job_artificer_effect_desc
 	}
 }

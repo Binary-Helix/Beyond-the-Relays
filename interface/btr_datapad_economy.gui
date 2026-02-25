@@ -1,6 +1,6 @@
 guiTypes = {
 	containerWindowType = {
-		name = "btr_datapad_menu_confirm"
+		name = "btr_datapad_economy_menu_confirm"
 		position = { x = 0 y = 0 }
 		size = { width = 35 height = 35 }
 		moveable = no
@@ -8,7 +8,7 @@ guiTypes = {
 		buttonType = {
 			name = "option_button"
 			quadTextureSprite = "GFX_btr_datapad_confirm_button"
-			position = { x = -848 y = 250 }
+			position = { x = -851 y = 270 }
 			font = "cg_16b"
 			text = ""
 			orientation = upper_left
@@ -16,7 +16,7 @@ guiTypes = {
 		}
 	}
 	containerWindowType = {
-		name = "btr_datapad_datapad_menu_main"
+		name = "btr_datapad_economy_menu_main"
 		position = { x = 0 y = 0 }
 		size = { width = 35 height = 35 }
 		moveable = no
@@ -24,7 +24,7 @@ guiTypes = {
 		buttonType = {
 			name = "option_button"
 			quadTextureSprite = "GFX_btr_datapad_main_page_button"
-			position = { x = -1011 y = 215}
+			position = { x = -1007 y = 235}
 			font = "cg_16b"
 			text = ""
 			orientation = upper_left
@@ -32,71 +32,23 @@ guiTypes = {
 		}
 	}
 	containerWindowType = {
-		name = "btr_datapad_empire_dossier_menu_button1"
+		name = "btr_datapad_economy_menu_main"
 		position = { x = 0 y = 0 }
-		size = { width = 32 height = 30 }
+		size = { width = 35 height = 35 }
 		moveable = no
 
 		buttonType = {
 			name = "option_button"
-			quadTextureSprite = "GFX_btr_datapad_empire_dossier_button"
-			position = { x = -1290 y = 215 }
+			quadTextureSprite = "GFX_btr_datapad_main_page_button"
+			position = { x = -1007 y = 235}
 			font = "cg_16b"
 			text = ""
 			orientation = upper_left
-			scale = 0.45
+			scale = 0.5
 		}
 	}
 	containerWindowType = {
-		name = "btr_datapad_empire_dossier_menu_button2"
-		position = { x = 0 y = 0 }
-		size = { width = 32 height = 30 }
-		moveable = no
-
-		buttonType = {
-			name = "option_button"
-			quadTextureSprite = "GFX_btr_datapad_economy_button"
-			position = { x = -1144 y = 185 }
-			font = "cg_16b"
-			text = ""
-			orientation = upper_left
-			scale = 0.45
-		}
-	}
-	containerWindowType = {
-		name = "btr_datapad_empire_dossier_menu_button3"
-		position = { x = 0 y = 0 }
-		size = { width = 32 height = 30 }
-		moveable = no
-
-		buttonType = {
-			name = "option_button"
-			quadTextureSprite = "GFX_btr_datapad_relay_network_button"
-			position = { x = -996 y = 155 }
-			font = "cg_16b"
-			text = ""
-			orientation = upper_left
-			scale = 0.45
-		}
-	}
-	containerWindowType = {
-		name = "btr_datapad_empire_dossier_menu_button4"
-		position = { x = 0 y = 0 }
-		size = { width = 32 height = 30 }
-		moveable = no
-
-		buttonType = {
-			name = "option_button"
-			quadTextureSprite = "GFX_btr_datapad_warfare_button"
-			position = { x = -847 y = 125 }
-			font = "cg_16b"
-			text = ""
-			orientation = upper_left
-			scale = 0.45
-		}
-	}
-	containerWindowType = {
-		name = "btr_datapad_empire_dossier_menu_button5"
+		name = "btr_datapad_economy_menu_button5"
 		position = { x = 0 y = 0 }
 		size = { width = 32 height = 30 }
 		moveable = no
@@ -104,7 +56,7 @@ guiTypes = {
 		buttonType = {
 			name = "option_button"
 			quadTextureSprite = "GFX_btr_datapad_planet_classes_button"
-			position = { x = -700 y = 95 }
+			position = { x = -1271 y = 125}
 			font = "cg_16b"
 			text = ""
 			orientation = upper_left
@@ -112,7 +64,71 @@ guiTypes = {
 		}
 	}
 	containerWindowType = {
-		name = "btr_datapad_empire_dossier_menu_button6"
+		name = "btr_datapad_economy_menu_button2"
+		position = { x = 0 y = 0 }
+		size = { width = 32 height = 30 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_btr_datapad_economy_button"
+			position = { x = -1131 y = 215 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+			scale = 0.45
+		}
+	}
+	containerWindowType = {
+		name = "btr_datapad_economy_menu_button3"
+		position = { x = 0 y = 0 }
+		size = { width = 32 height = 30 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_btr_datapad_relay_network_button"
+			position = { x = -992 y = 185 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+			scale = 0.45
+		}
+	}
+	containerWindowType = {
+		name = "btr_datapad_economy_menu_button4"
+		position = { x = 0 y = 0 }
+		size = { width = 32 height = 30 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_btr_datapad_warfare_button"
+			position = { x = -851 y = 155 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+			scale = 0.45
+		}
+	}
+	containerWindowType = {
+		name = "btr_datapad_economy_menu_button1"
+		position = { x = 0 y = 0 }
+		size = { width = 32 height = 30 }
+		moveable = no
+
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_btr_datapad_empire_dossier_button"
+			position = { x = -712 y = 245 }
+			font = "cg_16b"
+			text = ""
+			orientation = upper_left
+			scale = 0.45
+		}
+	}
+	containerWindowType = {
+		name = "btr_datapad_economy_menu_button6"
 		position = { x = 0 y = 0 }
 		size = { width = 32 height = 30 }
 		moveable = no
@@ -120,7 +136,7 @@ guiTypes = {
 		buttonType = {
 			name = "option_button"
 			quadTextureSprite = "GFX_btr_datapad_dev_news_button"
-			position = { x = -555 y = 65 }
+			position = { x = -572 y = 95 }
 			font = "cg_16b"
 			text = ""
 			orientation = upper_left
@@ -136,7 +152,7 @@ guiTypes = {
 		buttonType = {
 			name = "option_button"
 			quadTextureSprite = "GFX_btn_prev"
-			position = { x = -1292 y = 8 }
+			position = { x = -1273 y = 30 }
 			font = "cg_16b"
 			text = ""
 			orientation = upper_left
@@ -152,7 +168,7 @@ guiTypes = {
 		buttonType = {
 			name = "option_button"
 			quadTextureSprite = "GFX_btn_next"
-			position = { x = -505 y = -23 }
+			position = { x = -523 y = 0 }
 			font = "cg_16b"
 			text = ""
 			orientation = upper_left
@@ -174,8 +190,8 @@ guiTypes = {
 		}
 
 		iconType = {
-			name = "btr_datapad_empire_dossier_bg"
-			spriteType = "GFX_btr_datapad_economy_bg"
+			name = "btr_datapad_economy_bg"
+			spriteType = "GFX_btr_intro_screen_bg"
 			alwaysTransparent = yes
 		}
 

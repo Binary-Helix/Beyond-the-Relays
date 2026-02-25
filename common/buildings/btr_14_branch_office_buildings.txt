@@ -306,6 +306,7 @@ building_virtual_entertainment_studios = {
 		planet_artisans_trade_produces_add = @med_trade_from_jobs
 	}
 
+	# Trade from civics
 	triggered_planet_modifier = {
 		potential = {
 			branch_office_owner = {
@@ -319,6 +320,15 @@ building_virtual_entertainment_studios = {
 		potential = {
 			branch_office_owner = {
 				has_valid_civic = civic_media_conglomerate
+			}
+		}
+		planet_artisans_trade_produces_add = @med_trade_from_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_tankbound_corporate
 			}
 		}
 		planet_artisans_trade_produces_add = @med_trade_from_jobs
@@ -348,6 +358,15 @@ building_virtual_entertainment_studios = {
 		potential = {
 			branch_office_owner = {
 				has_valid_civic = civic_media_conglomerate
+			}
+		}
+		job_capital_trader_add = @traders_from_civic
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_tankbound_corporate
 			}
 		}
 		job_capital_trader_add = @traders_from_civic
@@ -1405,6 +1424,15 @@ building_corporate_embassy = {
 		planet_politicians_trade_produces_add = @high_trade_from_jobs
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_secret_societies_corporate
+			}
+		}
+		planet_politicians_trade_produces_add = @high_trade_from_jobs
+	}
+
 	#Crims cause crime even with deal
 	triggered_planet_modifier = {
 		potential = {
@@ -1438,6 +1466,15 @@ building_corporate_embassy = {
 		potential = {
 			branch_office_owner = {
 				has_valid_civic = civic_corporate_guided_sapience
+			}
+		}
+		job_capital_trader_add = @traders_from_civic
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_secret_societies_corporate
 			}
 		}
 		job_capital_trader_add = @traders_from_civic
@@ -1901,6 +1938,7 @@ building_underground_chemists = {
 		planet_artisans_trade_produces_add = @med_trade_from_jobs
 	}
 
+	# Trade from civics
 	triggered_planet_modifier = {
 		potential = {
 			branch_office_owner = {
@@ -1914,6 +1952,15 @@ building_underground_chemists = {
 		potential = {
 			branch_office_owner = {
 				has_valid_civic = civic_media_conglomerate
+			}
+		}
+		planet_artisans_trade_produces_add = @med_trade_from_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_tankbound_corporate
 			}
 		}
 		planet_artisans_trade_produces_add = @med_trade_from_jobs
@@ -1933,6 +1980,15 @@ building_underground_chemists = {
 		potential = {
 			branch_office_owner = {
 				has_valid_civic = civic_media_conglomerate
+			}
+		}
+		job_capital_trader_add = @traders_from_civic
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_tankbound_corporate
 			}
 		}
 		job_capital_trader_add = @traders_from_civic
@@ -2807,6 +2863,7 @@ building_disinformation_center = {
 		planet_politicians_trade_produces_add = @high_trade_from_jobs
 	}
 
+	# Trade from civics
 	triggered_planet_modifier = {
 		potential = {
 			branch_office_owner = {
@@ -2820,6 +2877,15 @@ building_disinformation_center = {
 		potential = {
 			branch_office_owner = {
 				has_valid_civic = civic_corporate_guided_sapience
+			}
+		}
+		planet_politicians_trade_produces_add = @high_trade_from_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_secret_societies_corporate
 			}
 		}
 		planet_politicians_trade_produces_add = @high_trade_from_jobs
@@ -2839,6 +2905,15 @@ building_disinformation_center = {
 		potential = {
 			branch_office_owner = {
 				has_valid_civic = civic_corporate_guided_sapience
+			}
+		}
+		job_capital_trader_add = @traders_from_civic
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_secret_societies_corporate
 			}
 		}
 		job_capital_trader_add = @traders_from_civic
@@ -3078,6 +3153,15 @@ building_executive_retreat = {
 		planet_entertainers_trade_produces_add = @med_trade_from_jobs
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_entropy_drinkers_corporate
+			}
+		}
+		planet_entertainers_trade_produces_add = @med_trade_from_jobs
+	}
+
 	#Crims cause crime even with deal
 	triggered_planet_modifier = {
 		potential = {
@@ -3111,6 +3195,15 @@ building_executive_retreat = {
 		potential = {
 			branch_office_owner = {
 				has_valid_civic = civic_environmental_architects_megacorp
+			}
+		}
+		job_capital_trader_add = @traders_from_civic
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_entropy_drinkers_corporate
 			}
 		}
 		job_capital_trader_add = @traders_from_civic
@@ -4004,5 +4097,169 @@ building_clear_thought_clinic = {
 				}
 			}
 		}
+	}
+}
+
+############
+#  Shroud  #
+############
+
+building_carceral_test_facility = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	owner_type = corporate
+	category = research
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_valid_civic = civic_twisted_experimenters_corporate
+		}
+	}
+
+	planet_modifier = {
+		job_enforcer_add = 100
+		job_slave_orderly_add = 50
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			physics_research = 1
+			engineering_research = 1
+			society_research = 1
+			multiplier = planet.value:carceral_test_facility_research_output
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+building_psionic_offices = {
+	base_buildtime = @b2_time
+	icon = building_psi_corps
+	planet_limit = 1
+	owner_type = corporate
+	category = unity
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_authority = auth_corporate
+			is_corporeal_authority = yes
+		}
+	}
+
+	inline_script = {
+		script = jobs/telepaths_add
+		AMOUNT = 200
+	}
+	custom_tooltip = building_psionic_offices_tt
+
+	country_modifier = {
+		psionic_aura_effectiveness_mult = 0.02
+	}
+
+	triggered_planet_modifier = {
+		planet_jobs_trade_produces_mult = 0.02
+		mult = value:num_jobs_with_tag|TAG|telepath|
+	}
+
+	# Trade from civics
+	triggered_planet_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_corporate_chosen
+			}
+		}
+		planet_telepaths_trade_produces_add = @high_trade_from_jobs
+	}
+
+	# Trader Jobs from civics
+	triggered_country_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_valid_civic = civic_corporate_chosen
+			}
+		}
+		job_capital_trader_add = @traders_from_civic
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			influence = 25
+			minerals = 800
+		}
+		produces = {
+			energy = 10
+			mult = value:branch_office_value_for_buildings
+		}
+		upkeep = {
+			sr_zro = 0.5
+		}
+	}
+
+	on_built = {
+		solar_system = {
+			set_star_flag = building_psionic_offices_emitting@root.branch_office_owner
+			if = {
+				limit = { check_aura_suppressors = no }
+				natural_spawn_psionic_aura = { OWNER = root.branch_office_owner }
+			}
+		}
+	}
+
+	on_destroy = {
+		solar_system = {
+			remove_star_flag = building_psionic_offices_emitting@root.branch_office_owner
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+## INFERNALS MEGACORP - LIVING METAL ##
+
+building_living_metal_clinic = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	owner_type = corporate
+	category = resource
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_galvanic_empire = yes
+			is_legit_or_legal_criminal = yes
+		}
+	}
+	allow = { owner = { is_gestalt = no } }
+	planet_modifier = {
+		planet_jobs_worker_produces_mult = 0.05
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			influence = 20
+			minerals = 500
+		}
+		cost = {
+			trigger = {
+				owner = { has_authority = auth_corporate }
+			}
+			influence = 20
+		}
+		produces = { exotic_gases = 1.5 }
+		upkeep = { energy = 3 }
 	}
 }

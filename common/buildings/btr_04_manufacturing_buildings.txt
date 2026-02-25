@@ -69,6 +69,8 @@ building_foundry_1 = {
 	allow = {
 	}
 
+	ai_weight_coefficient = 0
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -94,8 +96,8 @@ building_foundry_2 = {
 	category = manufacturing
 	can_build = no
 	building_sets = {
-		foundry
 		industrial
+		foundry
 	}
 
 	potential = {
@@ -195,20 +197,9 @@ building_foundry_3 = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			trigger = {
-				has_ringworld_output_boost = no
-			}
 			minerals = @b3_minerals
 			beryllium = @b3_rare_cost
 			#volatile_motes = @b4_rare_cost
-		}
-		cost = {
-			trigger = {
-				has_ringworld_output_boost = yes
-			}
-			minerals = 1500
-			#volatile_motes = 600
-			beryllium = @b3_rare_cost
 		}
 		upkeep = {
 			trigger = {
@@ -216,14 +207,6 @@ building_foundry_3 = {
 			}
 			energy = @b3_upkeep
 			#volatile_motes = @b4_rare_upkeep
-			uranium = @b3_rare_upkeep
-		}
-		upkeep = {
-			trigger = {
-				has_ringworld_output_boost = yes
-			}
-			energy = 15
-			#volatile_motes = 8
 			uranium = @b3_rare_upkeep
 		}
 	}
@@ -316,6 +299,8 @@ building_factory_1 = {
 
 	allow = {
 	}
+
+	ai_weight_coefficient = 0
 
 	resources = {
 		category = planet_buildings
@@ -465,21 +450,11 @@ building_factory_3 = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			trigger = {
-				has_ringworld_output_boost = no
-			}
 			minerals = @b3_minerals
 			platinum = @b3_rare_cost
 			#rare_crystals = @b4_rare_cost
 		}
-		cost = {
-			trigger = {
-				has_ringworld_output_boost = yes
-			}
-			minerals = 1500
-			platinum = @b3_rare_cost
-			#rare_crystals = 600
-		}
+
 		upkeep = {
 			trigger = {
 				has_ringworld_output_boost = no
@@ -487,14 +462,6 @@ building_factory_3 = {
 			energy = @b3_upkeep
 			lithium = @b3_rare_upkeep
 			#rare_crystals = @b4_rare_upkeep
-		}
-		upkeep = {
-			trigger = {
-				has_ringworld_output_boost = yes
-			}
-			energy = 15
-			#rare_crystals = 8
-			lithium = @b3_rare_upkeep
 		}
 	}
 
@@ -1471,6 +1438,26 @@ building_foundry_efficiency_1 = {
 		tech_alloys_2
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			has_ringworld_output_boost = yes
+			industrial_jobs_are_catalytic_trigger = no
+		}
+		planet_metallurgists_light_alloys_produces_add = 0.5
+		planet_metallurgists_heavy_alloys_produces_add = 0.5
+		planet_metallurgists_minerals_upkeep_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_ringworld_output_boost = yes
+			industrial_jobs_are_catalytic_trigger = yes
+		}
+		planet_metallurgists_light_alloys_produces_add = 0.75
+		planet_metallurgists_heavy_alloys_produces_add = 0.5
+		planet_metallurgists_food_upkeep_add = 3
+	}
+
 	planet_modifier = {
 		foundry_jobs_bonus_workforce_mult = 0.15
 	}
@@ -1637,6 +1624,24 @@ building_factory_efficiency_1 = {
 		artisan_jobs_bonus_workforce_mult = 0.15
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			has_ringworld_output_boost = yes
+			industrial_jobs_are_catalytic_trigger = no
+		}
+		planet_artisans_consumer_goods_produces_add = 1
+		planet_artisans_minerals_upkeep_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_ringworld_output_boost = yes
+			industrial_jobs_are_catalytic_trigger = yes
+		}
+		planet_artisans_consumer_goods_produces_add = 1.25
+		planet_artisans_food_upkeep_add = 1.5
+	}
+
 	ai_resource_production = {
 		consumer_goods = 10
 		trigger = {
@@ -1646,5 +1651,58 @@ building_factory_efficiency_1 = {
 
 	prerequisites = {
 		tech_luxuries_2
+	}
+}
+
+building_offworld_expedition_hub = {
+	base_buildtime = @b2_time
+	planet_limit = 1
+	category = manufacturing
+
+	building_sets = {
+		factory
+		foundry
+		industrial
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = offworld_molten_world_req
+			solar_system = { any_system_planet = { is_planet_class = pc_molten } }
+		}
+	}
+	potential = {
+		exists = owner
+		owner = {
+			is_galvanic_empire = yes
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_galvanic_empire = no
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = { energy = @b2_upkeep }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_offworld_prospector_add = @building_static_jobs
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_offworld_prospector_drone_add = @building_static_jobs
 	}
 }

@@ -1,0 +1,63 @@
+subplan = {
+	set_name = "Base Food"
+	potential = {
+		country_uses_bio_ships = no
+		country_uses_food = yes
+	}
+	
+	income = {
+		food = @economic_plan_food_target
+	}
+}
+
+subplan = {
+	scaling = yes
+	set_name = "Base Food Scaling"
+	potential = {
+		country_uses_bio_ships = no
+		country_uses_food = yes
+		OR = {
+			NOR = {
+				has_monthly_income = { resource = food value >= @economic_plan_scaling_food_limit }
+				resource_stockpile_compare = {
+					resource = food
+					value > @economic_plan_stockpile_threshold_high
+				}
+			}
+		}
+	}
+
+	income = {
+		food = 20
+	}
+}	
+
+subplan = {
+	set_name = "Base Food (Bioship)"
+	potential = {
+		country_uses_bio_ships = yes
+	}
+
+	income = {
+		food = @economic_plan_bio_ships_empire_food_target
+	}
+}
+
+subplan = {
+	scaling = yes
+	set_name = "Base Food Scaling (Bioship)"
+	potential = {
+		country_uses_bio_ships = yes
+		NOR = {
+			has_monthly_income = { resource = food value >= @economic_plan_scaling_food_bioship_limit }
+			resource_stockpile_compare = {
+				resource = food
+				value > @economic_plan_stockpile_threshold_high
+			}
+		}
+	}
+
+	income = {
+		food = 50
+	}
+}

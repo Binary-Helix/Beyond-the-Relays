@@ -430,20 +430,20 @@ country_event = {
 			if = {
 				limit = { has_country_flag = btr_datapad_menu_main }
 				remove_country_flag = btr_datapad_menu_main
-				set_country_flag = btr_menu_page_dev_news
-				country_event = { id =  btr_datapad_menu.16 }
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.11 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_empire_dossier }
-				remove_country_flag = btr_menu_page_empire_dossier
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
 				set_country_flag = btr_menu_page_00
 				country_event = { id =  btr_datapad_menu.10 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_economy }
 				remove_country_flag = btr_menu_page_economy
-				set_country_flag = btr_menu_page_empire_dossier
-				country_event = { id =  btr_datapad_menu.11 }
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.15 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_relay_network }
@@ -458,16 +458,16 @@ country_event = {
 				country_event = { id =  btr_datapad_menu.13 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_planet_classes }
-				remove_country_flag = btr_menu_page_planet_classes
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
 				set_country_flag = btr_menu_page_warfare
 				country_event = { id =  btr_datapad_menu.14 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_dev_news }
-				remove_country_flag = btr_menu_page_dev_news
-				set_country_flag = btr_menu_page_planet_classes
-				country_event = { id =  btr_datapad_menu.15 }
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.16 }
 			}
 		}
 	}
@@ -478,13 +478,13 @@ country_event = {
 			if = {
 				limit = { has_country_flag = btr_datapad_menu_main }
 				remove_country_flag = btr_datapad_menu_main
-				set_country_flag = btr_menu_page_empire_dossier
-				country_event = { id =  btr_datapad_menu.11 }
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.15 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_empire_dossier }
-				remove_country_flag = btr_menu_page_empire_dossier
-				set_country_flag = btr_menu_page_economy
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
+				set_country_flag = btr_menu_page_dev_news
 				country_event = { id =  btr_datapad_menu.12 }
 			}
 			else_if = {
@@ -499,21 +499,22 @@ country_event = {
 				set_country_flag = btr_menu_page_warfare
 				country_event = { id =  btr_datapad_menu.14 }
 			}
+
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_warfare }
 				remove_country_flag = btr_menu_page_warfare
-				set_country_flag = btr_menu_page_planet_classes
-				country_event = { id =  btr_datapad_menu.15 }
-			}
-			else_if = {
-				limit = { has_country_flag = btr_menu_page_planet_classes }
-				remove_country_flag = btr_menu_page_planet_classes
-				set_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_economy
 				country_event = { id =  btr_datapad_menu.16 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_dev_news }
 				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.11 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
 				set_country_flag = btr_menu_page_00
 				country_event = { id =  btr_datapad_menu.10 }
 			}
@@ -640,20 +641,20 @@ country_event = {
 			if = {
 				limit = { has_country_flag = btr_datapad_menu_main }
 				remove_country_flag = btr_datapad_menu_main
-				set_country_flag = btr_menu_page_dev_news
-				country_event = { id =  btr_datapad_menu.16 }
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.11 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_empire_dossier }
-				remove_country_flag = btr_menu_page_empire_dossier
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
 				set_country_flag = btr_menu_page_00
 				country_event = { id =  btr_datapad_menu.10 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_economy }
 				remove_country_flag = btr_menu_page_economy
-				set_country_flag = btr_menu_page_empire_dossier
-				country_event = { id =  btr_datapad_menu.11 }
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.15 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_relay_network }
@@ -668,16 +669,16 @@ country_event = {
 				country_event = { id =  btr_datapad_menu.13 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_planet_classes }
-				remove_country_flag = btr_menu_page_planet_classes
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
 				set_country_flag = btr_menu_page_warfare
 				country_event = { id =  btr_datapad_menu.14 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_dev_news }
-				remove_country_flag = btr_menu_page_dev_news
-				set_country_flag = btr_menu_page_planet_classes
-				country_event = { id =  btr_datapad_menu.15 }
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.16 }
 			}
 		}
 	}
@@ -688,12 +689,12 @@ country_event = {
 			if = {
 				limit = { has_country_flag = btr_datapad_menu_main }
 				remove_country_flag = btr_datapad_menu_main
-				set_country_flag = btr_menu_page_empire_dossier
-				country_event = { id =  btr_datapad_menu.11 }
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.15 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_empire_dossier }
-				remove_country_flag = btr_menu_page_empire_dossier
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
 				set_country_flag = btr_menu_page_economy
 				country_event = { id =  btr_datapad_menu.12 }
 			}
@@ -710,12 +711,6 @@ country_event = {
 				country_event = { id =  btr_datapad_menu.14 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_warfare }
-				remove_country_flag = btr_menu_page_warfare
-				set_country_flag = btr_menu_page_planet_classes
-				country_event = { id =  btr_datapad_menu.15 }
-			}
-			else_if = {
 				limit = { has_country_flag = btr_menu_page_planet_classes }
 				remove_country_flag = btr_menu_page_planet_classes
 				set_country_flag = btr_menu_page_dev_news
@@ -724,6 +719,12 @@ country_event = {
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_dev_news }
 				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.11 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
 				set_country_flag = btr_menu_page_00
 				country_event = { id =  btr_datapad_menu.10 }
 			}
@@ -850,20 +851,20 @@ country_event = {
 			if = {
 				limit = { has_country_flag = btr_datapad_menu_main }
 				remove_country_flag = btr_datapad_menu_main
-				set_country_flag = btr_menu_page_dev_news
-				country_event = { id =  btr_datapad_menu.16 }
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.11 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_empire_dossier }
-				remove_country_flag = btr_menu_page_empire_dossier
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
 				set_country_flag = btr_menu_page_00
 				country_event = { id =  btr_datapad_menu.10 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_economy }
 				remove_country_flag = btr_menu_page_economy
-				set_country_flag = btr_menu_page_empire_dossier
-				country_event = { id =  btr_datapad_menu.11 }
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.15 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_relay_network }
@@ -878,16 +879,16 @@ country_event = {
 				country_event = { id =  btr_datapad_menu.13 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_planet_classes }
-				remove_country_flag = btr_menu_page_planet_classes
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
 				set_country_flag = btr_menu_page_warfare
 				country_event = { id =  btr_datapad_menu.14 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_dev_news }
-				remove_country_flag = btr_menu_page_dev_news
-				set_country_flag = btr_menu_page_planet_classes
-				country_event = { id =  btr_datapad_menu.15 }
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.16 }
 			}
 		}
 	}
@@ -898,12 +899,12 @@ country_event = {
 			if = {
 				limit = { has_country_flag = btr_datapad_menu_main }
 				remove_country_flag = btr_datapad_menu_main
-				set_country_flag = btr_menu_page_empire_dossier
-				country_event = { id =  btr_datapad_menu.11 }
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.15 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_empire_dossier }
-				remove_country_flag = btr_menu_page_empire_dossier
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
 				set_country_flag = btr_menu_page_economy
 				country_event = { id =  btr_datapad_menu.12 }
 			}
@@ -920,12 +921,6 @@ country_event = {
 				country_event = { id =  btr_datapad_menu.14 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_warfare }
-				remove_country_flag = btr_menu_page_warfare
-				set_country_flag = btr_menu_page_planet_classes
-				country_event = { id =  btr_datapad_menu.15 }
-			}
-			else_if = {
 				limit = { has_country_flag = btr_menu_page_planet_classes }
 				remove_country_flag = btr_menu_page_planet_classes
 				set_country_flag = btr_menu_page_dev_news
@@ -934,6 +929,12 @@ country_event = {
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_dev_news }
 				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.11 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
 				set_country_flag = btr_menu_page_00
 				country_event = { id =  btr_datapad_menu.10 }
 			}
@@ -1060,20 +1061,20 @@ country_event = {
 			if = {
 				limit = { has_country_flag = btr_datapad_menu_main }
 				remove_country_flag = btr_datapad_menu_main
-				set_country_flag = btr_menu_page_dev_news
-				country_event = { id =  btr_datapad_menu.16 }
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.11 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_empire_dossier }
-				remove_country_flag = btr_menu_page_empire_dossier
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
 				set_country_flag = btr_menu_page_00
 				country_event = { id =  btr_datapad_menu.10 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_economy }
 				remove_country_flag = btr_menu_page_economy
-				set_country_flag = btr_menu_page_empire_dossier
-				country_event = { id =  btr_datapad_menu.11 }
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.15 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_relay_network }
@@ -1088,16 +1089,16 @@ country_event = {
 				country_event = { id =  btr_datapad_menu.13 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_planet_classes }
-				remove_country_flag = btr_menu_page_planet_classes
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
 				set_country_flag = btr_menu_page_warfare
 				country_event = { id =  btr_datapad_menu.14 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_dev_news }
-				remove_country_flag = btr_menu_page_dev_news
-				set_country_flag = btr_menu_page_planet_classes
-				country_event = { id =  btr_datapad_menu.15 }
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.16 }
 			}
 		}
 	}
@@ -1108,12 +1109,12 @@ country_event = {
 			if = {
 				limit = { has_country_flag = btr_datapad_menu_main }
 				remove_country_flag = btr_datapad_menu_main
-				set_country_flag = btr_menu_page_empire_dossier
-				country_event = { id =  btr_datapad_menu.11 }
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.15 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_empire_dossier }
-				remove_country_flag = btr_menu_page_empire_dossier
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
 				set_country_flag = btr_menu_page_economy
 				country_event = { id =  btr_datapad_menu.12 }
 			}
@@ -1130,12 +1131,6 @@ country_event = {
 				country_event = { id =  btr_datapad_menu.14 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_warfare }
-				remove_country_flag = btr_menu_page_warfare
-				set_country_flag = btr_menu_page_planet_classes
-				country_event = { id =  btr_datapad_menu.15 }
-			}
-			else_if = {
 				limit = { has_country_flag = btr_menu_page_planet_classes }
 				remove_country_flag = btr_menu_page_planet_classes
 				set_country_flag = btr_menu_page_dev_news
@@ -1144,6 +1139,12 @@ country_event = {
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_dev_news }
 				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.11 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
 				set_country_flag = btr_menu_page_00
 				country_event = { id =  btr_datapad_menu.10 }
 			}
@@ -1270,20 +1271,20 @@ country_event = {
 			if = {
 				limit = { has_country_flag = btr_datapad_menu_main }
 				remove_country_flag = btr_datapad_menu_main
-				set_country_flag = btr_menu_page_dev_news
-				country_event = { id =  btr_datapad_menu.16 }
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.11 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_empire_dossier }
-				remove_country_flag = btr_menu_page_empire_dossier
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
 				set_country_flag = btr_menu_page_00
 				country_event = { id =  btr_datapad_menu.10 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_economy }
 				remove_country_flag = btr_menu_page_economy
-				set_country_flag = btr_menu_page_empire_dossier
-				country_event = { id =  btr_datapad_menu.11 }
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.15 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_relay_network }
@@ -1298,16 +1299,16 @@ country_event = {
 				country_event = { id =  btr_datapad_menu.13 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_planet_classes }
-				remove_country_flag = btr_menu_page_planet_classes
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
 				set_country_flag = btr_menu_page_warfare
 				country_event = { id =  btr_datapad_menu.14 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_dev_news }
-				remove_country_flag = btr_menu_page_dev_news
-				set_country_flag = btr_menu_page_planet_classes
-				country_event = { id =  btr_datapad_menu.15 }
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.16 }
 			}
 		}
 	}
@@ -1318,12 +1319,12 @@ country_event = {
 			if = {
 				limit = { has_country_flag = btr_datapad_menu_main }
 				remove_country_flag = btr_datapad_menu_main
-				set_country_flag = btr_menu_page_empire_dossier
-				country_event = { id =  btr_datapad_menu.11 }
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.15 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_empire_dossier }
-				remove_country_flag = btr_menu_page_empire_dossier
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
 				set_country_flag = btr_menu_page_economy
 				country_event = { id =  btr_datapad_menu.12 }
 			}
@@ -1340,12 +1341,6 @@ country_event = {
 				country_event = { id =  btr_datapad_menu.14 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_warfare }
-				remove_country_flag = btr_menu_page_warfare
-				set_country_flag = btr_menu_page_planet_classes
-				country_event = { id =  btr_datapad_menu.15 }
-			}
-			else_if = {
 				limit = { has_country_flag = btr_menu_page_planet_classes }
 				remove_country_flag = btr_menu_page_planet_classes
 				set_country_flag = btr_menu_page_dev_news
@@ -1354,6 +1349,12 @@ country_event = {
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_dev_news }
 				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.11 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
 				set_country_flag = btr_menu_page_00
 				country_event = { id =  btr_datapad_menu.10 }
 			}
@@ -1480,20 +1481,20 @@ country_event = {
 			if = {
 				limit = { has_country_flag = btr_datapad_menu_main }
 				remove_country_flag = btr_datapad_menu_main
-				set_country_flag = btr_menu_page_dev_news
-				country_event = { id =  btr_datapad_menu.16 }
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.11 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_empire_dossier }
-				remove_country_flag = btr_menu_page_empire_dossier
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
 				set_country_flag = btr_menu_page_00
 				country_event = { id =  btr_datapad_menu.10 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_economy }
 				remove_country_flag = btr_menu_page_economy
-				set_country_flag = btr_menu_page_empire_dossier
-				country_event = { id =  btr_datapad_menu.11 }
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.15 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_relay_network }
@@ -1508,16 +1509,16 @@ country_event = {
 				country_event = { id =  btr_datapad_menu.13 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_planet_classes }
-				remove_country_flag = btr_menu_page_planet_classes
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
 				set_country_flag = btr_menu_page_warfare
 				country_event = { id =  btr_datapad_menu.14 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_dev_news }
-				remove_country_flag = btr_menu_page_dev_news
-				set_country_flag = btr_menu_page_planet_classes
-				country_event = { id =  btr_datapad_menu.15 }
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.16 }
 			}
 		}
 	}
@@ -1528,12 +1529,12 @@ country_event = {
 			if = {
 				limit = { has_country_flag = btr_datapad_menu_main }
 				remove_country_flag = btr_datapad_menu_main
-				set_country_flag = btr_menu_page_empire_dossier
-				country_event = { id =  btr_datapad_menu.11 }
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.15 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_empire_dossier }
-				remove_country_flag = btr_menu_page_empire_dossier
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
 				set_country_flag = btr_menu_page_economy
 				country_event = { id =  btr_datapad_menu.12 }
 			}
@@ -1550,12 +1551,6 @@ country_event = {
 				country_event = { id =  btr_datapad_menu.14 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_warfare }
-				remove_country_flag = btr_menu_page_warfare
-				set_country_flag = btr_menu_page_planet_classes
-				country_event = { id =  btr_datapad_menu.15 }
-			}
-			else_if = {
 				limit = { has_country_flag = btr_menu_page_planet_classes }
 				remove_country_flag = btr_menu_page_planet_classes
 				set_country_flag = btr_menu_page_dev_news
@@ -1564,6 +1559,12 @@ country_event = {
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_dev_news }
 				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.11 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
 				set_country_flag = btr_menu_page_00
 				country_event = { id =  btr_datapad_menu.10 }
 			}
@@ -1690,20 +1691,20 @@ country_event = {
 			if = {
 				limit = { has_country_flag = btr_datapad_menu_main }
 				remove_country_flag = btr_datapad_menu_main
-				set_country_flag = btr_menu_page_dev_news
-				country_event = { id =  btr_datapad_menu.16 }
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.11 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_empire_dossier }
-				remove_country_flag = btr_menu_page_empire_dossier
+				limit = { has_country_flag = btr_menu_page_planet_classes }
+				remove_country_flag = btr_menu_page_planet_classes
 				set_country_flag = btr_menu_page_00
 				country_event = { id =  btr_datapad_menu.10 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_economy }
 				remove_country_flag = btr_menu_page_economy
-				set_country_flag = btr_menu_page_empire_dossier
-				country_event = { id =  btr_datapad_menu.11 }
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.15 }
 			}
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_relay_network }
@@ -1718,16 +1719,16 @@ country_event = {
 				country_event = { id =  btr_datapad_menu.13 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_planet_classes }
-				remove_country_flag = btr_menu_page_planet_classes
+				limit = { has_country_flag = btr_menu_page_dev_news }
+				remove_country_flag = btr_menu_page_dev_news
 				set_country_flag = btr_menu_page_warfare
 				country_event = { id =  btr_datapad_menu.14 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_dev_news }
-				remove_country_flag = btr_menu_page_dev_news
-				set_country_flag = btr_menu_page_planet_classes
-				country_event = { id =  btr_datapad_menu.15 }
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
+				set_country_flag = btr_menu_page_dev_news
+				country_event = { id =  btr_datapad_menu.16 }
 			}
 		}
 	}
@@ -1738,12 +1739,12 @@ country_event = {
 			if = {
 				limit = { has_country_flag = btr_datapad_menu_main }
 				remove_country_flag = btr_datapad_menu_main
-				set_country_flag = btr_menu_page_empire_dossier
-				country_event = { id =  btr_datapad_menu.11 }
+				set_country_flag = btr_menu_page_planet_classes
+				country_event = { id =  btr_datapad_menu.15 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_empire_dossier }
-				remove_country_flag = btr_menu_page_empire_dossier
+				limit = { has_country_flag = btr_menu_page_warfare }
+				remove_country_flag = btr_menu_page_warfare
 				set_country_flag = btr_menu_page_economy
 				country_event = { id =  btr_datapad_menu.12 }
 			}
@@ -1760,12 +1761,6 @@ country_event = {
 				country_event = { id =  btr_datapad_menu.14 }
 			}
 			else_if = {
-				limit = { has_country_flag = btr_menu_page_warfare }
-				remove_country_flag = btr_menu_page_warfare
-				set_country_flag = btr_menu_page_planet_classes
-				country_event = { id =  btr_datapad_menu.15 }
-			}
-			else_if = {
 				limit = { has_country_flag = btr_menu_page_planet_classes }
 				remove_country_flag = btr_menu_page_planet_classes
 				set_country_flag = btr_menu_page_dev_news
@@ -1774,6 +1769,12 @@ country_event = {
 			else_if = {
 				limit = { has_country_flag = btr_menu_page_dev_news }
 				remove_country_flag = btr_menu_page_dev_news
+				set_country_flag = btr_menu_page_empire_dossier
+				country_event = { id =  btr_datapad_menu.11 }
+			}
+			else_if = {
+				limit = { has_country_flag = btr_menu_page_empire_dossier }
+				remove_country_flag = btr_menu_page_empire_dossier
 				set_country_flag = btr_menu_page_00
 				country_event = { id =  btr_datapad_menu.10 }
 			}

@@ -766,6 +766,7 @@ utility_component_template = {
 		ship_shield_regen_add_static = @regen_S6 #Regeneration per day
 	}
 	prerequisites = { "tech_dark_matter_deflector" }
+	upgrades_to = "SMALL_PSI_SHIELD"
 	component_set = "DARK_MATTER_DEFLECTOR"
 
 	potential = {
@@ -821,6 +822,7 @@ utility_component_template = {
 		ship_shield_regen_add_static = @regen_M6 #Regeneration per day
 	}
 	prerequisites = { "tech_dark_matter_deflector" }
+	upgrades_to = "MEDIUM_PSI_SHIELD"
 	component_set = "DARK_MATTER_DEFLECTOR"
 
 	potential = {
@@ -876,6 +878,7 @@ utility_component_template = {
 		ship_shield_regen_add_static = @regen_L6 #Regeneration per day
 	}
 	prerequisites = { "tech_dark_matter_deflector" }
+	upgrades_to = "LARGE_PSI_SHIELD"
 	component_set = "DARK_MATTER_DEFLECTOR"
 
 	potential = {
@@ -1097,6 +1100,7 @@ utility_component_template = { #Low power requirements, lower str. Maybe good re
 		ship_shield_regen_add_static = @regen_S5 #Regeneration per day
 	}
 	prerequisites = { "tech_psionic_barrier" }
+	upgrades_to = "SMALL_PSI_SHIELD"
 	component_set = "PSI_BARRIER"
 
 	potential = {
@@ -1141,6 +1145,7 @@ utility_component_template = { #Low power requirements, lower str. Maybe good re
 		ship_shield_regen_add_static = @regen_M5 #Regeneration per day
 	}
 	prerequisites = { "tech_psionic_barrier" }
+	upgrades_to = "MEDIUM_PSI_SHIELD"
 	component_set = "PSI_BARRIER"
 
 	potential = {
@@ -1185,6 +1190,7 @@ utility_component_template = { #Low power requirements, lower str. Maybe good re
 		ship_shield_regen_add_static = @regen_L5 #Regeneration per day
 	}
 	prerequisites = { "tech_psionic_barrier" }
+	upgrades_to = "LARGE_PSI_SHIELD"
 	component_set = "PSI_BARRIER"
 
 	potential = {

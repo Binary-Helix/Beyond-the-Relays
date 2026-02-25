@@ -179,7 +179,7 @@ generate_btr_start_deposits_and_blockers = {
         }
     }
 
-    if = {
+    else_if = {
         limit = {
             OR = {
                 is_planet_class = pc_tropical
@@ -230,7 +230,7 @@ generate_btr_start_deposits_and_blockers = {
         }
     }
 
-    if = {
+    else_if = {
         limit = {
             OR = {
                 is_planet_class = pc_ocean
@@ -281,7 +281,7 @@ generate_btr_start_deposits_and_blockers = {
         }
     }
 
-    if = {
+    else_if = {
         limit = {
             OR = {
                 is_planet_class = pc_arctic
@@ -332,7 +332,7 @@ generate_btr_start_deposits_and_blockers = {
         }
     }
 
-    if = {
+    else_if = {
         limit = {
             OR = {
                 is_planet_class = pc_tundra
@@ -383,7 +383,7 @@ generate_btr_start_deposits_and_blockers = {
         }
     }
 
-    if = {
+    else_if = {
         limit = {
             OR = {
                 is_planet_class = pc_alpine
@@ -434,7 +434,7 @@ generate_btr_start_deposits_and_blockers = {
         }
     }
 
-    if = {
+    else_if = {
         limit = {
             OR = {
                 is_planet_class = pc_desert
@@ -485,7 +485,7 @@ generate_btr_start_deposits_and_blockers = {
         }
     }
 
-    if = {
+    else_if = {
         limit = {
             OR = {
                 is_planet_class = pc_arid
@@ -536,7 +536,7 @@ generate_btr_start_deposits_and_blockers = {
         }
     }
 
-    if = {
+    else_if = {
         limit = {
             OR = {
                 is_planet_class = pc_savannah
@@ -587,7 +587,7 @@ generate_btr_start_deposits_and_blockers = {
         }
     }
 
-    if = {
+    else_if = {
         limit = {
             OR = {
                 is_planet_class = pc_swamp
@@ -647,7 +647,7 @@ generate_btr_start_deposits_and_blockers = {
         }
     }
 
-    if = {
+    else_if = {
         limit = {
             OR = {
                 is_planet_class = pc_chlorine
@@ -695,7 +695,7 @@ generate_btr_start_deposits_and_blockers = {
         }
     }
 
-    if = {
+    else_if = {
         limit = {
             is_planet_class = pc_relic
             owner = {

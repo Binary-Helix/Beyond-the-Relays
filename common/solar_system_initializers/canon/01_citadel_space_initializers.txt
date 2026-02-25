@@ -544,7 +544,7 @@ sys_pompeii_init = {
             btr_generate_canon_planetary_features = yes
             inline_script = "game_start/remnants_rak_origin"
             generate_dre_rakhana_pops = yes
-            event_target:disciples_of_nazara = {
+            event_target:remnants_of_rakhana = {
                 create_starting_leaders = yes
                 country_event = { id = game_start.9 }
             }
