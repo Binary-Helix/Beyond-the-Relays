@@ -40,7 +40,9 @@ resolution_petition_citadel_embassy = {
     }
 
     active = {
-        has_country_flag = has_citadel_embassy
+        NOT = {
+            has_country_flag = has_citadel_embassy
+       }
     }
 
     ai_weight = {
@@ -91,7 +93,9 @@ resolution_petition_spectre_1 = {
     allow = {
         custom_tooltip = {
             fail_text = "petition_for_spectre_requires_embassy"
-            has_country_flag = has_citadel_embassy
+            NOT = {
+                has_country_flag = has_citadel_embassy
+            }
         }
     }
 
@@ -213,13 +217,18 @@ resolution_petition_citadel_council_seat = {
 
     allow = {
         custom_tooltip = {
-            fail_text = "already_have_embassy"
-            has_country_flag = has_citadel_embassy
+            fail_text = "already_have_seat_on_council"
+            has_country_flag = citadel_council_member
         }
     }
 
     active = {
-        has_country_flag = has_citadel_embassy
+        AND = {
+            NOT = {
+                has_country_flag = citadel_council_member
+            }
+            has_country_flag = has_citadel_embassy
+        }
     }
 
     ai_weight = {
