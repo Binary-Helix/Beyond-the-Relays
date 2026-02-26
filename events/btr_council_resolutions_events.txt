@@ -17,6 +17,7 @@ country_event = {
             modifier = btr_granted_citadel_embassy
             days = -1
         }
+        remove_modifier = btr_noncitadel_embassy_empire
         set_country_flag = btr_granted_citadel_embassy
     }
 }
@@ -144,6 +145,7 @@ country_event = {
             days = -1
         }
         set_country_flag = citadel_council_member
+        remove_modifier = btr_citadel_embassy_empire
     }
 }
 

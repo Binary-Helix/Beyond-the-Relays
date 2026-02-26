@@ -28,7 +28,7 @@ resolution_petition_citadel_embassy = {
         hidden_effect = {
             set_country_flag = citadel_embassy_denied
             save_event_target_as = denied_embassy_empire
-            country_event = { btr_council_resolutions.2 }
+            country_event = { id = btr_council_resolutions.2 }
         }
     }
 
@@ -84,7 +84,7 @@ resolution_petition_spectre_1 = {
         hidden_effect = {
             set_country_flag = spectre_1_denied
             save_event_target_as = denied_spectre_empire
-            country_event = { btr_council_resolutions.4 }
+            country_event = { id = btr_council_resolutions.4 }
         }
     }
 
@@ -207,7 +207,7 @@ resolution_petition_citadel_council_seat = {
         hidden_effect = {
             set_country_flag = citadel_council_denied
             save_event_target_as = denied_citadel_council
-            country_event = { btr_council_resolutions.8 }
+            country_event = { id = btr_council_resolutions.8 }
         }
     }
 
