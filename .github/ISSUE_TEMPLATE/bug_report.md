@@ -3,7 +3,7 @@ name: Bug Report
 about: Report a bug or issue with the Beyond-the-Relays mod
 title: ""
 labels:
-  -type: Bug
+type: Bug
 assignees: ""
 ---
 
