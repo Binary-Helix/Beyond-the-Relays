@@ -11,5 +11,5 @@ tags={
 	"Species"
 	"Spaceships"
 }
-name="BTR Skunkworks"
+name="Beyond the Relays"
 supported_version="v4.0.23"
