@@ -29,7 +29,7 @@
  resolution_petition_spectre_1: "Petition for Spectre Representation"
  resolution_petition_spectre_1_desc: "The right to field a Spectre Agent is not granted lightly. Any empire seeking this distinction must formally petition the Citadel Council, demonstrating their commitment to galactic stability and earning the trust of its founding species." # TODO: AI PLACEHOLDER - Review with team for needed rewrite
  resolution_petition_citadel_council_seat: "REPLACE_ME"
- resolution_petition_citadel_council_seat_desc: "The Citadel Council has guided the galaxy for millennia, its three founding species maintaining a careful balance of power that has — for better or worse — kept the galaxy from tearing itself apart. To petition for a seat at that table is an act of profound ambition. An empire must have demonstrated not only military and economic strength, but a sustained commitment to galactic stability and the ideals the Council claims to represent. Even then, the Council's founding members are under no obligation to share what they have held for so long. A petition may be made, but the answer has always belonged to them alone." # TODO: AI PLACEHOLDER - Review with team for needed rewrite
+ resolution_petition_citadel_council_seat_desc: "The Citadel Council has guided the galaxy for millennia, its three founding species maintaining a careful balance of power that has kept the galaxy from tearing itself apart. To petition for a seat at that table is an act of profound ambition. An empire must have demonstrated not only military and economic strength, but a sustained commitment to galactic stability and the ideals the Council claims to represent. Even then, the Council's founding members are under no obligation to share what they have held for so long. A petition may be made, but the answer has always belonged to them alone." # TODO: AI PLACEHOLDER - Review with team for needed rewrite
  gal_com_deprived_spectre: "Deprived Spectre REPLACE_ME"
  gal_com_lacks_council_seat: "Lack Council Seat REPLACE_ME"
  gal_com_we_have_citadel_embassy: "Citadel Embassy REPLACE_ME"
@@ -213,3 +213,29 @@
  mod_shipsize_spectre_vessel_anomaly_generation_chance_uninhabitable_desc: "REPLACE_ME"
  mod_shipsize_spectre_vessel_science_survey_speed_uninhabitable: "REPLACE_ME"
  mod_shipsize_spectre_vessel_science_survey_speed_uninhabitable_desc: "REPLACE_ME"
+
+ ### COUNCIL RESOLUTION EVENTS ###
+ btr_council_resolutions.1.name: "Granted Citadel Embassy"
+ btr_council_resolutions.1.desc: "Our petition for an embassy on the Citadel has been granted!"
+ btr_council_resolutions.1.a: "Excellent."
+ btr_council_resolutions.2.name: "Denied Citadel Embassy"
+ btr_council_resolutions.2.desc: "Our petition for an embassy on the Citadel has been denied."
+ btr_council_resolutions.2.a: "Disappointing."
+ btr_council_resolutions.3.name: "Granted Council Spectre"
+ btr_council_resolutions.3.desc: "Our petition to have a [root.getspeciesname] join the Spectres has been granted!"
+ btr_council_resolutions.3.a: "Now the galaxy can see what [root.getspeciesclassplural] have to offer."
+ btr_council_resolutions.4.name: "Denied Council Spectre"
+ btr_council_resolutions.4.desc: "Our petition to have a [root.getspeciesname] join the Spectres has been denied."
+ btr_council_resolutions.4.a: "When will they recognize what [root.getspeciesclassplural] have to offer?"
+ btr_council_resolutions.5.name: "Granted Additional Council Spectre"
+ btr_council_resolutions.5.desc: "Our petition to expand [root.getspeciesname] representation in the Spectres has been granted!"
+ btr_council_resolutions.5.a: "Our standing amongst the galaxy continues to improve."
+ btr_council_resolutions.6.name: "Denied Additional Council Spectre"
+ btr_council_resolutions.6.desc: "Our petition to expand [root.getspeciesname] representation in the Spectres has been denied."
+ btr_council_resolutions.6.a: "When will the Council stop holding us back?"
+ btr_council_resolutions.7.name: "Granted Council Seat"
+ btr_council_resolutions.7.desc: "We have been granted a seat on the Citadel Council! This marks the beginning of a new era for [Root.Owner.GetName]"
+ btr_council_resolutions.7.a: "Now we stand as true equals amongst the other races."
+ btr_council_resolutions.8.name: "Denied Council Seat"
+ btr_council_resolutions.8.desc: "The Council in all of their wisdom has made it clear that we are not worthy to stand alongside them on the Council."
+ btr_council_resolutions.8.a: "The Council will grow to recognize their mistake."

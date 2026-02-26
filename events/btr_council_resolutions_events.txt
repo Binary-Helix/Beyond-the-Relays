@@ -14,9 +14,10 @@ country_event = {
     option = {
         name = btr_council_resolutions.1.a
         add_modifier = {
-            modifier = granted_citadel_embassy
+            modifier = btr_granted_citadel_embassy
             days = -1
         }
+        set_country_flag = btr_granted_citadel_embassy
     }
 }
 
@@ -25,7 +26,7 @@ country_event = {
     id = btr_council_resolutions.2
     title = "btr_council_resolutions.2.name"
     desc = "btr_council_resolutions.2.desc"
-    picture = GFX_evt_citadel_presidium
+    picture = GFX_evt_citadel_skyline
     show_sound = btr_event_denied_citadel_embassy
     location = from
 
@@ -34,9 +35,10 @@ country_event = {
     option = {
         name = btr_council_resolutions.2.a
         add_modifier = {
-            modifier = denied_citadel_embassy
+            modifier = btr_denied_citadel_embassy
             days = 720
         }
+        set_country_flag = btr_denied_citadel_embassy
     }
 }
 
@@ -45,7 +47,7 @@ country_event = {
     id = btr_council_resolutions.3
     title = "btr_council_resolutions.3.name"
     desc = "btr_council_resolutions.3.desc"
-    picture = GFX_evt_council_spectre
+    picture = GFX_evt_granted_council_spectre
     show_sound = btr_event_granted_council_spectre
     location = from
 
@@ -54,7 +56,7 @@ country_event = {
     option = {
         name = btr_council_resolutions.3.a
         add_modifier = {
-            modifier = granted_council_spectre
+            modifier = btr_granted_council_spectre
             days = -1
         }
         set_country_flag = spectre_1_approved
@@ -66,7 +68,7 @@ country_event = {
     id = btr_council_resolutions.4
     title = "btr_council_resolutions.4.name"
     desc = "btr_council_resolutions.4.desc"
-    picture = GFX_evt_council_spectre
+    picture = GFX_evt_denied_council_spectre
     show_sound = btr_event_granted_council_spectre
     location = from
 
@@ -75,7 +77,7 @@ country_event = {
     option = {
         name = btr_council_resolutions.4.a
         add_modifier = {
-            modifier = denied_council_spectre
+            modifier = btr_denied_council_spectre
             days = 720
         }
         set_country_flag = spectre_1_denied
@@ -87,7 +89,7 @@ country_event = {
     id = btr_council_resolutions.5
     title = "btr_council_resolutions.5.name"
     desc = "btr_council_resolutions.5.desc"
-    picture = GFX_evt_council_spectre
+    picture = GFX_evt_granted_council_spectre
     show_sound = btr_event_granted_council_spectre
     location = from
 
@@ -96,7 +98,7 @@ country_event = {
     option = {
         name = btr_council_resolutions.5.a
         add_modifier = {
-            modifier = granted_council_spectre
+            modifier = btr_granted_additional_council_spectre
             days = -1
         }
         set_country_flag = spectre_2_approved
@@ -108,7 +110,7 @@ country_event = {
     id = btr_council_resolutions.6
     title = "btr_council_resolutions.6.name"
     desc = "btr_council_resolutions.6.desc"
-    picture = GFX_evt_council_spectre
+    picture = GFX_evt_denied_council_spectre
     show_sound = btr_event_granted_council_spectre
     location = from
 
@@ -117,7 +119,7 @@ country_event = {
     option = {
         name = btr_council_resolutions.6.a
         add_modifier = {
-            modifier = denied_council_spectre
+            modifier = btr_denied_additional_council_spectre
             days = 360
         }
         set_country_flag = spectre_2_denied
@@ -129,7 +131,7 @@ country_event = {
     id = btr_council_resolutions.7
     title = "btr_council_resolutions.7.name"
     desc = "btr_council_resolutions.7.desc"
-    picture = GFX_evt_citadel_presidium
+    picture = GFX_evt_granted_council_seat
     show_sound = btr_event_granted_citadel_embassy
     location = from
 
@@ -138,7 +140,7 @@ country_event = {
     option = {
         name = btr_council_resolutions.7.a
         add_modifier = {
-            modifier = granted_citadel_embassy
+            modifier = btr_granted_council_seat
             days = -1
         }
         set_country_flag = citadel_council_member
@@ -150,7 +152,7 @@ country_event = {
     id = btr_council_resolutions.8
     title = "btr_council_resolutions.8.name"
     desc = "btr_council_resolutions.8.desc"
-    picture = GFX_evt_citadel_presidium
+    picture = GFX_evt_denied_council_seat
     show_sound = btr_event_denied_citadel_embassy
     location = from
 
@@ -159,7 +161,7 @@ country_event = {
     option = {
         name = btr_council_resolutions.8.a
         add_modifier = {
-            modifier = denied_citadel_embassy
+            modifier = btr_denied_council_seat
             days = 3600
         }
         set_country_flag = denied_council_seat
