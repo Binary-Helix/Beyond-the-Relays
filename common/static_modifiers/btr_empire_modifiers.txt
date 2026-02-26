@@ -18,6 +18,18 @@ btr_independent_colony = {
 	planet_colony_development_speed_mult = -0.75
 }
 
+####################################
+### CITADEL RESOLUTION MODIFIERS ###
+####################################
+
+btr_noncitadel_embassy_empire = {
+	diplo_weight_mult = -1.0
+}
+
+btr_citadel_embassy_empire = {
+	diplo_weight_mult = -0.8
+}
+
 ###################
 # ASARI REPUPLICS #
 ###################
@@ -429,11 +441,3 @@ corpo_private_enterprises = {
 	country_uranium_produces_mult = 0.33
 	country_eezo_produces_mult = 0.33
 }
-
-
-
-
-
-
-
-
