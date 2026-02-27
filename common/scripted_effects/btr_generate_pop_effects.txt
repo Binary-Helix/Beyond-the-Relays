@@ -4,7 +4,7 @@ generate_homeworldPop = {
 		create_pop_group = {
 			species = owner_main_species
 			ethos = owner
-			category = civilian
+			category = worker
 		}
 	}
 }
@@ -27,6 +27,7 @@ generate_salarianPop = {
 		create_pop_group = {
 			species = event_target:salarianSpecies
 			ethos = owner
+			category = worker
 		}
 	}
 }

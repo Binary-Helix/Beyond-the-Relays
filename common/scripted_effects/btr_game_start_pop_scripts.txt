@@ -5,7 +5,7 @@ generate_asr_thessia_pops = {
 	   count = 200
 	   generate_homeworldPop = yes
 	}
-	every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	every_owned_pop_group = { set_pop_group_flag = init_spawn  }
 }
 
 generate_asr_lusia_pops = {
@@ -117,7 +117,7 @@ generate_asr_espota_pops = {
 generate_sal_surkesh_pops = {
 	while = {
 	   count = 200
-	   generate_salarianPop = yes
+		generate_salarianPop = yes
 	}
 	every_owned_pop_group = { set_pop_group_flag = init_spawn }
 }
