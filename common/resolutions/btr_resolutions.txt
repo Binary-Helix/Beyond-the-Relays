@@ -119,67 +119,66 @@ resolution_petition_spectre_1 = {
     }
 }
 
-#
-# resolution_petition_spectre_2 = {
-#     icon = "GFX_resolution_petition_additional_spectre"
-#
-#     resources = {
-#         category = resolutions
-#         cost = {
-#             influence = 500
-#         }
-#     }
-#
-#     fire_and_forget = yes
-#     target = yes
-#     harmful = no
-#
-#     valid_target = {
-#         is_same_value = from
-#     }
-#
-#     effect = {
-#         hidden_effect = {
-#             set_country_flag = spectre_2_approved
-#             save_event_target_as = new_spectre_empire
-#             country_event = { id = btr_spectre.1 }
-#         }
-#     }
-#
-#     fail_effects = {
-#         hidden_effect = {
-#             set_country_flag = spectre_2_denied
-#             save_event_target_as = denied_spectre_empire
-#             country_event = { btr_spectre.3 }
-#         }
-#     }
-#
-#     allow = {
-#         custom_tooltip = {
-#             fail_text = "petition_for_spectre_requires_embassy"
-#             has_country_flag = has_citadel_embassy
-#         }
-#     }
-#
-#     active = {
-#         has_country_flag = has_citadel_embassy
-#     }
-#
-#     ai_weight = {
-#         base = 10
-#
-#         modifier = {
-#             factor = 20
-#             AND = {
-#                 has_country_flag = has_citadel_embassy
-#                 NOT = {
-#                     has_country_flag = spectre_1_approved
-#                 }
-#             }
-#             desc = gal_com_deprived_spectre
-#         }
-#     }
-# }
+resolution_petition_spectre_2 = {
+    icon = "GFX_resolution_petition_additional_spectre"
+
+    resources = {
+        category = resolutions
+        cost = {
+            influence = 500
+        }
+    }
+
+    fire_and_forget = yes
+    target = yes
+    harmful = no
+
+    valid_target = {
+        is_same_value = from
+    }
+
+    effect = {
+        hidden_effect = {
+            set_country_flag = spectre_2_approved
+            save_event_target_as = new_spectre_empire
+            country_event = { id = btr_council_resolutions.5 }
+        }
+    }
+
+    fail_effects = {
+        hidden_effect = {
+            set_country_flag = spectre_2_denied
+            save_event_target_as = denied_spectre_empire
+            country_event = { id = btr_council_resolutions.6 }
+        }
+    }
+
+    allow = {
+        custom_tooltip = {
+            fail_text = "petition_for_spectre_requires_embassy"
+            has_country_flag = has_citadel_embassy
+        }
+    }
+
+    active = {
+        has_country_flag = has_citadel_embassy
+    }
+
+    ai_weight = {
+        base = 10
+
+        modifier = {
+            factor = 20
+            AND = {
+                has_country_flag = has_citadel_embassy
+                NOT = {
+                    has_country_flag = spectre_1_approved
+                }
+            }
+            desc = gal_com_deprived_spectre
+        }
+    }
+}
 
 resolution_petition_citadel_council_seat = {
     icon = "GFX_resolution_petition_council_seat"

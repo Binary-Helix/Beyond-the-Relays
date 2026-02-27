@@ -2213,22 +2213,22 @@ country_event = {
 
 
 # PLAYTEST MURDER
-country_event = {
-	id = btr_game_start.13
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		is_btr_empire = yes
-	}
-	immediate = {
-		every_country = {
-			limit = {
-				is_ai = yes
-			}
-			destroy_country = yes
-		}
-	}
-}
+# country_event = {
+# 	id = btr_game_start.13
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	trigger = {
+# 		is_btr_empire = yes
+# 	}
+# 	immediate = {
+# 		every_country = {
+# 			limit = {
+# 				is_ai = yes
+# 			}
+# 			destroy_country = yes
+# 		}
+# 	}
+# }
 
 
 
