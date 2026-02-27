@@ -82,6 +82,33 @@ country_event = {
             days = 720
         }
         set_country_flag = spectre_1_denied
+        hidden_effect = {
+            create_fleet = {
+                effect = {
+                    set_owner = prev
+
+                    create_ship = {
+                        name = random
+                        random_existing_design = spectre_vessel
+                    }
+
+                    set_fleet_stance = evasive
+                    set_location = prev.capital_scope_star
+
+                    owner = {
+                        create_leader = {
+                            class = btr_council_spectre
+                            name = random
+                            species = owner_main_species
+                            randomize_traits = no
+                            traits = {
+                                1 =
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

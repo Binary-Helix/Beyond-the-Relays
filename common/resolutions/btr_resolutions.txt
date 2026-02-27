@@ -156,12 +156,23 @@ resolution_petition_spectre_2 = {
     allow = {
         custom_tooltip = {
             fail_text = "petition_for_spectre_requires_embassy"
-            has_country_flag = has_citadel_embassy
+            NOT = {
+                has_country_flag = has_citadel_embassy
+            }
+        }
+        custom_tooltip = {
+            fail_text = "petition_for_additional_spectre_requires_spectre"
+            NOT = {
+                has_country_flag = spectre_1_approved
+            }
         }
     }
 
     active = {
-        has_country_flag = has_citadel_embassy
+        AND = {
+            has_country_flag = has_citadel_embassy
+            has_country_flag = spectre_1_approved
+        }
     }
 
     ai_weight = {
