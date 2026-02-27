@@ -4,13 +4,14 @@ btr_council_spectre = {
     description = council_spectre_description
 
     max_trait_points = 1
-    leader_capacity = 2
+    leader_capacity = 3
 
     can_be_assigned_to_federation = no
     can_be_assigned_to_galactic_community = no
+    can_crew_science_ship = no
     can_lead_army = no
-    can_lead_navy = no
-    can_be_envoy = yes
+    can_lead_navy = yes
+    can_be_envoy = no
     can_research_tech = no
     can_research_special_projects = yes
     can_research_anomalies = yes
@@ -80,6 +81,6 @@ btr_council_spectre = {
         }
     }
     minimum_ai_target = 3
-    icon = 3
+    icon = 5
     paragon_background_selector = "paragon_background_selector"
 }

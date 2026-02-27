@@ -192,6 +192,13 @@ generate_asari_republic_playtest_setup = {
         days = -1
     }
 
+    add_modifier = {
+        modifier = btr_citadel_council_member
+        days = -1
+    }
+
+    set_country_flag = citadel_council_member
+
     log = "Asari Republics Empire Modifier Set"
 
     every_planet_within_border = {
@@ -244,6 +251,13 @@ generate_salarian_union_playtest_setup = {
         modifier = salarian_uni_empire_modifier
         days = -1
     }
+
+    add_modifier = {
+        modifier = btr_citadel_council_member
+        days = -1
+    }
+
+    set_country_flag = citadel_council_member
 
     log = "Salarian Union Empire Modifier Set"
 
@@ -302,6 +316,13 @@ generate_turian_hierarchy_playtest_setup = {
         modifier = turian_hie_shanxi_314
         days = 3600
     }
+
+    add_modifier = {
+        modifier = btr_citadel_council_member
+        days = -1
+    }
+
+    set_country_flag = citadel_council_member
 
     log = "Turian Hierarchy Empire Modifiers Set"
 
@@ -364,6 +385,12 @@ generate_systems_alliance_playtest_setup = {
         days = -1
     }
 
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
+        days = -1
+    }
+
+
     log = "Systems Alliance Empire Modifiers Set"
 
     every_planet_within_border = {
@@ -412,8 +439,15 @@ generate_courts_of_dekuuna_playtest_setup = {
 
     log = "Courts of Dekuuna Starting Resources Set"
 
+    set_country_flag = has_citadel_embassy
+
     add_modifier = {
         modifier = courts_deku_mechanized_army
+        days = -1
+    }
+
+    add_modifier = {
+        modifier = btr_citadel_embassy_empire
         days = -1
     }
 
@@ -470,6 +504,13 @@ generate_vol_protectorate_playtest_setup = {
         days = -1
     }
 
+    add_modifier = {
+        modifier = btr_citadel_embassy_empire
+        days = -1
+    }
+
+    set_country_flag = has_citadel_embassy
+
     log = "Vol Protectorate  Empire Modifier Set"
 
     every_planet_within_border = {
@@ -522,6 +563,13 @@ generate_illuminated_primacy_playtest_setup = {
         modifier = illuminated_primacy_compact
         days = -1
     }
+
+    add_modifier = {
+        modifier = btr_citadel_embassy_empire
+        days = -1
+    }
+
+    set_country_flag = has_citadel_embassy
 
     log = "Illuminated Primacy Empire Modifier Set"
 
@@ -580,6 +628,11 @@ generate_hegemony_of_kharshan_playtest_setup = {
         days = -1
     }
 
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
+        days = -1
+    }
+
     log = "Hegemony of Khar'Shan Empire Modifiers Set"
 
     every_planet_within_border = {
@@ -630,6 +683,11 @@ generate_aralakh_kahmat_playtest_setup = {
 
     add_modifier = {
         modifier = krogan_no_enemy_too_great
+        days = -1
+    }
+
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
         days = -1
     }
 
@@ -686,6 +744,11 @@ generate_migrant_fleet_playtest_setup = {
         days = -1
     }
 
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
+        days = -1
+    }
+
     log = "Migrant Fleet Empire Modifier Set"
 
     every_planet_within_border = {
@@ -736,6 +799,11 @@ generate_cerberus_empire_playtest_setup = {
 
     add_modifier = {
         modifier = cerberus_a_key_moment
+        days = -1
+    }
+
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
         days = -1
     }
 
@@ -796,6 +864,11 @@ generate_omega_empire_playtest_setup = {
         days = -1
     }
 
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
+        days = -1
+    }
+
     log = "Omega Empire Modifier Set"
 
     every_planet_within_border = {
@@ -850,6 +923,11 @@ generate_illium_corporate_interests_playtest_setup = {
     }
     add_modifier = {
         modifier = corpo_private_enterprises
+        days = -1
+    }
+
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
         days = -1
     }
 
@@ -910,6 +988,11 @@ generate_caleston_directorate_playtest_setup = {
         days = -1
     }
 
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
+        days = -1
+    }
+
     log = "Caleston Directorate Empire Modifier Set"
 
     every_planet_within_border = {
@@ -960,6 +1043,11 @@ generate_remnants_of_rakhana_playtest_setup = {
 
     add_modifier = {
         modifier = drell_law_of_wastes
+        days = -1
+    }
+
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
         days = -1
     }
 
@@ -1016,6 +1104,11 @@ generate_vorcha_clandom_playtest_setup = {
         days = -1
     }
 
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
+        days = -1
+    }
+
     log = "Vorcha Clandom Empire Modifier Set"
 
     every_planet_within_border = {
@@ -1066,6 +1159,11 @@ generate_sedriicae_collective_playtest_setup = {
 
     add_modifier = {
         modifier = sedriicae_symptoms_stagnation
+        days = -1
+    }
+
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
         days = -1
     }
 
@@ -1122,6 +1220,11 @@ generate_lystheni_order_playtest_setup = {
         days = -1
     }
 
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
+        days = -1
+    }
+
     log = "Lystheni Order Empire Modifier Set"
 
     every_planet_within_border = {
@@ -1172,6 +1275,11 @@ generate_gothones_remnant_playtest_setup = {
 
     log = "Gothones Remnant Empire Modifier Set"
 
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
+        days = -1
+    }
+
     every_planet_within_border = {
         limit = {
             has_deposit_for = shipclass_mining_station
@@ -1220,6 +1328,11 @@ generate_parnack_regime_playtest_setup = {
 
     add_modifier = {
         modifier = parnack_regime_violent_start
+        days = -1
+    }
+
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
         days = -1
     }
 
@@ -1273,6 +1386,11 @@ generate_raloi_republic_playtest_setup = {
 
     add_modifier = {
         modifier = raloi_catching_up
+        days = -1
+    }
+
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
         days = -1
     }
 
@@ -1330,6 +1448,11 @@ generate_geth_consensus_playtest_setup = {
         days = -1
     }
 
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
+        days = -1
+    }
+
     log = "Geth Consensus Empire Modifier Set"
 
     every_planet_within_border = {
@@ -1380,6 +1503,11 @@ generate_disciples_of_nazara_playtest_setup = {
 
     add_modifier = {
         modifier = nazara_alone_with_divine
+        days = -1
+    }
+
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
         days = -1
     }
 
@@ -1436,6 +1564,11 @@ generate_rachni_hive_playtest_setup = {
         days = -1
     }
 
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
+        days = -1
+    }
+
     log = "Rachni Hive Empire Modifier Set"
 
     every_planet_within_border = {
@@ -1485,6 +1618,11 @@ generate_collectors_empire_playtest_setup = {
     log = "The Collectors Starting Resources Set"
 
     log = "The Rachni Hive Empire Modifier Set"
+
+    add_modifier = {
+        modifier = btr_noncitadel_embassy_empire
+        days = -1
+    }
 
     every_planet_within_border = {
         limit = {

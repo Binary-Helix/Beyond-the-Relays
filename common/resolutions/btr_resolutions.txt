@@ -32,11 +32,15 @@ resolution_petition_citadel_embassy = {
         }
     }
 
-    allow = {
-        custom_tooltip = {
-            fail_text = "already_have_embassy"
+    potential = {
+        NOR = {
+            has_country_flag = citadel_council_member
             has_country_flag = has_citadel_embassy
         }
+    }
+
+    allow = {
+
     }
 
     active = {
@@ -90,17 +94,24 @@ resolution_petition_spectre_1 = {
         }
     }
 
-    allow = {
-        custom_tooltip = {
-            fail_text = "petition_for_spectre_requires_embassy"
-            NOT = {
-                has_country_flag = has_citadel_embassy
-            }
+    potential = {
+        OR = {
+            has_country_flag = has_citadel_embassy
+            has_country_flag = citadel_council_member
         }
+        NOT = {
+            has_country_flag = spectre_1_approved
+        }
+    }
+
+    allow = {
     }
 
     active = {
         has_country_flag = has_citadel_embassy
+        NOT = {
+            has_country_flag = spectre_1_approved
+        }
     }
 
     ai_weight = {
@@ -153,25 +164,20 @@ resolution_petition_spectre_2 = {
         }
     }
 
+    potential = {
+        has_country_flag = spectre_1_approved
+    }
+
     allow = {
-        custom_tooltip = {
-            fail_text = "petition_for_spectre_requires_embassy"
-            NOT = {
-                has_country_flag = has_citadel_embassy
-            }
-        }
-        custom_tooltip = {
-            fail_text = "petition_for_additional_spectre_requires_spectre"
-            NOT = {
-                has_country_flag = spectre_1_approved
-            }
-        }
+
     }
 
     active = {
         AND = {
             has_country_flag = has_citadel_embassy
-            has_country_flag = spectre_1_approved
+            NOT = {
+                has_country_flag = spectre_1_approved
+            }
         }
     }
 
@@ -182,9 +188,7 @@ resolution_petition_spectre_2 = {
             factor = 20
             AND = {
                 has_country_flag = has_citadel_embassy
-                NOT = {
-                    has_country_flag = spectre_1_approved
-                }
+                has_country_flag = spectre_1_approved
             }
             desc = gal_com_deprived_spectre
         }
@@ -225,11 +229,14 @@ resolution_petition_citadel_council_seat = {
         }
     }
 
-    allow = {
-        custom_tooltip = {
-            fail_text = "already_have_seat_on_council"
+    potential = {
+        has_country_flag = has_citadel_embassy
+        NOT = {
             has_country_flag = citadel_council_member
         }
+    }
+
+    allow = {
     }
 
     active = {

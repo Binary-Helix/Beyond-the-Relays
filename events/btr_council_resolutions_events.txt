@@ -50,7 +50,6 @@ country_event = {
     desc = "btr_council_resolutions.3.desc"
     picture = GFX_evt_granted_council_spectre
     show_sound = btr_event_granted_council_spectre
-    location = from
 
     is_triggered_only = yes
 
@@ -60,7 +59,62 @@ country_event = {
             modifier = btr_granted_council_spectre
             days = -1
         }
-        set_country_flag = spectre_1_approved
+
+        hidden_effect = {
+            save_event_target_as = spectre_country
+            set_country_flag = spectre_1_approved
+            event_target:spectre_country  = {
+                create_leader = {
+                    class = btr_council_spectre
+                    tier = leader_tier_renowned
+                    species = owner_main_species
+                    name = random
+                    skill = 5
+                    event_leader = no
+                    custom_description = spectre_leader_desc
+                    custom_catch_phrase = spectre_leader_catch_phrase
+                    immortal = no
+                    hide_age = no
+
+                    randomize_traits = no
+                    effect = {
+                        set_skill = 5
+                        set_leader_flag = is_in_recruit_window
+                        save_event_target_as = new_spectre
+                        add_trait = {
+                            trait = btr_leader_trait_council_spectre
+                        }
+                    }
+                }
+                create_fleet = {
+                    effect = {
+                        set_owner = prev
+                        create_ship = {
+                            name = random
+                            design = "NAME_Spectre_Vessel"
+                            prefix = no
+                            upgradable = yes
+                        }
+                        set_location = {
+                            target = prev.capital_scope.star
+                            distance = 200
+                            angle = random
+                        }
+                        set_fleet_stance = passive
+                        assign_leader = event_target:new_spectre
+                        set_fleet_flag = council_spectre
+                    }
+                    settings = {
+                        can_upgrade = yes
+                        can_change_leader = no
+                        uses_naval_capacity = no
+                        spawn_debris = yes
+                        can_disband = no
+
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -82,33 +136,6 @@ country_event = {
             days = 720
         }
         set_country_flag = spectre_1_denied
-        hidden_effect = {
-            create_fleet = {
-                effect = {
-                    set_owner = prev
-
-                    create_ship = {
-                        name = random
-                        random_existing_design = spectre_vessel
-                    }
-
-                    set_fleet_stance = evasive
-                    set_location = prev.capital_scope_star
-
-                    owner = {
-                        create_leader = {
-                            class = btr_council_spectre
-                            name = random
-                            species = owner_main_species
-                            randomize_traits = no
-                            traits = {
-                                1 =
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 }
 

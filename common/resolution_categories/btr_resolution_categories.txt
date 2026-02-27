@@ -1,12 +1,29 @@
 
-resolution_category_council_petitions  = {
+resolution_category_citadel_embassy_petition  = {
     group = council_politics
-    icon = "GFX_resolution_council_petition"
+    icon = "GFX_resolution_petition_embassy"
 
     resolution_types = {
         resolution_petition_citadel_embassy
+
+    }
+}
+
+resolution_category_special_tactics_and_reconnaissance  = {
+    group = council_politics
+    icon = "GFX_resolution_petition_spectre"
+
+    resolution_types = {
         resolution_petition_spectre_1
         resolution_petition_spectre_2
+    }
+}
+
+resolution_category_citadel_council_petitions  = {
+    group = council_politics
+    icon = "GFX_resolution_petition_council_seat"
+
+    resolution_types = {
         resolution_petition_citadel_council_seat
     }
 }
