@@ -6,21 +6,9 @@ ship_design = {
     is_special_buildable = yes
 
     section = {
-        template = "eventship_02_section"
+        template = "civilian_tanker_section"
         slot = "mid"
 
-        component = {
-            slot = "SMALL_GUN_01"
-            template = "SMALL_PLASMA_3"
-        }
-        component = {
-            slot = "SMALL_GUN_02"
-            template = "SMALL_DISRUPTOR_3"
-        }
-        component = {
-            slot = "MEDIUM_GUN_01"
-            template = "MEDIUM_MASS_DRIVER_3"
-        }
         component = {
             slot = "SMALL_UTILITY_1"
             template = "SMALL_SHIELD_3"
@@ -34,8 +22,16 @@ ship_design = {
             template = "SMALL_ARMOR_3"
         }
         component = {
-            slot = "SMALL_UTILITY_4"
-            template = "SMALL_ARMOR_3"
+            slot = "MEDIUM_UTILITY_1"
+            template = "MEDIUM_ARMOR_1"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_2"
+            template = "MEDIUM_ARMOR_3"
+        }
+        component = {
+            slot = "MEDIUM_UTILITY_3"
+            template = "MEDIUM_ARMOR_3"
         }
         component = {
             slot = "AUX_UTILITY_1"
