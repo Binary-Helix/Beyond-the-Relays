@@ -25,8 +25,8 @@ branch_vol_elkoss_combine = {
 	category = trade
 
 	planet_modifier = {
-		job_clerk_add = 2
-		job_foundry_add = 1
+		job_clerk_add = 200
+		job_foundry_add = 100
 	}
 	resources = {
 		category = planet_branch_office_buildings
@@ -76,7 +76,7 @@ branch_vol_kon_junction_franchise = {
 	category = trade
 
 	planet_modifier = {
-		job_artisan_add = 2
+		job_artisan_add = 200
 		planet_amenities_add = 10
 	}
 
@@ -131,8 +131,8 @@ branch_vol_delumcore_systems = {
 	category = research
 
 	planet_modifier = {
-		job_researcher_add = 2
-		job_clerk_add = 1
+		job_researcher_add = 200
+		job_clerk_add = 100
 	}
 
 	resources = {
@@ -183,9 +183,9 @@ branch_vol_galactic_banking_exchange = {
 	category = trade
 
 	planet_modifier = {
-		job_executive_add = 1
-		job_manager_add = 1
-		job_clerk_add = 2
+		job_executive_add = 100
+		job_manager_add = 100
+		job_clerk_add = 200
 		planet_structures_cost_mult = -0.1
 	}
 
@@ -237,8 +237,8 @@ branch_vol_hcc_news_partner = {
 	category = government
 
 	planet_modifier = {
-		job_culture_worker_add = 2
-		job_clerk_add = 1
+		job_culture_worker_add = 200
+		job_clerk_add = 100
 	}
 
 	country_modifier = {
@@ -291,8 +291,8 @@ branch_vol_sirenum_scopuli = {
 	category = unity
 
 	planet_modifier = {
-		job_enforcer_add = 2
-		job_clerk_add = 2
+		job_enforcer_add = 200
+		job_clerk_add = 200
 	}
 
 	country_modifier = {
@@ -343,8 +343,8 @@ branch_vol_narhu_combine = {
 	category = resource
 
 	planet_modifier = {
-		job_clerk_add = 1
-		job_miner_add = 2
+		job_clerk_add = 100
+		job_miner_add = 200
 		planet_jobs_exotic_gases_produces_mult = 0.1
 	}
 
@@ -402,8 +402,8 @@ branch_vol_armax_arsenal = {
 	category = army
 
 	planet_modifier = {
-		job_soldier_add = 2
-		job_enforcer_add = 1
+		job_soldier_add = 200
+		job_enforcer_add = 100
 		planet_army_build_time_mult = -0.5
 	}
 
@@ -463,8 +463,8 @@ branch_vol_haliat_armory = {
 	category = army
 
 	planet_modifier = {
-		job_soldier_add = 2
-		job_enforcer_add = 1
+		job_soldier_add = 200
+		job_enforcer_add = 100
 	}
 
 	army_modifier = {
@@ -522,8 +522,8 @@ branch_vol_rodam_expeditions = {
 	category = trade
 
 	planet_modifier = {
-		job_enforcer_add = 1
-		job_clerk_add = 1
+		job_enforcer_add = 100
+		job_clerk_add = 100
 		planet_crime_mult = -0.1
 		planet_orbital_bombardment_damage = -0.05
 	}
@@ -576,8 +576,8 @@ branch_vol_ez_meat_inc = {
 	category = manufacturing
 
 	planet_modifier = {
-		job_farmer_add = 2
-		job_clerk_add = 1
+		job_farmer_add = 200
+		job_clerk_add = 100
 	}
 
 	resources = {
@@ -625,7 +625,7 @@ branch_vol_jenantech = {
 	category = manufacturing
 
 	planet_modifier = {
-		job_clerk_add = 2
+		job_clerk_add = 200
 		pop_job_amenities_mult = 1
 	}
 
@@ -674,8 +674,8 @@ branch_vol_cision_motors = {
 	category = manufacturing
 
 	planet_modifier = {
-		job_artisan_add = 1
-		job_clerk_add = 1
+		job_artisan_add = 100
+		job_clerk_add = 100
 		#planet_resettlement_unemployed_destination_mult = 0.05
 	}
 
@@ -727,9 +727,9 @@ branch_vol_volus_business_advising = {
 	category = trade
 
 	planet_modifier = {
-		job_executive_add = 1
-		job_manager_add = 2
-		job_clerk_add = 3
+		job_executive_add = 100
+		job_manager_add = 200
+		job_clerk_add = 300
 	}
 
 	country_modifier = {
@@ -835,7 +835,7 @@ branch_cerberus_cord_hislop_aerospace = {
 	category = army
 
 	planet_modifier = {
-		job_clerk_add = 1
+		job_clerk_add = 100
 	}
 
 	country_modifier = {
@@ -883,8 +883,8 @@ branch_cerberus_cdr_holdings = {
 	category = trade
 
 	planet_modifier = {
-		job_clerk_add = 4
-		job_merchant_add = 2
+		job_clerk_add = 400
+		job_merchant_add = 200
 		planet_technician_produces_mult = 0.1
 		planet_pops_trade_produces_mult = 10
 	}
@@ -930,9 +930,9 @@ branch_cerberus_terranova_commonwealth = {
 	category = government
 
 	planet_modifier = {
-		job_executive_add = 1
-		job_manager_add = 1
-		job_clerk_add = 2
+		job_executive_add = 100
+		job_manager_add = 100
+		job_clerk_add = 200
 	}
 
 	country_modifier = {
@@ -978,11 +978,11 @@ branch_cerberus_haribon_military_industries = {
 
 	planet_modifier = {
 		job_foundry_add = 2
+		planet_army_build_time_mult = -0.1
 	}
 
 	army_modifier = {
 		armies_cost_mult = -0.1
-		planet_army_build_time_mult = -0.1
 	}
 
 	country_modifier = {
@@ -1032,7 +1032,7 @@ branch_cerberus_milky_way_foundation = {
 	category = government
 
 	planet_modifier = {
-		job_clerk_add = 1
+		job_clerk_add = 100
 		pop_happiness = -0.05
 	}
 
@@ -1077,9 +1077,9 @@ branch_cerberus_new_dawn_pharmaceuticals = {
 	category = pop_assembly
 
 	planet_modifier = {
-		job_healthcare_add = 1
-		job_clerk_add = 1
-		job_researcher_add = 1
+		job_healthcare_add = 100
+		job_clerk_add = 100
+		job_researcher_add = 100
 		pop_happiness = -0.05
 	}
 
@@ -1182,8 +1182,8 @@ branch_omega_butler_supplies = {
 	category = manufacturing
 
 	planet_modifier = {
-		job_artisan_add = 2
-		job_culture_worker_add = 1
+		job_artisan_add = 200
+		job_culture_worker_add = 100
 	}
 
 	country_modifier = {
@@ -1235,8 +1235,8 @@ branch_omega_marsh_rentals = {
 	category = government
 
 	planet_modifier = {
-		job_manager_add = 1
-		job_clerk_add = 2
+		job_manager_add = 100
+		job_clerk_add = 200
 	}
 
 	country_modifier = {
@@ -1287,7 +1287,7 @@ branch_omega_tuhi_district_storage = {
 	category = resource
 
 	planet_modifier = {
-		job_clerk_add = 1
+		job_clerk_add = 100
 	#	job_enforcer_add = 2
 		planet_crime_mult = 0.1
 	#	planet_enforcers_energy_produces_add = 5
@@ -1342,8 +1342,8 @@ branch_omega_harrots_emporium = {
 	category = pop_assembly
 
 	planet_modifier = {
-		job_manager_add = 1
-		job_clerk_add = 1
+		job_manager_add = 100
+		job_clerk_add = 100
 		job_healthcare_add = 1
 		logistic_growth_mult = 0.03
 	}
@@ -1395,8 +1395,8 @@ branch_omega_kenns_salvage = {
 	category = manufacturing
 
 	planet_modifier = {
-		job_artificer_add = 1
-		job_scrap_miner_add = 2
+		job_artificer_add = 100
+		job_scrap_miner_add = 200
 	}
 
 	country_modifier = {
@@ -1454,9 +1454,9 @@ branch_omega_terminus_now = {
 	category = trade
 
 	planet_modifier = {
-		job_manager_add = 1
-		job_clerk_add = 2
-		job_merchant_add = 1
+		job_manager_add = 100
+		job_clerk_add = 200
+		job_merchant_add = 100
 	}
 
 	country_modifier = {
@@ -1507,7 +1507,7 @@ branch_omega_aeternal_life = {
 	category = unity
 
 	planet_modifier = {
-		job_entertainer_add = 2
+		job_entertainer_add = 200
 	}
 
 	country_modifier = {
@@ -1557,8 +1557,8 @@ branch_omega_first_security = {
 	category = army
 
 	planet_modifier = {
-		job_soldier_add = 2
-		job_enforcer_add = 1
+		job_soldier_add = 200
+		job_enforcer_add = 100
 	}
 
 	country_modifier = {
@@ -1612,8 +1612,8 @@ branch_omega_sahrabarik_outreach_institute = {
 	category = government
 
 	planet_modifier = {
-		job_researcher_add = 2
-		job_culture_worker_add = 1
+		job_researcher_add = 200
+		job_culture_worker_add = 100
 	}
 
 	country_modifier = {
@@ -1666,8 +1666,8 @@ branch_omega_fumi_construction_management = {
 	category = pop_assembly
 
 	planet_modifier = {
-		job_underground_trade_worker_add = 2
-		planet_housing_add = 5
+		job_underground_trade_worker_add = 200
+		planet_housing_add = 500
 	}
 
 	country_modifier = {
@@ -1720,8 +1720,8 @@ branch_omega_generalist_import_export = {
 	category = trade
 
 	planet_modifier = {
-		job_artisan_add = 1
-		job_clerk_add = 1
+		job_artisan_add = 100
+		job_clerk_add = 100
 		pop_happiness = 0.05
 	}
 
@@ -1776,9 +1776,9 @@ branch_omega_alpha_omega_cinema = {
 	category = trade
 
 	planet_modifier = {
-		job_manager_add = 1
-		job_clerk_add = 1
-		job_entertainer_add = 1
+		job_manager_add = 100
+		job_clerk_add = 100
+		job_entertainer_add = 100
 	}
 
 	resources = {
@@ -1827,9 +1827,9 @@ branch_omega_dark_matter_brewery = {
 	category = trade
 
 	planet_modifier = {
-		job_entertainer_add = 1
-		job_culture_worker_add = 1
-		job_artisan_add = 1
+		job_entertainer_add = 100
+		job_culture_worker_add = 100
+		job_artisan_add = 100
 	}
 
 	country_modifier = {
@@ -1884,8 +1884,8 @@ branch_illium_azure_hotel = {
 	category = trade
 
 	planet_modifier = {
-		job_manager_add = 1
-		job_entertainer_add = 3
+		job_manager_add = 100
+		job_entertainer_add = 300
 	}
 
 	country_modifier = {
@@ -1937,7 +1937,7 @@ branch_illium_indentu_tech = {
 	category = pop_assembly
 
 	planet_modifier = {
-		job_clerk_add = 2
+		job_clerk_add = 200
 		planet_pops_upkeep_mult = -0.1
 	}
 
@@ -1988,9 +1988,9 @@ branch_illium_synthetic_insights = {
 	category = pop_assembly
 
 	planet_modifier = {
-		job_manager_add = 1
-		job_roboticist_add = 1
-		job_researcher_add = 2
+		job_manager_add = 100
+		job_roboticist_add = 100
+		job_researcher_add = 200
 		planet_pop_assembly_mult = 0.1
 		pop_happiness = -0.05
 	}
@@ -2043,8 +2043,8 @@ branch_illium_entertainment = {
 	category = unity
 
 	planet_modifier = {
-		job_culture_worker_add = 2
-		job_entertainer_add = 1
+		job_culture_worker_add = 200
+		job_entertainer_add = 100
 		planet_jobs_unity_produces_mult = 0.1
 	}
 
@@ -2098,9 +2098,9 @@ branch_illium_pyrena_corporation = {
 	category = manufacturing
 
 	planet_modifier = {
-		job_farmer_add = 2
-		job_miner_add = 2
-		job_clerk_add = 1
+		job_farmer_add = 200
+		job_miner_add = 200
+		job_clerk_add = 100
 		planet_stability_add = 5
 	}
 
@@ -2160,8 +2160,8 @@ branch_illium_aramali_council = {
 	category = research
 
 	planet_modifier = {
-		job_manager_add = 1
-		job_researcher_add = 3
+		job_manager_add = 100
+		job_researcher_add = 300
 		planet_traders_trade_produces_mult = 0.1
 		planet_orbital_bombardment_damage = -0.1
 	}
@@ -2222,9 +2222,9 @@ branch_illium_x3m_manufacturers = {
 	category = amenity
 
 	planet_modifier = {
-		job_manager_add = 1
-		job_merchant_add = 2
-		job_clerk_add = 1
+		job_manager_add = 100
+		job_merchant_add = 200
+		job_clerk_add = 100
 		planet_amenities_add = 10
 	}
 
@@ -2278,8 +2278,8 @@ branch_illium_binary_helix = {
 	category = trade
 
 	planet_modifier = {
-		job_manager_add = 1
-		job_researcher_add = 3
+		job_manager_add = 100
+		job_researcher_add = 300
 		planet_traders_trade_produces_mult = 0.1
 		planet_orbital_bombardment_damage = -0.1
 	}
@@ -2333,8 +2333,8 @@ branch_illium_exoderm = {
 	category = amenity
 
 	planet_modifier = {
-		job_artisan_add = 2
-		job_clerk_add = 1
+		job_artisan_add = 200
+		job_clerk_add = 100
 		planet_amenities_add = 10
 	}
 
@@ -2385,7 +2385,7 @@ branch_illium_nava_corp = {
 	category = trade
 
 	planet_modifier = {
-		job_clerk_add = 2
+		job_clerk_add = 200
 		planet_traders_trade_produces_mult = 15
 	}
 
@@ -2434,8 +2434,8 @@ branch_illium_goddess_essentials = {
 	category = manufacturing
 
 	planet_modifier = {
-		job_manager_add = 1
-		job_artisan_add = 3
+		job_manager_add = 100
+		job_artisan_add = 300
 	}
 
 	country_modifier = {
@@ -2484,8 +2484,8 @@ branch_illium_silaris_steelworks = {
 	category = unity
 
 	planet_modifier = {
-		job_foundry_add = 3
-		job_manager_add = 1
+		job_foundry_add = 300
+		job_manager_add = 100
 		planet_jobs_unity_produces_mult = 0.1
 	}
 
@@ -2536,7 +2536,7 @@ branch_illium_baria_frontiers = {
 	category = trade
 
 	planet_modifier = {
-		job_bureaucrat_add = 2
+		job_bureaucrat_add = 200
 		planet_traders_trade_produces_mult = 0.15
 	}
 
@@ -2584,7 +2584,7 @@ branch_illium_nos_astra_sporting_goods = {
 	category = army
 
 	planet_modifier = {
-		job_merchant_add = 3
+		job_merchant_add = 300
 	}
 
 	army_modifier = {
@@ -2641,8 +2641,8 @@ branch_caleston_eldfell_ashland_energy = {
 	}
 
 	planet_modifier = {
-		job_miner_add = 2
-		job_gas_refiner_add = 1
+		job_miner_add = 200
+		job_gas_refiner_add = 100
 	}
 
 	resources = {
@@ -2689,8 +2689,8 @@ branch_caleston_dah_tan_manufacturing = {
 	}
 
 	planet_modifier = {
-		job_researcher_add = 2
-		job_artisan_add = 1
+		job_researcher_add = 200
+		job_artisan_add = 100
 	}
 
 	resources = {
@@ -2735,7 +2735,7 @@ branch_caleston_duna_consortium = {
 	}
 
 	planet_modifier = {
-		job_miner_add = 5
+		job_miner_add = 500
 	}
 
 	resources = {
@@ -2791,7 +2791,7 @@ branch_caleston_intimate_apparel = {
 	}
 
 	planet_modifier = {
-		job_artisan_add = 2
+		job_artisan_add = 200
 	}
 
 	resources = {
@@ -2837,8 +2837,8 @@ branch_caleston_genetic_paradigms = {
 	}
 
 	planet_modifier = {
-		job_researcher_add = 1
-		job_healthcare_add = 1
+		job_researcher_add = 100
+		job_healthcare_add = 100
 	}
 
 	resources = {
@@ -2887,8 +2887,8 @@ branch_caleston_exo_solar_shipping = {
 	}
 
 	planet_modifier = {
-		job_clerk_add = 3
-		job_merchant_add = 1
+		job_clerk_add = 300
+		job_merchant_add = 100
 	}
 
 	resources = {
@@ -2939,7 +2939,7 @@ branch_caleston_devlon_industries = {
 	}
 
 	planet_modifier = {
-		job_foundry_add = 2
+		job_foundry_add = 200
 	}
 
 	resources = {
@@ -2983,8 +2983,8 @@ branch_caleston_uwam_consortium = {
 	}
 
 	planet_modifier = {
-		job_miner_add =  2
-		job_foundry_add = 1
+		job_miner_add =  200
+		job_foundry_add = 100
 	}
 
 	resources = {
@@ -3032,8 +3032,8 @@ branch_caleston_parohe_aerospace = {
 	}
 
 	planet_modifier = {
-		job_artisan_add = 1
-		job_foundry_add = 1
+		job_artisan_add = 100
+		job_foundry_add = 100
 	}
 
 	resources = {
@@ -3081,8 +3081,8 @@ branch_caleston_nezo_transportation = {
 	}
 
 	planet_modifier = {
-		job_researcher_add = 1
-		job_clerk_add = 2
+		job_researcher_add = 100
+		job_clerk_add = 200
 	}
 
 	resources = {
@@ -3128,8 +3128,8 @@ branch_caleston_umsung_holdings = {
 	}
 
 	planet_modifier = {
-		job_foundry_add = 1
-		job_miner_add = 2
+		job_foundry_add = 100
+		job_miner_add = 200
 	}
 
 	resources = {
@@ -3178,10 +3178,10 @@ branch_caleston_tyriel_adv_comm_corp = {
 	}
 
 	planet_modifier = {
-		job_artisan_add = 1
-		job_bureaucrat_add = 1
-		job_clerk_add = 2
-		job_merchant_add = 1
+		job_artisan_add = 100
+		job_bureaucrat_add = 100
+		job_clerk_add = 200
+		job_merchant_add = 100
 	}
 
 	resources = {
@@ -3222,7 +3222,7 @@ branch_caleston_guanghui_solutions = {
 		}
 	}
 	planet_modifier = {
-		job_miner_add = 3
+		job_miner_add = 300
 	}
 
 	resources = {
@@ -3275,8 +3275,8 @@ branch_caleston_beauty_solutions = {
 	}
 
 	triggered_planet_modifier = {
-		job_artisan_add = 2 
-		planet_amenities_add = 5
+		job_artisan_add = 200
+		planet_amenities_add = 500
 		pop_happiness = 0.05
 	}
 
@@ -3369,7 +3369,7 @@ branch_vorcha_infestation = {
 	}
 
 	planet_modifier = {
-		job_enforcer_add = 2
+		job_enforcer_add = 200
 		planet_crime_mult = -0.05
 		planet_jobs_unity_produces_mult = 0.05
 	}
@@ -3424,7 +3424,7 @@ branch_vorcha_mercenary_slum = {
 	}
 
 	planet_modifier = {
-		job_soldier_add = 1
+		job_soldier_add = 100
 		planet_jobs_food_upkeep_mult = 0.05
 	}
 
