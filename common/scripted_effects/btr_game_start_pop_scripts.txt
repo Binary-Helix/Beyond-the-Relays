@@ -2,114 +2,129 @@
 
 generate_asr_thessia_pops = {
 	while = {
-	   count = 200
+	   count = 121
 	   generate_homeworldPop = yes
 	}
 	every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
 }
 
 generate_asr_lusia_pops = {
 	while = {
-		count = 290
+		count = 16
 		generate_asariPop = yes
 	 }
 	 every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
 }
 
 generate_asr_sanves_pops = {
 	while = {
-		count = 300
+		count = 36
 		generate_asariPop = yes
 	 }
 	 every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
 }
 
 generate_asr_nevos_pops = {
 	while = {
-		count = 240
+		count = 24
 		generate_asariPop = yes
 	 }
 	 every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
 }
 
 generate_asr_cyone_pops = {
 	while = {
-		count = 240
+		count = 11
 		generate_asariPop = yes
 	 }
 	 every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
 }
 
 generate_asr_malkos_pops = {
 	while = {
-		count = 210
+		count = 15
 		generate_asariPop = yes
 	 }
 	 every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
 }
 
 generate_asr_hyetiana_pops = {
 	while = {
-		count = 170
+		count = 15
 		generate_asariPop = yes
 	 }
 	 every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
 }
 
 generate_asr_diras_pops = {
 	while = {
-		count = 170
+		count = 11
 		generate_asariPop = yes
 	 }
 	 every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
 }
 
 generate_asr_charias_pops = {
 	while = {
-		count = 150
+		count = 12
 		generate_asariPop = yes
 	 }
 	 every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
 }
 
 generate_asr_trategos_pops = {
 	while = {
-		count = 150
+		count = 11
 		generate_asariPop = yes
 	 }
 	 every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
 }
 
 generate_asr_niacal_pops = {
 	while = {
-		count = 130
+		count = 15
 		generate_asariPop = yes
 	 }
-	 every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
 }
 
 generate_asr_agessia_pops = {
 	while = {
-		count = 50
+		count = 21
 		generate_asariPop = yes
 	 }
-	 every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
 }
 
 generate_asr_lesuss_pops = {
 	while = {
-		count = 50
+		count = 12
 		generate_asariPop = yes
 	 }
-	 every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
 }
 
 generate_asr_espota_pops = {
 	while = {
-		count = 40
+		count = 11
 		generate_asariPop = yes
 	 }
-	 every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
+	every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
 }
 
 ##### SALARIAN UNION #####

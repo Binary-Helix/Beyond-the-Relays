@@ -1,9 +1,0 @@
-generate_btr_starting_canon_districts = {
-    optimize_memory
-    set_timed_planet_flag = {
-        flag = ignore_ai_building_limitations
-        days = 1
-    }
-    #Origins
-    inline_script = game_start/btr_origins
-}

@@ -24,30 +24,41 @@ generate_asari_republics_territory = {
 					galaxy_size = btr_canon_1300
 					galaxy_size = btr_canon_1500
 				}
-			}		
+			}
+			if = {
+				limit = {
+					has_star_flag = parnitha_system
+				}
+				create_starbase = {
+					size = starbase_starhold
+					owner = event_target:asari_republics
+					module = shipyard
+					module = shipyard
+					module = shipyard
+					module = shipyard
+					building = crew_quarters
+					building = fleet_academy
+				}
+			}
 			if = {
 				limit = {
 					NOT = {
 						exists = starbase
 					}				
 				}
-	
-				if = {
-					limit = {
-						has_star_flag = parnitha_system
-					}
-					create_starbase = {
-						size = starbase_starhold
-						owner = event_target:asari_republics
-					}
-				}
 				else_if = {
 					limit = {
 						has_star_flag = nahuala_system
 					}
 					create_starbase = {
-						size = starbase_starport
+						size = starbase_starhold
 						owner = event_target:asari_republics
+						module = trading_hub
+						module = trading_hub
+						module = solar_panel_network
+						module = solar_panel_network
+						building = offworld_trading_company
+						building = resource_silo
 					}
 				}
 				else_if = {
@@ -55,9 +66,14 @@ generate_asari_republics_territory = {
 						has_star_flag = elensia_system
 					}
 					create_starbase = {
-						size = starbase_starport
-
+						size = starbase_starhold
 						owner = event_target:asari_republics
+						module = gun_battery
+						module = hangar_bay
+						module = gun_battery
+						module = hangar_bay
+						building = communications_jammer
+						building = disruption_field
 					}
 				}
 				else_if = {
@@ -65,9 +81,14 @@ generate_asari_republics_territory = {
 						has_star_flag = pelion_system
 					}
 					create_starbase = {
-						size = starbase_starport
-
+						size = starbase_starhold
 						owner = event_target:asari_republics
+						module = solar_panel_network
+						module = solar_panel_network
+						module = solar_panel_network
+						module = solar_panel_network
+						building = resource_silo
+						building = transit_hub
 					}
 				}
 				else_if = {
@@ -76,8 +97,13 @@ generate_asari_republics_territory = {
 					}
 					create_starbase = {
 						size = starbase_starhold
-
 						owner = event_target:asari_republics
+						module = shipyard
+						module = shipyard
+						module = anchorage
+						module = anchorage
+						building = fleet_academy
+						building = naval_logistics_office
 					}
 				}
 				else_if = {
@@ -85,8 +111,14 @@ generate_asari_republics_territory = {
 						has_star_flag = tomaros_system
 					}
 					create_starbase = {
-						size = starbase_outpost
+						size = starbase_starhold
 						owner = event_target:asari_republics
+						module = anchorage
+						module = anchorage
+						module = anchorage
+						module = anchorage
+						building = naval_logistics_office
+						building = communications_jammer
 					}
 				}
 				else_if = {
