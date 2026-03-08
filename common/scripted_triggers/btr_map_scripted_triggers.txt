@@ -579,12 +579,18 @@ is_btr_arctic_world = {
 		is_planet_class = pc_ammonia
 		is_planet_class = pc_chlorine
 		is_planet_class = pc_methane
-		is_planet_class = pc_mephitic
 		is_planet_class = pc_primal
 		is_planet_class = pc_highgrav_ammonia
 		is_planet_class = pc_highgrav_chlorine
 		is_planet_class = pc_highgrav_methane
 		is_planet_class = pc_highgrav_mephitic
 		is_planet_class = pc_highgrav_primal
+	}
+}
+
+is_btr_mephitic_world = {
+	OR = {
+		is_planet_class = pc_mephitic
+		is_planet_class = pc_highgrav_mephitic
 	}
 }

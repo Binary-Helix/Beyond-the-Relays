@@ -90,6 +90,9 @@ d_hot_springs = {
 			is_btr_habitable_world = yes
 			is_planet_class = pc_nuked
 		}
+		NOT ={
+			is_btr_mephitic_world = yes
+		}
 	}
 
 	drop_weight = {
@@ -128,6 +131,9 @@ d_rushing_waterfalls = {
 				is_btr_tundra_world = yes
 				is_btr_arctic_world = yes
 			}
+		}
+		NOT ={
+			is_btr_mephitic_world = yes
 		}
 	}
 
@@ -281,6 +287,9 @@ d_underwater_vent = {
 				is_btr_savanna_world = yes
 			}
 		}
+		NOT ={
+			is_btr_mephitic_world = yes
+		}
 	}
 
 	drop_weight = {
@@ -320,6 +329,7 @@ d_tempestous_mountain = {
 				is_btr_swamp_world = yes
 				is_btr_tundra_world = yes
 				is_btr_arctic_world = yes
+				is_btr_mephitic_world = yes
 			}
 		}
 	}
@@ -588,6 +598,9 @@ d_lichen_fields = {
 
 	potential = {
 		is_btr_habitable_world = yes
+		NOT ={
+			is_btr_mephitic_world = yes
+		}
 	}
 
 	drop_weight = {
@@ -638,6 +651,7 @@ d_bountiful_plains = {
 				is_btr_alpine_world = yes
 				is_btr_tundra_world = yes
 				is_btr_arctic_world = yes
+				is_btr_mephitic_world = yes
 			}
 		}
 	}
@@ -680,6 +694,9 @@ d_rugged_woods = {
 			is_btr_tundra_world = yes
 			is_btr_arctic_world = yes
 		}
+		NOT ={
+			is_btr_mephitic_world = yes
+		}
 	}
 
 	drop_weight = {
@@ -720,6 +737,9 @@ d_green_hills = {
 			is_btr_tropical_world = yes
 			is_btr_swamp_world = yes
 			is_btr_continental_world = yes
+		}
+		NOT ={
+			is_btr_mephitic_world = yes
 		}
 	}
 
@@ -762,6 +782,9 @@ d_forgiving_tundra = {
 			is_btr_tundra_world = yes
 			is_btr_arctic_world = yes
 		}
+		NOT ={
+			is_btr_mephitic_world = yes
+		}
 	}
 
 	drop_weight = {
@@ -802,6 +825,9 @@ d_boggy_fens = {
 			is_btr_tropical_world = yes
 			is_btr_swamp_world = yes
 			is_btr_continental_world = yes
+		}
+		NOT ={
+			is_btr_mephitic_world = yes
 		}
 	}
 
@@ -845,6 +871,9 @@ d_nutritious_mudland = {
 			is_btr_continental_world = yes
 			is_btr_alpine_world = yes
 		}
+		NOT ={
+			is_btr_mephitic_world = yes
+		}
 	}
 
 	drop_weight = {
@@ -884,6 +913,9 @@ d_fungal_caves = {
 			is_btr_continental_world = yes
 			is_btr_alpine_world = yes
 			is_btr_tundra_world = yes
+		}
+		NOT ={
+			is_btr_mephitic_world = yes
 		}
 	}
 
@@ -925,6 +957,9 @@ d_lush_jungle = {
 			is_btr_swamp_world = yes
 			is_btr_continental_world = yes
 		}
+		NOT ={
+			is_btr_mephitic_world = yes
+		}
 	}
 
 	drop_weight = {
@@ -960,6 +995,9 @@ d_fertile_lands = {
 			is_btr_tropical_world = yes
 			is_btr_swamp_world = yes
 			is_btr_continental_world = yes
+		}
+		NOT ={
+			is_btr_mephitic_world = yes
 		}
 	}
 
@@ -999,6 +1037,9 @@ d_great_river = {
 			is_btr_continental_world = yes
 			is_btr_alpine_world = yes
 		}
+		NOT ={
+			is_btr_mephitic_world = yes
+		}
 	}
 
 	drop_weight = {
@@ -1035,6 +1076,9 @@ d_black_soil = {
 			is_btr_swamp_world = yes
 			is_btr_continental_world = yes
 		}
+		NOT ={
+			is_btr_mephitic_world = yes
+		}
 	}
 
 	drop_weight = {
@@ -1070,6 +1114,9 @@ d_teeming_reef = {
 		OR = {
 			is_btr_ocean_world = yes
 			is_btr_tropical_world = yes
+		}
+		NOT ={
+			is_btr_mephitic_world = yes
 		}
 	}
 
@@ -1108,6 +1155,9 @@ d_marvelous_oasis = {
 			is_btr_desert_world = yes
 			is_btr_savanna_world = yes
 		}
+		NOT ={
+			is_btr_mephitic_world = yes
+		}
 	}
 
 	drop_weight = {
@@ -1143,6 +1193,9 @@ d_tropical_island = {
 		OR = {
 			is_btr_tropical_world = yes
 			is_btr_continental_world = yes
+		}
+		NOT ={
+			is_btr_mephitic_world = yes
 		}
 	}
 
@@ -1182,6 +1235,9 @@ d_fungal_forest = {
 			is_btr_swamp_world = yes
 			is_btr_alpine_world = yes
 			is_btr_tundra_world = yes
+		}
+		NOT ={
+			is_btr_mephitic_world = yes
 		}
 	}
 
