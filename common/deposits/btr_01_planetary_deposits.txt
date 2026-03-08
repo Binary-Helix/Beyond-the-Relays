@@ -48,14 +48,21 @@ d_arid_highlands = {
 	}
 
 	potential = {
-		is_dry_non_volcanic = yes
+		AND = {
+			is_btr_habitable_world = yes
+			NOT = {
+				is_btr_ocean_world = yes
+				is_btr_tropical_world = yes
+				is_btr_swamp_world = yes
+			}
+		}
 	}
 
 	drop_weight = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_dry = yes
+			is_btr_dry_subclass = yes
 		}
 	}
 }
@@ -80,8 +87,7 @@ d_hot_springs = {
 
 	potential = {
 		OR = {
-			is_cold = yes
-			is_wet = yes
+			is_btr_habitable_world = yes
 			is_planet_class = pc_nuked
 		}
 	}
@@ -90,7 +96,7 @@ d_hot_springs = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_dry = yes
+			is_btr_cold_subclass = yes
 		}
 	}
 }
@@ -114,14 +120,22 @@ d_rushing_waterfalls = {
 	}
 
 	potential = {
-		is_wet = yes
+		AND = {
+			is_btr_habitable_world = yes
+			NOR = {
+				is_btr_arid_world = yes
+				is_btr_desert_world = yes
+				is_btr_tundra_world = yes
+				is_btr_arctic_world = yes
+			}
+		}
 	}
 
 	drop_weight = {
 		weight = @med
 		modifier = {
 			factor = @planet_type_bonus
-			is_dry = yes
+			is_btr_wet_subclass = yes
 		}
 	}
 }
@@ -145,11 +159,16 @@ d_searing_desert = {
 	}
 
 	potential = {
-		OR = {
-			is_planet_class = pc_gaia
-			is_planet_class = pc_nuked
-			is_planet_class = pc_relic
-			is_dry_non_volcanic = yes
+		AND = {
+			is_btr_habitable_world = yes
+			NOR = {
+				is_btr_tropical_world = yes
+				is_btr_swamp_world = yes
+				is_btr_ocean_world = yes
+				is_btr_alpine_world = yes
+				is_btr_tundra_world = yes
+				is_btr_arctic_world = yes
+			}
 		}
 	}
 
@@ -157,7 +176,7 @@ d_searing_desert = {
 		weight = @med
 		modifier = {
 			factor = @planet_type_bonus
-			is_dry = yes
+			is_btr_dry_subclass = yes
 		}
 	}
 }
@@ -182,9 +201,11 @@ d_frozen_gas_lake = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_gaia
-			is_planet_class = pc_relic
-			is_cold = yes
+			is_btr_swamp_world = yes
+			is_btr_continental_world = yes
+			is_btr_alpine_world = yes
+			is_btr_tundra_world = yes
+			is_btr_arctic_world = yes
 		}
 	}
 
@@ -192,7 +213,7 @@ d_frozen_gas_lake = {
 		weight = @med
 		modifier = {
 			factor = @planet_type_bonus
-			is_dry = yes
+			is_btr_cold_subclass = yes
 		}
 	}
 }
@@ -216,32 +237,11 @@ d_geothermal_vent = {
 	}
 
 	potential = {
-		OR = {
-			is_planet_class = pc_arctic
-			is_planet_class = pc_tundra
-			is_planet_class = pc_savannah
-			is_planet_class = pc_desert
-			is_planet_class = pc_arid
-			is_planet_class = pc_volcanic
-			is_planet_class = pc_dextro_arctic
-			is_planet_class = pc_dextro_tundra
-			is_planet_class = pc_dextro_savannah
-			is_planet_class = pc_dextro_desert
-			is_planet_class = pc_dextro_arid
-			is_planet_class = pc_dextro_highgrav_arctic
-			is_planet_class = pc_highgrav_arctic
-			is_planet_class = pc_dextro_highgrav_tundra
-			is_planet_class = pc_highgrav_tundra
-			is_planet_class = pc_dextro_highgrav_savannah
-			is_planet_class = pc_highgrav_savannah
-			is_planet_class = pc_dextro_highgrav_desert
-			is_planet_class = pc_highgrav_desert
-			is_planet_class = pc_dextro_highgrav_arid
-			is_planet_class = pc_highgrav_arid
-			is_planet_class = pc_swamp
-			is_planet_class = pc_dextro_swamp
-			is_planet_class = pc_dextro_highgrav_swamp
-			is_planet_class = pc_highgrav_swamp
+		AND = {
+			is_btr_habitable_world = yes
+			NOT = {
+				is_btr_ocean_world = yes
+			}
 		}
 	}
 
@@ -249,7 +249,7 @@ d_geothermal_vent = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_dry = yes
+			is_btr_dry_subclass = yes
 		}
 	}
 }
@@ -273,26 +273,21 @@ d_underwater_vent = {
 	}
 
 	potential = {
-		OR = {
-			is_planet_class = pc_gaia
-			is_planet_class = pc_relic
-			is_planet_class = pc_ocean
-			is_planet_class = pc_nuked
-			is_planet_class = pc_dextro_ocean
-			is_planet_class = pc_dextro_highgrav_ocean
-			is_planet_class = pc_highgrav_ocean
-			is_planet_class = pc_swamp
-			is_planet_class = pc_dextro_swamp
-			is_planet_class = pc_dextro_highgrav_swamp
-			is_planet_class = pc_highgrav_swamp
+		AND = {
+			is_btr_habitable_world = yes
+			NOR = {
+				is_btr_desert_world = yes
+				is_btr_arid_world = yes
+				is_btr_savanna_world = yes
+			}
 		}
 	}
 
 	drop_weight = {
-		weight = @low
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_dry = yes
+			is_btr_ocean_world = yes
 		}
 	}
 }
@@ -316,30 +311,24 @@ d_tempestous_mountain = {
 	}
 
 	potential = {
-		OR = {
-			is_planet_class = pc_tropical
-			is_planet_class = pc_alpine
-			is_planet_class = pc_gaia
-			is_planet_class = pc_relic
-			is_planet_class = pc_continental
-			is_planet_class = pc_volcanic
-			is_planet_class = pc_dextro_tropical
-			is_planet_class = pc_dextro_alpine
-			is_planet_class = pc_dextro_continental
-			is_planet_class = pc_dextro_highgrav_tropical
-			is_planet_class = pc_highgrav_tropical
-			is_planet_class = pc_dextro_highgrav_alpine
-			is_planet_class = pc_highgrav_alpine
-			is_planet_class = pc_dextro_highgrav_continental
-			is_planet_class = pc_highgrav_continental
+		AND = {
+			is_btr_habitable_world = yes
+			NOR = {
+				is_btr_desert_world = yes
+				is_btr_arid_world = yes
+				is_btr_savanna_world = yes
+				is_btr_swamp_world = yes
+				is_btr_tundra_world = yes
+				is_btr_arctic_world = yes
+			}
 		}
 	}
 
 	drop_weight = {
-		weight = @low
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_dry = yes
+			is_btr_continental_world = yes
 		}
 	}
 }
@@ -367,24 +356,12 @@ d_veiny_cliffs = {
 	}
 
 	potential = {
-		OR = {
-			is_planet_class = pc_alpine
-			is_planet_class = pc_arctic
-			is_planet_class = pc_arid
-			is_planet_class = pc_continental
-			is_planet_class = pc_nuked
-			is_planet_class = pc_dextro_alpine
-			is_planet_class = pc_dextro_arctic
-			is_planet_class = pc_dextro_arid
-			is_planet_class = pc_dextro_continental
-			is_planet_class = pc_dextro_highgrav_alpine
-			is_planet_class = pc_highgrav_alpine
-			is_planet_class = pc_dextro_highgrav_arctic
-			is_planet_class = pc_highgrav_arctic
-			is_planet_class = pc_dextro_highgrav_arid
-			is_planet_class = pc_highgrav_arid
-			is_planet_class = pc_dextro_highgrav_continental
-			is_planet_class = pc_highgrav_continental
+		AND = {
+			is_btr_habitable_world = yes
+			NOR = {
+				is_btr_swamp_world = yes
+				is_btr_ocean_world = yes
+			}
 		}
 	}
 
@@ -392,7 +369,7 @@ d_veiny_cliffs = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_cold = yes
+			is_btr_cold_subclass = yes
 		}
 	}
 }
@@ -416,31 +393,8 @@ d_mineral_fields = {
 	}
 
 	potential = {
-		OR = {
-			is_planet_class = pc_tropical
-			is_planet_class = pc_savannah
-			is_planet_class = pc_desert
-			is_planet_class = pc_ocean
-			is_planet_class = pc_tundra
-			is_planet_class = pc_dextro_tropical
-			is_planet_class = pc_dextro_savannah
-			is_planet_class = pc_dextro_desert
-			is_planet_class = pc_dextro_ocean
-			is_planet_class = pc_dextro_tundra
-			is_planet_class = pc_dextro_highgrav_tropical
-			is_planet_class = pc_highgrav_tropical
-			is_planet_class = pc_dextro_highgrav_savannah
-			is_planet_class = pc_highgrav_savannah
-			is_planet_class = pc_dextro_highgrav_desert
-			is_planet_class = pc_highgrav_desert
-			is_planet_class = pc_dextro_highgrav_ocean
-			is_planet_class = pc_highgrav_ocean
-			is_planet_class = pc_dextro_highgrav_tundra
-			is_planet_class = pc_highgrav_tundra
-			is_planet_class = pc_swamp
-			is_planet_class = pc_dextro_swamp
-			is_planet_class = pc_dextro_highgrav_swamp
-			is_planet_class = pc_highgrav_swamp
+		NOT = {
+			is_btr_ocean_world = yes
 		}
 	}
 
@@ -448,7 +402,7 @@ d_mineral_fields = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_cold = yes
+			is_btr_cold_subclass = yes
 		}
 	}
 }
@@ -471,25 +425,12 @@ d_prosperous_mesa = {
 	}
 
 	potential = {
-		OR = {
-			is_planet_class = pc_continental
-			is_planet_class = pc_tropical
-			is_planet_class = pc_savannah
-			is_planet_class = pc_desert
-			is_planet_class = pc_gaia
-			is_planet_class = pc_relic
-			is_planet_class = pc_dextro_continental
-			is_planet_class = pc_dextro_tropical
-			is_planet_class = pc_dextro_savannah
-			is_planet_class = pc_dextro_desert
-			is_planet_class = pc_dextro_highgrav_continental
-			is_planet_class = pc_highgrav_continental
-			is_planet_class = pc_dextro_highgrav_tropical
-			is_planet_class = pc_highgrav_tropical
-			is_planet_class = pc_dextro_highgrav_savannah
-			is_planet_class = pc_highgrav_savannah
-			is_planet_class = pc_dextro_highgrav_desert
-			is_planet_class = pc_highgrav_desert
+		AND = {
+			is_btr_habitable_world = yes
+			NOR = {
+				is_btr_swamp_world = yes
+				is_btr_ocean_world = yes
+			}
 		}
 	}
 
@@ -497,7 +438,7 @@ d_prosperous_mesa = {
 		weight = @med
 		modifier = {
 			factor = @planet_type_bonus
-			is_cold = yes
+			is_btr_cold_subclass = yes
 		}
 	}
 }
@@ -532,42 +473,14 @@ d_ore_rich_caverns = {
 	}
 
 	potential = {
-		OR = {
-			is_planet_class = pc_ocean
-			is_planet_class = pc_alpine
-			is_planet_class = pc_arctic
-			is_planet_class = pc_arid
-			is_planet_class = pc_tundra
-			is_planet_class = pc_nuked
-			is_planet_class = pc_gaia
-			is_planet_class = pc_relic
-			is_planet_class = pc_dextro_ocean
-			is_planet_class = pc_dextro_highgrav_ocean
-			is_planet_class = pc_highgrav_ocean
-			is_planet_class = pc_dextro_alpine
-			is_planet_class = pc_dextro_highgrav_alpine
-			is_planet_class = pc_highgrav_alpine
-			is_planet_class = pc_dextro_arctic
-			is_planet_class = pc_dextro_highgrav_arctic
-			is_planet_class = pc_highgrav_arctic
-			is_planet_class = pc_dextro_arid
-			is_planet_class = pc_dextro_highgrav_arid
-			is_planet_class = pc_highgrav_arid
-			is_planet_class = pc_dextro_tundra
-			is_planet_class = pc_dextro_highgrav_tundra
-			is_planet_class = pc_highgrav_tundra
-			is_planet_class = pc_swamp
-			is_planet_class = pc_dextro_swamp
-			is_planet_class = pc_dextro_highgrav_swamp
-			is_planet_class = pc_highgrav_swamp
-		}
+		is_btr_habitable_world = yes
 	}
 
 	drop_weight = {
 		weight = @med
 		modifier = {
 			factor = @planet_type_bonus
-			is_cold = yes
+			is_btr_cold_subclass = yes
 		}
 	}
 }
@@ -590,37 +503,12 @@ d_rich_mountain = {
 	}
 
 	potential = {
-		OR = {
-			is_planet_class = pc_continental
-			is_planet_class = pc_desert
-			is_planet_class = pc_alpine
-			is_planet_class = pc_arctic
-			is_planet_class = pc_arid
-			is_planet_class = pc_tundra
-			is_planet_class = pc_gaia
-			is_planet_class = pc_relic
-			is_planet_class = pc_dextro_continental
-			is_planet_class = pc_dextro_highgrav_continental
-			is_planet_class = pc_highgrav_continental
-			is_planet_class = pc_dextro_desert
-			is_planet_class = pc_dextro_highgrav_desert
-			is_planet_class = pc_highgrav_desert
-			is_planet_class = pc_dextro_alpine
-			is_planet_class = pc_dextro_highgrav_alpine
-			is_planet_class = pc_highgrav_alpine
-			is_planet_class = pc_dextro_arctic
-			is_planet_class = pc_dextro_highgrav_arctic
-			is_planet_class = pc_highgrav_arctic
-			is_planet_class = pc_dextro_arid
-			is_planet_class = pc_dextro_highgrav_arid
-			is_planet_class = pc_highgrav_arid
-			is_planet_class = pc_dextro_tundra
-			is_planet_class = pc_dextro_highgrav_tundra
-			is_planet_class = pc_highgrav_tundra
-			is_planet_class = pc_swamp
-			is_planet_class = pc_dextro_swamp
-			is_planet_class = pc_dextro_highgrav_swamp
-			is_planet_class = pc_highgrav_swamp
+		AND = {
+			is_btr_habitable_world = yes
+			NOR = {
+				is_btr_swamp_world = yes
+				is_btr_ocean_world = yes
+			}
 		}
 	}
 
@@ -628,7 +516,7 @@ d_rich_mountain = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_cold = yes
+			is_btr_cold_subclass = yes
 		}
 	}
 }
@@ -651,34 +539,23 @@ d_submerged_ore_veins = {
 	}
 
 	potential = {
-		OR = {
-			is_planet_class = pc_ocean
-			is_planet_class = pc_tropical
-			is_planet_class = pc_savannah
-			is_planet_class = pc_nuked
-			is_planet_class = pc_gaia
-			is_planet_class = pc_relic
-			is_planet_class = pc_dextro_ocean
-			is_planet_class = pc_dextro_highgrav_ocean
-			is_planet_class = pc_highgrav_ocean
-			is_planet_class = pc_dextro_tropical
-			is_planet_class = pc_dextro_highgrav_tropical
-			is_planet_class = pc_highgrav_tropical
-			is_planet_class = pc_dextro_savannah
-			is_planet_class = pc_dextro_highgrav_savannah
-			is_planet_class = pc_highgrav_savannah
-			is_planet_class = pc_swamp
-			is_planet_class = pc_dextro_swamp
-			is_planet_class = pc_dextro_highgrav_swamp
-			is_planet_class = pc_highgrav_swamp
+		AND = {
+			is_btr_habitable_world = yes
+			NOR = {
+				is_btr_arid_world = yes
+				is_btr_desert_world = yes
+				is_btr_savanna_world = yes
+				is_btr_arctic_world = yes
+				is_btr_tundra_world = yes
+			}
 		}
 	}
 
 	drop_weight = {
-		weight = @low
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_cold = yes
+			is_btr_ocean_world = yes
 		}
 	}
 }
@@ -710,13 +587,7 @@ d_lichen_fields = {
 	}
 
 	potential = {
-		OR = {
-			is_planet_class = pc_nuked
-			is_planet_class = pc_arctic
-			is_planet_class = pc_dextro_arctic
-			is_planet_class = pc_dextro_highgrav_arctic
-			is_planet_class = pc_highgrav_arctic
-		}
+		is_btr_habitable_world = yes
 	}
 
 	drop_weight = {
@@ -727,7 +598,7 @@ d_lichen_fields = {
 		}
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_cold_subclass = yes
 		}
 	}
 }
@@ -756,15 +627,18 @@ d_bountiful_plains = {
 	}
 
 	potential = {
-		OR = {
-			is_planet_class = pc_arid
-			is_planet_class = pc_savannah
-			is_planet_class = pc_dextro_arid
-			is_planet_class = pc_dextro_highgrav_arid
-			is_planet_class = pc_highgrav_arid
-			is_planet_class = pc_dextro_savannah
-			is_planet_class = pc_dextro_highgrav_savannah
-			is_planet_class = pc_highgrav_savannah
+		AND = {
+			is_btr_habitable_world = yes
+			NOT = {
+				is_btr_arid_world = yes
+				is_btr_desert_world = yes
+				is_btr_tropical_world = yes
+				is_btr_swamp_world = yes
+				is_btr_ocean_world = yes
+				is_btr_alpine_world = yes
+				is_btr_tundra_world = yes
+				is_btr_arctic_world = yes
+			}
 		}
 	}
 
@@ -772,7 +646,7 @@ d_bountiful_plains = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_wet_subclass = yes
 		}
 	}
 }
@@ -799,14 +673,20 @@ d_rugged_woods = {
 	}
 
 	potential = {
-		is_planet_class = pc_continental
+		OR = {
+			is_btr_swamp_world = yes
+			is_btr_continental_world = yes
+			is_btr_alpine_world = yes
+			is_btr_tundra_world = yes
+			is_btr_arctic_world = yes
+		}
 	}
 
 	drop_weight = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_wet_subclass = yes
 		}
 	}
 }
@@ -836,14 +716,10 @@ d_green_hills = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_ocean
-			is_planet_class = pc_tropical
-			is_planet_class = pc_dextro_ocean
-			is_planet_class = pc_dextro_highgrav_ocean
-			is_planet_class = pc_highgrav_ocean
-			is_planet_class = pc_dextro_tropical
-			is_planet_class = pc_dextro_highgrav_tropical
-			is_planet_class = pc_highgrav_tropical
+			is_btr_savanna_world = yes
+			is_btr_tropical_world = yes
+			is_btr_swamp_world = yes
+			is_btr_continental_world = yes
 		}
 	}
 
@@ -851,7 +727,7 @@ d_green_hills = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_wet_subclass = yes
 		}
 	}
 }
@@ -881,14 +757,10 @@ d_forgiving_tundra = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_alpine
-			is_planet_class = pc_tundra
-			is_planet_class = pc_dextro_alpine
-			is_planet_class = pc_dextro_highgrav_alpine
-			is_planet_class = pc_highgrav_alpine
-			is_planet_class = pc_dextro_tundra
-			is_planet_class = pc_dextro_highgrav_tundra
-			is_planet_class = pc_highgrav_tundra
+			is_btr_continental_world = yes
+			is_btr_alpine_world = yes
+			is_btr_tundra_world = yes
+			is_btr_arctic_world = yes
 		}
 	}
 
@@ -896,7 +768,7 @@ d_forgiving_tundra = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_cold_subclass = yes
 		}
 	}
 }
@@ -925,21 +797,19 @@ d_boggy_fens = {
 	}
 
 	potential = {
-		is_planet_class = pc_ocean
-		is_planet_class = pc_dextro_ocean
-		is_planet_class = pc_dextro_highgrav_ocean
-			is_planet_class = pc_highgrav_ocean
-		is_planet_class = pc_swamp
-		is_planet_class = pc_dextro_swamp
-		is_planet_class = pc_dextro_highgrav_swamp
-			is_planet_class = pc_highgrav_swamp
+		OR = {
+			is_btr_savanna_world = yes
+			is_btr_tropical_world = yes
+			is_btr_swamp_world = yes
+			is_btr_continental_world = yes
+		}
 	}
 
 	drop_weight = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_wet_subclass = yes
 		}
 	}
 }
@@ -968,21 +838,20 @@ d_nutritious_mudland = {
 	}
 
 	potential = {
-		is_planet_class = pc_desert
-		is_planet_class = pc_dextro_desert
-		is_planet_class = pc_dextro_highgrav_desert
-		is_planet_class = pc_highgrav_desert
-		is_planet_class = pc_swamp
-		is_planet_class = pc_dextro_swamp
-		is_planet_class = pc_dextro_highgrav_swamp
-		is_planet_class = pc_highgrav_swamp
+		OR = {
+			is_btr_savanna_world = yes
+			is_btr_tropical_world = yes
+			is_btr_swamp_world = yes
+			is_btr_continental_world = yes
+			is_btr_alpine_world = yes
+		}
 	}
 
 	drop_weight = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_wet_subclass = yes
 		}
 	}
 }
@@ -1008,8 +877,13 @@ d_fungal_caves = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_nuked
-			is_cold = yes
+			is_btr_arid_world = yes
+			is_btr_desert_world = yes
+			is_btr_savanna_world = yes
+			is_btr_swamp_world = yes
+			is_btr_continental_world = yes
+			is_btr_alpine_world = yes
+			is_btr_tundra_world = yes
 		}
 	}
 
@@ -1021,7 +895,7 @@ d_fungal_caves = {
 		}
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_wet_subclass = yes
 		}
 	}
 }
@@ -1047,19 +921,9 @@ d_lush_jungle = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_gaia
-			is_planet_class = pc_tropical
-			is_planet_class = pc_ocean
-			is_planet_class = pc_dextro_tropical
-			is_planet_class = pc_dextro_highgrav_tropical
-			is_planet_class = pc_highgrav_tropical
-			is_planet_class = pc_swamp
-			is_planet_class = pc_dextro_swamp
-			is_planet_class = pc_dextro_highgrav_swamp
-			is_planet_class = pc_highgrav_swamp
-			is_planet_class = pc_dextro_ocean
-			is_planet_class = pc_dextro_highgrav_ocean
-			is_planet_class = pc_highgrav_ocean
+			is_btr_tropical_world = yes
+			is_btr_swamp_world = yes
+			is_btr_continental_world = yes
 		}
 	}
 
@@ -1067,7 +931,7 @@ d_lush_jungle = {
 		weight = @med
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_wet_subclass = yes
 		}
 	}
 }
@@ -1093,19 +957,9 @@ d_fertile_lands = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_savannah
-			is_planet_class = pc_continental
-			is_planet_class = pc_gaia
-			is_planet_class = pc_arid
-			is_planet_class = pc_dextro_savannah
-			is_planet_class = pc_dextro_highgrav_savannah
-			is_planet_class = pc_highgrav_savannah
-			is_planet_class = pc_dextro_continental
-			is_planet_class = pc_dextro_highgrav_continental
-			is_planet_class = pc_highgrav_continental
-			is_planet_class = pc_dextro_arid
-			is_planet_class = pc_dextro_highgrav_arid
-			is_planet_class = pc_highgrav_arid
+			is_btr_tropical_world = yes
+			is_btr_swamp_world = yes
+			is_btr_continental_world = yes
 		}
 	}
 
@@ -1113,7 +967,7 @@ d_fertile_lands = {
 		weight = @med
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_wet_subclass = yes
 		}
 	}
 }
@@ -1139,14 +993,11 @@ d_great_river = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_arid
-			is_planet_class = pc_desert
-			is_planet_class = pc_dextro_arid
-			is_planet_class = pc_dextro_highgrav_arid
-			is_planet_class = pc_highgrav_arid
-			is_planet_class = pc_dextro_desert
-			is_planet_class = pc_dextro_highgrav_desert
-			is_planet_class = pc_highgrav_desert
+			is_btr_savanna_world = yes
+			is_btr_tropical_world = yes
+			is_btr_swamp_world = yes
+			is_btr_continental_world = yes
+			is_btr_alpine_world = yes
 		}
 	}
 
@@ -1154,7 +1005,7 @@ d_great_river = {
 		weight = @med
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_wet_subclass = yes
 		}
 	}
 }
@@ -1181,19 +1032,8 @@ d_black_soil = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_continental
-			is_planet_class = pc_savannah
-			is_planet_class = pc_gaia
-			is_planet_class = pc_dextro_continental
-			is_planet_class = pc_dextro_highgrav_continental
-			is_planet_class = pc_highgrav_continental
-			is_planet_class = pc_dextro_savannah
-			is_planet_class = pc_dextro_highgrav_savannah
-			is_planet_class = pc_highgrav_savannah
-			is_planet_class = pc_swamp
-			is_planet_class = pc_dextro_swamp
-			is_planet_class = pc_dextro_highgrav_swamp
-			is_planet_class = pc_highgrav_swamp
+			is_btr_swamp_world = yes
+			is_btr_continental_world = yes
 		}
 	}
 
@@ -1201,7 +1041,7 @@ d_black_soil = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_wet_subclass = yes
 		}
 	}
 }
@@ -1228,19 +1068,16 @@ d_teeming_reef = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_gaia
-			is_planet_class = pc_ocean
-			is_planet_class = pc_dextro_ocean
-			is_planet_class = pc_dextro_highgrav_ocean
-			is_planet_class = pc_highgrav_ocean
+			is_btr_ocean_world = yes
+			is_btr_tropical_world = yes
 		}
 	}
 
 	drop_weight = {
-		weight = @low
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_ocean_world = yes
 		}
 	}
 }
@@ -1267,14 +1104,9 @@ d_marvelous_oasis = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_arid
-			is_planet_class = pc_desert
-			is_planet_class = pc_dextro_arid
-			is_planet_class = pc_dextro_highgrav_arid
-			is_planet_class = pc_highgrav_arid
-			is_planet_class = pc_dextro_desert
-			is_planet_class = pc_dextro_highgrav_desert
-			is_planet_class = pc_highgrav_desert
+			is_btr_arid_world = yes
+			is_btr_desert_world = yes
+			is_btr_savanna_world = yes
 		}
 	}
 
@@ -1282,7 +1114,7 @@ d_marvelous_oasis = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_wet_subclass = yes
 		}
 	}
 }
@@ -1309,18 +1141,8 @@ d_tropical_island = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_arid
-			is_planet_class = pc_desert
-			is_planet_class = pc_tropical
-			is_planet_class = pc_dextro_arid
-			is_planet_class = pc_dextro_highgrav_arid
-			is_planet_class = pc_highgrav_arid
-			is_planet_class = pc_dextro_desert
-			is_planet_class = pc_dextro_highgrav_desert
-			is_planet_class = pc_highgrav_desert
-			is_planet_class = pc_dextro_tropical
-			is_planet_class = pc_dextro_highgrav_tropical
-			is_planet_class = pc_highgrav_tropical
+			is_btr_tropical_world = yes
+			is_btr_continental_world = yes
 		}
 	}
 
@@ -1328,7 +1150,7 @@ d_tropical_island = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_wet_subclass = yes
 		}
 	}
 }
@@ -1354,14 +1176,20 @@ d_fungal_forest = {
 	}
 
 	potential = {
-		is_cold = yes
+		OR = {
+			is_btr_continental_world = yes
+			is_btr_tropical_world = yes
+			is_btr_swamp_world = yes
+			is_btr_alpine_world = yes
+			is_btr_tundra_world = yes
+		}
 	}
 
 	drop_weight = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_btr_wet_subclass = yes
 		}
 	}
 }
