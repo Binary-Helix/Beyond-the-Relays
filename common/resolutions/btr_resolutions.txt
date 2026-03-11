@@ -1,0 +1,271 @@
+resolution_petition_citadel_embassy = {
+    icon = "GFX_resolution_petition_embassy"
+
+    resources = {
+        category = resolutions
+        cost = {
+            influence = 500
+        }
+    }
+
+    fire_and_forget = yes
+    target = yes
+    harmful = no
+
+    valid_target = {
+        is_same_value = from
+    }
+
+    effect = {
+        hidden_effect = {
+            set_country_flag = has_citadel_embassy
+            save_event_target_as = new_embassy_empire
+            country_event = { id = btr_council_resolutions.1 }
+        }
+    }
+
+    fail_effects = {
+        hidden_effect = {
+            set_country_flag = citadel_embassy_denied
+            save_event_target_as = denied_embassy_empire
+            country_event = { id = btr_council_resolutions.2 }
+        }
+    }
+
+    potential = {
+        NOR = {
+            has_country_flag = citadel_council_member
+            has_country_flag = has_citadel_embassy
+        }
+    }
+
+    allow = {
+
+    }
+
+    active = {
+        NOT = {
+            has_country_flag = has_citadel_embassy
+       }
+    }
+
+    ai_weight = {
+        base = 10
+
+        modifier = {
+            factor = 0
+            has_country_flag = has_citadel_embassy
+            desc = gal_com_we_have_citadel_embassy
+        }
+    }
+}
+
+resolution_petition_spectre_1 = {
+    icon = "GFX_resolution_petition_spectre"
+
+    resources = {
+        category = resolutions
+        cost = {
+            influence = 500
+        }
+    }
+
+    fire_and_forget = yes
+    target = yes
+    harmful = no
+
+    valid_target = {
+        is_same_value = from
+    }
+
+    effect = {
+        hidden_effect = {
+            set_country_flag = spectre_1_approved
+            save_event_target_as = new_spectre_empire
+            country_event = { id = btr_council_resolutions.3 }
+        }
+    }
+
+    fail_effects = {
+        hidden_effect = {
+            set_country_flag = spectre_1_denied
+            save_event_target_as = denied_spectre_empire
+            country_event = { id = btr_council_resolutions.4 }
+        }
+    }
+
+    potential = {
+        OR = {
+            has_country_flag = has_citadel_embassy
+            has_country_flag = citadel_council_member
+        }
+        NOT = {
+            has_country_flag = spectre_1_approved
+        }
+    }
+
+    allow = {
+    }
+
+    active = {
+        has_country_flag = has_citadel_embassy
+        NOT = {
+            has_country_flag = spectre_1_approved
+        }
+    }
+
+    ai_weight = {
+        base = 10
+
+        modifier = {
+            factor = 20
+            AND = {
+                has_country_flag = has_citadel_embassy
+                NOT = {
+                    has_country_flag = spectre_1_approved
+                }
+            }
+            desc = gal_com_deprived_spectre
+        }
+    }
+}
+
+resolution_petition_spectre_2 = {
+    icon = "GFX_resolution_petition_additional_spectre"
+
+    resources = {
+        category = resolutions
+        cost = {
+            influence = 500
+        }
+    }
+
+    fire_and_forget = yes
+    target = yes
+    harmful = no
+
+    valid_target = {
+        is_same_value = from
+    }
+
+    effect = {
+        hidden_effect = {
+            set_country_flag = spectre_2_approved
+            save_event_target_as = new_spectre_empire
+            country_event = { id = btr_council_resolutions.5 }
+        }
+    }
+
+    fail_effects = {
+        hidden_effect = {
+            set_country_flag = spectre_2_denied
+            save_event_target_as = denied_spectre_empire
+            country_event = { id = btr_council_resolutions.6 }
+        }
+    }
+
+    potential = {
+        has_country_flag = spectre_1_approved
+    }
+
+    allow = {
+
+    }
+
+    active = {
+        AND = {
+            has_country_flag = has_citadel_embassy
+            NOT = {
+                has_country_flag = spectre_1_approved
+            }
+        }
+    }
+
+    ai_weight = {
+        base = 10
+
+        modifier = {
+            factor = 20
+            AND = {
+                has_country_flag = has_citadel_embassy
+                has_country_flag = spectre_1_approved
+            }
+            desc = gal_com_deprived_spectre
+        }
+    }
+}
+
+resolution_petition_citadel_council_seat = {
+    icon = "GFX_resolution_petition_council_seat"
+
+    resources = {
+        category = resolutions
+        cost = {
+            influence = 1000
+        }
+    }
+
+    fire_and_forget = yes
+    target = yes
+    harmful = no
+
+    valid_target = {
+        is_same_value = from
+    }
+
+    effect = {
+        hidden_effect = {
+            set_country_flag = citadel_council_member
+            save_event_target_as = new_council_empire
+            country_event = { id = btr_council_resolutions.7 }
+        }
+    }
+
+    fail_effects = {
+        hidden_effect = {
+            set_country_flag = citadel_council_denied
+            save_event_target_as = denied_citadel_council
+            country_event = { id = btr_council_resolutions.8 }
+        }
+    }
+
+    potential = {
+        has_country_flag = has_citadel_embassy
+        NOT = {
+            has_country_flag = citadel_council_member
+        }
+    }
+
+    allow = {
+    }
+
+    active = {
+        AND = {
+            NOT = {
+                has_country_flag = citadel_council_member
+            }
+            has_country_flag = has_citadel_embassy
+        }
+    }
+
+    ai_weight = {
+        base = 10
+
+        modifier = {
+            factor = 0
+            has_country_flag = has_citadel_embassy
+            desc = gal_com_we_have_citadel_embassy
+        }
+
+        modifier = {
+            factor = 20
+            AND = {
+                has_country_flag = has_citadel_embassy
+                NOT = {
+                    has_country_flag = citadel_council_member
+                }
+            }
+            desc = gal_com_lacks_council_seat
+        }
+    }
+}

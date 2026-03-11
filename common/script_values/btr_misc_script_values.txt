@@ -1,0 +1,19 @@
+
+desired_spectre_vessels = {
+    modifier = {
+        set = 0
+        is_country_type = default
+    }
+    modifier = {
+        add = 1
+        has_country_flag = has_citadel_embassy
+    }
+    modifier = {
+        add = 2
+        has_country_flag = citadel_council_member
+    }
+}
+
+max_spectre_vessels = {
+    base = 2
+}

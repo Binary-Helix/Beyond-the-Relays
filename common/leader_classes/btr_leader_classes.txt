@@ -1,0 +1,86 @@
+btr_council_spectre = {
+    name = council_spectre
+    name_plural = council_spectre_plural
+    description = council_spectre_description
+
+    max_trait_points = 1
+    leader_capacity = 3
+
+    can_be_assigned_to_federation = no
+    can_be_assigned_to_galactic_community = no
+    can_crew_science_ship = no
+    can_lead_army = no
+    can_lead_navy = yes
+    can_be_envoy = no
+    can_research_tech = no
+    can_research_special_projects = yes
+    can_research_anomalies = yes
+    can_research_archaeology_site = yes
+    can_survey = no
+    can_boost_cloaking_detection = yes
+    can_explore_rifts = yes
+    can_conduct_active_reconnaissance = yes
+    can_govern_planet = no
+    can_have_traits = yes
+    can_rule_empire = no
+    recruitable = no
+
+    ai_location_weight = {
+        modifier = {
+            add = 10
+            exists = FROM
+            FROM = {
+                is_scope_type = ship
+                is_ship_class = shipclass_science_ship
+            }
+        }
+        modifier = {
+            add = 1
+            exists = FROM
+            FROM = {
+                is_scope_type = planet
+            }
+        }
+        modifier = {
+            mult = 10
+            exists = FROM
+            FROM = {
+                is_scope_type = planet
+                exists = owner
+                owner = {
+                    has_valid_civic = civic_technocracy
+                }
+            }
+        }
+        complex_trigger_modifier = {
+            potential = {
+                exists = FROM
+                from = {
+                    is_scope_type = planet
+                }
+            }
+            trigger = pop_amount
+            trigger_scope = from
+            mode = add
+            mult = 0.000025
+        }
+        inline_script = {
+            script = paragon/num_traits_with_modifier
+            SCOPE = planet
+            MODIFIER = planet
+        }
+        inline_script = {
+            script = paragon/num_traits_with_modifier
+            SCOPE = fleet
+            MODIFIER = self
+        }
+        inline_script = {
+            script = paragon/num_traits_with_modifier
+            SCOPE = fleet
+            MODIFIER = fleet
+        }
+    }
+    minimum_ai_target = 3
+    icon = 5
+    paragon_background_selector = "paragon_background_selector"
+}

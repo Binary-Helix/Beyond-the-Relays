@@ -1,0 +1,224 @@
+namespace = btr_council_resolutions
+
+# Granted Citadel Embassy
+country_event = {
+    id = btr_council_resolutions.1
+    title = "btr_council_resolutions.1.name"
+    desc = "btr_council_resolutions.1.desc"
+    picture = GFX_evt_citadel_presidium
+    show_sound = btr_event_granted_citadel_embassy
+    location = from
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_council_resolutions.1.a
+        add_modifier = {
+            modifier = btr_granted_citadel_embassy
+            days = -1
+        }
+        remove_modifier = btr_noncitadel_embassy_empire
+        set_country_flag = btr_granted_citadel_embassy
+    }
+}
+
+# Denied Citadel Embassy
+country_event = {
+    id = btr_council_resolutions.2
+    title = "btr_council_resolutions.2.name"
+    desc = "btr_council_resolutions.2.desc"
+    picture = GFX_evt_citadel_skyline
+    show_sound = btr_event_denied_citadel_embassy
+    location = from
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_council_resolutions.2.a
+        add_modifier = {
+            modifier = btr_denied_citadel_embassy
+            days = 720
+        }
+        set_country_flag = btr_denied_citadel_embassy
+    }
+}
+
+# Granted Council Spectre
+country_event = {
+    id = btr_council_resolutions.3
+    title = "btr_council_resolutions.3.name"
+    desc = "btr_council_resolutions.3.desc"
+    picture = GFX_evt_granted_council_spectre
+    show_sound = btr_event_granted_council_spectre
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_council_resolutions.3.a
+        add_modifier = {
+            modifier = btr_granted_council_spectre
+            days = -1
+        }
+
+        hidden_effect = {
+            save_event_target_as = spectre_country
+            set_country_flag = spectre_1_approved
+            event_target:spectre_country  = {
+                create_leader = {
+                    class = btr_council_spectre
+                    tier = leader_tier_renowned
+                    species = owner_main_species
+                    name = random
+                    skill = 5
+                    event_leader = no
+                    custom_description = spectre_leader_desc
+                    custom_catch_phrase = spectre_leader_catch_phrase
+                    immortal = no
+                    hide_age = no
+
+                    randomize_traits = no
+                    effect = {
+                        set_skill = 5
+                        set_leader_flag = is_in_recruit_window
+                        save_event_target_as = new_spectre
+                        add_trait = {
+                            trait = btr_leader_trait_council_spectre
+                        }
+                    }
+                }
+                create_fleet = {
+                    effect = {
+                        set_owner = prev
+                        create_ship = {
+                            name = random
+                            design = "NAME_Spectre_Vessel"
+                            prefix = no
+                            upgradable = yes
+                        }
+                        set_location = {
+                            target = prev.capital_scope.star
+                            distance = 200
+                            angle = random
+                        }
+                        set_fleet_stance = passive
+                        assign_leader = event_target:new_spectre
+                        set_fleet_flag = council_spectre
+                    }
+                    settings = {
+                        can_upgrade = yes
+                        can_change_leader = no
+                        uses_naval_capacity = no
+                        spawn_debris = yes
+                        can_disband = no
+                    }
+                }
+            }
+        }
+    }
+}
+
+# Denied Council Spectre
+country_event = {
+    id = btr_council_resolutions.4
+    title = "btr_council_resolutions.4.name"
+    desc = "btr_council_resolutions.4.desc"
+    picture = GFX_evt_denied_council_spectre
+    show_sound = btr_event_granted_council_spectre
+    location = from
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_council_resolutions.4.a
+        add_modifier = {
+            modifier = btr_denied_council_spectre
+            days = 720
+        }
+        set_country_flag = spectre_1_denied
+    }
+}
+
+# Granted Additional Council Spectre
+country_event = {
+    id = btr_council_resolutions.5
+    title = "btr_council_resolutions.5.name"
+    desc = "btr_council_resolutions.5.desc"
+    picture = GFX_evt_granted_council_spectre
+    show_sound = btr_event_granted_council_spectre
+    location = from
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_council_resolutions.5.a
+        add_modifier = {
+            modifier = btr_granted_additional_council_spectre
+            days = -1
+        }
+        set_country_flag = spectre_2_approved
+    }
+}
+
+# Denied Additional Council Spectre
+country_event = {
+    id = btr_council_resolutions.6
+    title = "btr_council_resolutions.6.name"
+    desc = "btr_council_resolutions.6.desc"
+    picture = GFX_evt_denied_council_spectre
+    show_sound = btr_event_granted_council_spectre
+    location = from
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_council_resolutions.6.a
+        add_modifier = {
+            modifier = btr_denied_additional_council_spectre
+            days = 360
+        }
+        set_country_flag = spectre_2_denied
+    }
+}
+
+# Granted Council Seat
+country_event = {
+    id = btr_council_resolutions.7
+    title = "btr_council_resolutions.7.name"
+    desc = "btr_council_resolutions.7.desc"
+    picture = GFX_evt_granted_council_seat
+    show_sound = btr_event_granted_citadel_embassy
+    location = from
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_council_resolutions.7.a
+        add_modifier = {
+            modifier = btr_granted_council_seat
+            days = -1
+        }
+        set_country_flag = citadel_council_member
+        remove_modifier = btr_citadel_embassy_empire
+    }
+}
+
+# Denied Council Seat
+country_event = {
+    id = btr_council_resolutions.8
+    title = "btr_council_resolutions.8.name"
+    desc = "btr_council_resolutions.8.desc"
+    picture = GFX_evt_denied_council_seat
+    show_sound = btr_event_denied_citadel_embassy
+    location = from
+
+    is_triggered_only = yes
+
+    option = {
+        name = btr_council_resolutions.8.a
+        add_modifier = {
+            modifier = btr_denied_council_seat
+            days = 3600
+        }
+        set_country_flag = denied_council_seat
+    }
+}
