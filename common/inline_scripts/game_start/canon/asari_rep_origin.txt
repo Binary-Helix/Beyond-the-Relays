@@ -1,0 +1,118 @@
+# Initial district counts
+#	* 2× Generator Districts
+#	* 2× Mining Districts
+#	* 3× Agriculture Districts
+# Urban Districts:
+#	- 2× City Districts
+# Buildings Added:
+#	* Planetary Administration
+# Zones:
+#	* Archive Specialization
+#	* Industrial Specialization
+
+### NOTE FROM PUCK - Colony building and district generation purposefully not included here, need to finish all other country generation and initialization before generating for things to get assigned properly!
+
+if = {
+    limit = {
+        AND = {
+            exists = owner
+            owner = {
+                has_origin = asari_rep_origin
+            }
+        }
+        has_planet_flag = thessia_planet
+    }
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_system_capital
+    add_building = building_asari_rep_comm_center
+    add_building = building_asari_galactic_sports_center
+    add_building = building_hyper_entertainment_forum
+    add_building = building_medical_2
+    add_building = building_commercial_zone
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 9 district = district_city }
+    add_zone = {
+        district = district_city
+        zone = zone_factory
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_factory
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_factory
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_factory
+    }
+    add_zone = {
+        district = district_city
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_upkeep_1
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_foundry_2
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_foundry_2
+        zone = zone_industrial
+    }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_generator }
+    add_zone = {
+        district = district_generator
+        zone = zone_energy
+    }
+    add_building = {
+        building = building_energy_nexus
+        zone = zone_energy
+    }
+    add_building = {
+        building = building_generator_generic
+        zone = zone_energy
+    }
+    add_building = {
+        building = building_generator_generic
+        zone = zone_energy
+    }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 10 district = district_mining }
+    add_zone = {
+        district = district_mining
+        zone = zone_minerals
+    }
+    add_building = {
+        building = building_mineral_purification_hub
+        zone = zone_minerals
+    }
+    add_building = {
+        building = building_mine_generic
+        zone = zone_minerals
+    }
+    add_building = {
+        building = building_mine_generic
+        zone = zone_minerals
+    }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_farming }
+    add_zone = {
+        district = district_farming
+        zone = zone_food
+    }
+    add_building = {
+        building = building_food_processing_center
+        zone = zone_food
+    }
+    add_building = {
+        building = building_hydroponics_farm
+        zone = zone_food
+    }
+    add_building = {
+        building = building_hydroponics_farm
+        zone = zone_food
+    }
+}

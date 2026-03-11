@@ -1312,7 +1312,7 @@ d_blue_zone = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }
@@ -1340,7 +1340,7 @@ d_thunderless = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }
@@ -1377,7 +1377,7 @@ d_purple_haze = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }
@@ -1406,7 +1406,7 @@ d_deadly_clouds = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }
@@ -1446,10 +1446,10 @@ d_shifting_valley = {
 	}	
 
 	drop_weight = {
-		weight = @low_rare
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }
@@ -1469,18 +1469,7 @@ d_acidic_sinkhole = {
 	potential = {
 		AND = {
 			OR = {
-				is_planet_class = pc_ammonia
-				is_planet_class = pc_highgrav_ammonia	
-				is_planet_class = pc_ammonia_station	
-				is_planet_class = pc_chlorine
-				is_planet_class = pc_highgrav_chlorine	
-				is_planet_class = pc_chlorine_station
-				is_planet_class = pc_methane
-				is_planet_class = pc_highgrav_methane	
-				is_planet_class = pc_methane_station
-				is_planet_class = pc_mephitic
-				is_planet_class = pc_highgrav_mephitic	
-				is_planet_class = pc_mephitic_station
+				is_btr_exotic_world = yes
 			}
 			OR = {
 				has_planet_flag = steppe_world
@@ -1492,10 +1481,10 @@ d_acidic_sinkhole = {
 	}	
 
 	drop_weight = {
-		weight = @low
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }
@@ -1517,18 +1506,7 @@ d_toxic_waters = {
 	potential = {
 		AND = {
 			OR = {
-				is_planet_class = pc_ammonia
-				is_planet_class = pc_highgrav_ammonia	
-				is_planet_class = pc_ammonia_station	
-				is_planet_class = pc_chlorine
-				is_planet_class = pc_highgrav_chlorine	
-				is_planet_class = pc_chlorine_station
-				is_planet_class = pc_methane
-				is_planet_class = pc_highgrav_methane	
-				is_planet_class = pc_methane_station
-				is_planet_class = pc_mephitic
-				is_planet_class = pc_highgrav_mephitic	
-				is_planet_class = pc_mephitic_station
+				is_btr_exotic_world = yes
 			}
 			OR = {
 				has_planet_flag = bog_world
@@ -1540,10 +1518,10 @@ d_toxic_waters = {
 	}	
 
 	drop_weight = {
-		weight = @low
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }
@@ -1563,18 +1541,7 @@ d_caustic_vents = {
 	potential = {
 		AND = {
 			OR = {
-				is_planet_class = pc_ammonia
-				is_planet_class = pc_highgrav_ammonia	
-				is_planet_class = pc_ammonia_station	
-				is_planet_class = pc_chlorine
-				is_planet_class = pc_highgrav_chlorine	
-				is_planet_class = pc_chlorine_station
-				is_planet_class = pc_methane
-				is_planet_class = pc_highgrav_methane	
-				is_planet_class = pc_methane_station
-				is_planet_class = pc_mephitic
-				is_planet_class = pc_highgrav_mephitic	
-				is_planet_class = pc_mephitic_station	
+				is_btr_exotic_world = yes
 			}
 			OR = {
 				has_planet_flag = hotocean_world
@@ -1585,10 +1552,10 @@ d_caustic_vents = {
 	}	
 
 	drop_weight = {
-		weight = @low
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }
@@ -1608,18 +1575,7 @@ d_retinal_flora = {
 	potential = {
 		AND = {
 			OR = {
-				is_planet_class = pc_ammonia
-				is_planet_class = pc_highgrav_ammonia	
-				is_planet_class = pc_ammonia_station	
-				is_planet_class = pc_chlorine
-				is_planet_class = pc_highgrav_chlorine	
-				is_planet_class = pc_chlorine_station
-				is_planet_class = pc_methane
-				is_planet_class = pc_highgrav_methane	
-				is_planet_class = pc_methane_station
-				is_planet_class = pc_mephitic
-				is_planet_class = pc_highgrav_mephitic	
-				is_planet_class = pc_mephitic_station
+				is_btr_exotic_world = yes
 			}
 			OR = {
 				has_planet_flag = temperate_world
@@ -1631,10 +1587,10 @@ d_retinal_flora = {
 	}	
 
 	drop_weight = {
-		weight = @low
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }
@@ -1657,18 +1613,7 @@ d_green_hell = {
 	potential = {
 		AND = {
 			OR = {
-				is_planet_class = pc_ammonia
-				is_planet_class = pc_highgrav_ammonia	
-				is_planet_class = pc_ammonia_station	
-				is_planet_class = pc_chlorine
-				is_planet_class = pc_highgrav_chlorine	
-				is_planet_class = pc_chlorine_station
-				is_planet_class = pc_methane
-				is_planet_class = pc_highgrav_methane	
-				is_planet_class = pc_methane_station
-				is_planet_class = pc_mephitic
-				is_planet_class = pc_highgrav_mephitic	
-				is_planet_class = pc_mephitic_station
+				is_btr_exotic_world = yes
 			}
 			OR = {
 				has_planet_flag = atoll_world
@@ -1679,10 +1624,10 @@ d_green_hell = {
 	}	
 
 	drop_weight = {
-		weight = @low
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }
@@ -1703,18 +1648,7 @@ d_deaths_plateau = {
 	potential = {
 		AND = {
 			OR = {
-				is_planet_class = pc_ammonia
-				is_planet_class = pc_highgrav_ammonia	
-				is_planet_class = pc_ammonia_station	
-				is_planet_class = pc_chlorine
-				is_planet_class = pc_highgrav_chlorine	
-				is_planet_class = pc_chlorine_station
-				is_planet_class = pc_methane
-				is_planet_class = pc_highgrav_methane	
-				is_planet_class = pc_methane_station
-				is_planet_class = pc_mephitic
-				is_planet_class = pc_highgrav_mephitic	
-				is_planet_class = pc_mephitic_station
+				is_btr_exotic_world = yes
 			}
 			OR = {
 				has_planet_flag = mesa_world
@@ -1725,10 +1659,10 @@ d_deaths_plateau = {
 	}	
 
 	drop_weight = {
-		weight = @low
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }
@@ -1749,18 +1683,7 @@ d_duneless_sands = {
 	potential = {
 		AND = {
 			OR = {
-				is_planet_class = pc_ammonia
-				is_planet_class = pc_highgrav_ammonia	
-				is_planet_class = pc_ammonia_station	
-				is_planet_class = pc_chlorine
-				is_planet_class = pc_highgrav_chlorine	
-				is_planet_class = pc_chlorine_station
-				is_planet_class = pc_methane
-				is_planet_class = pc_highgrav_methane	
-				is_planet_class = pc_methane_station
-				is_planet_class = pc_mephitic
-				is_planet_class = pc_highgrav_mephitic	
-				is_planet_class = pc_mephitic_station
+				is_btr_exotic_world = yes
 			}
 			OR = {
 				has_planet_flag = dust_world
@@ -1771,10 +1694,10 @@ d_duneless_sands = {
 	}	
 
 	drop_weight = {
-		weight = @low
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }
@@ -1796,18 +1719,7 @@ d_fuming_hot_springs = {
 	potential = {
 		AND = {
 			OR = {
-				is_planet_class = pc_ammonia
-				is_planet_class = pc_highgrav_ammonia	
-				is_planet_class = pc_ammonia_station	
-				is_planet_class = pc_chlorine
-				is_planet_class = pc_highgrav_chlorine	
-				is_planet_class = pc_chlorine_station
-				is_planet_class = pc_methane
-				is_planet_class = pc_highgrav_methane	
-				is_planet_class = pc_methane_station
-				is_planet_class = pc_mephitic
-				is_planet_class = pc_highgrav_mephitic	
-				is_planet_class = pc_mephitic_station
+				is_btr_exotic_world = yes
 			}
 			OR = {
 				has_planet_flag = lichen_world
@@ -1819,10 +1731,10 @@ d_fuming_hot_springs = {
 	}	
 
 	drop_weight = {
-		weight = @low
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }
@@ -1842,18 +1754,7 @@ d_desolate_slopes = {
 	potential = {
 		AND = {
 			OR = {
-				is_planet_class = pc_ammonia
-				is_planet_class = pc_highgrav_ammonia	
-				is_planet_class = pc_ammonia_station	
-				is_planet_class = pc_chlorine
-				is_planet_class = pc_highgrav_chlorine	
-				is_planet_class = pc_chlorine_station
-				is_planet_class = pc_methane
-				is_planet_class = pc_highgrav_methane	
-				is_planet_class = pc_methane_station
-				is_planet_class = pc_mephitic
-				is_planet_class = pc_highgrav_mephitic	
-				is_planet_class = pc_mephitic_station
+				is_btr_exotic_world = yes
 			}
 			OR = {
 				has_planet_flag = boreal_world
@@ -1865,10 +1766,10 @@ d_desolate_slopes = {
 	}	
 
 	drop_weight = {
-		weight = @low
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }
@@ -1889,18 +1790,7 @@ d_venting_lake = {
 	potential = {
 		AND = {
 			OR = {
-				is_planet_class = pc_ammonia
-				is_planet_class = pc_highgrav_ammonia	
-				is_planet_class = pc_ammonia_station	
-				is_planet_class = pc_chlorine
-				is_planet_class = pc_highgrav_chlorine	
-				is_planet_class = pc_chlorine_station
-				is_planet_class = pc_methane
-				is_planet_class = pc_highgrav_methane	
-				is_planet_class = pc_methane_station
-				is_planet_class = pc_mephitic
-				is_planet_class = pc_highgrav_mephitic	
-				is_planet_class = pc_mephitic_station
+				is_btr_exotic_world = yes
 			}
 			OR = {
 				has_planet_flag = snow_world
@@ -1912,10 +1802,10 @@ d_venting_lake = {
 	}	
 
 	drop_weight = {
-		weight = @low
+		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_exotic = yes
 		}
 	}
 }

@@ -336,3 +336,261 @@ is_btr_non_sandbox_map = {
 		#galaxy_size = btr_hybrid_1500
 	}
 }
+
+is_btr_dry_subclass = {
+	OR = {
+		has_planet_modifier = pm_dune_world
+		has_planet_modifier = pm_dust_world
+		has_planet_modifier = pm_badlands_world
+		has_planet_modifier = pm_aquifer_world
+		has_planet_modifier = pm_mesa_world
+		has_planet_modifier = pm_cenote_world
+		has_planet_modifier = pm_outback_world
+		has_planet_modifier = pm_oasis_world
+		has_planet_modifier = pm_steppe_world
+		has_planet_modifier = pm_veld_world
+		has_planet_modifier = pm_medit_world
+		has_planet_modifier = pm_retinal_world
+	}
+}
+
+is_btr_wet_subclass = {
+	OR = {
+		has_planet_modifier = pm_atoll_world
+		has_planet_modifier = pm_coastal_world
+		has_planet_modifier = pm_jungle_world
+		has_planet_modifier = pm_biolum_world
+		has_planet_modifier = pm_marsh_world
+		has_planet_modifier = pm_mangrove_world
+		has_planet_modifier = pm_bog_world
+		has_planet_modifier = pm_lake_world
+		has_planet_modifier = pm_prairie_world
+		has_planet_modifier = pm_temperate_world
+		has_planet_modifier = pm_forest_world
+		has_planet_modifier = pm_supercon_world
+		has_planet_modifier = pm_hotocean_world
+		has_planet_modifier = pm_coldocean_world
+		has_planet_modifier = pm_storm_world
+	}
+}
+
+is_btr_cold_subclass = {
+	OR = {
+		has_planet_modifier = pm_boreal_world
+		has_planet_modifier = pm_highland_world
+		has_planet_modifier = pm_cascadian_world
+		has_planet_modifier = pm_crag_world
+		has_planet_modifier = pm_basalt_world
+		has_planet_modifier = pm_lichen_world
+		has_planet_modifier = pm_mire_world
+		has_planet_modifier = pm_fungal_world
+		has_planet_modifier = pm_snow_world
+		has_planet_modifier = pm_glacial_world
+		has_planet_modifier = pm_antar_world
+		has_planet_modifier = pm_cryovolcanic_world
+	}
+}
+
+is_btr_exotic_world = {
+	is_planet_class = pc_ammonia
+	is_planet_class = pc_chlorine
+	is_planet_class = pc_methane
+	is_planet_class = pc_mephitic
+	is_planet_class = pc_primal
+	is_planet_class = pc_highgrav_ammonia
+	is_planet_class = pc_highgrav_chlorine
+	is_planet_class = pc_highgrav_methane
+	is_planet_class = pc_highgrav_mephitic
+	is_planet_class = pc_highgrav_primal
+}
+
+is_btr_arid_world = {
+	OR = {
+		is_planet_class = pc_arid
+		is_planet_class = pc_dextro_arid
+		is_planet_class = pc_highgrav_arid
+		is_planet_class = pc_dextro_highgrav_arid
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_chlorine
+		is_planet_class = pc_methane
+		is_planet_class = pc_mephitic
+		is_planet_class = pc_primal
+		is_planet_class = pc_highgrav_ammonia
+		is_planet_class = pc_highgrav_chlorine
+		is_planet_class = pc_highgrav_methane
+		is_planet_class = pc_highgrav_mephitic
+		is_planet_class = pc_highgrav_primal
+	}
+}
+
+is_btr_desert_world = {
+	OR = {
+		is_planet_class = pc_desert
+		is_planet_class = pc_dextro_desert
+		is_planet_class = pc_highgrav_desert
+		is_planet_class = pc_dextro_highgrav_desert
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_chlorine
+		is_planet_class = pc_methane
+		is_planet_class = pc_mephitic
+		is_planet_class = pc_primal
+		is_planet_class = pc_highgrav_ammonia
+		is_planet_class = pc_highgrav_chlorine
+		is_planet_class = pc_highgrav_methane
+		is_planet_class = pc_highgrav_mephitic
+		is_planet_class = pc_highgrav_primal
+	}
+}
+
+is_btr_savanna_world = {
+	OR = {
+		is_planet_class = pc_savannah
+		is_planet_class = pc_dextro_savannah
+		is_planet_class = pc_highgrav_savannah
+		is_planet_class = pc_dextro_highgrav_savannah
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_chlorine
+		is_planet_class = pc_methane
+		is_planet_class = pc_mephitic
+		is_planet_class = pc_primal
+		is_planet_class = pc_highgrav_ammonia
+		is_planet_class = pc_highgrav_chlorine
+		is_planet_class = pc_highgrav_methane
+		is_planet_class = pc_highgrav_mephitic
+		is_planet_class = pc_highgrav_primal
+	}
+}
+
+is_btr_tropical_world = {
+	OR = {
+		is_planet_class = pc_tropical
+		is_planet_class = pc_dextro_tropical
+		is_planet_class = pc_highgrav_tropical
+		is_planet_class = pc_dextro_highgrav_tropical
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_chlorine
+		is_planet_class = pc_methane
+		is_planet_class = pc_mephitic
+		is_planet_class = pc_primal
+		is_planet_class = pc_highgrav_ammonia
+		is_planet_class = pc_highgrav_chlorine
+		is_planet_class = pc_highgrav_methane
+		is_planet_class = pc_highgrav_mephitic
+		is_planet_class = pc_highgrav_primal
+	}
+}
+
+is_btr_swamp_world = {
+	OR = {
+		is_planet_class = pc_swamp
+		is_planet_class = pc_dextro_swamp
+		is_planet_class = pc_highgrav_swamp
+		is_planet_class = pc_dextro_highgrav_swamp
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_chlorine
+		is_planet_class = pc_methane
+		is_planet_class = pc_mephitic
+		is_planet_class = pc_primal
+		is_planet_class = pc_highgrav_ammonia
+		is_planet_class = pc_highgrav_chlorine
+		is_planet_class = pc_highgrav_methane
+		is_planet_class = pc_highgrav_mephitic
+		is_planet_class = pc_highgrav_primal
+	}
+}
+
+is_btr_ocean_world = {
+	OR = {
+		is_planet_class = pc_ocean
+		is_planet_class = pc_dextro_ocean
+		is_planet_class = pc_highgrav_ocean
+		is_planet_class = pc_dextro_highgrav_ocean
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_chlorine
+		is_planet_class = pc_methane
+		is_planet_class = pc_mephitic
+		is_planet_class = pc_primal
+		is_planet_class = pc_highgrav_ammonia
+		is_planet_class = pc_highgrav_chlorine
+		is_planet_class = pc_highgrav_methane
+		is_planet_class = pc_highgrav_mephitic
+		is_planet_class = pc_highgrav_primal
+	}
+}
+
+is_btr_continental_world = {
+	OR = {
+		is_planet_class = pc_continental
+		is_planet_class = pc_dextro_continental
+		is_planet_class = pc_highgrav_continental
+		is_planet_class = pc_dextro_highgrav_continental
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_chlorine
+		is_planet_class = pc_methane
+		is_planet_class = pc_mephitic
+		is_planet_class = pc_primal
+	}
+}
+
+is_btr_alpine_world = {
+	OR = {
+		is_planet_class = pc_alpine
+		is_planet_class = pc_dextro_alpine
+		is_planet_class = pc_highgrav_alpine
+		is_planet_class = pc_dextro_highgrav_alpine
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_chlorine
+		is_planet_class = pc_methane
+		is_planet_class = pc_mephitic
+		is_planet_class = pc_primal
+		is_planet_class = pc_highgrav_ammonia
+		is_planet_class = pc_highgrav_chlorine
+		is_planet_class = pc_highgrav_methane
+		is_planet_class = pc_highgrav_mephitic
+		is_planet_class = pc_highgrav_primal
+	}
+}
+
+is_btr_tundra_world = {
+	OR = {
+		is_planet_class = pc_tundra
+		is_planet_class = pc_dextro_tundra
+		is_planet_class = pc_highgrav_tundra
+		is_planet_class = pc_dextro_highgrav_tundra
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_chlorine
+		is_planet_class = pc_methane
+		is_planet_class = pc_mephitic
+		is_planet_class = pc_primal
+		is_planet_class = pc_highgrav_ammonia
+		is_planet_class = pc_highgrav_chlorine
+		is_planet_class = pc_highgrav_methane
+		is_planet_class = pc_highgrav_mephitic
+		is_planet_class = pc_highgrav_primal
+	}
+}
+
+is_btr_arctic_world = {
+	OR = {
+		is_planet_class = pc_arctic
+		is_planet_class = pc_dextro_arctic
+		is_planet_class = pc_highgrav_arctic
+		is_planet_class = pc_dextro_highgrav_arctic
+		is_planet_class = pc_ammonia
+		is_planet_class = pc_chlorine
+		is_planet_class = pc_methane
+		is_planet_class = pc_primal
+		is_planet_class = pc_highgrav_ammonia
+		is_planet_class = pc_highgrav_chlorine
+		is_planet_class = pc_highgrav_methane
+		is_planet_class = pc_highgrav_mephitic
+		is_planet_class = pc_highgrav_primal
+	}
+}
+
+is_btr_mephitic_world = {
+	OR = {
+		is_planet_class = pc_mephitic
+		is_planet_class = pc_highgrav_mephitic
+	}
+}
