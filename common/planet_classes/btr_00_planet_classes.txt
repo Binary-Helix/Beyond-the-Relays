@@ -36,6 +36,7 @@
 #	colonization_tech = { "tech_tropical_colonization@1" }
 #	district_set = <string>		# Use any string here, for use in the uses_district_set trigger for easy compatibility
 #	initial = yes # Default is no, only specified for planets available as starting classes for custom species
+#	potential = { host_has_dlc = "Infernals Species Pack" } # Trigger for the planet class to spawn, no scope check
 #
 #	uses_alternative_skies_for_moons = yes				# Will set planet background for moon
 #	uses_alternative_skies_if_has_orbital_ring = yes	# Will set planet background if has orbital ring, Default is no.
@@ -56,11 +57,17 @@
 # Dry
 pc_desert = {
 	entity = "desert_planet"
-	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_desert
+	icon_large = GFX_planet_type_desert_big
 
 	climate = "dry"
 	initial = yes
+
+	auto_trait_prio = {
+		trait_auto_dry_preference
+	}
+
+	entity_scale = @planet_standard_scale
 
 	atmosphere_color		= hsv { 0.50 0.2 0.8 }
 	atmosphere_intensity	= 1.0
@@ -79,6 +86,7 @@ pc_desert = {
 
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
 	production_spawn_chance = 0.4
 
 	colonizable = yes
@@ -93,9 +101,14 @@ pc_arid = {
 	entity = "arid_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_arid
+	icon_large = GFX_planet_type_arid_big
 
 	climate = "dry"
 	initial = yes
+
+	auto_trait_prio = {
+		trait_auto_dry_preference
+	}
 
 	atmosphere_color		= hsv { 0.50 0.3 0.7 }
 	atmosphere_intensity	= 1.0
@@ -127,9 +140,14 @@ pc_savannah = {
 	entity = "savannah_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_savannah
+	icon_large = GFX_planet_type_savannah_big
 
 	climate = "dry"
 	initial = yes
+
+	auto_trait_prio = {
+		trait_auto_dry_preference
+	}
 
 	atmosphere_color		= hsv { 0.50 0.3 0.7 }
 	atmosphere_intensity	= 1.0
@@ -162,9 +180,14 @@ pc_tropical = {
 	entity = "tropical_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tropical
+	icon_large = GFX_planet_type_tropical_big
 
 	climate = "wet"
 	initial = yes
+
+	auto_trait_prio = {
+		trait_auto_wet_preference
+	}
 
 	atmosphere_color		= hsv { 0.58	0.3 0.7 }
 	atmosphere_intensity	= 1.0
@@ -231,9 +254,14 @@ pc_continental = {
 	entity = "continental_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_continental
+	icon_large = GFX_planet_type_continental_big
 
 	climate = "wet"
 	initial = yes
+
+	auto_trait_prio = {
+		trait_auto_wet_preference
+	}
 
 	atmosphere_color		= hsv { 0.59 0.45 0.95 }
 	atmosphere_intensity	= 1.0
@@ -256,7 +284,7 @@ pc_continental = {
 
 	colonizable = yes
 	district_set = standard
-	uses_alternative_skies_for_moons = no
+	uses_alternative_skies_for_moons = yes
 	uses_alternative_skies_if_has_orbital_ring = yes
 
 	carry_cap_per_free_district = @carry_cap_normal
@@ -266,9 +294,14 @@ pc_ocean = {
 	entity = "ocean_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ocean
+	icon_large = GFX_planet_type_ocean_big
 
 	climate = "wet"
 	initial = yes
+
+	auto_trait_prio = {
+		trait_auto_wet_preference
+	}
 
 	atmosphere_color		= hsv { 0.58 0.5 0.9 }
 	atmosphere_intensity	= 1.0
@@ -301,9 +334,14 @@ pc_tundra = {
 	entity = "tundra_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tundra
+	icon_large = GFX_planet_type_tundra_big
 
 	climate = "cold"
 	initial = yes
+
+	auto_trait_prio = {
+		trait_auto_cold_preference
+	}
 
 	atmosphere_color		= hsv { 0.58 0.3 0.8 }
 	atmosphere_intensity	= 1.0
@@ -319,6 +357,7 @@ pc_tundra = {
 	extra_planet_count = 0
 
 	chance_of_ring = 0.2
+
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
 
@@ -334,9 +373,14 @@ pc_arctic = {
 	entity = "arctic_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_arctic
+	icon_large = GFX_planet_type_arctic_big
 
 	climate = "cold"
 	initial = yes
+
+	auto_trait_prio = {
+		trait_auto_cold_preference
+	}
 
 	atmosphere_color		= hsv { 0.48 0.15 0.8 }
 	atmosphere_intensity	= 1.0
@@ -368,9 +412,14 @@ pc_alpine = {
 	entity = "alpine_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_alpine
+	icon_large = GFX_planet_type_alpine_big
 
 	climate = "cold"
 	initial = yes
+
+	auto_trait_prio = {
+		trait_auto_cold_preference
+	}
 
 	atmosphere_color		= hsv { 0.48 0.15 0.8 }
 	atmosphere_intensity	= 1.0
@@ -398,7 +447,42 @@ pc_alpine = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-####################
+pc_volcanic = {
+	entity = "volcanic_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_volcanic
+	icon_large = GFX_planet_type_volcanic_big
+	climate = "dry"
+	initial = yes
+	potential = { host_has_dlc = "Infernals Species Pack" }
+	auto_trait_prio = {
+		trait_auto_pc_volcanic_preference
+	}
+	atmosphere_color		= hsv { 0.05 0.65 1.4 }
+	atmosphere_intensity	= 0.05
+	atmosphere_width		= 1.0
+	min_distance_from_sun = @volcanic_min_distance
+	max_distance_from_sun = @volcanic_max_distance
+	spawn_odds = @habitable_spawn_odds
+	city_color_lut = "gfx/portraits/misc/colorcorrection_volcanic.dds"
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0.33
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	colonizable = yes
+	district_set = volcanic_world
+	uses_alternative_skies_for_moons = yes
+	uses_alternative_skies_if_has_orbital_ring = yes
+	starting_planet = no
+	initial = yes
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.05
+	}
+	carry_cap_per_free_district = @carry_cap_normal
+}
+
+########################
 # Uninhabitable Planets
 ####################
 
@@ -406,6 +490,7 @@ pc_gas_giant = {
 	entity = "gas_giant"
 	entity_scale = 14
 	icon = GFX_planet_type_gas_giant
+	icon_large = GFX_planet_type_gas_giant_big
 
 	atmosphere_color		= hsv { 0.1 0.15 1.1 }
 	atmosphere_intensity	= 1.1
@@ -435,6 +520,7 @@ pc_asteroid = {
 	entity = "asteroid"
 	entity_scale = @asteroid_standard_scale
 	icon = GFX_planet_type_asteroid
+	icon_large = GFX_planet_type_asteroid_big
 
 	asteroid = yes
 
@@ -455,6 +541,7 @@ pc_ice_asteroid = {
 	entity = "asteroid_ice_large"
 	entity_scale = @asteroid_standard_scale
 	icon = GFX_planet_type_asteroid
+	icon_large = GFX_planet_type_asteroid_big
 
 	asteroid = yes
 
@@ -476,6 +563,7 @@ pc_rare_crystal_asteroid = {
 	picture = pc_crystal_asteroid
 	entity_scale = @asteroid_standard_scale
 	icon = GFX_planet_type_asteroid
+	icon_large = GFX_planet_type_asteroid_big
 
 	asteroid = yes
 
@@ -496,6 +584,7 @@ pc_molten = {
 	entity = "molten_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_molten
+	icon_large = GFX_planet_type_molten_big
 
 	atmosphere_color		= hsv { 0.05 0.65 1.4 }
 	atmosphere_intensity	= 0.05
@@ -520,6 +609,7 @@ pc_barren = {
 	entity = "barren_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_barren
+	icon_large = GFX_planet_type_barren_big
 
 	atmosphere_color		= hsv { 0.1 0.4 0.7 }
 	atmosphere_intensity	= 1.0
@@ -544,6 +634,7 @@ pc_barren_cold = {
 	entity = "cold_barren_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_barren_cold
+	icon_large = GFX_planet_type_barren_cold_big
 
 	atmosphere_color		= hsv { 0.55 0.3 0.75 }
 	atmosphere_intensity	= 1.0
@@ -568,6 +659,7 @@ pc_toxic = {
 	entity = "toxic_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_toxic
+	icon_large = GFX_planet_type_toxic_big
 
 	atmosphere_color		= hsv { 0.19 0.45 0.9 }
 	atmosphere_intensity	= 0.1
@@ -594,6 +686,7 @@ pc_frozen = {
 	entity = "frozen_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_frozen
+	icon_large = GFX_planet_type_frozen_big
 
 	atmosphere_color		= hsv { 0.55 0.15 0.7 }
 	atmosphere_intensity	= 1.0
@@ -622,6 +715,11 @@ pc_nuked = {
 	entity = "nuked_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_nuked
+	icon_large = GFX_planet_type_nuked_big
+
+	auto_trait_prio = {
+		trait_auto_pc_nuked_preference
+	}
 
 	atmosphere_color		= hsv { 0.6 0.4 0.5 }
 	atmosphere_intensity	= 1.0
@@ -656,6 +754,7 @@ pc_hive = {
 	entity_scale = @planet_standard_scale
 
 	icon = GFX_planet_type_hive
+	icon_large = GFX_planet_type_hive_big
 
 	atmosphere_color		= hsv { 0.75 0.2 0.7 }
 	atmosphere_intensity	= 0.1
@@ -699,6 +798,7 @@ pc_machine = {
 	picture = pc_ai
 
 	icon = GFX_planet_type_machine
+	icon_large = GFX_planet_type_machine_big
 
 	atmosphere_color		= hsv { 0.09 0.8 0.7 }
 	atmosphere_intensity	= 0.4
@@ -739,6 +839,7 @@ pc_machine_broken = { #Similar concept to pc_ai, but not bound to Contingency
 	picture = pc_ai
 
 	icon = GFX_planet_type_machine
+	icon_large = GFX_planet_type_machine_big
 
 	atmosphere_color		= hsv { 0.09 0.8 0.7 }
 	atmosphere_intensity	= 0.4
@@ -767,6 +868,7 @@ pc_shielded = {
 	entity = "shielded_planet"
 	overlay_entity = "planet_shield_effect_entity"
 	icon = GFX_planet_type_desert # Uses custom logic
+	icon_large = GFX_planet_type_desert_big # Uses custom logic
 
 	entity_scale = @planet_standard_scale
 
@@ -799,6 +901,7 @@ pc_ai = {
 	entity = "ai_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_machine
+	icon_large = GFX_planet_type_machine_big
 
 	atmosphere_color		= hsv { 0.09 0.8 0.7 }
 	atmosphere_intensity	= 0.4
@@ -836,6 +939,7 @@ pc_infested = {
 	picture = pc_infested
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_hive
+	icon_large = GFX_planet_type_hive_big
 
 	atmosphere_color		= hsv { 0.75 0.2 0.7 }
 	atmosphere_intensity	= 0.1
@@ -874,6 +978,11 @@ pc_gaia = {
 	entity = "gaia_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_gaia
+	icon_large = GFX_planet_type_gaia_big
+
+	auto_trait_prio = {
+		trait_auto_pc_gaia_preference
+	}
 
 	atmosphere_color		= hsv { 0.58	0.3 0.7 }
 	atmosphere_intensity	= 1.0
@@ -884,6 +993,7 @@ pc_gaia = {
 	modifier = {
 		planet_jobs_produces_mult = 0.10
 		pop_happiness = 0.10
+		logistic_growth_mult = 0.15
 		planet_resettlement_unemployed_destination_mult = 0.5
 		pop_environment_tolerance = 1.0
 	}
@@ -899,6 +1009,7 @@ pc_gaia = {
 
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
 	colonizable = yes
 	district_set = standard
 	ideal = yes
@@ -914,6 +1025,7 @@ pc_cybrex = {
 	entity = "ringworld_habitable_entity"
 	picture = pc_ai
 	icon = GFX_planet_type_ringworld
+	icon_large = GFX_planet_type_ringworld_big
 	entity_scale = 1.0
 	enable_tilt = no
 	fixed_entity_scale = yes
@@ -940,6 +1052,7 @@ pc_nanotech = {
 	entity = "gray_goo_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_toxic
+	icon_large = GFX_planet_type_toxic_big
 
 	atmosphere_color		= hsv { 0.19 0.45 0.9 }		#DONE
 	atmosphere_intensity	= 0.1
@@ -984,6 +1097,7 @@ pc_ringworld_habitable = {
 	preview_entity = "ringworld_01_damaged_full_entity"
 	picture = pc_ringworld
 	icon = GFX_planet_type_ringworld
+	icon_large = GFX_planet_type_ringworld_big
 	entity_scale = 1.0
 	enable_tilt = no
 	fixed_entity_scale = yes
@@ -1026,6 +1140,7 @@ pc_ringworld_habitable_damaged = {
 	preview_entity = "ringworld_01_damaged_full_entity"
 	picture = pc_ringworld_broken
 	icon = GFX_planet_type_ringworld
+	icon_large = GFX_planet_type_ringworld_big
 	entity_scale = 1.0
 	fixed_entity_scale = yes
 	enable_tilt = no
@@ -1049,6 +1164,7 @@ pc_ringworld_tech = {
 	preview_entity = "ringworld_01_damaged_full_entity"
 	picture = pc_ringworld_section
 	icon = GFX_planet_type_ringworld
+	icon_large = GFX_planet_type_ringworld_big
 	entity_scale = 1.0
 	enable_tilt = no
 	fixed_entity_scale = yes
@@ -1074,6 +1190,7 @@ pc_ringworld_tech_damaged = {
 	preview_entity = "ringworld_01_damaged_full_entity"
 	picture = pc_ringworld_broken
 	icon = GFX_planet_type_ringworld
+	icon_large = GFX_planet_type_ringworld_big
 	entity_scale = 1.0
 	enable_tilt = no
 	fixed_entity_scale = yes
@@ -1100,6 +1217,7 @@ pc_ringworld_seam = {
 	preview_entity = "ringworld_01_damaged_full_entity"
 	picture = pc_ringworld_section
 	icon = GFX_planet_type_ringworld
+	icon_large = GFX_planet_type_ringworld_big
 	entity_scale = 1.0
 	enable_tilt = no
 	fixed_entity_scale = yes
@@ -1125,6 +1243,7 @@ pc_ringworld_seam_damaged = {
 	preview_entity = "ringworld_01_damaged_full_entity"
 	picture = pc_ringworld_broken
 	icon = GFX_planet_type_ringworld
+	icon_large = GFX_planet_type_ringworld_big
 	entity_scale = 1.0
 	enable_tilt = no
 	fixed_entity_scale = yes
@@ -1150,6 +1269,7 @@ pc_shattered_ring_habitable = {
 	preview_entity = "ringworld_01_damaged_full_entity"
 	picture = pc_ringworld
 	icon = GFX_planet_type_ringworld
+	icon_large = GFX_planet_type_ringworld_big
 	entity_scale = 1.0
 	enable_tilt = no
 	fixed_entity_scale = yes
@@ -1172,6 +1292,10 @@ pc_shattered_ring_habitable = {
 
 	is_artificial_planet = yes
 
+	auto_trait_prio = {
+		trait_auto_pc_ringworld_habitable_preference
+	}
+
 	carry_cap_per_free_district = @carry_cap_normal
 
 	modifier = {
@@ -1183,11 +1307,15 @@ pc_habitat = {
 	habitat = yes
 	entity = "orbital_habitat"
 	icon = GFX_planet_type_habitat
+	icon_large = GFX_planet_type_habitat_big
 	entity_scale = 1.0
 	enable_tilt = no
 	fixed_entity_scale = yes
 	place_entity_on_planet_plane = no
 	entity_face_object = no #disable rotation towards sun or planet we orbit around
+	auto_trait_prio = {
+		trait_auto_pc_habitat_preference
+	}
 	atmosphere_color		= hsv { 0.0 0.0 1.0 }
 	atmosphere_intensity	= 1.0
 	atmosphere_width		= 0.5
@@ -1222,6 +1350,7 @@ pc_cosmogenesis_world = {
 	synaptic_lathe = yes
 	entity = "orbital_habitat"
 	icon = GFX_planet_type_synaptic_lathe
+	icon_large = GFX_planet_type_synaptic_lathe_big
 	entity_scale = 1.0
 	enable_tilt = no
 	fixed_entity_scale = yes
@@ -1250,6 +1379,10 @@ pc_cosmogenesis_world = {
 	default_planet_selection = yes
 	inherit_country_building_modifiers = no
 
+	auto_trait_prio = {
+		trait_auto_pc_cosmogenesis_world_preference
+	}
+
 	modifier = {
 		pop_environment_tolerance = 0.85
 		logistic_growth_mult = -1
@@ -1268,6 +1401,7 @@ pc_shrouded = {
 	entity = "shroud_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_shrouded
+	icon_large = GFX_planet_type_shrouded_big
 
 	atmosphere_color		= hsv { 0.0 0.9 0.45	}
 	atmosphere_intensity	= 0.5
@@ -1289,6 +1423,7 @@ pc_broken = {
 	entity = "broken_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_barren
+	icon_large = GFX_planet_type_barren_big
 
 	atmosphere_color		= hsv { 0.1 0.4 0.7 }
 	atmosphere_intensity	= 1.0
@@ -1310,6 +1445,7 @@ pc_shattered = {
 	entity = "shattered_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_barren
+	icon_large = GFX_planet_type_barren_big
 
 	atmosphere_color		= hsv { 0.1 0.4 0.7 }
 	atmosphere_intensity	= 1.0
@@ -1332,6 +1468,7 @@ pc_toxoid_star = {
 	entity_scale = 20.0
 	picture = "pc_x_star"
 	icon = GFX_planet_type_toxoid_star
+	icon_large = GFX_planet_type_toxoid_star_big
 
 	atmosphere_color		= hsv { 0.19 1 0.7 }
 	atmosphere_intensity	= 0.5
