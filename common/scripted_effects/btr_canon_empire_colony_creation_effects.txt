@@ -201,3 +201,203 @@ generate_asari_republics_colonies = {
         }
     }
 }
+
+
+generate_salarian_union_colonies = {
+    every_system = {
+        limit = {
+            is_btr_canon_map = yes
+            has_star_flag = salarian_union_system
+        }
+        set_global_flag = salarian_union_colonies_created
+        every_system_planet = {
+            if = {
+                limit = {
+                    has_planet_flag = mannovai_planet
+                }
+                set_owner = event_target:salarian_union
+                create_colony = {
+                    owner = event_target:salarian_union
+                    species = event_target:salarianSpecies
+                }
+                generate_sal_mannovai_colony_buildings = yes
+                generate_sal_mannovai_pops = yes
+                save_global_event_target_as = sal_sanves_colony
+                log = "Salarian Union Colony (Mannovai) Spawned"
+            }
+            if = {
+                limit = {
+                    has_planet_flag = nasurn_planet
+                }
+                set_owner = event_target:salarian_union
+                create_colony = {
+                    owner = event_target:salarian_union
+                    species = event_target:salarianSpecies
+                }
+                generate_sal_nasurn_colony_buildings = yes
+                generate_sal_nasurn_pops = yes
+                save_global_event_target_as = sal_nasurn_colony
+                log = "Salarian Union Colony (Nasurn) Spawned"
+            }
+            if = {
+                limit = {
+                    has_planet_flag = jaeto_planet
+                }
+                set_owner = event_target:salarian_union
+                create_colony = {
+                    owner = event_target:salarian_union
+                    species = event_target:salarianSpecies
+                }
+                generate_sal_jaeto_colony_buildings = yes
+                generate_sal_jaeto_pops = yes
+                save_global_event_target_as = sal_jaeto_colony
+                log = "Salarian Union Colony (Jaeto) Spawned"
+            }
+            if = {
+                limit = {
+                    has_planet_flag = gataly_planet
+                }
+                set_owner = event_target:salarian_union
+                create_colony = {
+                    owner = event_target:salarian_union
+                    species = event_target:salarianSpecies
+                }
+                generate_sal_gataly_colony_buildings = yes
+                generate_sal_gataly_pops = yes
+                save_global_event_target_as = sal_gataly_colony
+                log = "Salarian Union Colony (Gataly) Spawned"
+            }
+            if = {
+                limit = {
+                    has_planet_flag = senoquol_planet
+                }
+                set_owner = event_target:salarian_union
+                create_colony = {
+                    owner = event_target:salarian_union
+                    species = event_target:salarianSpecies
+                }
+                generate_sal_senoquol_colony_buildings = yes
+                generate_sal_senoquol_pops = yes
+                save_global_event_target_as = sal_senoquol_colony
+                log = "Salarian Union Colony (Senoquol) Spawned"
+            }
+            if = {
+                limit = {
+                    has_planet_flag = saetabelo_planet
+                }
+                set_owner = event_target:salarian_union
+                create_colony = {
+                    owner = event_target:salarian_union
+                    species = event_target:salarianSpecies
+                }
+                generate_sal_saetabelo_colony_buildings = yes
+                generate_sal_saetabelo_pops = yes
+                save_global_event_target_as = sal_saetabelo_colony
+                log = "Salarian Union Colony (Saetabelo) Spawned"
+            }
+            if = {
+                limit = {
+                    has_planet_flag = voya_planet
+                }
+                set_owner = event_target:salarian_union
+                create_colony = {
+                    owner = event_target:salarian_union
+                    species = event_target:salarianSpecies
+                }
+                generate_sal_voya_colony_buildings = yes
+                generate_sal_voya_pops = yes
+                save_global_event_target_as = sal_voya_colony
+                log = "Salarian Union Colony (Voya) Spawned"
+            }
+            if = {
+                limit = {
+                    has_planet_flag = gorot_planet
+                }
+                set_owner = event_target:salarian_union
+                create_colony = {
+                    owner = event_target:salarian_union
+                    species = event_target:salarianSpecies
+                }
+                generate_sal_gorot_colony_buildings = yes
+                generate_sal_gorot_pops = yes
+                save_global_event_target_as = sal_gorot_colony
+                log = "Salarian Union Colony (Gorot) Spawned"
+            }
+            if = {
+                limit = {
+                    has_planet_flag = olor_planet
+                }
+                set_owner = event_target:salarian_union
+                create_colony = {
+                    owner = event_target:salarian_union
+                    species = event_target:salarianSpecies
+                }
+                generate_sal_olor_colony_buildings = yes
+                generate_sal_olor_pops = yes
+                save_global_event_target_as = sal_olor_colony
+                log = "Salarian Union Colony (Olor) Spawned"
+            }
+            if = {
+                limit = {
+                    has_planet_flag = rannandril_planet
+                }
+                set_owner = event_target:salarian_union
+                create_colony = {
+                    owner = event_target:salarian_union
+                    species = event_target:salarianSpecies
+                }
+                generate_sal_rannandril_colony_buildings = yes
+                generate_sal_rannandril_pops = yes
+                save_global_event_target_as = sal_rannandril_colony
+                log = "Salarian Union Colony (Rannandril) Spawned"
+            }
+            if = {
+                limit = {
+                    has_planet_flag = dagnes_planet
+                }
+                set_owner = event_target:salarian_union
+                create_colony = {
+                    owner = event_target:salarian_union
+                    species = event_target:salarianSpecies
+                }
+                generate_sal_dagnes_colony_buildings = yes
+                generate_sal_dagnes_pops = yes
+                save_global_event_target_as = sal_dagnes_colony
+                log = "Salarian Union Colony (Dagnes) Spawned"
+            }
+            if = {
+                limit = {
+                    has_planet_flag = lorala_planet
+                }
+                set_planet_flag = planetary_station
+                set_deposit_flags = yes
+                clear_deposits = yes
+                deploy_planetary_station = yes
+                set_station_deposits = yes
+                set_owner = event_target:salarian_union
+                create_colony = {
+                    owner = event_target:salarian_union
+                    species = event_target:salarianSpecies
+                }
+                generate_sal_lorala_colony_buildings = yes
+                generate_sal_lorala_pops = yes
+                save_global_event_target_as = sal_lorala_colony
+                log = "Salarian Union Colony (Lor'ala) Spawned"
+            }
+            if = {
+                limit = {
+                    has_planet_flag = jarrahe_station
+                }
+                set_owner = event_target:salarian_union
+                create_colony = {
+                    owner = event_target:salarian_union
+                    species = event_target:salarianSpecies
+                }
+                generate_sal_jarrahe_colony_buildings = yes
+                generate_sal_jarrahe_pops = yes
+                save_global_event_target_as = sal_jarrahe_colony
+                log = "Salarian Union Colony (Jarrahe Station) Spawned"
+            }
+        }
+    }
+}

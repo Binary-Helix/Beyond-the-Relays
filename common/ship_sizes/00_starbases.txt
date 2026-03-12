@@ -23,11 +23,12 @@ starbase_outpost = {
 	max_hitpoints = 5000
 	base_buildtime = 360
 	resources = {
-		category = starbase_stations
+		category = starbases
 		cost = {
 			trigger = {
 				from = {
 					is_machine_empire = no
+					country_uses_bio_ships = no
 				}
 			}
 			#alloys = 100
@@ -37,13 +38,56 @@ starbase_outpost = {
 		cost = {
 			trigger = {
 				from = {
+					is_machine_empire = no
+					country_uses_bio_ships = yes
+				}
+			}
+			light_alloys = 70
+			heavy_alloys = 30
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = no
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 100
+			mult = @halved_alloy_to_food_cost_ratio
+		}
+		cost = {
+			trigger = {
+				from = {
 					is_machine_empire = yes
+					country_uses_bio_ships = no
 				}
 			}
 			#alloys = 150
 			light_alloys = 105
 			heavy_alloys = 45
 
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = yes
+					country_uses_bio_ships = yes
+				}
+			}
+			light_alloys = 105
+			heavy_alloys = 45
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = yes
+					country_uses_bio_ships = yes
+				}
+			}
+			food = 150
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
 			energy = 1

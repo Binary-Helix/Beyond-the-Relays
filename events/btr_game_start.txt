@@ -2098,15 +2098,15 @@ planet_event = {
 				generate_asari_republics_colonies = yes
 				log = "Asari Republics Colonies Spawned"
 			}
-			# 	if = {
-			# 		limit = {
-			# 			NOT = {
-			# 				has_global_flag = salarian_union_colonies_created
-			# 			}
-			# 		}
-			# 		generate_salarian_union_colonies = yes
-			# 		log = "Salarian Union Colonies Spawned"
-			# 	}
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = salarian_union_colonies_created
+					}
+				}
+				generate_salarian_union_colonies = yes
+				log = "Salarian Union Colonies Spawned"
+			}
 			# 	if = {
 			# 		limit = {
 			# 			NOT = {

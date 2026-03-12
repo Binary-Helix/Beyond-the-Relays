@@ -10,6 +10,8 @@
 #	* Archive Specialization
 #	* Industrial Specialization
 
+### NOTE FROM PUCK - Colony building and district generation purposefully not included here, need to finish all other country generation and initialization before generating for things to get assigned properly!
+
 if = {
     limit = {
         AND = {
@@ -20,11 +22,64 @@ if = {
         }
         has_planet_flag = surkesh_planet
     }
+    set_planet_flag = ignore_ai_building_limitations
     remove_all_districts = yes
     remove_all_buildings = yes
-    add_building = building_major_capital
-    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_city }
-    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_farming }
-    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_generator }
-    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_mining }
+
+    add_building = building_system_capital
+    add_building = building_salarian_covert_collection
+    add_building = building_salarian_exo_arch_res_outpost
+    add_building = building_hyper_entertainment_forum
+    add_building = building_medical_2
+    add_building = building_commercial_zone
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 15 district = district_city }
+    add_zone = {
+        district = district_city
+        zone = zone_research
+    }
+    add_building = {
+        building = building_engineering_facility_1
+        zone = zone_research
+    }
+    add_building = {
+        building = building_biolab_1
+        zone = zone_research
+    }
+    add_building = {
+        building = building_research_lab_1
+        zone = zone_research
+    }
+    add_zone = {
+        district = district_city
+        zone = zone_research_unity
+    }
+    add_building = {
+        building = building_research_efficiency_1
+        zone = zone_research_unity
+    }
+    add_building = {
+        building = building_research_upkeep_1
+        zone = zone_research_unity
+    }
+    add_building = {
+        building = building_bureaucratic_1
+        zone = zone_research_unity
+    }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_farming }
+    add_zone = {
+        district = district_farming
+        zone = zone_food
+    }
+    add_building = {
+        building = building_food_processing_center
+        zone = zone_food
+    }
+    add_building = {
+        building = building_hydroponics_farm
+        zone = zone_food
+    }
+    add_building = {
+        building = building_hydroponics_farm
+        zone = zone_food
+    }
 }

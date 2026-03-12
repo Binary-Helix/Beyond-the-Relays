@@ -17,12 +17,12 @@ building_research_lab_1 = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
 			has_modifier = penal_colony
+			has_modifier = gestation_colony
 		}
 		exists = owner
 		owner = {
 			is_wilderness_empire = no
 		}
-		is_special_colony_type = no
 
 		OR = {
 			has_planet_flag = ignore_ai_building_limitations

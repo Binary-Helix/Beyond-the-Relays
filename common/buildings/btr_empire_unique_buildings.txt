@@ -125,9 +125,7 @@ building_salarian_exo_arch_res_outpost = {
 	base_cap_amount = 1
 	empire_limit = 1
 	potential = {
-		exists = owner
 		owner = {
-			is_regular_empire = yes
 			has_origin = salarian_uni_origin
 		}
 	}
@@ -171,26 +169,14 @@ building_salarian_covert_collection = {
 	base_cap_amount = 1
 	icon = building_illicit_research_labs
 	potential = {
-		exists = owner
 		owner = {
-			is_regular_empire = yes
 			has_origin = salarian_uni_origin
-			has_technology = tech_colonial_centralization
 		}
 	}
 
 	building_sets = { research }
 
 	category = research
-
-	allow = {
-		exists = owner
-		has_major_upgraded_capital = yes
-		#buildings_simple_allow = yes
-		owner = {
-			has_technology = tech_colonial_centralization
-		}
-	}
 
 	destroy_trigger = {
 		exists = owner
@@ -257,7 +243,7 @@ building_turian_planetary_kasrs = {
 
 	allow = {
 		exists = owner
-		has_major_upgraded_capital = yes
+		has_upgraded_capital = yes
 		#buildings_simple_allow = yes
 	}
 

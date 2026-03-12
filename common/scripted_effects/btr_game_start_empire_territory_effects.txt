@@ -352,30 +352,41 @@ generate_salarian_union_territory = {
 					galaxy_size = btr_canon_1300
 					galaxy_size = btr_canon_1500
 				}
-			}		
+			}
+			if = {
+				limit = {
+					has_star_flag = pranas_system
+				}
+				create_starbase = {
+					size = starbase_starhold
+					owner = event_target:salarian_union
+					module = shipyard
+					module = shipyard
+					module = shipyard
+					module = shipyard
+					building = crew_quarters
+					building = fleet_academy
+				}
+			}
 			if = {
 				limit = {
 					NOT = {
 						exists = starbase
 					}				
 				}
-	
-				if = {
-					limit = {
-						has_star_flag = pranas_system
-					}
-					create_starbase = {
-						size = starbase_starhold
-						owner = event_target:salarian_union
-					}
-				}
 				else_if = {
 					limit = {
 						has_star_flag = fortuna_system
 					}
 					create_starbase = {
-						size = starbase_starport
+						size = starbase_starhold
 						owner = event_target:salarian_union
+						module = gun_battery
+						module = gun_battery
+						module = hangar_bay
+						module = hangar_bay
+						building = communications_jammer
+						building = disruption_field
 					}
 				}
 				else_if = {
@@ -383,8 +394,14 @@ generate_salarian_union_territory = {
 						has_star_flag = limron_system
 					}
 					create_starbase = {
-						size = starbase_starport
+						size = starbase_starhold
 						owner = event_target:salarian_union
+						module = gun_battery
+						module = hangar_bay
+						module = anchorage
+						module = anchorage
+						building = communications_jammer
+						building = naval_logistics_office
 					}
 				}
 				else_if = {
@@ -392,8 +409,14 @@ generate_salarian_union_territory = {
 						has_star_flag = ostelo_system
 					}
 					create_starbase = {
-						size = starbase_starport
+						size = starbase_starhold
 						owner = event_target:salarian_union
+						module = shipyard
+						module = shipyard
+						module = anchorage
+						module = anchorage
+						building = fleet_academy
+						building = naval_logistics_office
 					}
 				}
 				else_if = {
@@ -410,8 +433,14 @@ generate_salarian_union_territory = {
 						has_star_flag = ruoshca_system
 					}
 					create_starbase = {
-						size = starbase_outpost
+						size = starbase_starhold
 						owner = event_target:salarian_union
+						module = anchorage
+						module = anchorage
+						module = anchorage
+						module = anchorage
+						building = resource_silo
+						building = naval_logistics_office
 					}
 				}
 				else_if = {
@@ -500,8 +529,14 @@ generate_salarian_union_territory = {
 						has_star_flag = strabo_system
 					}
 					create_starbase = {
-						size = starbase_outpost
+						size = starbase_starhold
 						owner = event_target:salarian_union
+						module = gun_battery
+						module = gun_battery
+						module = hangar_bay
+						module = hangar_bay
+						building = communications_jammer
+						building = disruption_field
 					}
 				}
 				else_if = {
@@ -536,8 +571,14 @@ generate_salarian_union_territory = {
 						has_star_flag = aezeni_system
 					}
 					create_starbase = {
-						size = starbase_outpost
+						size = starbase_starhold
 						owner = event_target:salarian_union
+						module = gun_battery
+						module = hangar_bay
+						module = anchorage
+						module = anchorage
+						building = communications_jammer
+						building = naval_logistics_office
 					}
 				}
 				else_if = {
