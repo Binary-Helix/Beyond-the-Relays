@@ -133,7 +133,7 @@ guiTypes = {
 			name = "game_logo"
 			position = { x = -53 y = -33 } # Makes the logo appear to have the same top and left margin as other elements
 			quadTextureSprite = "gfx_game_logo"
-			position = { x = 0 y =  }
+			position = { x = 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 			scale = 0.65
 		}
@@ -162,6 +162,9 @@ guiTypes = {
 				no_clicksound = yes
 			}
 
+			@button_large_width = 400
+			@button_large_height = 30 # Reduced by 1 pixel to avoid overlap
+
 			containerWindowType = {
 				name = "buttons"
 				position = { x = -375 y = 200 }
@@ -176,9 +179,6 @@ guiTypes = {
 					# The height here is the Y position of the last button on large resolutions + the height of the last button.
 					size = { width = @button_large_width height = 500}
 				}
-
-				@button_large_width = 400
-				@button_large_height = 30 # Reduced by 1 pixel to avoid overlap
 
 				containerWindowType = {
 					name = "start_game_container"

@@ -1319,7 +1319,7 @@ building_volcanic_forge_1 = {
 			is_artificial = yes
 			AND = {
 				is_terraforming = yes
-				is_scripted_terraforming = no
+				#is_scripted_terraforming = no
 			}
 		}
 	}
@@ -1367,7 +1367,7 @@ building_volcanic_forge_1 = {
 	triggered_desc = {
 		text = building_volcanic_forge_1_effect
 	}
-	auto_generate_description = no
+	#auto_generate_description = no
 
 	on_destroy = {
 		planet_event = { id = infernals.32 }
@@ -1395,7 +1395,7 @@ building_volcanic_forge_2 = {
 			is_planet_class = pc_city
 			AND = {
 				is_terraforming = yes
-				is_scripted_terraforming = no
+				#is_scripted_terraforming = no
 			}
 		}
 	}
@@ -1449,7 +1449,7 @@ building_volcanic_forge_2 = {
 	triggered_desc = {
 		text = building_volcanic_forge_2_effect
 	}
-	auto_generate_description = no
+	#auto_generate_description = no
 
 	on_destroy = {
 		planet_event = { id = infernals.32 }

@@ -17,6 +17,18 @@ entity = {
 	scale = 15
 }
 
+entity = {
+	name = "red_giant_supernova_entity"
+	pdxmesh = "system_plane_collision_mesh"
+
+	default_state = "explode"
+	state = { name = "explode" state_time = 30 looping = no
+		event = { time = 0.0 	particle = "infernal_red_giant_explosion_effect"  keep_particle = yes trigger_once = no }
+	}
+
+	scale = 15
+}
+
 entity = { # A
 	name = "a_star_class_star_entity"
 	pdxmesh = "star_mesh"
@@ -196,4 +208,31 @@ entity = { # Toxoid
 	cull_radius = 20000	
 	attach = { root = "toxoid_class_star_entity" }	
 	attach = { root = "toxoid_class_star_wave_entity" }	
+}
+
+entity = { # M Red Giant Origin
+	name = "red_giant_tunnel_class_star_entity"
+	pdxmesh = "star_mesh"
+
+	locator = { name = portal_locator position = {-7.5 0 0} rotation = {-90 0 0 } }
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "m_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		event = { time = 0.0 node = "portal_locator" entity = "infernal_01_subspace_tunnel_tunnel_to_star_entity" }
+	 }
+	scale = 1.25
+}
+entity = { # M Red Giant Origin
+	name = "red_giant_tunnel_faint_class_star_entity"
+	pdxmesh = "star_mesh"
+
+	locator = { name = portal_locator position = {-7.5 0 0} rotation = {-90 0 0 } }
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "m_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		event = { time = 0.0 node = "portal_locator" entity = "infernal_01_subspace_tunnel_to_star_faint_entity" }
+	 }
+	scale = 1.25
 }
