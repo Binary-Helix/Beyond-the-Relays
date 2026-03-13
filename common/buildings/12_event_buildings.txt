@@ -1,1 +1,839 @@
-# Vanilla Override
+#####################
+# Event buildings
+#####################
+
+building_junkheap = {
+	capital = yes
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+	capital_tier = 1
+
+	category = amenity
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		# exists = owner
+		# owner = { is_country_type = ratlings }
+		# NOT = { has_modifier = slave_colony }
+		always = no
+	}
+
+	convert_to = {
+		building_machine_capital
+		building_capital
+		building_hive_capital
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1500
+		planet_amenities_add = 2000
+		job_ratling_scavenger_add = 1000
+	}
+
+	upgrades = {
+	}
+}
+
+building_akx_worm_3 = {
+	base_buildtime = 900
+	planet_limit = 1
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+
+	category = research
+
+	building_sets = {
+		government
+		research
+		physics
+	}
+
+	potential = {
+		# exists = planet
+		# planet = { is_capital = yes }
+		# exists = owner
+		# NOT = { has_modifier = slave_colony }
+		always = no
+	}
+
+	prerequisites = {
+		"tech_akx_worm_3"
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+		produces = {
+			physics_research = 16
+		}
+	}
+}
+
+building_great_pyramid = {
+	base_buildtime = @b2_time
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+	can_be_disabled = no
+
+	category = government
+
+	building_sets = {
+		pre_ftl
+	}
+
+	potential = {
+		# NOT = { has_modifier = slave_colony }
+		# exists = owner
+		# owner = { is_wilderness_empire = no }
+		always = no
+	}
+
+	planet_modifier = {
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 2
+			society_research = 2
+		}
+	}
+}
+
+building_artist_patron = {
+	base_buildtime = @b2_time
+	can_demolish = yes
+	empire_limit = 1
+
+	category = unity
+
+	building_sets = {
+		government
+		urban
+		unity
+	}
+
+	potential = {
+		custom_tooltip = {
+			text = EMPIRE_UNIQUE_BUILDING
+			owner = {
+				has_country_flag = artist_building_patron
+			}
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		planet_civilians_unity_produces_add = 0.1
+		planet_civilians_consumer_goods_upkeep_add = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = bureaucrat_is_culture_worker_tt
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_civilian_ethics_effect
+	}
+
+	desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = building_artist_patron_desc
+	}
+
+	desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = building_artist_patron_gestalt_desc
+	}
+}
+
+building_waste_reprocessing_center = {
+	icon = building_waste_reprocessing_center
+	base_buildtime = @b2_time
+	planet_limit = 1
+	can_build = yes
+	can_demolish = yes
+
+	category = resource
+
+	building_sets = {
+		urban
+		generator
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = bought_waste_reprocessing_center
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 500
+		job_technician_drone_add = 200
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 100
+		}
+		produces = {
+			minerals = 10
+			energy = 10
+		}
+		cost = {
+			trigger = {
+				owner = { is_wilderness_empire = yes }
+			}
+			biomass = @b2_biomass
+		}
+	}
+
+	inline_script = {
+		script = buildings/on_all_wilderness_buildings_districts
+	}
+}
+
+building_nuumismatic_shrine = {
+	base_buildtime = @b2_time
+	can_demolish = yes
+	planet_limit = 1
+
+	category = unity
+
+	building_sets = {
+		government
+		urban
+		unity
+	}
+
+	potential = {
+		owner = {
+			has_country_flag = nuumismatic_shrine
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = no
+		}
+	}
+
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = @building_static_jobs_high
+	}
+
+	resources = {
+		cost = {
+			minerals = @b2_minerals
+			trade = @b1_minerals
+		}
+		upkeep = {
+			trade = @b2_upkeep
+		}
+		category = planet_buildings
+	}
+
+	triggered_desc = {
+		text = bureaucrat_is_numistic_priest_tt
+	}
+}
+
+building_crystal_plant_2 = {
+	base_buildtime = 800
+	can_build = no
+
+	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
+
+	potential = {
+		# owner = {
+		# 	has_country_flag = lithoid_crystal_plant
+		# }
+		# NOR = {
+		# 	has_modifier = resort_colony
+		# 	has_modifier = slave_colony
+		# }
+		always = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	planet_modifier = {
+		planet_metallurgists_rare_crystals_produces_add = 0.1
+		planet_artisans_rare_crystals_produces_add = 0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			industrial_jobs_are_catalytic_trigger = no
+		}
+		planet_metallurgists_minerals_upkeep_add = 1
+		planet_artisans_minerals_upkeep_add = 1
+	}
+
+
+	triggered_planet_modifier = {
+		potential = {
+			industrial_jobs_are_catalytic_trigger = yes
+		}
+		planet_metallurgists_food_upkeep_add = 1
+		planet_artisans_food_upkeep_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	prerequisites = {
+		"tech_rare_crystals"
+	}
+
+	show_tech_unlock_if = {
+		owner = { has_country_flag = lithoid_crystal_plant }
+	}
+}
+
+building_zroni_equilibrator = {
+	base_buildtime = 1080
+	can_demolish = yes
+	base_cap_amount = 1
+
+	category = government
+	building_sets = {
+		government
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			sr_zro = 250
+		}
+		upkeep = {
+			energy = 10
+		}
+		produces = {
+			sr_zro = 4
+		}
+	}
+
+	potential = {
+		owner = { has_country_flag = zroni_legacy }
+		has_planet_flag = zroni_legacy_flag
+	}
+
+	destroy_trigger = {
+		OR = {
+			NOT = { exists = owner }
+			owner = {
+				NOT = { has_country_flag = zroni_legacy }
+			}
+		}
+	}
+
+	inline_script = {
+		script = jobs/biologists_add
+		AMOUNT = @building_static_jobs_high		# 400 jobs
+	}
+
+	planet_modifier = {
+		planet_biologists_physics_research_produces_add = 0.5
+		planet_biologists_society_research_produces_add = 0.5
+		planet_biologists_sr_zro_upkeep_add	= 0.5
+	}
+
+	triggered_desc = {
+		text = biology_unit_is_observator_tt
+	}
+
+	on_built = {
+		if = {
+			limit = {
+				exists = owner
+				owner = {
+					has_country_flag = zroni_legacy
+				}
+			}
+			owner = {
+				if = {
+					limit = {
+						has_event_chain = shroud_forged_chain
+					}
+					add_event_chain_counter = {
+						event_chain = shroud_forged_chain
+						counter = shroud_forged_zroni_portal
+						amount = 1
+					}
+					if = {
+						limit = {
+							has_completed_event_chain_counter = {
+								event_chain = shroud_forged_chain
+								counter = shroud_forged_zroni_planet
+							}
+							has_completed_event_chain_counter = {
+								event_chain = shroud_forged_chain
+								counter = shroud_forged_zroni_portal
+							}
+						}
+						country_event = { id = shroud_forged.308 }
+					}
+				}
+			}
+		}
+	}
+
+	on_destroy = {
+		if = {
+			limit = {
+				exists = owner
+				owner = {
+					has_country_flag = zroni_legacy
+				}
+			}
+			owner = {
+				if = {
+					limit = {
+						has_event_chain = shroud_forged_chain
+					}
+					add_event_chain_counter = {
+						event_chain = shroud_forged_chain
+						counter = shroud_forged_zroni_portal
+						amount = -1
+					}
+				}
+				if = {
+					limit = {
+						has_modifier = shroud_forged_trapped_entity
+					}
+					remove_modifier = shroud_forged_trapped_entity
+					country_event = { id = shroud_forged.320 }
+				}
+			}
+		}
+	}
+}
+
+
+building_composer_sanctum = {
+	base_buildtime = @b3_time
+
+	category = government
+
+	building_sets = {
+		government
+		unity
+	}
+
+	empire_limit = {
+		base = 1
+	}
+
+	potential = {
+		# host_has_dlc = "Utopia"
+		# owner = {
+		# 	has_country_flag = composer_covenant_rank_1
+		# }
+		# NOR = {
+		# 	has_modifier = resort_colony
+		# 	has_modifier = slave_colony
+		# }
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					has_shroud_dlc = no
+					NOT = {
+						has_country_flag = composer_covenant_rank_1
+					}
+				}
+				AND = {
+					has_shroud_dlc = yes
+					NOT = {
+						has_country_flag = fertility_accord
+					}
+				}
+			}
+		}
+	}
+
+	inline_script = {
+		script = jobs/telepaths_add
+		AMOUNT = 300
+	}
+
+	country_modifier = {
+		pop_environment_tolerance = 0.10
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			has_shroud_dlc = no
+		}
+		planet_jobs_produces_mult = 0.05
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			has_shroud_dlc = yes
+		}
+		leader_lifespan_add = 20
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b2_rare_upkeep
+		}
+	}
+}
+
+building_eater_sanctum = {
+	base_buildtime = @b3_time
+
+	category = government
+
+	building_sets = {
+		government
+		unity
+	}
+
+	empire_limit = {
+		base = 1
+	}
+
+	potential = {
+		# host_has_dlc = "Utopia"
+		# owner = {
+		# 	has_country_flag = eater_covenant_rank_1
+		# }
+		# NOR = {
+		# 	has_modifier = resort_colony
+		# 	has_modifier = slave_colony
+		# }
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					has_shroud_dlc = no
+					NOT = {
+						has_country_flag = eater_covenant_rank_1
+					}
+				}
+				AND = {
+					has_shroud_dlc = yes
+					NOT = {
+						has_country_flag = hunger_accord
+					}
+				}
+			}
+		}
+	}
+
+	inline_script = {
+		script = jobs/telepaths_add
+		AMOUNT = 300
+	}
+
+	country_modifier = {
+		ship_weapon_range_mult = 0.1
+		ships_upkeep_mult = -0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b2_rare_upkeep
+		}
+	}
+}
+
+building_instrument_sanctum = {
+	base_buildtime = @b3_time
+
+	category = government
+
+	building_sets = {
+		government
+		unity
+	}
+
+	empire_limit = {
+		base = 1
+	}
+
+	potential = {
+		# host_has_dlc = "Utopia"
+		# owner = {
+		# 	has_country_flag = instrument_covenant_rank_1
+		# }
+		# NOR = {
+		# 	has_modifier = resort_colony
+		# 	has_modifier = slave_colony
+		# }
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				AND = {
+					has_shroud_dlc = no
+					NOT = {
+						has_country_flag = instrument_covenant_rank_1
+					}
+				}
+				AND = {
+					has_shroud_dlc = yes
+					NOT = {
+						has_country_flag = bliss_accord
+					}
+				}
+			}
+		}
+	}
+
+	inline_script = {
+		script = jobs/telepaths_add
+		AMOUNT = 300
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		planet_amenities_mult = 0.1
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			owner = {
+				is_gestalt = no
+			}
+		}
+		pop_happiness = 0.05
+	}
+
+	country_modifier = {
+		planet_jobs_trade_produces_mult = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b2_rare_upkeep
+		}
+	}
+}
+
+building_whisperers_sanctum = {
+	base_buildtime = @b3_time
+
+	category = government
+
+	building_sets = {
+		government
+		unity
+	}
+
+	empire_limit = {
+		base = 1
+	}
+
+	potential = {
+		# host_has_dlc = "Utopia"
+		# owner = {
+		# 	has_country_flag = whisperers_covenant_rank_1
+		# }
+		# NOR = {
+		# 	has_modifier = resort_colony
+		# 	has_modifier = slave_colony
+		# }
+		always = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		has_shroud_dlc = no
+		exists = owner
+		NOT = {
+			owner = { has_country_flag = whisperers_covenant_rank_1 }
+		}
+	}
+
+	inline_script = {
+		script = jobs/telepaths_add
+		AMOUNT = 300
+	}
+
+	country_modifier = {
+		envoys_add = 1
+		spy_network_daily_value_mult = 0.15
+	}
+
+	triggered_desc = {
+		trigger = {
+			has_first_contact_dlc = yes
+		}
+		text = covenant_detection_first_contact_effect
+	}
+
+	on_built = {
+		if = {
+			limit = {
+				has_first_contact_dlc = yes
+			}
+			planet = {
+				solar_system = {
+					starbase = {
+						fleet = {
+							add_modifier = {
+								modifier = covenant_detection_first_contact
+								days = -1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	on_destroy = {
+		if = {
+			limit = {
+				has_first_contact_dlc = yes
+			}
+			planet = {
+				solar_system = {
+					starbase = {
+						fleet = {
+							remove_modifier = covenant_detection_first_contact
+						}
+					}
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			sr_zro = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			sr_zro = @b2_rare_upkeep
+		}
+	}
+}
