@@ -20,25 +20,23 @@ starbase_outpost = {
 		ship_fire_rate_mult = 0.50
 		ship_weapon_range_mult = 0.20
 	}
-	max_hitpoints = 5000
+	max_hitpoints = @outpost_hp
 	base_buildtime = 360
 	resources = {
 		category = starbases
 		cost = {
 			trigger = {
 				from = {
-					is_machine_empire = no
 					country_uses_bio_ships = no
 				}
 			}
-			#alloys = 100
+			#alloys = @outpost_cost
 			light_alloys = 70
 			heavy_alloys = 30
 		}
 		cost = {
 			trigger = {
 				from = {
-					is_machine_empire = no
 					country_uses_bio_ships = yes
 				}
 			}
@@ -49,7 +47,6 @@ starbase_outpost = {
 		cost = {
 			trigger = {
 				from = {
-					is_machine_empire = no
 					country_uses_bio_ships = yes
 				}
 			}
@@ -86,7 +83,7 @@ starbase_outpost = {
 					country_uses_bio_ships = yes
 				}
 			}
-			food = 150
+			food = @outpost_machine_extra_cost
 			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
@@ -106,8 +103,11 @@ starbase_outpost = {
 		always = yes
 	}
 
-	combat_size_multiplier = 5
-	size_multiplier = 4
+	combat_size_multiplier = 20
+	size_multiplier = 20
+	map_counter_icon = ship_counter_16
+	icon = ship_size_military_station
+
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }
@@ -134,7 +134,6 @@ starbase_outpost = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = 1
-	icon = ship_size_military_station
 }
 
 starbase_starport = {
@@ -153,14 +152,39 @@ starbase_starport = {
 		ship_fire_rate_mult = 0.50
 		ship_weapon_range_mult = 0.20
 	}
-	max_hitpoints = 10000
+	max_hitpoints = @starport_hp
 	base_buildtime = 360
 	resources = {
 		category = starbases
 		cost = {
-			#alloys = 200
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @starport_cost
 			light_alloys = 140
 			heavy_alloys = 60
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @starport_cost
+			light_alloys = 140
+			heavy_alloys = 60
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @starport_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 
 		upkeep = {
@@ -168,8 +192,11 @@ starbase_starport = {
 		}
 	}
 
-	combat_size_multiplier = 20
-	size_multiplier = 6
+	combat_size_multiplier = 40
+	size_multiplier = 40
+	map_counter_icon = ship_counter_32
+	icon = ship_size_military_station
+
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }
@@ -198,7 +225,6 @@ starbase_starport = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = 2
-	icon = ship_size_military_station
 
 	potential_construction = {
 		always = no
@@ -225,23 +251,51 @@ starbase_starhold = {
 		ship_fire_rate_mult = 0.50
 		ship_weapon_range_mult = 0.20
 	}
-	max_hitpoints = 20000
+	max_hitpoints = @starhold_hp
 	base_buildtime = 720
 	resources = {
 		category = starbases
 		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
 			#alloys = 500
 			light_alloys = 350
 			heavy_alloys = 150
 		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = 500
+			light_alloys = 350
+			heavy_alloys = 150
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @starhold_cost
+			mult = @halved_alloy_to_food_cost_ratio
+		}
+
 
 		upkeep = {
 			energy = 3
 		}
 	}
 
-	combat_size_multiplier = 30
-	size_multiplier = 8
+	combat_size_multiplier = 60
+	size_multiplier = 60
+	map_counter_icon = ship_counter_64
+	icon = ship_size_military_station
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }
@@ -272,7 +326,7 @@ starbase_starhold = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = 3
-	icon = ship_size_military_station
+
 	potential_construction = {
 		always = no
 	}
@@ -298,14 +352,39 @@ starbase_starfortress = {
 		ship_fire_rate_mult = 0.50
 		ship_weapon_range_mult = 0.20
 	}
-	max_hitpoints = 40000
+	max_hitpoints = @starfort_hp
 	base_buildtime = 1080
 	resources = {
 		category = starbases
 		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @starfort_cost
+			light_alloys = 875
+			heavy_alloys = 375
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
 			#alloys = 1250
 			light_alloys = 875
 			heavy_alloys = 375
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @starfort_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 
 		upkeep = {
@@ -313,8 +392,10 @@ starbase_starfortress = {
 		}
 	}
 
-	combat_size_multiplier = 40
-	size_multiplier = 12
+	combat_size_multiplier = 80
+	size_multiplier = 80
+	map_counter_icon = ship_counter_64
+	icon = ship_size_military_station
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }
@@ -347,7 +428,7 @@ starbase_starfortress = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = 4
-	icon = ship_size_military_station
+
 	potential_construction = {
 		always = no
 	}
@@ -373,14 +454,39 @@ starbase_citadel = {
 		ship_fire_rate_mult = 0.50
 		ship_weapon_range_mult = 0.20
 	}
-	max_hitpoints = 80000
+	max_hitpoints = @citadel_hp
 	base_buildtime = 1440
 	resources = {
 		category = starbases
 		cost = {
-			#alloys = 3500
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @citadel_cost
 			light_alloys = 2450
 			heavy_alloys = 1050
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @citadel_cost
+			light_alloys = 2450
+			heavy_alloys = 1050
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @citadel_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 
 		upkeep = {
@@ -388,8 +494,10 @@ starbase_citadel = {
 		}
 	}
 
-	combat_size_multiplier = 50
-	size_multiplier = 16
+	combat_size_multiplier = 100
+	size_multiplier = 100
+	map_counter_icon = ship_counter_128
+	icon = ship_size_military_station
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }
@@ -423,7 +531,7 @@ starbase_citadel = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = 5
-	icon = ship_size_military_station
+
 	potential_construction = {
 		always = no
 	}
@@ -461,8 +569,10 @@ starbase_swarm = {
 
 	max_hitpoints = 30000
 	base_buildtime = 720
-	combat_size_multiplier = 50
-	size_multiplier = 16
+	combat_size_multiplier = 80
+	size_multiplier = 80
+	map_counter_icon = ship_counter_64
+	icon = ship_size_military_station
 	fleet_slot_size = 2
 	section_slots = { "core" = { locator = "root" } }
 	is_designable = no
@@ -482,7 +592,6 @@ starbase_swarm = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = -1
-	icon = ship_size_military_station
 }
 
 starbase_ai = {
@@ -510,8 +619,10 @@ starbase_ai = {
 
 	max_hitpoints = 20000
 	base_buildtime = 720
-	combat_size_multiplier = 50
-	size_multiplier = 16
+	combat_size_multiplier = 80
+	size_multiplier = 80
+	map_counter_icon = ship_counter_64
+	icon = ship_size_military_station
 	fleet_slot_size = 2
 	section_slots = { "core" = { locator = "root" } }
 	is_designable = no
@@ -532,7 +643,6 @@ starbase_ai = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = -1
-	icon = ship_size_military_station
 }
 
 # Normal System Starbase
@@ -560,8 +670,10 @@ starbase_exd_0 = {
 
 	max_hitpoints = 20000
 	base_buildtime = 720
-	combat_size_multiplier = 50
-	size_multiplier = 16
+	combat_size_multiplier = 80
+	size_multiplier = 80
+	map_counter_icon = ship_counter_64
+	icon = ship_size_military_station
 	fleet_slot_size = 2
 	section_slots = { "core" = { locator = "root" } }
 	is_designable = no
@@ -582,7 +694,6 @@ starbase_exd_0 = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = -1
-	icon = ship_size_military_station
 }
 
 # Anchor
@@ -612,8 +723,10 @@ starbase_exd = {
 
 	max_hitpoints = 120000
 	base_buildtime = 720
-	combat_size_multiplier = 50
-	size_multiplier = 32
+	combat_size_multiplier = 100
+	size_multiplier = 100
+	map_counter_icon = ship_counter_128
+	icon = ship_size_military_station
 	fleet_slot_size = 2
 	section_slots = { "core" = { locator = "root" } }
 	is_designable = no
@@ -634,7 +747,6 @@ starbase_exd = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = -1
-	icon = ship_size_military_station
 }
 
 starbase_marauder = {
@@ -662,8 +774,10 @@ starbase_marauder = {
 
 	max_hitpoints = 20000
 	base_buildtime = 720
-	combat_size_multiplier = 50
-	size_multiplier = 12
+	combat_size_multiplier = 80
+	size_multiplier = 80
+	map_counter_icon = ship_counter_64
+	icon = ship_size_military_station
 	fleet_slot_size = 2
 	section_slots = { "mid" = { locator = "part1" } }
 	is_designable = no
@@ -685,7 +799,6 @@ starbase_marauder = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = -1
-	icon = ship_size_military_station
 }
 
 starbase_gatebuilders = {
@@ -712,8 +825,10 @@ starbase_gatebuilders = {
 
 	max_hitpoints = 20000
 	base_buildtime = 720
-	combat_size_multiplier = 50
-	size_multiplier = 12
+	combat_size_multiplier = 80
+	size_multiplier = 80
+	map_counter_icon = ship_counter_64
+	icon = ship_size_military_station
 	fleet_slot_size = 2
 	section_slots = { "mid" = { locator = "part1" } }
 	is_designable = no
@@ -735,7 +850,6 @@ starbase_gatebuilders = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = -1
-	icon = ship_size_military_station
 }
 
 ### Synth Queen
@@ -768,8 +882,10 @@ starbase_synth_queen = {
 
 	max_hitpoints = 50000
 	base_buildtime = 720
-	combat_size_multiplier = 50
-	size_multiplier = 16
+	combat_size_multiplier = 80
+	size_multiplier = 80
+	map_counter_icon = ship_counter_64
+	icon = ship_size_military_station
 	fleet_slot_size = 2
 	section_slots = { "core" = { locator = "root" } }
 	is_designable = no
@@ -791,7 +907,6 @@ starbase_synth_queen = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = -1
-	icon = ship_size_military_station
 }
 
 big_starbase_synth_queen = {
@@ -822,8 +937,10 @@ big_starbase_synth_queen = {
 
 	max_hitpoints = 100000
 	base_buildtime = 720
-	combat_size_multiplier = 50
-	size_multiplier = 16
+	combat_size_multiplier = 80
+	size_multiplier = 80
+	map_counter_icon = ship_counter_64
+	icon = ship_size_military_station
 	fleet_slot_size = 2
 	section_slots = { "core" = { locator = "root" } }
 	is_designable = no
@@ -845,7 +962,6 @@ big_starbase_synth_queen = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = -1
-	icon = ship_size_military_station
 }
 
 ##################
@@ -853,7 +969,7 @@ big_starbase_synth_queen = {
 ##################
 
 starbase_fe_outpost = {
-	graphical_culture = { "fallen_empire_01" "fallen_empire_02" "fallen_empire_03" "fallen_empire_04" }
+	graphical_culture = { "fallen_empire_01" "fallen_empire_02" "fallen_empire_03" "fallen_empire_04" "biogenesis_01_fallen_empire" }
 
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
 	class = shipclass_starbase
@@ -908,8 +1024,10 @@ starbase_fe_outpost = {
 		}
 	}
 
-	combat_size_multiplier = 5
-	size_multiplier = 4
+	combat_size_multiplier = 20
+	size_multiplier = 20
+	map_counter_icon = ship_counter_16
+	icon = ship_size_military_station
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }
@@ -934,7 +1052,6 @@ starbase_fe_outpost = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = 1
-	icon = ship_size_military_station
 }
 
 
@@ -954,8 +1071,10 @@ ion_cannon = {
 		ship_weapon_range_mult = 0.20
 	}
 	size_multiplier = 8
-	fleet_slot_size = 8
-	combat_size_multiplier = 8
+	map_counter_icon = ship_counter_8
+	icon = ship_size_military_station
+	fleet_slot_size = 40
+	combat_size_multiplier = 40
 	section_slots = { "ship" = { locator = "part1" } }
 	is_designable = yes
 	components_add_to_cost = yes
@@ -970,7 +1089,6 @@ ion_cannon = {
 	prerequisites = { "tech_titans" }
 	class = shipclass_military_station
 	ship_class_icon_frame = 26
-	icon = ship_size_military_station
 	construction_type = starbase_defenses
 	required_component_set = "power_core"
 	required_component_set = "sensor_components"
@@ -1026,8 +1144,10 @@ starbase_hatchery = {
 	resources = {
 	}
 
-	combat_size_multiplier = 50
-	size_multiplier = 16
+	combat_size_multiplier = 80
+	size_multiplier = 80
+	map_counter_icon = ship_counter_64
+	icon = ship_size_military_station
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }
@@ -1060,7 +1180,6 @@ starbase_hatchery = {
 	build_block_radius = @build_block_radius_starbase
 	formation_priority = @starbase_formation_priority
 	icon_frame = 5
-	icon = ship_size_military_station
 	potential_construction = {
 		always = no
 	}

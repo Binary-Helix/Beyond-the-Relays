@@ -105,7 +105,6 @@ district_generator = {
 			planet_housing_add = 300
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -113,6 +112,16 @@ district_generator = {
 		}
 		modifier = {
 			planet_housing_add = 100
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_tankbound_empire = yes }
+		}
+		modifier = {
+			job_technician_automated_workforce_mult = 1.0
 		}
 	}
 
@@ -268,26 +277,20 @@ district_mining = {
 				has_valid_civic = civic_agrarian_idyll
 			}
 		}
-		modifier = {
-			planet_housing_add = 300
-		}
+		planet_housing_add = 300
 	}
+
 	triggered_planet_modifier = {
-		potential = {
-			has_modifier = metal_planet
-		}
-		modifier = {
-			planet_housing_add = 500
-		}
+		planet_housing_add = 1
+		mult = modifier:mining_district_housing_add
 	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { is_gestalt = yes }
 		}
-		modifier = {
-			planet_housing_add = 100
-		}
+		planet_housing_add = 100
 	}
 
 	triggered_planet_modifier = {
@@ -295,10 +298,7 @@ district_mining = {
 			exists = owner
 			owner = { is_tankbound_empire = yes }
 		}
-		modifier = {
-			job_miner_automated_workforce_mult = 1.0
-			job_production_overseer_add = 100
-		}
+		job_miner_automated_workforce_mult = 1.0
 	}
 
 	inline_script = {
@@ -538,7 +538,6 @@ district_farming = {
 		}
 		modifier = {
 			job_farmer_automated_workforce_mult = 1.0
-			job_production_overseer_add = 100
 		}
 	}
 
@@ -619,56 +618,13 @@ district_geothermal = {
 	expansion_planner_type = district_generator
 
 	resources = {
-		category = planet_districts_farming
-		cost = {
-			minerals = @base_cost_minerals
-			light_alloys = @base_cost_light_alloys
-			heavy_alloys = @base_cost_heavy_alloys
-		}
-		# Anglers Civic cost effect
-		cost = {
-			trigger = {
-				AND = {
-					exists = owner
-					owner = { is_anglers_empire = yes }
-					planet = { is_planet_class = pc_ocean }
-				}
-			}
-			minerals = -50
-		}
-		upkeep = {
-			energy = 1
-		}
-		produces = {
-			trigger = {
-				exists = owner
-				owner = {
-					has_tradition = tr_btr_agrarianism_rural
-				}
-			}
-			unity = 1
-		}
-
-		cost = {
-			trigger = {
-				exists = owner
-				owner = {
-					has_tradition = tr_btr_agrarianism_rural
-				}
-			}
-			minerals = -150
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			farmer_is_angler_trigger = yes
-		}
-		text = zone_anglers_triggered_desc
+		category = planet_districts_generator
+		cost = { minerals = @base_cost }
+		upkeep = { energy = 1 }
 	}
 
 	inline_script = {
-		script = jobs/farmers_add
+		script = jobs/technicians_add
 		AMOUNT = @base_rural_district_jobs
 	}
 
@@ -680,19 +636,20 @@ district_geothermal = {
 		potential = {
 			exists = owner
 			owner = {
-				has_tradition = tr_btr_agrarianism_rural
+				has_valid_civic = civic_agrarian_idyll
 			}
 		}
 		modifier = {
-			pop_happiness = 3
+			planet_housing_add = 300
 		}
 	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_tradition = tr_btr_laisez_towns
-			}
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			planet_housing_add = 100
 		}
 	}
 
@@ -703,7 +660,6 @@ district_geothermal = {
 		}
 		modifier = {
 			job_technician_automated_workforce_mult = 1.0
-			job_production_overseer_add = 100
 		}
 	}
 
@@ -791,12 +747,8 @@ district_melting = {
 		}
 	}
 	triggered_planet_modifier = {
-		potential = {
-			has_modifier = metal_planet
-		}
-		modifier = {
-			planet_housing_add = 500
-		}
+		planet_housing_add = 1
+		mult = modifier:mining_district_housing_add
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -815,7 +767,6 @@ district_melting = {
 		}
 		modifier = {
 			job_miner_automated_workforce_mult = 1.0
-			job_production_overseer_add = 100
 		}
 	}
 

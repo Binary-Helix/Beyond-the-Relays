@@ -150,6 +150,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @armor_S2
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T2
+	}
 
 	potential = {
 		from = {
@@ -195,6 +198,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @armor_M2
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T2
+	}
 
 	potential = {
 		from = {
@@ -239,6 +245,9 @@ utility_component_template = {
 	power = 0
 	modifier = {
 		ship_armor_add = @armor_L2
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T2
 	}
 
 	potential = {
@@ -286,6 +295,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @armor_S3
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T3
+	}
 
 	potential = {
 		from = {
@@ -331,6 +343,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @armor_M3
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T3
+	}
 
 	potential = {
 		from = {
@@ -375,6 +390,9 @@ utility_component_template = {
 	power = 0
 	modifier = {
 		ship_armor_add = @armor_L3
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T3
 	}
 
 	potential = {
@@ -422,6 +440,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @armor_S4
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T4
+	}
 
 	potential = {
 		from = {
@@ -467,6 +488,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @armor_M4
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T4
+	}
 
 	potential = {
 		from = {
@@ -511,6 +535,9 @@ utility_component_template = {
 	power = 0
 	modifier = {
 		ship_armor_add = @armor_L4
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T4
 	}
 
 	potential = {
@@ -558,6 +585,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @armor_S5
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+	}
 
 	potential = {
 		from = {
@@ -604,6 +634,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @armor_M5
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+	}
 
 	potential = {
 		from = {
@@ -648,6 +681,9 @@ utility_component_template = {
 	power = 0
 	modifier = {
 		ship_armor_add = @armor_L5
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
 	}
 
 	potential = {
@@ -699,6 +735,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @armor_S6
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	potential = {
 		from = {
@@ -743,6 +782,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @armor_M6
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	potential = {
 		from = {
@@ -786,6 +828,9 @@ utility_component_template = {
 	power = 0
 	modifier = {
 		ship_armor_add = @armor_L6
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	potential = {
@@ -849,6 +894,9 @@ utility_component_template = {
 	modifier = {
 		ship_hull_add = @hull_S2
 	}
+	ship_modifier = {
+		ship_damage_reduction_add = 1
+	}
 
 	ai_weight = {
 		weight = 1
@@ -878,6 +926,9 @@ utility_component_template = {
 
 	modifier = {
 		ship_hull_add = @hull_M2
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 2
 	}
 
 	ai_weight = {
@@ -909,6 +960,9 @@ utility_component_template = {
 	modifier = {
 		ship_hull_add = @hull_L2
 	}
+	ship_modifier = {
+		ship_damage_reduction_add = 3
+	}
 
 	ai_weight = {
 		weight = 1
@@ -937,6 +991,9 @@ utility_component_template = {
 
 	modifier = {
 		ship_hull_add = @hull_S4
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 2
 	}
 
 	ai_weight = {
@@ -967,6 +1024,9 @@ utility_component_template = {
 	modifier = {
 		ship_hull_add = @hull_M4
 	}
+	ship_modifier = {
+		ship_damage_reduction_add = 3
+	}
 
 	ai_weight = {
 		weight = 1
@@ -995,6 +1055,9 @@ utility_component_template = {
 
 	modifier = {
 		ship_hull_add = @hull_L4
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 4
 	}
 
 	ai_weight = {
@@ -1030,6 +1093,9 @@ utility_component_template = {
 	modifier = {
 		ship_hull_add = @hull_S2
 	}
+	ship_modifier = {
+		ship_damage_reduction_add = 1
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1063,6 +1129,9 @@ utility_component_template = {
 
 	modifier = {
 		ship_hull_add = @hull_M2
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 2
 	}
 
 	ai_weight = {
@@ -1098,6 +1167,9 @@ utility_component_template = {
 	modifier = {
 		ship_hull_add = @hull_L2
 	}
+	ship_modifier = {
+		ship_damage_reduction_add = 3
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1130,6 +1202,9 @@ utility_component_template = {
 
 	modifier = {
 		ship_hull_add = @hull_S4
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 2
 	}
 
 	ai_weight = {
@@ -1164,6 +1239,9 @@ utility_component_template = {
 	modifier = {
 		ship_hull_add = @hull_M4
 	}
+	ship_modifier = {
+		ship_damage_reduction_add = 3
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1196,6 +1274,9 @@ utility_component_template = {
 
 	modifier = {
 		ship_hull_add = @hull_L4
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 4
 	}
 
 	ai_weight = {
@@ -1337,6 +1418,9 @@ utility_component_template = { # Small
 		}
 		ship_shield_add = @shield_S1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	potential = {
 		from = {
@@ -1419,6 +1503,9 @@ utility_component_template = { # Medium
 		}
 		ship_shield_add = @shield_M1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	potential = {
 		from = {
@@ -1500,6 +1587,9 @@ utility_component_template = { # Large
 			}
 		}
 		ship_shield_add = @shield_L1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	potential = {
@@ -1762,6 +1852,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T2
 	}
 
 	potential = {
@@ -1824,6 +1915,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T2
 	}
 
 	potential = {
@@ -1886,6 +1978,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T2
 	}
 
 	potential = {
@@ -1949,6 +2042,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T3
 	}
 
 	potential = {
@@ -2011,6 +2105,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T3
 	}
 
 	potential = {
@@ -2073,6 +2168,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T3
 	}
 
 	potential = {
@@ -2136,6 +2232,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T4
 	}
 
 	potential = {
@@ -2198,6 +2295,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T4
 	}
 
 	potential = {
@@ -2260,6 +2358,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T4
 	}
 
 	potential = {
@@ -2323,6 +2422,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T5
 	}
 
 	potential = {
@@ -2384,6 +2484,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T5
 	}
 
 	potential = {
@@ -2445,6 +2546,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T5
 	}
 
 	potential = {

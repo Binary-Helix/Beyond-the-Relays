@@ -104,7 +104,7 @@ d_minerals_3 = {
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 3.0
 			is_asteroid = yes
 		}
 	}
@@ -141,7 +141,7 @@ d_minerals_4 = {
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			is_asteroid = yes
 		}
 	}
@@ -178,7 +178,7 @@ d_minerals_5 = {
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 5.0
 			is_asteroid = yes
 		}
 	}
@@ -384,7 +384,7 @@ d_energy_3 = {
 	drop_weight = {
 		weight = 2.5
 		modifier = {
-			factor = 1.5
+			factor = 2
 			OR = {
 				is_planet_class = pc_k_star
 				is_planet_class = pc_m_star
@@ -393,7 +393,7 @@ d_energy_3 = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 			OR = {
 				is_planet_class = pc_f_star
 				is_planet_class = pc_g_star
@@ -435,7 +435,7 @@ d_energy_4 = {
 	drop_weight = {
 		weight = 1
 		modifier = {
-			factor = 1.5
+			factor = 2.5
 			OR = {
 				is_planet_class = pc_k_star
 				is_planet_class = pc_m_star
@@ -444,7 +444,7 @@ d_energy_4 = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 			OR = {
 				is_planet_class = pc_f_star
 				is_planet_class = pc_g_star
@@ -486,7 +486,7 @@ d_energy_5 = {
 	drop_weight = {
 		weight = 0.1
 		modifier = {
-			factor = 1.5
+			factor = 3
 			OR = {
 				is_planet_class = pc_k_star
 				is_planet_class = pc_m_star

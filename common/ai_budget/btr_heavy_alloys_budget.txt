@@ -54,6 +54,12 @@ heavy_alloys_expenditure_ships = {
 			used_naval_capacity_percent >= 1.0
 		}
 
+		# Biological Ships use less alloys
+		modifier = {
+			factor = 0.33
+			country_uses_bio_ships = yes
+		}
+
 		modifier = {
 			factor = 5
 			used_naval_capacity_percent < 1.0
@@ -65,6 +71,19 @@ heavy_alloys_expenditure_ships = {
 					is_crisis_faction = yes
 				}
 			}
+		}
+	}
+
+	desired_min = {
+		base = 0
+
+		modifier = {
+			add = 3
+			country_uses_bio_ships = no
+		}
+
+		modifier = {
+			factor = trigger:years_passed
 		}
 	}
 }
@@ -90,6 +109,12 @@ heavy_alloys_expenditure_ship_upgrades = {
 			factor = 2.5
 			used_naval_capacity_percent >= 1.0
 		}
+
+		# Biological Ships use less alloys
+		modifier = {
+			factor = 0.33
+			country_uses_bio_ships = yes
+		}
 	}
 }
 
@@ -104,6 +129,27 @@ heavy_alloys_expenditure_planets = {
 
 	weight = {
 		weight = 0.1
+	}
+
+	desired_min = {
+		modifier = {
+			add = 250
+			any_owned_planet = {
+				is_planet_class = pc_habitat
+				free_district_slots > 0
+			}
+		}
+		modifier = {
+			add = 500
+			any_owned_planet = {
+				is_planet_class = pc_city
+				free_district_slots > 0
+			}
+		}
+		modifier = {
+			add = 250
+			is_void_dweller_empire = yes
+		}
 	}
 
 	desired_max = {
@@ -165,6 +211,12 @@ heavy_alloys_expenditure_starbases = {
 				}
 			}
 		}
+
+		# Biological Starbases use less alloys
+		modifier = {
+			factor = 0.5
+			country_uses_bio_ships = yes
+		}
 	}
 	desired_max = {
 		base = 500
@@ -207,13 +259,67 @@ heavy_alloys_expenditure_starbases_expand = {
 
 	weight = {
 		weight = 0.2
+
+		# Biological Starbases use less alloys
+		modifier = {
+			factor = 0.5
+			country_uses_bio_ships = yes
+		}
 	}
 
 	desired_min = {
 		base = 150
 	}
 }
+heavy_alloys_expenditure_colonies_infernal_expand = {
+	resource = heavy_alloys
+	type = expenditure
+	category = colonies
 
+	potential = {
+		is_infernal_empire = yes
+		NOT = {
+			has_origin = origin_synthetic_fertility
+		}
+		has_resource = { type = heavy_alloys amount > 400 }
+		has_monthly_income = {
+			resource = heavy_alloys
+			value > 0
+		}
+	}
+
+	weight = {
+		weight = 0.8
+	}
+
+	desired_min = {
+		base = 0
+		modifier = {
+			add = @colony_cost_base
+			is_hive_empire = no
+		}
+		modifier = {
+			add = @colony_cost_high
+			OR = {
+				is_hive_empire = yes
+			}
+		}
+	}
+
+	desired_max = {
+		base = 0
+		modifier = {
+			add = @colony_cost_base_max
+			is_hive_empire = no
+		}
+		modifier = {
+			add = @colony_cost_high_max
+			OR = {
+				is_hive_empire = yes
+			}
+		}
+	}
+}
 heavy_alloys_expenditure_colonies_expand = {
 	resource = heavy_alloys
 	type = expenditure
@@ -228,6 +334,7 @@ heavy_alloys_expenditure_colonies_expand = {
 		OR = {
 			AND = {
 				is_lithoid_empire = no
+				is_infernal_empire = no
 				has_resource = { type = food amount > 400 }
 				has_monthly_income = {
 					resource = food
@@ -247,6 +354,14 @@ heavy_alloys_expenditure_colonies_expand = {
 				has_resource = { type = energy amount > 400 }
 				has_monthly_income = {
 					resource = energy
+					value > 0
+				}
+			}
+			AND = {
+				is_infernal_empire = yes
+				has_resource = { type = heavy_alloys amount > 400 }
+				has_monthly_income = {
+					resource = heavy_alloys
 					value > 0
 				}
 			}
@@ -282,6 +397,10 @@ heavy_alloys_expenditure_colonies_expand = {
 			mult = 0.5
 			has_origin = origin_tree_of_life
 		}
+		modifier = {
+			mult = 0.5
+			country_uses_bio_ships = yes
+		}
 	}
 
 	desired_max = {
@@ -309,6 +428,10 @@ heavy_alloys_expenditure_colonies_expand = {
 		modifier = {
 			mult = 0.5
 			has_origin = origin_tree_of_life
+		}
+		modifier = {
+			mult = 0.5
+			country_uses_bio_ships = yes
 		}
 	}
 }
@@ -355,7 +478,7 @@ heavy_alloys_expenditure_habitats = {
 	weight = {
 		weight = 0.2
 		modifier = {
-			factor = 2.5
+			factor = 2
 			is_void_dweller_empire = yes
 		}
 		modifier = {
@@ -408,20 +531,32 @@ heavy_alloys_expenditure_decisions = {
 	category = decisions
 	potential = {
 		OR = {
-			has_technology = tech_habitat_2
+			has_ascension_perk = ap_arcology_project
 			has_technology = tech_mega_engineering
-		}
-		any_owned_planet = {
-			AND = {
-				is_planet_class = pc_shattered_ring_habitable
-				num_uncleared_blockers < 1
-				root = { has_technology = tech_mega_engineering }
-			}
+			has_technology = tech_housing_2
 		}
 		# only consider these kinds of decisions when "wealthy"
 		has_resource = {
 			type = heavy_alloys
 			amount > 5000
+		}
+		any_owned_planet = {
+			OR = {
+				AND = {
+					root = { has_ascension_perk = ap_arcology_project }
+					is_starting_planet_type = yes
+				}
+				AND = {
+					is_planet_class = pc_shattered_ring_habitable
+					root = { has_technology = tech_mega_engineering }
+					num_uncleared_blockers < 1
+				}
+				AND = {
+					is_planet_class = pc_relic
+					root = { has_technology = tech_housing_2 }
+					num_uncleared_blockers < 1
+				}
+			}
 		}
 	}
 	weight = {
@@ -438,71 +573,68 @@ heavy_alloys_expenditure_decisions = {
 				num_uncleared_blockers < 1
 			}
 		}
-	}
-}
-
-heavy_alloys_expenditure_armies = {
-	resource = heavy_alloys
-	type = expenditure
-	category = armies
-
-	potential = {
-		always = yes
-	}
-
-	weight = {
-		weight = 0.1
-
 		modifier = {
-			factor = 2
+			add = 8000
 			OR = {
-				any_neighbor_country = {
-					has_ascension_perk = ap_become_the_crisis
-				}
-				any_country = {
-					is_crisis_faction = yes
+				has_ascension_perk = ap_arcology_project
+				AND = {
+					has_technology = tech_housing_2
+					any_owned_planet = {
+						is_planet_class = pc_relic
+						num_uncleared_blockers < 1
+					}
 				}
 			}
 		}
-
 	}
 }
 
-heavy_alloys_expenditure_armies_threatened = {
+heavy_alloys_expenditure_deposit_blockers = {
 	resource = heavy_alloys
 	type = expenditure
-	category = armies
+	category = deposit_blockers
 
 	potential = {
-		highest_threat > 20
+		OR = {
+			any_owned_planet = {
+				is_planet_class = pc_shattered_ring_habitable
+				num_uncleared_blockers > 0
+			}
+			AND = {
+				OR = {
+					has_technology = tech_climate_restoration
+					has_ascension_perk = ap_machine_worlds
+				}
+				any_owned_planet = {
+					has_deposit = d_machine_prototype_pc_machine
+				}
+			}
+		}
 	}
 
 	weight = {
-		weight = 0.10
+		weight = 0.15
+	}
+
+	# base remove blocker cost
+	desired_min = {
+		base = 250
+	}
+
+	desired_max = {
+		base = 1250
+		modifier = {
+			mult = 2
+			OR = {
+				has_technology = tech_climate_restoration
+				has_ascension_perk = ap_machine_worlds
+			}
+			any_owned_planet = {
+				has_deposit = d_machine_prototype_pc_machine
+			}
+		}
 	}
 }
-
-# heavy_alloys_expenditure_precursors = {
-# 	resource = heavy_alloys
-# 	type = expenditure
-# 	category = planets
-#
-# 	potential = {
-# 		OR = {
-# 			has_technology = tech_iridium_alloys
-# 			has_technology = tech_palladium_alloys
-# 			has_technology = tech_platinum_alloys
-# 		}
-# 	}
-#
-# 	weight = {
-# 		weight = 0.20
-# 	}
-# 	desired_max = {
-# 		base = 800
-# 	}
-# }
-
 
 ############
 ## Upkeep ##
@@ -542,5 +674,19 @@ heavy_alloys_upkeep_habitats = {
 				}
 			}
 		}
+	}
+}
+
+heavy_alloys_upkeep_planets = {
+	resource = heavy_alloys
+	type = upkeep
+	category = planets
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.2
 	}
 }

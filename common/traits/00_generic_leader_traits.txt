@@ -110,6 +110,9 @@ leader_trait_resilient = {
 	leader_potential_add = {
 		trait_is_crisis_faction_check = no
 		is_immortal = no
+		from = {
+			is_toxic_baths_empire = no
+		}
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -770,6 +773,59 @@ trait_imperial_heir = {
 		mult = species.species_traits_purity_count
 	}
 
+	triggered_councilor_modifier = {
+		potential = {
+			is_heir = yes
+			leader_class = commander
+			exists = owner
+			owner = {
+				is_imperial_authority = yes
+				is_transcendent_authority = yes
+			}
+		}
+		ship_hull_mult = @transcendent_imperial_heir_mult
+		ship_speed_mult = @transcendent_imperial_heir_mult
+	}
+
+	triggered_councilor_modifier = {
+		potential = {
+			is_heir = yes
+			leader_class = scientist
+			exists = owner
+			owner = {
+				is_imperial_authority = yes
+				is_transcendent_authority = yes
+			}
+		}
+		ship_archaeological_site_clues_add = @transcendent_imperial_heir_skill
+	}
+	triggered_councilor_modifier = {
+		potential = {
+			has_astral_planes_dlc = yes
+			is_heir = yes
+			leader_class = scientist
+			exists = owner
+			owner = {
+				is_imperial_authority = yes
+				is_transcendent_authority = yes
+			}
+		}
+		ship_astral_rift_clues_add = @transcendent_imperial_heir_skill
+	}
+
+	triggered_councilor_modifier = {
+		potential = {
+			is_heir = yes
+			leader_class = official
+			exists = owner
+			owner = {
+				is_imperial_authority = yes
+				is_transcendent_authority = yes
+			}
+		}
+		planet_stability_add = @transcendent_imperial_heir_stability
+	}
+
 	on_gained_effect = {
 		change_background_job = noble
 	}
@@ -1288,7 +1344,7 @@ leader_trait_master_bureaucrat = {
 	}
 	councilor_modifier = {
 		leaders_upkeep_mult = -0.05
-		empire_size_penalty_mult = -0.05
+		empire_size_penalty_mult = -0.03
 		country_edict_fund_add = 75
 	}
 	leader_potential_add = {
@@ -1400,7 +1456,24 @@ leader_trait_substance_abuser = {
 		leader_trait_resilient
 	}
 	leader_potential_add = {
-		is_gestalt = no
+		OR = {
+			trait_is_gestalt_check = no
+			AND = {
+				exists = creator
+				creator = {
+					is_toxic_baths_empire = yes
+				}
+			}
+		}
+	}
+	triggered_self_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				has_toxic_baths_building = yes
+			}
+		}
+		leader_skill_add = 3
 	}
 	selectable_weight = {
 		weight = @shared_negative_trait_weight
@@ -1431,6 +1504,15 @@ leader_trait_substance_abuser_2 = {
 	}
 	self_modifier = {
 		leader_lifespan_add = -30
+	}
+	triggered_self_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				has_toxic_baths_building = yes
+			}
+		}
+		leader_skill_add = 3
 	}
 	leader_class = { commander scientist official }
 	opposites = {

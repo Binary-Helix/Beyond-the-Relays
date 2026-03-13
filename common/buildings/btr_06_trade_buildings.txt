@@ -24,19 +24,19 @@ building_commercial_zone = {
 		OR = {
 			has_planet_flag = ignore_ai_building_limitations
 			owner = {
-				is_ai = no					
+				is_ai = no
 			}
-			
+
 			# AI is allowed to build one of these unless they're a megacorp or this is a trade planet
 			owner = {
-				is_megacorp = yes	
+				is_megacorp = yes
 			}
 			has_any_trade_zone = yes
 			NOR = {
 				has_building = building_commercial_zone
 				has_building = building_commercial_megaplex
 			}
-		}	
+		}
 	}
 
 	destroy_trigger = {
@@ -132,7 +132,7 @@ building_commercial_megaplex = {
 	}
 
 	planet_modifier = {
-		planet_traders_upkeep_mult = -0.20
+		planet_traders_upkeep_mult = -0.10
 	}
 
 	prerequisites = {
@@ -199,6 +199,12 @@ building_galactic_stock_exchange = {
 	inline_script = {
 		script = jobs/trader_add
 		AMOUNT = @building_static_jobs
+	}
+
+	inline_script = {
+		script = "jobs/politician_add_from_civic"
+		AMOUNT = @building_static_jobs
+		CIVIC = civic_merchant_guilds
 	}
 
 	resources = {

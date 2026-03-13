@@ -30,20 +30,9 @@ d_exotic_gases_1 = {
 		}
 	}
 
-	# potential = {
-	# 	OR = {
-	# 		is_planet_class = pc_gas_giant
-	# 		is_planet_class = pc_toxic
-	# 	}
-	# }
-	#
-	# drop_weight = {
-	# 	weight = 1.5
-	# 	modifier = {
-	# 		factor = 1.5
-	# 		is_inside_nebula = yes
-	# 	}
-	# }
+	habitat_modifier = {
+		district_hab_energy_max_add = 1
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -61,20 +50,9 @@ d_exotic_gases_2 = {
 		}
 	}
 
-	# potential = {
-	# 	OR = {
-	# 		is_planet_class = pc_gas_giant
-	# 		is_planet_class = pc_toxic
-	# 	}
-	# }
-	#
-	# drop_weight = {
-	# 	weight = 0.5
-	# 	modifier = {
-	# 		factor = 1.5
-	# 		is_inside_nebula = yes
-	# 	}
-	# }
+	habitat_modifier = {
+		district_hab_energy_max_add = 1
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -92,9 +70,9 @@ d_exotic_gases_3 = {
 		}
 	}
 
-	# # drop_weight = {
-	# 	weight = 0
-	# }
+	habitat_modifier = {
+		district_hab_energy_max_add = 1
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -112,9 +90,9 @@ d_exotic_gases_4 = {
 		}
 	}
 
-	# drop_weight = {
-	# 	weight = 0
-	# }
+	habitat_modifier = {
+		district_hab_energy_max_add = 1
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -132,9 +110,9 @@ d_exotic_gases_5 = {
 		}
 	}
 
-	# drop_weight = {
-	# 	weight = 0
-	# }
+	habitat_modifier = {
+		district_hab_energy_max_add = 1
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -151,20 +129,9 @@ d_rare_crystals_1 = {
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
-	# drop_weight = {
-	# 	weight = 0
-	# 	modifier = {
-	# 		weight = 1
-	# 		OR = {
-	# 			is_planet_class = pc_frozen
-	# 			is_planet_class = pc_ice_asteroid
-	# 		}
-	# 	}
-	# 	modifier = {
-	# 		factor = 1.5
-	# 		is_inside_nebula = yes
-	# 	}
-	# }
+	habitat_modifier = {
+		district_hab_mining_max_add = 1
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -181,20 +148,9 @@ d_rare_crystals_2 = {
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
-	# drop_weight = {
-	# 	weight = 0
-	# 	modifier = {
-	# 		weight = 0.25
-	# 		OR = {
-	# 			is_planet_class = pc_frozen
-	# 			is_planet_class = pc_ice_asteroid
-	# 		}
-	# 	}
-	# 	modifier = {
-	# 		factor = 1.5
-	# 		is_inside_nebula = yes
-	# 	}
-	# }
+	habitat_modifier = {
+		district_hab_mining_max_add = 2
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -211,9 +167,9 @@ d_rare_crystals_3 = {
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
-	# drop_weight = {
-	# 	weight = 0
-	# }
+	habitat_modifier = {
+		district_hab_mining_max_add = 2
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -230,9 +186,9 @@ d_rare_crystals_4 = {
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
-	# drop_weight = {
-	# 	weight = 0
-	# }
+	habitat_modifier = {
+		district_hab_mining_max_add = 3
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -249,9 +205,9 @@ d_rare_crystals_5 = {
 	station = shipclass_mining_station
 	is_for_colonizable = no
 
-	# drop_weight = {
-	# 	weight = 0
-	# }
+	habitat_modifier = {
+		district_hab_mining_max_add = 3
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -269,20 +225,9 @@ d_volatile_motes_1 = {
 		}
 	}
 
-	# potential = {
-	# 	OR = {
-	# 		is_planet_class = pc_molten
-	# 		is_planet_class = pc_asteroid
-	# 	}
-	# }
-	#
-	# drop_weight = {
-	# 	weight = 1.5
-	# 	modifier = {
-	# 		factor = 1.5
-	# 		is_inside_nebula = yes
-	# 	}
-	# }
+	habitat_modifier = {
+		district_hab_energy_max_add = 1
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -300,20 +245,9 @@ d_volatile_motes_2 = {
 		}
 	}
 
-	# potential = {
-	# 	OR = {
-	# 		is_planet_class = pc_molten
-	# 		is_planet_class = pc_asteroid
-	# 	}
-	# }
-	#
-	# drop_weight = {
-	# 	weight = 0.5
-	# 	modifier = {
-	# 		factor = 1.5
-	# 		is_inside_nebula = yes
-	# 	}
-	# }
+	habitat_modifier = {
+		district_hab_energy_max_add = 1
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -331,9 +265,9 @@ d_volatile_motes_3 = {
 		}
 	}
 
-	# drop_weight = {
-	# 	weight = 0
-	# }
+	habitat_modifier = {
+		district_hab_energy_max_add = 1
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -351,9 +285,9 @@ d_volatile_motes_4 = {
 		}
 	}
 
-	# drop_weight = {
-	# 	weight = 0
-	# }
+	habitat_modifier = {
+		district_hab_energy_max_add = 1
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -371,9 +305,9 @@ d_volatile_motes_5 = {
 		}
 	}
 
-	# drop_weight = {
-	# 	weight = 0
-	# }
+	habitat_modifier = {
+		district_hab_energy_max_add = 1
+	}
 
 	potential = { always = no }
 	drop_weight = { weight = 0 }
@@ -396,19 +330,11 @@ d_zro_deposit_1 = {
 	}
 
 	habitat_modifier = {
-		district_hab_science_max_add= 1
+		district_hab_science_max_add = 1
 	}
 
 	# potential = {
 	# 	is_planet_class = pc_toxic
-	# }
-	#
-	# drop_weight = {
-	# 	weight = 5
-	# 	modifier = {
-	# 		factor = 0.5
-	# 		is_inside_nebula = no
-	# 	}
 	# }
 
 	potential = { always = no }
@@ -460,7 +386,7 @@ d_zro_deposit_3 = {
 	}
 
 	habitat_modifier = {
-		district_hab_science_max_add= 2
+		district_hab_science_max_add = 2
 	}
 
 	# drop_weight = {
@@ -484,7 +410,7 @@ d_zro_deposit_4 = {
 	}
 
 	habitat_modifier = {
-		district_hab_science_max_add= 3
+		district_hab_science_max_add = 3
 	}
 
 	# drop_weight = {
@@ -508,7 +434,7 @@ d_zro_deposit_5 = {
 	}
 
 	habitat_modifier = {
-		district_hab_science_max_add= 3
+		district_hab_science_max_add = 3
 	}
 
 	# drop_weight = {
@@ -529,7 +455,7 @@ d_dark_matter_deposit_1 = {
 	}
 
 	habitat_modifier = {
-		district_hab_science_max_add= 1
+		district_hab_science_max_add = 1
 	}
 
 	station = shipclass_research_station
@@ -561,7 +487,7 @@ d_dark_matter_deposit_2 = {
 	}
 
 	habitat_modifier = {
-		district_hab_science_max_add= 2
+		district_hab_science_max_add = 2
 	}
 
 	station = shipclass_research_station
@@ -589,7 +515,7 @@ d_dark_matter_deposit_3 = {
 	}
 
 	habitat_modifier = {
-		district_hab_science_max_add= 2
+		district_hab_science_max_add = 2
 	}
 
 	station = shipclass_research_station
@@ -613,7 +539,7 @@ d_dark_matter_deposit_10 = {
 	}
 
 	habitat_modifier = {
-		district_hab_science_max_add= 6
+		district_hab_science_max_add = 6
 	}
 
 	station = shipclass_research_station
@@ -637,7 +563,7 @@ d_living_metal_deposit = {
 	}
 
 	habitat_modifier = {
-		district_hab_science_max_add= 1
+		district_hab_science_max_add = 1
 	}
 
 	station = shipclass_mining_station

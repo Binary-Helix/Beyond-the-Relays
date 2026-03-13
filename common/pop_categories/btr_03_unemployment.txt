@@ -42,18 +42,7 @@ ruler_unemployment = {
 		always = yes
 	}
 
-	resettlement_cost = {
-		energy = 500
-	}
-
-	resettlement_cost = {
-		trigger = {
-			owner = {
-				NOT = { has_valid_civic = civic_corvee_system }
-			}
-		}
-		unity = 50
-	}
+	inline_script = "pop_categories/resettlement_costs"
 
 	# Triggered Modifiers
 	inline_script = "pop_categories/social_classes_triggered_modifiers"
@@ -66,10 +55,7 @@ ruler_unemployment = {
 
 		produces = {
 			trigger = {
-				OR = {
-					has_ethic = ethic_fanatic_spiritualist
-					has_ethic = ethic_spiritualist
-				}
+				is_spiritualist = yes
 				owner = { has_valid_civic = civic_gospel_of_the_masses }
 			}
 			trade = @trade_value_prosperity_gospel
@@ -77,18 +63,12 @@ ruler_unemployment = {
 
 		produces = {
 			trigger = {
-				has_trait = trait_inner_darkness
-			}
-			sr_dark_matter = @inner_darkness_dark_matter_production
-		}
-
-		produces = {
-			trigger = {
 				planet = {
 					has_modifier = pm_gaseous_fauna
 				}
 			}
-			exotic_gases = @gaseous_fauna_exotic_gases_production
+			#exotic_gases = @gaseous_fauna_exotic_gases_production
+			antimatter_fuel = @gaseous_fauna_exotic_gases_production
 		}
 		produces = {
 			trigger = {
@@ -96,7 +76,8 @@ ruler_unemployment = {
 					has_modifier = pm_gaseous_fauna
 				}
 			}
-			exotic_gases = @gaseous_fauna_exotic_gases_production
+			#exotic_gases = @gaseous_fauna_exotic_gases_production
+			antimatter_fuel = @gaseous_fauna_exotic_gases_production
 		}
 	}
 }
@@ -144,19 +125,7 @@ specialist_unemployment = {
 		always = yes
 	}
 
-	resettlement_cost = {
-		energy = 500
-	}
-
-	resettlement_cost = {
-		trigger = {
-			owner = {
-				NOT = { has_valid_civic = civic_corvee_system }
-			}
-		}
-		unity = 50
-	}
-
+	inline_script = "pop_categories/resettlement_costs"
 
 	triggered_planet_modifier = {
 		potential = {
@@ -177,21 +146,11 @@ specialist_unemployment = {
 
 		produces = {
 			trigger = {
-				OR = {
-					has_ethic = ethic_fanatic_spiritualist
-					has_ethic = ethic_spiritualist
-				}
+				is_spiritualist = yes
 				owner = { has_valid_civic = civic_gospel_of_the_masses }
 			}
 			trade = @trade_value_prosperity_gospel
 		}
-
-		# produces = {
-		# 	trigger = {
-		# 		has_trait = trait_inner_darkness
-		# 	}
-		# 	sr_dark_matter = @inner_darkness_dark_matter_production
-		# }
 
 		produces = {
 			trigger = {
@@ -263,18 +222,7 @@ worker_unemployment = {
 		always = yes
 	}
 
-	resettlement_cost = {
-		energy = 500
-	}
-
-	resettlement_cost = {
-		trigger = {
-			owner = {
-				NOT = { has_valid_civic = civic_corvee_system }
-			}
-		}
-		unity = 50
-	}
+	inline_script = "pop_categories/resettlement_costs"
 
 	# Triggered Modifiers
 	inline_script = "pop_categories/social_classes_triggered_modifiers"
@@ -287,21 +235,11 @@ worker_unemployment = {
 
 		produces = {
 			trigger = {
-				OR = {
-					has_ethic = ethic_fanatic_spiritualist
-					has_ethic = ethic_spiritualist
-				}
+				is_spiritualist = yes
 				owner = { has_valid_civic = civic_gospel_of_the_masses }
 			}
 			trade = @trade_value_prosperity_gospel
 		}
-
-		# produces = {
-		# 	trigger = {
-		# 		has_trait = trait_inner_darkness
-		# 	}
-		# 	sr_dark_matter = @inner_darkness_dark_matter_production
-		# }
 
 		produces = {
 			trigger = {

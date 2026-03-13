@@ -14,9 +14,8 @@ civilian = {
 		always = yes
 	}
 
-	resettlement_cost = {
-		energy = 100
-	}
+	inline_script = "pop_categories/resettlement_costs"
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -77,21 +76,11 @@ civilian = {
 
 		produces = {
 			trigger = {
-				OR = {
-					has_ethic = ethic_fanatic_spiritualist
-					has_ethic = ethic_spiritualist
-				}
+				is_spiritualist = yes
 				owner = { has_valid_civic = civic_gospel_of_the_masses }
 			}
 			trade = @trade_value_prosperity_gospel
 		}
-
-		# produces = {
-		# 	trigger = {
-		# 		has_trait = trait_inner_darkness
-		# 	}
-		# 	sr_dark_matter = @inner_darkness_dark_matter_production
-		# }
 
 		produces = {
 			trigger = {
@@ -126,7 +115,9 @@ civilian = {
 
 purge = {
 	rank = 0
-	can_change_category = no
+	can_change_category = {
+		is_being_purged = no
+	}
 
 	weight = {
 		weight = 20
@@ -140,9 +131,7 @@ purge = {
 		always = yes
 	}
 
-	resettlement_cost = {
-		energy = 100
-	}
+	inline_script = "pop_categories/resettlement_costs_low"
 
 	pop_group_modifier = {
 		pop_political_power = -1
@@ -171,17 +160,9 @@ robot_servant = {
 		always = yes
 	}
 
-	resettlement_cost = {
-		energy = 100
-	}
+	inline_script = "pop_categories/resettlement_costs_low"
 
-	resources = {
-		category = pop_category_robot
-
-		upkeep = {
-			energy = @living_standard_energy_normal
-		}
-	}
+	inline_script = "pop_categories/social_classes_triggered_modifiers_no_happiness"
 }
 
 slave = {
@@ -208,9 +189,7 @@ slave = {
 		always = yes
 	}
 
-	resettlement_cost = {
-		energy = 50
-	}
+	inline_script = "pop_categories/resettlement_costs_low"
 
 	triggered_pop_group_modifier = {
 		potential = {
@@ -231,6 +210,7 @@ slave = {
 	}
 
 	inline_script = "pop_categories/social_classes_triggered_modifiers"
+	inline_script = "pop_categories/social_classes_triggered_modifiers_no_happiness"
 
 	resources = {
 		category = pop_category_slave
@@ -257,7 +237,7 @@ slave = {
 }
 
 slave_unemployment = {
-	rank = 1
+	rank = 2
 	change_job_threshold = 0.1
 
 	custom_demotion_loc = "" # empty to use default loc that doesn't show demotion
@@ -276,9 +256,7 @@ slave_unemployment = {
 		always = yes
 	}
 
-	resettlement_cost = {
-		energy = 50
-	}
+	inline_script = "pop_categories/resettlement_costs_low"
 
 	# Triggered Modifiers
 	inline_script = "pop_categories/social_classes_triggered_modifiers"
@@ -313,6 +291,56 @@ slave_unemployment = {
 	}
 }
 
+slave_unemployment2 = {
+	rank = 5
+	change_job_threshold = 0.1
+
+	custom_demotion_loc = "" # empty to use default loc that doesn't show demotion
+	custom_demotion_icon = "" # empty to show no icon
+	custom_promotion_loc = "" # empty to use default loc that doesn't show demotion
+	custom_promotion_icon = "" # empty to show no icon
+
+	display_category = worker
+
+	# scope: pop to be resettled
+	allow_resettlement = {
+		always = yes
+	}
+
+	inline_script = "pop_categories/resettlement_costs_low"
+
+	# Triggered Modifiers
+	inline_script = "pop_categories/social_classes_triggered_modifiers"
+	inline_script = "pop_categories/social_classes_triggered_modifiers_no_happiness"
+
+	pop_group_modifier = {
+		pop_political_power = -0.75
+		pop_housing_usage_base = 0.75
+		pop_amenities_usage_base = 0.75
+	}
+
+	resources = {
+		category = pop_category_slave
+		produces = {
+			trigger = {
+				owner = {
+					has_councilor = { COUNCILOR = "councilor_indentured_assets" }
+				}
+			}
+			trade = @councilor_indentured_assets_trade_value
+			mult = value:councilor_level|TYPE|councilor_indentured_assets|
+		}
+
+		produces = {
+			trigger = {
+				planet = {
+					has_modifier = pm_gaseous_fauna
+				}
+			}
+			antimatter_fuel = @gaseous_fauna_exotic_gases_production
+		}
+	}
+}
 
 bio_trophy = {
 	rank = 4
@@ -327,10 +355,7 @@ bio_trophy = {
 		always = yes
 	}
 
-	resettlement_cost = {
-		energy = 100
-		unity = 25
-	}
+	inline_script = "pop_categories/resettlement_costs"
 
 	# Triggered Modifiers
 	inline_script = "pop_categories/social_classes_triggered_modifiers"
@@ -384,10 +409,7 @@ bio_trophy_unemployment = {
 		always = yes
 	}
 
-	resettlement_cost = {
-		energy = 100
-		unity = 25
-	}
+	inline_script = "pop_categories/resettlement_costs"
 
 	# Triggered Modifiers
 	inline_script = "pop_categories/social_classes_triggered_modifiers"
@@ -455,6 +477,10 @@ criminal = {
 	resources = {
 		category = pop_category_workers
 		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_twisted_experimenters_empire = yes }
+			}
 			trade = 5
 		}
 	}
@@ -473,9 +499,7 @@ assimilation = {
 		always = yes
 	}
 
-	resettlement_cost = {
-		energy = 100
-	}
+	inline_script = "pop_categories/resettlement_costs"
 
 	pop_group_modifier = {
 		pop_political_power = -1
@@ -560,9 +584,7 @@ precursor = {
 		always = yes
 	}
 
-	resettlement_cost = {
-		energy = 100
-	}
+	inline_script = "pop_categories/resettlement_costs"
 
 	resources = {
 		category = pop_category_precursor
@@ -586,148 +608,6 @@ precursor = {
 				}
 			}
 			consumer_goods = 1.0
-		}
-
-		# Food Upkeep
-		upkeep = {
-			trigger = {
-				has_food_upkeep = yes
-				is_phototrophic = no
-				exists = owner
-				owner = {
-					is_spiritualist = no
-				}
-			}
-			food = 2.0
-		}
-		upkeep = {
-			trigger = {
-				has_food_upkeep = yes
-				is_phototrophic = no
-				exists = owner
-				owner = {
-					is_spiritualist = yes
-				}
-			}
-			food = 1.0
-		}
-		upkeep = {
-			trigger = {
-				has_food_upkeep = yes
-				is_phototrophic = yes
-				exists = owner
-				owner = {
-					is_spiritualist = no
-				}
-			}
-			food = 1.0
-		}
-		upkeep = {
-			trigger = {
-				has_food_upkeep = yes
-				is_phototrophic = yes
-				exists = owner
-				owner = {
-					is_spiritualist = yes
-				}
-			}
-			food = 0.5
-		}
-
-		# Mineral Upkeep
-		upkeep = {
-			trigger = {
-				has_mineral_upkeep = yes
-				is_phototrophic = no
-				exists = owner
-				owner = {
-					is_spiritualist = no
-				}
-			}
-			minerals = 2.0
-		}
-		upkeep = {
-			trigger = {
-				has_mineral_upkeep = yes
-				is_phototrophic = no
-				exists = owner
-				owner = {
-					is_spiritualist = yes
-				}
-			}
-			minerals = 1.0
-		}
-		upkeep = {
-			trigger = {
-				has_mineral_upkeep = yes
-				is_phototrophic = yes
-				exists = owner
-				owner = {
-					is_spiritualist = no
-				}
-			}
-			minerals = 1.0
-		}
-		upkeep = {
-			trigger = {
-				has_mineral_upkeep = yes
-				is_phototrophic = yes
-				exists = owner
-				owner = {
-					is_spiritualist = yes
-				}
-			}
-			minerals = 0.5
-		}
-
-		# Energy Upkeep
-		upkeep = {
-			trigger = {
-				has_phototrophic_energy_upkeep = yes
-				exists = owner
-				owner = {
-					is_spiritualist = no
-				}
-			}
-			energy = 1.0
-		}
-				upkeep = {
-			trigger = {
-				has_phototrophic_energy_upkeep = yes
-				exists = owner
-				owner = {
-					is_spiritualist = yes
-				}
-			}
-			energy = 0.5
-		}
-		upkeep = {
-			trigger = {
-				is_robotic_species = yes
-			}
-			energy = @living_standard_energy_normal
-		}
-		upkeep = {
-			trigger = {
-				is_organic_species = yes
-				has_energy_upkeep = yes
-				exists = owner
-				owner = {
-					is_spiritualist = yes
-				}
-			}
-			energy = 1.0
-		}
-		upkeep = {
-			trigger = {
-				is_organic_species = yes
-				has_energy_upkeep = yes
-				exists = owner
-				owner = {
-					is_spiritualist = no
-				}
-			}
-			energy = 2.0
 		}
 	}
 }
@@ -836,7 +716,7 @@ chip_slave = {
 
 	weight = {
 		weight = 1000
-		
+
 		modifier = {
 			factor = 0.001
 			planet = { NOT = { is_planet_class = pc_cosmogenesis_world }  }
@@ -854,9 +734,7 @@ chip_slave = {
 		always = yes
 	}
 
-	resettlement_cost = {
-		energy = 50
-	}
+	inline_script = "pop_categories/resettlement_costs_low"
 
 	resources = {
 		category = pop_category_slave

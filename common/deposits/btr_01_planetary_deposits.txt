@@ -49,6 +49,7 @@ d_arid_highlands = {
 
 	potential = {
 		AND = {
+			is_dry_non_volcanic = yes
 			is_btr_habitable_world = yes
 			NOT = {
 				is_btr_ocean_world = yes
@@ -59,9 +60,9 @@ d_arid_highlands = {
 	}
 
 	drop_weight = {
-		weight = @high
+		weight = @deposit_chance_high
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_dry_subclass = yes
 		}
 	}
@@ -96,9 +97,9 @@ d_hot_springs = {
 	}
 
 	drop_weight = {
-		weight = @high
+		weight = @deposit_chance_high
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_cold_subclass = yes
 		}
 	}
@@ -138,9 +139,9 @@ d_rushing_waterfalls = {
 	}
 
 	drop_weight = {
-		weight = @med
+		weight = @deposit_chance_med
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_wet_subclass = yes
 		}
 	}
@@ -166,6 +167,7 @@ d_searing_desert = {
 
 	potential = {
 		AND = {
+			is_dry_non_volcanic = yes
 			is_btr_habitable_world = yes
 			NOR = {
 				is_btr_tropical_world = yes
@@ -179,9 +181,9 @@ d_searing_desert = {
 	}
 
 	drop_weight = {
-		weight = @med
+		weight = @deposit_chance_med
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_dry_subclass = yes
 		}
 	}
@@ -216,9 +218,9 @@ d_frozen_gas_lake = {
 	}
 
 	drop_weight = {
-		weight = @med
+		weight = @deposit_chance_med
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_cold_subclass = yes
 		}
 	}
@@ -252,9 +254,9 @@ d_geothermal_vent = {
 	}
 
 	drop_weight = {
-		weight = @low
+		weight = @deposit_chance_low
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_dry_subclass = yes
 		}
 	}
@@ -293,9 +295,9 @@ d_underwater_vent = {
 	}
 
 	drop_weight = {
-		weight = @high
+		weight = @deposit_chance_low
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_ocean_world = yes
 		}
 	}
@@ -335,9 +337,9 @@ d_tempestous_mountain = {
 	}
 
 	drop_weight = {
-		weight = @high
+		weight = @deposit_chance_low
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_continental_world = yes
 		}
 	}
@@ -378,7 +380,7 @@ d_veiny_cliffs = {
 	drop_weight = {
 		weight = @high
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_high
 			is_btr_cold_subclass = yes
 		}
 	}
@@ -411,7 +413,7 @@ d_mineral_fields = {
 	drop_weight = {
 		weight = @high
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_cold_subclass = yes
 		}
 	}
@@ -445,9 +447,9 @@ d_prosperous_mesa = {
 	}
 
 	drop_weight = {
-		weight = @med
+		weight = @deposit_chance_med
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_cold_subclass = yes
 		}
 	}
@@ -487,9 +489,9 @@ d_ore_rich_caverns = {
 	}
 
 	drop_weight = {
-		weight = @med
+		weight = @deposit_chance_med
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_cold_subclass = yes
 		}
 	}
@@ -523,9 +525,9 @@ d_rich_mountain = {
 	}
 
 	drop_weight = {
-		weight = @low
+		weight = @deposit_chance_low
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_cold_subclass = yes
 		}
 	}
@@ -562,9 +564,9 @@ d_submerged_ore_veins = {
 	}
 
 	drop_weight = {
-		weight = @high
+		weight = @deposit_chance_low
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_ocean_world = yes
 		}
 	}
@@ -604,13 +606,13 @@ d_lichen_fields = {
 	}
 
 	drop_weight = {
-		weight = @high
+		weight = @deposit_chance_high
 		modifier = {
 			factor = 0.33
 			is_planet_class = pc_nuked
 		}
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_cold_subclass = yes
 		}
 	}
@@ -657,9 +659,9 @@ d_bountiful_plains = {
 	}
 
 	drop_weight = {
-		weight = @high
+		weight = @deposit_chance_high
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_wet_subclass = yes
 		}
 	}
@@ -700,9 +702,9 @@ d_rugged_woods = {
 	}
 
 	drop_weight = {
-		weight = @high
+		weight = @deposit_chance_high
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_wet_subclass = yes
 		}
 	}
@@ -744,9 +746,9 @@ d_green_hills = {
 	}
 
 	drop_weight = {
-		weight = @high
+		weight = @deposit_chance_high
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_wet_subclass = yes
 		}
 	}
@@ -788,9 +790,9 @@ d_forgiving_tundra = {
 	}
 
 	drop_weight = {
-		weight = @high
+		weight = @deposit_chance_high
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_cold_subclass = yes
 		}
 	}
@@ -832,9 +834,9 @@ d_boggy_fens = {
 	}
 
 	drop_weight = {
-		weight = @high
+		weight = @deposit_chance_high
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_wet_subclass = yes
 		}
 	}
@@ -877,9 +879,9 @@ d_nutritious_mudland = {
 	}
 
 	drop_weight = {
-		weight = @high
+		weight = @deposit_chance_high
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_wet_subclass = yes
 		}
 	}
@@ -920,13 +922,13 @@ d_fungal_caves = {
 	}
 
 	drop_weight = {
-		weight = @med
+		weight = @deposit_chance_med
 		modifier = {
 			factor = 0.33
 			is_planet_class = pc_nuked
 		}
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_wet_subclass = yes
 		}
 	}
@@ -963,9 +965,9 @@ d_lush_jungle = {
 	}
 
 	drop_weight = {
-		weight = @med
+		weight = @deposit_chance_med
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_wet_subclass = yes
 		}
 	}
@@ -1002,9 +1004,9 @@ d_fertile_lands = {
 	}
 
 	drop_weight = {
-		weight = @med
+		weight = @deposit_chance_med
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_wet_subclass = yes
 		}
 	}
@@ -1043,9 +1045,9 @@ d_great_river = {
 	}
 
 	drop_weight = {
-		weight = @med
+		weight = @deposit_chance_med
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_wet_subclass = yes
 		}
 	}
@@ -1082,9 +1084,9 @@ d_black_soil = {
 	}
 
 	drop_weight = {
-		weight = @low
+		weight = @deposit_chance_low
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_wet_subclass = yes
 		}
 	}
@@ -1121,9 +1123,9 @@ d_teeming_reef = {
 	}
 
 	drop_weight = {
-		weight = @high
+		weight = @deposit_chance_low
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_ocean_world = yes
 		}
 	}
@@ -1161,9 +1163,9 @@ d_marvelous_oasis = {
 	}
 
 	drop_weight = {
-		weight = @low
+		weight = @deposit_chance_low
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_wet_subclass = yes
 		}
 	}
@@ -1200,9 +1202,9 @@ d_tropical_island = {
 	}
 
 	drop_weight = {
-		weight = @low
+		weight = @deposit_chance_low
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_wet_subclass = yes
 		}
 	}
@@ -1242,17 +1244,13 @@ d_fungal_forest = {
 	}
 
 	drop_weight = {
-		weight = @low
+		weight = @deposit_chance_low
 		modifier = {
-			factor = @planet_type_bonus
+			factor = @deposit_chance_planet_type_bonus
 			is_btr_wet_subclass = yes
 		}
 	}
 }
-
-@SR_SMALL = 0.25
-@SR_LARGE = 0.50
-@DISTRICTS_FROM_SR_DEPOSITS = 3
 
 ####################
 #####	MOTES #####
@@ -1813,9 +1811,9 @@ d_alien_pets_deposit = {
 	}
 
 	drop_weight = {
-		weight = @mid_rare
+		weight = @deposit_chance_med_rare
 		modifier = {
-			factor = @gaia_bonus
+			factor = @deposit_chance_gaia_bonus
 			is_planet_class = pc_gaia
 		}
 		modifier = {

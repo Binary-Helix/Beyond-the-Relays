@@ -12,6 +12,7 @@
 # Sets the cost for all campaigns with this variable
 @campaignCost = 15
 @hiveFood = 15
+@infernalAlloys = 4
 @campaignDuration = -1
 
 fear_campaign = {
@@ -222,7 +223,7 @@ drone_campaign = {
 		category = campaigns
 		cost = {
 			trigger = {
-				is_lithoid_empire = no
+				is_lithoid_or_infernal_empire = no
 			}
 			food = @hiveFood
 			multiplier = value:edict_size_effect
@@ -234,9 +235,18 @@ drone_campaign = {
 			minerals = @hiveFood
 			multiplier = value:edict_size_effect
 		}
+		cost = {
+			trigger = {
+				is_infernal_empire = yes
+			}
+			#alloys = @infernalAlloys
+			light_alloys = @infernalAlloys
+			heavy_alloys = @infernalAlloys
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			trigger = {
-				is_lithoid_empire = no
+				is_lithoid_or_infernal_empire = no
 			}
 			food = @hiveFood
 			multiplier = value:edict_size_effect
@@ -246,6 +256,15 @@ drone_campaign = {
 				is_lithoid_empire = yes
 			}
 			minerals = @hiveFood
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			trigger = {
+				is_infernal_empire = yes
+			}
+			#alloys = @infernalAlloys
+			light_alloys = @infernalAlloys
+			heavy_alloys = @infernalAlloys
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -270,7 +289,7 @@ learning_campaign = {
 		category = campaigns
 		cost = {
 			trigger = {
-				is_lithoid_empire = no
+				is_lithoid_or_infernal_empire = no
 			}
 			food = @hiveFood
 			multiplier = value:edict_size_effect
@@ -282,9 +301,18 @@ learning_campaign = {
 			minerals = @hiveFood
 			multiplier = value:edict_size_effect
 		}
+		cost = {
+			trigger = {
+				is_infernal_empire = yes
+			}
+			#alloys = @infernalAlloys
+			light_alloys = @infernalAlloys
+			heavy_alloys = @infernalAlloys
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			trigger = {
-				is_lithoid_empire = no
+				is_lithoid_or_infernal_empire = no
 			}
 			food = @hiveFood
 			multiplier = value:edict_size_effect
@@ -294,6 +322,15 @@ learning_campaign = {
 				is_lithoid_empire = yes
 			}
 			minerals = @hiveFood
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			trigger = {
+				is_infernal_empire = yes
+			}
+			#alloys = @infernalAlloys
+			light_alloys = @infernalAlloys
+			heavy_alloys = @infernalAlloys
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -324,7 +361,7 @@ learning_campaign_wilderness = {
 		category = campaigns
 		cost = {
 			trigger = {
-				is_lithoid_empire = no
+				is_lithoid_or_infernal_empire = no
 			}
 			food = @hiveFood
 			multiplier = value:edict_size_effect
@@ -336,9 +373,18 @@ learning_campaign_wilderness = {
 			minerals = @hiveFood
 			multiplier = value:edict_size_effect
 		}
+		cost = {
+			trigger = {
+				is_infernal_empire = yes
+			}
+			#alloys = @infernalAlloys
+			light_alloys = @infernalAlloys
+			heavy_alloys = @infernalAlloys
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			trigger = {
-				is_lithoid_empire = no
+				is_lithoid_or_infernal_empire = no
 			}
 			food = @hiveFood
 			multiplier = value:edict_size_effect
@@ -348,6 +394,15 @@ learning_campaign_wilderness = {
 				is_lithoid_empire = yes
 			}
 			minerals = @hiveFood
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			trigger = {
+				is_infernal_empire = yes
+			}
+			#alloys = @infernalAlloys
+			light_alloys = @infernalAlloys
+			heavy_alloys = @infernalAlloys
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -377,7 +432,7 @@ war_drone_campaign = {
 		category = campaigns
 		cost = {
 			trigger = {
-				is_lithoid_empire = no
+				is_lithoid_or_infernal_empire = no
 			}
 			food = @hiveFood
 			multiplier = value:edict_size_effect
@@ -389,9 +444,18 @@ war_drone_campaign = {
 			minerals = @hiveFood
 			multiplier = value:edict_size_effect
 		}
+		cost = {
+			trigger = {
+				is_infernal_empire = yes
+			}
+			#alloys = @infernalAlloys
+			light_alloys = @infernalAlloys
+			heavy_alloys = @infernalAlloys
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			trigger = {
-				is_lithoid_empire = no
+				is_lithoid_or_infernal_empire = no
 			}
 			food = @hiveFood
 			multiplier = value:edict_size_effect
@@ -401,6 +465,15 @@ war_drone_campaign = {
 				is_lithoid_empire = yes
 			}
 			minerals = @hiveFood
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			trigger = {
+				is_infernal_empire = yes
+			}
+			#alloys = @infernalAlloys
+			light_alloys = @infernalAlloys
+			heavy_alloys = @infernalAlloys
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -431,7 +504,7 @@ war_drone_campaign_wilderness = {
 		category = campaigns
 		cost = {
 			trigger = {
-				is_lithoid_empire = no
+				is_lithoid_or_infernal_empire = no
 			}
 			food = @hiveFood
 			multiplier = value:edict_size_effect
@@ -443,9 +516,18 @@ war_drone_campaign_wilderness = {
 			minerals = @hiveFood
 			multiplier = value:edict_size_effect
 		}
+		cost = {
+			trigger = {
+				is_infernal_empire = yes
+			}
+			#alloys = @infernalAlloys
+			light_alloys = @infernalAlloys
+			heavy_alloys = @infernalAlloys
+			multiplier = value:edict_size_effect
+		}
 		upkeep = {
 			trigger = {
-				is_lithoid_empire = no
+				is_lithoid_or_infernal_empire = no
 			}
 			food = @hiveFood
 			multiplier = value:edict_size_effect
@@ -455,6 +537,15 @@ war_drone_campaign_wilderness = {
 				is_lithoid_empire = yes
 			}
 			minerals = @hiveFood
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			trigger = {
+				is_infernal_empire = yes
+			}
+			#alloys = @infernalAlloys
+			light_alloys = @infernalAlloys
+			heavy_alloys = @infernalAlloys
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -589,6 +680,7 @@ shield_gases = {
 
 	modifier = {
 		ship_shield_mult = 0.25
+		ship_shield_hardening_add = 0.1
 	}
 
 	ai_weight = {
@@ -767,6 +859,7 @@ motes_armor = {
 
 	modifier = {
 		ship_armor_mult = 0.25
+		ship_armor_hardening_add = 0.1
 	}
 
 	ai_weight = {
@@ -913,7 +1006,7 @@ zro_catalysis_utopia = {
 	}
 
 	modifier = {
-		psionic_pop_bonus_workforce_mult = 0.15
+		psionic_pop_bonus_workforce_mult = 0.10
 	}
 
 	ai_weight = {
@@ -955,7 +1048,7 @@ zro_catalysis_non_utopia = {
 	}
 
 	modifier = {
-		planet_jobs_produces_mult = 0.1
+		pop_bonus_workforce_mult = 0.10
 	}
 
 	ai_weight = {
@@ -1036,8 +1129,56 @@ nanite_actuators = {
 	}
 
 	ai_weight = {
-		#weight = @EdictHighPrio
-		weight = 0
+		weight = @EdictHighPrio
+	}
+}
+
+zro_observators = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		upkeep = {
+			sr_zro = 0.5
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		biologist_jobs_bonus_workforce_mult = 0.1
+	}
+
+	potential = {
+		has_origin = origin_shroud_forged
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+shroud_bonded = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		upkeep = {
+			sr_zro = 0.5
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		country_unity_produces_mult = 0.1
+	}
+
+	potential = {
+		has_origin = origin_shroud_forged
+		has_country_flag = finish_shroud_forged_liberation_flag
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
 	}
 }
 
@@ -1064,8 +1205,7 @@ masters_writings_politics = {
 	}
 
 	modifier = {
-		planet_buildings_cost_mult = -0.1
-		planet_districts_cost_mult = -0.1
+		planet_structures_cost_mult = -0.1
 		planet_building_build_speed_mult = 0.10
 	}
 
@@ -1297,7 +1437,7 @@ nuumismatic_visualization = {
 	modifier = {
 		planet_pops_consumer_goods_upkeep_mult = -0.05
 		category_statecraft_research_speed_mult = 0.05
-		country_energy_produces_mult = 0.10
+		country_trade_produces_mult = 0.10
 	}
 
 	allow = {
@@ -1321,8 +1461,6 @@ automated_disinfection = {
 
 	modifier = {
 		pop_amenities_usage_mult = -0.05
-		logistic_growth_mult = 0.05
-		bonus_pop_growth_mult = 0.05
 		pop_environment_tolerance = 0.05
 	}
 

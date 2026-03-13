@@ -20,6 +20,7 @@ diplomatic_stance = {
 			is_country_type = primitive
 			is_country_type = awakened_marauders
 			is_country_type = mirrored_country
+			is_country_type = exiled
 		}
 	}
 
@@ -185,7 +186,7 @@ diplomatic_stance = {
 			# Cranky people:
 			modifier = {
 				factor = 0
-				has_ethic = ethic_fanatic_xenophobe
+				is_fanatic_xenophobe = yes
 			}
 			modifier = {
 				factor = 0.1
@@ -268,6 +269,7 @@ diplomatic_stance = {
 			OR = {
 				is_country_type = default
 				is_country_type = awakened_fallen_empire
+				is_country_type = exiled
 			}
 		}
 
@@ -665,7 +667,7 @@ diplomatic_stance = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_ethic = ethic_fanatic_xenophile
+					is_fanatic_xenophile = yes
 					has_valid_civic = civic_hive_empath
 				}
 			}
@@ -966,6 +968,36 @@ diplomatic_stance = {
 			weight = 100
 		}
 	}
+
+	option = {
+		name = "diplo_stance_devastators"
+		icon = "GFX_diplomatic_stance_devastators"
+
+		potential = {
+			OR = {
+				has_valid_civic = civic_scorched_earth
+				has_valid_civic = civic_hive_scorched_earth
+			}
+		}
+
+		valid = {
+			OR = {
+				has_valid_civic = civic_scorched_earth
+				has_valid_civic = civic_hive_scorched_earth
+			}
+		}
+
+		policy_flags = {
+			diplo_stance_purification # TODO: Replace this later with a new one.
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			weight = 100
+		}
+	}
 }
 
 war_philosophy = {
@@ -1118,7 +1150,7 @@ war_philosophy = {
 
 		valid = {
 			NOR = {
-				has_ethic = "ethic_fanatic_militarist"
+				is_fanatic_militarist = yes
 				has_valid_civic = "civic_fanatic_purifiers"
 				has_valid_civic = "civic_hive_devouring_swarm"
 				has_valid_civic = "civic_machine_terminator"
@@ -1144,14 +1176,27 @@ war_doctrine = {
 		OR = {
 			AND = {
 				is_country_type = default
-				has_tradition = tr_supremacy_finish
+				OR = {
+					has_tradition = tr_supremacy_finish
+					has_country_flag = hunger_accord
+				}
 			}
-			is_country_type = enclave_mercenary
+			is_mercenary = yes
 		}
 	}
 
 	option = {
 		name = "defense_in_depth_doctrine"
+
+		potential = {
+			OR = {
+				AND = {
+					is_country_type = default
+					has_tradition = tr_supremacy_finish
+				}
+				is_country_type = enclave_mercenary
+			}
+		}
 
 		policy_flags = {}
 		modifier = {
@@ -1166,6 +1211,16 @@ war_doctrine = {
 	option = {
 		name = "hit_and_run_doctrine"
 
+		potential = {
+			OR = {
+				AND = {
+					is_country_type = default
+					has_tradition = tr_supremacy_finish
+				}
+				is_country_type = enclave_mercenary
+			}
+		}
+
 		policy_flags = {}
 		modifier = {
 			ship_disengage_opportunities_add = 2
@@ -1177,16 +1232,23 @@ war_doctrine = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
+				is_pacifist = no
 			}
 		}
 	}
 
 	option = {
 		name = "rapid_deployment_doctrine"
+
+		potential = {
+			OR = {
+				AND = {
+					is_country_type = default
+					has_tradition = tr_supremacy_finish
+				}
+				is_country_type = enclave_mercenary
+			}
+		}
 
 		policy_flags = {}
 		modifier = {
@@ -1198,7 +1260,7 @@ war_doctrine = {
 			factor = 10
 			modifier = {
 				factor = 100
-				is_country_type = enclave_mercenary
+				is_mercenary = yes
 			}
 		}
 	}
@@ -1206,10 +1268,19 @@ war_doctrine = {
 	option = {
 		name = "no_retreat_doctrine"
 
+		potential = {
+			OR = {
+				AND = {
+					is_country_type = default
+					has_tradition = tr_supremacy_finish
+				}
+				is_country_type = enclave_mercenary
+			}
+		}
+
 		valid = {
 			OR = {
-				has_ethic = ethic_militarist
-				has_ethic = ethic_fanatic_militarist
+				is_militarist = yes
 				has_ethic = ethic_gestalt_consciousness
 				has_civic = civic_fanatic_purifiers
 			}
@@ -1231,6 +1302,46 @@ war_doctrine = {
 					has_ai_personality = devouring_swarm
 				}
 			}
+		}
+	}
+
+	option = {
+		name = "rip_and_tear"
+
+		potential = {
+			has_country_flag = hunger_accord
+		}
+
+		policy_flags = {
+			debris_destruction
+		}
+		modifier = {
+			ship_fire_rate_mult = 0.07
+			ship_weapon_damage = 0.07
+			ship_hull_mult = -0.15
+		}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "ravenous_onslaught"
+
+		potential = {
+			has_country_flag = hunger_accord
+		}
+
+		policy_flags = {}
+		modifier = {
+			ship_steal_defeated_ship_chance = 0.05
+			ship_disengage_chance_mult = 0.33
+			ship_weapon_range_mult = -0.25
+		}
+
+		AI_weight = {
+			factor = 1
 		}
 	}
 }
@@ -1724,6 +1835,49 @@ orbital_bombardment = {
 			}
 		}
 	}
+
+	option = {
+		name = "orbital_bombardment_devastation"
+
+		in_breach_of = {
+			{
+				key = resolution_rulesofwar_independent_tribunals
+			}
+			{
+				key = resolution_rulesofwar_last_resort_doctrine
+			}
+			{
+				key = resolution_rulesofwar_demobilization_initiative
+			}
+		}
+
+		potential = {
+			OR = {
+				has_valid_civic = civic_scorched_earth
+				has_valid_civic = civic_hive_scorched_earth
+			}
+		}
+
+		policy_flags = {
+			orbital_bombardment_devastation
+		}
+		modifier = {}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_valid_civic = civic_scorched_earth
+					has_valid_civic = civic_hive_scorched_earth
+				}
+			}
+			modifier = {
+				factor = 10
+				has_ascension_perk = ap_become_the_crisis
+				# TODO: Add Infernals crisis path with OR={} or remove THIS line later.
+			}
+		}
+	}
 }
 
 orbital_bombardment_accept_surrender = {
@@ -2061,10 +2215,7 @@ enlightenment = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = "ethic_xenophobe"
-					has_ethic = "ethic_fanatic_xenophobe"
-				}
+				is_xenophobe = yes
 			}
 		}
 	}
@@ -2099,10 +2250,7 @@ resettlement = {
 			factor = 10
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = ethic_egalitarian
-					has_ethic = ethic_fanatic_egalitarian
-				}
+				is_egalitarian = yes
 			}
 		}
 	}
@@ -2446,10 +2594,7 @@ border_policy = {
 			modifier = {
 				factor = 0
 				has_valid_ai_personality = no
-				NOR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-				}
+				is_xenophobe = no
 			}
 			modifier = {
 				factor = 10
@@ -2986,7 +3131,7 @@ trade_policy = {
 		on_enabled = {
 			set_trade_conversions = {
 				trade = 0.50
-				unity = 0.25
+				unity = 0.125
 			}
 		}
 
@@ -3014,7 +3159,7 @@ trade_policy = {
 				trade = 0.50
 				energy = 0.15
 				consumer_goods = 0.15
-				unity = 0.15
+				unity = 0.075
 			}
 		}
 
@@ -3041,7 +3186,7 @@ trade_policy = {
 		on_enabled = {
 			set_trade_conversions = {
 				trade = 0.50
-				unity = 0.375
+				unity = 0.1875
 			}
 		}
 
@@ -3070,7 +3215,7 @@ trade_policy = {
 				energy = 0.20
 				minerals = 0.20
 				food = 0.20
-				unity = 0.15
+				unity = 0.075
 			}
 		}
 
@@ -3277,6 +3422,7 @@ artificial_intelligence_policy = {
 			modifier = {
 				factor = 5
 				is_spiritualist = yes
+				NOT = { has_origin = origin_cybernetic_creed }
 			}
 			modifier = {
 				factor = 0.1
@@ -3326,6 +3472,7 @@ artificial_intelligence_policy = {
 			modifier = {
 				factor = 0
 				is_spiritualist = yes
+				NOT = { has_origin = origin_cybernetic_creed }
 				NOT = {
 					has_valid_ai_personality = yes
 					is_ai = yes
@@ -3349,7 +3496,12 @@ artificial_intelligence_policy = {
 					fail_text = is_a_synthetic_empire
 					has_country_flag = synthetic_empire
 				}
-				is_spiritualist = no
+				if = {
+					limit = {
+						NOT = { has_origin = origin_cybernetic_creed }
+					}
+					is_spiritualist = no
+				}
 				is_individual_machine = yes
 			}
 			NOT = { has_policy_flag = robots_outlawed }
@@ -3384,6 +3536,7 @@ artificial_intelligence_policy = {
 			modifier = {
 				factor = 0
 				is_spiritualist = yes
+				NOT = { has_origin = origin_cybernetic_creed }
 			}
 		}
 	}
@@ -3467,6 +3620,7 @@ robot_pop_policy = {
 	}
 }
 
+# Specifically for pre_sapients policies, you can have a pre_sapient_purge = purge_type parameter to determine how a policy purges presapients
 pre_sapients = {
 	potential = {
 		OR = {
@@ -3538,6 +3692,7 @@ pre_sapients = {
 
 	option = {
 		name = "pre_sapients_eat"
+		pre_sapient_purge = purge_processing
 
 		potential = {
 			host_has_dlc = "Utopia"
@@ -3578,12 +3733,13 @@ pre_sapients = {
 
 	option = {
 		name = "pre_sapients_purge"
+		pre_sapient_purge = purge_normal
 
 		valid = {
 			NOR = {
 				has_ethic = "ethic_xenophile"
 				has_ethic = "ethic_fanatic_xenophile"
-				has_valid_civic = civic_guided_sapience
+				is_guided_sapience_empire = yes
 			}
 		}
 
@@ -3824,10 +3980,7 @@ refugees = {
 		}
 
 		valid = {
-			NOR = {
-				has_ethic = "ethic_xenophobe"
-				has_ethic = "ethic_fanatic_xenophobe"
-			}
+			is_xenophobe = no
 		}
 
 		AI_weight = {
@@ -3835,8 +3988,7 @@ refugees = {
 			modifier = {
 				factor = 0
 				NOR = {
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
+					is_xenophile = yes
 					has_valid_civic = civic_machine_servitor
 					AND = {
 						has_valid_ai_personality = yes
@@ -3875,17 +4027,18 @@ population_controls = {
 		policy_flags = {
 			population_controls_allowed
 		}
-		modifier = {}
+
+		modifier = {
+			refugee_attraction = -0.10
+		}
 
 		AI_weight = {
 			factor = 10
 			modifier = {
 				factor = 0
 				OR = {
-					has_ethic = ethic_egalitarian
-					has_ethic = ethic_fanatic_egalitarian
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
+					is_egalitarian = yes
+					is_xenophile = yes
 				}
 			}
 		}
@@ -3934,11 +4087,13 @@ slavery = {
 				NOT = { has_origin = origin_broken_shackles }
 			}
 			OR = {
-				has_ethic = ethic_authoritarian
-				has_ethic = ethic_fanatic_authoritarian
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
+				is_authoritarian = yes
+				is_xenophobe = yes
 			}
+		}
+
+		modifier = {
+			refugee_attraction = -0.40
 		}
 
 		policy_flags = {
@@ -3957,10 +4112,8 @@ slavery = {
 				factor = 0
 				has_valid_ai_personality = no
 				NOR = {
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
+					is_authoritarian = yes
+					is_xenophobe = yes
 				}
 			}
 			# special case for harmonious collectives
@@ -3969,10 +4122,8 @@ slavery = {
 				has_valid_ai_personality = no
 				is_ai = yes
 				NOR = {
-					has_ethic = "ethic_xenophobe"
-					has_ethic = "ethic_fanatic_xenophobe"
-					has_ethic = "ethic_militarist"
-					has_ethic = "ethic_fanatic_militarist"
+					is_xenophobe = yes
+					is_militarist = yes
 				}
 				OR = {
 					has_ethic = "ethic_pacifist"
@@ -4000,7 +4151,10 @@ purge = {
 
 		valid = {
 			NOT = { has_ethic = ethic_gestalt_consciousness }
-			NOT = { has_valid_civic = "civic_fanatic_purifiers" }
+			NOR = {
+				has_valid_civic = "civic_fanatic_purifiers"
+				has_valid_civic = "civic_scorched_earth"
+		}
 		}
 
 		policy_flags = {
@@ -4015,13 +4169,12 @@ purge = {
 			purge_displacement_only
 		}
 
-		modifier = {}
+		modifier = {
+			refugee_attraction = -0.25
+		}
 
 		valid = {
-			NOR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
+			is_xenophile = no
 			is_homicidal = no
 		}
 
@@ -4056,7 +4209,9 @@ purge = {
 		policy_flags = {
 			purge_allowed
 		}
-		modifier = {}
+		modifier = {
+			refugee_attraction = -0.90
+		}
 
 		valid = {
 			custom_tooltip = {
@@ -4070,16 +4225,12 @@ purge = {
 			}
 			OR = {
 				has_ethic = ethic_gestalt_consciousness
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
+				is_xenophobe = yes
 				has_crisis_perk = menp_undertaker	# Unlocked with Crisis Level 1
 				AND = {
 					custom_tooltip = {
 						text = civic_tooltip_not_xenophile
-						NOR = {
-							has_ethic = ethic_xenophile
-							has_ethic = ethic_fanatic_xenophile
-						}
+						is_xenophile = no
 					}
 					has_purity_imperfection_remediation_tradition = yes
 				}
@@ -4095,10 +4246,7 @@ purge = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
-				}
+				is_pacifist = yes
 			}
 			modifier = {
 				factor = 0
@@ -4275,71 +4423,71 @@ relentless_industrialists_policy = {
 	}
 }
 
-eternal_vigilance_policy = {
-	potential = {
-		is_country_type = default
-		has_ascension_perk = ap_eternal_vigilance
-	}
-
-	option = {
-		name = eternal_vigilance_full_spending
-
-		policy_flags = {
-			eternal_vigilance_full_spending
-		}
-
-		AI_weight = {
-			weight = 20
-			modifier = { #Seems like a good idea if you have the energy to spend
-				factor = 5
-				has_monthly_income = {
-					resource = energy
-					value > 100
-				}
-			}
-			modifier = { #Uhoh we are close to a defecit we probably shouldn't
-				factor = 0
-				has_monthly_income = {
-					resource = energy
-					value < 1
-				}
-			}
-		}
-	}
-	option = {
-		name = eternal_vigilance_half_spending
-
-		policy_flags = {
-			eternal_vigilance_half_spending
-		}
-
-		AI_weight = { #This is the option if you are doing just fine on the economy front
-			weight = 75
-		}
-	}
-	option = {
-		name = eternal_vigilance_no_spending
-
-		policy_flags = {
-			eternal_vigilance_no_spending
-		}
-
-		AI_weight = {
-			weight = 1
-			modifier = { #Seems like a bad idea if you have the energy to spend
-				factor = 0
-				has_monthly_income = {
-					resource = energy
-					value > 100
-				}
-			}
-			modifier = { #Uhoh we are close to a defecit we probably shouldn't spend more
-				factor = 5
-				has_monthly_income = {
-					resource = energy
-					value < 1
-				}
-			}
-		}
-	}
-}
+# eternal_vigilance_policy = {
+# 	potential = {
+# 		is_country_type = default
+# 		has_ascension_perk = ap_eternal_vigilance
+# 	}
+#
+# 	option = {
+# 		name = eternal_vigilance_full_spending
+#
+# 		policy_flags = {
+# 			eternal_vigilance_full_spending
+# 		}
+#
+# 		AI_weight = {
+# 			weight = 20
+# 			modifier = { #Seems like a good idea if you have the energy to spend
+# 				factor = 5
+# 				has_monthly_income = {
+# 					resource = energy
+# 					value > 500
+# 				}
+# 			}
+# 			modifier = { #Uhoh we are close to a deficit we probably shouldn't
+# 				factor = 0
+# 				has_monthly_income = {
+# 					resource = energy
+# 					value < 50
+# 				}
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = eternal_vigilance_half_spending
+#
+# 		policy_flags = {
+# 			eternal_vigilance_half_spending
+# 		}
+#
+# 		AI_weight = { #This is the option if you are doing just fine on the economy front
+# 			weight = 75
+# 		}
+# 	}
+# 	option = {
+# 		name = eternal_vigilance_no_spending
+#
+# 		policy_flags = {
+# 			eternal_vigilance_no_spending
+# 		}
+#
+# 		AI_weight = {
+# 			weight = 20
+# 			modifier = { #Seems like a bad idea if you have the energy to spend
+# 				factor = 0
+# 				has_monthly_income = {
+# 					resource = energy
+# 					value > 500
+# 				}
+# 			}
+# 			modifier = { #Uhoh we are close to a deficit we probably shouldn't spend more
+# 				factor = 5
+# 				has_monthly_income = {
+# 					resource = energy
+# 					value < 50
+# 				}
+# 			}
+# 		}
+# 	}
+# }

@@ -1,4 +1,5 @@
 @base_cost = 250 #Vanilla 300
+@city_cost = 500
 # Vanilla @city_cost = 500
 @city_cost_minerals = 400
 @city_cost_light_alloys = 50
@@ -6,7 +7,7 @@
 
 district_city = {
 	base_buildtime = 480
-	is_capped_by_modifier = no
+
 	exempt_from_ai_planet_specialization = yes
 	default_starting_district = yes
 	overlay_icon = GFX_district_government
@@ -65,7 +66,6 @@ district_city = {
 				has_menace_perk = menp_behemoth_mind_meld
 			}
 		}
-
 	}
 
 	allow = {
@@ -94,7 +94,7 @@ district_city = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost_minerals
+			minerals = @city_cost
 			light_alloys = @city_cost_light_alloys
 			heavy_alloys = @city_cost_heavy_alloys
 			trigger = {
@@ -102,7 +102,7 @@ district_city = {
 			}
 		}
 		cost = {
-			food = @city_cost_minerals
+			food = @city_cost
 			trigger = {
 				has_modifier = wooden_planet
 			}
@@ -122,7 +122,7 @@ district_city = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 1500
+		planet_housing_add = 1000
 	}
 
 	triggered_planet_modifier = {
@@ -410,7 +410,7 @@ district_resort = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost_minerals
+			minerals = @city_cost
 			light_alloys = @city_cost_light_alloys
 			heavy_alloys = @city_cost_heavy_alloys
 			trigger = {
@@ -418,7 +418,7 @@ district_resort = {
 			}
 		}
 		cost = {
-			food = @city_cost_minerals
+			food = @city_cost
 			trigger = {
 				has_modifier = wooden_planet
 			}
@@ -564,7 +564,7 @@ district_resort_1 = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost_minerals
+			minerals = @city_cost
 			light_alloys = @city_cost_light_alloys
 			heavy_alloys = @city_cost_heavy_alloys
 		}
@@ -649,7 +649,7 @@ district_resort_2 = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost_minerals
+			minerals = @city_cost
 			light_alloys = @city_cost_light_alloys
 			heavy_alloys = @city_cost_heavy_alloys
 		}
@@ -734,7 +734,7 @@ district_resort_3 = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost_minerals
+			minerals = @city_cost
 			light_alloys = @city_cost_light_alloys
 			heavy_alloys = @city_cost_heavy_alloys
 		}
@@ -833,7 +833,7 @@ district_prison = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost_minerals
+			minerals = @city_cost
 			light_alloys = @city_cost_light_alloys
 			heavy_alloys = @city_cost_heavy_alloys
 		}
@@ -893,17 +893,9 @@ district_prison = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-				is_fallen_empire_spiritualist = no
-			}
-		}
-		modifier = {
-			job_enforcer_add = @base_district_jobs
-		}
+	inline_script = {
+		script = jobs/enforcers_add
+		AMOUNT = @base_district_jobs
 	}
 
 	triggered_planet_modifier = {
@@ -964,7 +956,7 @@ district_slave = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost_minerals
+			minerals = @city_cost
 			light_alloys = @city_cost_light_alloys
 			heavy_alloys = @city_cost_heavy_alloys
 		}
@@ -1118,7 +1110,7 @@ district_hive = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost_minerals
+			minerals = @city_cost
 			light_alloys = @city_cost_light_alloys
 			heavy_alloys = @city_cost_heavy_alloys
 		}
@@ -1229,7 +1221,7 @@ district_hive_1 = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost_minerals
+			minerals = @city_cost
 			light_alloys = @city_cost_light_alloys
 			heavy_alloys = @city_cost_heavy_alloys
 		}
@@ -1322,7 +1314,7 @@ district_hive_2 = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost_minerals
+			minerals = @city_cost
 			light_alloys = @city_cost_light_alloys
 			heavy_alloys = @city_cost_heavy_alloys
 		}
@@ -1415,7 +1407,7 @@ district_hive_3 = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost_minerals
+			minerals = @city_cost
 			light_alloys = @city_cost_light_alloys
 			heavy_alloys = @city_cost_heavy_alloys
 		}
@@ -1541,7 +1533,7 @@ district_nexus = {
 	resources = {
 		category = planet_districts_cities
 		cost = {
-			minerals = @city_cost_minerals
+			minerals = @city_cost
 			light_alloys = @city_cost_light_alloys
 			heavy_alloys = @city_cost_heavy_alloys
 		}
@@ -1561,15 +1553,6 @@ district_nexus = {
 		}
 		modifier = {
 			planet_housing_add = 100
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_modifier = gestation_colony
-		}
-		modifier = {
-			job_gestation_drone_add = 100
 		}
 	}
 
@@ -1645,9 +1628,20 @@ district_nexus_1 = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 750 #1000
+			trigger = {
+				NOT = {
+					has_deposit = d_machine_prototype_pc_machine
+				}
+			}
+			minerals = 1000
 			light_alloys = 150
 			heavy_alloys = 100
+		}
+		cost = {
+			trigger = {
+				has_deposit = d_machine_prototype_pc_machine
+			}
+			minerals = @base_cost
 		}
 		upkeep = {
 			trigger = {
@@ -1733,9 +1727,20 @@ district_nexus_2 = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 750 #1000
+			trigger = {
+				NOT = {
+					has_deposit = d_machine_prototype_pc_machine
+				}
+			}
+			minerals = 1000
 			light_alloys = 150
 			heavy_alloys = 100
+		}
+		cost = {
+			trigger = {
+				has_deposit = d_machine_prototype_pc_machine
+			}
+			minerals = @base_cost
 		}
 		upkeep = {
 			trigger = {
@@ -1821,9 +1826,20 @@ district_nexus_3 = {
 	resources = {
 		category = planet_districts
 		cost = {
-			minerals = 750 #1000
+			trigger = {
+				NOT = {
+					has_deposit = d_machine_prototype_pc_machine
+				}
+			}
+			minerals = 1000
 			light_alloys = 150
 			heavy_alloys = 100
+		}
+		cost = {
+			trigger = {
+				has_deposit = d_machine_prototype_pc_machine
+			}
+			minerals = @base_cost
 		}
 		upkeep = {
 			trigger = {
@@ -1923,7 +1939,7 @@ district_prison_industrial = {
 	resources = {
 		category = planet_districts_industrial
 		cost = {
-			minerals = @city_cost_minerals
+			minerals = @city_cost
 			light_alloys = @city_cost_light_alloys
 			heavy_alloys = @city_cost_heavy_alloys
 		}
@@ -1988,7 +2004,7 @@ district_battle_thrall = {
 	resources = {
 		category = planet_districts_industrial
 		cost = {
-			minerals = @city_cost_minerals
+			minerals = @city_cost
 			light_alloys = @city_cost_light_alloys
 			heavy_alloys = @city_cost_heavy_alloys
 		}

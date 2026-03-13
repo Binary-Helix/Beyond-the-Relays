@@ -138,7 +138,7 @@ building_artist_patron = {
 	}
 
 	planet_modifier = {
-		planet_jobs_unity_produces_mult = 0.15
+		planet_jobs_unity_produces_mult = 0.05
 	}
 
 	triggered_planet_modifier = {
@@ -148,8 +148,8 @@ building_artist_patron = {
 				is_regular_empire = yes
 			}
 		}
-		planet_civilians_unity_produces_add = 0.5
-		planet_civilians_consumer_goods_upkeep_add = 0.25
+		planet_civilians_unity_produces_add = 0.1
+		planet_civilians_consumer_goods_upkeep_add = 0.1
 	}
 
 	resources = {
@@ -249,7 +249,7 @@ building_waste_reprocessing_center = {
 }
 
 building_nuumismatic_shrine = {
-	base_buildtime = 180
+	base_buildtime = @b2_time
 	can_demolish = yes
 	planet_limit = 1
 
@@ -277,14 +277,22 @@ building_nuumismatic_shrine = {
 
 	inline_script = {
 		script = jobs/unity_jobs_add
-		AMOUNT = @building_static_jobs
+		AMOUNT = @building_static_jobs_high
 	}
 
 	resources = {
 		cost = {
-			minerals = 1000
+			minerals = @b2_minerals
+			trade = @b1_minerals
+		}
+		upkeep = {
+			trade = @b2_upkeep
 		}
 		category = planet_buildings
+	}
+
+	triggered_desc = {
+		text = bureaucrat_is_numistic_priest_tt
 	}
 }
 
@@ -316,16 +324,16 @@ building_crystal_plant_2 = {
 	}
 
 	planet_modifier = {
-		planet_metallurgists_rare_crystals_produces_add = 0.5
-		planet_artisans_rare_crystals_produces_add = 0.5
+		planet_metallurgists_rare_crystals_produces_add = 0.1
+		planet_artisans_rare_crystals_produces_add = 0.1
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			industrial_jobs_are_catalytic_trigger = no
 		}
-		planet_metallurgists_minerals_upkeep_add = 1.25
-		planet_artisans_minerals_upkeep_add = 1.25
+		planet_metallurgists_minerals_upkeep_add = 1
+		planet_artisans_minerals_upkeep_add = 1
 	}
 
 
@@ -333,8 +341,8 @@ building_crystal_plant_2 = {
 		potential = {
 			industrial_jobs_are_catalytic_trigger = yes
 		}
-		planet_metallurgists_food_upkeep_add = 2
-		planet_artisans_food_upkeep_add = 2
+		planet_metallurgists_food_upkeep_add = 1
+		planet_artisans_food_upkeep_add = 1
 	}
 
 	resources = {
@@ -399,9 +407,9 @@ building_zroni_equilibrator = {
 	}
 
 	planet_modifier = {
-		planet_biologists_physics_research_produces_add = 2
-		planet_biologists_society_research_upkeep_add = 2
-		planet_biologists_sr_zro_upkeep_add	= 1
+		planet_biologists_physics_research_produces_add = 0.5
+		planet_biologists_society_research_produces_add = 0.5
+		planet_biologists_sr_zro_upkeep_add	= 0.5
 	}
 
 	triggered_desc = {
@@ -553,11 +561,11 @@ building_composer_sanctum = {
 		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
-			exotic_gases = @b3_rare_cost
+			sr_zro = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep
-			exotic_gases = @b3_rare_upkeep
+			sr_zro = @b2_rare_upkeep
 		}
 	}
 }
@@ -626,11 +634,11 @@ building_eater_sanctum = {
 		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
-			exotic_gases = @b3_rare_cost
+			sr_zro = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep
-			exotic_gases = @b3_rare_upkeep
+			sr_zro = @b2_rare_upkeep
 		}
 	}
 }
@@ -709,7 +717,6 @@ building_instrument_sanctum = {
 	}
 
 	country_modifier = {
-		pop_happiness = 0.05
 		planet_jobs_trade_produces_mult = 0.1
 	}
 
@@ -717,11 +724,11 @@ building_instrument_sanctum = {
 		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
-			helium_3 = @b3_rare_cost
+			sr_zro = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep
-			helium_3 = @b3_rare_upkeep
+			sr_zro = @b2_rare_upkeep
 		}
 	}
 }
@@ -822,11 +829,11 @@ building_whisperers_sanctum = {
 		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
-			helium_3 = @b3_rare_cost
+			sr_zro = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep
-			helium_3 = @b3_rare_upkeep
+			sr_zro = @b2_rare_upkeep
 		}
 	}
 }

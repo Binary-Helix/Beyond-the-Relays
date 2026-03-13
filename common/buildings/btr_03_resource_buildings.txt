@@ -123,7 +123,7 @@ building_food_processing_facility = {
 	}
 
 	planet_modifier = {
-		planet_farmers_produces_mult = 0.20
+		planet_farmers_food_produces_add = 0.5
 	}
 
 	upgrades = {
@@ -223,8 +223,7 @@ building_food_processing_center = {
 	}
 
 	planet_modifier = {
-		planet_farmers_produces_mult = 0.20
-		planet_farmers_food_produces_add = 2
+		planet_farmers_food_produces_add = 1.0
 	}
 
 	triggered_planet_modifier = {
@@ -232,7 +231,7 @@ building_food_processing_center = {
 			has_ringworld_output_boost = yes
 		}
 		modifier = {
-			planet_farmers_food_produces_add = 2
+			planet_farmers_food_produces_add = 0.5
 		}
 	}
 
@@ -491,7 +490,7 @@ building_baol_organic_plant = { #DISABLED AT TECH LEVEL
 		script = buildings/planet_job_resource_produces_add
 		JOB = farmers
 		RESOURCE = food
-		AMOUNT = 1
+		AMOUNT = 0.25
 	}
 
 	# Additional farmer output (non-Archaeoengineering)
@@ -501,7 +500,7 @@ building_baol_organic_plant = { #DISABLED AT TECH LEVEL
 				country_uses_consumer_goods = yes
 			}
 		}
-		planet_farmers_consumer_goods_produces_add = 0.5
+		planet_farmers_consumer_goods_produces_add = 0.10
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -509,7 +508,7 @@ building_baol_organic_plant = { #DISABLED AT TECH LEVEL
 				country_uses_consumer_goods = no
 			}
 		}
-		planet_farmers_energy_produces_add = 1
+		planet_farmers_energy_produces_add = 0.25
 	}
 
 	# Additional farmer output (with Archaeoengineering)
@@ -520,7 +519,7 @@ building_baol_organic_plant = { #DISABLED AT TECH LEVEL
 				has_ascension_perk = ap_archaeoengineers
 			}
 		}
-		planet_farmers_consumer_goods_produces_add = 0.5
+		planet_farmers_consumer_goods_produces_add = 0.125
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -529,7 +528,7 @@ building_baol_organic_plant = { #DISABLED AT TECH LEVEL
 				has_ascension_perk = ap_archaeoengineers
 			}
 		}
-		planet_farmers_energy_produces_add = 1
+		planet_farmers_energy_produces_add = 0.25
 	}
 
 	resources = {
@@ -702,7 +701,7 @@ building_mineral_purification_plant = {
 	}
 
 	planet_modifier = {
-		planet_miners_produces_mult = 0.20
+		planet_miners_minerals_produces_add = 0.5
 	}
 
 	upgrades = {
@@ -830,16 +829,12 @@ building_mineral_purification_hub = {
 		}
 	}
 
-	planet_modifier = {
-		planet_miners_produces_mult = 0.20
-	}
-
 	triggered_planet_modifier = {
 		potential = {
 			NOT = { is_planet_class = pc_shattered_ring_habitable }
 		}
 		modifier = {
-			planet_miners_minerals_produces_add = 2
+			planet_miners_minerals_produces_add = 1.0
 		}
 	}
 
@@ -848,7 +843,7 @@ building_mineral_purification_hub = {
 			is_planet_class = pc_shattered_ring_habitable
 		}
 		modifier = {
-			planet_miners_minerals_produces_add = 1
+			planet_miners_minerals_produces_add = 0.5
 			#planet_miners_alloys_produces_add = 0.5
 		}
 	}
@@ -858,7 +853,7 @@ building_mineral_purification_hub = {
 			has_ringworld_output_boost = yes
 		}
 		modifier = {
-			planet_miners_minerals_produces_add = 2
+			planet_miners_minerals_produces_add = 0.5
 		}
 	}
 	prerequisites = {
@@ -874,7 +869,7 @@ building_mineral_purification_hub = {
 	}
 
 	ai_resource_production = {
-   		minerals = 7
+		minerals = 7.5
 		energy = 15
 
 		trigger = {
@@ -1096,7 +1091,6 @@ building_generator_generic = {
 
 	building_sets = {
 		generator
-		urban
 	}
 
 	potential = {
@@ -1145,7 +1139,7 @@ building_generator_generic = {
 	prerequisites = {
 		"tech_power_plant_1"
 	}
-	
+
 	# Static jobs building
 	ai_weight_coefficient = 0.0
 }
@@ -1208,7 +1202,7 @@ building_energy_grid = {
 	}
 
 	planet_modifier = {
-		planet_technician_produces_mult = 0.20
+		planet_technician_energy_produces_add = 0.5
 	}
 
 	prerequisites = {
@@ -1220,7 +1214,7 @@ building_energy_grid = {
 	}
 
 	ai_resource_production = {
-   		energy = 10
+		energy = 10
 
 		trigger = {
 			has_any_generator_zone = yes
@@ -1312,8 +1306,7 @@ building_energy_nexus = {
 	}
 
 	planet_modifier = {
-		planet_technician_produces_mult = 0.20
-		planet_technician_energy_produces_add = 2
+		planet_technician_energy_produces_add = 1.0
 	}
 
 	triggered_planet_modifier = {
@@ -1321,7 +1314,7 @@ building_energy_nexus = {
 			has_ringworld_output_boost = yes
 		}
 		modifier = {
-			planet_technician_energy_produces_add = 2
+			planet_technician_energy_produces_add = 0.5
 		}
 	}
 
@@ -1330,7 +1323,7 @@ building_energy_nexus = {
 	}
 
 	ai_resource_production = {
-   		energy = 15
+		energy = 15
 
 		trigger = {
 			has_any_generator_zone = yes
@@ -1616,6 +1609,16 @@ building_resource_silo = {
 		country_resource_max_add = 5000
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_machine_obsessional_directive
+			}
+		}
+		country_resource_max_consumer_goods_add = 5000
+	}
+
 	prerequisites = {
 		"tech_basic_industry"
 	}
@@ -1645,7 +1648,7 @@ building_bio_reactor = {
 			owner = {
 				is_ai = no
 			}
-			has_any_farming_district_or_buildings = yes
+			has_any_farming_district_or_building = yes
 		}
 	}
 
@@ -1662,7 +1665,7 @@ building_bio_reactor = {
 				owner = {
 					is_ai = yes
 				}
-				has_any_farming_district_or_buildings = no
+				has_any_farming_district_or_building = no
 			}
 		}
 	}
@@ -1715,7 +1718,7 @@ building_bio_reactor_2 = {
 			owner = {
 				is_ai = no
 			}
-			has_any_farming_district_or_buildings = yes
+			has_any_farming_district_or_building = yes
 		}
 	}
 
@@ -1732,7 +1735,7 @@ building_bio_reactor_2 = {
 				owner = {
 					is_ai = yes
 				}
-				has_any_farming_district_or_buildings = no
+				has_any_farming_district_or_building = no
 			}
 		}
 	}
