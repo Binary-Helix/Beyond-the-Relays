@@ -654,8 +654,7 @@ building_mineral_purification_plant = {
 		owner = { is_wilderness_empire = no } # see 'building_churning_tunnels_3'
 		NOR = {
 			has_modifier = resort_colony
-			is_planet_class = pc_ringworld_habitable
-			is_planet_class = pc_cybrex
+			is_artificial = yes
 		}
 		OR = {
 			NOT = { is_planet_class = pc_habitat }

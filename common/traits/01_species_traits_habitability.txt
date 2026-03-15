@@ -3643,7 +3643,7 @@ trait_pc_habitat_preference = {
 		can_change_habitability_preference = yes
 		hidden_trigger = { exists = from }
 		from = {
-			has_origin = origin_void_dwellers
+			has_void_dweller_origin = yes
 		}
 	}
 	species_possible_merge_add = {

@@ -1553,8 +1553,8 @@ military_station_small = {
 	potential_construction = {
 		is_scope_type = starbase
 		OR = {
-			has_starbase_size >= starbase_outpost
-			has_starbase_size >= orbital_ring_tier_1
+			is_normal_starbase = yes
+			is_orbital_ring = yes
 			has_starbase_size >= starbase_deep_space_citadel_1
 		}
 	}

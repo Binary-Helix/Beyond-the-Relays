@@ -196,7 +196,7 @@ d_stellarite_archway = {
 	planet_modifier = {
 		planet_max_districts_add = 1
 		planet_resettlement_unemployed_destination_mult = 0.10
-		planet_amenities_add = 5
+		planet_amenities_add = 500
 	}
 
 	potential = {
@@ -303,7 +303,7 @@ d_great_mystery_tree = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_add = 1
+			job_researcher_add = 100
 		}
 	}
 
@@ -407,7 +407,7 @@ d_majestic_reef = {
 	
 	planet_modifier = {
 		planet_jobs_society_research_produces_mult = 0.20
-		planet_amenities_add = 5
+		planet_amenities_add = 500
 	}
 
 	triggered_planet_modifier = {
@@ -416,7 +416,7 @@ d_majestic_reef = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_add = 2
+			job_researcher_add = 200
 		}
 	}
 
@@ -450,7 +450,7 @@ d_grand_bay = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_merchant_add = 2
+			job_merchant_add = 200
 		}
 	}
 
@@ -484,7 +484,7 @@ d_bellowing_rainforest = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_farmer_add = 4
+			job_farmer_add = 400
 		}
 	}
 
@@ -510,7 +510,7 @@ d_glowing_jungle = {
 	
 	planet_modifier = {
 		planet_max_districts_add = -1
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 		pop_citizen_happiness = 0.05
 	}
 
@@ -520,7 +520,7 @@ d_glowing_jungle = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_culture_worker_add = 2
+			job_culture_worker_add = 200
 		}
 	}
 
@@ -573,7 +573,7 @@ d_heart_of_grove = {
 	
 	planet_modifier = {
 		planet_jobs_unity_produces_mult = 0.1
-		planet_amenities_add = 5
+		planet_amenities_add = 500
 	}
 
 	potential = {
@@ -815,7 +815,7 @@ d_storm_eye = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_add = 4
+			job_researcher_add = 400
 		}
 	}
 
@@ -890,7 +890,7 @@ d_sights_to_behold = {
 	category = deposit_cat_rare
 	
 	planet_modifier = {
-		planet_amenities_add = 15
+		planet_amenities_add = 1500
 		planet_resettlement_unemployed_destination_mult = 0.05
 		pop_citizen_happiness = 0.05
 	}
@@ -1017,7 +1017,7 @@ d_holy_realm = {
 	planet_modifier = {
 		pop_environment_tolerance = 0.05
 		planet_jobs_food_produces_mult = 0.05
-		planet_housing_add = 5
+		planet_housing_add = 500
 	}
 
 	potential = {
@@ -1067,7 +1067,7 @@ d_diamond_cliff = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		planet_amenities_add = 15
+		planet_amenities_add = 1500
 		planet_jobs_energy_produces_mult = 0.10
 	}
 
@@ -1094,7 +1094,7 @@ d_mammoth_cave = {
 	planet_modifier = {
 		planet_max_districts_add = -2
 		pop_environment_tolerance = 0.1
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 	}
 
 	potential = {
@@ -1176,7 +1176,7 @@ d_organic_islands = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		planet_housing_add = 5
+		planet_housing_add = 500
 		planet_max_buildings_add = 1
 	}
 
@@ -1237,7 +1237,7 @@ d_rolling_mists = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		planet_amenities_add = -5
+		planet_amenities_add = -500
 		pop_happiness = 0.05
 	}
 
@@ -1424,7 +1424,7 @@ d_shifting_valley = {
 		planet_jobs_engineering_research_produces_mult = 0.25
 		planet_districts_upkeep_mult = 0.15
 		planet_structures_upkeep_mult = 0.15
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 		planet_jobs_energy_produces_mult = 0.1
 	}
 
@@ -1833,7 +1833,7 @@ d_shifty_cow_2 = {
 
 	planet_modifier = {
 		planet_resettlement_unemployed_destination_mult = 0.1
-		planet_amenities_add = 2
+		planet_amenities_add = 200
 	}
 
 	drop_weight = {
@@ -1852,7 +1852,7 @@ d_wild_thresher_maws = {
 	}
 
 	planet_modifier = {
-		planet_researchers_society_research_produces_mult = 0.05
+		planet_doctors_society_research_produces_mult = 0.05
 		planet_resettlement_unemployed_destination_mult = -0.10
 	}
 

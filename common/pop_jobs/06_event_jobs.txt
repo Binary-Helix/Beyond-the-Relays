@@ -427,19 +427,19 @@ dimensional_portal_researcher = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			mult = value:job_weights_multiple_resources_modifier|JOB|dimensional_portal_researcher|RESOURCE1|physics_research|WEIGHT1|0.6|RESOURCE2|energy|WEIGHT2|0.4|
+			factor = value:job_weights_multiple_resources_modifier|JOB|dimensional_portal_researcher|RESOURCE1|physics_research|WEIGHT1|0.6|RESOURCE2|energy|WEIGHT2|0.4|
 			planet = { has_planet_flag = dportal_energy }
 		}
 		modifier = {
-			mult = value:job_weights_multiple_resources_modifier|JOB|dimensional_portal_researcher|RESOURCE1|physics_research|WEIGHT1|0.6|RESOURCE2|trade|WEIGHT2|0.4|
+			factor = value:job_weights_multiple_resources_modifier|JOB|dimensional_portal_researcher|RESOURCE1|physics_research|WEIGHT1|0.6|RESOURCE2|trade|WEIGHT2|0.4|
 			planet = { has_planet_flag = dportal_trader }
 		}
 		modifier = {
-			mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+			factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 			planet = { has_planet_flag = dportal_trader }
 		}
 		modifier = {
-			mult = value:job_weights_multiple_resources_modifier|JOB|dimensional_portal_researcher|RESOURCE1|physics_research|WEIGHT1|0.75|RESOURCE2|sr_dark_matter|WEIGHT2|0.25|
+			factor = value:job_weights_multiple_resources_modifier|JOB|dimensional_portal_researcher|RESOURCE1|physics_research|WEIGHT1|0.75|RESOURCE2|sr_dark_matter|WEIGHT2|0.25|
 			planet = {
 				OR = {
 					has_planet_flag = dportal_void
@@ -448,7 +448,7 @@ dimensional_portal_researcher = {
 			}
 		}
 		modifier = {
-			mult = value:job_weights_modifier|JOB|dimensional_portal_researcher|RESOURCE|physics_research|
+			factor = value:job_weights_modifier|JOB|dimensional_portal_researcher|RESOURCE|physics_research|
 			planet = {
 				NOR = {
 					has_planet_flag = dportal_energy
@@ -689,15 +689,15 @@ dimensional_portal_researcher_gestalt = {
 	weight = {
 		weight = @complex_drone_job_weight
 		modifier = {
-			mult = value:job_weights_multiple_resources_modifier|JOB|dimensional_portal_researcher_gestalt|RESOURCE1|physics_research|WEIGHT1|0.6|RESOURCE2|energy|WEIGHT2|0.4|
+			factor = value:job_weights_multiple_resources_modifier|JOB|dimensional_portal_researcher_gestalt|RESOURCE1|physics_research|WEIGHT1|0.6|RESOURCE2|energy|WEIGHT2|0.4|
 			planet = { has_planet_flag = dportal_energy }
 		}
 		modifier = {
-			mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+			factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 			planet = { has_planet_flag = dportal_trader }
 		}
 		modifier = {
-			mult = value:job_weights_multiple_resources_modifier|JOB|dimensional_portal_researcher_gestalt|RESOURCE1|physics_research|WEIGHT1|0.75|RESOURCE2|sr_dark_matter|WEIGHT2|0.25|
+			factor = value:job_weights_multiple_resources_modifier|JOB|dimensional_portal_researcher_gestalt|RESOURCE1|physics_research|WEIGHT1|0.75|RESOURCE2|sr_dark_matter|WEIGHT2|0.25|
 			planet = {
 				OR = {
 					has_planet_flag = dportal_void
@@ -706,7 +706,7 @@ dimensional_portal_researcher_gestalt = {
 			}
 		}
 		modifier = {
-			mult = value:job_weights_modifier|JOB|dimensional_portal_researcher_gestalt|RESOURCE|physics_research|
+			factor = value:job_weights_modifier|JOB|dimensional_portal_researcher_gestalt|RESOURCE|physics_research|
 			planet = {
 				NOR = {
 					has_planet_flag = dportal_energy
@@ -1156,7 +1156,7 @@ robot_caretaker = {
 	}
 
 	resources = {
-		category = planet_bureaucrats
+		category = planet_administrators
 		produces = {
 			unity = 2.5
 			engineering_research = 2.5
@@ -2275,7 +2275,7 @@ stasis_warden = {
 		weight = @specialist_job_weight
 
 		modifier = {
-			mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
+			factor = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
 			owner = { has_active_tradition = tr_domination_judgment_corps }
 		}
 

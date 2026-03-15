@@ -103,7 +103,7 @@ tr_btr_illumination_citizen = {
         every_neighbor_country = {
             limit = {
                 NOT = {
-                    has_ethic = ethic_gestalt_consciousness
+                    is_gestalt = yes
                     has_country_flag = flag_btr_faith
                 }
             }

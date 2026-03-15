@@ -870,7 +870,7 @@ bureaucrat = {
 	}
 
 	resources = {
-		category = planet_bureaucrats
+		category = planet_administrators
 		# PRODUCES
 		produces = {
 			unity = 3
@@ -1356,7 +1356,7 @@ enforcer = {
 		weight = @specialist_job_weight
 
 		modifier = {
-			mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
+			factor = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
 			owner = { has_active_tradition = tr_domination_judgment_corps }
 		}
 		modifier = {
@@ -2727,7 +2727,7 @@ necro_apprentice = {
 		}
 		modifier = {
 			factor = 0.75
-			pop_has_happiness = no
+			pop_group_has_happiness = no
 		}
 
 		modifier = {
@@ -2744,7 +2744,7 @@ necro_apprentice = {
 				}
 				num_assigned_jobs = {
 					job = necro_apprentice
-					value > 1
+					value > 100
 				}
 			}
 		}
@@ -3254,7 +3254,7 @@ bath_attendant = {
 			exists = owner
 			owner = {
 				NOT = {
-					has_valid_civic = civic_worker_coop
+					is_worker_coop_empire = yes
 				}
 			}
 		}
@@ -3265,7 +3265,7 @@ bath_attendant = {
 		potential = {
 			exists = owner
 			owner = {
-				has_valid_civic = civic_worker_coop
+				is_worker_coop_empire = yes
 			}
 		}
 		pop_bureaucrat_bonus_workforce_mult = 0.025

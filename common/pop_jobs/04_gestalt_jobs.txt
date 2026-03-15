@@ -179,7 +179,7 @@ spawning_drone = {
 			owner = { has_origin = origin_necrophage }
 			exists = planet.growing_species
 			planet.growing_species = {
-				NOT = { has_trait = trait_hive_mind }
+				is_hive_species = no
 			}
 		}
 		modifier = {
@@ -596,7 +596,7 @@ coordinator = {
 	possible = { can_think = yes }
 
 	resources = {
-		category = planet_bureaucrats
+		category = planet_administrators
 		produces = {
 			unity = 3
 		}
@@ -2922,7 +2922,7 @@ maintenance_drone = {
 	triggered_planet_modifier = {
 		potential = {
 			planet = {
-				is_ringworld = yes
+				has_ringworld_output_boost = yes
 				has_building = building_alpha_hub
 			}
 		}
@@ -2949,7 +2949,7 @@ maintenance_drone = {
 		weight = @maintenance_drone_job
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
-			mult = value:job_weights_modifier|JOB|maintenance_drone|RESOURCE|unity|FACTOR|0.25|
+			factor = value:job_weights_modifier|JOB|maintenance_drone|RESOURCE|unity|FACTOR|0.25|
 			exists = owner
 			owner = {
 				OR = {

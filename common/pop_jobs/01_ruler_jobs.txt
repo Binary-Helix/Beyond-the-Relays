@@ -567,7 +567,7 @@ dystopian_enforcer = {
 		weight = @specialist_job_weight
 
 		modifier = {
-			mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
+			factor = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
 			owner = { has_active_tradition = tr_domination_judgment_corps }
 		}
 		modifier = {

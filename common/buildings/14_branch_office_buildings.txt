@@ -105,7 +105,7 @@ building_private_mining_consortium = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 10
@@ -249,7 +249,7 @@ building_food_conglomerate = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 10
@@ -381,7 +381,7 @@ building_virtual_entertainment_studios = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 10
@@ -513,7 +513,7 @@ building_private_shipyards = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 10
@@ -672,7 +672,7 @@ building_military_contractors = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 10
@@ -796,7 +796,7 @@ building_industrial_subsidiary = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 25
@@ -919,7 +919,7 @@ building_public_relations_office = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 25
@@ -1056,7 +1056,7 @@ building_private_research_initiative = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 25
@@ -1191,7 +1191,7 @@ building_amusement_megaplex = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 25
@@ -1328,7 +1328,7 @@ building_commercial_forum = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 25
@@ -1418,7 +1418,7 @@ building_corporate_embassy = {
 	triggered_planet_modifier = {
 		potential = {
 			branch_office_owner = {
-				has_civic = civic_worker_coop
+				is_worker_coop_empire = yes
 			}
 		}
 		planet_politicians_trade_produces_add = @high_trade_from_jobs
@@ -1447,7 +1447,7 @@ building_corporate_embassy = {
 	triggered_country_modifier = {
 		potential = {
 			branch_office_owner = {
-				has_valid_civic = civic_worker_coop
+				is_worker_coop_empire = yes
 			}
 		}
 		job_capital_trader_add = @traders_from_civic
@@ -1489,7 +1489,7 @@ building_corporate_embassy = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 25
@@ -1680,7 +1680,7 @@ building_private_security = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 10
@@ -1787,7 +1787,7 @@ building_wildcat_miners = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 20
@@ -1905,7 +1905,7 @@ building_bio_reprocessing_facilities = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 20
@@ -2041,7 +2041,7 @@ building_underground_chemists = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 20
@@ -2176,7 +2176,7 @@ building_wrecking_yards = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 20
@@ -2338,7 +2338,7 @@ building_pirate_haven = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 20
@@ -2450,7 +2450,7 @@ building_underground_clubs = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 30
@@ -2584,7 +2584,7 @@ building_syndicate_outreach_office = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 30
@@ -2707,7 +2707,7 @@ building_illicit_research_labs = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 30
@@ -2821,7 +2821,7 @@ building_smuggling_rings = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 30
@@ -2968,7 +2968,7 @@ building_disinformation_center = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 30
@@ -3042,7 +3042,7 @@ building_subversive_shrine = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 30
@@ -3107,7 +3107,7 @@ building_temple_of_prosperity = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 10
@@ -3260,7 +3260,7 @@ building_executive_retreat = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 25
@@ -3374,7 +3374,7 @@ building_xeno_tourism_agency = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 25
@@ -3445,7 +3445,7 @@ building_imperial_concession_port = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 25
@@ -3558,7 +3558,7 @@ building_knightly_theme_park = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 25
@@ -3714,7 +3714,7 @@ building_corporate_clinics = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 25
@@ -3857,7 +3857,7 @@ building_augmentation_bazaars_branch = {
 		cost = {
 			trigger = {
 				owner = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 			}
 			influence = 25
@@ -4146,7 +4146,7 @@ building_clear_thought_clinic = {
 
 building_carceral_test_facility = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
+	planet_limit = 1
 	owner_type = corporate
 	category = research
 
@@ -4158,7 +4158,7 @@ building_carceral_test_facility = {
 	}
 
 	planet_modifier = {
-		job_slave_orderly_add = 50
+		job_slave_orderly_add = 5000
 	}
 
 	inline_script = {
@@ -4230,7 +4230,7 @@ building_psionic_offices = {
 	triggered_country_modifier = {
 		potential = {
 			branch_office_owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_corporeal_authority = yes
 			}
 		}
@@ -4299,7 +4299,7 @@ building_psionic_offices = {
 
 building_living_metal_clinic = {
 	base_buildtime = @b1_time
-	base_cap_amount = 1
+	planet_limit = 1
 	owner_type = corporate
 	category = resource
 	potential = {
@@ -4321,7 +4321,7 @@ building_living_metal_clinic = {
 		}
 		cost = {
 			trigger = {
-				owner = { has_authority = auth_corporate }
+				owner = { is_megacorp = yes }
 			}
 			influence = 20
 		}

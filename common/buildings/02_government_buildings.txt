@@ -171,9 +171,9 @@ building_precinct_house = {
 		hidden_trigger = {
 			OR = {
 				owner = { is_ai = no }
-				AND = {
-					NOT = { has_forbidden_jobs = enforcer }
-					NOT = { has_available_jobs = enforcer }
+				NOR = {
+					has_forbidden_jobs = enforcer
+					has_available_jobs = enforcer
 				}
 			}
 		}
@@ -451,10 +451,10 @@ building_sentinel_posts = {
 		hidden_trigger = {
 			OR = {
 				owner = { is_ai = no }
-				AND = {
-					NOT = { has_building = building_sentinel_posts }
-					NOT = { has_forbidden_jobs = patrol_drone }
-					NOT = { has_available_jobs = patrol_drone }
+				NOR = {
+					has_building = building_sentinel_posts
+					has_forbidden_jobs = patrol_drone
+					has_available_jobs = patrol_drone
 				}
 			}
 		}
@@ -1303,7 +1303,7 @@ building_gaiaseeders_pc_gaia = {
 
 building_volcanic_forge_1 = {
 	base_buildtime = @b1_time
-	base_cap_amount = 1
+	planet_limit = 1
 	category = government
 	building_sets = {
 		government
@@ -1380,7 +1380,7 @@ building_volcanic_forge_1 = {
 
 building_volcanic_forge_2 = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
+	planet_limit = 1
 	can_build = no
 	category = government
 	building_sets = {

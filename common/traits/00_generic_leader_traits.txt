@@ -209,7 +209,7 @@ leader_trait_capitalist = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_gestalt_check = no
@@ -222,7 +222,7 @@ leader_trait_capitalist = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_gestalt_check = yes
@@ -242,7 +242,7 @@ leader_trait_capitalist = {
 		leader_trait_homesteader
 		leader_trait_homesteader_2
 		leader_trait_scrapper
-		leader_trait_scrapper_2
+	 leader_trait_distribution_lines_2
 		leader_trait_entrepreneur
 		leader_trait_entrepreneur_2
 		leader_trait_venerated
@@ -273,7 +273,7 @@ leader_trait_capitalist_2 = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_gestalt_check = no
@@ -286,7 +286,7 @@ leader_trait_capitalist_2 = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_gestalt_check = yes
@@ -327,7 +327,7 @@ leader_trait_private_mines = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_gestalt_check = no
@@ -340,7 +340,7 @@ leader_trait_private_mines = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_gestalt_check = yes
@@ -360,7 +360,7 @@ leader_trait_private_mines = {
 		leader_trait_homesteader
 		leader_trait_homesteader_2
 		leader_trait_scrapper
-		leader_trait_scrapper_2
+	 leader_trait_distribution_lines_2
 		leader_trait_entrepreneur
 		leader_trait_entrepreneur_2
 		leader_trait_venerated
@@ -391,7 +391,7 @@ leader_trait_private_mines_2 = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 				NOT = { is_planet_class = pc_shattered_ring_habitable }
 			}
@@ -405,7 +405,7 @@ leader_trait_private_mines_2 = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 				NOT = { is_planet_class = pc_shattered_ring_habitable }
 			}
@@ -419,7 +419,7 @@ leader_trait_private_mines_2 = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 				is_planet_class = pc_shattered_ring_habitable
 			}
@@ -433,7 +433,7 @@ leader_trait_private_mines_2 = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 				is_planet_class = pc_shattered_ring_habitable
 			}
@@ -517,7 +517,7 @@ leader_trait_homesteader = {
 		leader_trait_private_mines
 		leader_trait_private_mines_2
 		leader_trait_scrapper
-		leader_trait_scrapper_2
+	 leader_trait_distribution_lines_2
 		leader_trait_entrepreneur
 		leader_trait_entrepreneur_2
 		leader_trait_venerated
@@ -735,7 +735,7 @@ trait_imperial_heir = {
 			is_ruler = yes
 			exists = owner
 			exists = FROM
-			FROM.owner = { is_same_value = root.owner }
+			FROM.owner = { is_same_empire = root.owner }
 			owner = {
 				has_valid_civic = civic_imperial_cult
 			}
@@ -864,7 +864,7 @@ leader_trait_scrapper = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 					is_catalytic_empire = no
 				}
 			}
@@ -879,7 +879,7 @@ leader_trait_scrapper = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 					is_catalytic_empire = no
 				}
 			}
@@ -893,7 +893,7 @@ leader_trait_scrapper = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 					is_catalytic_empire = yes
 				}
 			}
@@ -955,7 +955,7 @@ leader_trait_scrapper_2 = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 					is_catalytic_empire = no
 				}
 			}
@@ -969,7 +969,7 @@ leader_trait_scrapper_2 = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 					is_catalytic_empire = no
 				}
 			}
@@ -983,7 +983,7 @@ leader_trait_scrapper_2 = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 					is_catalytic_empire = yes
 				}
 			}
@@ -1032,7 +1032,7 @@ leader_trait_entrepreneur = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_gestalt_check = no
@@ -1045,7 +1045,7 @@ leader_trait_entrepreneur = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_gestalt_check = yes
@@ -1067,7 +1067,7 @@ leader_trait_entrepreneur = {
 		leader_trait_homesteader
 		leader_trait_homesteader_2
 		leader_trait_scrapper
-		leader_trait_scrapper_2
+	 leader_trait_distribution_lines_2
 		leader_trait_venerated
 		leader_trait_venerated_2
 	}
@@ -1096,7 +1096,7 @@ leader_trait_entrepreneur_2 = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_gestalt_check = no
@@ -1109,7 +1109,7 @@ leader_trait_entrepreneur_2 = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_gestalt_check = yes
@@ -1149,7 +1149,7 @@ leader_trait_venerated = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_gestalt_check = no
@@ -1162,7 +1162,7 @@ leader_trait_venerated = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_gestalt_check = yes
@@ -1176,7 +1176,7 @@ leader_trait_venerated = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_wilderness_check = yes
@@ -1198,7 +1198,7 @@ leader_trait_venerated = {
 		leader_trait_homesteader
 		leader_trait_homesteader_2
 		leader_trait_scrapper
-		leader_trait_scrapper_2
+	 leader_trait_distribution_lines_2
 		leader_trait_entrepreneur
 		leader_trait_entrepreneur_2
 	}
@@ -1227,7 +1227,7 @@ leader_trait_venerated_2 = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_gestalt_check = no
@@ -1240,7 +1240,7 @@ leader_trait_venerated_2 = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_gestalt_check = yes
@@ -1254,7 +1254,7 @@ leader_trait_venerated_2 = {
 			FROM = {
 				exists = owner
 				owner = {
-					is_same_value = root.owner
+					is_same_empire = root.owner
 				}
 			}
 			trait_is_wilderness_check = yes

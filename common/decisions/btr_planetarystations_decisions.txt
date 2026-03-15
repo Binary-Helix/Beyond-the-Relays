@@ -837,7 +837,7 @@ decision_military_outpost = {
 				any_neighbor_system = {
 					exists = owner
 					NOT = { 
-						space_owner = { is_same_value = root.owner }
+						space_owner = { is_same_empire = root.owner }
 					}
 				}
 			}

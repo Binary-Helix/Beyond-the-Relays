@@ -175,16 +175,16 @@ ap_become_the_crisis = {
 		}
 		custom_tooltip = {
 			fail_text = "locked_by_shroud_forged_situation"
-			OR = {
-				NOT = { has_origin = origin_shroud_forged }
-				NOT = { has_country_flag = finish_shroud_forged_liberation_flag }
+			NAND = {
+				has_origin = origin_shroud_forged
+				has_country_flag = finish_shroud_forged_liberation_flag
 			}
 		}
 		if = {
 			limit = {
-				OR = {
-					NOT = { has_origin = origin_shroud_forged }
-					NOT = { has_country_flag = shroud_forged_can_become_the_crisis }
+				NAND = {
+					has_origin = origin_shroud_forged
+					has_country_flag = shroud_forged_can_become_the_crisis
 				}
 			}
 			custom_tooltip = {
@@ -848,10 +848,8 @@ ap_enigmatic_engineering = {
 ap_nihilistic_acquisition = {
 	potential = {
 		host_has_dlc = "Apocalypse"
-		NOT = {
-			has_ascension_perk = ap_nihilistic_acquisition
-		}
 		NOR = {
+			has_ascension_perk = ap_nihilistic_acquisition
 			has_valid_civic = civic_barbaric_despoilers
 			has_origin = origin_slavers
 			has_origin = origin_khan_successor
@@ -867,7 +865,7 @@ ap_nihilistic_acquisition = {
 		OR = {
 			is_authoritarian = yes
 			is_xenophobe = yes
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 		}
 	}
 
@@ -1010,7 +1008,7 @@ ap_world_shaper = {
 				is_void_dweller_empire = yes
 				has_origin = origin_shattered_ring
 				has_trait = trait_aquatic
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 			}
 		}
 		modifier = {
@@ -1299,10 +1297,7 @@ ap_galactic_contender = {
 		}
 		any_relation = {
 			has_communications = root
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = yes
 		}
 	}
 
@@ -1563,8 +1558,6 @@ ap_shared_destiny = {
 		NOR = {
 			is_homicidal = yes
 			has_valid_civic = civic_inwards_perfection
-		}
-		NOT = {
 			has_ascension_perk = ap_shared_destiny
 		}
 	}

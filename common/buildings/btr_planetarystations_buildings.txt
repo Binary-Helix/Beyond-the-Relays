@@ -718,7 +718,7 @@ building_station_system_capital = {
 			}
 		}
 		modifier = {
-			job_knight_commander_add = 1
+			job_knight_commander_add = 100
 			job_knight_add = 200
 		}
 	}
@@ -992,7 +992,7 @@ building_prison_major_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 		}
 	}
 
@@ -1098,7 +1098,7 @@ building_prison_system_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 		}
 	}
 
@@ -1154,7 +1154,7 @@ building_prison_system_capital = {
 
 building_monorail = {
 	base_buildtime = @b1_time
-	base_cap_amount = 1
+	planet_limit = 1
 
 	category = amenity
 	

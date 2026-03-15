@@ -313,7 +313,7 @@ give_btr_T0_starting_tech = {
             limit = {
                 owner = {
                     NOT = {
-                        has_ethic = ethic_gestalt_consciousness
+                        is_gestalt = yes
                     }
                 }
             }
@@ -323,7 +323,7 @@ give_btr_T0_starting_tech = {
         if = {
             limit = {
                 owner = {
-                    has_ethic = ethic_gestalt_consciousness
+                    is_gestalt = yes
                 }
             }
             give_technology = { tech = tech_solar_panel_network message = no }
@@ -397,7 +397,7 @@ give_btr_T1_starting_tech = {
                 NOR = {
                     owner = {
                         has_trait = trait_machine_unit
-                        has_authority = auth_machine_intelligence
+                        is_machine_empire = yes
                     }
                 }
             }
@@ -407,7 +407,7 @@ give_btr_T1_starting_tech = {
             limit = {
                 NOT = {
                     owner = {
-                        has_ethic = ethic_gestalt_consciousness
+                        is_gestalt = yes
                     }
                 }
             }
@@ -516,8 +516,7 @@ give_btr_T2_starting_tech = {
             limit = {
                 owner = {
                     OR = {
-                        has_ethic = ethic_spiritualist
-                        has_ethic = ethic_fanatic_spiritualist
+                        is_spiritualist = yes
                         AND = {
                             is_gestalt = no
                             has_make_spiritualist_perk = yes
@@ -531,7 +530,7 @@ give_btr_T2_starting_tech = {
             limit = {
                 NOT = {
                     owner = {
-                        has_ethic = ethic_gestalt_consciousness
+                        is_gestalt = yes
                     }
                 }
             }
@@ -543,7 +542,7 @@ give_btr_T2_starting_tech = {
             limit = {
                 owner = {
                     NOT = {
-                        has_authority = auth_machine_intelligence
+                        is_machine_empire = yes
                     }
                 }
             }
@@ -552,7 +551,7 @@ give_btr_T2_starting_tech = {
         if = {
             limit = {
                 owner = {
-                    has_authority = auth_machine_intelligence
+                    is_machine_empire = yes
                 }
             }
             give_technology = { tech = tech_micro_replicators message = no }

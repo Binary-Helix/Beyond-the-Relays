@@ -198,11 +198,9 @@ consumer_goods = {
 	}
 
 	tradable_in_market = {
-		NOT = {
-			AND = {
-				exists = this
-				has_valid_civic = civic_machine_obsessional_directive
-			}
+		NAND = {
+			exists = this
+			has_valid_civic = civic_machine_obsessional_directive
 		}
 	}
 }

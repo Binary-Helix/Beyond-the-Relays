@@ -184,7 +184,7 @@ swarm_army = {
 		is_country_type = "swarm"
 	}
 
-	potential = { always = no }
+	potential_country = { always = no }
 }
 
 # Rampaging Tree Armies
@@ -597,7 +597,7 @@ imperial_legion = {
 		always = no
 	}
 
-	potential = { always = no }
+	potential_country = { always = no }
 
 	on_queued = {
 	}
@@ -669,7 +669,7 @@ mercenary_army = {
 		}
 	}
 
-	potential = {
+	potential_country = {
 		always = no
 	}
 }
@@ -693,7 +693,7 @@ mecha_army = {
 		}
 	}
 
-	potential = {
+	potential_country = {
 		always = no
 	}
 }
@@ -708,7 +708,7 @@ crystal_kraken_army = {
 	icon = GFX_army_type_undead
 	has_species = no
 
-	potential = {
+	potential_country = {
 		always = no
 	}
 }
@@ -729,7 +729,7 @@ shroud_monstrosities = {
 		category = armies
 	}
 
-	potential = {
+	potential_country = {
 		always = no
 	}
 }
@@ -742,7 +742,7 @@ subterranean_defense_army = {
 	morale = 1
 	icon = GFX_army_type_primitive
 
-	potential = {
+	potential_country = {
 		always = no
 	}
 }
@@ -849,7 +849,7 @@ mindwarden_army = {
 		army_damage_against_psionic_mult = 1
 	}
 
-	potential = {
+	potential_country = {
 		always = no
 	}
 }

@@ -70,7 +70,7 @@ education_campaign = {
 	}
 
 	potential = {
-		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOT = { is_gestalt = yes }
 		has_technology = tech_planetary_unification
 	}
 
@@ -103,7 +103,7 @@ recycling_campaign = {
 	}
 
 	potential = {
-		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOT = { is_gestalt = yes }
 		has_technology = tech_planetary_unification
 	}
 

@@ -17,7 +17,7 @@ diplomatic_stance = {
 			is_country_type = default
 			is_country_type = fallen_empire
 			is_country_type = awakened_fallen_empire
-			is_country_type = primitive
+			is_primitive = yes
 			is_country_type = awakened_marauders
 			is_country_type = mirrored_country
 			is_country_type = exiled
@@ -33,10 +33,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_belligerent"
 
 		potential = {
-			OR = {
-				is_country_type = default
-				is_country_type = awakened_fallen_empire
-			}
+			is_country_type_with_subjects = yes
 		}
 
 		valid = {
@@ -340,10 +337,7 @@ diplomatic_stance = {
 
 		potential = {
 			is_wilderness_empire = no
-			OR = {
-				is_country_type = default
-				is_country_type = awakened_fallen_empire
-			}
+			is_country_type_with_subjects = yes
 		}
 
 		valid = {
@@ -381,10 +375,7 @@ diplomatic_stance = {
 
 		potential = {
 			is_wilderness_empire = yes
-			OR = {
-				is_country_type = default
-				is_country_type = awakened_fallen_empire
-			}
+			is_country_type_with_subjects = yes
 		}
 
 		valid = {
@@ -826,7 +817,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_isolationist"
 
 		potential = {
-			is_country_type = primitive
+			is_primitive = yes
 			current_awareness_level < medium
 			capital_scope = {
 				NOT = { has_modifier = culture_shock_diplomacy }
@@ -850,7 +841,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_expansionist"
 
 		potential = {
-			is_country_type = primitive
+			is_primitive = yes
 			current_awareness_level = medium
 			capital_scope = {
 				NOT = { has_modifier = culture_shock_diplomacy }
@@ -874,7 +865,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_cooperative"
 
 		potential = {
-			is_country_type = primitive
+			is_primitive = yes
 			current_awareness_level >= high
 			is_xenophile = yes
 			capital_scope = {
@@ -899,7 +890,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_withdrawn"
 
 		potential = {
-			is_country_type = primitive
+			is_primitive = yes
 			current_awareness_level >= high
 			is_xenophobe = yes
 			capital_scope = {
@@ -924,7 +915,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_isolationist"
 
 		potential = {
-			is_country_type = primitive
+			is_primitive = yes
 			current_awareness_level >= high
 			is_xenophile = no
 			is_xenophobe = no
@@ -950,7 +941,7 @@ diplomatic_stance = {
 		icon = "GFX_diplomatic_stance_belligerent"
 
 		potential = {
-			is_country_type = primitive
+			is_primitive = yes
 			capital_scope = {
 				has_modifier = culture_shock_diplomacy
 			}
@@ -1046,10 +1037,7 @@ war_philosophy = {
 					has_valid_ai_personality = no
 					is_ai = no
 				}
-				NOT = {
-					has_ethic = "ethic_pacifist"
-					has_ethic = "ethic_fanatic_pacifist"
-				}
+				is_pacifist = no
 			}
 			modifier = {
 				factor = 10
@@ -1077,10 +1065,8 @@ war_philosophy = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = "ethic_pacifist"
-					has_ethic = "ethic_fanatic_pacifist"
-				}
+				
+				is_pacifist = yes
 			}
 		}
 	}
@@ -1093,7 +1079,7 @@ war_philosophy = {
 		}
 
 		potential = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			NOT = { is_gestalt = yes }
 		}
 
 		valid = {
@@ -1281,7 +1267,7 @@ war_doctrine = {
 		valid = {
 			OR = {
 				is_militarist = yes
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				has_civic = civic_fanatic_purifiers
 			}
 		}
@@ -1741,10 +1727,7 @@ orbital_bombardment = {
 		AI_weight = {
 			modifier = {
 				factor = 0
-				NOR = {
-					has_ethic = "ethic_pacifist"
-					has_ethic = "ethic_fanatic_pacifist"
-				}
+				is_pacifist = no
 				NOT = {
 					is_galactic_community_member = yes
 					OR = {
@@ -1777,10 +1760,7 @@ orbital_bombardment = {
 		modifier = {}
 
 		valid = {
-			NOR = {
-				has_ethic = "ethic_pacifist"
-				has_ethic = "ethic_fanatic_pacifist"
-			}
+			is_pacifist = no
 		}
 		AI_weight = {
 			modifier = {
@@ -2127,10 +2107,8 @@ interference = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = "ethic_pacifist"
-					has_ethic = "ethic_fanatic_pacifist"
-				}
+				
+				is_pacifist = yes
 			}
 			modifier = {
 				factor = 0.1
@@ -2375,10 +2353,8 @@ leader_enhancement = {
 			factor = 2
 			modifier = {
 				factor = 0
-				OR = {
-					has_ethic = "ethic_egalitarian"
-					has_ethic = "ethic_fanatic_egalitarian"
-				}
+				
+				is_egalitarian = yes
 				NOT = {
 					has_valid_ai_personality = yes
 					is_ai = yes
@@ -2408,10 +2384,7 @@ leader_enhancement = {
 		}
 
 		valid = {
-			NOR = {
-				has_ethic = "ethic_egalitarian"
-				has_ethic = "ethic_fanatic_egalitarian"
-			}
+			is_egalitarian = no
 		}
 
 		prerequisites = { tech_capacity_boosters }
@@ -2555,11 +2528,7 @@ border_policy = {
 
 		valid = {
 			OR = {
-				NOR = {
-					has_valid_civic = civic_machine_terminator
-					has_valid_civic = civic_hive_devouring_swarm
-					has_valid_civic = civic_fanatic_purifiers
-				}
+				is_homicidal = no
 				is_primitive = yes
 			}
 		}
@@ -2976,7 +2945,7 @@ research_restriction_policy = {
 
 economic_policy = {
 	potential = {
-		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOT = { is_gestalt = yes }
 	}
 
 	option = {
@@ -3040,7 +3009,7 @@ economic_policy = {
 
 trade_policy = {
 	potential = {
-		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOT = { is_gestalt = yes }
 	}
 
 	option = {
@@ -3286,7 +3255,7 @@ logistics_policy = {
 
 drone_policy = {
 	potential = {
-		has_ethic = ethic_gestalt_consciousness
+		is_gestalt = yes
 		is_wilderness_empire = no # see 'symbiont_policy'
 	}
 
@@ -3371,7 +3340,7 @@ symbiont_policy = {
 
 artificial_intelligence_policy = {
 	potential = {
-		NOT = { has_ethic = ethic_gestalt_consciousness }
+		NOT = { is_gestalt = yes }
 		OR = {
 			has_origin = origin_synthetic_fertility
 			can_set_ai_policy = yes
@@ -3545,7 +3514,7 @@ artificial_intelligence_policy = {
 robot_pop_policy = {
 	potential = {
 		NOR = {
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 			is_individual_machine = yes
 		}
 	}
@@ -3637,11 +3606,7 @@ pre_sapients = {
 		name = "pre_sapients_protect"
 
 		potential = {
-			NOR = {
-				has_valid_civic = civic_machine_terminator
-				has_valid_civic = civic_hive_devouring_swarm
-				has_valid_civic = civic_fanatic_purifiers
-			}
+			is_homicidal = no
 		}
 
 		on_enabled = {
@@ -3710,10 +3675,7 @@ pre_sapients = {
 		}
 
 		valid = {
-			NOR = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-			}
+			is_xenophile = no
 		}
 
 		policy_flags = {
@@ -3939,10 +3901,7 @@ refugees = {
 		name = "refugees_not_allowed"
 
 		valid = {
-			NOR = {
-				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"
-			}
+			is_xenophile = no
 		}
 
 		policy_flags = {
@@ -4126,15 +4085,12 @@ slavery = {
 					is_militarist = yes
 				}
 				OR = {
-					has_ethic = "ethic_pacifist"
-					has_ethic = "ethic_fanatic_pacifist"
+					is_pacifist = yes
 					has_ethic = "ethic_xenophile"
 					has_ethic = "ethic_fanatic_xenophile"
 				}
-				OR = {
-					has_ethic = "ethic_authoritarian"
-					has_ethic = "ethic_fanatic_authoritarian"
-				}
+				
+				is_authoritarian = yes
 				NOR = {
 					has_valid_civic = "civic_slaver_guilds"
 					has_trait = "trait_decadent"
@@ -4150,7 +4106,7 @@ purge = {
 		name = "purge_not_allowed"
 
 		valid = {
-			NOT = { has_ethic = ethic_gestalt_consciousness }
+			NOT = { is_gestalt = yes }
 			NOR = {
 				has_valid_civic = "civic_fanatic_purifiers"
 				has_valid_civic = "civic_scorched_earth"
@@ -4224,7 +4180,7 @@ purge = {
 				NOT = { has_origin = origin_broken_shackles }
 			}
 			OR = {
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				is_xenophobe = yes
 				has_crisis_perk = menp_undertaker	# Unlocked with Crisis Level 1
 				AND = {
@@ -4241,7 +4197,7 @@ purge = {
 			factor = 10
 			modifier = {
 				factor = 40
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 				NOT = { has_valid_civic = civic_hive_empath }
 			}
 			modifier = {
@@ -4253,7 +4209,7 @@ purge = {
 				has_valid_ai_personality = yes
 				NOR = {
 					has_ai_personality_behaviour = purger
-					has_ethic = ethic_gestalt_consciousness
+					is_gestalt = yes
 					AND = {
 						has_origin = origin_necrophage
 						is_xenophobe = yes

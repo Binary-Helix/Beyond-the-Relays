@@ -1025,10 +1025,7 @@ is_disconnected_drone_pop = {
 	has_trait = trait_hive_mind
 	from = {
 		is_gestalt = no
-		NOR = {
-			is_country_type = fallen_empire
-			is_country_type = awakened_fallen_empire
-		}
+		is_fallen_empire = no
 	}
 }
 
@@ -1885,7 +1882,7 @@ has_met_primitives = {
 		has_country_flag = encountered_first_primitive
 		any_relation = {
 			has_communications = root
-			is_country_type = primitive
+			is_primitive = yes
 		}
 	}
 }
@@ -2059,7 +2056,7 @@ has_bordering_system = {
 # root: great khan's horde (country)
 is_potential_diadochi_system = {
 	exists = starbase
-	starbase = { owner = { is_same_value = root } }
+	starbase = { is_owned_by = root }
 	NOR = {
 		has_star_flag = first_diadochi_system
 		has_star_flag = second_diadochi_system
@@ -3108,7 +3105,7 @@ baol_colony_1_trigger = {
 	}
 	OR = {
 		has_owner = no
-		owner = { is_same_value = root.owner }
+		is_owned_by = root.owner
 	}
 	any_system_planet = {
 		is_planet_class = pc_barren
@@ -3130,7 +3127,7 @@ baol_colony_2_trigger = {
 	}
 	OR = {
 		has_owner = no
-		owner = { is_same_value = root.owner }
+		is_owned_by = root.owner
 	}
 	any_system_planet = {
 		is_planet_class = pc_asteroid
@@ -3151,7 +3148,7 @@ baol_colony_3_trigger = {
 	}
 	OR = {
 		has_owner = no
-		owner = { is_same_value = root.owner }
+		is_owned_by = root.owner
 	}
 	any_system_planet = {
 		habitable_planet = yes
@@ -3503,7 +3500,7 @@ basic_eligibility_for_separatism_joining_trigger = {
 			}
 		}
 	}
-	NOT = { is_same_value = event_target:revolt_situation.owner }
+	NOT = { is_same_empire = event_target:revolt_situation.owner }
 	is_subject = no
 	NOR = {
 		is_in_federation_with = event_target:revolt_situation.owner
@@ -3871,11 +3868,11 @@ has_research_building = {
 }
 
 is_orbital_ring = {
-	has_starbase_size >= orbital_ring_tier_1
+	is_orbital_ring = yes
 }
 
 is_normal_starbase = {
-	has_starbase_size >= starbase_outpost
+	is_normal_starbase = yes
 }
 
 is_faction_allowed = {
@@ -4584,8 +4581,8 @@ has_toxic_baths_building = {
 
 is_human_species = {
 	OR = {
-		species_portrait = human
-		species_portrait = human_legacy
+		is_human_species = yes
+		
 		species_portrait = pla17
 		species_portrait = cyb12
 	}
@@ -4907,11 +4904,7 @@ blocks_minister_of_state = {
 }
 
 is_terraforming_candidate = {
-	OR = {
-		has_modifier = terraforming_candidate
-		has_modifier = frozen_terraforming_candidate
-		has_modifier = toxic_terraforming_candidate
-	}
+	OR = { is_terraforming_candidate = yes }
 }
 
 has_engineered_evolution_synergy = {
@@ -5098,8 +5091,8 @@ is_legit_or_legal_criminal = {
 					is_subject = yes
 					overlord = {
 						OR = {
-							is_same_value = root.owner
-							is_same_value = root.owner.overlord
+							is_same_empire = root.owner
+							is_same_empire = root.owner.overlord
 						}
 					}
 				}
@@ -5137,8 +5130,8 @@ is_illegal_criminal = {
 			is_subject = yes
 			overlord = {
 				OR = {
-					is_same_value = root.owner
-					is_same_value = root.owner.overlord
+					is_same_empire = root.owner
+					is_same_empire = root.owner.overlord
 				}
 			}
 		}
@@ -5419,5 +5412,5 @@ has_good_relationships = {
 }
 
 is_specialist_category = {
-	is_pop_category = specialist
+	is_specialist_category = yes
 }
