@@ -1,7 +1,8 @@
 name: Balance Issue
 description: Report a balance concern with the mod
-title: "[Balance] "
-labels: ["mechanics", "balance"]
+title: ""
+labels: ["mechanics"]
+type: Task
 body:
   - type: dropdown
     id: additional-labels
@@ -13,12 +14,23 @@ body:
         - bug
         - compatibility
         - documentation
+        - economy
+        - empires
+        - enhancement
+        - events
+        - help wanted
+        - leaders
         - localization
+        - planets
         - playability
-        - performance
-        - save-game
-        - UI
-        - crash
+        - pops
+        - qol
+        - question
+        - species
+        - technology
+        - TODO
+        - ui
+        - update
 
   - type: textarea
     id: description

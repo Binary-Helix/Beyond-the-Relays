@@ -1,7 +1,8 @@
 name: Save Game Compatibility Issue
 description: Report an issue with save game compatibility after mod updates
-title: "[Save Game] "
-labels: ["playability", "save-game"]
+title: ""
+labels: ["playability"]
+type: Bug
 body:
   - type: dropdown
     id: additional-labels
@@ -11,14 +12,26 @@ body:
       multiple: true
       options:
         - bug
-        - mechanics
         - compatibility
         - documentation
+        - economy
+        - empires
+        - enhancement
+        - events
+        - help wanted
+        - leaders
         - localization
-        - performance
-        - balance
-        - UI
-        - crash
+        - mechanics
+        - planets
+        - playability
+        - pops
+        - qol
+        - question
+        - species
+        - technology
+        - TODO
+        - ui
+        - update
 
   - type: textarea
     id: description

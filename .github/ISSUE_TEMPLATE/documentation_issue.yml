@@ -1,7 +1,8 @@
 name: Documentation Issue
 description: Report missing or unclear documentation
-title: "[Docs] "
+title: ""
 labels: ["documentation"]
+type: Task
 body:
   - type: dropdown
     id: additional-labels
@@ -11,14 +12,25 @@ body:
       multiple: true
       options:
         - bug
-        - mechanics
         - compatibility
+        - economy
+        - empires
+        - enhancement
+        - events
+        - help wanted
+        - leaders
         - localization
+        - mechanics
+        - planets
         - playability
-        - performance
-        - balance
-        - save-game
-        - UI
+        - pops
+        - qol
+        - question
+        - species
+        - technology
+        - TODO
+        - ui
+        - update
 
   - type: textarea
     id: description

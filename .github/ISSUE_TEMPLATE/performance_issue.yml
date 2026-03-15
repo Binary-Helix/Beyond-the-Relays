@@ -1,7 +1,8 @@
 name: Performance Issue
 description: Report performance or lag issues caused by the mod
-title: "[Performance] "
-labels: ["playability", "performance"]
+title: ""
+labels: ["playability"]
+type: Bug
 body:
   - type: dropdown
     id: additional-labels
@@ -11,14 +12,26 @@ body:
       multiple: true
       options:
         - bug
-        - mechanics
         - compatibility
         - documentation
+        - economy
+        - empires
+        - enhancement
+        - events
+        - help wanted
+        - leaders
         - localization
-        - balance
-        - save-game
-        - UI
-        - crash
+        - mechanics
+        - planets
+        - playability
+        - pops
+        - qol
+        - question
+        - species
+        - technology
+        - TODO
+        - ui
+        - update
 
   - type: textarea
     id: description

@@ -1,7 +1,8 @@
 name: Compatibility Issue
 description: Report compatibility issues with other mods or Stellaris versions
-title: "[Compatibility] "
+title: ""
 labels: ["compatibility"]
+type: Task
 body:
   - type: dropdown
     id: additional-labels
@@ -11,15 +12,25 @@ body:
       multiple: true
       options:
         - bug
-        - mechanics
         - documentation
+        - economy
+        - empires
+        - enhancement
+        - events
+        - help wanted
+        - leaders
         - localization
+        - mechanics
+        - planets
         - playability
-        - performance
-        - balance
-        - save-game
-        - UI
-        - crash
+        - pops
+        - qol
+        - question
+        - species
+        - technology
+        - TODO
+        - ui
+        - update
 
   - type: textarea
     id: description

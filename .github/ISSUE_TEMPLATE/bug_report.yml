@@ -1,7 +1,8 @@
 name: Bug Report
 description: Report a bug or issue with the Beyond-the-Relays mod
-title: "[Bug] "
-labels: ["bug"]
+title: ""
+labels: []
+type: Bug
 body:
   - type: dropdown
     id: additional-labels
@@ -10,16 +11,27 @@ body:
       description: Select any additional labels that apply to this issue.
       multiple: true
       options:
-        - mechanics
+        - bug
         - compatibility
         - documentation
+        - economy
+        - empires
+        - enhancement
+        - events
+        - help wanted
+        - leaders
         - localization
+        - mechanics
+        - planets
         - playability
-        - performance
-        - balance
-        - save-game
-        - UI
-        - crash
+        - pops
+        - qol
+        - question
+        - species
+        - technology
+        - TODO
+        - ui
+        - update
 
   - type: textarea
     id: description
