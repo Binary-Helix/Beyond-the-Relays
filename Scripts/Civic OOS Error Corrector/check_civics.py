@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import re
 import logging
-# from typing import List, Tuple
+import argparse
+from pathlib import Path
 from collections import defaultdict
 
 logger = logging.getLogger(__name__)
@@ -41,6 +42,7 @@ def find_closing_brace(text, start_index):
 def check_civic_conflicts(mod_path):
 	civics_path = mod_path / "common/governments/civics"
 	if not civics_path.is_dir():
+		logger.error("Civics directory not found: %s" % civics_path)
 		return
 
 	logger.info("Checking for civic conflicts in %s..." % civics_path)
@@ -59,8 +61,6 @@ def check_civic_conflicts(mod_path):
 		with filepath.open("r", encoding="utf-8", errors="ignore") as f:
 			content = f.read()
 
-		# Regex for key = { at start of line
-
 		for match in block_start_re.finditer(content):
 			civic_name = match.group(1)
 			civic_files[civic_name] = filepath
@@ -71,8 +71,7 @@ def check_civic_conflicts(mod_path):
 			if end_idx == -1:
 				continue
 
-			civic_block = content[start_idx + 1 : end_idx]  # Content inside {}
-
+			civic_block = content[start_idx + 1 : end_idx]
 
 			for sub_match in sub_block_re.finditer(civic_block):
 				# Check if commented
@@ -104,7 +103,6 @@ def check_civic_conflicts(mod_path):
 
 					# Find all has_civic = X
 					for hc_match in has_civic_re.finditer(neg_content):
-						# Check if commented
 						ls = neg_content.rfind("\n", 0, hc_match.start()) + 1
 						if "#" in neg_content[ls : hc_match.start()]:
 							continue
@@ -113,14 +111,13 @@ def check_civic_conflicts(mod_path):
 
 					# Find value = X
 					for v_match in value_re.finditer(neg_content):
-						# Check if commented
 						ls = neg_content.rfind("\n", 0, v_match.start()) + 1
 						if "#" in neg_content[ls : v_match.start()]:
 							continue
 						val = v_match.group(1)
 						civic_conflicts[civic_name].add(val)
 
-	# 2. Check and Group conflicts
+	# 2. Check and group conflicts
 	fixes = defaultdict(set)
 	for civic, conflicts in civic_conflicts.items():
 		if civic.startswith("origin_"):
@@ -141,9 +138,13 @@ def check_civic_conflicts(mod_path):
 				)
 				fixes[target].add(civic)
 
+	if not fixes:
+		logger.info("No civic conflicts found.")
+		return
+
 	civics_re = re.compile(r'\bcivics\s*=\s*\{')
 
-	# 3. Apply Fixes
+	# 3. Apply fixes
 	for target, missing_civics in fixes.items():
 		if not missing_civics:
 			continue
@@ -152,11 +153,9 @@ def check_civic_conflicts(mod_path):
 		if not target_file:
 			continue
 
-		# try:
 		with target_file.open("r", encoding="utf-8") as f:
 			target_content = f.read()
 
-		# Regex to find the civic start
 		civic_re = re.compile(rf"^{re.escape(target)} = \{{", re.M)
 		m_civic = civic_re.search(target_content)
 		if not m_civic:
@@ -216,17 +215,15 @@ def check_civic_conflicts(mod_path):
 
 					nor_content = civics_body_inner[nor_start_inner+1:nor_end_inner]
 
-					# Check if this NOR has a 'text =' property (tooltip)
+					# Check if this NOR has a 'text =' property (tooltip) — skip if so
 					if "text =" not in nor_content:
-						# This NOR/NOT block is suitable for insertion/replacement
-
-						# Extract existing values
+						# Extract existing values and merge
 						for v_match in value_re.finditer(nor_content):
 							missing_civics.add(v_match.group(1))
 						for hc_match in has_civic_re.finditer(nor_content):
 							missing_civics.add(hc_match.group(1))
 
-						# Re-create insertion string
+						# Re-create insertion string with merged set
 						insertion_str = ""
 						for mc in sorted(missing_civics):
 							insertion_str += f"\n\t\t\t\tvalue = {mc}"
@@ -235,7 +232,7 @@ def check_civic_conflicts(mod_path):
 						prefix = ""
 						suffix = ""
 
-						# Check for inline block
+						# Handle inline block (no newlines)
 						if '\n' not in civics_body_inner:
 							prefix = "\n\t\t\t"
 							suffix = "\n\t\t"
@@ -255,17 +252,17 @@ def check_civic_conflicts(mod_path):
 						break
 
 				if not found_suitable_nor:
-					# Create a new NOR block inside civics
+					# Insert a new NOR block inside existing civics = {}
 					insert_pos = civic_start + poss_start_rel + c_end_rel
 					block_insert = f"\tNO{is_single_civic} = {{{insertion_str}\n\t\t\t}}\n\t\t"
 					target_content = target_content[:insert_pos] + block_insert + target_content[insert_pos:]
 			else:
-				# Create civics block inside possible
+				# Insert civics = { NOR = {} } inside existing possible = {}
 				insert_pos = civic_start + poss_end_rel
 				block_insert = f"\tcivics = {{\n\t\t\tNO{is_single_civic} = {{{insertion_str}\n\t\t\t}}\n\t\t}}\n\t"
 				target_content = target_content[:insert_pos] + block_insert + target_content[insert_pos:]
 		else:
-			# Insert possible block at end of civic
+			# No possible block at all — insert full possible = { civics = { NOR = {} } }
 			insert_pos = civic_end
 			block_insert = f"\tpossible = {{\n\t\tcivics = {{\n\t\t\tNO{is_single_civic} = {{{insertion_str}\n\t\t\t}}\n\t\t}}\n\t}}\n"
 			target_content = target_content[:insert_pos] + block_insert + target_content[insert_pos:]
@@ -275,5 +272,22 @@ def check_civic_conflicts(mod_path):
 
 		logger.info(f"Fixed: Added {len(missing_civics)} exclusions to '{target}'.")
 
-		# except Exception as e:
-		# 	logger.error(f"Failed to fix conflict in {target_file}: {e}")
+
+if __name__ == "__main__":
+	parser = argparse.ArgumentParser(
+		description="Check and fix asymmetric civic exclusion conflicts in a Stellaris mod."
+	)
+	parser.add_argument(
+		"-input", "--mod_path",
+		type=str,
+		required=True,
+		help="Path to the mod root directory (must contain common/governments/civics/)"
+	)
+	args = parser.parse_args()
+
+	mod_path = Path(args.mod_path)
+	if not mod_path.is_dir():
+		logger.error(f"Mod path does not exist or is not a directory: {mod_path}")
+		raise SystemExit(1)
+
+	check_civic_conflicts(mod_path)
