@@ -1,0 +1,22 @@
+Set up:
+Prior to running, make sure to create a branch off the current debvuild branch for this update (eg. update/4.3openbeta)
+
+In run_btr_analyzer.bat, set directories to OLD_VANILLA, NEW_VANILLA, and MOD_DIR - 
+OLD_VANILLA: A directory with the contents of the old version of Stellaris' install. Copy from steamapps/common prior to updating to latest Stellaris Branch
+NEW_VANILLA: steamapps/common install of Stellaris, updated to the version you're updating to. 
+MOD_DIR: Directory that houses your mod's files. 
+
+Upon executing .bat, terminal will ask you for the OLD_LABEL - this should be the version of the Stellaris install you're updating from. (eg. 4.23)
+It will then ask you for the NEW_LABEL - this is the version you are updating to. (eg. 4.3openbeta)
+
+What the report gives you:
+Section						What it means
+- Direct Conflicts 			Vanilla files that both Paradox changed AND your mod overrides — these need immediate attention, sorted by diff size
+- Tenured Conflicts			Conflicts that existed prior to update (Theoretically should never need to be reviewed as long as Direct Conflicts are continuously monitored.	
+- Tangential Conflicts		Vanilla files changed in categories BtR touches (e.g. common/) but doesn't directly override — may affect scripting, triggers, shared namespaces
+- New Vanilla Content 		Brand-new files Paradox added that BtR doesn't have yet — opportunities to adopt new mechanics
+- Deleted Vanilla Files   	Files removed from vanilla that BtR might still reference
+
+Each section is clickable and expands a full colour-coded diff so you can see exactly what Paradox changed without leaving the report.
+
+Upload the resulting html into the NEVERMERGE/Tools branch in Scripts\Mod Diff Analyzer\output
