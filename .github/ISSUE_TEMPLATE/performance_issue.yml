@@ -1,0 +1,121 @@
+name: Performance Issue
+description: Report performance or lag issues caused by the mod
+title: "[Performance] "
+labels: ["playability", "performance"]
+body:
+  - type: dropdown
+    id: additional-labels
+    attributes:
+      label: Additional Labels
+      description: Select any additional labels that apply to this issue.
+      multiple: true
+      options:
+        - bug
+        - mechanics
+        - compatibility
+        - documentation
+        - localization
+        - balance
+        - save-game
+        - UI
+        - crash
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the performance issue you're experiencing.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: impact-level
+    attributes:
+      label: Performance Impact
+      options:
+        - label: Game is unplayable/crashes
+        - label: Noticeable lag/stutter
+        - label: Slight performance decrease
+        - label: Other (please specify in description)
+
+  - type: input
+    id: affected-area
+    attributes:
+      label: Affected Area
+      description: What aspect causes the performance issue?
+      placeholder: e.g., megastructures, anomalies, AI turns, save/load, specific planet/system
+
+  - type: textarea
+    id: system-specs
+    attributes:
+      label: System Specifications
+      placeholder: |
+        OS:
+        CPU:
+        RAM:
+        GPU:
+    validations:
+      required: true
+
+  - type: input
+    id: stellaris-version
+    attributes:
+      label: Stellaris Version
+    validations:
+      required: true
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: Beyond-the-Relays Version
+    validations:
+      required: true
+
+  - type: textarea
+    id: game-settings
+    attributes:
+      label: Game Settings
+      placeholder: |
+        Game Speed:
+        Year/Game Length:
+        Galaxy Size:
+        Difficulty:
+
+  - type: textarea
+    id: other-mods
+    attributes:
+      label: Other Mods Enabled
+      description: List mods, especially any performance-related mods.
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: What happens and how bad is the performance impact?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Paste relevant log content here. Logs can be found at:
+        - `Stellaris/logs/error.log`
+        - `Stellaris/logs/game.log`
+        - `Stellaris/logs/launcher.log`
+        - `Stellaris/crashes/your-crash-log`
+      render: shell
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might help diagnose the issue. Attach save game or performance screenshots if available.

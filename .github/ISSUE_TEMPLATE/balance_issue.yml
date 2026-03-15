@@ -1,0 +1,93 @@
+name: Balance Issue
+description: Report a balance concern with the mod
+title: "[Balance] "
+labels: ["mechanics", "balance"]
+body:
+  - type: dropdown
+    id: additional-labels
+    attributes:
+      label: Additional Labels
+      description: Select any additional labels that apply to this issue.
+      multiple: true
+      options:
+        - bug
+        - compatibility
+        - documentation
+        - localization
+        - playability
+        - performance
+        - save-game
+        - UI
+        - crash
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the balance issue you've encountered.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's the Problem?
+      description: Explain why you feel this is unbalanced (overpowered, underpowered, etc.).
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: How does the feature/mechanic currently work?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: How do you think it should work for better balance?
+    validations:
+      required: true
+
+  - type: input
+    id: affected-content
+    attributes:
+      label: Affected Content
+      description: What specific feature/mechanic is unbalanced?
+      placeholder: e.g., megastructure costs, job output, building effects
+    validations:
+      required: true
+
+  - type: input
+    id: stellaris-version
+    attributes:
+      label: Stellaris Version
+    validations:
+      required: true
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: Mod Version
+    validations:
+      required: true
+
+  - type: input
+    id: difficulty
+    attributes:
+      label: Game Difficulty
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Do you have any suggestions for balancing this?
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information or examples.
