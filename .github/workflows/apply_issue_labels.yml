@@ -1,0 +1,82 @@
+name: Apply Issue Form Labels
+
+on:
+  issues:
+    types: [opened, reopened, edited]
+
+permissions:
+  issues: write
+
+jobs:
+  apply-labels:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Parse and apply labels from issue form
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body ?? '';
+            const issueNumber = context.payload.issue.number;
+
+            // Extract the "Additional Labels" section from the issue form body.
+            // GitHub renders multi-select dropdowns as a "### Field\n\nvalue1, value2" block.
+            const sectionMatch = body.match(
+              /###\s+Additional Labels\s*\n+([\s\S]*?)(?=\n###|\s*$)/i
+            );
+
+            if (!sectionMatch) {
+              console.log('No "Additional Labels" section found — skipping.');
+              return;
+            }
+
+            // The value is a comma-separated list. Trim whitespace and filter blanks.
+            const rawValue = sectionMatch[1].trim();
+
+            // GitHub renders "none" when the user selects nothing in a multi-select
+            if (!rawValue || rawValue.toLowerCase() === '_no response_' || rawValue.toLowerCase() === 'none') {
+              console.log('No additional labels selected — skipping.');
+              return;
+            }
+
+            const selectedLabels = rawValue
+              .split(',')
+              .map(l => l.trim())
+              .filter(Boolean);
+
+            if (selectedLabels.length === 0) {
+              console.log('Label list empty after parsing — skipping.');
+              return;
+            }
+
+            console.log(`Labels to apply: ${selectedLabels.join(', ')}`);
+
+            // Fetch all labels that exist in the repository so we don't try to
+            // apply a label that hasn't been created yet (which would 404).
+            const { data: repoLabels } = await github.rest.issues.listLabelsForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              per_page: 100,
+            });
+
+            const validNames = new Set(repoLabels.map(l => l.name.toLowerCase()));
+
+            const toApply = selectedLabels.filter(l => validNames.has(l.toLowerCase()));
+            const missing = selectedLabels.filter(l => !validNames.has(l.toLowerCase()));
+
+            if (missing.length > 0) {
+              console.warn(`Skipping unknown labels (not found in repo): ${missing.join(', ')}`);
+            }
+
+            if (toApply.length === 0) {
+              console.log('No valid labels to apply.');
+              return;
+            }
+
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              labels: toApply,
+            });
+
+            console.log(`Successfully applied: ${toApply.join(', ')}`);

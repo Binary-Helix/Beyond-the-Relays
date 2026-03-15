@@ -1,0 +1,70 @@
+name: Documentation Issue
+description: Report missing or unclear documentation
+title: "[Docs] "
+labels: ["documentation"]
+body:
+  - type: dropdown
+    id: additional-labels
+    attributes:
+      label: Additional Labels
+      description: Select any additional labels that apply to this issue.
+      multiple: true
+      options:
+        - bug
+        - mechanics
+        - compatibility
+        - localization
+        - playability
+        - performance
+        - balance
+        - save-game
+        - UI
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What documentation is missing, unclear, or incorrect?
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: Where is this documentation issue?
+      placeholder: e.g., README, Wiki, in-game tooltips, guides
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Current State
+      description: What does the documentation currently say (if it exists)?
+
+  - type: textarea
+    id: needed-info
+    attributes:
+      label: Needed Information
+      description: What information should be added or clarified?
+    validations:
+      required: true
+
+  - type: textarea
+    id: importance
+    attributes:
+      label: Why Is This Important?
+      description: Why would this documentation help other users or modders?
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Improvement
+      description: Do you have any specific wording or suggestions for improvement?
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information.
