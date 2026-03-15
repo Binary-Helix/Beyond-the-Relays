@@ -1,8 +1,7 @@
 name: Localization Issue
 description: Report missing translations or localization problems
-title: "[Localization]"
+title: "[Localization] "
 labels: ["localization"]
-type: Bug
 body:
   - type: dropdown
     id: additional-labels
@@ -12,25 +11,14 @@ body:
       multiple: true
       options:
         - bug
+        - mechanics
         - compatibility
         - documentation
-        - economy
-        - empires
-        - enhancement
-        - events
-        - help wanted
-        - leaders
-        - mechanics
-        - planets
         - playability
-        - pops
-        - qol
-        - question
-        - species
-        - technology
-        - TODO
-        - ui
-        - update
+        - performance
+        - balance
+        - save-game
+        - UI
 
   - type: textarea
     id: description

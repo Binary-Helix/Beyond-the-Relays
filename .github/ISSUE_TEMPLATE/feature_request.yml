@@ -1,8 +1,7 @@
 name: Feature Request
 description: Suggest an idea for the Beyond-the-Relays mod
-title: "[Feature]"
+title: "[Feature] "
 labels: ["enhancement", "mechanics"]
-type: Feature
 body:
   - type: dropdown
     id: additional-labels
@@ -14,24 +13,12 @@ body:
         - bug
         - compatibility
         - documentation
-        - economy
-        - empires
-        - enhancement
-        - events
-        - help wanted
-        - leaders
         - localization
-        - mechanics
-        - planets
         - playability
-        - pops
-        - qol
-        - question
-        - species
-        - technology
-        - TODO
-        - ui
-        - update
+        - performance
+        - balance
+        - save-game
+        - UI
 
   - type: textarea
     id: description
