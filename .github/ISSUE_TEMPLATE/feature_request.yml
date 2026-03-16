@@ -4,6 +4,12 @@ title: "[Feature]"
 labels: ["enhancement", "mechanics"]
 type: Feature
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Labeling
+        ---
+
   - type: dropdown
     id: additional-labels
     attributes:
@@ -33,6 +39,12 @@ body:
         - ui
         - update
 
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Details
+        ---
+
   - type: textarea
     id: description
     attributes:
@@ -60,6 +72,12 @@ body:
     attributes:
       label: Alternatives Considered
       description: Describe any alternative solutions or features you've considered.
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Implementation
+        ---
 
   - type: textarea
     id: implementation-notes

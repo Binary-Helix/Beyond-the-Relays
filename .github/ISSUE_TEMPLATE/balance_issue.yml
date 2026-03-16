@@ -4,6 +4,12 @@ title: "[Balance] "
 labels: ["mechanics"]
 type: Task
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Labeling
+        ---
+
   - type: dropdown
     id: additional-labels
     attributes:
@@ -31,6 +37,12 @@ body:
         - TODO
         - ui
         - update
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Balance Description
+        ---
 
   - type: textarea
     id: description
@@ -73,6 +85,12 @@ body:
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: |
+        ## Environment
+        ---
+
   - type: input
     id: stellaris-version
     attributes:
@@ -91,6 +109,12 @@ body:
     id: difficulty
     attributes:
       label: Game Difficulty
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Suggestions
+        ---
 
   - type: textarea
     id: proposed-solution

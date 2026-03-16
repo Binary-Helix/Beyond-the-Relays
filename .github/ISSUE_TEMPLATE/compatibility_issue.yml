@@ -4,6 +4,12 @@ title: "[Compatibility]"
 labels: ["compatibility"]
 type: Task
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Labeling
+        ---
+
   - type: dropdown
     id: additional-labels
     attributes:
@@ -32,6 +38,12 @@ body:
         - ui
         - update
 
+  - type: markdown
+    attributes:
+      value: |
+        ## Compatibility Issue
+        ---
+
   - type: textarea
     id: description
     attributes:
@@ -49,6 +61,12 @@ body:
         - label: Stellaris version incompatibility
         - label: DLC-related issue
         - label: Other (please specify in description)
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Environment
+        ---
 
   - type: input
     id: stellaris-version
@@ -69,6 +87,12 @@ body:
     attributes:
       label: Other Mod Name & Version
       description: If applicable.
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Reproduction
+        ---
 
   - type: textarea
     id: steps
@@ -96,6 +120,12 @@ body:
       description: What happens instead?
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Diagnostics
+        ---
 
   - type: textarea
     id: errors

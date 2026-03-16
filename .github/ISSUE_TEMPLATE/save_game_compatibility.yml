@@ -4,6 +4,12 @@ title: "[Save Game] "
 labels: ["playability"]
 type: Bug
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Labeling
+        ---
+
   - type: dropdown
     id: additional-labels
     attributes:
@@ -33,6 +39,12 @@ body:
         - ui
         - update
 
+  - type: markdown
+    attributes:
+      value: |
+        ## Issue Details
+        ---
+
   - type: textarea
     id: description
     attributes:
@@ -40,6 +52,12 @@ body:
       description: Describe the save game compatibility issue you're experiencing.
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Version Information
+        ---
 
   - type: input
     id: mod-version-save
@@ -63,6 +81,12 @@ body:
       label: Stellaris Version
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Reproduction
+        ---
 
   - type: textarea
     id: steps
@@ -91,6 +115,12 @@ body:
       description: What actually happens instead?
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Diagnostics
+        ---
 
   - type: textarea
     id: errors
