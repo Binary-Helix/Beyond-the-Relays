@@ -80,3 +80,64 @@ jobs:
             });
 
             console.log(`Successfully applied: ${toApply.join(', ')}`);
+
+      - name: Format issue body
+        if: github.event.action == 'opened'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.issue.body ?? '';
+            let formatted = body;
+
+            // Pass 1: Remove sections the user left blank (_No response_).
+            // Cleans up noise from optional fields that were skipped.
+            formatted = formatted.replace(/### [^\n]+\n\n_No response_\n*/g, '');
+
+            // Pass 2: Format the "Additional Labels" value as inline code spans.
+            // Turns "bug, enhancement" into `bug` `enhancement` for a tag-like look.
+            formatted = formatted.replace(
+              /(### Additional Labels\n\n)([^\n]+)/,
+              (_, header, value) => {
+                const tags = value.split(',').map(t => `\`${t.trim()}\``).join(' ');
+                return `${header}${tags}`;
+              }
+            );
+
+            // Pass 3: Wrap version field values in inline code spans.
+            // Makes version numbers visually distinct and easy to scan.
+            const versionFields = [
+              'Stellaris Version',
+              'Mod Version',
+              'Beyond-the-Relays Version',
+              'Mod Version When Save Was Created',
+              'Current Mod Version',
+            ];
+            for (const field of versionFields) {
+              const pattern = new RegExp(`(### ${field}\\n\\n)([^\`\\n][^\\n]*)`);
+              formatted = formatted.replace(
+                pattern,
+                (_, header, value) => `${header}\`${value.trim()}\``
+              );
+            }
+
+            // Pass 4: Insert a horizontal rule before every ### header except the first.
+            // Visually separates each section in the rendered issue.
+            formatted = formatted.replace(/\n(### )/g, '\n\n---\n\n$1');
+
+            // Pass 5: Collapse runs of 3+ blank lines down to 2.
+            // Prevents excess whitespace left behind by Pass 1 removals.
+            formatted = formatted.replace(/\n{3,}/g, '\n\n').trim();
+
+            if (formatted === body) {
+              console.log('No changes needed — skipping update.');
+              return;
+            }
+
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.issue.number,
+              body: formatted,
+            });
+
+            console.log('Issue body formatted successfully.');
