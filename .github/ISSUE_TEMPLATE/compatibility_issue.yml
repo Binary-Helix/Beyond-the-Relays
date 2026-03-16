@@ -1,0 +1,117 @@
+name: Compatibility Issue
+description: Report compatibility issues with other mods or Stellaris versions
+title: "[Compatibility]"
+labels: ["compatibility"]
+type: Task
+body:
+  - type: dropdown
+    id: additional-labels
+    attributes:
+      label: Additional Labels
+      description: Select any additional labels that apply to this issue.
+      multiple: true
+      options:
+        - bug
+        - documentation
+        - economy
+        - empires
+        - enhancement
+        - events
+        - help wanted
+        - leaders
+        - localization
+        - mechanics
+        - planets
+        - playability
+        - pops
+        - qol
+        - question
+        - species
+        - technology
+        - TODO
+        - ui
+        - update
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the compatibility issue you're experiencing.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: issue-type
+    attributes:
+      label: Type of Compatibility Issue
+      options:
+        - label: Other mod conflict
+        - label: Stellaris version incompatibility
+        - label: DLC-related issue
+        - label: Other (please specify in description)
+
+  - type: input
+    id: stellaris-version
+    attributes:
+      label: Stellaris Version
+    validations:
+      required: true
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: Beyond-the-Relays Version
+    validations:
+      required: true
+
+  - type: input
+    id: other-mod
+    attributes:
+      label: Other Mod Name & Version
+      description: If applicable.
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1. Install mods in this order:
+        2. Start a new game
+        3. See the issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen if the mods are compatible?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What happens instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: errors
+    attributes:
+      label: Error Messages
+      description: If applicable, paste any error messages or logs.
+      render: shell
+
+  - type: textarea
+    id: load-order
+    attributes:
+      label: Load Order
+      description: If applicable, provide your mod load order or modlist (found in `Documents/Paradox Interactive/Stellaris`).
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information about the conflict or compatibility issue.
