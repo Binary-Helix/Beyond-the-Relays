@@ -4,6 +4,12 @@ title: "[Documentation]"
 labels: ["documentation"]
 type: Task
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Labeling
+        ---
+
   - type: dropdown
     id: additional-labels
     attributes:
@@ -31,6 +37,12 @@ body:
         - TODO
         - ui
         - update
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Issue Details
+        ---
 
   - type: textarea
     id: description
@@ -62,6 +74,12 @@ body:
       description: What information should be added or clarified?
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Additional
+        ---
 
   - type: textarea
     id: importance

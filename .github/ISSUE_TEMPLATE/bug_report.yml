@@ -4,6 +4,12 @@ title: "[Bug] "
 labels: []
 type: Bug
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Labeling
+        ---
+
   - type: dropdown
     id: additional-labels
     attributes:
@@ -32,6 +38,12 @@ body:
         - TODO
         - ui
         - update
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Description
+        ---
 
   - type: textarea
     id: description
@@ -76,6 +88,12 @@ body:
       label: Screenshots
       description: If applicable, add screenshots to help explain your problem.
 
+  - type: markdown
+    attributes:
+      value: |
+        ## Environment
+        ---
+
   - type: input
     id: stellaris-version
     attributes:
@@ -88,7 +106,7 @@ body:
     id: mod-version
     attributes:
       label: Mod Version
-      description: Check descriptor.mod for the version number.
+      description: Check `descriptor.mod` for the version number.
     validations:
       required: true
 
@@ -107,6 +125,12 @@ body:
         Other Mods Enabled:
         Fresh game or loaded save:
         Save game attached:
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Diagnostics
+        ---
 
   - type: textarea
     id: logs
