@@ -1,17 +1,17 @@
-#Remnants of Rakana
-tradition_btr_survival = {
-    tree_template = btr_tree_1_3_1
-    adoption_bonus = "tr_btr_survival_adoption"
-    finish_bonus = "tr_btr_survival_finish"
+#Geth Consensus
+tradition_btr_existence = {
+    tree_template = btr_tree_1_1_2_1
+    adoption_bonus = "tr_btr_existence_adoption"
+    finish_bonus = "tr_btr_existence_finish"
     traditions = {
-        "tr_btr_survival_safeguard"
-        "tr_btr_survival_reuse"
-        "tr_btr_survival_reinstating"
-        "tr_btr_survival_anarchy"
-        "tr_btr_survival_subsistence"
+        "tr_btr_existence_perpetual_tension"
+        "tr_btr_existence_consensus"
+        "tr_btr_existence_unintentional"
+        "tr_btr_existence_inherent"
+        "tr_btr_existence_deathless"
     }
     potential = {
-        has_origin = remnants_rak_origin
+        has_origin = geth_con_origin
     }
     ai_weight = {
         factor = 5
