@@ -42,24 +42,13 @@ ap_engineered_evolution = {
 		}
 		if = {
 			limit = {
-				NOR = {
+				NOT = {
 					has_origin = origin_clone_army
-					has_origin = origin_overtuned
 				}
 			}
 			custom_tooltip = {
 				fail_text = "requires_ascension_perks_2"
 				num_ascension_perks > 1
-			}
-		}
-
-		if = {
-			limit = {
-				has_origin = origin_overtuned
-			}
-			custom_tooltip = {
-				fail_text = "requires_ascension_perks_1"
-				num_ascension_perks > 0
 			}
 		}
 		custom_tooltip = {
@@ -541,6 +530,16 @@ ap_mind_over_matter = {
 			has_mind_over_matter_anti_synergy = yes
 		}
 		modifier = {
+			factor = value:psionic_offices_mind_over_matter_mult
+			any_owned_planet = {
+				exists = branch_office_owner
+				has_holding = {
+					holding = building_psionic_offices
+					owner = branch_office_owner
+				}
+			}
+		}
+		modifier = {
 			factor = 0
 			has_origin = origin_mindwardens
 		}
@@ -681,7 +680,7 @@ ap_transcendence = {
 		always = no
 #		has_utopia = yes
 #		NOT = {
-#			has_ascension_perk = ap_transcendence
+#			has_tradition = tr_psionics_finish
 #			has_authority = "auth_machine_intelligence"
 #		}
 #		is_mechanical_empire = no
@@ -747,7 +746,7 @@ ap_evolutionary_mastery = {
 		always = no
 #		has_utopia = yes
 #		NOT = {
-#			has_ascension_perk = ap_evolutionary_mastery
+#			has_tradition = tr_genetics_resequencing
 #			has_authority = "auth_machine_intelligence"
 #		}
 #		is_mechanical_empire = no

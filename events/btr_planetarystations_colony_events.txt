@@ -306,7 +306,7 @@ planet_event = {
 		trigger = { owner = { is_regular_empire = yes } }
 		add_modifier = {
 			modifier = increased_maintenance
-			days = 1800
+			years = 5
 		}
 	}
 	
@@ -315,7 +315,7 @@ planet_event = {
 		trigger = { owner = { is_hive_empire = yes } }
 		add_modifier = {
 			modifier = increased_maintenance_hive
-			days = 1800
+			years = 5
 		}
 	}
 	
@@ -323,7 +323,7 @@ planet_event = {
 		name = planetarystations_colony_event.2.b
 		add_modifier = {
 			modifier = contaminated_filters
-			days = 1800
+			years = 5
 		}
 	}
 }
@@ -349,7 +349,7 @@ planet_event = {
 		name = planetarystations_colony_event.3.a
 		add_modifier = {
 			modifier = heightened_security
-			days = 1800
+			years = 5
 		}
 	}
 	
@@ -357,7 +357,7 @@ planet_event = {
 		name = planetarystations_colony_event.3.b
 		add_modifier = {
 			modifier = open_station
-			days = 1800
+			years = 5
 		}
 	}
 }
@@ -386,7 +386,7 @@ planet_event = {
 		}
 		add_modifier = {
 			modifier = life_support_failure
-			days = 360
+			years = 1
 		}
 	}
 	
@@ -400,7 +400,7 @@ planet_event = {
 			}
 			add_modifier = {
 				modifier = life_support_failure
-				days = 360
+				years = 1
 			}
 		}
 	}
@@ -430,7 +430,7 @@ planet_event = {
 		name = planetarystations_colony_event.5.a
 		add_modifier = {
 			modifier = conciliation_measures
-			days = 1800
+			years = 5
 		}
 	}
 	
@@ -438,7 +438,7 @@ planet_event = {
 		name = planetarystations_colony_event.5.b
 		add_modifier = {
 			modifier = prolonged_strike
-			days = 1800
+			years = 5
 		}
 	}
 	
@@ -459,7 +459,7 @@ planet_event = {
 		}
 		add_modifier = {
 			modifier = suppressed_protests
-			days = 360
+			years = 1
 		}
 	}
 	
@@ -478,7 +478,7 @@ planet_event = {
 		}
 		add_modifier = {
 			modifier = suppressed_protests
-			days = 360
+			years = 1
 		}
 		
 		hidden_effect = {
@@ -606,7 +606,7 @@ planet_event = {
 		name = INCREDIBLE
 		add_modifier = {
 			modifier = station_mascot
-			days = 3600
+			years = 10
 		}
 	}
 }
@@ -1311,7 +1311,7 @@ planet_event = {
 		trigger = { owner = { has_resource = { type = alloys amount >= 500 } } }
 		add_modifier = {
 			modifier = energy_leak
-			days = 1800
+			years = 5
 		}
 	}
 	
@@ -1330,7 +1330,7 @@ planet_event = {
 		trigger = { owner = { has_resource = { type = alloys amount < 500 } } }
 		add_modifier = {
 			modifier = energy_leak
-			days = 1800
+			years = 5
 		}
 	}
 }
@@ -1592,7 +1592,7 @@ planet_event = {
 	immediate = {
 		add_modifier = {
 			modifier = rising_corruption
-			days = 3600
+			years = 10
 		}
 	}
 	
@@ -1601,7 +1601,7 @@ planet_event = {
 		tooltip = {
 			add_modifier = {
 				modifier = rising_corruption
-				days = 3600
+				years = 10
 			}
 		}
 	}
@@ -1626,7 +1626,7 @@ planet_event = {
 	immediate = {
 		add_modifier = {
 			modifier = overloading_transport_hubs
-			days = 1800
+			years = 5
 		}
 	}
 	
@@ -1635,7 +1635,7 @@ planet_event = {
 		tooltip = {
 			add_modifier = {
 				modifier = overloading_transport_hubs
-				days = 1800
+				years = 5
 			}
 		}
 	}
@@ -1660,7 +1660,7 @@ planet_event = {
 	immediate = {
 		add_modifier = {
 			modifier = advantageous_location
-			days = 1800
+			years = 5
 		}
 	}
 	
@@ -1669,7 +1669,7 @@ planet_event = {
 		tooltip = {
 			add_modifier = {
 				modifier = advantageous_location
-				days = 1800
+				years = 5
 			}
 		}
 	}
@@ -1915,7 +1915,7 @@ planet_event = {
 				}
 				create_country = {
 					name = random
-					species = root.owner.species
+					species = root.owner_species
 					type = default
 					ethos = root.owner
 					authority = auth_corporate  
@@ -2018,7 +2018,7 @@ planet_event = {
 
 	immediate = {
 		owner = {
-			set_timed_country_flag = { flag = crime_pirates_spawned days = 3600 }
+			set_timed_country_flag = { flag = crime_pirates_spawned years = 10 }
 			owner_species = { save_event_target_as = owner_species }
 			country_event = { id = planetarystations_colony_event.41 days = 1 }
 		}

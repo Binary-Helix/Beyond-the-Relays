@@ -1,10 +1,9 @@
-
 ### ASARI REPUBLICS
 
 #Republic Communications Center
 building_asari_rep_comm_center = {
     base_buildtime = @btr_govt_b3_time
-    base_cap_amount = 1
+    planet_limit = 1
 	icon = building_residence
     exempt_from_ai_planet_specialization = no
 
@@ -94,9 +93,9 @@ building_asari_galactic_sports_center = {
     }
 
     planet_modifier = {
-        job_entertainer_add = 1
-        job_duelist_add = 1
-        job_culture_worker_add =1
+        job_entertainer_add = 100
+        job_duelist_add = 100
+        job_culture_worker_add = 100
 		planet_amenities_mult = 0.05
 #		pop_happiness = 0.05
     }
@@ -122,7 +121,7 @@ building_asari_galactic_sports_center = {
 building_salarian_exo_arch_res_outpost = {
 	base_buildtime = @btr_research_b4_time
 	icon = building_research_lab_3
-	base_cap_amount = 1
+	planet_limit = 1
 	empire_limit = 1
 	potential = {
 		owner = {
@@ -166,7 +165,7 @@ building_salarian_exo_arch_res_outpost = {
 
 building_salarian_covert_collection = {
 	base_buildtime = @btr_mili_b4_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_illicit_research_labs
 	potential = {
 		owner = {
@@ -184,8 +183,8 @@ building_salarian_covert_collection = {
 			### AI destruction logic
 			# AND = {
 			# 	free_building_slots = 0
-			#	free_jobs < 1
-			#	free_housing > 10
+			#	free_jobs < 100
+			#	free_housing > 1000
 			#	owner = {
 			#		is_ai = yes
 			#	}
@@ -226,7 +225,7 @@ building_salarian_covert_collection = {
 #Planetary Kasrs
 building_turian_planetary_kasrs = {
 	base_buildtime = @btr_mili_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_stronghold
 	category = army
 
@@ -253,8 +252,8 @@ building_turian_planetary_kasrs = {
 			### AI destruction logic
 			# AND = {
 			# 	free_building_slots = 0
-			#	free_jobs < 1
-			#	free_housing > 10
+			#	free_jobs < 100
+			#	free_housing > 1000
 			#	owner = {
 			#		is_ai = yes
 			#	}
@@ -290,7 +289,7 @@ building_turian_planetary_kasrs = {
 #Castra Auxilia
 building_turian_castra_auxilia = {
 	base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_guard_quarters
 	potential = {
 		exists = owner
@@ -317,8 +316,8 @@ building_turian_castra_auxilia = {
 			### AI destruction logic
 			# AND = {
 			# 	free_building_slots = 0
-			#	free_jobs < 1
-			#	free_housing > 10
+			#	free_jobs < 100
+			#	free_housing > 1000
 			#	owner = {
 			#		is_ai = yes
 			#	}
@@ -350,7 +349,7 @@ building_turian_castra_auxilia = {
 ###Systems Alliance
 building_systems_colonial_affairs_office = {
 	base_buildtime = @btr_civil_b1_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_public_relations_office
 	category = government
 	potential = {
@@ -374,8 +373,8 @@ building_systems_colonial_affairs_office = {
 			### AI destruction logic
 			# AND = {
 			# 	free_building_slots = 0
-			#	free_jobs < 1
-			#	free_housing > 10
+			#	free_jobs < 100
+			#	free_housing > 1000
 			#	owner = {
 			#		is_ai = yes
 			#	}
@@ -458,7 +457,7 @@ building_systems_ict_academy = {
 
 building_elcor_elders_assembly = {
 	base_buildtime = @btr_civil_b0_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = holding_park_ranger_lodge
 	category = government
 	potential = {
@@ -501,7 +500,7 @@ building_elcor_elders_assembly = {
 
 building_elcor_communal_croplands = {
 	base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_hydroponics_farm
 	category = resource
 	potential = {
@@ -542,7 +541,7 @@ building_elcor_communal_croplands = {
 ###Vol Protectorate
 building_volus_galactic_commercial_zone = {
 	base_buildtime = @btr_civil_b1_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_commercial_megaplex
 	exempt_from_ai_planet_specialization = no
 	category = trade
@@ -571,7 +570,7 @@ building_volus_galactic_commercial_zone = {
 		job_clerk_add = 300
 		job_manager_add = 200
 		job_executive_add = 100
-		planet_amenities_add = 15
+		planet_amenities_add = 1500
 	}
 
 	resources = {
@@ -607,7 +606,7 @@ building_volus_galactic_commercial_zone = {
 
 building_volus_economic_regulation_office = {
 	base_buildtime = @btr_civil_b1_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = holding_franchise_headquarters
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
@@ -672,7 +671,7 @@ building_volus_economic_regulation_office = {
 ###Illuminated Primacy
 building_hanar_enkindler_reliquary = {
 	base_buildtime = @btr_civil_b1_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_sentinel_posts
 	exempt_from_ai_planet_specialization = no
 	category = unity
@@ -730,7 +729,7 @@ building_hanar_enkindler_reliquary = {
 
 building_hanar_drell_barracks = {
 	base_buildtime = @btr_mili_b1_time
-	base_cap_amount = 2
+	planet_limit = 2
 	icon = building_stronghold
 	exempt_from_ai_planet_specialization = no
 	category = army
@@ -789,7 +788,7 @@ building_hanar_drell_barracks = {
 ###Hegemony of Khar'shan
 building_batarian_slave_market = {
 	base_buildtime = @btr_civil_b4_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_crude_huts
 	exempt_from_ai_planet_specialization = no
 	category = government
@@ -836,7 +835,7 @@ building_batarian_slave_market = {
 
 building_batarian_black_site = {
 	base_buildtime = @btr_mili_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_slave_processing
 	exempt_from_ai_planet_specialization = no
 	category = government
@@ -884,7 +883,7 @@ building_batarian_black_site = {
 ###Aralakh Kahmat
 building_krogan_maw_hammers = {
 	base_buildtime = @btr_civil_b0_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_order_holding
 	exempt_from_ai_planet_specialization = no
 	category = government
@@ -935,7 +934,7 @@ building_krogan_maw_hammers = {
 
 building_krogan_neutral_ground = {
 	base_buildtime = @btr_civil_b0_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = holding_experimental_crater
 	exempt_from_ai_planet_specialization = no
 	category = government
@@ -972,7 +971,7 @@ building_krogan_neutral_ground = {
 		planet_crime_mult = -0.25
 		job_soldier_add = 200
 		pop_government_ethic_attraction = 0.05
-		planet_amenities_add = 25
+		planet_amenities_add = 2500
 		planet_defense_armies_add = 3
 	}
 }
@@ -985,7 +984,7 @@ building_krogan_neutral_ground = {
 ###Omega
 building_omega_grey_market = {
 	base_buildtime = @btr_civil_b0_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_primitive_factory
 	exempt_from_ai_planet_specialization = no
 	category = government
@@ -1033,7 +1032,7 @@ building_omega_grey_market = {
 
 building_omega_scrap_garage = {
 	base_buildtime = @btr_civil_b1_time
-	base_cap_amount = 2
+	planet_limit = 2
 	icon = building_junkheap
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
@@ -1268,7 +1267,7 @@ building_caleston_great_dome = {
 	base_buildtime = @btr_govt_b3_time
 	icon = building_hydroponics_farm
 	exempt_from_ai_planet_specialization = no
-	base_cap_amount = 2
+	planet_limit = 2
 
 	building_sets = { government trade }
 	
@@ -1328,7 +1327,7 @@ building_caleston_energy_pits = {
 	base_buildtime = @btr_civil_b2_time
 	icon = building_archaeo_refinery
 	exempt_from_ai_planet_specialization = no
-	base_cap_amount = 2
+	planet_limit = 2
 
 	building_sets = { industrial }
 	
@@ -1442,7 +1441,7 @@ building_drell_museum_wander = {
 
 building_drell_bureau_resources_labor = {
 	base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_bureaucratic_1
 	exempt_from_ai_planet_specialization = no
 	category = unity
@@ -1499,7 +1498,7 @@ building_drell_bureau_resources_labor = {
 ###Vorcha Clandom
 building_vorcha_pyro_training = {
 	base_buildtime = @btr_mili_b0_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_pirate_haven
 	exempt_from_ai_planet_specialization = no
 	category = army
@@ -1550,7 +1549,7 @@ building_vorcha_pyro_training = {
 
 building_vorcha_communal_spawning_pits = {
 	base_buildtime = @btr_civil_b0_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_toxic_bath
 	exempt_from_ai_planet_specialization = no
 	category = pop_assembly
@@ -1606,7 +1605,7 @@ building_vorcha_communal_spawning_pits = {
 ###Sed'riicae Collective
 building_sedriicae_foreign_trade = {
 	base_buildtime = @btr_civil_b4_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_corporate_embassy
 	exempt_from_ai_planet_specialization = no
 	category = trade
@@ -1652,7 +1651,7 @@ building_sedriicae_foreign_trade = {
 
 building_sedriicae_central_plaza = {
 	base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_public_relations_office
 	exempt_from_ai_planet_specialization = no
 	category = government
@@ -1690,7 +1689,7 @@ building_sedriicae_central_plaza = {
 		job_clerk_add = 100
 		planet_jobs_unity_produces_mult = 0.05
 		pop_happiness = 0.05
-		planet_amenities_add = 6
+		planet_amenities_add = 600
 	}
 }
 
@@ -1750,7 +1749,7 @@ building_lystheni_fortress_one = {
 
 building_lystheni_league_monastery = {
 	base_buildtime = @btr_govt_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_sacrificial_temple_2
 	exempt_from_ai_planet_specialization = no
 	category = government
@@ -1801,7 +1800,7 @@ building_lystheni_league_monastery = {
 
 building_lystheni_ai_training_center = {
 	base_buildtime = @btr_mili_b2_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_military_contractors
 	exempt_from_ai_planet_specialization = no
 	category = army
@@ -1850,7 +1849,7 @@ building_lystheni_ai_training_center = {
 
 building_lystheni_temple_mother = {
 	base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_sacrificial_temple_3
 	exempt_from_ai_planet_specialization = no
 	category = research
@@ -1896,7 +1895,7 @@ building_lystheni_temple_mother = {
 ###Gothones Remnant
 building_gothones_beastmasters_quarters = {
 	base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = holding_park_ranger_lodge
 	exempt_from_ai_planet_specialization = no
 
@@ -1980,14 +1979,14 @@ building_gothones_longhouse = {
 
 	planet_modifier = {
 		planet_housing_add = 300
-		planet_amenities_add = 5
+		planet_amenities_add = 500
 	}
 }
 
 ###Parnack Regime
 building_yahg_blood_arena = {
 	base_buildtime = @btr_mili_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_xeno_zoo
 	potential = {
 		exists = owner
@@ -2013,7 +2012,7 @@ building_yahg_blood_arena = {
 		job_duelist_add = 300
 		job_soldier_add = 200
 		job_enforcer_add = 100
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 		planet_traders_trade_produces_mult = 0.05
 	}
 
@@ -2040,7 +2039,7 @@ building_yahg_blood_arena = {
 ###Raloi Republic
 building_raloi_foreign_instructor_center = {
 	base_buildtime = @btr_govt_b4_time
-	base_cap_amount = 1
+	planet_limit = 1
 	icon = building_embassy
 	exempt_from_ai_planet_specialization = no
 	potential = {
@@ -2475,7 +2474,7 @@ building_citadel_tower = {
 
 	planet_modifier = {
 		planet_housing_add = 500
-		planet_amenities_add = 5
+		planet_amenities_add = 500
 		planet_max_buildings_add = 5
 		planet_max_branch_office_buildings_add = 1
 		job_politician_add = 200

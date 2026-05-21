@@ -1,6 +1,6 @@
 building_remnants_rak_1 = {
     base_buildtime = 700
-    base_cap_amount = 3
+    planet_limit = 3
     category = manufacturing
     icon = building_waste_reprocessing_center
 
@@ -79,9 +79,9 @@ building_anarchy_omg_gang_barracks = {
         hidden_trigger = {
             OR = {
                 owner = { is_ai = no }
-                AND = {
-                    NOT = { has_forbidden_jobs = enforcer }
-                    NOT = { has_available_jobs = enforcer }
+                NOR = {
+                    has_forbidden_jobs = enforcer
+                    has_available_jobs = enforcer
                 }
             }
         }
@@ -142,7 +142,7 @@ building_anarchy_omg_gang_barracks = {
 
 building_geth_con_creator_remnants = {
     base_buildtime = @btr_govt_b1_time
-    base_cap_amount = 1
+    planet_limit = 1
     category = government
 
     building_sets = {
@@ -165,9 +165,9 @@ building_geth_con_creator_remnants = {
         hidden_trigger = {
             OR = {
                 owner = { is_ai = no }
-                AND = {
-                    NOT = { has_forbidden_jobs = enforcer }
-                    NOT = { has_available_jobs = enforcer }
+                NOR = {
+                    has_forbidden_jobs = enforcer
+                    has_available_jobs = enforcer
                 }
             }
         }
@@ -234,7 +234,7 @@ building_geth_con_creator_remnants = {
 
 building_entertainment_leisure_nexus = {
     base_buildtime = @b2_time
-    base_cap_amount = 1
+    planet_limit = 1
     category = amenity
 
     building_sets = {
@@ -257,9 +257,9 @@ building_entertainment_leisure_nexus = {
             owner = {
                 NOT = { is_ai = yes }
             }
-            AND = {
-                NOT = { has_available_jobs = entertainer }
-                NOT = { has_forbidden_jobs = entertainer }
+            NOR = {
+                has_available_jobs = entertainer
+                has_forbidden_jobs = entertainer
             }
         }
         NOR = {
@@ -792,7 +792,7 @@ building_planned_economic_coordination = {
  #   triggered_planet_modifier = {
   #      potential = { planet = { is_planet_class = pc_relic } }
    #     planet_resettlement_unemployed_destination_mult = 0.25
-    #    planet_amenities_add = 25
+    #    planet_amenities_add = 2500
      #   job_engineer_add = 100
       #  job_physcist_add = 100
        # job_biologist_add = 100

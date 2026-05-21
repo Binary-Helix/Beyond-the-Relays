@@ -1,0 +1,70 @@
+tr_btr_zeal_adoption = {
+    possible = {
+        has_origin = disciples_naz_origin
+    }
+    unlocks_agenda = agenda_zeal
+    modifier = {
+        country_war_exhaustion_mult = -0.25
+        shipclass_starbase_hull_mult = 0.6
+        shipclass_starbase_damage_mult = 0.3
+    }
+}
+
+tr_btr_zeal_finish = {
+    modifier = {
+        army_damage_mult = 0.1
+        starbase_upgrade_speed_mult = 0.2
+        country_naval_cap_mult = 0.1
+        ascension_perks_add = 1
+    }
+}
+
+tr_btr_zeal_power_tension = {
+    modifier = {
+        planet_jobs_physics_research_produces_mult = 0.15
+        planet_jobs_engineering_research_produces_mult = 0.15
+        worker_and_simple_drone_cat_bonus_workforce_mult = 0.1
+       # country_physics_research_mult = 0.15
+       # country_engineering_research_mult = 0.15
+       # planet_jobs_worker_produce_mult = 0.1
+    }
+}
+
+tr_btr_zeal_tools = {
+    possible = {
+        has_tradition = tr_btr_zeal_power_tension
+    }
+    modifier = {
+        starbase_shipyard_build_speed_mult = 0.3
+        starbase_shipyard_build_cost_mult = -0.25
+    }
+}
+
+tr_btr_zeal_practice = {
+    possible = {
+        has_tradition = tr_btr_zeal_tools
+    }
+    modifier = {
+        ship_fire_rate_mult = 0.15
+        ship_weapon_range_mult = 0.1
+        ship_orbital_bombardment_mult = 0.5
+    }
+}
+
+tr_btr_zeal_thy = {
+    possible = { has_tradition = tr_btr_zeal_tools }
+    modifier = {
+        pop_purge_speed = 0.5
+      #  pop_category_purge_unity_produces_add = 1.5
+        #TODO make purging pops produce unity, likely in the jobs doc
+    }
+}
+
+tr_btr_zeal_higher = {
+    possible = { has_tradition = tr_btr_zeal_tools }
+    modifier = {
+        planet_crime_add = -20
+        planet_stability_add = 5
+        leaders_upkeep_mult = -1
+    }
+}

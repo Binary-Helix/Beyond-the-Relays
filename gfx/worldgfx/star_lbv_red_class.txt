@@ -11,12 +11,16 @@ gfx_settings =
 	restore_bloom_effect = "RestoreBloom"	
     color_lut = "gfx/worldgfx/colorcorrection_b_class.tga"
 	environment_map = "gfx/worldgfx/cubemap_filtered_ldr.dds"
-	
-	galaxy_background = { texture = "gfx/map/sky_core.dds" 	trigger = { distance_to_core_percent < 0.50 } ycocg = yes }
-	galaxy_background = { texture = "gfx/map/sky_mid.dds" 		trigger = { distance_to_core_percent < 0.75 } ycocg = yes }
-	galaxy_background = { texture = "gfx/map/sky_rim.dds" 	trigger = { always = yes } ycocg = yes }
-	
-	galaxy_background_hsv_shift = { -0.3 -0.1 -0.4 }
+
+	galaxy_background = {
+		texture = "gfx/worldgfx/stars.dds"
+	}
+	# galaxy_background = { texture = "gfx/map/sky_core.dds" 	trigger = { distance_to_core_percent < 0.50 } ycocg = yes }
+	# galaxy_background = { texture = "gfx/map/sky_mid.dds" 		trigger = { distance_to_core_percent < 0.75 } ycocg = yes }
+	# galaxy_background = { texture = "gfx/map/sky_rim.dds" 	trigger = { always = yes } ycocg = yes }
+
+	# #galaxy_background_hsv_shift = { 0.0 0.0 0.0 }
+	#galaxy_background_hsv_shift = { 0.05 -0.2 -0.3 }
 	
 	galaxy_background_lut = "gfx/worldgfx/colorcorrection_neutral.tga"
 	#center_entity = "spacedust_entity"		
@@ -95,5 +99,5 @@ gfx_settings =
 	tex_lava_diffuse="gfx/worldgfx/lava_d.dds" #Multiplies with bright/lava areas
 	tex_stone_diffuse="gfx/worldgfx/stone_d.dds" #Multiplies with stone areas 
 
-	system_light="b_class_star"
+	system_light="btr_lbv_red_class_star"
 }

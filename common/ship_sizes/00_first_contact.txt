@@ -14,12 +14,13 @@ security_system_drone = {
 	}
 	max_hitpoints = 240
 	size_multiplier = 1
+	map_counter_icon = ship_counter_4
+	icon = ship_size_military_1
 	hull_scale = 0.75
 	fleet_slot_size = 1
 	section_slots = { "mid" = { locator = "root" } }
 	num_target_locators = 0
 	is_space_station = no
-	icon = ship_size_military_1
 	class = shipclass_military
 
 	is_designable = no
@@ -58,7 +59,9 @@ payback_warship = {
 
 	combat_disengage_chance = 1.25
 
-	size_multiplier = 16
+	size_multiplier = 80
+	map_counter_icon = ship_counter_64
+	icon = ship_size_military_16
 	fleet_slot_size = 8
 
 	hull_scale = 1.0
@@ -68,7 +71,7 @@ payback_warship = {
 	is_designable = no
 	enable_default_design = no
 	is_space_station = no
-	icon = ship_size_military_16
+
 	ship_class_icon_frame = 35
 
 	default_behavior = carrier
@@ -153,10 +156,13 @@ explorer_vessel = {
 	}
 	hull_scale = 1.50
 	size_multiplier = 1
+	map_counter_icon = ship_counter_4
+	icon = ship_size_science
 	fleet_slot_size = 1
 	section_slots = { "mid" = { locator = "root" } }
 	is_space_station = no
-	icon = ship_size_science
+
+	ship_class_icon_frame = 56
 	base_buildtime = @science_build_time
 	use_shipnames_from = science
 
@@ -181,8 +187,34 @@ explorer_vessel = {
 	resources = {
 		category = ships
 		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @exploration_vessel_cost
 			light_alloys = 35
 			heavy_alloys = 15
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @exploration_vessel_cost
+			light_alloys = 35
+			heavy_alloys = 15
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @exploration_vessel_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
 			antimatter_fuel = @science_upkeep_antimatter_fuel
@@ -206,10 +238,11 @@ engineer_vessel = {
 	}
 	hull_scale = 1.50
 	size_multiplier = 1
+	map_counter_icon = ship_counter_4
+	icon = ship_size_constructor
 	fleet_slot_size = 1
 	section_slots = { "mid" = { locator = "root" } }
 	is_space_station = no
-	icon = ship_size_constructor
 	base_buildtime = @construction_build_time
 	use_shipnames_from = constructor
 
@@ -233,8 +266,34 @@ engineer_vessel = {
 	resources = {
 		category = ships
 		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @engineering_vessel_cost
 			light_alloys = 35
 			heavy_alloys = 15
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @engineering_vessel_cost
+			light_alloys = 35
+			heavy_alloys = 15
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @engineering_vessel_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
 			antimatter_fuel = @construction_upkeep_antimatter_fuel
@@ -256,12 +315,13 @@ colony_vessel = {
 	modifier = {
 		ship_evasion_add = @colony_evasion
 	}
-	size_multiplier = 1
+	size_multiplier = 20
+	map_counter_icon = ship_counter_16
+	icon = ship_size_colonizer
 	fleet_slot_size = 1
 	section_slots = { "mid" = { locator = "root" } }
 	num_target_locators = 0
 	is_space_station = no
-	icon = ship_size_colonizer
 	base_buildtime = @colony_build_time
 
 	combat_disengage_chance = 0.5
@@ -284,62 +344,232 @@ colony_vessel = {
 
 	resources = {
 		category = colonies
+		# Alloys
+		# 100 normally
+		cost = {
+			trigger = {
+				from = {
+					is_virtual_empire = no
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @colony_cost_low
+			light_alloys = 70
+			heavy_alloys = 30
+		}
+		# 50 if you're a virtual empire
+		cost = {
+			trigger = {
+				from = {
+					is_virtual_empire = yes
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @colony_cost_very_low
+			light_alloys = 70
+			heavy_alloys = 30
+		}
+		# Halved if you used biological ships
+		cost = {
+			trigger = {
+				from = {
+					is_virtual_empire = no
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @colony_cost_low
+			light_alloys = 70
+			heavy_alloys = 30
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_virtual_empire = yes
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @colony_cost_very_low
+			light_alloys = 70
+			heavy_alloys = 30
+			mult = 0.5
+		}
+
+		# Consumer goods for non-gestalt empires
+		# 200 normally
+		cost = {
+			trigger = {
+				from = {
+					is_gestalt = no
+					is_virtual_empire = no
+				}
+			}
+			consumer_goods = @colony_cost_base
+		}
+		# 100 if you're a virtual empire
+		cost = {
+			trigger = {
+				from = {
+					is_gestalt = no
+					is_virtual_empire = yes
+				}
+			}
+			consumer_goods = @colony_cost_low
+		}
+		# Food for organics
+		# 200 normally
 		cost = {
 			trigger = {
 				from = {
 					is_lithoid_empire = no
+					is_infernal_empire = no
 					is_robot_empire = no
 					is_hive_empire = no
+					NOT = {
+						has_origin = origin_synthetic_fertility
+					}
 				}
 			}
+			food = @colony_cost_base
+		}
+		# 500 if you're a hive mind
+		cost = {
+			trigger = {
+				from = {
+					is_lithoid_empire = no
+					is_infernal_empire = no
+					is_robot_empire = no
+					is_hive_empire = yes
+				}
+			}
+			food = @colony_cost_high
+		}
+		# Additional food to replace alloys if you use biological ships
+		cost = {
+			trigger = {
+				from = {
+					is_virtual_empire = no
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @colony_cost_low
 			light_alloys = 70
 			heavy_alloys = 30
-			food = 200
-			consumer_goods = 200
+			mult = @halved_alloy_to_food_cost_ratio
 		}
+		cost = {
+			trigger = {
+				from = {
+					is_virtual_empire = yes
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @colony_cost_very_low
+			light_alloys = 70
+			heavy_alloys = 30
+			mult = @halved_alloy_to_food_cost_ratio
+		}
+
+		# Minerals for lithoids
+		# 200 normally
 		cost = {
 			trigger = {
 				from = {
 					is_lithoid_empire = yes
 					is_robot_empire = no
 					is_hive_empire = no
+					NOT = {
+						has_origin = origin_synthetic_fertility
+					}
 				}
 			}
-			light_alloys = 70
-			heavy_alloys = 30
-			minerals = 200
-			consumer_goods = 200
+			minerals = @colony_cost_base
 		}
+		# 500 if you're a hive mind
+		cost = {
+			trigger = {
+				from = {
+					is_lithoid_empire = yes
+					is_robot_empire = no
+					is_hive_empire = yes
+				}
+			}
+			minerals = @colony_cost_high
+		}
+		# Energy for machines
+		# 200 normally
 		cost = {
 			trigger = {
 				from = {
 					is_robot_empire = yes
+					is_gestalt = no
+					is_virtual_empire = no
 				}
 			}
-			light_alloys = 140
-			heavy_alloys = 60
+			energy = @colony_cost_base
 		}
+		# 200 for synth fert
 		cost = {
 			trigger = {
 				from = {
-					is_hive_empire = yes
-					is_lithoid_empire = no
+					has_origin = origin_synthetic_fertility
 				}
 			}
-			light_alloys = 70
-			heavy_alloys = 30
-			food = 500
+			energy = @colony_cost_base
 		}
+		# 400 if you're a virtual empire
 		cost = {
 			trigger = {
 				from = {
-					is_hive_empire = yes
-					is_lithoid_empire = yes
+					is_robot_empire = yes
+					is_gestalt = no
+					is_virtual_empire = yes
 				}
 			}
+			energy = @colony_cost_mid
+		}
+		# 500 if you're a machine intelligence
+		cost = {
+			trigger = {
+				from = {
+					is_robot_empire = yes
+					is_gestalt = yes
+					is_virtual_empire = no
+				}
+			}
+			energy = @colony_cost_high
+		}
+		# 700 if you're a virtual empire
+		cost = {
+			trigger = {
+				from = {
+					is_robot_empire = yes
+					is_gestalt = yes
+					is_virtual_empire = yes
+				}
+			}
+			energy = @colony_cost_very_high
+		}
+		# Alloys for Infernals
+		cost = {
+			trigger = {
+				from = {
+					is_infernal_empire = yes
+				}
+			}
+			#alloys = @colony_cost_low
 			light_alloys = 70
 			heavy_alloys = 30
-			minerals = 500
+		}
+		# 200 Energy for Hives, replacing some food
+		cost = {
+			trigger = {
+				from = {
+					is_infernal_empire = yes
+					is_hive_empire = yes
+				}
+			}
+			energy = @colony_cost_base
 		}
 
 		upkeep = {

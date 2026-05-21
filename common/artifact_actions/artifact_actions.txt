@@ -45,7 +45,7 @@ artifact_arcane_deciphering = {
 			}
 			add_modifier = {
 				modifier = "arcane_deciphering_cooldown"
-				days = 720
+				years = 2
 			}
 			owner = {
 				country_event = { id = ancrel.10000 }
@@ -83,7 +83,7 @@ artifact_lgate_clue = {
 
 			add_modifier = {
 				modifier = "artifact_lgate_insight_cooldown"
-				days = 3600
+				years = 10
 			}
 		}
 	}
@@ -398,7 +398,7 @@ artifact_find_military_applications = {
 		hidden_effect = {
 			add_modifier = {
 				modifier = "artifact_find_applications_cooldown"
-				days = 900
+				months = 30
 			}
 			owner = {
 				country_event = { id = ancrel.10010 }
@@ -453,7 +453,7 @@ artifact_find_peaceful_applications = {
 		hidden_effect = {
 			add_modifier = {
 				modifier = "artifact_find_applications_cooldown"
-				days = 900
+				months = 30
 			}
 			owner = {
 				country_event = { id = ancrel.10020 }
@@ -495,7 +495,7 @@ artifact_sell_collector = {
 		hidden_effect = {
 			add_modifier = {
 				modifier = "artifact_sell_cooldown"
-				days = 180
+				months = 6
 			}
 		}
 	}
@@ -940,7 +940,7 @@ artifact_precursor_clue = {
 			}
 			add_modifier = {
 				modifier = "artifact_precursor_insight_cooldown"
-				days = 1800
+				years = 5
 			}
 		}
 	}

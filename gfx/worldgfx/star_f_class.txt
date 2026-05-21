@@ -18,13 +18,13 @@ gfx_settings =
 
 	galaxy_background = {
 		texture = "gfx/worldgfx/stars.dds"
-	}				
+	}
 	# galaxy_background = { texture = "gfx/map/sky_core.dds" 	trigger = { distance_to_core_percent < 0.50 } ycocg = yes }
 	# galaxy_background = { texture = "gfx/map/sky_mid.dds" 		trigger = { distance_to_core_percent < 0.75 } ycocg = yes }
 	# galaxy_background = { texture = "gfx/map/sky_rim.dds" 	trigger = { always = yes } ycocg = yes }
-	
-	galaxy_background_hsv_shift = { 0.08 -0.4 -0.2 }
-	#galaxy_background_hsv_shift = { 0.00 0.0 0.0 }
+
+	# #galaxy_background_hsv_shift = { 0.0 0.0 0.0 }
+	#galaxy_background_hsv_shift = { 0.05 -0.2 -0.3 }
 	
 	galaxy_background_lut = "gfx/worldgfx/colorcorrection_f_class.tga"
 	#galaxy_background_lut = "gfx/worldgfx/colorcorrection_neutral.tga"
@@ -93,9 +93,9 @@ gfx_settings =
 	lens_flare_distortion_factor_halo = 1.0	# Halo Chromatic abbaritions	
 	
 	
-	hdr_min_adjustment = 0.08 #är hur mkt den anpassar sig till mörka områden, mindre värde -> mer mörkerseende
-	hdr_max_adjustment = 0.2 #jätte högt värde så ser du bra trots att du står inuti solen och tittar. 
-	#om du sätter max_adjustment till ett relaitiv lågt värde och sedan maxxar solens styrka så bör hela bilden typ overbrigtas
+	hdr_min_adjustment = 0.08 #ï¿½r hur mkt den anpassar sig till mï¿½rka omrï¿½den, mindre vï¿½rde -> mer mï¿½rkerseende
+	hdr_max_adjustment = 0.2 #jï¿½tte hï¿½gt vï¿½rde sï¿½ ser du bra trots att du stï¿½r inuti solen och tittar. 
+	#om du sï¿½tter max_adjustment till ett relaitiv lï¿½gt vï¿½rde och sedan maxxar solens styrka sï¿½ bï¿½r hela bilden typ overbrigtas
 	hdr_adjustment_speed = 4
 	tonemap_middlegrey = 0.14
 	tonemap_whiteluminance = 2.0
@@ -108,7 +108,7 @@ gfx_settings =
 	# lava_cold_stone_intensity = 2.0 
 	# #lava_bright_color = hsv { 0.0 0.0 0.9 }  
 	
-	# #MEST röda partier
+	# #MEST rï¿½da partier
 	# #emissive_bloom_strength = 0.6
 	# #lava_bright_color = hsv { 0.05 1.0 1.0 } # 
 	# #lava_bright_intensity = 5.0
@@ -134,9 +134,9 @@ gfx_settings =
 	lava_cold_stone_intensity = 2.0 
 	
 
-	tex_lava_noise="gfx/worldgfx/lava_noise.dds" #Noise texturen som genererar lava mönstret
+	tex_lava_noise="gfx/worldgfx/lava_noise.dds" #Noise texturen som genererar lava mï¿½nstret
 	tex_lava_diffuse="gfx/worldgfx/lava_d.dds" #Texturen som mullas med bright/lava area
 	tex_stone_diffuse="gfx/worldgfx/stone_d.dds" #Texturen som mullas med stone area
 
-	system_light="f_class_star"
+	system_light="btr_f_class_star"
 }
