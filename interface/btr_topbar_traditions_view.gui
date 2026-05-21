@@ -105,9 +105,9 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 
-		iconType = { #TODO
+		iconType = {
 			name = "arrow_2"
-			spriteType = "GFX_arrow_double"
+			spriteType = "GFX_arrow_left_down_long"
 			position = { x = 112 y = 170 }
 			alwaysTransparent = yes
 		}
@@ -444,7 +444,7 @@ containerWindowType = {
 
 	iconType = {
 		name = "arrow_1"
-		spriteType = "GFX_arrow_est_split_wide"
+		spriteType = "GFX_arrow_double"
 		position = { x = @arrow_split_wide_x y = @arrow_down_y1 }
 	}
 
