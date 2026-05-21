@@ -18,10 +18,11 @@ if = {
                 has_origin = geth_con_origin
             }
         }
+        has_planet_flag = rannoch_planet
     }
     remove_all_districts = yes
     remove_all_buildings = yes
-    # confirmed that add_building command fails for rannoch, tested thessia and add_building worked without issue
+    # confirmed that add_building command fails specifically for rannoch, tested thessia and add_building worked without issue
     add_building = building_machine_major_capital
     add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
     add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_nexus }
