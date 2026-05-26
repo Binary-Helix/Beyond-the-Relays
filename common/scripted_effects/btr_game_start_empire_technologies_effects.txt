@@ -66,6 +66,7 @@ set_canon_starting_technologies = {
         give_empire_unique_tech = yes
         give_btr_T1_starting_tech = yes
         give_starting_ship_tech = yes
+        give_btr_volus_starting_tech = yes
     }
     if = {
         limit = {
@@ -143,6 +144,7 @@ set_canon_starting_technologies = {
         }
         give_btr_T0_starting_tech = yes
         give_empire_unique_tech = yes
+        give_btr_drell_starting_tech = yes
     }
     if = {
         limit = {
@@ -366,7 +368,6 @@ give_btr_T1_starting_tech = {
         give_technology = { tech = tech_quicksand_basin message = no }
         give_technology = { tech = tech_toxic_kelp message = no }
         give_technology = { tech = tech_planetary_unification message = no }
-        give_technology = { tech = tech_food_processing_1 message = no }
         give_technology = { tech = tech_adaptive_bureaucracy message = no }
         give_technology = { tech = tech_mining_1 message = no }
         give_technology = { tech = tech_mineral_purification_1 message = no }
@@ -567,6 +568,23 @@ give_btr_vorcha_starting_tech = {
         give_technology = { tech = tech_planetary_government message = no }
         give_technology = { tech = tech_basic_science_lab_1 message = no }
         give_technology = { tech = tech_basic_industry message = no }
+    }
+}
+
+give_btr_volus_starting_tech = { # resolves issue 91
+    owner = {
+        give_technology = { tech = tech_planetary_station_1 message = no } # barren stations
+        give_technology = { tech = tech_planetary_station_2 message = no } # molten stations
+        give_technology = { tech = tech_planetary_station_3 message = no } # toxic stations
+        give_technology = { tech = tech_planetary_station_4 message = no } # gas giant stations
+    }
+}
+
+give_btr_drell_starting_tech = { # resolves issue 118
+    owner = {
+        give_technology = { tech = tech_power_hub_1 message = no } # generator specialization
+        give_technology = { tech = tech_mineral_purification_1 message = no} # mining specialization
+        give_technology = { tech = tech_food_processing_1 message = no} # agriculture specialization
     }
 }
 
