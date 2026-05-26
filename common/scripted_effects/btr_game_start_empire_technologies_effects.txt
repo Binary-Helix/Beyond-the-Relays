@@ -563,8 +563,6 @@ give_btr_T2_starting_tech = {
     }
 }
 
-# TEST - does removing the owner = {} logic break our tech attribution functions
-
 give_btr_vorcha_starting_tech = {
     owner = {
         give_technology = { tech = tech_planetary_government message = no }
