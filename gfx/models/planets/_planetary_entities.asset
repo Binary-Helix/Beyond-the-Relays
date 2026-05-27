@@ -1,16 +1,11 @@
 #####    Planet attachments    ######
 @astroid_scale = 30
+@flowmap_speed = 0.12
+@flowmap_intensity =  0.21
 
 entity = {
 	name = "gas_giant_rings_01_entity"
 	pdxmesh = "gas_giant_rings_01_mesh"
-	
-	meshsettings = {
-	name = "patternShape"
-	texture_diffuse = "ring_notiling_diffuse.dds"
-	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
-	}
 }
 
 entity = {
@@ -75,7 +70,7 @@ entity = {
 		event = { time = 2.0 node = "bombardment_location_4" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 		event = { time = 5.0 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 	}
-		
+
 	state = { name = "bombard_pox" state_time = 4 looping = no next_state = "bombard_pox" chance = 1
 		event = { time = 0 node = "bombardment_location_7" particle = "planetary_bombardment_pox_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 		event = { time = 2.0 node = "bombardment_location_4" particle = "planetary_bombardment_pox_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
@@ -89,7 +84,7 @@ entity = {
 		event = { time = 1.8 node = "bombardment_location_11" particle = "planetary_bombardment_pox_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 		event = { time = 2.4 node = "bombardment_location_16" particle = "planetary_bombardment_pox_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 	}
-	
+
 	state = { name = "bombard_pox" state_time = 5.0 looping = no next_state = "bombard_pox" chance = 1
 		event = { time = 0 node = "bombardment_location_4" particle = "planetary_bombardment_pox_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 		event = { time = 0.5 node = "bombardment_location_6" particle = "planetary_bombardment_pox_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
@@ -97,13 +92,13 @@ entity = {
 		event = { time = 1.8 node = "bombardment_location_12" particle = "planetary_bombardment_pox_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 		event = { time = 2.4 node = "bombardment_location_18" particle = "planetary_bombardment_pox_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 	}
-	
+
 	state = { name = "bombard_seed_bombing" state_time = 4 looping = no next_state = "bombard_seed_bombing" chance = 1
 		event = { time = 0 node = "bombardment_location_7" particle = "planetary_bombardment_seed_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 		event = { time = 2.0 node = "bombardment_location_4" particle = "planetary_bombardment_seed_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 		event = { time = 5.0 node = "bombardment_location_8" particle = "planetary_bombardment_seed_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 	}
-	
+
 	state = { name = "bombard_seed_bombing" state_time = 6.0 looping = no next_state = "bombard_seed_bombing" chance = 1
 		event = { time = 0 node = "bombardment_location_3" particle = "planetary_bombardment_seed_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 		event = { time = 0.6 node = "bombardment_location_5" particle = "planetary_bombardment_seed_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
@@ -111,13 +106,117 @@ entity = {
 		event = { time = 1.8 node = "bombardment_location_11" particle = "planetary_bombardment_seed_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 		event = { time = 2.4 node = "bombardment_location_16" particle = "planetary_bombardment_seed_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 	}
-	
+
 	state = { name = "bombard_seed_bombing" state_time = 6.0 looping = no next_state = "bombard_seed_bombing" chance = 1
 		event = { time = 0 node = "bombardment_location_4" particle = "planetary_bombardment_seed_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 		event = { time = 0.5 node = "bombardment_location_6" particle = "planetary_bombardment_seed_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 		event = { time = 1.2 node = "bombardment_location_9" particle = "planetary_bombardment_seed_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 		event = { time = 1.8 node = "bombardment_location_12" particle = "planetary_bombardment_seed_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 		event = { time = 2.4 node = "bombardment_location_18" particle = "planetary_bombardment_seed_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+
+	state = { name = "bombard_voidworm_invasion" state_time = 4 looping = no next_state = "bombard_voidworm_invasion" chance = 1
+		event = { time = 0 node = "bombardment_location_7" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 2.0 node = "bombardment_location_4" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 5.0 node = "bombardment_location_8" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+	}
+
+	state = { name = "bombard_voidworm_invasion" state_time = 5.0 looping = no next_state = "bombard_voidworm_invasion" chance = 1
+		event = { time = 0 node = "bombardment_location_3" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 0.6 node = "bombardment_location_5" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 1.8 node = "bombardment_location_11" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 2.4 node = "bombardment_location_16" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+	}
+
+	state = { name = "bombard_voidworm_invasion" state_time = 5.0 looping = no next_state = "bombard_voidworm_invasion" chance = 1
+		event = { time = 0 node = "bombardment_location_4" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 0.5 node = "bombardment_location_6" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 1.2 node = "bombardment_location_9" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 1.8 node = "bombardment_location_12" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 2.4 node = "bombardment_location_18" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+	}
+
+	state = { name = "bombard_voidworm_invasion_crisis" state_time = 4 looping = no next_state = "bombard_voidworm_invasion_crisis" chance = 1
+		event = { time = 0 node = "bombardment_location_7" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 2.0 node = "bombardment_location_4" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 5.0 node = "bombardment_location_8" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+	}
+
+	state = { name = "bombard_voidworm_invasion_crisis" state_time = 5.0 looping = no next_state = "bombard_voidworm_invasion_crisis" chance = 1
+		event = { time = 0 node = "bombardment_location_3" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 0.6 node = "bombardment_location_5" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 1.8 node = "bombardment_location_11" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 2.4 node = "bombardment_location_16" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+	}
+
+	state = { name = "bombard_voidworm_invasion_crisis" state_time = 5.0 looping = no next_state = "bombard_voidworm_invasion_crisis" chance = 1
+		event = { time = 0 node = "bombardment_location_4" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 0.5 node = "bombardment_location_6" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 1.2 node = "bombardment_location_9" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 1.8 node = "bombardment_location_12" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 2.4 node = "bombardment_location_18" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+	}
+
+	state = { name = "bombard_frenzied_voidworm_invasion" state_time = 4 looping = no next_state = "bombard_frenzied_voidworm_invasion" chance = 1
+		event = { time = 0 node = "bombardment_location_7" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 2.0 node = "bombardment_location_4" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 5.0 node = "bombardment_location_8" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+	}
+
+	state = { name = "bombard_frenzied_voidworm_invasion" state_time = 5.0 looping = no next_state = "bombard_frenzied_voidworm_invasion" chance = 1
+		event = { time = 0 node = "bombardment_location_3" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 0.6 node = "bombardment_location_5" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 1.2 node = "bombardment_location_8" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 1.8 node = "bombardment_location_11" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 2.4 node = "bombardment_location_16" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+	}
+
+	state = { name = "bombard_frenzied_voidworm_invasion" state_time = 5.0 looping = no next_state = "bombard_frenzied_voidworm_invasion" chance = 1
+		event = { time = 0 node = "bombardment_location_4" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 0.5 node = "bombardment_location_6" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 1.2 node = "bombardment_location_9" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 1.8 node = "bombardment_location_12" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+		event = { time = 2.4 node = "bombardment_location_18" particle = "planetary_bombardment_voidworm_effect" keep_particle = yes sound = { soundeffect = "ga_voidworms_bombardment" } }
+	}
+
+	state = { name = "bombard_firestorm" state_time = 9.4 looping = no next_state = "bombard_firestorm" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "planetary_bombardment_firestorm_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "planetary_bombardment_firestorm_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "planetary_bombardment_firestorm_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "planetary_bombardment_firestorm_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "planetary_bombardment_firestorm_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_firestorm" state_time = 9.5 looping = no next_state = "bombard_firestorm" chance = 1
+		event = { time = 0 node = "bombardment_location_2" particle = "planetary_bombardment_firestorm_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "planetary_bombardment_firestorm_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "planetary_bombardment_firestorm_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_16" particle = "planetary_bombardment_firestorm_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.5 node = "bombardment_location_11" particle = "planetary_bombardment_firestorm_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+
+	state = { name = "bombard_seismic_bombing" state_time = 2.5 looping = no next_state = "bombard_seismic_bombing" chance = 1
+		event = { time = 0 node = "bombardment_location_1" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.33 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.66 node = "bombardment_location_15" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.9 node = "bombardment_location_10" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.0 node = "bombardment_location_3" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_12" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.6 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.0 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.4 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+	}
+	state = { name = "bombard_seismic_bombing" state_time = 2.5 looping = no next_state = "bombard_seismic_bombing" chance = 1
+		event = { time = 0 node = "bombardment_location_2" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.2 node = "bombardment_location_6" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.4 node = "bombardment_location_8" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 0.8 node = "bombardment_location_19" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.1 node = "bombardment_location_14" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.5 node = "bombardment_location_9" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 1.8 node = "bombardment_location_16" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.2 node = "bombardment_location_18" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
+		event = { time = 2.5 node = "bombardment_location_11" particle = "planetary_bombardment_effect" keep_particle = yes sound = { soundeffect = "bombardment_explosion" } }
 	}
 
 	scale = 1.0
@@ -159,7 +258,7 @@ entity = {
 	name = "clouds_shadow_geosphereShape"
 	texture_diffuse = "toxic_cloud_shadow_diffuse.dds"
 	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
+	texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
@@ -232,7 +331,7 @@ entity = {
 	name = "clouds_shadow_geosphereShape"
 	texture_diffuse = "clouds_medium_shadow_diffuse.dds"
 	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
+	texture_specular = "nospec.dds"
 	}
 	##pole texture override
 	meshsettings = {
@@ -254,78 +353,41 @@ entity = {
 		}
 }
 
-# entity = {
-# 	name = "gaia_planet_01_entity"
-# 	pdxmesh = "planet_clouded_mesh"
+entity = {
+	name = "gaia_planet_01_entity"
+	pdxmesh = "planet_clouded_mesh"
 
-# 	#planet surface texture override
-# 	meshsettings = {
-# 	name = "planet_geosphereShape"
-# 	texture_diffuse = "gaia_01_diffuse.dds"
-# 	texture_normal = "tropical_03_normal.dds"
-# 	texture_specular = "tropical_03_spec.dds"
-# 	}
+	#planet surface texture override
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "gaia_01_diffuse.dds"
+		texture_normal = "tropical_03_normal.dds"
+		texture_specular = "tropical_03_spec.dds"
+	}
 
-# 	##cloud texture override
-# 	meshsettings = {
-# 	name = "clouds_geosphereShape"
-# 	texture_diffuse = "clouds_medium_diffuse.dds"
-# 	texture_normal = "clouds_medium_normal.dds"
-# 	texture_specular = "clouds_medium_specular.dds"
-# 	}
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_medium_diffuse.dds"
+		texture_normal = "clouds_medium_normal.dds"
+		texture_specular = "clouds_medium_specular.dds"
+	}
 
-# 	##cloud shadow texture override
-# 	meshsettings = {
-# 	name = "clouds_shadow_geosphereShape"
-# 	texture_diffuse = "clouds_medium_shadow_diffuse.dds"
-# 	texture_normal = "nonormal.dds"
-# 	texture_specular = "nospecular.dds"
-# 	}
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
 
-# 	default_state = "idle"
-# 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
-# 		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
-# 		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
-# 	}
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
 
-# }
-
-# entity = {
-# 	name = "arctic_planet_01_entity"
-# 	pdxmesh = "planet_clouded_mesh"
-# 	default_state = "idle"
-
-# 	meshsettings = {
-# 	name = "planet_geosphereShape"
-# 	texture_diffuse = "arctic_01_diffuse.dds"
-# 	texture_normal = "arctic_01_normals.dds"
-# 	texture_specular = "arctic_01_spec.dds"
-# 	}
-
-# 		state = { name = "idle" animation = "idle" time_offset = { 0 100 }
-# 		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
-# 		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
-# 	}
-# }
-
-# entity = {
-# 	name = "arctic_planet_02_entity"
-# 	pdxmesh = "planet_clouded_mesh"
-
-# 	meshsettings = {
-# 	name = "planet_geosphereShape"
-# 	texture_diffuse = "arctic_02_diffuse.dds"
-# 	texture_normal = "arctic_02_normals.dds"
-# 	texture_specular = "arctic_02_spec.dds"
-# 	}
-
-# 	default_state = "idle"
-# 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
-# 		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
-# 		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
-# 	}
-# }
-
+}
 # entity = {
 # 	name = "arctic_planet_03_entity"
 # 	pdxmesh = "planet_clouded_mesh"
@@ -578,7 +640,271 @@ entity = {
 # 		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
 # 	}
 # }
+entity = {
+	name = "alpine_planet_mars_entity"
+	pdxmesh = "planet_clouded_mesh"
 
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = 	"alpine_04_diffuse.dds"
+		texture_normal = 	"alpine_04_normal.dds"
+		texture_specular = 	"alpine_04_specular.dds"
+	}
+
+
+	default_state = "idle"
+	playback_rate = -1.03
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+entity = {
+	name = "arctic_planet_mars_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = 	"arctic_05_diffuse.dds"
+		texture_normal = 	"arctic_05_normal.dds"
+		texture_specular = 	"arctic_05_specular.dds"
+	}
+
+	default_state = "idle"
+	playback_rate = -1.03
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+entity = {
+	name = "arid_planet_mars_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = 	"arid_05_diffuse.dds"
+		texture_normal = 	"arid_05_normal.dds"
+		texture_specular = 	"arid_05_specular.dds"
+	}
+
+
+	default_state = "idle"
+	playback_rate = -1.03
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+entity = {
+	name = "desert_planet_mars_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = 	"desert_05_diffuse.dds"
+		texture_normal = 	"desert_05_normal.dds"
+		texture_specular = 	"desert_05_specular.dds"
+	}
+
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_thin_diffuse.dds"
+		texture_normal = "clouds_thin_normal.dds"
+		texture_specular = "clouds_thin_specular.dds"
+	}
+
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_thin_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	default_state = "idle"
+	playback_rate = -1.03
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+entity = {
+	name = "ocean_planet_mars_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = 	"ocean_06_diffuse.dds"
+		texture_normal = 	"ocean_06_normal.dds"
+		texture_specular = 	"ocean_06_specular.dds"
+	}
+
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_thin_diffuse.dds"
+		texture_normal = "clouds_thin_normal.dds"
+		texture_specular = "clouds_thin_specular.dds"
+	}
+
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_thin_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	default_state = "idle"
+	playback_rate = -1.03
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+entity = {
+	name = "savannah_planet_mars_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = 	"savannah_05_diffuse.dds"
+		texture_normal = 	"savannah_05_normal.dds"
+		texture_specular = 	"savannah_05_specular.dds"
+	}
+
+	default_state = "idle"
+	playback_rate = -1.03
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+entity = {
+	name = "tropical_planet_mars_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = 	"tropical_05_diffuse.dds"
+		texture_normal = 	"tropical_05_normal.dds"
+		texture_specular = 	"tropical_05_specular.dds"
+	}
+
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_thin_diffuse.dds"
+		texture_normal = "clouds_thin_normal.dds"
+		texture_specular = "clouds_thin_specular.dds"
+	}
+
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_thin_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	default_state = "idle"
+	playback_rate = -1.03
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+entity = {
+	name = "tundra_planet_mars_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = 	"tundra_05_diffuse.dds"
+		texture_normal = 	"tundra_05_normal.dds"
+		texture_specular = 	"tundra_05_specular.dds"
+	}
+
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_barren_1_diffuse.dds"
+		texture_normal = "poles_barren_1_normal.dds"
+		texture_specular = "poles_barren_1_specular.dds"
+	}
+
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_thin_diffuse.dds"
+		texture_normal = "clouds_thin_normal.dds"
+		texture_specular = "clouds_thin_specular.dds"
+	}
+
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_thin_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	default_state = "idle"
+	playback_rate = -1.03
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+entity = {
+	name = "volcanic_planet_mars_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		shader = "PdxMeshPlanetEmissive"
+		texture_diffuse = "volcanic_05_diffuse.dds"
+		texture_normal = "volcanic_05_normal.dds"
+		texture_specular = "volcanic_05_specular.dds"
+	}
+
+	##pole texture override
+	meshsettings = {
+	name = "polesShape"
+	texture_diffuse = "nospec.dds"
+	texture_normal = "nospec.dds"
+	texture_specular = "nospec.dds"
+	}
+
+	##cloud texture override
+	meshsettings = {
+	name = "clouds_geosphereShape"
+	texture_diffuse = "nospec.dds"
+	texture_normal = "nospec.dds"
+	texture_specular = "nospec.dds"
+	}
+
+	##cloud shadow texture override
+	meshsettings = {
+	name = "clouds_shadow_geosphereShape"
+	texture_diffuse = "nospec.dds"
+	texture_normal = "nospec.dds"
+	texture_specular = "nospec.dds"
+	}
+
+	default_state = "idle"
+	playback_rate = -1.03
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_molten_world_a" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_molten_world_b" } }
+	}
+
+	game_data = {
+		bloom_factor 		= 1.25
+	}
+}
 
 entity = {
 	name = "cold_barren_planet_01_entity"
@@ -698,7 +1024,7 @@ entity = {
 	name = "planet_geosphereShape"
 	texture_diffuse = "planet_shieled_diffuse.dds"
 	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
+	texture_specular = "nospec.dds"
 	}
 
 	##pole texture override
@@ -706,7 +1032,7 @@ entity = {
 	name = "polesShape"
 	texture_diffuse = "planet_shieled_diffuse.dds"
 	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
+	texture_specular = "nospec.dds"
 	}
 
 	##cloud texture override
@@ -714,7 +1040,7 @@ entity = {
 	name = "clouds_geosphereShape"
 	texture_diffuse = "planet_shield_clouds.dds"
 	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
+	texture_specular = "nospec.dds"
 
 
 	}
@@ -724,7 +1050,7 @@ entity = {
 	name = "clouds_shadow_geosphereShape"
 	texture_diffuse = "planet_shield_clouds.dds"
 	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
+	texture_specular = "nospec.dds"
 
 
 	}
@@ -1109,7 +1435,7 @@ entity = {
 	name = "clouds_shadow_geosphereShape"
 	texture_diffuse = "clouds_thin_shadow_diffuse.dds"
 	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
+	texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
@@ -1143,7 +1469,7 @@ entity = {
 	name = "clouds_shadow_geosphereShape"
 	texture_diffuse = "clouds_thin_shadow_diffuse.dds"
 	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
+	texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
@@ -1177,7 +1503,7 @@ entity = {
 	name = "clouds_shadow_geosphereShape"
 	texture_diffuse = "clouds_thin_shadow_diffuse.dds"
 	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
+	texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
@@ -1193,11 +1519,11 @@ entity = {
 
 
 	meshsettings = {
-	name = "planet_geosphereShape"
-	shader = "PdxMeshPlanetEmissive"
-	texture_diffuse = "molten_01_diffuse.dds"
-	texture_normal = "molten_01_normals.dds"
-	texture_specular = "molten_01_specular.dds"
+		name = "planet_geosphereShape"
+		shader = "PdxMeshMoltenPlanet"
+		texture_diffuse = "molten_01_diffuse.dds"
+		texture_normal = "molten_01_normals.dds"
+		texture_specular = "molten_01_specular.dds"
 	}
 
 	default_state = "idle"
@@ -1205,6 +1531,11 @@ entity = {
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
 		start_event = { trigger_once = yes sound = { soundeffect = "amb_molten_world_a" } }
 		start_event = { trigger_once = yes sound = { soundeffect = "amb_molten_world_b" } }
+	}
+
+	game_data = {
+		uv_animation_speed 	= 0.1
+		bloom_factor 		= 1.4
 	}
 }
 
@@ -1213,11 +1544,79 @@ entity = {
 	pdxmesh = "planet_no_pole_no_clouds_mesh"
 
 	meshsettings = {
+		name = "planet_geosphereShape"
+		shader = "PdxMeshMoltenPlanet"
+		texture_diffuse = "molten_02_diffuse.dds"
+		texture_normal = "molten_02_normals.dds"
+		texture_specular = "molten_02_specular.dds"
+	}
+
+	default_state = "idle"
+	playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_molten_world_a" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_molten_world_b" } }
+	}
+
+	game_data = {
+		uv_animation_speed 	= 0.1
+		bloom_factor 		= 1.61
+	}
+}
+
+entity = {
+	name = "molten_planet_03_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		shader = "PdxMeshMoltenPlanet"
+		texture_diffuse = "molten_03_diffuse.dds"
+		texture_normal = "molten_03_normals.dds"
+		texture_specular = "molten_03_specular.dds"
+	}
+
+	default_state = "idle"
+	playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_molten_world_a" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_molten_world_b" } }
+	}
+
+	game_data = {
+		uv_animation_speed 	= 0.1
+		bloom_factor 		= 2.5
+	}
+}
+entity = {
+	name = "molten_planet_mercury_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+	meshsettings = {
 	name = "planet_geosphereShape"
-	shader = "PdxMeshPlanetEmissive"
-	texture_diffuse = "molten_02_diffuse.dds"
-	texture_normal = "molten_02_normals.dds"
-	texture_specular = "molten_02_specular.dds"
+	texture_diffuse = "molten_04_diffuse.dds"
+	texture_normal = "molten_04_normal.dds"
+	texture_specular = "molten_04_specular.dds"
+	}
+
+	default_state = "idle"
+	playback_rate = -0.02 # Rotation is reversed
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_molten_world_a" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_molten_world_b" } }
+	}
+}
+
+entity = {
+	name = "volcanic_planet_01_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		shader = "PdxMeshPlanetEmissive"
+		texture_diffuse = "volcanic_01_diffuse.dds"
+		texture_normal = "volcanic_01_normal.dds"
+		texture_specular = "volcanic_01_specular.dds"
 	}
 
 	default_state = "idle"
@@ -1229,15 +1628,35 @@ entity = {
 }
 
 entity = {
-	name = "molten_planet_03_entity"
+	name = "volcanic_planet_02_entity"
 	pdxmesh = "planet_no_pole_no_clouds_mesh"
 
 	meshsettings = {
-	name = "planet_geosphereShape"
-	shader = "PdxMeshPlanetEmissive"
-	texture_diffuse = "molten_03_diffuse.dds"
-	texture_normal = "molten_03_normals.dds"
-	texture_specular = "molten_03_specular.dds"
+		name = "planet_geosphereShape"
+		shader = "PdxMeshPlanetEmissive"
+		texture_diffuse = "volcanic_02_diffuse.dds"
+		texture_normal = "volcanic_02_normal.dds"
+		texture_specular = "volcanic_02_specular.dds"
+	}
+
+	default_state = "idle"
+	playback_rate = -1.0 # Rotation is reversed
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_molten_world_a" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_molten_world_b" } }
+	}
+}
+
+entity = {
+	name = "volcanic_planet_03_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+
+	meshsettings = {
+		name = "planet_geosphereShape"
+		shader = "PdxMeshPlanetEmissive"
+		texture_diffuse = "volcanic_03_diffuse.dds"
+		texture_normal = "volcanic_03_normal.dds"
+		texture_specular = "volcanic_03_specular.dds"
 	}
 
 	default_state = "idle"
@@ -1437,7 +1856,7 @@ entity = {
 	name = "clouds_shadow_geosphereShape"
 	texture_diffuse = "toxic_cloud_shadow_diffuse.dds"
 	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
+	texture_specular = "nospec.dds"
 	}
 
 
@@ -1491,7 +1910,7 @@ entity = {
 	name = "clouds_shadow_geosphereShape"
 	texture_diffuse = "toxic_cloud_shadow_diffuse.dds"
 	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
+	texture_specular = "nospec.dds"
 	}
 
 
@@ -1546,7 +1965,7 @@ entity = {
 	name = "clouds_shadow_geosphereShape"
 	texture_diffuse = "toxic_cloud_shadow_diffuse.dds"
 	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
+	texture_specular = "nospec.dds"
 	}
 
 
@@ -1567,7 +1986,26 @@ entity = {
 	}
 }
 
+# Venus
+entity = {
+	name = "toxic_planet_venus_entity"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
 
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "toxic_01_venus_diffuse.dds"
+		texture_normal = "toxic_01_venus_normal.dds"
+		texture_specular = "toxic_01_venus_specular.dds"
+	}
+
+	default_state = "idle"
+	playback_rate = 0.24
+	state = { name = "idle" animation = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_toxic_world_a" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_toxic_world_b" } }
+	}
+
+}
 
 # #original
 # entity = {
@@ -1982,13 +2420,21 @@ meshsettings = {
 	name = "clouds_shadow_geosphereShape"
 	texture_diffuse = "clouds_medium_shadow_diffuse.dds"
 	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
+	texture_specular = "nospec.dds"
 	}
+
+
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
 		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_world_hive" } }
+		start_event = { node = "planet" particle = "infested_planet_effect" keep_particle = yes trigger_once = yes }
 		}
+
+
+		attach = { root = "infested_planet_effect_mesh_entity" }
+
+
 	}
 
 
@@ -2182,8 +2628,8 @@ entity = {
 		name = "polySurface34Shape"
 		index = 0
 		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
-		texture_specular = "nospecular.dds"
-		shader = "PdxMeshClouds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	meshsettings = {
@@ -2192,7 +2638,7 @@ entity = {
 		texture_diffuse = "clouds_medium_diffuse.dds"
 		texture_normal = "clouds_medium_normal.dds"
 		texture_specular = "clouds_medium_specular.dds"
-		shader = "PdxMeshClouds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	game_data = {
@@ -2227,7 +2673,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
-
+		shader_type = ship
 	}
 }
 
@@ -2261,6 +2707,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -2418,8 +2865,8 @@ entity = {
 		name = "polySurface34Shape"
 		index = 0
 		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
-		texture_specular = "nospecular.dds"
-		shader = "PdxMeshClouds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	meshsettings = {
@@ -2428,11 +2875,12 @@ entity = {
 		texture_diffuse = "clouds_medium_diffuse.dds"
 		texture_normal = "clouds_medium_normal.dds"
 		texture_specular = "clouds_medium_specular.dds"
-		shader = "PdxMeshClouds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -2463,7 +2911,8 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
-		#custom_texture = "gfx/models/planets/ringworld_tech_fadein.dds"
+		custom_texture = "gfx/models/planets/ringworld_tech_fadein.dds"
+		shader_type = ship
 	}
 }
 
@@ -2503,6 +2952,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -2697,8 +3147,8 @@ entity = {
 		name = "polySurface34Shape"
 		index = 0
 		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
-		texture_specular = "nospecular.dds"
-		shader = "PdxMeshClouds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	meshsettings = {
@@ -2707,11 +3157,12 @@ entity = {
 		texture_diffuse = "clouds_medium_diffuse.dds"
 		texture_normal = "clouds_medium_normal.dds"
 		texture_specular = "clouds_medium_specular.dds"
-		shader = "PdxMeshClouds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -2741,6 +3192,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -2778,6 +3230,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -2936,8 +3389,8 @@ entity = {
 		name = "polySurface34Shape"
 		index = 0
 		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
-		texture_specular = "nospecular.dds"
-		shader = "PdxMeshClouds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	meshsettings = {
@@ -2946,11 +3399,12 @@ entity = {
 		texture_diffuse = "clouds_medium_diffuse.dds"
 		texture_normal = "clouds_medium_normal.dds"
 		texture_specular = "clouds_medium_specular.dds"
-		shader = "PdxMeshClouds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -2980,6 +3434,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -3017,6 +3472,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -3168,8 +3624,8 @@ entity = {
 		name = "polySurface34Shape"
 		index = 0
 		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
-		texture_specular = "nospecular.dds"
-		shader = "PdxMeshClouds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	meshsettings = {
@@ -3178,11 +3634,12 @@ entity = {
 		texture_diffuse = "clouds_medium_diffuse.dds"
 		texture_normal = "clouds_medium_normal.dds"
 		texture_specular = "clouds_medium_specular.dds"
-		shader = "PdxMeshClouds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -3212,6 +3669,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -3249,6 +3707,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -3413,8 +3872,8 @@ entity = {
 		name = "polySurface34Shape"
 		index = 0
 		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
-		texture_specular = "nospecular.dds"
-		shader = "PdxMeshClouds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	meshsettings = {
@@ -3423,11 +3882,12 @@ entity = {
 		texture_diffuse = "clouds_medium_diffuse.dds"
 		texture_normal = "clouds_medium_normal.dds"
 		texture_specular = "clouds_medium_specular.dds"
-		shader = "PdxMeshClouds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -3457,6 +3917,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -3494,6 +3955,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -3652,8 +4114,8 @@ entity = {
 		name = "polySurface34Shape"
 		index = 0
 		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
-		texture_specular = "nospecular.dds"
-		shader = "PdxMeshClouds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	meshsettings = {
@@ -3662,11 +4124,12 @@ entity = {
 		texture_diffuse = "clouds_medium_diffuse.dds"
 		texture_normal = "clouds_medium_normal.dds"
 		texture_specular = "clouds_medium_specular.dds"
-		shader = "PdxMeshClouds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -3696,6 +4159,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -3733,6 +4197,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -3886,8 +4351,8 @@ entity = {
 		name = "polySurface34Shape"
 		index = 0
 		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
-		texture_specular = "nospecular.dds"
-		shader = "PdxMeshClouds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	meshsettings = {
@@ -3896,11 +4361,12 @@ entity = {
 		texture_diffuse = "clouds_medium_diffuse.dds"
 		texture_normal = "clouds_medium_normal.dds"
 		texture_specular = "clouds_medium_specular.dds"
-		shader = "PdxMeshClouds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -3930,6 +4396,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -3967,6 +4434,7 @@ entity = {
 
 	game_data = {
 		size = @ringworld_segment_size
+		shader_type = ship
 	}
 }
 
@@ -4117,8 +4585,8 @@ entity = {
 		name = "polySurface34Shape"
 		index = 0
 		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
-		texture_specular = "nospecular.dds"
-		shader = "PdxMeshClouds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	meshsettings = {
@@ -4127,12 +4595,13 @@ entity = {
 		texture_diffuse = "clouds_medium_diffuse.dds"
 		texture_normal = "clouds_medium_normal.dds"
 		texture_specular = "clouds_medium_specular.dds"
-		shader = "PdxMeshClouds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -4163,6 +4632,7 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -4201,6 +4671,7 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -4354,8 +4825,8 @@ entity = {
 		name = "polySurface34Shape"
 		index = 0
 		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
-		texture_specular = "nospecular.dds"
-		shader = "PdxMeshClouds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	meshsettings = {
@@ -4364,12 +4835,13 @@ entity = {
 		texture_diffuse = "clouds_medium_diffuse.dds"
 		texture_normal = "clouds_medium_normal.dds"
 		texture_specular = "clouds_medium_specular.dds"
-		shader = "PdxMeshClouds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -4400,6 +4872,7 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -4438,6 +4911,7 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -4590,8 +5064,8 @@ entity = {
 		name = "polySurface34Shape"
 		index = 0
 		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
-		texture_specular = "nospecular.dds"
-		shader = "PdxMeshClouds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	meshsettings = {
@@ -4600,12 +5074,13 @@ entity = {
 		texture_diffuse = "clouds_medium_diffuse.dds"
 		texture_normal = "clouds_medium_normal.dds"
 		texture_specular = "clouds_medium_specular.dds"
-		shader = "PdxMeshClouds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -4636,6 +5111,7 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -4674,6 +5150,7 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -4826,8 +5303,8 @@ entity = {
 		name = "polySurface34Shape"
 		index = 0
 		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
-		texture_specular = "nospecular.dds"
-		shader = "PdxMeshClouds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	meshsettings = {
@@ -4836,12 +5313,13 @@ entity = {
 		texture_diffuse = "clouds_medium_diffuse.dds"
 		texture_normal = "clouds_medium_normal.dds"
 		texture_specular = "clouds_medium_specular.dds"
-		shader = "PdxMeshClouds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -4872,6 +5350,7 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -4910,6 +5389,7 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -5060,8 +5540,8 @@ entity = {
 		name = "polySurface34Shape"
 		index = 0
 		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
-		texture_specular = "nospecular.dds"
-		shader = "PdxMeshClouds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	meshsettings = {
@@ -5070,12 +5550,13 @@ entity = {
 		texture_diffuse = "clouds_medium_diffuse.dds"
 		texture_normal = "clouds_medium_normal.dds"
 		texture_specular = "clouds_medium_specular.dds"
-		shader = "PdxMeshClouds"
+		shader = "PdxMeshRingworldClouds"
 	}
 
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -5106,6 +5587,7 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -5144,6 +5626,7 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
+		shader_type = ship
 	}
 }
 
@@ -5172,6 +5655,1678 @@ entity = {
 	attach = { locator1 = "toxoid_01_ringworld_habitable_entity_01_entity" }
 	attach = { locator2 = "toxoid_01_ringworld_tech_entity_01_entity" }
 }
+
+######### Cybernetics #########
+
+entity = {
+	name = "cybernetics_01_ringworld_construction_entity"
+	pdxmesh = "ringworld_construction_mesh"
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_cybernetics_01_diffuse.dds"
+		texture_normal = "ringworld_construction_cybernetics_01_normal.dds"
+		texture_specular = "ringworld_construction_cybernetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface161Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_cybernetics_01_diffuse.dds"
+		texture_normal = "ringworld_seam_cybernetics_01_normal.dds"
+		texture_specular = "ringworld_seam_cybernetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+}
+
+
+entity = {
+	name = "cybernetics_01_ringworld_3x_seams_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_construction_mesh"
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_cybernetics_01_diffuse.dds"
+		texture_normal = "ringworld_construction_cybernetics_01_normal.dds"
+		texture_specular = "ringworld_construction_cybernetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface161Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_cybernetics_01_diffuse.dds"
+		texture_normal = "ringworld_seam_cybernetics_01_normal.dds"
+		texture_specular = "ringworld_seam_cybernetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	default_state = "idle"
+	state = { name = "idle"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+	attach = { locator1 = "cybernetics_01_ringworld_construction_entity" }
+	attach = { locator2 = "cybernetics_01_ringworld_construction_entity" }
+}
+
+
+entity = {
+	name = "cybernetics_01_ringworld_seam_entity_01_full_entity"
+	cull_radius = 10000.0
+
+
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}
+
+	state = { name = "construction"
+	}
+
+	attach = { ringworld_north 		= "cybernetics_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_south 		= "cybernetics_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_west 		= "cybernetics_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_east 		= "cybernetics_01_ringworld_3x_seams_entity" }
+}
+
+
+
+entity = {
+	name = "cybernetics_01_ringworld_habitable_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_habitable_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+	}
+	state = { name = "construction"
+	}
+
+
+	meshsettings = {
+		name = "pCube20Shape"
+		index = 0
+		texture_diffuse = "ringworld_habitable_cybernetics_01_diffuse.dds"
+		texture_normal = "ringworld_habitable_cybernetics_01_normal.dds"
+		texture_specular = "ringworld_habitable_cybernetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface9Shape"
+		index = 0
+		texture_diffuse = "continental_01_diffuse.dds"
+		texture_normal = "continental_01_normals.dds"
+		texture_specular = "continental_01_spec.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface34Shape"
+		index = 0
+		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	meshsettings = {
+		name = "polySurface35Shape"
+		index = 0
+		texture_diffuse = "clouds_medium_diffuse.dds"
+		texture_normal = "clouds_medium_normal.dds"
+		texture_specular = "clouds_medium_specular.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+entity = {
+	name = "cybernetics_01_ringworld_tech_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_tech_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"		state_time = 5
+		event = { time = 0 node = "tech_1" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 1 node = "tech_2" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 1 node = "tech_3" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+	}
+	state = { name = "construction"
+	}
+
+
+	meshsettings = {
+		name = "pasted__polySurface28Shape"
+		index = 0
+		texture_diffuse = "ringworld_tech_cybernetics_01_diffuse.dds"
+		texture_normal = "ringworld_tech_cybernetics_01_normal.dds"
+		texture_specular = "ringworld_tech_cybernetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+entity = {
+	name = "cybernetics_01_ringworld_seam_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" stop_on_state_change = yes } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_cybernetics_01_diffuse.dds"
+		texture_normal = "ringworld_seam_cybernetics_01_normal.dds"
+		texture_specular = "ringworld_seam_cybernetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_cybernetics_01_diffuse.dds"
+		texture_normal = "ringworld_construction_cybernetics_01_normal.dds"
+		texture_specular = "ringworld_construction_cybernetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+
+entity = {
+	name = "cybernetics_01_ringworld_phase_3_construction_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_cybernetics_01_diffuse.dds"
+		texture_normal = "ringworld_seam_cybernetics_01_normal.dds"
+		texture_specular = "ringworld_seam_cybernetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+	attach = { locator1 = "cybernetics_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "cybernetics_01_ringworld_tech_entity_01_entity" }
+}
+
+######### Synthetics #########
+
+entity = {
+	name = "synthetics_01_ringworld_construction_entity"
+	pdxmesh = "ringworld_construction_mesh"
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_synthetics_01_diffuse.dds"
+		texture_normal = "ringworld_construction_synthetics_01_normal.dds"
+		texture_specular = "ringworld_construction_synthetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface161Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_synthetics_01_diffuse.dds"
+		texture_normal = "ringworld_seam_synthetics_01_normal.dds"
+		texture_specular = "ringworld_seam_synthetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+}
+
+
+entity = {
+	name = "synthetics_01_ringworld_3x_seams_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_construction_mesh"
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_synthetics_01_diffuse.dds"
+		texture_normal = "ringworld_construction_synthetics_01_normal.dds"
+		texture_specular = "ringworld_construction_synthetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface161Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_synthetics_01_diffuse.dds"
+		texture_normal = "ringworld_seam_synthetics_01_normal.dds"
+		texture_specular = "ringworld_seam_synthetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	default_state = "idle"
+	state = { name = "idle"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+	attach = { locator1 = "synthetics_01_ringworld_construction_entity" }
+	attach = { locator2 = "synthetics_01_ringworld_construction_entity" }
+}
+
+
+entity = {
+	name = "synthetics_01_ringworld_seam_entity_01_full_entity"
+	cull_radius = 10000.0
+
+
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}
+
+	state = { name = "construction"
+	}
+
+	attach = { ringworld_north 		= "synthetics_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_south 		= "synthetics_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_west 		= "synthetics_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_east 		= "synthetics_01_ringworld_3x_seams_entity" }
+}
+
+
+
+entity = {
+	name = "synthetics_01_ringworld_habitable_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_habitable_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+	}
+	state = { name = "construction"
+	}
+
+
+	meshsettings = {
+		name = "pCube20Shape"
+		index = 0
+		texture_diffuse = "ringworld_habitable_synthetics_01_diffuse.dds"
+		texture_normal = "ringworld_habitable_synthetics_01_normal.dds"
+		texture_specular = "ringworld_habitable_synthetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface9Shape"
+		index = 0
+		texture_diffuse = "continental_01_diffuse.dds"
+		texture_normal = "continental_01_normals.dds"
+		texture_specular = "continental_01_spec.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface34Shape"
+		index = 0
+		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	meshsettings = {
+		name = "polySurface35Shape"
+		index = 0
+		texture_diffuse = "clouds_medium_diffuse.dds"
+		texture_normal = "clouds_medium_normal.dds"
+		texture_specular = "clouds_medium_specular.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+entity = {
+	name = "synthetics_01_ringworld_tech_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_tech_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"		state_time = 5
+		event = { time = 0 node = "tech_1" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 1 node = "tech_2" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 1 node = "tech_3" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+	}
+	state = { name = "construction"
+	}
+
+
+	meshsettings = {
+		name = "pasted__polySurface28Shape"
+		index = 0
+		texture_diffuse = "ringworld_tech_synthetics_01_diffuse.dds"
+		texture_normal = "ringworld_tech_synthetics_01_normal.dds"
+		texture_specular = "ringworld_tech_synthetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+entity = {
+	name = "synthetics_01_ringworld_seam_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" stop_on_state_change = yes } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_synthetics_01_diffuse.dds"
+		texture_normal = "ringworld_seam_synthetics_01_normal.dds"
+		texture_specular = "ringworld_seam_synthetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_synthetics_01_diffuse.dds"
+		texture_normal = "ringworld_construction_synthetics_01_normal.dds"
+		texture_specular = "ringworld_construction_synthetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+
+entity = {
+	name = "synthetics_01_ringworld_phase_3_construction_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_synthetics_01_diffuse.dds"
+		texture_normal = "ringworld_seam_synthetics_01_normal.dds"
+		texture_specular = "ringworld_seam_synthetics_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+	attach = { locator1 = "synthetics_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "synthetics_01_ringworld_tech_entity_01_entity" }
+}
+
+######### Mindwarden #########
+
+entity = {
+	name = "mindwarden_01_ringworld_construction_entity"
+	pdxmesh = "ringworld_construction_mesh"
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_mindwarden_01_diffuse.dds"
+		texture_normal = "ringworld_construction_mindwarden_01_normal.dds"
+		texture_specular = "ringworld_construction_mindwarden_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface161Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_mindwarden_01_diffuse.dds"
+		texture_normal = "ringworld_seam_mindwarden_01_normal.dds"
+		texture_specular = "ringworld_seam_mindwarden_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+}
+
+entity = {
+	name = "mindwarden_01_ringworld_3x_seams_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_construction_mesh"
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_mindwarden_01_diffuse.dds"
+		texture_normal = "ringworld_construction_mindwarden_01_normal.dds"
+		texture_specular = "ringworld_construction_mindwarden_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface161Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_mindwarden_01_diffuse.dds"
+		texture_normal = "ringworld_seam_mindwarden_01_normal.dds"
+		texture_specular = "ringworld_seam_mindwarden_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+	state = { name = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+	attach = { locator1 = "mindwarden_01_ringworld_construction_entity" }
+	attach = { locator2 = "mindwarden_01_ringworld_construction_entity" }
+}
+
+entity = {
+	name = "mindwarden_01_ringworld_seam_entity_01_full_entity"
+	cull_radius = 10000.0
+
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}
+
+	state = { name = "construction" }
+
+	attach = { ringworld_north 		= "mindwarden_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_south 		= "mindwarden_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_west 		= "mindwarden_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_east 		= "mindwarden_01_ringworld_3x_seams_entity" }
+}
+
+entity = {
+	name = "mindwarden_01_ringworld_habitable_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_habitable_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 } }
+	state = { name = "construction" }
+
+	meshsettings = {
+		name = "pCube20Shape"
+		index = 0
+		texture_diffuse = "ringworld_habitable_mindwarden_01_diffuse.dds"
+		texture_normal = "ringworld_habitable_mindwarden_01_normal.dds"
+		texture_specular = "ringworld_habitable_mindwarden_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface9Shape"
+		index = 0
+		texture_diffuse = "continental_01_diffuse.dds"
+		texture_normal = "continental_01_normals.dds"
+		texture_specular = "continental_01_spec.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface34Shape"
+		index = 0
+		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	meshsettings = {
+		name = "polySurface35Shape"
+		index = 0
+		texture_diffuse = "clouds_medium_diffuse.dds"
+		texture_normal = "clouds_medium_normal.dds"
+		texture_specular = "clouds_medium_specular.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		shader_type = ship
+	}
+}
+
+entity = {
+	name = "mindwarden_01_ringworld_tech_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_tech_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"		state_time = 5
+		event = { time = 0 node = "tech_1" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 1 node = "tech_2" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 1 node = "tech_3" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+	}
+	state = { name = "construction" }
+
+	meshsettings = {
+		name = "pasted__polySurface28Shape"
+		index = 0
+		texture_diffuse = "ringworld_tech_mindwarden_01_diffuse.dds"
+		texture_normal = "ringworld_tech_mindwarden_01_normal.dds"
+		texture_specular = "ringworld_tech_mindwarden_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		shader_type = ship
+	}
+}
+
+entity = {
+	name = "mindwarden_01_ringworld_seam_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" stop_on_state_change = yes } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+	state = { name = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_mindwarden_01_diffuse.dds"
+		texture_normal = "ringworld_seam_mindwarden_01_normal.dds"
+		texture_specular = "ringworld_seam_mindwarden_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_mindwarden_01_diffuse.dds"
+		texture_normal = "ringworld_construction_mindwarden_01_normal.dds"
+		texture_specular = "ringworld_construction_mindwarden_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		shader_type = ship
+	}
+}
+
+entity = {
+	name = "mindwarden_01_ringworld_phase_3_construction_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_mindwarden_01_diffuse.dds"
+		texture_normal = "ringworld_seam_mindwarden_01_normal.dds"
+		texture_specular = "ringworld_seam_mindwarden_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	state = { name = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+	attach = { locator1 = "mindwarden_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "mindwarden_01_ringworld_tech_entity_01_entity" }
+}
+
+	#	entity = {
+	#		name = "ringworld_seam_construction_entity"
+	#		pdxmesh = "ringworld_seam_construction_mesh"
+	#
+	#		meshsettings = {
+	#			name = "pCube24Shape"
+	#			index = 0
+	#			texture_diffuse = "ringworld_seam_diffuse.dds"
+	#			texture_normal = "ringworld_seam_diffuse.dds"
+	#			texture_specular = "ringworld_seam_specular.dds"
+	#			shader = "PdxMeshTerra"
+	#		}
+	#	}
+
+		######### Biogenesis_01 #########
+
+entity = {
+	name = "biogenesis_01_ringworld_construction_entity"
+	pdxmesh = "ringworld_construction_mesh"
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_biogenesis_01_diffuse.dds"
+		texture_normal = "ringworld_construction_biogenesis_01_normal.dds"
+		texture_specular = "ringworld_construction_biogenesis_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface161Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_biogenesis_01_diffuse.dds"
+		texture_normal = "ringworld_seam_biogenesis_01_normal.dds"
+		texture_specular = "ringworld_seam_biogenesis_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+}
+
+
+entity = {
+	name = "biogenesis_01_ringworld_3x_seams_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_construction_mesh"
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_biogenesis_01_diffuse.dds"
+		texture_normal = "ringworld_construction_biogenesis_01_normal.dds"
+		texture_specular = "ringworld_construction_biogenesis_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface161Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_biogenesis_01_diffuse.dds"
+		texture_normal = "ringworld_seam_biogenesis_01_normal.dds"
+		texture_specular = "ringworld_seam_biogenesis_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	default_state = "idle"
+	state = { name = "idle"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+	attach = { locator1 = "biogenesis_01_ringworld_construction_entity" }
+	attach = { locator2 = "biogenesis_01_ringworld_construction_entity" }
+}
+
+
+entity = {
+	name = "biogenesis_01_ringworld_seam_entity_01_full_entity"
+	cull_radius = 10000.0
+
+
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}
+
+	state = { name = "construction"
+	}
+
+	attach = { ringworld_north 		= "biogenesis_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_south 		= "biogenesis_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_west 		= "biogenesis_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_east 		= "biogenesis_01_ringworld_3x_seams_entity" }
+}
+
+
+
+entity = {
+	name = "biogenesis_01_ringworld_habitable_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_habitable_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+	}
+	state = { name = "construction"
+	}
+
+
+	meshsettings = {
+		name = "pCube20Shape"
+		index = 0
+		texture_diffuse = "ringworld_habitable_biogenesis_01_diffuse.dds"
+		texture_normal = "ringworld_habitable_biogenesis_01_normal.dds"
+		texture_specular = "ringworld_habitable_biogenesis_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface9Shape"
+		index = 0
+		texture_diffuse = "continental_01_diffuse.dds"
+		texture_normal = "continental_01_normals.dds"
+		texture_specular = "continental_01_spec.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface34Shape"
+		index = 0
+		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	meshsettings = {
+		name = "polySurface35Shape"
+		index = 0
+		texture_diffuse = "clouds_medium_diffuse.dds"
+		texture_normal = "clouds_medium_normal.dds"
+		texture_specular = "clouds_medium_specular.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+entity = {
+	name = "biogenesis_01_ringworld_tech_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_tech_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"		state_time = 5
+		event = { time = 0 node = "tech_1" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 1 node = "tech_2" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 1 node = "tech_3" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+	}
+	state = { name = "construction"
+	}
+
+
+	meshsettings = {
+		name = "pasted__polySurface28Shape"
+		index = 0
+		texture_diffuse = "ringworld_tech_biogenesis_01_diffuse.dds"
+		texture_normal = "ringworld_tech_biogenesis_01_normal.dds"
+		texture_specular = "ringworld_tech_biogenesis_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+entity = {
+	name = "biogenesis_01_ringworld_seam_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" stop_on_state_change = yes } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_biogenesis_01_diffuse.dds"
+		texture_normal = "ringworld_seam_biogenesis_01_normal.dds"
+		texture_specular = "ringworld_seam_biogenesis_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_biogenesis_01_diffuse.dds"
+		texture_normal = "ringworld_construction_biogenesis_01_normal.dds"
+		texture_specular = "ringworld_construction_biogenesis_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+
+entity = {
+	name = "biogenesis_01_ringworld_phase_3_construction_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_biogenesis_01_diffuse.dds"
+		texture_normal = "ringworld_seam_biogenesis_01_normal.dds"
+		texture_specular = "ringworld_seam_biogenesis_01_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+	attach = { locator1 = "biogenesis_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "biogenesis_01_ringworld_tech_entity_01_entity" }
+}
+
+	#	entity = {
+	#		name = "ringworld_seam_construction_entity"
+	#		pdxmesh = "ringworld_seam_construction_mesh"
+	#
+	#		meshsettings = {
+	#			name = "pCube24Shape"
+	#			index = 0
+	#			texture_diffuse = "ringworld_seam_diffuse.dds"
+	#			texture_normal = "ringworld_seam_diffuse.dds"
+	#			texture_specular = "ringworld_seam_specular.dds"
+	#			shader = "PdxMeshTerra"
+	#		}
+	#	}
+
+	######### Biogenesis_02 #########
+
+entity = {
+	name = "biogenesis_02_ringworld_construction_entity"
+	pdxmesh = "ringworld_construction_mesh"
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_biogenesis_02_diffuse.dds"
+		texture_normal = "ringworld_construction_biogenesis_02_normal.dds"
+		texture_specular = "ringworld_construction_biogenesis_02_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface161Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_biogenesis_02_diffuse.dds"
+		texture_normal = "ringworld_seam_biogenesis_02_normal.dds"
+		texture_specular = "ringworld_seam_biogenesis_02_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+}
+
+
+entity = {
+	name = "biogenesis_02_ringworld_3x_seams_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_construction_mesh"
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_biogenesis_02_diffuse.dds"
+		texture_normal = "ringworld_construction_biogenesis_02_normal.dds"
+		texture_specular = "ringworld_construction_biogenesis_02_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface161Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_biogenesis_02_diffuse.dds"
+		texture_normal = "ringworld_seam_biogenesis_02_normal.dds"
+		texture_specular = "ringworld_seam_biogenesis_02_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	default_state = "idle"
+	state = { name = "idle"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+	attach = { locator1 = "biogenesis_02_ringworld_construction_entity" }
+	attach = { locator2 = "biogenesis_02_ringworld_construction_entity" }
+}
+
+
+entity = {
+	name = "biogenesis_02_ringworld_seam_entity_01_full_entity"
+	cull_radius = 10000.0
+
+
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}
+
+	state = { name = "construction"
+	}
+
+	attach = { ringworld_north 		= "biogenesis_02_ringworld_3x_seams_entity" }
+	attach = { ringworld_south 		= "biogenesis_02_ringworld_3x_seams_entity" }
+	attach = { ringworld_west 		= "biogenesis_02_ringworld_3x_seams_entity" }
+	attach = { ringworld_east 		= "biogenesis_02_ringworld_3x_seams_entity" }
+}
+
+
+
+entity = {
+	name = "biogenesis_02_ringworld_habitable_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_habitable_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+	}
+	state = { name = "construction"
+	}
+
+
+	meshsettings = {
+		name = "pCube20Shape"
+		index = 0
+		texture_diffuse = "ringworld_habitable_biogenesis_02_diffuse.dds"
+		texture_normal = "ringworld_habitable_biogenesis_02_normal.dds"
+		texture_specular = "ringworld_habitable_biogenesis_02_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface9Shape"
+		index = 0
+		texture_diffuse = "continental_01_diffuse.dds"
+		texture_normal = "continental_01_normals.dds"
+		texture_specular = "continental_01_spec.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface34Shape"
+		index = 0
+		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	meshsettings = {
+		name = "polySurface35Shape"
+		index = 0
+		texture_diffuse = "clouds_medium_diffuse.dds"
+		texture_normal = "clouds_medium_normal.dds"
+		texture_specular = "clouds_medium_specular.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+entity = {
+	name = "biogenesis_02_ringworld_tech_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_tech_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"		state_time = 5
+		event = { time = 0 node = "tech_1" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 1 node = "tech_2" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 1 node = "tech_3" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+	}
+	state = { name = "construction"
+	}
+
+
+	meshsettings = {
+		name = "pasted__polySurface28Shape"
+		index = 0
+		texture_diffuse = "ringworld_tech_biogenesis_02_diffuse.dds"
+		texture_normal = "ringworld_tech_biogenesis_02_normal.dds"
+		texture_specular = "ringworld_tech_biogenesis_02_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+entity = {
+	name = "biogenesis_02_ringworld_seam_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" stop_on_state_change = yes } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_biogenesis_02_diffuse.dds"
+		texture_normal = "ringworld_seam_biogenesis_02_normal.dds"
+		texture_specular = "ringworld_seam_biogenesis_02_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_biogenesis_02_diffuse.dds"
+		texture_normal = "ringworld_construction_biogenesis_02_normal.dds"
+		texture_specular = "ringworld_construction_biogenesis_02_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+
+entity = {
+	name = "biogenesis_02_ringworld_phase_3_construction_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_biogenesis_02_diffuse.dds"
+		texture_normal = "ringworld_seam_biogenesis_02_normal.dds"
+		texture_specular = "ringworld_seam_biogenesis_02_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+	attach = { locator1 = "biogenesis_02_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "biogenesis_02_ringworld_tech_entity_01_entity" }
+}
+
+	#	entity = {
+	#		name = "ringworld_seam_construction_entity"
+	#		pdxmesh = "ringworld_seam_construction_mesh"
+	#
+	#		meshsettings = {
+	#			name = "pCube24Shape"
+	#			index = 0
+	#			texture_diffuse = "ringworld_seam_diffuse.dds"
+	#			texture_normal = "ringworld_seam_diffuse.dds"
+	#			texture_specular = "ringworld_seam_specular.dds"
+	#			shader = "PdxMeshTerra"
+	#		}
+	#	}
+
+
+######### Psionic #########
+
+entity = {
+	name = "psionic_01_ringworld_construction_entity"
+	pdxmesh = "ringworld_construction_mesh"
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "psionic_ring_world_construction_diffuse.dds"
+		texture_normal = "psionic_ring_world_construction_normal.dds"
+		texture_specular = "psionic_ring_world_construction_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface161Shape"
+		index = 0
+		texture_diffuse = "psionic_ring_world_seam_diffuse.dds"
+		texture_normal = "psionic_ring_world_seam_normal.dds"
+		texture_specular = "psionic_ring_world_seam_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+}
+
+entity = {
+	name = "psionic_01_ringworld_3x_seams_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_construction_mesh"
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "psionic_ring_world_construction_diffuse.dds"
+		texture_normal = "psionic_ring_world_construction_normal.dds"
+		texture_specular = "psionic_ring_world_construction_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface161Shape"
+		index = 0
+		texture_diffuse = "psionic_ring_world_seam_diffuse.dds"
+		texture_normal = "psionic_ring_world_seam_normal.dds"
+		texture_specular = "psionic_ring_world_seam_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+	state = { name = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+	attach = { locator1 = "psionic_01_ringworld_construction_entity" }
+	attach = { locator2 = "psionic_01_ringworld_construction_entity" }
+}
+
+entity = {
+	name = "psionic_01_ringworld_seam_entity_01_full_entity"
+	cull_radius = 10000.0
+
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}
+
+	state = { name = "construction" }
+
+	attach = { ringworld_north 		= "psionic_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_south 		= "psionic_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_west 		= "psionic_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_east 		= "psionic_01_ringworld_3x_seams_entity" }
+}
+
+entity = {
+	name = "psionic_01_ringworld_habitable_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_habitable_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 } }
+	state = { name = "construction" }
+
+	meshsettings = {
+		name = "pCube20Shape"
+		index = 0
+		texture_diffuse = "psionic_ring_world_habitat_diffuse.dds"
+		texture_normal = "psionic_ring_world_habitat_normal.dds"
+		texture_specular = "psionic_ring_world_habitat_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface9Shape"
+		index = 0
+		texture_diffuse = "continental_01_diffuse.dds"
+		texture_normal = "continental_01_normals.dds"
+		texture_specular = "continental_01_spec.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface34Shape"
+		index = 0
+		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	meshsettings = {
+		name = "polySurface35Shape"
+		index = 0
+		texture_diffuse = "clouds_medium_diffuse.dds"
+		texture_normal = "clouds_medium_normal.dds"
+		texture_specular = "clouds_medium_specular.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		shader_type = ship
+	}
+}
+
+entity = {
+	name = "psionic_01_ringworld_tech_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_tech_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"		state_time = 5
+		event = { time = 0 node = "tech_1" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 1 node = "tech_2" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 1 node = "tech_3" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+	}
+	state = { name = "construction" }
+
+	meshsettings = {
+		name = "pasted__polySurface28Shape"
+		index = 0
+		texture_diffuse = "psionic_ring_world_tech_diffuse.dds"
+		texture_normal = "psionic_ring_world_tech_normal.dds"
+		texture_specular = "psionic_ring_world_tech_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		shader_type = ship
+	}
+}
+
+entity = {
+	name = "psionic_01_ringworld_seam_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" stop_on_state_change = yes } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+	state = { name = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "psionic_ring_world_seam_diffuse.dds"
+		texture_normal = "psionic_ring_world_seam_normal.dds"
+		texture_specular = "psionic_ring_world_seam_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "psionic_ring_world_construction_diffuse.dds"
+		texture_normal = "psionic_ring_world_construction_normal.dds"
+		texture_specular = "psionic_ring_world_construction_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		shader_type = ship
+	}
+}
+
+entity = {
+	name = "psionic_01_ringworld_phase_3_construction_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "psionic_ring_world_seam_diffuse.dds"
+		texture_normal = "psionic_ring_world_seam_normal.dds"
+		texture_specular = "psionic_ring_world_seam_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+
+	state = { name = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+	attach = { locator1 = "psionic_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "psionic_01_ringworld_tech_entity_01_entity" }
+}
+
+
+
+######### Infernal #########
+
+entity = {
+	name = "infernal_01_ringworld_construction_entity"
+	pdxmesh = "ringworld_construction_mesh"
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_infernal_01_diffuse.dds"
+		texture_normal = "ringworld_construction_infernal_01_normal.dds"
+		texture_specular = "ringworld_construction_infernal_01_specular.dds"
+		shader = "PdxMeshShipDiffuseEmissiveNoise"
+	}
+
+	meshsettings = {
+		name = "polySurface161Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_infernal_01_diffuse.dds"
+		texture_normal = "ringworld_seam_infernal_01_normal.dds"
+		texture_specular = "ringworld_seam_infernal_01_specular.dds"
+		shader = "PdxMeshShipDiffuseEmissiveNoise"
+	}
+}
+
+
+entity = {
+	name = "infernal_01_ringworld_3x_seams_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_construction_mesh"
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_infernal_01_diffuse.dds"
+		texture_normal = "ringworld_construction_infernal_01_normal.dds"
+		texture_specular = "ringworld_construction_infernal_01_specular.dds"
+		shader = "PdxMeshShipDiffuseEmissiveNoise"
+	}
+
+	meshsettings = {
+		name = "polySurface161Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_infernal_01_diffuse.dds"
+		texture_normal = "ringworld_seam_infernal_01_normal.dds"
+		texture_specular = "ringworld_seam_infernal_01_specular.dds"
+		shader = "PdxMeshShipDiffuseEmissiveNoise"
+	}
+
+	default_state = "idle"
+	state = { name = "idle"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+	attach = { locator1 = "infernal_01_ringworld_construction_entity" }
+	attach = { locator2 = "infernal_01_ringworld_construction_entity" }
+}
+
+
+entity = {
+	name = "infernal_01_ringworld_seam_entity_01_full_entity"
+	cull_radius = 10000.0
+
+
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}
+
+	state = { name = "construction"
+	}
+
+	attach = { ringworld_north 		= "infernal_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_south 		= "infernal_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_west 		= "infernal_01_ringworld_3x_seams_entity" }
+	attach = { ringworld_east 		= "infernal_01_ringworld_3x_seams_entity" }
+}
+
+
+
+entity = {
+	name = "infernal_01_ringworld_habitable_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_habitable_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+	}
+	state = { name = "construction"
+	}
+
+	meshsettings = {
+		name = "pCube20Shape"
+		index = 0
+		texture_diffuse = "ringworld_habitable_infernal_01_diffuse.dds"
+		texture_normal = "ringworld_habitable_infernal_01_normal.dds"
+		texture_specular = "ringworld_habitable_infernal_01_specular.dds"
+		shader = "PdxMeshShipDiffuseEmissive"
+	}
+	meshsettings = {
+		name = "polySurface9Shape"
+		index = 0
+		texture_diffuse = "volcanic_01_diffuse.dds"
+		texture_normal = "volcanic_01_normal.dds"
+		texture_specular = "volcanic_01_specular.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	meshsettings = {
+		name = "polySurface34Shape"
+		index = 0
+		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+		texture_specular = "nospec.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	meshsettings = {
+		name = "polySurface35Shape"
+		index = 0
+		texture_diffuse = "clouds_medium_diffuse.dds"
+		texture_normal = "clouds_medium_normal.dds"
+		texture_specular = "clouds_medium_specular.dds"
+		shader = "PdxMeshRingworldClouds"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+		shader_type = ship
+	}
+}
+
+
+
+
+
+
+
+
+entity = {
+	name = "infernal_01_ringworld_tech_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_tech_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"		state_time = 5
+		event = { time = 0 node = "tech_1" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		#event = { time = 1 node = "tech_2" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 1 node = "tech_3" particle = "ringworld_tech_particle" keep_particle = yes trigger_once = yes }
+	}
+	state = { name = "construction"
+	}
+
+
+	meshsettings = {
+		name = "pasted__polySurface28Shape"
+		index = 0
+		texture_diffuse = "ringworld_tech_infernal_01_diffuse.dds"
+		texture_normal = "ringworld_tech_infernal_01_normal.dds"
+		texture_specular = "ringworld_tech_infernal_01_specular.dds"
+		shader = "PdxMeshShipDiffuseEmissiveNoise"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+		shader_type = ship
+		uv_animation_speed 		= @flowmap_speed
+		uv_animation_direction 	= { @flowmap_intensity 0.0 }
+	}
+}
+
+entity = {
+	name = "infernal_01_ringworld_seam_entity_01_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+
+	default_state = "idle"
+	state = { name = "idle" state_time = 100 time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" stop_on_state_change = yes } }
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" stop_on_state_change = yes } }
+	}
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_infernal_01_diffuse.dds"
+		texture_normal = "ringworld_seam_infernal_01_normal.dds"
+		texture_specular = "ringworld_seam_infernal_01_specular.dds"
+		shader = "PdxMeshShipDiffuseEmissiveNoise"
+	}
+
+	meshsettings = {
+		name = "polySurface128Shape"
+		index = 0
+		texture_diffuse = "ringworld_construction_infernal_01_diffuse.dds"
+		texture_normal = "ringworld_construction_infernal_01_normal.dds"
+		texture_specular = "ringworld_construction_infernal_01_specular.dds"
+		shader = "PdxMeshShipDiffuseEmissiveNoise"
+	}
+
+	game_data = {
+		size = @ringworld_segment_size
+		emissive_recolor_crunch = 2.0
+		shader_type = ship
+		uv_animation_speed 		= @flowmap_speed
+		uv_animation_direction 	= { @flowmap_intensity 0.0 }
+	}
+}
+
+
+entity = {
+	name = "infernal_01_ringworld_phase_3_construction_entity"
+	cull_radius = 500.0
+	pdxmesh = "ringworld_seam_01_mesh"
+
+	meshsettings = {
+		name = "pCube24Shape"
+		index = 0
+		texture_diffuse = "ringworld_seam_infernal_01_diffuse.dds"
+		texture_normal = "ringworld_seam_infernal_01_normal.dds"
+		texture_specular = "ringworld_seam_infernal_01_specular.dds"
+		shader = "PdxMeshShipDiffuseEmissiveNoise"
+	}
+
+	state = { name = "construction"
+	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
+	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
+
+	attach = { locator1 = "infernal_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "infernal_01_ringworld_tech_entity_01_entity" }
+}
+
+
+
 
 
 ###								Damaged								###
@@ -5240,7 +7395,7 @@ entity = {
 		name = "polesShape"
 		texture_diffuse = "poles_tropical_1_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
@@ -5314,12 +7469,16 @@ entity = {
 		name = "polesShape"
 		texture_diffuse = "poles_tropical_1_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
 	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
 
 }
 
@@ -5357,12 +7516,16 @@ entity = {
 		name = "polesShape"
 		texture_diffuse = "poles_tropical_1_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
 	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
 
 }
 
@@ -5400,12 +7563,16 @@ entity = {
 		name = "polesShape"
 		texture_diffuse = "poles_tropical_1_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
 	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
 
 }
 
@@ -5443,12 +7610,16 @@ entity = {
 		name = "polesShape"
 		texture_diffuse = "poles_tropical_1_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
 	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
 
 }
 
@@ -5486,12 +7657,16 @@ entity = {
 		name = "polesShape"
 		texture_diffuse = "poles_tropical_1_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
 	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
 
 }
 
@@ -5530,12 +7705,16 @@ entity = {
 		name = "polesShape"
 		texture_diffuse = "poles_tropical_1_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
 	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
 
 }
 
@@ -5574,12 +7753,16 @@ entity = {
 		name = "polesShape"
 		texture_diffuse = "poles_tropical_1_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
 	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
 
 }
 
@@ -5618,12 +7801,16 @@ entity = {
 		name = "polesShape"
 		texture_diffuse = "poles_tropical_1_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
 	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
 
 }
 
@@ -5661,11 +7848,13 @@ entity = {
 		name = "polesShape"
 		texture_diffuse = "poles_tropical_1_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
 	}
 
 }
@@ -5704,12 +7893,16 @@ entity = {
 		name = "polesShape"
 		texture_diffuse = "poles_tropical_1_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
 	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
 
 }
 
@@ -5747,12 +7940,16 @@ entity = {
 		name = "polesShape"
 		texture_diffuse = "poles_tropical_1_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
 	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
 
 }
 
@@ -5790,12 +7987,16 @@ entity = {
 		name = "polesShape"
 		texture_diffuse = "poles_tropical_1_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
 	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
 
 }
 
@@ -5833,13 +8034,319 @@ entity = {
 		name = "polesShape"
 		texture_diffuse = "poles_tropical_1_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
 	}
 
+	attach = { planet = "city_planet_surface_ships_entity" }
+
+}
+
+## SYNTHETICS CITY PLANET ##
+entity = {
+	name = "synthetics_01_city_planet_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "city_planet_synthetics_01_diffuse.dds"
+		texture_normal = "city_planet_synthetics_01_normal.dds"
+		texture_specular = "city_planet_synthetics_01_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_thin_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_thin_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_barren_2_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
+	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
+
+	game_data = {
+		emissive_recolor_crunch = 3.0
+	}
+
+}
+
+## Cybernetics City Planet ##
+entity = {
+	name = "cybernetics_01_city_planet_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "city_planet_cybernetics_01_diffuse.dds"
+		texture_normal = "city_planet_cybernetics_01_normal.dds"
+		texture_specular = "city_planet_cybernetics_01_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_smog_01_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_smog_shadow_01_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_barren_2_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
+	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
+
+	game_data = {
+		emissive_recolor_crunch = 3.0
+	}
+
+}
+
+## BIOGENESIS_01 CITY PLANET ##
+entity = {
+	name = "biogenesis_01_city_planet_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "city_planet_biogenesis_01_diffuse.dds"
+		texture_normal = "city_planet_biogenesis_01_normal.dds"
+		texture_specular = "city_planet_biogenesis_01_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_thin_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_thin_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_barren_2_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
+	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
+
+	game_data = {
+		emissive_recolor_crunch = 3.0
+	}
+
+}
+
+## BIOGENESIS_02 CITY PLANET ##
+entity = {
+	name = "biogenesis_02_city_planet_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "city_planet_biogenesis_02_diffuse.dds"
+		texture_normal = "city_planet_biogenesis_02_normal.dds"
+		texture_specular = "city_planet_biogenesis_02_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_thin_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_thin_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_barren_2_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
+	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
+
+	game_data = {
+		emissive_recolor_crunch = 3.0
+	}
+
+}
+
+# Mindwarden City Planet
+entity = {
+	name = "mindwarden_01_city_planet_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "city_planet_mindwarden_01_diffuse.dds"
+		texture_normal = "city_planet_mindwarden_01_normal.dds"
+		texture_specular = "city_planet_mindwarden_01_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_smog_01_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_smog_shadow_01_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_barren_2_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
+	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
+}
+
+# Psionic City Planet
+entity = {
+	name = "psionic_01_city_planet_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "city_planet_psionic_01_diffuse.dds"
+		texture_normal = "city_planet_psionic_01_normal.dds"
+		texture_specular = "city_planet_psionic_01_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_smog_01_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_smog_shadow_01_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_barren_2_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
+	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
 }
 
 ###### Relic World #######
@@ -5913,7 +8420,7 @@ entity = {
 		name = "clouds_shadow_geosphereShape"
 		texture_diffuse = "sea_of_consciousness_clouds_shadow_diffuse.dds"
 		texture_normal = "nonormal.dds"
-		texture_specular = "nospecular.dds"
+		texture_specular = "nospec.dds"
 	}
 
 	default_state = "idle"
@@ -5967,12 +8474,13 @@ entity = {
 	}
 }
 
+
 ##### Hive world
 entity = {
 	name = "hive_world_planet_01_entity"
 	pdxmesh = "planet_clouded_mesh"
 
-	meshsettings = {
+meshsettings = {
 	name = "planet_geosphereShape"
 	texture_diffuse = "infested_diffuse.dds"
 	texture_normal = "infested_normal.dds"
@@ -6000,14 +8508,66 @@ entity = {
 	name = "clouds_shadow_geosphereShape"
 	texture_diffuse = "clouds_medium_shadow_diffuse.dds"
 	texture_normal = "nonormal.dds"
-	texture_specular = "nospecular.dds"
+	texture_specular = "nospec.dds"
 	}
-	
 
-		
+
+
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
 		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_world_hive" } }
 #		start_event = { node = "planet" particle = "hive_planet_effect" keep_particle = yes trigger_once = yes }
+		}
 	}
+
+## Infernal City Planet ##
+entity = {
+	name = "infernal_01_city_planet_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "city_planet_infernal_01_diffuse.dds"
+		texture_normal = "city_planet_infernal_01_normal.dds"
+		texture_specular = "city_planet_infernal_01_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_smog_01_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_smog_shadow_01_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_barren_2_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
+	}
+
+	attach = { planet = "city_planet_surface_ships_entity" }
+
+	game_data = {
+		emissive_recolor_crunch = 3.0
+	}
+
 }

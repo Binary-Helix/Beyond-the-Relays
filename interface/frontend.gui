@@ -14,8 +14,8 @@ guiTypes = {
 		name = "frontend_background"
 		position = { x = 0 y= 0 }
 		size = { width = 100% height = 100%}
-		
-		buttonType = {	
+
+		buttonType = {
 			name = "animated_background"	#optional, you can comment this out and use a normal background if you want to
 			quadTextureSprite = "GFX_frontend_animated_bg"
 			position = { x = 0 y = 0 }
@@ -35,7 +35,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "buttons"
-			position = { x =17 y=0 }	
+			position = { x =17 y=0 }
 			orientation = lower_left
 			origo = lower_left
 
@@ -133,11 +133,13 @@ guiTypes = {
 			name = "game_logo"
 			position = { x = -53 y = -33 } # Makes the logo appear to have the same top and left margin as other elements
 			quadTextureSprite = "gfx_game_logo"
+			position = { x = 0 y = 0 }
 			Orientation = "UPPER_LEFT"
+			scale = 0.65
 		}
 
 		containerWindowType = {
-            name ="menu"
+			name ="menu"
 			size = { width=100% height=100% }
 
 
@@ -160,9 +162,12 @@ guiTypes = {
 				no_clicksound = yes
 			}
 
-				containerWindowType = {
+			@button_large_width = 400
+			@button_large_height = 30 # Reduced by 1 pixel to avoid overlap
+
+			containerWindowType = {
 				name = "buttons"
-				position = { x = -375 y = 200 }
+				position = { x = -65 y = 200 }
 				# The height here is the Y position of the last button on small resolutions + the height of the last button.
 				size = { width = @button_large_width height = 350 }
 				origo = CENTER_RIGHT
@@ -174,9 +179,6 @@ guiTypes = {
 					# The height here is the Y position of the last button on large resolutions + the height of the last button.
 					size = { width = @button_large_width height = 500}
 				}
-
-				@button_large_width = 400
-				@button_large_height = 30 # Reduced by 1 pixel to avoid overlap
 
 				containerWindowType = {
 					name = "start_game_container"
@@ -318,7 +320,7 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "additional_content_container"
-					position = { x = 0 y = 200 }
+					position = { x = -500000 y = 200 }
 					size = { width = @button_large_width height = @button_large_height }
 
 					if_scaled_resolution = {
@@ -331,7 +333,7 @@ guiTypes = {
 						id = "additional_content"
 						name = "button"
 						quadTextureSprite = "GFX_main_menu_button"
-						position = { x = 0 y = 0 }
+						position = { x = -500000 y = 0 }
 						size = { x = @button_large_width y = @button_large_height }
 						oversound = mouse_over
 						clicksound = confirm_click
@@ -341,7 +343,7 @@ guiTypes = {
 						name = "text"
 						font = "jura"
 						text = "FRONT_ADDITIONAL_CONTENT"
-						position = { x = 0 y = -5 }
+						position = { x = -900000 y = -5 }
 						maxWidth = @button_large_width
 						maxHeight = @button_large_height
 						fixedSize = yes
@@ -453,15 +455,15 @@ guiTypes = {
 					}
 				}
 			}
-					
+
 			# iconType = {
 			# 	name = "engine_logo"
 			# 	position = { x = 515 y = -110 }
 			# 	quadTextureSprite = "GFX_clausewitz_logo"
 			# 	#Orientation = "LOWER_RIGHT"
 			# 	scale = 1.0
-			# }	
-			
+			# }
+
 			# iconType = {
 			# 	name = "pi_logo"
 			# 	position = { x = -570 y = -100 }
@@ -481,7 +483,7 @@ guiTypes = {
 		### Additional content browser "What's new"
 		containerWindowType = {
 			name = "additional_content_whats_new"
-			position = { x = 0 y = 0 }
+			position = { x = -900000 y = 0 }
 			size = { width = 250 height = 340 }
 			orientation = lower_right
 			origo = lower_right
@@ -496,7 +498,7 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "items"
-				position = { x = 0 y = 45 }
+				position = { x = -900000 y = 45 }
 				size = { width = 100% }
 				slotSize = { width = 250 height = 155 }
 				max_slots_horizontal = 1
@@ -538,14 +540,14 @@ guiTypes = {
 			spriteType = "GFX_portrait_character"
 			Orientation = "CENTER"
 			position = { x = -500 y= -350 }
-		}	
+		}
 
 		buttonType = {
 			name = "portrait_character_large"
 			spriteType = "GFX_portrait_character_large"
 			Orientation = "CENTER"
 			position = { x = -500 y= -350 }
-		}		
+		}
 
 		containerWindowType = {
 			name = "blocker"
@@ -555,15 +557,15 @@ guiTypes = {
 			background = {
 				name = "hitbox"
 				spriteType = "GFX_ship_designer_blocker"
-			}	
+			}
 		}
 	}
 
 	containerWindowType = {
 		name = "save_item"
-		position = { x =0 y=0 }	
+		position = { x =0 y=0 }
 		size = { width=64 height=48 }
-			
+
 		buttonType = {
 			name = "button"
 			quadTextureSprite = "GFX_button"

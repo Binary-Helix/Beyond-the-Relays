@@ -1,0 +1,66 @@
+tr_btr_existence_adoption = {
+    possible = {
+        has_origin = geth_con_origin
+    }
+    unlocks_agenda = agenda_existence
+    modifier = {
+    ship_friendly_territory_fire_rate_mult = 0.15
+    }
+}
+
+tr_btr_existence_finish = {
+    modifier = {
+        starbase_shipyard_build_speed_mult = 0.25
+        starbase_shipyard_build_cost_mult = -0.1
+        ships_upkeep_mult = -0.15
+        ascension_perks_add = 1
+    }
+}
+
+tr_btr_existence_perpetual_tension = {
+    modifier = {
+        starbase_upgrade_cost_mult = -0.5
+        starbase_upgrade_speed_mult = 0.5
+        army_defense_damage_mult = 0.25
+    }
+}
+
+tr_btr_existence_consensus = {
+    possible = {
+        has_tradition = tr_btr_existence_perpetual_tension
+    }
+    modifier = {
+        planet_jobs_produces_mult = 0.05
+        planet_building_build_speed_mult = 0.25
+        country_unity_produces_mult = 0.1
+        planet_amenities_add = 1000
+    }
+}
+
+tr_btr_existence_unintentional = {
+    possible = {
+        has_tradition = tr_btr_existence_consensus
+    }
+    modifier = {
+        ship_orbital_bombardment_mult = 0.3
+    }
+}
+
+tr_btr_existence_inherent = {
+    possible = { has_tradition = tr_btr_existence_consensus }
+    modifier = {
+        army_starting_experience_add = 100
+        armies_upkeep_mult = -0.5
+        planet_army_build_speed_mult = 0.5
+    }
+}
+
+tr_btr_existence_deathless = {
+    possible = { has_tradition = tr_btr_existence_inherent
+    has_tradition = tr_btr_existence_unintentional }
+    modifier = {
+        leader_initial_skill = 2
+        species_leader_exp_gain = 0.3
+        leaders_upkeep_mult = 2.5
+    }
+}

@@ -27,6 +27,7 @@ ap_defender_of_the_galaxy = {
 		damage_vs_country_type_ai_empire_mult = 0.5
 		damage_vs_country_type_gray_goo_mult = 0.5
 		damage_vs_player_crisis_mult = 0.5
+		add_attunement_the_cradle_of_souls = @ascension_perk_attunement1
 	}
 
 	on_enabled = {
@@ -60,6 +61,7 @@ ap_defender_of_the_galaxy = {
 			damage_vs_country_type_voidworms_crisis_mult = @ap_defender_of_the_galaxy_voidworm_dmg_mult
 			damage_vs_country_type_voidworms_treasure_hunters_mult = @ap_defender_of_the_galaxy_voidworm_dmg_mult
 			damage_vs_country_type_frenzied_voidworms_mult = @ap_defender_of_the_galaxy_voidworm_dmg_mult
+		    add_attunement_the_cradle_of_souls = @ascension_perk_attunement1
 		}
 
 		on_enabled = {
@@ -75,9 +77,8 @@ ap_defender_of_the_galaxy = {
 	potential = {
 		NOR = {
 			has_ascension_perk = ap_defender_of_the_galaxy
-			has_ascension_perk = ap_become_the_crisis
-			has_ascension_perk = ap_cosmogenesis
-			has_ascension_perk = ap_behemoths
+			is_player_crisis = yes
+			has_origin = origin_endbringers # Endbringers are technically a crisis as well
 		}
 	}
 
@@ -92,10 +93,7 @@ ap_defender_of_the_galaxy = {
 						who = prev
 						value > equivalent
 					}
-					OR = {
-						has_ascension_perk = ap_become_the_crisis
-						has_ascension_perk = ap_cosmogenesis
-					}
+					is_player_crisis = yes
 				}
 			}
 		}
@@ -108,8 +106,7 @@ ap_defender_of_the_galaxy = {
 				has_valid_civic = civic_hive_familiar_face
 				any_country = {
 					OR = {
-						has_crisis_level = crisis_level_5
-						has_crisis_level = crisis_cosmogenesis_level_5
+						is_level_5_player_crisis = yes
 						is_crisis_faction = yes
 					}
 				}
@@ -127,8 +124,7 @@ ap_defender_of_the_galaxy = {
 			NOT = {
 				any_country = {
 					OR = {
-						has_crisis_level = crisis_level_5
-						has_crisis_level = crisis_cosmogenesis_level_5
+						is_level_5_player_crisis = yes
 						is_crisis_faction = yes
 					}
 				}
@@ -145,22 +141,15 @@ ap_become_the_crisis = {
 	potential = {
 		has_nemesis = yes
 		NOR = {
-			has_ascension_perk = ap_become_the_crisis
-			has_ascension_perk = ap_cosmogenesis
-			has_ascension_perk = ap_behemoths
+			is_player_crisis = yes
 			has_ascension_perk = ap_defender_of_the_galaxy
 			has_origin = origin_slavers
+			has_origin = origin_endbringers # No additional crisis for Endbringers
 		}
-		has_origin = cerberus_emp_origin
-		has_origin = parnack_reg_origin
-		# is_wilderness_empire = no
+		is_wilderness_empire = no
 	}
 
 	possible = {
-		custom_tooltip = {
-			fail_text = "requires_ascension_perks_3"
-			num_ascension_perks > 2
-		}
 		custom_tooltip = {
 			fail_text = "requires_independence"
 			is_subject = no
@@ -173,13 +162,41 @@ ap_become_the_crisis = {
 			fail_text = "must_not_be_emperor"
 			is_galactic_emperor = no
 		}
-		NOR = {
-			has_ethic = ethic_xenophile
-			has_ethic = ethic_fanatic_xenophile
-			has_ethic = ethic_pacifist
-			has_ethic = ethic_fanatic_pacifist
-			has_civic = civic_machine_servitor
-			has_valid_civic = civic_hive_familiar_face
+		custom_tooltip = {
+			fail_text = "must_finish_shroud_forged_situation"
+			OR = {
+				NOT = { has_origin = origin_shroud_forged }
+				NOT = {
+					any_situation = {
+						is_situation_type = situation_shroud_forged
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "locked_by_shroud_forged_situation"
+			NAND = {
+				has_origin = origin_shroud_forged
+				has_country_flag = finish_shroud_forged_liberation_flag
+			}
+		}
+		if = {
+			limit = {
+				NAND = {
+					has_origin = origin_shroud_forged
+					has_country_flag = shroud_forged_can_become_the_crisis
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_ascension_perks_3"
+				num_ascension_perks > 2
+			}
+			NOR = {
+				is_xenophile = yes
+				is_pacifist = yes
+				has_civic = civic_machine_servitor
+				has_valid_civic = civic_hive_familiar_face
+			}
 		}
 	}
 
@@ -189,6 +206,10 @@ ap_become_the_crisis = {
 			country_event = { id = timeline.69 } # Timeline Become the crisis
 		}
 		activate_crisis_progression = nemesis_path
+	}
+
+	modifier = {
+		refugee_attraction = -0.50
 	}
 
 	ai_weight = {
@@ -212,6 +233,10 @@ ap_become_the_crisis = {
 		modifier = {
 			factor = 0
 			galaxy_percentage < 0.1
+		}
+		modifier = {
+			factor = 0.5
+			is_infernal_empire = yes
 		}
 		modifier = {
 			factor = 2
@@ -278,6 +303,10 @@ ap_cosmogenesis = {
 			}
 		}
 		activate_crisis_progression = cosmogenesis_path
+	}
+
+	modifier = {
+		refugee_attraction = -0.50
 	}
 
 	ai_weight = {
@@ -363,16 +392,16 @@ ap_behemoths = {
 			fail_text = "must_use_bioships"
 			country_uses_bio_ships = yes
 		}
-		NOR = {
-			has_ethic = ethic_xenophile
-			has_ethic = ethic_fanatic_xenophile
-			has_ethic = ethic_pacifist
-			has_ethic = ethic_fanatic_pacifist
-		}
+		is_xenophile = no
+		is_pacifist = no
 	}
 
 	on_enabled = {
 		activate_crisis_progression = behemoth_path
+	}
+
+	modifier = {
+		refugee_attraction = -0.50
 	}
 
 	ai_weight = {
@@ -421,6 +450,109 @@ ap_behemoths = {
 		modifier = {
 			factor = 2
 			galaxy_percentage > 0.2
+		}
+	}
+}
+
+#################
+# INFERNAL ASCENSION PERKS
+#################
+
+ap_galactic_hyperthermia = {
+	potential = {
+		has_infernals = yes
+		NOR = {
+			is_player_crisis = yes
+			has_ascension_perk = ap_defender_of_the_galaxy
+			has_origin = origin_slavers
+			has_origin = origin_endbringers
+			is_wilderness_empire = yes
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_3"
+			OR = {
+				num_ascension_perks > 2
+				has_country_flag = red_giant_discovered_crystallized_entropy
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_independence"
+			is_subject = no
+		}
+		custom_tooltip = {
+			fail_text = "must_not_be_custodian"
+			is_galactic_custodian = no
+		}
+		custom_tooltip = {
+			fail_text = "must_not_be_emperor"
+			is_galactic_emperor = no
+		}
+		NOR = {
+			is_xenophile = yes
+			is_pacifist = yes
+			has_valid_civic = civic_hive_familiar_face
+		}
+	}
+
+	on_enabled = {
+		hidden_effect = {
+			set_ai_personality = hyperthermia_empire
+			country_event = { id = infernals.1000 }
+		}
+		activate_crisis_progression = hyperthermia_path
+	}
+
+	modifier = {
+		refugee_attraction = -0.50
+	}
+
+	ai_weight = {
+		factor = 7.5
+		modifier = {
+			factor = 0
+			NOR = {
+				is_militarist = yes
+				is_xenophobe = yes
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			factor = 10
+			is_homicidal = yes
+		}
+		modifier = {
+			factor = 2
+			has_tradition = tr_supremacy_finish
+		}
+		modifier = {
+			factor = 1.5
+			is_genocidal_infernal = yes
+		}
+		modifier = {
+			factor = 2
+			galaxy_percentage > 0.2
+		}
+		modifier = {
+			factor = 0
+			galaxy_percentage < 0.1
+		}
+		modifier = {
+			factor = 0
+			count_playable_country = {
+				count > 0
+				limit = { has_ascension_perk = ap_galactic_hyperthermia }
+			}
+		}
+		modifier = {
+			factor = 0
+			blocks_disruptive_gameplay = yes
+		}
+		modifier = {
+			factor = 0
+			is_infernal_empire = no
 		}
 	}
 }
@@ -533,8 +665,11 @@ ap_archaeoengineers = {
 ap_lord_of_war = {
 	potential = {
 		host_has_dlc = "Overlord"
-		NOT = { has_ascension_perk = ap_lord_of_war }
-		NOT = {	has_valid_civic = civic_fanatic_purifiers }
+		NOR = {
+			has_ascension_perk = ap_lord_of_war
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_scorched_earth
+		}
 		OR = {
 			is_regular_empire = yes
 			has_valid_civic = civic_machine_tactical_algorithms
@@ -620,6 +755,7 @@ ap_hydrocentric = {
 
 	modifier = {
 		terraforming_ocean_cost_mult = -0.25
+		add_attunement_the_composer_of_strands = @ascension_perk_attunement1
 	}
 
 	ai_weight = {
@@ -665,6 +801,7 @@ ap_enigmatic_engineering = {
 
 	modifier = {
 		intel_encryption_add = 2
+		add_attunement_the_cradle_of_souls = @ascension_perk_attunement1
 	}
 
 	tradition_swap = {
@@ -682,6 +819,7 @@ ap_enigmatic_engineering = {
 		modifier = {
 			ship_cloaking_strength_add = 2
 			intel_encryption_add = 2
+			add_attunement_the_cradle_of_souls = @ascension_perk_attunement1
 		}
 
 		weight = {
@@ -710,10 +848,8 @@ ap_enigmatic_engineering = {
 ap_nihilistic_acquisition = {
 	potential = {
 		host_has_dlc = "Apocalypse"
-		NOT = {
-			has_ascension_perk = ap_nihilistic_acquisition
-		}
 		NOR = {
+			has_ascension_perk = ap_nihilistic_acquisition
 			has_valid_civic = civic_barbaric_despoilers
 			has_origin = origin_slavers
 			has_origin = origin_khan_successor
@@ -729,7 +865,7 @@ ap_nihilistic_acquisition = {
 		OR = {
 			is_authoritarian = yes
 			is_xenophobe = yes
-			has_ethic = ethic_gestalt_consciousness
+			is_gestalt = yes
 		}
 	}
 
@@ -778,6 +914,7 @@ ap_colossus = {
 	modifier = {
 		country_war_exhaustion_mult = -0.15
 		ships_upkeep_mult = -0.05
+		add_attunement_the_eater_of_worlds = @ascension_perk_attunement1
 	}
 
 	ai_weight = {
@@ -841,6 +978,7 @@ ap_world_shaper = {
 
 	modifier = {
 		terraforming_cost_mult = -0.25
+		add_attunement_the_composer_of_strands = @ascension_perk_attunement1
 	}
 
 	on_enabled = {
@@ -870,7 +1008,7 @@ ap_world_shaper = {
 				is_void_dweller_empire = yes
 				has_origin = origin_shattered_ring
 				has_trait = trait_aquatic
-				has_ethic = ethic_gestalt_consciousness
+				is_gestalt = yes
 			}
 		}
 		modifier = {
@@ -905,8 +1043,9 @@ ap_galactic_force_projection = {
 	modifier = {
 		country_power_projection_influence_produces_add = 2
 		country_commander_cap_add = 1
-		country_naval_cap_add = 100
-		command_limit_add = 50
+		country_naval_cap_add = 150
+		command_limit_mult = 0.20
+		add_attunement_the_eater_of_worlds = @ascension_perk_attunement1
 	}
 
 	potential = {
@@ -963,7 +1102,8 @@ ap_interstellar_dominion = {
 	modifier = {
 		country_starbase_influence_cost_mult = -0.20
 		country_claim_influence_cost_mult = -0.20
-		empire_size_systems_mult = -0.5
+		empire_size_systems_mult = -0.25
+		add_attunement_the_eater_of_worlds = @ascension_perk_attunement1
 	}
 
 	potential = {
@@ -1013,6 +1153,7 @@ ap_grasp_the_void = {
 
 	modifier = {
 		country_starbase_capacity_add = 5
+		add_attunement_the_composer_of_strands = @ascension_perk_attunement1
 	}
 
 	potential = {
@@ -1052,6 +1193,8 @@ ap_eternal_vigilance = {
 		shipclass_military_station_damage_mult = 0.25
 		starbase_defense_platform_capacity_add = 5
 		ship_military_station_small_upkeep_mult = -0.5
+		ship_home_territory_fire_rate_mult = 0.2
+		add_attunement_the_cradle_of_souls = @ascension_perk_attunement1
 	}
 
 	triggered_modifier = {
@@ -1061,15 +1204,15 @@ ap_eternal_vigilance = {
 		deep_space_citadel_limit_add = 1
 	}
 
-	on_enabled = {
-		custom_tooltip = ap_eternal_vigilance_tt
-		hidden_effect = {
-			country_event = {
-				id = country.2050
-				days = 180
-			}
-		}
-	}
+#	on_enabled = {
+#		custom_tooltip = ap_eternal_vigilance_tt
+#		hidden_effect = {
+#			country_event = {
+#				id = country.2050
+#				days = 180
+#			}
+#		}
+#	}
 
 	potential = {
 		NOT = {
@@ -1078,10 +1221,18 @@ ap_eternal_vigilance = {
 	}
 
 	ai_weight = {
-		factor = 10
+		factor = 2
 		modifier = {
-			factor = 2
+			factor = 5
 			has_civic = civic_inwards_perfection
+		}
+		modifier = {
+			factor = 5
+			has_civic = civic_sovereign_guardianship
+		}
+		modifier = {
+			factor = 5
+			has_tradition = tr_unyielding_finish
 		}
 		modifier = {
 			factor = 1.5
@@ -1110,6 +1261,7 @@ ap_galactic_contender = {
 		damage_vs_country_type_fallen_empire_mult = @ap_galactic_contender_dmg_mult
 		damage_vs_country_type_awakened_fallen_empire_mult = @ap_galactic_contender_dmg_mult
 		damage_vs_country_type_gate_builders_mult = @ap_galactic_contender_dmg_mult
+		add_attunement_the_cradle_of_souls = @ascension_perk_attunement1
 	}
 
 	tradition_swap = {
@@ -1131,6 +1283,7 @@ ap_galactic_contender = {
 			damage_vs_country_type_voidworms_crisis_mult = @ap_galactic_contender_dmg_mult
 			damage_vs_country_type_voidworms_treasure_hunters_mult = @ap_galactic_contender_dmg_mult
 			damage_vs_country_type_frenzied_voidworms_mult = @ap_galactic_contender_dmg_mult
+			add_attunement_the_cradle_of_souls = @ascension_perk_attunement1
 		}
 
 		weight = {
@@ -1144,10 +1297,7 @@ ap_galactic_contender = {
 		}
 		any_relation = {
 			has_communications = root
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
+			is_fallen_empire = yes
 		}
 	}
 
@@ -1175,17 +1325,15 @@ ap_galactic_contender = {
 
 ap_technological_ascendancy = {
 	modifier = {
-		all_technology_research_speed = 0.1
+		rare_tech_draw_chance_mult = 0.5
 	}
+
+	custom_tooltip_with_modifiers = ap_technological_ascendancy_tt
 
 	potential = {
 		NOT = {
 			has_ascension_perk = ap_technological_ascendancy
 		}
-	}
-
-	on_enabled = {
-		custom_tooltip = "ap_technological_ascendancy_rare"
 	}
 
 	ai_weight = {
@@ -1211,6 +1359,7 @@ ap_one_vision = {
 			is_wilderness_empire = no
 		}
 		pop_government_ethic_attraction = 0.50
+		add_attunement_the_cradle_of_souls = @ascension_perk_attunement1
 	}
 
 	triggered_modifier = {
@@ -1258,10 +1407,11 @@ ap_consecrated_worlds = {
 		NOT = {
 			has_ascension_perk = ap_consecrated_worlds
 		}
-		OR = {
-			has_ethic = ethic_spiritualist
-			has_ethic = ethic_fanatic_spiritualist
-		}
+		is_spiritualist = yes
+	}
+
+	modifier = {
+		add_attunement_the_composer_of_strands = @ascension_perk_attunement1
 	}
 
 	ai_weight = {
@@ -1275,6 +1425,7 @@ ap_mastery_of_nature = {
 	}
 	modifier = {
 		deposit_blockers_cost_mult = -0.33
+		add_attunement_the_instrument_of_desire = @ascension_perk_attunement1
 	}
 
 	potential = {
@@ -1317,7 +1468,7 @@ ap_mastery_of_nature = {
 
 ap_imperial_prerogative = {
 	modifier = {
-		empire_size_colonies_mult = -0.50
+		empire_size_colonies_mult = -0.25
 		country_official_cap_add = 2
 	}
 
@@ -1357,6 +1508,7 @@ ap_executive_vigor = {
 	modifier = {
 		country_edict_fund_add = 100
 		council_agenda_progress_speed = 0.15
+		add_attunement_the_instrument_of_desire = @ascension_perk_attunement1
 	}
 
 	potential = {
@@ -1399,16 +1551,13 @@ ap_shared_destiny = {
 		divided_patrongage_max_subjects = 1
 		specialist_subject_conversion_time_mult = -0.2
 		envoys_add = 2
+		add_attunement_the_instrument_of_desire = @ascension_perk_attunement1
 	}
 
 	potential = {
 		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
+			is_homicidal = yes
 			has_valid_civic = civic_inwards_perfection
-			has_valid_civic = civic_machine_terminator
-		}
-		NOT = {
 			has_ascension_perk = ap_shared_destiny
 		}
 	}
@@ -1746,12 +1895,19 @@ ap_machine_worlds = {
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_technology_tech_climate_restoration"
-			has_technology = tech_climate_restoration
+			OR = {
+				has_technology = tech_climate_restoration
+				has_origin = origin_machine
+			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_ascension_perks_2"
 			num_ascension_perks > 1
 		}
+	}
+
+	modifier = {
+		add_attunement_the_instrument_of_desire = @ascension_perk_attunement1
 	}
 
 	ai_weight = {
@@ -1793,6 +1949,10 @@ ap_hive_worlds = {
 		}
 	}
 
+	modifier = {
+		add_attunement_the_composer_of_strands = @ascension_perk_attunement1
+	}
+
 	ai_weight = {
 		factor = 100
 	}
@@ -1831,6 +1991,10 @@ ap_arcology_project = {
 		custom_tooltip = "decision_arcology_project_effects"
 	}
 
+	modifier = {
+		add_attunement_the_instrument_of_desire = @ascension_perk_attunement1
+	}
+
 	ai_weight = {
 		factor = 10
 		modifier = {
@@ -1864,6 +2028,8 @@ ap_xeno_compatibility = {
 
 	modifier = {
 		planet_resettlement_unemployed_destination_mult = 0.33
+		refugee_attraction = 1
+		add_attunement_the_composer_of_strands = @ascension_perk_attunement1
 	}
 
 	possible = {
@@ -1918,6 +2084,7 @@ ap_universal_transactions = {
 	modifier = {
 		country_official_cap_add = 1
 		planet_branch_offices_cost_mult = -0.15
+		add_attunement_the_instrument_of_desire = @ascension_perk_attunement1
 	}
 
 	on_enabled = {
@@ -1938,6 +2105,7 @@ ap_detox = {
 		host_has_dlc = "Toxoids Species Pack"
 		NOT = {
 			has_ascension_perk = ap_detox
+			has_country_flag = knights_detox
 		}
 	}
 
@@ -1950,6 +2118,10 @@ ap_detox = {
 
 	on_enabled = {
 		custom_tooltip = "detox_tox_worlds"
+	}
+
+	modifier = {
+		add_attunement_the_composer_of_strands = @ascension_perk_attunement1
 	}
 
 	ai_weight = {
@@ -1989,6 +2161,7 @@ ap_mechromancy = {
 		l_slot_weapon_damage_mult = 0.15
 		x_slot_weapon_damage_mult = 0.15
 		t_slot_weapon_damage_mult = 0.15
+		add_attunement_the_eater_of_worlds = @ascension_perk_attunement1
 	}
 
 	on_enabled = {
@@ -2059,6 +2232,7 @@ ap_weather_control = {
 	}
 
 	modifier = {
+		add_attunement_the_cradle_of_souls = @ascension_perk_attunement1
 	}
 
 	on_enabled = {

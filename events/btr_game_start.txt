@@ -39,7 +39,7 @@ event = {
 	}
 }
 
-### Set HighGrav Planet Classes
+### Set HighGrav Planet Classes and HighGrav and Dextro Modifiers
 event = {
 	id = btr_game_start.2
 	hide_window = yes
@@ -252,14 +252,14 @@ event = {
 }
 
 # Generate Starting Subclasses and Entities
-event = {
+planet_event = {
 	id = btr_game_start.3
 	hide_window = yes
 
 	is_triggered_only = yes
 
 	immediate = {
-		every_galaxy_planet = {
+		if = {
 			limit = {
 				is_capital = no
 				solar_system = { NOT = { has_star_flag = sol_system }}
@@ -1970,8 +1970,8 @@ event = {
 					5 = { change_pc = pc_eezo_asteroid reroll_planet = yes }
 				}
 			}
+			generate_btr_start_deposits_and_blockers = yes
 		}
-
 		log = "btr_game_start.3 - Subclass Modifiers and Entities Set"
 	}
 }
@@ -1993,7 +1993,7 @@ country_event = {
 				}
 				set_canon_starting_technologies = yes
 				#generate_canon_starting_resources = yes
-				generate_canon_playtest_resources = yes
+				generate_canon_playtest_resources = yes # ONLY FOR DETERMINING EACH EMPIRE'S STARTING SETUP AND RESOURCES (Play as empire with Playtest Murder (btr_game_start.13) active, play 50 years and make note of every aspect of empire status.)
 			}
 			log = "Canon Starting Techs and Resources Given"
 		}
@@ -2074,6 +2074,124 @@ country_event = {
 			#log = "Independent World Territory Established"
 		}
 		log = "btr_game_start.4 - Completed"
+	}
+}
+
+planet_event = {
+	id = btr_game_start.5
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { }
+	immediate = {
+		log = "btr_game_start.5 - Started"
+		if = {
+			limit = {
+				is_btr_canon_map = yes
+			}
+			generate_btr_start_deposits_and_blockers = yes
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = asari_republics_colonies_created
+					}
+				}
+				generate_asari_republics_colonies = yes
+				log = "Asari Republics Colonies Spawned"
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = salarian_union_colonies_created
+					}
+				}
+				generate_salarian_union_colonies = yes
+				log = "Salarian Union Colonies Spawned"
+			}
+			# 	if = {
+			# 		limit = {
+			# 			NOT = {
+			# 				has_global_flag = turian_hierarchy_colonies_created
+			# 			}
+			# 		}
+			# 		generate_turian_hierarchy_colonies = yes
+			# 		log = "Turian Hierarchy Colonies Spawned"
+			# 	}
+			# 	if = {
+			# 		limit = {
+			# 			NOT = {
+			# 				has_global_flag = systems_alliance_colonies_created
+			# 			}
+			# 		}
+			# 		generate_systems_alliance_colonies = yes
+			# 		log = "Systems Alliance Colonies Spawned"
+			# 	}
+			# 	if = {
+			# 		limit = {
+			# 			NOT = {
+			# 				has_global_flag = courts_of_dekuuna_colonies_created
+			# 			}
+			# 		}
+			# 		generate_courts_of_dekuuna_colonies = yes
+			# 		log = "Courts of Dekuuna Colonies Spawned"
+			# 	}
+			# 	if = {
+			# 		limit = {
+			# 			NOT = {
+			# 				has_global_flag = vol_protectorate_colonies_created
+			# 			}
+			# 		}
+			# 		generate_vol_protectorate_colonies = yes
+			# 		log = "Vol Protectorate Colonies Spawned"
+			# 	}
+			# 	if = {
+			# 		limit = {
+			# 			NOT = {
+			# 				has_global_flag = illuminated_primacy_colonies_created
+			# 			}
+			# 		}
+			# 		generate_illuminated_primacy_colonies = yes
+			# 		log = "Illuminated Primacy Colonies Spawned"
+			# 	}
+			# 	if = {
+			# 		limit = {
+			# 			NOT = {
+			# 				has_global_flag = hegemony_of_kharshan_colonies_created
+			# 			}
+			# 		}
+			# 		generate_hegemony_of_kharshan_colonies = yes
+			# 		log = "Hegemony of Khar'shan Colonies Spawned"
+			# 	}
+			# 	if = {
+			# 		limit = {
+			# 			NOT = {
+			# 				has_global_flag = sedriicae_collective_colonies_created
+			# 			}
+			# 		}
+			# 		generate_sedriicae_collective_colonies = yes
+			# 		log = "Sed'riicae Collective Colonies Spawned"
+			# 	}
+			# 	if = {
+			# 		limit = {
+			# 			NOT = {
+			# 				has_global_flag = geth_consensus_colonies_created
+			# 			}
+			# 		}
+			# 		generate_geth_consensus_colonies = yes
+			# 		log = "Geth Consensus Colonies Spawned"
+			# 	}
+			# 	if = {
+			# 		limit = {
+			# 			NOT = {
+			# 				has_global_flag = disciples_of_nazara_colonies_created
+			# 			}
+			# 		}
+			# 		generate_disciples_of_nazara_colonies = yes
+			# 		log = "Disciples of Nazara Colonies Spawned"
+			# 	}
+			# }
+
+			log = "btr_start_country.4 - Completed"
+		}
 	}
 }
 
@@ -2229,33 +2347,6 @@ country_event = {
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
 # 		every_country = {
 # 			limit = { is_ai = no }
 # 			#country_event = { id = country.900 days = 460 random = 60 }

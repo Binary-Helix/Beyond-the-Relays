@@ -1,0 +1,93 @@
+tr_btr_frontierism_adoption = {
+    #possible = {
+    #}
+    unlocks_agenda = agenda_frontier
+    modifier = {
+        ship_colonizer_cost_mult = -0.5
+        shipsize_colonizer_build_speed_mult = 0.2
+        #Officials generate influence, handled in the leaders script
+    }
+}
+
+tr_btr_frontierism_finish = {
+    modifier = {
+        #custom_tooltip = btr_vigilance_finish_desc
+        colony_start_urban_districts_add = 1
+      #  colony_start_num_pops_add = 100
+        #TODO make admin buildings provide +4 housing
+        ascension_perks_add = 1
+        #Also unlocks 4 special resolutions
+    }
+}
+
+tr_btr_frontierism_calls = {
+    #Handled through galcom.300
+    modifier = {
+        #TODO Make ship shelters give a planet modifier "Call of the Frontier" giving 40% immigration pull and 10 amenities
+    }
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_frontierism_where = {
+    possible = {
+        has_tradition = tr_btr_frontierism_calls
+    }
+    modifier = {
+        planet_colony_development_speed_mult = 0.5
+        colony_start_urban_districts_add = 1
+        #colony_start_num_pops_add = 100
+
+    }
+
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_frontierism_build = {
+    possible = {
+        has_tradition = tr_btr_frontierism_calls
+    }
+    modifier = {
+        planet_building_build_speed_mult = 0.2
+        planet_buildings_cost_mult = -0.1
+    }
+    #Handled through galcom.305
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_frontierism_laying = {
+    possible = {
+        has_tradition = tr_btr_frontierism_where
+    }
+    modifier = {
+        empire_size_pops_mult = -0.2
+        empire_size_colonies_mult = -0.1
+    }
+    #Handled through galcom.310-315
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+"tr_btr_frontierism_like" = {
+    possible = {
+        has_tradition = tr_btr_frontierism_build
+    }
+
+    modifier = {
+       leader_lifespan_add = 10
+        habitability_floor_mult = 0.1
+        planet_pops_food_upkeep_mult = -0.1
+    }
+
+    ai_weight = {
+        factor = 5000
+    }
+}

@@ -3319,10 +3319,10 @@ district_terraforming_complex = {
 		planet_housing_add = 100
 	}
 	
-	inline_script = {
-		script = jobs/terraformers_add
-		AMOUNT = 200
-	}
+	# inline_script = {
+	# 	script = jobs/terraformers_add
+	# 	AMOUNT = 200
+	# }
 }
 
 
@@ -3354,8 +3354,8 @@ district_terraforming_complex = {
 		# category = station_complex
 		# cost = {
 			# minerals = @station_cost
-			light_alloys = 200
-			uranium = 50
+			#light_alloys = 200
+			#uranium = 50
 		# }
 		# upkeep = {
 			# energy = @station_maintenance
@@ -3363,8 +3363,8 @@ district_terraforming_complex = {
 	# }
 
 	# planet_modifier = {
-		# planet_housing_add = 1
-		# job_bureaucrat_add = 2
+		# planet_housing_add = 100
+		# job_bureaucrat_add = 200
 	# }
 
 	# triggered_desc = {
@@ -3407,8 +3407,8 @@ district_terraforming_complex = {
 		# category = station_complex
 		# cost = {
 			# minerals = @station_cost
-			light_alloys = 200
-			uranium = 50
+			#light_alloys = 200
+			#uranium = 50
 		# }
 		# upkeep = {
 			# energy = @station_maintenance
@@ -3416,8 +3416,8 @@ district_terraforming_complex = {
 	# }
 
 	# planet_modifier = {
-		# planet_housing_add = 1
-		# job_manager_add = 2
+		# planet_housing_add = 100
+		# job_manager_add = 200
 	# }
 
 	# triggered_desc = {
@@ -3453,8 +3453,8 @@ district_terraforming_complex = {
 		# category = station_complex
 		# cost = {
 			# minerals = @station_cost
-			light_alloys = 200
-			uranium = 50
+			#light_alloys = 200
+			#uranium = 50
 		# }
 		# upkeep = {
 			# energy = @station_maintenance
@@ -3462,8 +3462,8 @@ district_terraforming_complex = {
 	# }
 
 	# planet_modifier = {
-		# planet_housing_add = 1
-		# job_coordinator_add = 2
+		# planet_housing_add = 100
+		# job_coordinator_add = 200
 	# }
 
 	# triggered_desc = {
@@ -3516,8 +3516,8 @@ district_terraforming_complex = {
 		# category = station_complex
 		# cost = {
 			# minerals = @station_cost
-			light_alloys = 200
-			uranium = 50
+			#light_alloys = 200
+			#uranium = 50
 		# }
 		# upkeep = {
 			# energy = @station_maintenance
@@ -3525,8 +3525,8 @@ district_terraforming_complex = {
 	# }
 	
 	# planet_modifier = {
-		# planet_housing_add = 1
-		# job_necro_apprentice_add = 2
+		# planet_housing_add = 100
+		# job_necro_apprentice_add = 200
 	# }
 
 	# triggered_desc = {
@@ -3617,8 +3617,8 @@ district_terraforming_complex = {
 		# category = station_complex
 		# cost = {
 			# minerals = @station_cost
-			light_alloys = 200
-			uranium = 50
+			#light_alloys = 200
+			#uranium = 50
 		# }
 		# upkeep = {
 			# energy = @station_maintenance
@@ -3626,7 +3626,7 @@ district_terraforming_complex = {
 	# }
 
 	# planet_modifier = {
-		# planet_housing_add = 1
+		# planet_housing_add = 100
 	# }
 
 	# triggered_planet_modifier = {
@@ -3635,7 +3635,7 @@ district_terraforming_complex = {
 			# owner = { is_regular_empire = yes }
 		# }
 		# modifier = {
-			# job_roboticist_add = 1
+			# job_roboticist_add = 100
 		# }
 	# }
 
@@ -3645,7 +3645,7 @@ district_terraforming_complex = {
 			# owner = { is_machine_empire = yes }
 		# }
 		# modifier = {
-			# job_replicator_add = 1
+			# job_replicator_add = 100
 		# }
 	# }
 
@@ -3692,8 +3692,8 @@ district_terraforming_complex = {
 		# category = station_complex
 		# cost = {
 			# minerals = @station_cost
-			light_alloys = 200
-			uranium = 50
+			#light_alloys = 200
+			#uranium = 50
 		# }
 		# upkeep = {
 			# energy = @station_maintenance
@@ -3701,7 +3701,7 @@ district_terraforming_complex = {
 	# }
 
 	# planet_modifier = {
-		# planet_housing_add = 2
+		# planet_housing_add = 200
 	# }
 
 	# triggered_planet_modifier = {
@@ -3710,7 +3710,7 @@ district_terraforming_complex = {
 			# owner = { is_gestalt = no }
 		# }
 		# modifier = {
-			# job_soldier_add = 2
+			# job_soldier_add = 200
 		# }
 	# }
 	# triggered_planet_modifier = {
@@ -3719,7 +3719,7 @@ district_terraforming_complex = {
 			# owner = { is_gestalt = yes }
 		# }
 		# modifier = {
-			# job_warrior_drone_add = 2
+			# job_warrior_drone_add = 200
 		# }
 	# }
 
@@ -3758,8 +3758,8 @@ district_terraforming_complex = {
 		# category = station_complex
 		# cost = {
 			# minerals = @station_cost
-			light_alloys = 200
-			uranium = 50
+			#light_alloys = 200
+			#uranium = 50
 		# }
 		# upkeep = {
 			# energy = @station_maintenance
@@ -3768,7 +3768,7 @@ district_terraforming_complex = {
 
 	# planet_modifier = {
 		# planet_orbital_bombardment_damage = -0.01
-		# planet_housing_add = 1
+		# planet_housing_add = 100
 	# }
 
 	# triggered_planet_modifier = {
@@ -3777,7 +3777,7 @@ district_terraforming_complex = {
 			# owner = { is_gestalt = no }
 		# }
 		# modifier = {
-			# job_soldier_add = 1
+			# job_soldier_add = 100
 		# }
 	# }
 	# triggered_planet_modifier = {
@@ -3786,7 +3786,7 @@ district_terraforming_complex = {
 			# owner = { is_gestalt = yes }
 		# }
 		# modifier = {
-			# job_warrior_drone_add = 1
+			# job_warrior_drone_add = 100
 		# }
 	# }
 
@@ -3851,8 +3851,8 @@ district_terraforming_complex = {
 		# category = station_complex
 		# cost = {
 			# minerals = @station_cost
-			light_alloys = 200
-			uranium = 50
+			#light_alloys = 200
+		#	uranium = 50
 		# }
 		# upkeep = {
 			# energy = @station_maintenance
@@ -3860,8 +3860,8 @@ district_terraforming_complex = {
 	# }
 
 	# planet_modifier = {
-		# planet_housing_add = 1
-		# job_bureaucrat_add = 2
+		# planet_housing_add = 100
+		# job_bureaucrat_add = 200
 		# pop_ethic_spiritualist_attraction_mult = 0.05
 	# }
 
@@ -3915,8 +3915,8 @@ district_terraforming_complex = {
 		# category = station_complex
 		# cost = {
 			# minerals = @station_cost
-			light_alloys = 200
-			uranium = 50
+			#light_alloys = 200
+			#uranium = 50
 		# }
 		# upkeep = {
 			# energy = @station_maintenance
@@ -3924,9 +3924,9 @@ district_terraforming_complex = {
 	# }
 
 	# planet_modifier = {
-		# planet_housing_add = 1
-		# job_death_priest_add = 1
-		# job_mortal_initiate_add = 1
+		# planet_housing_add = 100
+		# job_bureaucrat_add = 100
+		# job_mortal_initiate_add = 100
 		# pop_ethic_spiritualist_attraction_mult = 0.1
 	# }
 
@@ -3969,8 +3969,8 @@ district_terraforming_complex = {
 		# category = station_complex
 		# cost = {
 			# minerals = @station_cost
-			light_alloys = 200
-			uranium = 50
+			#light_alloys = 200
+			#uranium = 50
 		# }
 		# upkeep = {
 			# energy = @station_maintenance
@@ -3988,7 +3988,7 @@ district_terraforming_complex = {
 	# }
 
 	# planet_modifier = {
-		# planet_housing_add = 1
+		# planet_housing_add = 100
 	# }
 	
 	# triggered_planet_modifier = {
@@ -3997,8 +3997,8 @@ district_terraforming_complex = {
 			# owner = { has_valid_civic = civic_warrior_culture }
 		# }
 		# modifier = {
-			# job_duelist_add = 1
-			# job_culture_worker_add = 1
+			# job_duelist_add = 100
+			# job_culture_worker_add = 100
 		# }
 	# }
 
@@ -4008,7 +4008,7 @@ district_terraforming_complex = {
 			# owner = { has_valid_civic = civic_slaver_guilds }
 		# }
 		# modifier = {
-			# job_gladiator_add = 2
+			# job_gladiator_add = 200
 		# }
 	# }
 

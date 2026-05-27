@@ -1,56 +1,48 @@
 
 portraits = {
-	# Batarian
-	btr_batarian_female_01 = {	entity = "portrait_human_female_01_entity"	clothes_selector = "btr_batarian_female_outfit" attachment_selector = "no_texture"	greeting_sound = "bta_batarian_greeting" 
+	btr_batarian_female_01 = {
+		entity = "portrait_btr_batarian_female_01_entity"
+		clothes_selector = "btr_batarian_female_01_clothes_01"
+		attachment_selector = "btr_batarian_female_facepaint_1"
+		greeting_sound = "bta_batarian_greeting"
+
 		character_textures = {
-			"gfx/models/portraits/btr_08_batarian/btr_batarian_female_01.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_female_body_01.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_female_body_02.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_female_body_03.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_female_body_04.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_female_body_05.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_female_body_06.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_female_body_07.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_female_body_08.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_female_body_09.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_female_body_10.dds"
 		}
-	}		
-	btr_batarian_female_02 = {	entity = "portrait_human_female_01_entity"	clothes_selector = "btr_batarian_female_outfit" attachment_selector = "no_texture"	greeting_sound = "bta_batarian_greeting" 
-		character_textures = {
-			"gfx/models/portraits/btr_08_batarian/btr_batarian_female_02.dds"
-		}
-	}	
-	btr_batarian_female_03 = {	entity = "portrait_human_female_01_entity"	clothes_selector = "btr_batarian_female_outfit" attachment_selector = "no_texture"	greeting_sound = "bta_batarian_greeting" 
-		character_textures = {
-			"gfx/models/portraits/btr_08_batarian/btr_batarian_female_03.dds"
-		}
-	}	
-	btr_batarian_female_04 = {	entity = "portrait_human_female_01_entity"	clothes_selector = "btr_batarian_female_outfit" attachment_selector = "no_texture"	greeting_sound = "bta_batarian_greeting" 
-	character_textures = {
-		"gfx/models/portraits/btr_08_batarian/btr_batarian_female_04.dds"
+
+		custom_attachment_label = "FACE_PAINT"
 	}
-	}	
-	btr_batarian_female_05 = {	entity = "portrait_human_female_01_entity"	clothes_selector = "btr_batarian_female_outfit" attachment_selector = "no_texture"	greeting_sound = "bta_batarian_greeting" 
-	character_textures = {
-		"gfx/models/portraits/btr_08_batarian/btr_batarian_female_05.dds"
+
+	btr_batarian_male_01 = {
+		entity = "portrait_btr_batarian_male_01_entity"
+		clothes_selector = "btr_batarian_male_01_clothes_01"
+		attachment_selector = "btr_batarian_male_facepaint_1"
+		greeting_sound = "bta_batarian_greeting"
+
+		character_textures = {
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_body_01.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_body_02.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_body_03.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_body_04.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_body_05.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_body_06.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_body_07.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_body_08.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_body_09.dds"
+			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_body_10.dds"
+		}
+
+		custom_attachment_label = "FACE_PAINT"
 	}
-	}	
-	btr_batarian_male_01 = {	entity = "portrait_human_male_01_entity"	clothes_selector = "btr_batarian_male_outfit" attachment_selector = "no_texture"	greeting_sound = "bta_batarian_greeting" 
-		character_textures = {
-			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_01.dds"
-		}
-	}	 
-	btr_batarian_male_02 = {	entity = "portrait_human_male_01_entity"	clothes_selector = "btr_batarian_male_outfit" attachment_selector = "no_texture"	greeting_sound = "bta_batarian_greeting" 
-		character_textures = {
-			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_02.dds"
-		}
-	}	 
-	btr_batarian_male_03 = {	entity = "portrait_human_male_01_entity"	clothes_selector = "btr_batarian_male_outfit" attachment_selector = "no_texture"	greeting_sound = "bta_batarian_greeting" 
-		character_textures = {
-			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_03.dds"
-		}
-	}	
-	btr_batarian_male_04 = {	entity = "portrait_human_male_01_entity"	clothes_selector = "btr_batarian_male_outfit" attachment_selector = "no_texture"	greeting_sound = "bta_batarian_greeting" 
-		character_textures = {
-			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_04.dds"
-		}
-	}	
-	btr_batarian_male_05 = {	entity = "portrait_human_male_01_entity"	clothes_selector = "btr_batarian_male_outfit" attachment_selector = "no_texture"	greeting_sound = "bta_batarian_greeting" 
-		character_textures = {
-			"gfx/models/portraits/btr_08_batarian/btr_batarian_male_05.dds"
-		}
-	}	
 }
 
 portrait_groups = {
@@ -63,10 +55,6 @@ portrait_groups = {
 				}
 				portraits = {
 					btr_batarian_male_01
-					btr_batarian_male_02
-					btr_batarian_male_03
-					btr_batarian_male_04
-					btr_batarian_male_05
 				}
 			}
 			add = {
@@ -75,14 +63,10 @@ portrait_groups = {
 				}
 				portraits = {
 					btr_batarian_female_01
-					btr_batarian_female_02
-					btr_batarian_female_03
-					btr_batarian_female_04
-					btr_batarian_female_05
 				}
 			}
 
-		}		
+		}
 
 		#species scope
 		species = { #generic portrait for a species
@@ -92,18 +76,10 @@ portrait_groups = {
 				}
 				portraits = {
 					btr_batarian_female_01
-					btr_batarian_female_02
-					btr_batarian_female_03
-					btr_batarian_female_04
-					btr_batarian_female_05
 					btr_batarian_male_01
-					btr_batarian_male_02
-					btr_batarian_male_03
-					btr_batarian_male_04
-					btr_batarian_male_05
 				}
 			}
-		}		
+		}
 
 		#pop scope
 		pop_group = { #for a specific pop
@@ -113,15 +89,7 @@ portrait_groups = {
 				}
 				portraits = {
 					btr_batarian_female_01
-					btr_batarian_female_02
-					btr_batarian_female_03
-					btr_batarian_female_04
-					btr_batarian_female_05
 					btr_batarian_male_01
-					btr_batarian_male_02
-					btr_batarian_male_03
-					btr_batarian_male_04
-					btr_batarian_male_05
 				}
 			}
 		}
@@ -134,10 +102,6 @@ portrait_groups = {
 				}
 				portraits = {
 					btr_batarian_female_01
-					btr_batarian_female_02
-					btr_batarian_female_03
-					btr_batarian_female_04
-					btr_batarian_female_05
 				}
 			}
 			add = {
@@ -146,15 +110,10 @@ portrait_groups = {
 				}
 				portraits = {
 					btr_batarian_male_01
-					btr_batarian_male_02
-					btr_batarian_male_03
-					btr_batarian_male_04
-					btr_batarian_male_05
 				}
 			}
 		}
 
-			
 		#leader scope 
 		ruler = {
 			add = {
@@ -163,10 +122,6 @@ portrait_groups = {
 				}
 				portraits = {
 					btr_batarian_female_01
-					btr_batarian_female_02
-					btr_batarian_female_03
-					btr_batarian_female_04
-					btr_batarian_female_05
 				}
 			}
 			add = {
@@ -175,10 +130,6 @@ portrait_groups = {
 				}
 				portraits = {
 					btr_batarian_male_01
-					btr_batarian_male_02
-					btr_batarian_male_03
-					btr_batarian_male_04
-					btr_batarian_male_05
 				}
 			}
 		}

@@ -184,6 +184,7 @@ uses_district_industrial = {
 		uses_district_set = hive_world
 		uses_district_set = machine_world
 		uses_district_set = shattered_ring_world
+		uses_district_set = volcanic_world
 	}
 }
 
@@ -200,6 +201,7 @@ ideal_planet_is_dry = {
 		ideal_planet_class = pc_desert
 		ideal_planet_class = pc_arid
 		ideal_planet_class = pc_savannah
+		ideal_planet_class = pc_volcanic
 	}
 }
 
@@ -730,9 +732,8 @@ has_any_research_zone = {
 
 has_any_agriculture_zone = {
 	OR = {
-		has_zone = {
-			zone = zone_food
-		}
+		has_any_normal_agriculture_zone = yes
+		has_any_exotic_gases_zone = yes
 		has_zone = {
 			zone = zone_anglers
 		}
@@ -743,13 +744,18 @@ has_any_agriculture_zone = {
 			zone = zone_agrarian_anglers
 		}
 		has_zone = {
-			zone = zone_exotic_gases
+			zone = zone_habitat_hydroponics
+		}
+	}
+}
+
+has_any_normal_agriculture_zone = {
+	OR = {
+		has_zone = {
+			zone = zone_food
 		}
 		has_zone = {
 			zone = zone_food_wilderness
-		}
-		has_zone = {
-			zone = zone_habitat_hydroponics
 		}
 		has_zone = {
 			zone = zone_food_ring_world
@@ -760,19 +766,40 @@ has_any_agriculture_zone = {
 	}
 }
 
+has_any_exotic_gases_zone = {
+	OR = {
+		has_zone = {
+			zone = zone_exotic_gases
+		}
+		has_zone = {
+			zone = zone_exotic_gases_nexus
+		}
+		has_zone = {
+			zone = zone_exotic_gases_hive
+		}
+		has_zone = {
+			zone = zone_habitat_exotic_gases
+		}
+	}
+}
+
 has_any_generator_zone = {
+	OR = {
+		has_any_normal_generator_zone = yes
+		has_volatile_motes_zone = yes
+		has_zone = {
+			zone = zone_habitat_hydroponics
+		}
+	}
+}
+
+has_any_normal_generator_zone = {
 	OR = {
 		has_zone = {
 			zone = zone_energy
 		}
 		has_zone = {
-			zone = zone_volatile_motes
-		}
-		has_zone = {
 			zone = zone_energy_wilderness
-		}
-		has_zone = {
-			zone = zone_habitat_hydroponics
 		}
 		has_zone = {
 			zone = zone_energy_ring_world
@@ -786,17 +813,36 @@ has_any_generator_zone = {
 	}
 }
 
-has_any_mining_zone = {
+has_volatile_motes_zone = {
 	OR = {
 		has_zone = {
-			zone = zone_minerals
+			zone = zone_volatile_motes
 		}
 		has_zone = {
-			zone = zone_betharian
+			zone = zone_volatile_motes_nexus
 		}
+		has_zone = {
+			zone = zone_volatile_motes_hive
+		}
+		has_zone = {
+			zone = zone_habitat_volatile_motes
+		}
+	}
+}
+
+has_any_mining_zone = {
+	OR = {
+		has_any_normal_mining_zone = yes
+		has_any_rare_crystals_zone = yes
+		has_any_betharian_zone = yes
 		has_zone = {
 			zone = zone_subterranean_urban
 		}
+	}
+}
+
+has_any_normal_mining_zone = {
+	OR = {
 		has_zone = {
 			zone = zone_rare_crystals
 		}
@@ -808,6 +854,37 @@ has_any_mining_zone = {
 		}
 		has_zone = {
 			zone = zone_minerals_hive
+		}
+	}
+}
+
+has_any_rare_crystals_zone = {
+	OR = {
+		has_zone = {
+			zone = zone_rare_crystals
+		}
+		has_zone = {
+			zone = zone_rare_crystals_nexus
+		}
+		has_zone = {
+			zone = zone_rare_crystals_hive
+		}
+		has_zone = {
+			zone = zone_habitat_rare_crystals
+		}
+	}
+}
+
+has_any_betharian_zone = {
+	OR = {
+		has_zone = {
+			zone = zone_betharian
+		}
+		has_zone = {
+			zone = zone_betharian_nexus
+		}
+		has_zone = {
+			zone = zone_betharian_hive
 		}
 	}
 }
@@ -986,6 +1063,9 @@ planet_is_habitat_equivalent = {
 }
 
 planet_is_ecu_equivalent = {
+	NOT = {
+		has_deposit = d_machine_prototype_pc_machine
+	}
 	OR = {
 		uses_district_set = city_world 			# Ecumenopoleis
 		uses_district_set = machine_world		# Machine & Nanotech Worlds
@@ -998,27 +1078,76 @@ planet_is_ring_world_equivalent = {
 }
 
 has_volatile_motes_deposit = {
-	OR = {
-		has_deposit = d_dust_caverns
-		has_deposit = d_dust_desert
-		has_deposit = d_industrial_sector
+	if = {
+		limit = {
+			planet_is_habitat_equivalent = yes
+		}
+		solar_system = {
+			any_system_planet = {
+				has_deposit_for = shipclass_mining_station
+				has_resource = { type = volatile_motes amount > 0 }
+			}
+		}
+	}
+	else = {
+		OR = {
+			has_deposit = d_dust_caverns
+			has_deposit = d_dust_desert
+			has_deposit = d_industrial_sector
+			has_deposit = d_explosive_atmosphere
+			has_deposit = d_particle_storm_3_motes
+		}
 	}
 }
 
 has_exotic_gases_deposit = {
-	OR = {
-		has_deposit = d_bubbling_swamp
-		has_deposit = d_fuming_bog
-		has_deposit = d_industrial_sector
-		has_deposit = d_exotic_mountain
+	if = {
+		limit = {
+			planet_is_habitat_equivalent = yes
+		}
+		solar_system = {
+			any_system_planet = {
+				has_deposit_for = shipclass_mining_station
+				has_resource = { type = exotic_gases amount > 0 }
+			}
+		}
+	}
+	else = {
+		OR = {
+			has_deposit = d_bubbling_swamp
+			has_deposit = d_fuming_bog
+			has_deposit = d_industrial_sector
+			has_deposit = d_exotic_mountain
+			has_deposit = d_bogplants
+			has_deposit = d_toxic_god_envenomed_seas_upgraded
+		}
 	}
 }
 
 has_rare_crystals_deposit = {
-	OR = {
-		has_deposit = d_crystalline_caverns
-		has_deposit = d_crystal_forest
-		has_deposit = d_crystal_reef
-		has_deposit = d_industrial_sector
+	if = {
+		limit = {
+			planet_is_habitat_equivalent = yes
+		}
+		solar_system = {
+			any_system_planet = {
+				has_deposit_for = shipclass_mining_station
+				has_resource = { type = rare_crystals amount > 0 }
+			}
+		}
+	}
+	else = {
+		OR = {
+			has_deposit = d_crystalline_caverns
+			has_deposit = d_crystal_forest
+			has_deposit = d_crystal_reef
+			has_deposit = d_industrial_sector
+			has_deposit = d_crystaline_growths
+			has_deposit = d_crystal_kraken_body
+			has_deposit = d_crystal_kraken_body_bombed
+			has_deposit = d_crystalline_glacier
+			has_deposit = d_celestial_storm_1_mines
+			has_deposit = d_celestial_storm_3_crystal
+		}
 	}
 }

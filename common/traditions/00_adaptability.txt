@@ -1,4 +1,3 @@
-
 tr_adaptability_adopt = {
 	unlocks_agenda = agenda_conquer_nature
 	triggered_modifier = {
@@ -89,6 +88,20 @@ tr_adaptability_appropriation = {
 
 	modifier = {
 		pop_resettlement_cost_mult = -0.5
+		planet_resettlement_unemployed_mult = 0.25
+	}
+
+	tradition_swap = {
+		name = tr_adaptability_appropriation_egalitarian
+		inherit_effects = yes
+		inherit_icon = yes
+		trigger = {
+			is_egalitarian = yes
+		}
+
+		weight = {
+			factor = 1
+		}
 	}
 
 	tradition_swap = {

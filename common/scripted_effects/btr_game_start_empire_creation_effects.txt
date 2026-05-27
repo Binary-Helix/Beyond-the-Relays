@@ -96,7 +96,12 @@ generate_salarian_union_country = {
 			set_country_flag = btr_empire
 			save_global_event_target_as = salarian_union		
 		}
-	}	
+	}
+	owner_species = {
+		set_species_homeworld = event_target:salarianHomeworld
+		save_global_event_target_as = salarianSpecies
+	}
+	log = "Salarian Union AI Empire Created"
 }
 
 generate_turian_hierarchy_country = {
@@ -3937,9 +3942,6 @@ generate_reds_raiders_pirates = {
 			species = event_target:batarianSpecies
 			name = "Red Qorayk"
 			skill = 1
-			traits = {
-				trait = random_trait
-			}
 		}				
 		if = {
 			limit = {

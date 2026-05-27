@@ -15,7 +15,7 @@ asari_republics = {
 
 	species = {
 		class = ASA
-		portrait = btr_asari
+		portrait = bte_asari
 		name = PRESCRIPTED_species_name_asari_republics
 		plural = PRESCRIPTED_species_plural_asari_republics
 		adjective = PRESCRIPTED_species_adjective_asari_republics
@@ -65,9 +65,10 @@ asari_republics = {
 	ruler={
 		name = "PRESCRIPTED_ruler_name_asari_republics"
 		gender = female
-		portrait = "btr_asari_1"
-		texture = 7
-		clothes = 5
+		portrait = "bte_asari_4"
+		texture = 12
+		clothes = 1
+		attachment = 6
 	    leader_class = official
 		#trait = asari_leader_trait_long_view
 		ruler_title = "RT_ASARI_MATRIARCH"
@@ -260,7 +261,7 @@ systems_alliance={
 
 	graphical_culture = btr_alliance_01
 	city_graphical_culture = "reptilian_01"
-	advisor_voice_type = btr_systems_alliance
+	advisor_voice_type = btr_system_alliance
 
 	empire_flag = {
 		icon = {
@@ -355,8 +356,8 @@ courts_of_dekunna = {
 	ruler = {
 		name = "PRESCRIPTED_ruler_name_courts_of_dekunna"
 		gender = male
-		portrait = "btr_elcor_male"
-		texture = 2
+		portrait = "btr_elcor"
+		texture = 0
 		clothes = 0
 		attachment = 0
 	    leader_class = official
@@ -575,10 +576,10 @@ hegemony_of_kharshan={
 	ruler={
 		name = "PRESCRIPTED_ruler_name_hegemony_of_kharshan"
 		gender =male
-		portrait = "btr_batarian_male_03"
-		texture = 4
-		clothes = 5
-		attachment = 0
+		portrait = "btr_batarian_male_01"
+		texture = 5
+		clothes = 1
+		attachment = 12
 	    leader_class = commander
 		#trait = batarian_leader_trait_political_loyalty
 		ruler_title = "RT_SUPREME_LEADER"
@@ -700,7 +701,7 @@ migrant_fleet = {
 
 	city_graphical_culture = "molluscoid_01"
 	graphical_culture = "avian_01"
-	#advisor_voice_type = migrant_fleet
+	advisor_voice_type = btr_migrant_fleet
 
 	empire_flag = {
 		icon = {
@@ -774,6 +775,7 @@ cerberus = {
 
 	graphical_culture = "btr_cerberus_01"
 	city_graphical_culture = "mammalian_01"
+	advisor_voice_type = btr_renegade_alliance
 	#advisor_voice_type = cerberus
 	
 	empire_flag = {
@@ -793,8 +795,8 @@ cerberus = {
 		}
 	}
 	ruler={
-		gender = male
 		name = "PRESCRIPTED_ruler_cerberus"
+		gender = male
 		portrait = "human_male_04"
 		texture=0
 		attachment=13
@@ -1737,7 +1739,7 @@ rachni_hive = {
 		name = "PRESCRIPTED_ruler_name_rachni_hive"
 		gender = female
 		ruler_title = "RT_Queen"
-		portrait = "rachni"
+		portrait = "btr_rachni_queen"
 		texture = 1
 		clothes = 0
 		attachment = 0

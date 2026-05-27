@@ -80,7 +80,7 @@ alloys_expenditure_ship_upgrades = {
 		always = no
 		# is_at_war = no
 		# any_owned_fleet = {
-		# 	controller = { is_same_value = root }
+		# 	controller = { is_same_empire = root }
 		# 	can_be_upgraded = yes
 		# }
 	}
@@ -317,11 +317,11 @@ alloys_expenditure_habitats = {
 
 		# modifier = {
 		# 	factor = 2.5
-		# 	has_origin = origin_void_dwellers
+		# 	has_void_dweller_origin = yes
 		# }
 		# modifier = {
 		# 	factor = 2
-		# 	has_origin = origin_void_dwellers
+		# 	has_void_dweller_origin = yes
 		# 	count_owned_planet = {
 		# 		limit = { is_planet_class = pc_habitat }
 		# 		count < 4
@@ -329,7 +329,7 @@ alloys_expenditure_habitats = {
 		# }
 		# modifier = {
 		# 	factor = 2
-		# 	has_origin = origin_void_dwellers
+		# 	has_void_dweller_origin = yes
 		# 	count_owned_planet = {
 		# 		limit = { is_planet_class = pc_habitat }
 		# 		count < 6

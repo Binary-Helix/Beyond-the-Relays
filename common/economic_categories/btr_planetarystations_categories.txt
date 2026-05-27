@@ -1,4 +1,3 @@
-
 planetary_station = {
 	use_for_ai_budget = yes
 	parent = megastructures
@@ -47,6 +46,10 @@ planet_free_traders = {
 }
 
 planet_logistic_workers = {
+	parent = planet_jobs
+}
+
+planet_gladiators = {
 	parent = planet_jobs
 }
 
