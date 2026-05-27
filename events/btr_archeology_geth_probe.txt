@@ -23,10 +23,13 @@ ship_event = {
 
     trigger = {
         host_has_dlc = "Ancient Relics Story Pack"
-        OR = {
-            has_special_star_flag_trigger = skyllian_verge
-            has_special_star_flag_trigger = attican_traverse
+        from = {
+            OR = {
+                has_star_flag = skyllian_verge
+                has_star_flag = attican_traverse
+            }        
         }
+
     }
 
     immediate = {

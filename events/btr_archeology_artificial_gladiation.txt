@@ -9,7 +9,6 @@
 
 namespace = btr_archeology_aritificial_gladiation
 
-# Zroni Introduction
 # via on_survey = {} | this = surveying vessel
 ship_event = {
     id = btr_archeology_aritificial_gladiation.1
@@ -27,8 +26,8 @@ ship_event = {
             has_anomaly = no
             NOT = { exists = archaeological_site }
             NOT = { has_planet_flag = suppress_archaeological_sites }
+            is_barren = yes
         }
-        is_barren = yes
     }
 
     immediate = {

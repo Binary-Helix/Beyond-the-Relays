@@ -24,15 +24,16 @@ ship_event = {
     trigger = {
         host_has_dlc = "Ancient Relics Story Pack"
         #TODO Make only spawn in non-human space
-        OR = {
-            has_special_star_flag_trigger = skyllian_verge
-            has_special_star_flag_trigger = outer_council
-            has_special_star_flag_trigger = inner_council
+        from = {
+            # OR = {
+            #     has_star_flag = skyllian_verge
+            #     has_star_flag = outer_council
+            #     has_star_flag = inner_council
+            # }  
+            NOT = {
+                has_star_flag = systems_alliance_system
+            }      
         }
-        Not = {
-            has_special_star_flag_trigger = systems_alliance_system
-        }
-
     }
 
     immediate = {
