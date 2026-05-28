@@ -1,4 +1,3 @@
-
 maintenance_worker = {
 	category = worker
 	
@@ -1414,7 +1413,7 @@ guard = {
 		weight = @specialist_job_weight
 		
 		modifier = {
-			mult = value:job_weights_modifier|JOB|guard|RESOURCE|unity|FACTOR|0.25|
+			factor = value:job_weights_modifier|JOB|guard|RESOURCE|unity|FACTOR|0.25|
 			owner = { has_active_tradition = tr_domination_judgment_corps }
 		}
 		
@@ -2058,7 +2057,7 @@ hunter = {
 		weight = @worker_job_weight
 		mult = value:job_weights_modifier|JOB|hunter|RESOURCE|trade|
 		modifier = {
-			mult = value:job_weights_modifier|JOB|hunter|RESOURCE|hydrogen|
+			factor = value:job_weights_modifier|JOB|hunter|RESOURCE|hydrogen|
 			planet = { has_deposit = d_atmospheric_ecosystem }
 		}
 		# modifier = {

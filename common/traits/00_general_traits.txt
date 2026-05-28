@@ -968,9 +968,9 @@ leader_trait_taskmaster = {
 				country_uses_food = yes
 			}
 		}
-		planet_soldiers_energy_produces_add = 2
-		planet_soldiers_minerals_produces_add = 2
-		planet_soldiers_food_produces_add = 2
+		planet_soldiers_energy_produces_add = 0.5
+		planet_soldiers_minerals_produces_add = 0.5
+		planet_soldiers_food_produces_add = 0.5
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -979,8 +979,8 @@ leader_trait_taskmaster = {
 				country_uses_food = no
 			}
 		}
-		planet_soldiers_energy_produces_add = 3
-		planet_soldiers_minerals_produces_add = 3
+		planet_soldiers_energy_produces_add = 0.75
+		planet_soldiers_minerals_produces_add = 0.75
 	}
 	sector_modifier = {
 		army_starting_experience_add = 250
@@ -992,9 +992,9 @@ leader_trait_taskmaster = {
 				country_uses_food = yes
 			}
 		}
-		planet_soldiers_energy_produces_add = 1
-		planet_soldiers_minerals_produces_add = 1
-		planet_soldiers_food_produces_add = 1
+		planet_soldiers_energy_produces_add = 0.25
+		planet_soldiers_minerals_produces_add = 0.25
+		planet_soldiers_food_produces_add = 0.25
 	}
 	triggered_sector_modifier = {
 		potential = {
@@ -1003,8 +1003,8 @@ leader_trait_taskmaster = {
 				country_uses_food = no
 			}
 		}
-		planet_soldiers_energy_produces_add = 1.5
-		planet_soldiers_minerals_produces_add = 1.5
+		planet_soldiers_energy_produces_add = 0.375
+		planet_soldiers_minerals_produces_add = 0.375
 	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
@@ -1112,10 +1112,12 @@ leader_trait_honored_warmaster = {
 		}
 	}
 	planet_modifier = {
-		job_soldier_per_pop = 0.10
+		job_soldier_add = 400
+		soldier_jobs_bonus_workforce_mult = 0.20
 	}
 	sector_modifier = {
-		job_soldier_per_pop = 0.05
+		job_soldier_add = 200
+		soldier_jobs_bonus_workforce_mult = 0.10
 	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
@@ -1147,32 +1149,32 @@ leader_trait_academia_recruiter = {
 		}
 	}
 	planet_modifier = {
-		job_researcher_naval_cap_add = 4
+		job_researcher_naval_cap_add = 0.1
 		planet_jobs_engineering_research_produces_mult = 0.10
-		planet_soldiers_engineering_research_produces_add = 1
-		# planet_physicists_alloys_upkeep_add = 1
-		# planet_biologists_alloys_upkeep_add = 1
-		# planet_engineers_alloys_upkeep_add = 1
-		planet_physicists_light_alloys_upkeep_add = 1
-		planet_biologists_light_alloys_upkeep_add = 1
-		planet_engineers_light_alloys_upkeep_add = 1
-		planet_physicists_heavy_alloys_upkeep_add = 1
-		planet_biologists_heavy_alloys_upkeep_add = 1
-		planet_engineers_heavy_alloys_upkeep_add = 1
+		planet_soldiers_engineering_research_produces_add = 0.2
+		# planet_physicists_alloys_upkeep_add = 0.1
+		# planet_biologists_alloys_upkeep_add = 0.1
+		# planet_engineers_alloys_upkeep_add = 0.1
+		planet_physicists_light_alloys_upkeep_add = 0.1
+		planet_biologists_light_alloys_upkeep_add = 0.1
+		planet_engineers_light_alloys_upkeep_add = 0.1
+		planet_physicists_heavy_alloys_upkeep_add = 0.1
+		planet_biologists_heavy_alloys_upkeep_add = 0.1
+		planet_engineers_heavy_alloys_upkeep_add = 0.1
 	}
 	sector_modifier = {
-		job_researcher_naval_cap_add = 2
+		job_researcher_naval_cap_add = 0.05
 		planet_jobs_engineering_research_produces_mult = 0.05
-		planet_soldiers_engineering_research_produces_add = 0.5
-		# planet_physicists_alloys_upkeep_add = 0.5
-		# planet_biologists_alloys_upkeep_add = 0.5
-		# planet_engineers_alloys_upkeep_add = 0.5
-		planet_physicists_light_alloys_upkeep_add = 0.5
-		planet_biologists_light_alloys_upkeep_add = 0.5
-		planet_engineers_light_alloys_upkeep_add = 0.5
-		planet_physicists_heavy_alloys_upkeep_add = 0.5
-		planet_biologists_heavy_alloys_upkeep_add = 0.5
-		planet_engineers_heavy_alloys_upkeep_add = 0.5
+		planet_soldiers_engineering_research_produces_add = 0.1
+		# planet_physicists_alloys_upkeep_add = 0.1
+		# planet_biologists_alloys_upkeep_add = 0.1
+		# planet_engineers_alloys_upkeep_add = 0.1
+		planet_physicists_light_alloys_upkeep_add = 0.1
+		planet_biologists_light_alloys_upkeep_add = 0.1
+		planet_engineers_light_alloys_upkeep_add = 0.1
+		planet_physicists_heavy_alloys_upkeep_add = 0.1
+		planet_biologists_heavy_alloys_upkeep_add = 0.1
+		planet_engineers_heavy_alloys_upkeep_add = 0.1
 	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
@@ -1667,7 +1669,7 @@ leader_trait_aturion_organizer = {
 		}
 	}
 	councilor_modifier = {
-		empire_size_penalty_mult = -0.1
+		empire_size_penalty_mult = -0.05
 		pop_government_ethic_attraction = 0.50
 		pop_happiness = -0.05
 	}

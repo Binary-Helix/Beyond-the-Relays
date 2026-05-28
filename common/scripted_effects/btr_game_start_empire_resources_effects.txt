@@ -2,190 +2,6 @@
 ### PLAYER EMPIRES ###
 ######################
 
-generate_canon_playtest_resources = {
-	add_resource = { energy = 10000	}
-	add_resource = { minerals = 10000 }
-	add_resource = { food = 10000 }
-	add_resource = { consumer_goods = 10000 }
-	add_resource = { light_alloys = 10000	}
-	add_resource = { beryllium = 10000 }
-	add_resource = { lithium = 10000 }
-	add_resource = { titanium = 10000 }
-	add_resource = { heavy_alloys = 10000	}
-	add_resource = { iridium = 10000 }
-	add_resource = { palladium = 10000 }
-	add_resource = { platinum = 10000 }
-	add_resource = { antimatter_fuel = 10000 }
-	add_resource = { helium_3 = 10000 }
-	add_resource = { hydrogen = 10000 }
-	add_resource = { uranium = 10000 }
-	add_resource = { eezo = 10000 }
-	add_resource = { influence = 100 }
-	add_resource = { unity = 450 }
-}
-
-generate_canon_starting_resources = {
-	every_country = {
-		if = {
-			limit = {
-				has_country_flag = asari_republics
-			}
-			generate_asari_republic_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = salarian_union
-			}
-			generate_salarian_union_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = turian_hierarchy
-			}
-			generate_turian_hierarchy_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = systems_alliance
-			}
-			generate_systems_alliance_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = courts_of_dekuuna
-			}
-			generate_courts_of_dekuuna_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = vol_protectorate
-			}
-			generate_vol_protectorate_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = illuminated_primacy
-			}
-			generate_illuminated_primacy_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = hegemony_of_kharshan
-			}
-			generate_hegemony_of_kharshan_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = aralakh_kahmat
-			}
-			generate_aralakh_kahmat_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = migrant_fleet
-			}
-			generate_migrant_fleet_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = cerberus_empire
-			}
-			generate_cerberus_empire_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = omega_empire
-			}
-			generate_omega_empire_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = illium_corporate_interests
-			}
-			generate_illium_corporate_interests_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = caleston_directorate
-			}
-			generate_caleston_directorate_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = remnants_of_rakhana
-			}
-			generate_remnants_of_rakhana_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = vorcha_clandom
-			}
-			generate_vorcha_clandom_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = lystheni_order
-			}
-			generate_lystheni_order_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = gothones_remnant
-			}
-			generate_gothones_remnant_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = parnack_regime
-			}
-			generate_parnack_regime_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = raloi_republic
-			}
-			generate_raloi_republic_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = geth_consensus
-			}
-			generate_geth_consensus_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = disciples_of_nazara
-			}
-			generate_disciples_of_nazara_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = rachni_hive
-			}
-			generate_rachni_hive_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = rachni_hive
-			}
-			generate_collectors_empire_starting_setup = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = citadel_council
-			}
-			generate_citadel_council_starting_resources = yes
-		}
-		else_if = {
-			limit = {
-				has_country_flag = btr_independent_colony
-			}
-			generate_independent_world_starting_setup = yes
-		}
-	}
-
-}
-
 generate_asari_republic_starting_setup = {
 	add_resource = { energy = 3500	}
 	add_resource = { minerals = 2000 }
@@ -320,7 +136,7 @@ generate_turian_hierarchy_starting_setup = {
 	}	
 	add_modifier = {
 		modifier = turian_hie_shanxi_314
-		days = 3600
+		years = 10
 	}
 
 	log = "Turian Hierarchy Empire Modifiers Set"
@@ -376,7 +192,7 @@ generate_systems_alliance_starting_setup = {
 	}
 	add_modifier = {
 		modifier = systems_all_shanxi_314
-		days = 9000
+		years = 25
 	}
 	add_modifier = {
 		modifier = systems_all_skyllian_verge

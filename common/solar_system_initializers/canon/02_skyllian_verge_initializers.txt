@@ -973,7 +973,7 @@ sys_sol_init = {
 			clear_blockers = yes
 			generate_btr_start_deposits_and_blockers = yes
 			btr_generate_canon_planetary_features = yes
-			inline_script = "game_start/systems_all_origin"
+			inline_script = "game_start/canon/systems_all_origin"
 			generate_sys_earth_pops = yes
 			event_target:systems_alliance = {
 				create_starting_leaders = yes
@@ -1004,6 +1004,7 @@ sys_sol_init = {
 		entity = "barren_planet_mars_entity"	
 		init_effect = {
 			add_deposit = d_eezo_trace
+            create_archaeological_site = btr_precursor_mars_triangle
 		}
 	}
 	
@@ -3169,7 +3170,7 @@ sys_harsa_init = {
 			clear_blockers = yes
 			generate_btr_start_deposits_and_blockers = yes
 			btr_generate_canon_planetary_features = yes
-			inline_script = "game_start/hegemony_kha_origin"
+			inline_script = "game_start/canon/hegemony_kha_origin"
 			generate_bat_kharshan_pops = yes
 			event_target:hegemony_of_kharshan = {
 				create_starting_leaders = yes
@@ -3208,6 +3209,14 @@ sys_harsa_init = {
 			orbit_distance = 5
 			size = 10
 			flags = { bira_planet }
+            init_effect = {
+                if = {
+                    limit = {
+                        check_for_batarian_player = yes
+                    }
+                    create_archaeological_site = btr_precursor_ancient_return
+                }
+            }
 		}				
     }
 

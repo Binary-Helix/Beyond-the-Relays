@@ -1,0 +1,127 @@
+tr_btr_renegade_adoption = {
+    #possible = {
+    #}
+    unlocks_agenda = agenda_renegade
+    modifier = {
+        envoys_add = -1
+        country_border_friction_mult = 0.3
+        diplo_weight_naval_mult = 0.2
+       #TODO Make this AI 100% less likely to accept vassalization if it has taken this perk
+        #Officials generate influence, handled in the leaders script
+    }
+}
+
+tr_btr_renegade_finish = {
+    modifier = {
+        #custom_tooltip = btr_vigilance_finish_desc
+        country_war_exhaustion_mult = -0.25
+        planet_orbital_bombardment_damage = -0.15
+        shipclass_starbase_hull_mult = 0.5
+        ascension_perks_add = 1
+        #Also unlocks 4 special resolutions
+    }
+}
+
+tr_btr_renegade_self = {
+    #Handled through galcom.300
+    triggered_modifier = {
+        potential = {
+            exists = owner
+            is_subject = no
+        }
+        modifier = {
+            planet_jobs_upkeep_mult = -0.25
+            country_naval_cap_mult = 0.1
+            starbase_shipyard_build_speed_mult = 0.2
+            #TODO Make sure these buffs disappear if you are a subject
+        }
+    }
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_renegade_masters = {
+    possible = {
+        has_tradition = tr_btr_renegade_self
+    }
+    modifier = {
+        monthly_loyalty_from_subjects = 4
+        #TODO Make all subject empires lose 100 relations with you
+        country_subject_acceptance_add = 5
+    }
+
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_renegade_suspicious = {
+    possible = {
+        has_tradition = tr_btr_renegade_self
+    }
+    modifier = {
+        intel_encryption_add = 3
+        intel_decryption_add = 3
+        espionage_operation_speed_mult = 0.2
+        espionage_operation_cost_mult = -0.2
+        envoys_add = 1
+    }
+    #Handled through galcom.305
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_renegade_our_own = {
+    possible = {
+    }
+    triggered_modifier = {
+        potential = {
+            exists = owner
+            is_subject = no
+            AND = {
+                has_federation = no
+                num_defensive_pacts = 0
+                num_migration_pacts = 0
+                num_commercial_pacts = 0
+                num_research_agreements = 0
+                num_guarantees = 0
+            }
+        }
+        modifier = {
+            country_base_influence_produces_add = 5
+            country_unity_produces_mult = 0.15
+            #TODO Make this only apply if the empire has no relations other than Embassies and NAPs and is not a subject
+        }
+    }
+    #Handled through galcom.310-315
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+"tr_btr_renegade_life" = {
+    possible = {
+        has_tradition = tr_btr_renegade_our_own
+    }
+
+    triggered_modifier = {
+        potential = {
+            exists = owner
+            is_subject = no
+        }
+        modifier = {
+            ship_friendly_territory_fire_rate_mult = 0.2
+            army_defense_morale_mult = 1
+            job_soldier_per_pop = 0.2
+            #TODO Make sure this only applies if empire is not a subject
+        }
+    }
+
+    ai_weight = {
+        factor = 5000
+    }
+}

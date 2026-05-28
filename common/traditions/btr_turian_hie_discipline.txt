@@ -1,0 +1,63 @@
+tr_btr_discipline_adopt = {
+    possible = { has_origin = turian_hie_origin  }
+    unlocks_agenda = agenda_discipline
+    modifier = {
+        army_defense_morale_mult = 1
+    }
+}
+
+tr_btr_discipline_finish = {
+    modifier = {
+        ship_emergency_ftl_mult = -0.15
+        ship_tracking_mult = 0.3
+        ship_weapon_damage = 0.2
+        ascension_perks_add = 1
+    }
+}
+
+tr_btr_discipline_strict_rank_structure = {
+    modifier = {
+        commander_initial_skill = 3
+        leader_commanders_cost_mult = -0.25
+      #  leader_commanders_upkeep_mult = -0.25
+    }
+}
+
+tr_btr_discipline_lead_by_example = {
+    modifier = {
+        ship_fire_rate_mult = 0.1
+        army_morale_damage_mult = 0.15
+    }
+}
+
+tr_btr_discipline_military_academies = {
+    possible = {
+        has_tradition = tr_btr_discipline_strict_rank_structure
+        has_tradition = tr_btr_discipline_lead_by_example
+    }
+    modifier = {
+        planet_army_build_speed_mult = 0.5
+        starbase_shipyard_build_speed_mult = 0.25
+    }
+}
+
+tr_btr_discipline_combat_simulations = {
+    possible = {
+        has_tradition = tr_btr_discipline_military_academies
+    }
+    modifier = {
+        ship_starting_experience_add = 200
+        army_starting_experience_add = 200
+    }
+}
+
+tr_btr_discipline_always_a_soldier = {
+    possible = {
+        has_tradition = tr_btr_discipline_combat_simulations
+    }
+    modifier = {
+        army_morale_damage_mult = 0.5
+        army_damage_mult = 0.5
+        army_health = 0.2
+    }
+}

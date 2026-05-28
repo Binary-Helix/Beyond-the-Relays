@@ -1,0 +1,27 @@
+
+entity = {
+	name = "portrait_btr_rachni_20_entity"
+	pdxmesh = "portrait_btr_rachni_20_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"    chance = 3.0 looping = no next_state = idle}
+	scale = 3.0
+}
+
+entity = {
+	name = "portrait_btr_rachni_20_brood_warrior_entity"
+	pdxmesh = "portrait_btr_rachni_20_brood_warrior_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"    chance = 3.0 looping = no next_state = idle}
+	scale = 3.25
+}
+
+entity = {
+	name = "portrait_btr_rachni_20_queen_entity"
+	pdxmesh = "portrait_btr_rachni_20_queen_mesh"
+
+	default_state = "idle"
+	state = { name = "idle"       animation = "idle"    chance = 3.0 looping = no next_state = idle}
+	scale = 3.5
+}

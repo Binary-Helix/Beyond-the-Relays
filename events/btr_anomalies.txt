@@ -433,7 +433,7 @@ ship_event = {
         name = btr_anomaly.12.a
        leader = {
            add_experience = 200
-           add_trait = leader_trait_maniacal
+           add_or_level_up_veteran_trait_effect = { TRAIT = leader_trait_maniacal }
        }
     }
 }
@@ -1733,7 +1733,7 @@ ship_event = {
             }
             add_modifier = {
                 modifier = red_world_asari
-                days = 5400
+                years = 15
             }
         }
     }
@@ -1747,7 +1747,7 @@ ship_event = {
         owner = {
             add_modifier = {
                 modifier = red_world_asari
-                days = 5400
+                years = 15
             }
             add_monthly_resource_mult = {
                 resource = physics_research
@@ -1771,7 +1771,7 @@ ship_event = {
         owner = {
             add_modifier = {
                 modifier = red_world_salarian
-                days = 3600
+                years = 10
             }
             add_monthly_resource_mult = {
                 resource = physics_research
@@ -1872,7 +1872,7 @@ ship_event = {
             }
             add_modifier = {
                 modifier = rachni_visit
-                days = 5400
+                years = 15
             }
         }
     }
@@ -3260,7 +3260,7 @@ ship_event = {
             }
             add_modifier = {
                 modifier = respected_graves
-                days = 1800
+                years = 5
             }
         }
         FROM = {
@@ -3553,7 +3553,7 @@ ship_event = {
             }
             add_modifier = {
                 modifier = resolute_resolve
-                days = 5400
+                years = 15
             }
         }
     }
@@ -4344,7 +4344,7 @@ ship_event = {
         name = btr_anomaly.128.a
         leader = {
             add_experience = 200
-            add_trait = leader_trait_maniacal
+            add_or_level_up_veteran_trait_effect = { TRAIT = leader_trait_maniacal }
         }
     }
 }

@@ -16,6 +16,7 @@ btr_asari = {
 
 	portraits = {
 		"btr_asari"
+		"bte_asari"
 	}
 
 	conditional_portraits = {
@@ -365,5 +366,14 @@ btr_collector = {
 
 	# These should not be used for randomly generated species
 	non_randomized_portraits = {
+	}
+}
+
+btr_paragons = {
+	species_class = PARAGON
+
+	portraits = {
+		"btr_elanos_haliat_civil"
+		"btr_elanos_haliat_war"
 	}
 }

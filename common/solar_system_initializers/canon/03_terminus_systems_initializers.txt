@@ -1071,7 +1071,7 @@ sys_kyzil_init = {
             clear_blockers = yes
             generate_vor_heshtok_pops = yes
             btr_generate_canon_planetary_features = yes
-            inline_script = "game_start/vorcha_cla_origin"
+            inline_script = "game_start/canon/vorcha_cla_origin"
             event_target:vorcha_clandom = {
                 create_starting_leaders = yes
                 country_event = { id = game_start.9 }
@@ -6638,7 +6638,7 @@ sys_nosikae_init = {
             clear_blockers = yes
             generate_btr_start_deposits_and_blockers = yes
             btr_generate_canon_planetary_features = yes
-            inline_script = "game_start/sedriicae_col_origin"
+            inline_script = "game_start/canon/sedriicae_col_origin"
             generate_sed_sedriicae_pops = yes
             event_target:sedriicae_collective = {
                 create_starting_leaders = yes
@@ -6861,6 +6861,9 @@ sys_tiikren_init = {
 		size = 10
 		flags = { fumimi_planet }
 		has_ring = no
+        init_effect = {
+            create_archaeological_site = btr_precursor_artificial_jewel
+        }
 	}
 
     change_orbit = 125
@@ -8208,7 +8211,7 @@ sys_the_sea_of_storms_init = {
 			}
             generate_btr_start_deposits_and_blockers = yes
             btr_generate_canon_planetary_features = yes
-            inline_script = "game_start/disciples_naz_origin"
+            inline_script = "game_start/canon/disciples_naz_origin"
             generate_naz_station_pops = yes
             event_target:disciples_of_nazara = {
                 create_starting_leaders = yes
@@ -8987,7 +8990,7 @@ sys_tikkun_init = {
 			}
             generate_btr_start_deposits_and_blockers = yes
             btr_generate_canon_planetary_features = yes
-            inline_script = "game_start/geth_con_origin"
+            inline_script = "game_start/canon/geth_con_origin"
             generate_get_rannoch_pops = yes
             event_target:geth_consensus = {
                 create_starting_leaders = yes
@@ -10772,7 +10775,7 @@ sys_taesin_init = {
 			}
             generate_btr_start_deposits_and_blockers = yes
             btr_generate_canon_planetary_features = yes
-            inline_script = "game_start/lystheni_ord_origin"
+            inline_script = "game_start/canon/lystheni_ord_origin"
             generate_lys_sepkai_pops = yes
             event_target:lystheni_order = {
                 create_starting_leaders = yes
@@ -13297,7 +13300,7 @@ sys_sahrabarik_init = {
             generate_btr_start_deposits_and_blockers = yes
             btr_generate_canon_planetary_features = yes
             add_deposit = d_eezo_abundant
-            inline_script = "game_start/omega_emp_origin"
+            inline_script = "game_start/canon/omega_emp_origin"
             generate_omega_pops = yes
             event_target:omega_empire = {
                 create_starting_leaders = yes

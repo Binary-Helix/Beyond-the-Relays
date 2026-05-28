@@ -34,7 +34,7 @@ asari_trait_core = {
 	cost = 0
 	allowed_archetypes = { BIOLOGICAL }
 	species_potential_add = {
-        is_species = ASA
+       always = no
     }
 	randomized = no
 	modifier = {
@@ -238,7 +238,7 @@ human_trait_biodiversity = {
 	randomized = no
 	modifier = {
 		pop_environment_tolerance = 0.05
-		planet_researchers_society_research_produces_mult = 0.1
+		planet_doctors_society_research_produces_mult = 0.1
 		planet_jobs_unity_produces_mult = -0.05
 	}
 }

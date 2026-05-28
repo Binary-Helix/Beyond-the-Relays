@@ -1,0 +1,95 @@
+tr_btr_trade_adoption = {
+    #possible = {
+    #}
+    unlocks_agenda = agenda_trade
+    modifier = {
+        planet_traders_unity_produces_add = 1
+        planet_districts_cities_trade_produces_add = 5
+        #TODO Replace this with a new bonus now that Clerks no longer exist
+        #Officials generate influence, handled in the leaders script
+    }
+}
+
+tr_btr_trade_finish = {
+    modifier = {
+        planet_traders_trade_produces_add = 2
+        #custom_tooltip = btr_vigilance_finish_desc
+        #TODO Go into the jobs file and give Merchants and Traders +2 trade output when the beta is over
+        ascension_perks_add = 1
+        #Also unlocks 4 special resolutions
+    }
+}
+
+tr_btr_trade_economic_blood = {
+    #Handled through galcom.300
+    modifier = {
+        #TODO go into the building file and make the Commerce Megaplexes give +1 Manager and +1 executive
+    }
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_trade_free_traders = {
+    possible = {
+        has_tradition = tr_btr_trade_economic_blood
+    }
+    modifier = {
+        country_trade_fee = -0.5
+        ships_trade_logistics_mult = 0.1
+        ships_trade_upkeep_mult = -0.1
+        federation_trade_produces_add = 10
+        #TODO Make a new benefit now that trade protection and trade range have been removed
+    }
+
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_trade_rising_tide = {
+    possible = {
+        has_tradition = tr_btr_trade_free_traders
+    }
+    modifier = {
+        planet_pops_consumer_goods_upkeep_mult = -0.1
+        pop_cat_ruler_political_power = 0.1
+        pop_cat_ruler_happiness = 0.1
+    }
+    #Handled through galcom.305
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_trade_fair_bargainer = {
+    possible = {
+        has_tradition = tr_btr_trade_free_traders
+    }
+    modifier = {
+        #TODO Add a +50 opinion with all non-genocidal empires
+        country_border_friction_mult = -0.2
+
+    }
+    #Handled through galcom.310-315
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+"tr_btr_trade_logistic_perfection" = {
+    possible = {
+        has_tradition = tr_btr_trade_fair_bargainer
+        has_tradition = tr_btr_trade_rising_tide
+    }
+
+    modifier = {
+        planet_jobs_produces_mult = 0.05
+    }
+
+    ai_weight = {
+        factor = 5000
+    }
+}

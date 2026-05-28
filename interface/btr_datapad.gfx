@@ -1,7 +1,7 @@
 spriteTypes = {
 	SpriteType = {
 		name = "GFX_btr_intro_screen_bg"
-		texturefile = "gfx/interface/tiles/btr_intro_screen_datapad.dds"
+		texturefile = "gfx/interface/tiles/btr_datapad_bg.dds"
 		#borderSize = { x=9 y=9 }
 		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
 	}
@@ -110,4 +110,27 @@ spriteTypes = {
 		}
 	}
 
+	spriteType = {
+		name = "GFX_btr_alliance_hologram"
+		texturefile = "gfx/interface/tiles/btr_alliance_hologram.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_btr_logo"
+		texturefile = "gfx/interface/tiles/mebtr_logo.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_btr_me_flare"
+		texturefile = "gfx/interface/tiles/me_flare.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_btr_welcome_commander"
+		texturefile = "gfx/interface/tiles/welcome_commander.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
 }

@@ -1,0 +1,140 @@
+tr_btr_pan_galactism_adoption = {
+    #possible = {
+    #}
+    unlocks_agenda = agenda_galactism
+    modifier = {
+        diplomacy_upkeep_mult = -0.25
+        max_rivalries = -1
+        rivalries_influence_produces_add = -1
+        #TODO Find a way to have either rivalries or harm relations cost influence similar to the diplomatic stances
+        #Officials generate influence, handled in the leaders script
+    }
+}
+
+tr_btr_pan_galactism_finish = {
+    triggered_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_federation = yes
+            }
+        }
+        modifier = {
+            #custom_tooltip = btr_vigilance_finish_desc
+            federation_naval_cap_contribution_mult = 0.1
+            country_unity_produces_mult = 0.1
+            country_society_research_produces_mult = 0.1
+            country_physics_research_produces_mult = 0.1
+            country_engineering_research_produces_mult = 0.1
+            diplo_weight_sprawl_mult = -0.15
+            ascension_perks_add = 1
+            #Also unlocks 4 special resolutions
+            #TODO Make the Unity and Research buffs only trigger when in a federation
+        }
+    }
+}
+
+tr_btr_pan_galactism_together = {
+    #Handled through galcom.300
+    modifier = {
+        #TODO Make this give +100 relations to all normal empires
+        country_border_friction_mult = -0.5
+        country_trust_cap_add = 0.25
+        country_trust_growth = 0.15
+    }
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_pan_galactism_multilateral = {
+    possible = {
+        has_tradition = tr_btr_pan_galactism_together
+    }
+    modifier = {
+        envoys_add = 3
+        diplo_action_acceptance_add = 5
+        diplo_weight_pops_mult = 0.05
+    }
+
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_pan_galactism_breaking = {
+    possible = {
+        has_tradition = tr_btr_pan_galactism_multilateral
+    }
+    modifier = {
+        planet_resettlement_unemployed_destination_mult = 0.15
+        planet_resettlement_unemployed_mult = 0.1
+       # planet_resettlement_unemployed_mult = 0.15
+       # planet_resettlement_unemployed_destination_mult = 0.1
+        external_leader_pool_add = 2
+    }
+    triggered_modifier = {
+        potential = {
+           exists = owner
+            owner = {
+                    num_species >= 2
+            }
+        }
+        modifier = {
+            planet_amenities_mult = 0.05
+            #TODO Make the amenities apply only on planets with at least one alien pop
+        }
+    }
+    #Handled through galcom.305
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_pan_galactism_swords = {
+    possible = {
+        has_tradition = tr_btr_pan_galactism_multilateral
+    }
+    modifier = {
+        ship_friendly_territory_fire_rate_mult = 0.15
+        country_war_exhaustion_mult = -0.05
+
+    }
+    triggered_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                OR = {
+                    has_federation = yes
+                    num_defensive_pacts >= 1
+                }
+            }
+        }
+        modifier = {
+            starbase_shipyard_build_speed_mult = 0.15
+            #TODO Make the shipyard buildspeed trigger only when the player is in a federation or defensive pact
+        }
+    }
+    #Handled through galcom.310-315
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_pan_galactism_material = {
+    possible = {
+        has_tradition = tr_btr_pan_galactism_multilateral
+    }
+
+    modifier = {
+        commercial_pact_mult = 0.1
+        #TODO Make this give access to all trade policies (Must be done in the Policies file)
+
+    }
+
+    ai_weight = {
+        factor = 5000
+    }
+}

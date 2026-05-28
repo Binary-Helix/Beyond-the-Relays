@@ -1,7 +1,7 @@
 ### DUNE ###
 building_ammos_aegis = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 
     building_sets = { urban fortress }
 
@@ -53,7 +53,7 @@ building_ammos_aegis = {
 ### DUST ###
 building_atmospheric_hydrator = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 
     is_capped_by_modifier = yes
 
@@ -73,7 +73,7 @@ building_atmospheric_hydrator = {
         }
         modifier = {
 			planet_jobs_food_produces_mult = 0.2
-            planet_amenities_add = 5
+            planet_amenities_add = 500
 			habitability_floor_mult = 0.15
         }
     }
@@ -85,7 +85,7 @@ building_atmospheric_hydrator = {
         }
         modifier = {
 			planet_jobs_food_produces_mult = 0.2
-			planet_amenities_add = 5
+			planet_amenities_add = 500
 			habitability_floor_mult = 0.15
         }
     }
@@ -106,7 +106,7 @@ building_atmospheric_hydrator = {
 ### BADLANDS ###
 building_roughneck_barracks = {
     base_buildtime = @btr_mili_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 
     is_capped_by_modifier = yes
 
@@ -125,8 +125,8 @@ building_roughneck_barracks = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			job_soldier_add = 3
-            job_enforcer_add = 1
+			job_soldier_add = 300
+            job_enforcer_add = 100
 			planet_orbital_bombardment_damage = -0.1
 			pop_government_ethic_attraction = 0.05
         }
@@ -138,8 +138,8 @@ building_roughneck_barracks = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			job_soldier_add = 3
-			job_enforcer_add = 1
+			job_soldier_add = 300
+			job_enforcer_add = 100
 			planet_orbital_bombardment_damage = -0.1
 			pop_government_ethic_attraction = 0.05
         }
@@ -162,7 +162,7 @@ building_roughneck_barracks = {
 ### AQUIFER ###
 building_groundwater_reclamation_complex = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 
     is_capped_by_modifier = yes
 
@@ -182,9 +182,9 @@ building_groundwater_reclamation_complex = {
         }
         modifier = {
 			planet_jobs_food_produces_mult = 0.1
-            job_technician_add = 2
+            job_technician_add = 200
 			habitability_floor_mult = 0.05
-			planet_amenities_add = 10
+			planet_amenities_add = 1000
         }
     }
     
@@ -195,9 +195,9 @@ building_groundwater_reclamation_complex = {
         }
         modifier = {
 			planet_jobs_food_produces_mult = 0.1
-			job_technician_add = 2
+			job_technician_add = 200
 			habitability_floor_mult = 0.05
-			planet_amenities_add = 10
+			planet_amenities_add = 1000
         }
     }
     
@@ -217,7 +217,7 @@ building_groundwater_reclamation_complex = {
 ### MESA ###
 building_urban_canyon = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 3
+	planet_limit = 3
 
     is_capped_by_modifier = yes
 
@@ -236,10 +236,10 @@ building_urban_canyon = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			planet_housing_add = 15
-			job_clerk_add = 5
+			planet_housing_add = 1500
+			job_clerk_add = 500
 			habitability_floor_mult = 0.1
-			planet_amenities_add = 15
+			planet_amenities_add = 1500
         }
     }
     
@@ -249,10 +249,10 @@ building_urban_canyon = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			planet_housing_add = 15
-			job_clerk_add = 5
+			planet_housing_add = 1500
+			job_clerk_add = 500
 			habitability_floor_mult = 0.1
-			planet_amenities_add = 15
+			planet_amenities_add = 1500
         }
     }
     
@@ -272,7 +272,7 @@ building_urban_canyon = {
 ### CENOTE ###
 building_sinkhole_mining_infrastructure = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 
     is_capped_by_modifier = yes
 
@@ -298,7 +298,7 @@ building_sinkhole_mining_infrastructure = {
             planet_jobs_iridium_produces_mult = 0.15
             planet_jobs_platinum_produces_mult = 0.15
             planet_jobs_palladium_produces_mult = 0.15
-			job_miner_add = 3
+			job_miner_add = 300
         }
     }
     
@@ -315,7 +315,7 @@ building_sinkhole_mining_infrastructure = {
             planet_jobs_iridium_produces_mult = 0.15
             planet_jobs_platinum_produces_mult = 0.15
             planet_jobs_palladium_produces_mult = 0.15
-			job_miner_add = 3
+			job_miner_add = 300
         }
     }
     
@@ -335,7 +335,7 @@ building_sinkhole_mining_infrastructure = {
 ### OUTBACK ###
 building_hydro_mining_station = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 
     is_capped_by_modifier = yes
 
@@ -390,7 +390,7 @@ building_hydro_mining_station = {
 ### OASIS ###
 building_planetary_canal_system = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 
     building_sets = { urban }
 
@@ -409,7 +409,7 @@ building_planetary_canal_system = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			planet_amenities_add = 10
+			planet_amenities_add = 1000
             planet_max_districts_add = 2
             district_farming_max_add= 2
 			planet_jobs_energy_produces_mult = 0.1
@@ -422,7 +422,7 @@ building_planetary_canal_system = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			planet_amenities_add = 10
+			planet_amenities_add = 1000
             planet_max_districts_add = 2
             district_farming_max_add= 2
 			planet_jobs_energy_produces_mult = 0.1
@@ -445,7 +445,7 @@ building_planetary_canal_system = {
 ### STEPPE ###
 building_galactic_retreat = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 
     building_sets = { resort   }
 
@@ -467,8 +467,8 @@ building_galactic_retreat = {
 			planet_resettlement_unemployed_destination_mult = 1.5
             pop_happiness = 0.2
             planet_stability_add = 5
-            planet_amenities_add = 30
-			job_entertainer_add = 3
+            planet_amenities_add = 3000
+			job_entertainer_add = 300
         }
     }
     
@@ -481,8 +481,8 @@ building_galactic_retreat = {
 			planet_resettlement_unemployed_destination_mult = 1.5
             pop_happiness = 0.2
             planet_stability_add = 5
-            planet_amenities_add = 30
-			job_entertainer_add = 3
+            planet_amenities_add = 3000
+			job_entertainer_add = 300
         }
     }
     
@@ -502,7 +502,7 @@ building_galactic_retreat = {
 ### VELD ###
 building_ground_taming_operations = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 
     is_capped_by_modifier = yes
 
@@ -553,7 +553,7 @@ building_ground_taming_operations = {
 ### MEDITERRANEAN ###
 building_aqueduct_system = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 1
+	planet_limit = 1
 
     is_capped_by_modifier = yes
 
@@ -604,7 +604,7 @@ building_aqueduct_system = {
 ### RETINAL ###
 building_retinal_power_plant = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -623,7 +623,7 @@ building_retinal_power_plant = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			job_technician_add = 5
+			job_technician_add = 500
             planet_technician_produces_mult = 0.1
         }
     }
@@ -634,7 +634,7 @@ building_retinal_power_plant = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			job_technician_add = 5
+			job_technician_add = 500
             planet_technician_produces_mult = 0.1
         }
     }
@@ -656,7 +656,7 @@ building_retinal_power_plant = {
 ### ATOLL ###
 building_island_hoppers = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -675,7 +675,7 @@ building_island_hoppers = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			planet_amenities_add = 10
+			planet_amenities_add = 1000
             habitability_floor_mult = 0.05
             pop_happiness = 0.05
             planet_building_build_speed_mult = 0.1
@@ -688,7 +688,7 @@ building_island_hoppers = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			planet_amenities_add = 10
+			planet_amenities_add = 1000
             habitability_floor_mult = 0.05
             pop_happiness = 0.05
             planet_building_build_speed_mult = 0.1
@@ -711,7 +711,7 @@ building_island_hoppers = {
 ### COASTAL ###
 building_luxury_resort = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -730,7 +730,7 @@ building_luxury_resort = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			planet_amenities_add = 15
+			planet_amenities_add = 1500
             planet_resettlement_unemployed_destination_mult = 0.25
             pop_happiness = 0.05
         }
@@ -742,7 +742,7 @@ building_luxury_resort = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			planet_amenities_add = 15
+			planet_amenities_add = 1500
             planet_resettlement_unemployed_destination_mult = 0.25
             pop_happiness = 0.05
         }
@@ -764,7 +764,7 @@ building_luxury_resort = {
 ### JUNGLE ###
 building_sustainable_agriculture_plant = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -815,7 +815,7 @@ building_sustainable_agriculture_plant = {
 ### BIOLUMINESCENT ###
 building_exotic_hunting_lodge = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -866,7 +866,7 @@ building_exotic_hunting_lodge = {
 ### MARSH ###
 building_water_drainage_system = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -920,7 +920,7 @@ building_water_drainage_system = {
 ### MANGROVE ###
 building_stilted_community = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -939,7 +939,7 @@ building_stilted_community = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-            planet_housing_add = 10
+            planet_housing_add = 1000
 			planet_max_districts_add = 1
             planet_resettlement_unemployed_destination_mult = 0.1
         }
@@ -951,7 +951,7 @@ building_stilted_community = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-            planet_housing_add = 10
+            planet_housing_add = 1000
 			planet_max_districts_add = 1
             planet_resettlement_unemployed_destination_mult = 0.1
         }
@@ -973,7 +973,7 @@ building_stilted_community = {
 ### BOG ###
 building_hydroponics_platforms = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -993,7 +993,7 @@ building_hydroponics_platforms = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			planet_housing_add = 10
+			planet_housing_add = 1000
             habitability_floor_mult = 0.05
             planet_jobs_food_produces_mult = 0.1
         }
@@ -1005,7 +1005,7 @@ building_hydroponics_platforms = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			planet_housing_add = 10
+			planet_housing_add = 1000
             habitability_floor_mult = 0.05
             planet_jobs_food_produces_mult = 0.1
         }
@@ -1027,7 +1027,7 @@ building_hydroponics_platforms = {
 ### LAKE ###
 building_maraetropian_dams = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1046,7 +1046,7 @@ building_maraetropian_dams = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			job_technician_add = 6
+			job_technician_add = 600
             habitability_floor_add = 0.05
             planet_jobs_food_produces_mult = 0.1
         }
@@ -1058,7 +1058,7 @@ building_maraetropian_dams = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			job_technician_add = 6
+			job_technician_add = 600
             habitability_floor_add = 0.05
             planet_jobs_food_produces_mult = 0.1
         }
@@ -1080,7 +1080,7 @@ building_maraetropian_dams = {
 ### PRAIRIE ###
 building_wilderness_retreat = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1099,7 +1099,7 @@ building_wilderness_retreat = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			planet_amenities_add = 15
+			planet_amenities_add = 1500
             pop_happiness = 0.05
         }
     }
@@ -1110,7 +1110,7 @@ building_wilderness_retreat = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			planet_amenities_add = 15
+			planet_amenities_add = 1500
             pop_happiness = 0.05
         }
     }
@@ -1131,7 +1131,7 @@ building_wilderness_retreat = {
 ### TEMPERATE ###
 building_wind_farm = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1151,7 +1151,7 @@ building_wind_farm = {
         }
         modifier = {
 			planet_jobs_energy_produces_mult = 0.1
-            job_technician_add = 3
+            job_technician_add = 300
         }
     }
     
@@ -1162,7 +1162,7 @@ building_wind_farm = {
         }
         modifier = {
 			planet_jobs_energy_produces_mult = 0.1
-            job_technician_add = 3
+            job_technician_add = 300
         }
     }
     
@@ -1182,7 +1182,7 @@ building_wind_farm = {
 ### FOREST ###
 building_athsean_lumber_yard = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1235,7 +1235,7 @@ building_athsean_lumber_yard = {
 ### SUPERCONTINENT ###
 building_transcontinental_monorail_system = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1288,7 +1288,7 @@ building_transcontinental_monorail_system = {
 ### HOT OCEAN ###
 building_hydrothermal_generator_system = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1308,7 +1308,7 @@ building_hydrothermal_generator_system = {
         }
         modifier = {
 			planet_jobs_energy_produces_mult = 0.35
-            job_technician_add = 3
+            job_technician_add = 300
         }
     }
     
@@ -1319,7 +1319,7 @@ building_hydrothermal_generator_system = {
         }
         modifier = {
 			planet_jobs_energy_produces_mult = 0.35
-            job_technician_add = 3
+            job_technician_add = 300
         }
     }
     
@@ -1340,7 +1340,7 @@ building_hydrothermal_generator_system = {
 ### COLD OCEAN ###
 building_subsurface_infrastructure = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
     building_sets = { urban }
@@ -1359,8 +1359,8 @@ building_subsurface_infrastructure = {
         }
         modifier = {
 			planet_max_districts_add = 2
-            planet_housing_add = 5
-            planet_amenities_add = 5
+            planet_housing_add = 500
+            planet_amenities_add = 500
         }
     }
     
@@ -1371,8 +1371,8 @@ building_subsurface_infrastructure = {
         }
         modifier = {
 			planet_max_districts_add = 2
-            planet_housing_add = 5
-            planet_amenities_add = 5
+            planet_housing_add = 500
+            planet_amenities_add = 500
         }
     }
     
@@ -1392,7 +1392,7 @@ building_subsurface_infrastructure = {
 ### STORM ###
 building_tempests_demise = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1412,9 +1412,9 @@ building_tempests_demise = {
         }
         modifier = {
 			habitability_floor_add = 0.1
-            planet_housing_add = 5
-            planet_amenities_add = 5
-            job_soldier_add = 1
+            planet_housing_add = 500
+            planet_amenities_add = 500
+            job_soldier_add = 100
             planet_orbital_bombardment_damage = -0.15
         }
     }
@@ -1426,9 +1426,9 @@ building_tempests_demise = {
         }
         modifier = {
 			habitability_floor_add = 0.1
-            planet_housing_add = 5
-            planet_amenities_add = 5
-            job_soldier_add = 1
+            planet_housing_add = 500
+            planet_amenities_add = 500
+            job_soldier_add = 100
             planet_orbital_bombardment_damage = -0.15
         }
     }
@@ -1450,7 +1450,7 @@ building_tempests_demise = {
 ### BOREAL ###
 building_geothermal_station = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
     building_sets = { generator }
@@ -1468,7 +1468,7 @@ building_geothermal_station = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			job_technician_add = 6
+			job_technician_add = 600
             planet_jobs_energy_produces_mult = 0.15
             habitability_floor_add = 0.1
         }
@@ -1480,7 +1480,7 @@ building_geothermal_station = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			job_technician_add = 6
+			job_technician_add = 600
             planet_jobs_energy_produces_mult = 0.15
             habitability_floor_add = 0.1
         }
@@ -1502,7 +1502,7 @@ building_geothermal_station = {
 ### HIGHLAND ###
 building_distillery_complex = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1521,9 +1521,9 @@ building_distillery_complex = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			job_distiller_add = 3
+			job_distiller_add = 300
             pop_happiness = 0.2
-            planet_amenities_add = 5
+            planet_amenities_add = 500
             founder_species_growth_mult = 0.05
         }
     }
@@ -1534,9 +1534,9 @@ building_distillery_complex = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			job_distiller_add = 3
+			job_distiller_add = 300
             pop_happiness = 0.2
-            planet_amenities_add = 5
+            planet_amenities_add = 500
             founder_species_growth_mult = 0.05
         }
     }
@@ -1557,7 +1557,7 @@ building_distillery_complex = {
 ### CASCADIAN ###
 building_mountain_compounds = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1578,7 +1578,7 @@ building_mountain_compounds = {
         modifier = {
 			planet_max_districts_add = 1
             planet_orbital_bombardment_damage = -0.3
-            job_soldier_add = 2
+            job_soldier_add = 200
         }
     }
     
@@ -1590,7 +1590,7 @@ building_mountain_compounds = {
         modifier = {
 			planet_max_districts_add = 1
             planet_orbital_bombardment_damage = -0.3
-            job_soldier_add = 2
+            job_soldier_add = 200
         }
     }
 
@@ -1617,7 +1617,7 @@ building_mountain_compounds = {
 ### CRAG ###
 building_aero_mining_base = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1636,7 +1636,7 @@ building_aero_mining_base = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			job_miner_add = 4
+			job_miner_add = 400
             planet_jobs_minerals_produces_mult = 0.1
             planet_jobs_beryllium_produces_mult = 0.1
             planet_jobs_lithium_produces_mult = 0.1
@@ -1654,7 +1654,7 @@ building_aero_mining_base = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			job_miner_add = 4
+			job_miner_add = 400
             planet_jobs_minerals_produces_mult = 0.1
             planet_jobs_beryllium_produces_mult = 0.1
             planet_jobs_lithium_produces_mult = 0.1
@@ -1682,7 +1682,7 @@ building_aero_mining_base = {
 ### BASALT ###
 building_construction_industrial_complex = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1739,7 +1739,7 @@ building_construction_industrial_complex = {
 ### LICHEN ###
 building_lichen_harvesting_facility = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1790,7 +1790,7 @@ building_lichen_harvesting_facility = {
 ### MIRE ###
 building_mudslide_barriers = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1810,7 +1810,7 @@ building_mudslide_barriers = {
         }
         modifier = {
 			planet_max_districts_add = 2
-            planet_housing_add = 5
+            planet_housing_add = 500
             habitability_floor_mult = 0.05
         }
     }
@@ -1822,7 +1822,7 @@ building_mudslide_barriers = {
         }
         modifier = {
 			planet_max_districts_add = 2
-            planet_housing_add = 5
+            planet_housing_add = 500
             habitability_floor_mult = 0.05
         }
     }
@@ -1843,7 +1843,7 @@ building_mudslide_barriers = {
 ### Fungal ###
 building_green_zone = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1863,10 +1863,10 @@ building_green_zone = {
         }
         modifier = {
 			habitability_floor_mult = 0.05
-            planet_housing_add = 5
-            planet_amenities_add = 5
-            job_soldier_add = 1
-            job_researcher_add = 1
+            planet_housing_add = 500
+            planet_amenities_add = 500
+            job_soldier_add = 100
+            job_researcher_add = 100
         }
     }
     
@@ -1877,10 +1877,10 @@ building_green_zone = {
         }
         modifier = {
 			habitability_floor_mult = 0.05
-            planet_housing_add = 5
-            planet_amenities_add = 5
-            job_soldier_add = 1
-            job_researcher_add = 1
+            planet_housing_add = 500
+            planet_amenities_add = 500
+            job_soldier_add = 100
+            job_researcher_add = 100
         }
     }
     
@@ -1900,7 +1900,7 @@ building_green_zone = {
 ### SNOW ###
 building_planetary_train = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1919,10 +1919,10 @@ building_planetary_train = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			planet_housing_add = 10
-            planet_amenities_add = 5
-            job_clerk_add = 2
-            job_enforcer_add = 2
+			planet_housing_add = 1000
+            planet_amenities_add = 500
+            job_clerk_add = 200
+            job_enforcer_add = 200
         }
     }
     
@@ -1932,10 +1932,10 @@ building_planetary_train = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			planet_housing_add = 10
-            planet_amenities_add = 5
-            job_clerk_add = 2
-            job_enforcer_add = 2
+			planet_housing_add = 1000
+            planet_amenities_add = 500
+            job_clerk_add = 200
+            job_enforcer_add = 200
         }
     }
     
@@ -1955,7 +1955,7 @@ building_planetary_train = {
 ### GLACIAL ###
 building_the_generator = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -1976,8 +1976,8 @@ building_the_generator = {
         modifier = {
 			planet_jobs_energy_produces_mult = 0.15
             habitability_floor_mult = 0.1
-            planet_amenities_add = 10
-            job_technician_add = 4
+            planet_amenities_add = 1000
+            job_technician_add = 400
         }
     }
     
@@ -1989,8 +1989,8 @@ building_the_generator = {
         modifier = {
 			planet_jobs_energy_produces_mult = 0.15
             habitability_floor_mult = 0.1
-            planet_amenities_add = 10
-            job_technician_add = 4
+            planet_amenities_add = 1000
+            job_technician_add = 400
         }
     }
     
@@ -2011,7 +2011,7 @@ building_the_generator = {
 ### ANTARCTIC ###
 building_underground_vault = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -2037,8 +2037,8 @@ building_underground_vault = {
             owner = { is_regular_empire = yes }
         }
         modifier = {
-			job_researcher_add = 4
-            job_clerk_add = 2
+			job_researcher_add = 400
+            job_clerk_add = 200
         }
     }
     
@@ -2048,8 +2048,8 @@ building_underground_vault = {
             owner = { is_hive_empire = yes }
         }
         modifier = {
-			job_researcher_add = 4
-            job_clerk_add = 2
+			job_researcher_add = 400
+            job_clerk_add = 200
         }
     }
     
@@ -2069,7 +2069,7 @@ building_underground_vault = {
 ### GLACIAL VOLCANIC ###
 building_magmatic_forge = {
     base_buildtime = @btr_civil_b3_time
-	base_cap_amount = 2
+	planet_limit = 2
 
     is_capped_by_modifier = yes
 
@@ -2091,7 +2091,7 @@ building_magmatic_forge = {
 			#planet_jobs_alloys_produces_mult = 0.1
             planet_jobs_light_alloys_produces_mult = 0.1
             planet_jobs_heavy_alloys_produces_mult = 0.1
-            job_foundry_add = 2
+            job_foundry_add = 200
         }
     }
     
@@ -2104,7 +2104,7 @@ building_magmatic_forge = {
 			#planet_jobs_alloys_produces_mult = 0.1
             planet_jobs_light_alloys_produces_mult = 0.1
             planet_jobs_heavy_alloys_produces_mult = 0.1
-            job_foundry_add = 2
+            job_foundry_add = 200
         }
     }
     

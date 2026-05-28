@@ -1,0 +1,888 @@
+namespace = btr_skyllian_blitz_1
+
+ country_event = {
+     id = btr_skyllian_blitz_1.1
+     title = btr_skyllian_blitz_1.1.name
+     hide_window = yes
+     is_triggered_only = yes
+
+     trigger = {
+         has_paragon_dlc = yes
+         NOT = { exists = event_target:elanos_haliat }
+         NOT = { has_country_flag = skyllian_blitz_chain_started }
+         has_country_flag = caleston_directorate
+     }
+
+     immediate = {
+         random_list = {
+             50 = {}
+             50 = { owner = { country_event = { id = btr_skyllian_blitz_1.2 days = 1 random = 900 } } }
+         }
+     }
+ }
+
+country_event = {
+    id =  btr_skyllian_blitz_1.2
+    title = "btr_skyllian_blitz_1.2.name"
+    desc = "btr_skyllian_blitz_1.2.desc"
+    show_sound = event_conversation
+    is_triggered_only = yes
+    fire_only_once = yes
+    diplomatic_title = BLANK_STRING
+
+    trigger = {
+        has_paragon_dlc = yes
+        NOT = { exists = event_target:elanos_haliat }
+        has_country_flag = caleston_directorate
+    }
+
+    picture_event_data = {
+        room = paragon_skrand_room
+        portrait = btr_elanos_haliat_civil
+    }
+
+    diplomatic = yes
+
+    option = {
+        name = btr_skyllian_blitz_1.2.a
+        response_text = btr_skyllian_blitz_1.2.a.response
+        is_dialog_only = yes
+    }
+    option = {
+        name = btr_skyllian_blitz_1.2.b
+        response_text = btr_skyllian_blitz_1.2.b.response
+        is_dialog_only = yes
+    }
+    option = {
+        name = btr_skyllian_blitz_1.2.c
+        set_country_flag = btr_elanos_haliat_hired
+        hidden_effect = { country_event = { id = btr_skyllian_blitz_1.3 } }
+        response_text = btr_skyllian_blitz_1.2.c.response
+    }
+    option = {
+        name = btr_skyllian_blitz_1.2.d
+        set_country_flag = btr_elanos_haliat_denied
+        hidden_effect = { country_event = { id = btr_skyllian_blitz_1.3 } }
+        response_text = btr_skyllian_blitz_1.2.d.response
+
+    }
+}
+#
+#
+#
+# diplomatic = yes
+#
+# picture_event_data = {
+#     room = paragon_skrand_room
+#     portrait = btr_elanos_haliat_civil
+# }
+#      desc = btr_skyllian_blitz_1.1.desc
+#      picture = GFX_evt_throne_room # TODO: Replace with appropriate event picture
+#      show_sound = event_default
+#
+#      picture = GFX_leader_recruitment_bg_renowned
+#      auto_opens = no
+#      notification_event_icon = "GFX_message_leader_recruitment_vyctor"
+#
+#      event_window_type = leader_recruit
+#
+#      immediate = {
+#          ethic_leader_creator = {
+#              SPECIES_CLASS = random_non_machine
+#              LEADER_PORTRAIT = par_renown_01 # militarist_leader_adm
+#              CLASS = commander
+#              TIER = leader_tier_renowned
+#              NAME = NAME_militarist1
+#              LEVEL = 4
+#              GENDER = male
+#              IMMORTAL = no
+#              ETHIC = militarist
+#              DESC = militarist1
+#              CATCH_PHRASE = militarist1_catch_phrase
+#          }
+#          last_created_leader = {
+#              add_trait = {
+#                  trait = subclass_commander_councilor
+#                  consume_selection = yes
+#              }
+#              add_trait = {
+#                  trait = leader_trait_military_overseer
+#                  consume_selection = yes
+#              }
+#              add_trait = {
+#                  trait = leader_trait_melancholic
+#                  consume_selection = yes
+#              }
+#              add_trait = {
+#                  trait = leader_trait_fleet_organizer
+#                  consume_selection = yes
+#              }
+#              add_trait = {
+#                  trait = leader_trait_artillerist
+#                  consume_selection = yes
+#              }
+#              set_age = 45
+#          }
+#      }
+#
+#      picture_event_data = {
+#          portrait = event_target:ethic_leader
+#          room = ethic_spaceship_room
+#      }
+#
+#      option = {
+#          name = DISMISS
+#          tag = dismiss_leader
+#          hidden_effect = {
+#              remove_global_flag = militarist_leader_1
+#              ethic_leader_kill_effect = yes
+#              set_country_flag = dismissed_militarist_leader_1
+#          }
+#      }
+#      option = {
+#          name = paragon.40300.a
+#          response_text = paragon.40300.a.response
+#          is_dialog_only = yes
+#      }
+#      option = {
+#          name = paragon.40300.b
+#          response_text = paragon.40300.b.response
+#          is_dialog_only = yes
+#      }
+#      option = {
+#          name = paragon.40300.c
+#          response_text = paragon.40300.c.response
+#          is_dialog_only = yes
+#      }
+#      option = {
+#          name = HIRE
+#          tag = hire_leader
+#          custom_tooltip = paragon.40300.hire_custom_tooltip
+#          hidden_effect = {
+#              ethic_leader_hire_effect = {
+#                  GLOBAL_EVENT_TARGET = renowned_militarist1
+#              }
+#          }
+#      }
+#  }
+#
+#
+#
+
+
+
+#
+# # Initial Haliat Offer Event
+# country_event = {
+#     id = btr_skyllian_blitz_1.1
+#     title = btr_skyllian_blitz_1.1.name
+#     desc = btr_skyllian_blitz_1.1.desc
+#     picture = GFX_evt_throne_room # TODO: Replace with appropriate event picture
+#     show_sound = event_default
+#
+#     is_triggered_only = yes
+#
+#     trigger = {
+#         owner = {
+#             has_origin = caleston_dir_origin
+#             years_passed > 5
+#             years_passed < 15
+#         }
+#     }
+#
+#     immediate = {
+#         set_country_flag = haliat_offer_made
+#         # TODO: Add any other immediate effects
+#     }
+#
+#     # Option A: Accept Haliat's offer
+#     option = {
+#         name = btr_skyllian_blitz_1.1.a
+#
+#         trigger = {
+#             # TODO: Add any conditions for this option availability
+#         }
+#         hidden_effect = {
+#             owner = {
+#                 set_country_flag = haliat_accepted
+#                 country_event = { id = btr_skyllian_blitz_1.4 }
+#             }
+#         }
+#     }
+#
+#     # Option B: Decline Haliat's offer
+#     option = {
+#         name = btr_skyllian_blitz_1.1.b
+#         hidden_effect = {
+#             owner = {
+#                 set_country_flag = haliat_rejected
+#                 country_event = { id = btr_skyllian_blitz_1.100 }
+#             }
+#         }
+#     }
+# }
+#
+# ########################
+# ### Haliat Rejection ###
+# ########################
+#
+# # Haliat Begins Plotting
+# country_event = {
+#     id = btr_skyllian_blitz_1.100
+#     title = btr_skyllian_blitz_1.100.name
+#     desc = btr_skyllian_blitz_1.100.desc
+#     picture = GFX_evt_ground_combat # TODO: Replace with appropriate event picture
+#     show_sound = event_ground_battle
+#
+#     is_triggered_only = yes
+#
+#     immediate = {
+#         # Create hostile country for Haliat's forces
+#         create_country = {
+#             name = "Haliat's Forces"
+#             type = default
+#             name_list = btr_turian
+#             ship_prefix = HFV
+#             authority = auth_dictatorial
+#             civics = {
+#                 civic_warrior_culture
+#                 civic_police_state
+#             }
+#             origin = origin_default
+#             species = event_target:turianSpecies
+#             ethos = { ethic = ethic_militarist ethic = ethic_authoritarian }tr_
+#             graphical_culture = btr_turian_01
+#             effect = {
+#                 save_global_event_target_as = hostile_haliat_country
+#                 set_country_flag = haliat_mercenary_forces
+#             }
+#         }
+#
+#         set_country_flag = haliat_invasion_begun
+#     }
+#
+#     option = {
+#         name = btr_skyllian_blitz_1.100.a
+#         # TODO: Add localization key for "Prepare for battle" or similar
+#
+#         hidden_effect = {
+#             # Find Caleston planet and spawn invasion armies
+#             random_owned_planet = {
+#                 limit = { has_planet_flag = caleston_planet }
+#                 save_event_target_as = caleston_target
+#
+#                 # Spawn hostile armies
+#                 while = {
+#                     count = 20
+#                     create_army = {
+#                         owner = event_target:hostile_haliat_country
+#                         species = owner_main_species
+#                         type = assault_army
+#                     }
+#                 }
+#
+#                 # Start ground combat monitoring
+#                 planet_event = { id = btr_skyllian_blitz_1.101 days = 1 }
+#             }
+#         }
+#     }
+# }
+#
+# # Combat Resolution Monitor
+# planet_event = {
+#     id = btr_skyllian_blitz_1.101
+#     hide_window = yes
+#
+#     is_triggered_only = yes
+#
+#     trigger = {
+#         has_planet_flag = caleston_planet
+#         owner = { has_country_flag = haliat_invasion_begun }
+#     }
+#
+#     immediate = {
+#         # Check if ground combat is ongoing
+#         if = {
+#             limit = { is_under_colonization = no }
+#             if = {
+#                 limit = {
+#                     owner = {
+#                         any_owned_planet = {
+#                             is_same_value = prev
+#                         }
+#                     }
+#                 }
+#                 # Player won - fire victory event
+#                 owner = { country_event = { id = btr_skyllian_blitz_1.3 } }
+#             }
+#             else = {
+#                 # Player lost - Haliat takes control
+#                 owner = { country_event = { id = btr_skyllian_blitz_1.2 } }
+#             }
+#         }
+#         else = {
+#             # Combat still ongoing, check again later
+#             planet_event = { id = btr_skyllian_blitz_1.101 days = 30 }
+#         }
+#     }
+# }
+#
+# # Haliat Takes Control of Caleston
+# country_event = {
+#     id = btr_skyllian_blitz_1.2
+#     title = btr_skyllian_blitz_1.2.name
+#     desc = btr_skyllian_blitz_1.2.desc
+#     picture = GFX_evt_occupation # TODO: Replace with appropriate event picture
+#     show_sound = event_ground_battle_success
+#
+#     is_triggered_only = yes
+#
+#     immediate = {
+#         set_country_flag = haliat_controls_caleston
+#         remove_country_flag = haliat_invasion_begun
+#
+#         # TODO: Transfer planet control, set up Act 2 conditions
+#         random_owned_planet = {
+#             limit = { has_planet_flag = caleston_planet }
+#             # Planet control transfer mechanics TBD
+#             set_planet_flag = haliat_controlled
+#         }
+#     }
+#
+#     option = {
+#         name = UNFORTUNATE
+#         # TODO: Set up transition to Act 2
+#     }
+# }
+#
+#
+# # Player Victory Over Haliat
+# country_event = {
+#     id = btr_skyllian_blitz_1.3
+#     title = btr_skyllian_blitz_1.3.name
+#     desc = btr_skyllian_blitz_1.3.desc
+#     picture = GFX_evt_victory # TODO: Replace with appropriate event picture
+#     show_sound = event_celebration
+#
+#     is_triggered_only = yes
+#
+#     immediate = {
+#         set_country_flag = haliat_defeated
+#         remove_country_flag = haliat_invasion_begun
+#     }
+#
+#     # Option A: TBD Reward Path 1
+#     option = {
+#         name = btr_skyllian_blitz_1.3.a
+#
+#         # TODO: Add reward effects
+#         # Possible rewards: resources, technologies, modifiers, etc.
+#
+#         set_country_flag = haliat_victory_path_1
+#     }
+#
+#     # Option B: TBD Reward Path 2
+#     option = {
+#         name = btr_skyllian_blitz_1.3.b
+#
+#         # TODO: Add different reward effects
+#
+#         set_country_flag = haliat_victory_path_2
+#     }
+# }
+#
+# ####################
+# ### HALIAT HIRED ###
+# ####################
+#
+# # Haliat Joins as Leader (Acceptance Path)
+# country_event = {
+#     id = btr_skyllian_blitz_1.4
+#     title = btr_skyllian_blitz_1.4.name
+#     desc = btr_skyllian_blitz_1.4.desc
+#     picture = GFX_evt_throne_room # TODO: Replace with appropriate event picture
+#     show_sound = event_default
+#
+#     is_triggered_only = yes
+#
+#     immediate = {
+#         create_leader = {
+#             name = "Elanos Haliat"
+#             species = event_target:turianSpecies
+#             class = commander
+#             skill = 8
+#             set_age = 48
+#             traits = {
+#                 trait = leader_trait_mercenary_warrior
+#                 trait = leader_trait_aggressive
+#                 trait = trait_ruler_charismatic
+#             }
+#             gender = male
+#             effect = {
+#                 set_leader_flag = haliat_leader
+#                 set_leader_flag = skyllian_crisis_leader
+#             }
+#         }
+#         set_country_flag = haliat_hired
+#     }
+#
+#     option = {
+#         name = INTERESTING
+#         hidden_effect = {
+#             owner = {
+#                 # TODO: Add any immediate effects or next events in chain
+#                 country_event = { id = btr_skyllian_blitz_1.5 days = 120 }
+#             }
+#         }
+#     }
+# }
+#
+# # First Recruitment Proposal
+# country_event = {
+#     id = btr_skyllian_blitz_1.5
+#     title = btr_skyllian_blitz_1.5.name
+#     desc = btr_skyllian_blitz_1.5.desc
+#     picture = GFX_evt_throne_room # TODO: Replace with appropriate event picture
+#     show_sound = event_default
+#
+#     is_triggered_only = yes
+#
+#     immediate = {
+#         set_country_flag = haliat_first_proposal
+#     }
+#
+#     # Option A: Accept the recruitment
+#     option = {
+#         name = btr_skyllian_blitz_1.5.a
+#         # TODO: "Allow Haliat to recruit his lieutenant"
+#
+#         # Create randomized level 6 leader
+#         create_leader = {
+#             class = commander
+#             species = owner_main_species
+#             skill = 6
+#             traits = {
+#                 random_list = {
+#                     25 = { trait_aggressive }
+#                     25 = { trait_fleet_organizer }
+#                     25 = { trait_resilient }
+#                     25 = { trait_trickster }
+#                 }
+#             }
+#             set_leader_flag = haliat_lieutenant
+#             set_leader_flag = haliat_recruit_1
+#         }
+#
+#         # Create immobile destroyer fleet
+#         create_fleet = {
+#             name = "Haliat's Squadron"
+#             settings = {
+#                 can_change_composition = no
+#                 can_disband = no
+#                 uses_naval_capacity = yes
+#             }
+#             effect = {
+#                 set_fleet_flag = haliat_squadron
+#                 set_location = {
+#                     target = owner
+#                     distance = 0
+#                 }
+#
+#                 # Add 3 destroyers
+#                 while = {
+#                     count = 3
+#                     create_ship = {
+#                         name = random
+#                         design = "Haliat Destroyer" # TODO: Create appropriate ship design
+#                     }
+#                 }
+#
+#                 # Assign the lieutenant as commander
+#                 assign_leader = last_created_leader
+#             }
+#         }
+#
+#         hidden_effect = {
+#             owner = {
+#                 set_country_flag = haliat_lieutenant_accepted
+#                 # Set up timer for military restructuring proposal
+#                 country_event = { id = btr_skyllian_blitz_1.6 days = 360 } # 12 months
+#             }
+#         }
+#     }
+#
+#     # Option B: Decline the recruitment
+#     option = {
+#         name = btr_skyllian_blitz_1.5.b
+#         # TODO: "We don't need additional officers"
+#
+#         hidden_effect = {
+#             owner = {
+#                 set_country_flag = haliat_lieutenant_declined
+#                 # Still triggers restructuring proposal, but without the lieutenant
+#                 country_event = { id = btr_skyllian_blitz_1.6 days = 360 } # 12 months
+#             }
+#         }
+#     }
+# }
+#
+# # Military Restructuring Proposal
+# country_event = {
+#     id = btr_skyllian_blitz_1.6
+#     title = btr_skyllian_blitz_1.6.name
+#     desc = btr_skyllian_blitz_1.6.desc
+#     picture = GFX_evt_fleet_evil # TODO: Replace with appropriate event picture
+#     show_sound = event_default
+#
+#     is_triggered_only = yes
+#
+#     immediate = {
+#         set_country_flag = haliat_restructuring_proposal
+#     }
+#
+#     # Option A: Accept restructuring proposal
+#     option = {
+#         name = btr_skyllian_blitz_1.6.a
+#         # TODO: "Haliat's military reforms make sense"
+#
+#         tooltip = {
+#             # Show what player thinks they're getting
+#             create_leader = {
+#                 class = commander
+#                 skill = 6
+#             }
+#             create_fleet = {}
+#             create_army = {
+#                 type = assault_army
+#             }
+#         }
+#
+#         # Create the fleet and army commander
+#         create_leader = {
+#             class = commander
+#             species = owner_main_species
+#             skill = 6
+#             traits = {
+#                 random_list = {
+#                     25 = { trait_fleet_organizer }
+#                     25 = { trait_aggressive }
+#                     25 = { trait_resilient }
+#                     25 = { trait_cautious }
+#                 }
+#             }
+#             set_leader_flag = haliat_fleet_commander
+#             set_leader_flag = haliat_recruit_2
+#         }
+#
+#         create_leader = {
+#             class = commander
+#             species = owner_main_species
+#             skill = 5
+#             traits = {
+#                 random_list = {
+#                     25 = { trait_aggressive }
+#                     25 = { trait_resilient }
+#                     25 = { trait_army_logistics }
+#                     25 = { trait_charismatic }
+#                 }
+#             }
+#             set_leader_flag = haliat_army_commander
+#             set_leader_flag = haliat_recruit_3
+#         }
+#
+#         # Create second fleet
+#         create_fleet = {
+#             name = "Haliat's Reserve Fleet"
+#             settings = {
+#                 can_merge = no
+#                 can_disband = no
+#                 uses_naval_capacity = yes
+#             }
+#             effect = {
+#                 set_fleet_flag = haliat_reserve_fleet
+#                 set_location = {
+#                     target = owner
+#                     distance = 0
+#                 }
+#
+#                 # Add ships (TODO: determine ship composition)
+#                 while = {
+#                     count = 5
+#                     create_ship = {
+#                         name = random
+#                         design = "Haliat Cruiser" # TODO: Create appropriate ship design
+#                         species = owner_main_species
+#                     }
+#                 }
+#
+#                 assign_leader = prev # Fleet commander
+#             }
+#         }
+#
+#         # Create orbital armies around Caleston
+#         random_owned_planet = {
+#             limit = { has_planet_flag = caleston_planet }
+#             while = {
+#                 count = 10
+#                 create_army = {
+#                     owner = root
+#                     species = owner_main_species
+#                     type = assault_army
+#                 }
+#             }
+#             assign_leader = prev # Army commander
+#             set_planet_flag = haliat_army_staging
+#         }
+#
+#         hidden_effect = {
+#             owner = {
+#                 set_country_flag = haliat_restructuring_accepted
+#
+#                 # Set up betrayal event
+#                 country_event = { id = btr_skyllian_blitz_1.8 days = 90 } # 3 months
+#             }
+#         }
+#     }
+#
+#     # Option B: Investigate Haliat
+#     option = {
+#         name = btr_skyllian_blitz_1.6.b
+#         # TODO: "Something seems off about Haliat's proposal"
+#
+#         hidden_effect = {
+#             owner = {
+#                 set_country_flag = haliat_investigation_started
+#                 country_event = { id = btr_skyllian_blitz_1.7 days = 30 } # Investigation takes time
+#             }
+#         }
+#     }
+# }
+#
+# # Investigation Results
+# country_event = {
+#     id = btr_skyllian_blitz_1.7
+#     title = btr_skyllian_blitz_1.7.name
+#     desc = btr_skyllian_blitz_1.7.desc
+#     picture = GFX_evt_shadow_council # TODO: Replace with appropriate event picture
+#     show_sound = event_default
+#
+#     is_triggered_only = yes
+#
+#     immediate = {
+#         set_country_flag = haliat_omega_connection_discovered
+#     }
+#
+#     # Option A: Confront Haliat with the evidence
+#     option = {
+#         name = btr_skyllian_blitz_1.7.a
+#         # TODO: "Confront Haliat about his ties to Omega"
+#
+#         hidden_effect = {
+#             owner = {
+#                 set_country_flag = haliat_confronted
+#                 country_event = { id = btr_skyllian_blitz_1.8 days = 1 } # Immediate betrayal
+#             }
+#         }
+#     }
+#
+#     # Option B: Ignore the intelligence
+#     option = {
+#         name = btr_skyllian_blitz_1.7.b
+#
+#         hidden_effect = {
+#             owner = {
+#                 set_country_flag = haliat_investigation_ignored
+#                 country_event = { id = btr_skyllian_blitz_1.8 days = 60 } # 2 months
+#             }
+#         }
+#     }
+# }
+#
+# # Haliat's Betrayal (Unified Event)
+# country_event = {
+#     id = btr_skyllian_blitz_1.8
+#     title = btr_skyllian_blitz_1.8.name
+#     desc = btr_skyllian_blitz_1.8.desc
+#     picture = GFX_evt_betrayal # TODO: Replace with appropriate event picture
+#     show_sound = event_ground_battle
+#
+#     is_triggered_only = yes
+#
+#     immediate = {
+#         # Create Haliat's hostile country if not already created
+#         if = {
+#             limit = { NOT = { exists = event_target:hostile_haliat_country } }
+#             create_country = {
+#                 name = "Haliat's Forces"
+#                 type = default
+#                 name_list = btr_turian
+#                 ship_prefix = HFV
+#                 authority = auth_dictatorial
+#                 civics = {
+#                     civic_warrior_culture
+#                     civic_police_state
+#                 }
+#                 origin = origin_default
+#                 species = event_target:turianSpecies
+#                 ethos = { ethic = ethic_militarist ethic = ethic_authoritarian }tr_
+#                 graphical_culture = btr_turian_01
+#                 effect = {
+#                     save_global_event_target_as = hostile_haliat_country
+#                     set_country_flag = haliat_mercenary_forces
+#                 }
+#             }
+#         }
+#
+#         # Transfer Haliat himself to hostile country
+#         random_owned_leader = {
+#             limit = { has_leader_flag = haliat_leader }
+#             exile_leader_as = haliat_main_leader
+#         }
+#         event_target:hostile_haliat_country = {
+#             create_leader = {
+#                 name = "Elanos Haliat"
+#                 species = event_target:turianSpecies
+#                 class = commander
+#                 skill = 8
+#                 set_age = 48
+#                 traits = {
+#                     trait = leader_trait_mercenary_warrior
+#                     trait = leader_trait_aggressive
+#                     trait = trait_ruler_charismatic
+#                 }
+#                 gender = male
+#                 effect = {
+#                     set_leader_flag = skyllian_crisis_leader
+#                 }
+#             }
+#         }
+#
+#         # Different betrayal scenarios based on player choices
+#         if = {
+#             limit = { has_country_flag = haliat_restructuring_accepted }
+#             # Full betrayal - player accepted all proposals
+#
+#             # Transfer recruited leaders
+#             every_owned_leader = {
+#                 limit = {
+#                     OR = {
+#                         has_leader_flag = haliat_recruit_1
+#                         has_leader_flag = haliat_recruit_2
+#                         has_leader_flag = haliat_recruit_3
+#                     }
+#                 }
+#                 exile_leader_as = haliat_defector
+#                 event_target:hostile_haliat_country = {
+#                     # TODO: Recreate leaders in hostile country
+#                 }
+#             }
+#
+#             # Transfer half of player's fleets
+#             # TODO: Implement fleet transfer logic
+#
+#             # Armies attack from orbit
+#             random_owned_planet = {
+#                 limit = { has_planet_flag = caleston_planet }
+#                 while = {
+#                     count = 10
+#                     create_army = {
+#                         owner = event_target:hostile_haliat_country
+#                         species = owner_main_species
+#                         type = assault_army
+#                     }
+#                 }
+#             }
+#         }
+#         else_if = {
+#             limit = { has_country_flag = haliat_confronted }
+#             # Reduced betrayal - player investigated and confronted
+#
+#             # Only quarter of fleets defect, 10 armies
+#             # TODO: Implement reduced betrayal logic
+#             random_owned_planet = {
+#                 limit = { has_planet_flag = caleston_planet }
+#                 while = {
+#                     count = 10
+#                     create_army = {
+#                         owner = event_target:hostile_haliat_country
+#                         species = owner_main_species
+#                         type = assault_army
+#                     }
+#                 }
+#             }
+#         }
+#
+#         set_country_flag = haliat_betrayal_begun
+#
+#         # Start combat monitoring
+#         random_owned_planet = {
+#             limit = { has_planet_flag = caleston_planet }
+#             planet_event = { id = btr_skyllian_blitz_1.101 days = 1 }
+#         }
+#     }
+#
+#     option = {
+#         name = btr_skyllian_blitz_1.8.a
+#         # TODO: "We should have seen this coming"
+#     }
+#
+#     option = {
+#         name = btr_skyllian_blitz_1.8.b
+#         # TODO: "We should have seen this coming"
+#     }
+# }
+#
+# # Player Victory Over Haliat's Betrayal
+# country_event = {
+#     id = btr_skyllian_blitz_1.9
+#     title = btr_skyllian_blitz_1.9.name
+#     desc = btr_skyllian_blitz_1.9.desc
+#     picture = GFX_evt_victory # TODO: Replace with appropriate event picture
+#     show_sound = event_celebration
+#
+#     is_triggered_only = yes
+#
+#     immediate = {
+#         set_country_flag = haliat_coup_defeated
+#         remove_country_flag = haliat_betrayal_begun
+#
+#         # Clean up Haliat's forces
+#         if = {
+#             limit = { exists = event_target:hostile_haliat_country }
+#             event_target:hostile_haliat_country = {
+#                 destroy_country = yes
+#             }
+#         }
+#
+#         # Remove any remaining Haliat-affiliated leaders and fleets
+#         every_owned_leader = {
+#             limit = {
+#                 OR = {
+#                     has_leader_flag = haliat_leader
+#                     has_leader_flag = haliat_recruit_1
+#                     has_leader_flag = haliat_recruit_2
+#                     has_leader_flag = haliat_recruit_3
+#                 }
+#             }
+#             kill_leader = { show_notification = no }
+#         }
+#
+#         every_owned_fleet = {
+#             limit = {
+#                 OR = {
+#                     has_fleet_flag = haliat_squadron
+#                     has_fleet_flag = haliat_reserve_fleet
+#                 }
+#             }
+#             delete_fleet = this
+#         }
+#     }
+#
+#     option = {
+#         name = btr_skyllian_blitz_1.9.a
+#         # TODO: "The coup has been defeated"
+#
+#         # TODO: Add victory rewards - resources, modifiers, etc.
+#         # End of Act 1 - crisis chain concluded
+#     }
+# }

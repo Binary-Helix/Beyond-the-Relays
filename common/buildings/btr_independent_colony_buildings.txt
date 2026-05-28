@@ -24,10 +24,10 @@ building_ps_capitol = {
 			owner = { NOT = { has_valid_civic = civic_aristocratic_elite } }
 		}
 		modifier = {
-			job_politician_add = 5
-			job_enforcer_add = 10
-			planet_housing_add = 25
-			planet_amenities_add = 25
+			job_politician_add = 500
+			job_enforcer_add = 1000
+			planet_housing_add = 2500
+			planet_amenities_add = 2500
 		}
 	}
 	triggered_planet_modifier = {
@@ -36,10 +36,10 @@ building_ps_capitol = {
 			owner = { has_valid_civic = civic_aristocratic_elite }
 		}
 		modifier = {
-			job_noble_add = 5
-			job_enforcer_add = 10
-			planet_housing_add = 25
-			planet_amenities_add = 25
+			job_noble_add = 500
+			job_enforcer_add = 1000
+			planet_housing_add = 2500
+			planet_amenities_add = 2500
 		}
 	}
 
@@ -77,7 +77,7 @@ building_ps_anti_matter_reactor = {
 			owner = { is_country_type = planet_state }
 		}
 		modifier = {
-			job_technician_add = 25
+			job_technician_add = 2500
 		}
 	}
 	triggered_planet_modifier = {
@@ -86,7 +86,7 @@ building_ps_anti_matter_reactor = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_technician_add = 25
+			job_technician_add = 2500
 		}
 	}
 	triggered_planet_modifier = {
@@ -95,7 +95,7 @@ building_ps_anti_matter_reactor = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_technician_drone_add = 25
+			job_technician_drone_add = 2500
 		}
 	}
 
@@ -133,7 +133,7 @@ building_ps_aeroponics_farms_complex = {
 			owner = { is_country_type = planet_state }
 		}
 		modifier = {
-			job_farmer_add = 25
+			job_farmer_add = 2500
 		}
 	}
 	triggered_planet_modifier = {
@@ -142,7 +142,7 @@ building_ps_aeroponics_farms_complex = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_farmer_add = 25
+			job_farmer_add = 2500
 		}
 	}
 	triggered_planet_modifier = {
@@ -151,7 +151,7 @@ building_ps_aeroponics_farms_complex = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_agri_drone_add = 25
+			job_agri_drone_add = 2500
 		}
 	}
 
@@ -200,7 +200,7 @@ building_ps_mineral_purification_complex = {
 			owner = { is_country_type = planet_state }
 		}
 		modifier = {
-			job_miner_add = 25
+			job_miner_add = 2500
 		}
 	}
 	triggered_planet_modifier = {
@@ -209,7 +209,7 @@ building_ps_mineral_purification_complex = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_miner_add = 25
+			job_miner_add = 2500
 		}
 	}
 	triggered_planet_modifier = {
@@ -218,7 +218,7 @@ building_ps_mineral_purification_complex = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_mining_drone_add = 25
+			job_mining_drone_add = 2500
 		}
 	}
 
@@ -255,7 +255,7 @@ building_ps_multidimensional_printers = {
 			owner = { is_country_type = planet_state }
 		}
 		modifier = {
-			job_artisan_add = 25
+			job_artisan_add = 2500
 		}
 	}
 	triggered_planet_modifier = {
@@ -264,7 +264,7 @@ building_ps_multidimensional_printers = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_artisan_add = 25
+			job_artisan_add = 2500
 		}
 	}
 	resources = {
@@ -300,7 +300,7 @@ building_ps_leisure_complex = {
 			owner = { is_country_type = planet_state }
 		}
 		modifier = {
-			job_entertainer_add = 25
+			job_entertainer_add = 2500
 		}
 	}
 	triggered_planet_modifier = {
@@ -312,7 +312,7 @@ building_ps_leisure_complex = {
 			}
 		}
 		modifier = {
-			job_entertainer_add = 25
+			job_entertainer_add = 2500
 		}
 	}
 	triggered_planet_modifier = {
@@ -324,7 +324,7 @@ building_ps_leisure_complex = {
 			}
 		}
 		modifier = {
-			job_duelist_add = 25
+			job_duelist_add = 2500
 		}
 	}
 
@@ -361,7 +361,7 @@ building_ps_distillation_complex = {
 			owner = { is_country_type = planet_state }
 		}
 		modifier = {
-			job_gas_refiner_add = 6
+			job_gas_refiner_add = 600
 		}
 	}
 	triggered_planet_modifier = {
@@ -370,7 +370,7 @@ building_ps_distillation_complex = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_gas_refiner_add = 6
+			job_gas_refiner_add = 600
 		}
 	}
 
@@ -380,7 +380,7 @@ building_ps_distillation_complex = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_gas_refiner_drone_add = 6
+			job_gas_refiner_drone_add = 600
 		}
 	}
 
@@ -417,7 +417,7 @@ building_ps_chemical_complex = {
 			owner = { is_country_type = planet_state }
 		}
 		modifier = {
-			job_chemist_add = 6
+			job_chemist_add = 600
 		}
 	}
 	triggered_planet_modifier = {
@@ -426,7 +426,7 @@ building_ps_chemical_complex = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_chemist_add = 6
+			job_chemist_add = 600
 		}
 	}
 
@@ -436,7 +436,7 @@ building_ps_chemical_complex = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_chemist_drone_add = 6
+			job_chemist_drone_add = 600
 		}
 	}
 
@@ -473,7 +473,7 @@ building_ps_synthesizers_complex = {
 			owner = { is_country_type = planet_state }
 		}
 		modifier = {
-			job_translucer_add = 6
+			job_translucer_add = 600
 		}
 	}
 	triggered_planet_modifier = {
@@ -482,7 +482,7 @@ building_ps_synthesizers_complex = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_translucer_add = 6
+			job_translucer_add = 600
 		}
 	}
 
@@ -492,7 +492,7 @@ building_ps_synthesizers_complex = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_translucer_drone_add = 6
+			job_translucer_drone_add = 600
 		}
 	}
 
@@ -529,7 +529,7 @@ building_ps_crowded_serf_houses = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 20
+		planet_housing_add = 2000
 	}
 
 	resources = {
@@ -565,11 +565,11 @@ building_ps_manorial_lands = {
 	}
 
 	planet_modifier = {
-		job_archduke_add = 1
-		job_duke_add = 2
-		job_count_add = 3
-		job_baron_add = 5
-		planet_housing_add = 10
+		job_archduke_add = 100
+		job_duke_add = 200
+		job_count_add = 300
+		job_baron_add = 500
+		planet_housing_add = 1000
 	}
 
 	resources = {
@@ -598,7 +598,7 @@ building_ps_bastion = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 5
+		planet_housing_add = 500
 	}
 
 	triggered_planet_modifier = {
@@ -607,7 +607,7 @@ building_ps_bastion = {
 			owner = { is_country_type = planet_state }
 		}
 		modifier = {
-			job_soldier_add = 25
+			job_soldier_add = 2500
 		}
 	}
 	triggered_planet_modifier = {
@@ -616,7 +616,7 @@ building_ps_bastion = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_soldier_add = 10
+			job_soldier_add = 1000
 		}
 	}
 	triggered_planet_modifier = {
@@ -625,7 +625,7 @@ building_ps_bastion = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_warrior_drone_add = 10
+			job_warrior_drone_add = 1000
 		}
 	}
 

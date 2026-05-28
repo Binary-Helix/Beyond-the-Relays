@@ -8,12 +8,13 @@ colossus = {
 	modifier = {
 		ship_evasion_add = @colossus_evasion
 	}
-	size_multiplier = 32
+	size_multiplier = 100
+	map_counter_icon = ship_counter_128
+	icon = ship_size_military_32
 	fleet_slot_size = 32
 	section_slots = { "ship" = { locator = "frame_ship" } }
 	num_target_locators = 4
 	is_space_station = no
-	icon = ship_size_military_32
 	base_buildtime = @colossus_build_time
 	can_have_federation_design = no
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
