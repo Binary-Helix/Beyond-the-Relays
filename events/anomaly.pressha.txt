@@ -29,13 +29,13 @@ ship_event = {
     option = {
         exclusive_trigger = {
             owner = {
-                has_origin = turian_hier_origin
+                has_origin = turian_hie_origin
             }
         }
-        icon = {
-            icon = #TODO Turian Icon
-           # text = IS_LITHOID_EMPIRE_ICON_TIP
-        }
+        # icon = { # TODO make this a Turian Icon
+        #     icon = #TODO
+        #    # text = IS_LITHOID_EMPIRE_ICON_TIP
+        # }
         name = pressha.1.b
         leader = {
             add_experience = 200

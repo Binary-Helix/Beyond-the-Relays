@@ -29,13 +29,13 @@ ship_event = {
     option = {
         exclusive_trigger = {
             owner = {
-                has_origin = turian_hier_origin
+                has_origin = turian_hie_origin
             }
         }
-        icon = {
-            icon = #TODO Turian Icon
-            # text = IS_LITHOID_EMPIRE_ICON_TIP
-        }
+        # icon = { # TODO make this a Turian Icon
+        #     icon = #TODO 
+        #     # text = IS_LITHOID_EMPIRE_ICON_TIP
+        # }
         name = btr_anomaly.1.b
         leader = {
             add_experience = 200
@@ -330,7 +330,7 @@ ship_event = {
         name = btr_anomaly.10.b
         trigger = {
             owner = {
-                has_origin = turian_hier_origin
+                has_origin = turian_hie_origin
             }
         }
         FROM = {
@@ -1175,7 +1175,7 @@ ship_event = {
                 OR = {
                     has_origin = salarian_uni_origin
                     has_origin = asari_rep_origin
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                 }
             }
         }
@@ -1287,7 +1287,6 @@ ship_event = {
                     add_opinion_modifier = {
                         who = root
                         modifier = opinion_insult
-                        days = 1800
                     }
                 }
             }
@@ -1379,7 +1378,7 @@ ship_event = {
                     has_origin = vol_pro_origin
                     has_origin = courts_dek_origin
                     has_origin = systems_all_origin
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                     has_origin = salarian_uni_origin
                     has_origin = asari_rep_origin
                 }
@@ -1645,7 +1644,7 @@ ship_event = {
         name = btr_anomaly.48.b
         trigger = {
             owner = {
-                has_origin = has_origin = asari_rep_origin
+                has_origin = asari_rep_origin
             }
         }
         FROM = {
@@ -2847,7 +2846,7 @@ ship_event = {
             owner = {
                 NOR = {
                     has_origin = vol_pro_origin
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                     has_origin = migrant_fle_origin
                     has_origin = courts_dek_origin
                 }
@@ -2864,7 +2863,7 @@ ship_event = {
             owner = {
                 OR = {
                     has_origin = vol_pro_origin
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                     has_origin = migrant_fle_origin
                     has_origin = courts_dek_origin
                 }
@@ -3535,7 +3534,7 @@ ship_event = {
         name = btr_anomaly.101.c
         trigger = {
             owner = {
-                has_origin = turian_hier_origin
+                has_origin = turian_hie_origin
             }
         }
         owner = {
@@ -3760,7 +3759,7 @@ ship_event = {
         trigger = {
             owner = {
                 OR = {
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                     has_origin = asari_rep_origin
                     has_origin = salarian_uni_origin
                 }
