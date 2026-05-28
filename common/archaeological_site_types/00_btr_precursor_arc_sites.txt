@@ -4,8 +4,8 @@ btr_precursor_mars_triangle = {
     stages = 6
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
+        is_ship_class = shipclass_science_ship
+        exists = leader
         owner = {
             has_origin = systems_all_origin
         }
@@ -57,13 +57,13 @@ btr_precursor_mars_triangle = {
 }
 
 btr_precursor_original_pillar = {
-    desc = btr_precursor_original_pillar_site_desc
+    desc = btr_precursor_original_pillar_desc
     picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 6
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
+        is_ship_class = shipclass_science_ship
+        exists = leader
         owner = {
             has_origin = asari_rep_origin
         }
@@ -115,13 +115,13 @@ btr_precursor_original_pillar = {
 }
 
 btr_precursor_ancient_return = {
-    desc = btr_precursor_ancient_return_site_desc
+    desc = btr_precursor_ancient_return_desc
     picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 6
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
+        is_ship_class = shipclass_science_ship
+        exists = leader
         owner = {
             has_origin = hegemony_kha_origin
         }
@@ -178,8 +178,8 @@ btr_precursor_new_report = {
     stages = 6
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
+        is_ship_class = shipclass_science_ship
+        exists = leader
         owner = {
             has_origin = courts_dek_origin
         }
@@ -236,8 +236,8 @@ btr_precursor_everywhere = {
     stages = 6
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
+        is_ship_class = shipclass_science_ship
+        exists = leader
         owner = {
             has_origin = illuminated_pri_origin
         }
@@ -294,8 +294,8 @@ btr_precursor_ice_canals = {
     stages = 6
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
+        is_ship_class = shipclass_science_ship
+        exists = leader
         owner = {
             has_origin = salarian_uni_origin
         }
@@ -352,8 +352,8 @@ btr_precursor_preexisting_cover = {
     stages = 5
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
+        is_ship_class = shipclass_science_ship
+        exists = leader
         owner = {
             has_origin = turian_hie_origin
         }
@@ -457,8 +457,8 @@ btr_precursor_artificial_jewel = {
     stages = 6
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
+        is_ship_class = shipclass_science_ship
+        exists = leader
         owner = {
             has_origin = sedriicae_col_origin
         }
@@ -515,8 +515,8 @@ btr_precursor_unnatural_mountains = {
     stages = 5
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
+        is_ship_class = shipclass_science_ship
+        exists = leader
         owner = {
             has_origin = sedriicae_col_origin
         }
