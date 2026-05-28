@@ -15,7 +15,7 @@ ship_event = {
     id = btr_archeology_the_xultec.1
     title = "btr_archeology_the_xultec.name"
     desc = "btr_archeology_the_xultec.desc"
-    picture = GFX_evt_black_hole
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     location = from
     show_sound = event_wind_ruins
     fire_only_once = yes
@@ -25,8 +25,10 @@ ship_event = {
         host_has_dlc = "Ancient Relics Story Pack"
         FROM = {
             has_anomaly = no
-            NOT = { exists = archaeological_site }
-            NOT = { has_planet_flag = suppress_archaeological_sites }
+            NOR = { 
+                exists = archaeological_site 
+                has_planet_flag = suppress_archaeological_sites 
+            }
         }
     }
 
@@ -44,7 +46,7 @@ fleet_event = {
     id = btr_archeology_the_xultec.2
     title = "btr_archeology_the_xultec.1.name"
     desc = btr_archeology_the_xultec.1.desc
-    picture = GFX_evt_black_hole
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     show_sound = event_wind_ruins
     location = from
 
@@ -79,7 +81,7 @@ fleet_event = {
     id = btr_archeology_the_xultec.3
     title = "btr_archeology_the_xultec.2.name"
     desc = btr_archeology_the_xultec.2.desc
-    picture = GFX_evt_black_hole
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     show_sound = event_whispering
     location = from
 
@@ -136,7 +138,7 @@ fleet_event = {
     id = btr_archeology_the_xultec.5
     title = "btr_archeology_the_xultec.4.name"
     desc = btr_archeology_the_xultec.4.desc
-    picture = GFX_evt_black_hole
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     show_sound = event_whispering
     location = from
     archaeology = yes
