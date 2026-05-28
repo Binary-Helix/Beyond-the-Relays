@@ -1,6 +1,6 @@
-PRESSHA = {
+BTR_PRESSHA = {
     desc = pressha_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
     #spawn_chance = {
@@ -8,12 +8,8 @@ PRESSHA = {
     #        #TODO make this spawn only on Pressha b Gargarin, Armstrong Nebula
     #    }
     #}
-    spawn_chance = {
-        base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = pressha_b_planet
-        }
+   spawn_chance = {
+       base = 0
     }
 
     on_success = {
@@ -23,9 +19,9 @@ PRESSHA = {
     }
 }
 
-LIQUOR = {
+BTR_ANTIRUMGOM_LIQUOR = {
     desc = liquor_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -36,10 +32,6 @@ LIQUOR = {
 
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = antirumgom_planet
-        }
     }
 
     on_success = {
@@ -49,9 +41,9 @@ LIQUOR = {
     }
 }
 
-SHOALS = {
+BTR_NOTANBAN_SHOALS = {
     desc = shoals_life_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -62,10 +54,6 @@ SHOALS = {
 
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = notanban_planet
-        }
     }
     on_success = {
         1 = {
@@ -74,23 +62,19 @@ SHOALS = {
     }
 }
 
-PATAMALRUS = {
+BTR_PATAMALRUS = {
     desc = patamalrus_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
-    spawn_chance = {
-        modifier = {
+   # spawn_chance = {
+    #    modifier = {
             #TODO Make this spawn only on patamalrus tereshkova, Armstrong nebula
-        }
-    }
-    spawn_chance = {
-        base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = patamalrus_planet
-        }
-    }
+    #    }
+   # }
+spawn_chance = {
+base = 0
+}
 
     on_success = {
         8 = {
@@ -102,9 +86,9 @@ PATAMALRUS = {
     }
 }
 
-KAMAKAZI = {
+BTR_THEGEUSE_KAMAKAZI = {
     desc = kamakazi_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -114,10 +98,6 @@ KAMAKAZI = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = thegeuse_planet
-        }
     }
     on_success = {
         1 = {
@@ -126,9 +106,9 @@ KAMAKAZI = {
     }
 }
 
-EXILE = {
+BTR_MAWINOR_EXILE = {
     desc = exile_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -139,10 +119,6 @@ EXILE = {
 
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = mawinor_planet
-        }
     }
     on_success = {
         1 = {
@@ -151,9 +127,9 @@ EXILE = {
     }
 }
 
-FLOATERS = {
+BTR_MAJI_FLOATERS = {
     desc = floaters_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -163,10 +139,6 @@ FLOATERS = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = maji_planet
-        }
     }
     on_success = {
         1 = {
@@ -175,9 +147,9 @@ FLOATERS = {
     }
 }
 
-MAGAMA = {
+BTR_SHASU_MAGAMA = {
     desc = magma_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -187,10 +159,6 @@ MAGAMA = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = shasu_planet
-        }
     }
     on_success = {
         1 = {
@@ -199,9 +167,9 @@ MAGAMA = {
     }
 }
 
-GREAT_SPOT = {
+BTR_DRANEN_GREAT_SPOT = {
     desc = great_spot_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -212,10 +180,6 @@ GREAT_SPOT = {
 
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = dranen_planet
-        }
     }
     on_success = {
         1 = {
@@ -224,9 +188,9 @@ GREAT_SPOT = {
     }
 }
 
-PRIMORDIAL = {
+BTR_ARVUNA_PRIMORDIAL = {
     desc = primordial_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -236,10 +200,6 @@ PRIMORDIAL = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = arvuna_planet
-        }
     }
     on_success = {
         1 = {
@@ -248,9 +208,9 @@ PRIMORDIAL = {
     }
 }
 
-UNIQUE = {
+BTR_CLAESTON_UNIQUE = {
     desc = unique_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -260,10 +220,6 @@ UNIQUE = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = caleston_planet
-        }
     }
     on_success = {
         1 = {
@@ -272,9 +228,9 @@ UNIQUE = {
     }
 }
 
-CRUSHER = {
+BTR_SAKATA_CRUSHER = {
     desc = crusher_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -284,10 +240,6 @@ CRUSHER = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = sakata_planet
-        }
     }
     on_success = {
         1 = {
@@ -296,9 +248,9 @@ CRUSHER = {
     }
 }
 
-TECTONISM = {
+BTR_SUMIKO_TECTONISM = {
     desc = tectonism_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #  spawn_chance = {
@@ -308,10 +260,6 @@ TECTONISM = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = sumiko_planet
-        }
     }
     on_success = {
         1 = {
@@ -320,9 +268,9 @@ TECTONISM = {
     }
 }
 
-RUINS_OF_RUIN = {
+BTR_KARUMTO_RUINS_OF_RUIN = {
     desc = ruin_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -332,10 +280,6 @@ RUINS_OF_RUIN = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = karumto_planet
-        }
     }
     on_success = {
         1 = {
@@ -344,9 +288,9 @@ RUINS_OF_RUIN = {
     }
 }
 
-FALSE_GARDEN = {
+BTR_ASTERIA_FALSE_GARDEN = {
     desc = false_garden_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -356,10 +300,6 @@ FALSE_GARDEN = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = asteria_planet
-        }
     }
     on_success = {
         1 = {
@@ -368,9 +308,9 @@ FALSE_GARDEN = {
     }
 }
 
-FORCED_EXTINCTION = {
+BTR_BOTHROS_FORCED_EXTINCTION = {
     desc = forced_extiction_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -380,10 +320,6 @@ FORCED_EXTINCTION = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = bothros_planet
-        }
     }
     on_success = {
         1 = {
@@ -392,9 +328,9 @@ FORCED_EXTINCTION = {
     }
 }
 
-HEATED_RACE = {
+BTR_KOPIS_HEATED_RACE = {
     desc = heated_race_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -404,10 +340,6 @@ HEATED_RACE = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = kopis_planet
-        }
     }
     on_success = {
         1 = {
@@ -416,9 +348,9 @@ HEATED_RACE = {
     }
 }
 
-BIG_SQUID = {
+BTR_TRIDENT_BIG_SQUID = {
     desc = big_squid_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -428,10 +360,6 @@ BIG_SQUID = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = trident_planet
-        }
     }
     on_success = {
         1 = {
@@ -440,9 +368,9 @@ BIG_SQUID = {
     }
 }
 
-SPACE_WORDS = {
+BTR_PATSAYEV_SPACE_WORDS = {
     desc = space_words_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -452,10 +380,6 @@ SPACE_WORDS = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = patsayev_planet
-        }
     }
     on_success = {
         1 = {
@@ -464,9 +388,9 @@ SPACE_WORDS = {
     }
 }
 
-UNDER_FIRE = {
+BTR_VOLKOV_UNDER_FIRE = {
     desc = under_fire_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -476,10 +400,6 @@ UNDER_FIRE = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = volkov_planet
-        }
     }
     on_success = {
         1 = {
@@ -488,9 +408,9 @@ UNDER_FIRE = {
     }
 }
 
-CAT_EARS = {
+BTR_ASTEROID_BELT_CAT_EARS = {
     desc = cat_ears_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   # spawn_chance = {
@@ -500,10 +420,6 @@ CAT_EARS = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = pamyat_belt
-        }
     }
     on_success = {
         1 = {
@@ -512,9 +428,9 @@ CAT_EARS = {
     }
 }
 
-GRAVEROBBING = {
+BTR_GEI_HINNOM_GRAVEROBBING = {
     desc = graverobbing_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -524,10 +440,6 @@ GRAVEROBBING = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = gei_hinnom_planet
-        }
     }
     on_success = {
         1 = {
@@ -536,9 +448,9 @@ GRAVEROBBING = {
     }
 }
 
-SALTY = {
+BTR_NEITH_SALTY = {
     desc = salty_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -548,10 +460,6 @@ SALTY = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = neith_planet
-        }
     }
     on_success = {
         1 = {
@@ -560,9 +468,9 @@ SALTY = {
     }
 }
 
-SOARING_SOLAR = {
+BTR_OSARI_SOARING_SOLAR = {
     desc = soaring_solar_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -572,10 +480,6 @@ SOARING_SOLAR = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = osari_planet
-        }
     }
     on_success = {
         1 = {
@@ -584,9 +488,9 @@ SOARING_SOLAR = {
     }
 }
 
-BREATHING_ROCK = {
+BTR_GREGAS_BREATHING_ROCK = {
     desc = breathing_rock_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -596,10 +500,6 @@ BREATHING_ROCK = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = gregas_planet
-        }
     }
     on_success = {
         1 = {
@@ -608,9 +508,9 @@ BREATHING_ROCK = {
     }
 }
 
-GAS_EXPLOSION = {
+BTR_UZIN_GAS_EXPLOSION = {
     desc = gas_explosion_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -620,10 +520,6 @@ GAS_EXPLOSION = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = uzin_planet
-        }
     }
     on_success = {
         1 = {
@@ -632,9 +528,9 @@ GAS_EXPLOSION = {
     }
 }
 
-PAST_PRIME = {
+BTR_TAMAHERA_PAST_PRIME = {
     desc = past_prime_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -644,10 +540,6 @@ PAST_PRIME = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = tamahera_planet
-        }
     }
     on_success = {
         1 = {
@@ -656,9 +548,9 @@ PAST_PRIME = {
     }
 }
 
-SCOURGED = {
+BTR_KENDAGON_SCOURGED = {
     desc = scourged_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -668,10 +560,6 @@ SCOURGED = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = kelndagon_planet
-        }
     }
     on_success = {
         1 = {
@@ -680,9 +568,9 @@ SCOURGED = {
     }
 }
 
-CLOUDED_HELL = {
+BTR_ATAHIL_CLOUDED_HELL = {
     desc = clouded_hell_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -692,10 +580,6 @@ CLOUDED_HELL = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = atahil_planet
-        }
     }
     on_success = {
         1 = {
@@ -704,9 +588,9 @@ CLOUDED_HELL = {
     }
 }
 
-TRAMPLED_FLOWERS = {
+BTR_ETAMIS_TRAMPLED_FLOWERS = {
     desc = trampled_flowers_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -716,10 +600,6 @@ TRAMPLED_FLOWERS = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = etamis_planet
-        }
     }
     on_success = {
         1 = {
@@ -728,9 +608,9 @@ TRAMPLED_FLOWERS = {
     }
 }
 
-NANO_RINGS = {
+BTR_LINOSSA_NANO_RINGS = {
     desc = nano_rings_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -740,10 +620,6 @@ NANO_RINGS = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = linossa_planet
-        }
     }
     on_success = {
         1 = {
@@ -752,9 +628,9 @@ NANO_RINGS = {
     }
 }
 
-STABLE_PLASMA = {
+BTR_MNEMOSYNE_STABLE_PLASMA = {
     desc = stable_plasma_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -764,10 +640,6 @@ STABLE_PLASMA = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = mnemosyne_planet
-        }
     }
     on_success = {
         1 = {
@@ -776,9 +648,9 @@ STABLE_PLASMA = {
     }
 }
 
-PULLED_APART = {
+BTR_LETHE_PULLED_APART = {
     desc = pulled_apart_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -788,10 +660,6 @@ PULLED_APART = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = lethe_planet
-        }
     }
     on_success = {
         1 = {
@@ -800,9 +668,9 @@ PULLED_APART = {
     }
 }
 
-SMOG_WORLD = {
+BTR_CORANG_SMOG_WORLD = {
     desc = smog_world_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -812,10 +680,6 @@ SMOG_WORLD = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = corang_planet
-        }
     }
     on_success = {
         1 = {
@@ -824,9 +688,9 @@ SMOG_WORLD = {
     }
 }
 
-STORM_TWINS = {
+BTR_SERAO_STORM_TWINS = {
     desc = storm_twins_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -836,10 +700,6 @@ STORM_TWINS = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = serao_planet
-        }
     }
     on_success = {
         1 = {
@@ -848,9 +708,9 @@ STORM_TWINS = {
     }
 }
 
-SHALLOW_GRAVES = {
+BTR_VECCHIO_SHALLOW_GRAVES = {
     desc = shallow_graves_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -860,10 +720,6 @@ SHALLOW_GRAVES = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = vecchio_planet
-        }
     }
     on_success = {
         1 = {
@@ -872,9 +728,9 @@ SHALLOW_GRAVES = {
     }
 }
 
-SUPER_FROZNE = {
+BTR_VOLTURNO_SUPER_FROZNE = {
     desc = super_frozen_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -884,10 +740,6 @@ SUPER_FROZNE = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = volturno_planet
-        }
     }
     on_success = {
         1 = {
@@ -896,9 +748,9 @@ SUPER_FROZNE = {
     }
 }
 
-EEZO_FRAUD = {
+BTR_POLLINO_EEZO_FRAUD = {
     desc = eezo_fraud_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -908,10 +760,6 @@ EEZO_FRAUD = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = pollino_planet
-        }
     }
     on_success = {
         1 = {
@@ -920,9 +768,9 @@ EEZO_FRAUD = {
     }
 }
 
-ZEONA = {
+BTR_ZEONA_ZEONA = {
     desc = zeona_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -932,10 +780,6 @@ ZEONA = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = zeona_planet
-        }
     }
     on_success = {
         1 = {
@@ -944,9 +788,9 @@ ZEONA = {
     }
 }
 
-ODASST = {
+BTR_ODASST_ODASST = {
     desc = odasst_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -956,10 +800,6 @@ ODASST = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = odasst_planet
-        }
     }
     on_success = {
         1 = {
@@ -968,9 +808,9 @@ ODASST = {
     }
 }
 
-PROTHEAN_PILFERING = {
+BTR_HESANO_PROTHEAN_PILFERING = {
     desc = prothean_pilfering_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -980,10 +820,6 @@ PROTHEAN_PILFERING = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = hesano_planet
-        }
     }
     on_success = {
         1 = {
@@ -992,9 +828,9 @@ PROTHEAN_PILFERING = {
     }
 }
 
-GREEN_FLAMES = {
+BTR_ZORYA_GREEN_FLAMES = {
     desc = green_flames_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1004,10 +840,6 @@ GREEN_FLAMES = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = zorya_planet
-        }
     }
     on_success = {
         1 = {
@@ -1016,11 +848,11 @@ GREEN_FLAMES = {
     }
 }
 
-BALL_OF_ICE = {
+BTR_VINTAEL_BALL_OF_ICE = {
     desc = ball_of_ice_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
-
+        #TODO Could not find
  #   spawn_chance = {
  #       modifier = {
  #           #TODO Make this spawn only on vintael, faia, Ismar Frontier
@@ -1028,10 +860,6 @@ BALL_OF_ICE = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = vintael_planet
-        }
     }
     on_success = {
         1 = {
@@ -1040,9 +868,9 @@ BALL_OF_ICE = {
     }
 }
 
-MATOL = {
+BTR_MATOL_MATOL = {
     desc = matol_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -1052,10 +880,6 @@ MATOL = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = matol_planet
-        }
     }
     on_success = {
         1 = {
@@ -1064,11 +888,11 @@ MATOL = {
     }
 }
 
-DECEPTIVE_GIANT = {
+BTR_CLUNGON_DECEPTIVE_GIANT = {
     desc = deceptive_giant_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
-
+        #TODO could not find
  #   spawn_chance = {
  #       modifier = {
  #           #TODO Make this spawn only on clungon, herschel, kepler verge
@@ -1076,10 +900,6 @@ DECEPTIVE_GIANT = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = clungon_planet
-        }
     }
     on_success = {
         1 = {
@@ -1088,9 +908,9 @@ DECEPTIVE_GIANT = {
     }
 }
 
-BACKSPRAY = {
+BTR_SESMOSE_BACKSPRAY = {
     desc = backspray_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -1100,10 +920,6 @@ BACKSPRAY = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = sesmose_planet
-        }
     }
     on_success = {
         1 = {
@@ -1112,9 +928,9 @@ BACKSPRAY = {
     }
 }
 
-RAPID_GLASS = {
+BTR_FARNURI_RAPID_GLASS = {
     desc = rapid_glass_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1124,10 +940,6 @@ RAPID_GLASS = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = faruni_planet
-        }
     }
     on_success = {
         1 = {
@@ -1136,9 +948,9 @@ RAPID_GLASS = {
     }
 }
 
-ALMOST_PERFECT = {
+BTR_ALMARCRUX_ALMOST_PERFECT = {
     desc = almost_perfect_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -1148,10 +960,6 @@ ALMOST_PERFECT = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = almarcrux_planet
-        }
     }
     on_success = {
         1 = {
@@ -1160,9 +968,9 @@ ALMOST_PERFECT = {
     }
 }
 
-KALEIDOSCOPE = {
+BTR_CHASCA_KALEIDOSCOPE = {
     desc = kaleidoscope_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -1172,10 +980,6 @@ KALEIDOSCOPE = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = chasca_planet
-        }
     }
     on_success = {
         1 = {
@@ -1184,11 +988,10 @@ KALEIDOSCOPE = {
     }
 }
 
-SHAKING = {
+BTR_APO_SHAKING = {
     desc = shaking_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
-
 #    spawn_chance = {
 #        modifier = {
 #            #TODO Make this spawn only on apo, matano, maroon sea
@@ -1196,10 +999,6 @@ SHAKING = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = apo_matano_planet
-        }
     }
     on_success = {
         1 = {
@@ -1208,9 +1007,9 @@ SHAKING = {
     }
 }
 
-GIANT_GEM = {
+BTR_APO_GIANT_GEM = {
     desc = giant_gem_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -1220,10 +1019,6 @@ GIANT_GEM = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = apo_planet
-        }
     }
     on_success = {
         1 = {
@@ -1232,9 +1027,9 @@ GIANT_GEM = {
     }
 }
 
-POLLEN_PAIN = {
+BTR_NORDACRUX_POLLEN_PAIN = {
     desc = pollen_pain_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -1244,10 +1039,6 @@ POLLEN_PAIN = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = nordacrux_planet
-        }
     }
     on_success = {
         1 = {
@@ -1256,9 +1047,9 @@ POLLEN_PAIN = {
     }
 }
 
-OPERA_PHANTOM = {
+BTR_SUEN_OPERA_PHANTOM = {
     desc = opera_phantom_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1268,10 +1059,6 @@ OPERA_PHANTOM = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = suen_planet
-        }
     }
     on_success = {
         1 = {
@@ -1280,9 +1067,9 @@ OPERA_PHANTOM = {
     }
 }
 
-ANCIENT_EEZO = {
+BTR_KASHSHAPTU_ANCIENT_EEZO = {
     desc = ancient_eezo_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1292,10 +1079,6 @@ ANCIENT_EEZO = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = kashshaptu_planet
-        }
     }
     on_success = {
         1 = {
@@ -1304,9 +1087,9 @@ ANCIENT_EEZO = {
     }
 }
 
-EXILE_POST = {
+BTR_LISTENING_POST_X-19_EXILE_POST = {
     desc = exile_post_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -1316,10 +1099,6 @@ EXILE_POST = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = listening_post_x_19_planet
-        }
     }
     on_success = {
         1 = {
@@ -1328,9 +1107,9 @@ EXILE_POST = {
     }
 }
 
-WIND_SWEPT = {
+BTR_UTTUKU_WIND_SWEPT = {
     desc = wind_swept_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1340,10 +1119,6 @@ WIND_SWEPT = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = uttuku_planet
-        }
     }
     on_success = {
         1 = {
@@ -1352,9 +1127,9 @@ WIND_SWEPT = {
     }
 }
 
-DISAPPEARING_REFINERIES = {
+BTR_KEPH_DISAPPEARING_REFINERIES = {
     desc = disappearing_refineries_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1364,10 +1139,6 @@ DISAPPEARING_REFINERIES = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = keph_planet
-        }
     }
     on_success = {
         1 = {
@@ -1376,9 +1147,9 @@ DISAPPEARING_REFINERIES = {
     }
 }
 
-BLUE_ROCKS = {
+BTR_BANNIK_BLUE_ROCKS = {
     desc = blue_rocks_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1388,10 +1159,6 @@ BLUE_ROCKS = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = bannik_planet
-        }
     }
     on_success = {
         1 = {
@@ -1400,9 +1167,9 @@ BLUE_ROCKS = {
     }
 }
 
-VAULT22 = {
+BTR_PRAGIA_VAULT22 = {
     desc = vault22_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1412,10 +1179,6 @@ VAULT22 = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = pragia_planet
-        }
     }
     on_success = {
         1 = {
@@ -1424,9 +1187,9 @@ VAULT22 = {
     }
 }
 
-THALASSOPHOBIA = {
+BTR_YAMM_THALASSOPHOBIA = {
     desc = thalassophobia_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -1436,10 +1199,6 @@ THALASSOPHOBIA = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = yamm_planet
-        }
     }
     on_success = {
         1 = {
@@ -1448,9 +1207,9 @@ THALASSOPHOBIA = {
     }
 }
 
-STELLAR_LONELINESS = {
+BTR_NORESHA_STELLAR_LONELINESS = {
     desc = stellar_loneliness_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -1460,10 +1219,6 @@ STELLAR_LONELINESS = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = noresha_planet
-        }
     }
     on_success = {
         1 = {
@@ -1472,9 +1227,9 @@ STELLAR_LONELINESS = {
     }
 }
 
-FINAL_FLAMES = {
+BTR_433_SPIDAU_FINAL_FLAMES = {
     desc = final_flames_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1484,10 +1239,6 @@ FINAL_FLAMES = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = 433_spidau_planet
-        }
     }
     on_success = {
         1 = {
@@ -1496,9 +1247,9 @@ FINAL_FLAMES = {
     }
 }
 
-QUIET_OUTPOST = {
+BTR_PHILAE_QUIET_OUTPOST = {
     desc = quiet_outpost_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -1508,10 +1259,6 @@ QUIET_OUTPOST = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = philae_planet
-        }
     }
     on_success = {
         1 = {
@@ -1520,9 +1267,9 @@ QUIET_OUTPOST = {
     }
 }
 
-DOWNED_SAT = {
+BTR_AGETON_DOWNED_SAT = {
     desc = downed_sat_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -1532,10 +1279,6 @@ DOWNED_SAT = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = agetoton_planet
-        }
     }
     on_success = {
         1 = {
@@ -1544,9 +1287,9 @@ DOWNED_SAT = {
     }
 }
 
-LAST_AND_LOST = {
+BTR_ILOS_LAST_AND_LOST = {
     desc = last_and_lost_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -1556,10 +1299,6 @@ LAST_AND_LOST = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = ilos_planet
-        }
     }
     on_success = {
         1 = {
@@ -1568,9 +1307,9 @@ LAST_AND_LOST = {
     }
 }
 
-BELTS = {
+BTR_ZAFE_BELTS = {
     desc = belts_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1580,10 +1319,6 @@ BELTS = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = zafe_planet
-        }
     }
     on_success = {
         1 = {
@@ -1592,22 +1327,18 @@ BELTS = {
     }
 }
 
-BUNKERS = {
+BTR_SIANO_BUNKERS = {
     desc = bunkers_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
-    spawn_chance = {
-        modifier = {
-            #TODO Make this spawn only on siano, dirada, pylos nebula
-        }
-    }
+    # spawn_chance = {
+    #     modifier = {
+    #         #TODO Make this spawn only on siano, dirada, pylos nebula
+    #     }
+    # }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = siano_planet
-        }
     }
     on_success = {
         1 = {
@@ -1616,9 +1347,9 @@ BUNKERS = {
     }
 }
 
-HOT_SPIN = {
+BTR_CANALUS_HOT_SPIN = {
     desc = hot_spin_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1628,10 +1359,6 @@ HOT_SPIN = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = canalus_planet
-        }
     }
     on_success = {
         1 = {
@@ -1640,9 +1367,9 @@ HOT_SPIN = {
     }
 }
 
-FROZEN_LOCKED = {
+BTR_NEIDUS_FROZEN_LOCKED = {
     desc = frozen_locked_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1652,10 +1379,6 @@ FROZEN_LOCKED = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = neidus_planet
-        }
     }
     on_success = {
         1 = {
@@ -1664,9 +1387,9 @@ FROZEN_LOCKED = {
     }
 }
 
-ICE_PAVED = {
+BTR_THEONAX_ICE_PAVED = {
     desc = ice_paved_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1676,10 +1399,6 @@ ICE_PAVED = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = theonax_planet
-        }
     }
     on_success = {
         1 = {
@@ -1688,9 +1407,9 @@ ICE_PAVED = {
     }
 }
 
-FROZN_PAST = {
+BTR_CHITHESS_FROZN_PAST = {
     desc = frozen_past_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1700,10 +1419,6 @@ FROZN_PAST = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = chithess_planet
-        }
     }
     on_success = {
         1 = {
@@ -1712,9 +1427,9 @@ FROZN_PAST = {
     }
 }
 
-STRONG_MAGNET = {
+BTR_ISALE_STRONG_MAGNET = {
     desc = strong_magnet_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -1724,10 +1439,6 @@ STRONG_MAGNET = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = isale_planet
-        }
     }
     on_success = {
         1 = {
@@ -1736,9 +1447,9 @@ STRONG_MAGNET = {
     }
 }
 
-HOT_JUPITER = {
+BTR_RESCEL_HOT_JUPITER = {
     desc = hot_jupiter_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1748,10 +1459,6 @@ HOT_JUPITER = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = rescel_planet
-        }
     }
     on_success = {
         1 = {
@@ -1760,9 +1467,9 @@ HOT_JUPITER = {
     }
 }
 
-ICE_BANDITS = {
+BTR_ANEDIA_ICE_BANDITS = {
     desc = ice_bandits_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1772,10 +1479,6 @@ ICE_BANDITS = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = anedia_planet
-        }
     }
     on_success = {
         1 = {
@@ -1784,9 +1487,9 @@ ICE_BANDITS = {
     }
 }
 
-VORCHA_FARM = {
+BTR_NAMAKLI_VORCHA_FARM = {
     desc = vorcha_farm_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1796,10 +1499,6 @@ VORCHA_FARM = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = namakli_planet
-        }
     }
     on_success = {
         1 = {
@@ -1808,9 +1507,9 @@ VORCHA_FARM = {
     }
 }
 
-ANCIENT_RESEARCH = {
+BTR_AZRAHAS_ANCIENT_RESEARCH = {
     desc = ancient_research_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1820,10 +1519,6 @@ ANCIENT_RESEARCH = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = azrahas_planet
-        }
     }
     on_success = {
         1 = {
@@ -1832,9 +1527,9 @@ ANCIENT_RESEARCH = {
     }
 }
 
-DERELICT_FUEL = {
+BTR_ROSTESK_DERELICT_FUEL = {
     desc = derelict_fuel_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1844,10 +1539,6 @@ DERELICT_FUEL = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = rostesk_planet
-        }
     }
     on_success = {
         1 = {
@@ -1856,9 +1547,9 @@ DERELICT_FUEL = {
     }
 }
 
-WINDY_WORLD = {
+BTR_JARFOR_WINDY_WORLD = {
     desc = windy_world_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -1868,10 +1559,6 @@ WINDY_WORLD = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = jarfor_planet
-        }
     }
     on_success = {
         1 = {
@@ -1880,11 +1567,10 @@ WINDY_WORLD = {
     }
 }
 
-VIRMIRE = {
-    desc = VIRMIRE_desc
-    picture = #TODO
+BTR_VIRMIRE = {
+    desc = virmire_desc
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
-
  #   spawn_chance = {
  #       modifier = {
  #           #TODO Make this spawn only on vermire, hoc, sentry omega
@@ -1892,10 +1578,6 @@ VIRMIRE = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = vermire_planet
-        }
     }
     on_success = {
         1 = {
@@ -1904,9 +1586,9 @@ VIRMIRE = {
     }
 }
 
-A_MESSAGE = {
+BTR_PRESCYLA_A_MESSAGE = {
     desc = a_message_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1916,10 +1598,6 @@ A_MESSAGE = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = prescyla_planet
-        }
     }
     on_success = {
         1 = {
@@ -1928,9 +1606,9 @@ A_MESSAGE = {
     }
 }
 
-GEM_WORLD = {
+BTR_SAPFIR_GEM_WORLD = {
     desc = gem_world_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -1940,10 +1618,6 @@ GEM_WORLD = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = sapfir_planet
-        }
     }
     on_success = {
         1 = {
@@ -1952,11 +1626,10 @@ GEM_WORLD = {
     }
 }
 
-SPINNING_GRAVES = {
+BTR_PROSPECT_SPINNING_GRAVES = {
     desc = spinning_graves_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
-
 #    spawn_chance = {
 #        modifier = {
 #            #TODO Make this spawn only on prospect, lera, shadow sea
@@ -1964,10 +1637,6 @@ SPINNING_GRAVES = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = prospect_planet
-        }
     }
     on_success = {
         1 = {
@@ -1976,9 +1645,9 @@ SPINNING_GRAVES = {
     }
 }
 
-NEW_PARADISE = {
+BTR_HORIZON_NEW_PARADISE = {
     desc = new_paradise_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -1988,10 +1657,6 @@ NEW_PARADISE = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = horizon_planet
-        }
     }
     on_success = {
         1 = {
@@ -2000,9 +1665,9 @@ NEW_PARADISE = {
     }
 }
 
-SHINING_WORLD = {
+BTR_IMANEYA_SHINING_WORLD = {
     desc = shining_world_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2012,10 +1677,6 @@ SHINING_WORLD = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = imaneya_planet
-        }
     }
     on_success = {
         1 = {
@@ -2024,9 +1685,9 @@ SHINING_WORLD = {
     }
 }
 
-HIGH_GROUND = {
+BTR_NEPMOS_HIGH_GROUND = {
     desc = high_ground_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -2036,10 +1697,6 @@ HIGH_GROUND = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = nepmos_planet
-        }
     }
     on_success = {
         1 = {
@@ -2048,9 +1705,9 @@ HIGH_GROUND = {
     }
 }
 
-FAIRY_PATERNS = {
+BTR_QUAJI_FAIRY_PATERNS = {
     desc = fairy_paterns_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2060,10 +1717,6 @@ FAIRY_PATERNS = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = quaji_planet
-        }
     }
     on_success = {
         1 = {
@@ -2072,9 +1725,9 @@ FAIRY_PATERNS = {
     }
 }
 
-FALSE_LIFE = {
+BTR_CHOFEN_FALSE_LIFE = {
     desc = false_life_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2084,10 +1737,6 @@ FALSE_LIFE = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = chofen_planet
-        }
     }
     on_success = {
         15 = {
@@ -2099,9 +1748,9 @@ FALSE_LIFE = {
     }
 }
 
-HIDDEN_STAR = {
+BTR_TIMSHAR_HIDDEN_STAR = {
     desc = hidden_star_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2111,10 +1760,6 @@ HIDDEN_STAR = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = timshar_star
-        }
     }
     on_success = {
         1 = {
@@ -2123,9 +1768,9 @@ HIDDEN_STAR = {
     }
 }
 
-LIGHTSHOW_RESEARCH = {
+BTR_ADOUNIA_E_LIGHTSHOW_RESEARCH = {
     desc = lightshow_research_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -2135,10 +1780,6 @@ LIGHTSHOW_RESEARCH = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = adounia_planet
-        }
     }
     on_success = {
         1 = {
@@ -2147,9 +1788,9 @@ LIGHTSHOW_RESEARCH = {
     }
 }
 
-DANGEROUS_PARADISE = {
+BTR_MINDOIR_DANGEROUS_PARADISE = {
     desc = dangerous_paradise_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -2159,10 +1800,6 @@ DANGEROUS_PARADISE = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = mindoir_planet
-        }
     }
     on_success = {
         1 = {
@@ -2171,9 +1808,9 @@ DANGEROUS_PARADISE = {
     }
 }
 
-LOW_G = {
+BTR_AMAR_LOW_G = {
     desc = low_g_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2183,10 +1820,6 @@ LOW_G = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = amar_planet
-        }
     }
     on_success = {
         1 = {
@@ -2195,9 +1828,9 @@ LOW_G = {
     }
 }
 
-LOST_HOMES = {
+BTR_KET'OSH_LOST_HOMES = {
     desc = lost_homes_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2207,10 +1840,6 @@ LOST_HOMES = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = ketosh_planet
-        }
     }
     on_success = {
         1 = {
@@ -2219,9 +1848,9 @@ LOST_HOMES = {
     }
 }
 
-SILENT_GRAVES = {
+BTR_SIAN_SILENT_GRAVES = {
     desc = silent_graves_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2231,10 +1860,6 @@ SILENT_GRAVES = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = sian_planet
-        }
     }
     on_success = {
         1 = {
@@ -2243,9 +1868,9 @@ SILENT_GRAVES = {
     }
 }
 
-RED_WIPE = {
+BTR_DH1993_RED_WIPE = {
     desc = red_wipe_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -2255,10 +1880,6 @@ RED_WIPE = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = dh_1993_planet
-        }
     }
     on_success = {
         1 = {
@@ -2267,9 +1888,9 @@ RED_WIPE = {
     }
 }
 
-WRONG_MINERALS = {
+BTR_L2183_WRONG_MINERALS = {
     desc = wrong_minerals_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2279,10 +1900,6 @@ WRONG_MINERALS = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = l2183_planet
-        }
     }
     on_success = {
         1 = {
@@ -2291,9 +1908,9 @@ WRONG_MINERALS = {
     }
 }
 
-SHATTERED_WORLD = {
+BTR_DC1938_SHATTERED_WORLD = {
     desc = shattered_world_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2303,10 +1920,6 @@ SHATTERED_WORLD = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = dc_1939_planet
-        }
     }
     on_success = {
         1 = {
@@ -2315,9 +1928,9 @@ SHATTERED_WORLD = {
     }
 }
 
-GHOST_MINING = {
+BTR_MV1963_GHOST_MINING = {
     desc = ghost_mining_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -2327,10 +1940,6 @@ GHOST_MINING = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = mv_1963_planet
-        }
     }
     on_success = {
         1 = {
@@ -2339,9 +1948,9 @@ GHOST_MINING = {
     }
 }
 
-MASSIVE_COMMET = {
+BTR_VECTRA_MASSIVE_COMMET = {
     desc = massive_commet_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2351,10 +1960,6 @@ MASSIVE_COMMET = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = vectra_planet
-        }
     }
     on_success = {
         1 = {
@@ -2363,9 +1968,9 @@ MASSIVE_COMMET = {
     }
 }
 
-MOLE_MEN = {
+BTR_VARMALUS_MOLE_MEN = {
     desc = mole_men_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2375,10 +1980,6 @@ MOLE_MEN = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = varmalus_planet
-        }
     }
     on_success = {
         1 = {
@@ -2387,9 +1988,9 @@ MOLE_MEN = {
     }
 }
 
-WOMEN_WARRIOR = {
+BTR_CANRUM_WOMEN_WARRIOR = {
     desc = women_warrior_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
    # spawn_chance = {
@@ -2399,10 +2000,6 @@ WOMEN_WARRIOR = {
    # }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = canrum_planet
-        }
     }
     on_success = {
         1 = {
@@ -2411,9 +2008,9 @@ WOMEN_WARRIOR = {
     }
 }
 
-HOT_GARDEN = {
+BTR_INTAI'SEI_HOT_GARDEN = {
     desc = hot_garden_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -2423,10 +2020,6 @@ HOT_GARDEN = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = intaisei_planet
-        }
     }
     on_success = {
         1 = {
@@ -2435,9 +2028,9 @@ HOT_GARDEN = {
     }
 }
 
-CRASH_SPILL = {
+BTR_VEBINOK_CRASH_SPILL = {
     desc = crash_spill_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -2447,10 +2040,6 @@ CRASH_SPILL = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = vebinok_planet
-        }
     }
     on_success = {
         1 = {
@@ -2459,9 +2048,9 @@ CRASH_SPILL = {
     }
 }
 
-MOLTEN_CRUST = {
+BTR_SALAMIS_MOLTEN_CRUST = {
     desc = molten_crust_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2471,10 +2060,6 @@ MOLTEN_CRUST = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = salamis_planet
-        }
     }
     on_success = {
         1 = {
@@ -2483,9 +2068,9 @@ MOLTEN_CRUST = {
     }
 }
 
-HUMIDIFIER = {
+BTR_PROTEUS_HUMIDIFIER = {
     desc = humidifier_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2495,10 +2080,6 @@ HUMIDIFIER = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = proteus_planet
-        }
     }
     on_success = {
         1 = {
@@ -2507,9 +2088,9 @@ HUMIDIFIER = {
     }
 }
 
-LOST_TROVE = {
+BTR_THERUM_LOST_TROVE = {
     desc = lost_trove_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2519,10 +2100,6 @@ LOST_TROVE = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = therum_planet
-        }
     }
     on_success = {
         1 = {
@@ -2531,9 +2108,9 @@ LOST_TROVE = {
     }
 }
 
-CRYPTIC_MAZE = {
+BTR_ZAKROS_CRYPTIC_MAZE = {
     desc = cyrptic_maze_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2543,10 +2120,6 @@ CRYPTIC_MAZE = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = zakros_planet
-        }
     }
     on_success = {
         1 = {
@@ -2555,9 +2128,9 @@ CRYPTIC_MAZE = {
     }
 }
 
-SILICA_LIFE = {
+BTR_SHARJILA_SILICA_LIFE = {
     desc = silica_life_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -2567,10 +2140,6 @@ SILICA_LIFE = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = sharjila_planet
-        }
     }
     on_success = {
         1 = {
@@ -2579,9 +2148,9 @@ SILICA_LIFE = {
     }
 }
 
-Ammonia_AIR = {
+BTR_PATAVIG_Ammonia_AIR = {
     desc = ammonia_air_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -2591,10 +2160,6 @@ Ammonia_AIR = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = patavig_planet
-        }
     }
     on_success = {
         1 = {
@@ -2603,9 +2168,9 @@ Ammonia_AIR = {
     }
 }
 
-LOST_ATMOSPHERE = {
+BTR_ALTAAYA_LOST_ATMOSPHERE = {
     desc = lost_atmosphere_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #  spawn_chance = {
@@ -2615,10 +2180,6 @@ LOST_ATMOSPHERE = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = altaaya_planet
-        }
     }
     on_success = {
         1 = {
@@ -2627,9 +2188,9 @@ LOST_ATMOSPHERE = {
     }
 }
 
-CROWDED_SPACE = {
+BTR_ONTAMALCA_CROWDED_SPACE = {
     desc = crowded_space_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2639,10 +2200,6 @@ CROWDED_SPACE = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = ontamalca_planet
-        }
     }
     on_success = {
         1 = {
@@ -2651,9 +2208,9 @@ CROWDED_SPACE = {
     }
 }
 
-CAVE_LIFE = {
+BTR_SYIDED_CAVE_LIFE = {
     desc = cave_life_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -2663,10 +2220,6 @@ CAVE_LIFE = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = syided_planet
-        }
     }
     on_success = {
         1 = {
@@ -2675,9 +2228,9 @@ CAVE_LIFE = {
     }
 }
 
-DEATH_BREATH = {
+BTR_ELETANIA_DEATH_BREATH = {
     desc = death_breath_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2687,10 +2240,6 @@ DEATH_BREATH = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = eletania_planet
-        }
     }
     on_success = {
         1 = {
@@ -2699,9 +2248,9 @@ DEATH_BREATH = {
     }
 }
 
-ALL_THAT_GLISTENS = {
+BTR_SYTAU_ALL_THAT_GLISTENS = {
     desc = all_that_glistens_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -2711,10 +2260,6 @@ ALL_THAT_GLISTENS = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = sytau_planet
-        }
     }
     on_success = {
         1 = {
@@ -2723,9 +2268,9 @@ ALL_THAT_GLISTENS = {
     }
 }
 
-FEROS = {
+BTR_FEROS = {
     desc = feros_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2735,10 +2280,6 @@ FEROS = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = feros_planet
-        }
     }
     on_success = {
         1 = {
@@ -2747,9 +2288,9 @@ FEROS = {
     }
 }
 
-OLD_FUEL = {
+BTR_SHARRING_OLD_FUEL = {
     desc = old_fuel_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -2759,10 +2300,6 @@ OLD_FUEL = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = sharring_planet
-        }
     }
     on_success = {
         1 = {
@@ -2771,9 +2308,9 @@ OLD_FUEL = {
     }
 }
 
-GHOST_MINES = {
+BTR_QUANA_GHOST_MINES = {
     desc = ghost_mines_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -2783,10 +2320,6 @@ GHOST_MINES = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = quana_planet
-        }
     }
     on_success = {
         1 = {
@@ -2795,9 +2328,9 @@ GHOST_MINES = {
     }
 }
 
-BLOOPS = {
+BTR_LOGAN_BLOOPS = {
     desc = bloops_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2807,10 +2340,6 @@ BLOOPS = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = logan_planet
-        }
     }
     on_success = {
         1 = {
@@ -2819,9 +2348,9 @@ BLOOPS = {
     }
 }
 
-THE_START = {
+BTR_EDEN_PRIME_THE_START = {
     desc = the_Start_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -2831,10 +2360,6 @@ THE_START = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = eden_prime_planet
-        }
     }
     on_success = {
         1 = {
@@ -2843,9 +2368,9 @@ THE_START = {
     }
 }
 
-PLANETARY_STATIC = {
+BTR_HUNINGTO_PLANETARY_STATIC = {
     desc = planetary_static_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -2855,10 +2380,6 @@ PLANETARY_STATIC = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = huningto_planet
-        }
     }
     on_success = {
         1 = {
@@ -2867,9 +2388,9 @@ PLANETARY_STATIC = {
     }
 }
 
-PARALLEL_LIFE = {
+BTR_MAVINGON_PARALLEL_LIFE = {
     desc = parallel_life_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2879,10 +2400,6 @@ PARALLEL_LIFE = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = mavingon_planet
-        }
     }
     on_success = {
         1 = {
@@ -2891,9 +2408,9 @@ PARALLEL_LIFE = {
     }
 }
 
-LIFE_SIZED = {
+BTR_FARCROTHU_C_LIFE_SIZED = {
     desc = life_sized_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2903,10 +2420,6 @@ LIFE_SIZED = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = farcrothu_c_planet
-        }
     }
     on_success = {
         1 = {
@@ -2915,9 +2428,9 @@ LIFE_SIZED = {
     }
 }
 
-NO_AIR = {
+BTR_PATATANLIS_NO_AIR = {
     desc = no_air_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -2927,10 +2440,6 @@ NO_AIR = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = patatanlis_planet
-        }
     }
     on_success = {
         1 = {
@@ -2939,9 +2448,9 @@ NO_AIR = {
     }
 }
 
-GLOW_BALL = {
+BTR_ANTIROPRUS_GLOW_BALL = {
     desc = glow_ball_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
 #    spawn_chance = {
@@ -2951,10 +2460,6 @@ GLOW_BALL = {
 #    }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = antiroprus_planet
-        }
     }
     on_success = {
         1 = {
@@ -2963,9 +2468,9 @@ GLOW_BALL = {
     }
 }
 
-BIG_BRAIN = {
+BTR_PLOBA_BIG_BRAIN = {
     desc = big_brain_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2975,10 +2480,6 @@ BIG_BRAIN = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = ploba_planet
-        }
     }
     on_success = {
         1 = {
@@ -2987,9 +2488,9 @@ BIG_BRAIN = {
     }
 }
 
-WATER_BOY = {
+BTR_TREBIN_WATER_BOY = {
     desc = water_boy_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -2999,10 +2500,6 @@ WATER_BOY = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = trebin_planet
-        }
     }
     on_success = {
         1 = {
@@ -3011,9 +2508,9 @@ WATER_BOY = {
     }
 }
 
-SMOOTH_WORLD = {
+BTR_HUNIDOR_SMOOTH_WORLD = {
     desc = smooth_world_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -3023,10 +2520,6 @@ SMOOTH_WORLD = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = hunidor_planet
-        }
     }
     on_success = {
         1 = {
@@ -3035,9 +2528,9 @@ SMOOTH_WORLD = {
     }
 }
 
-ALL_OF_THE_LIGHTS = {
+BTR_ZAYARTER_ALL_OF_THE_LIGHTS = {
     desc = all_of_the_lights_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -3047,10 +2540,6 @@ ALL_OF_THE_LIGHTS = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = zayarter_planet
-        }
     }
     on_success = {
         1 = {
@@ -3059,9 +2548,9 @@ ALL_OF_THE_LIGHTS = {
     }
 }
 
-FAMILY_THERMOSTAT = {
+BTR_COHE_FAMILY_THERMOSTAT = {
     desc = family_thermostat_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -3071,10 +2560,6 @@ FAMILY_THERMOSTAT = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = cohe_planet
-        }
     }
     on_success = {
         1 = {
@@ -3083,9 +2568,9 @@ FAMILY_THERMOSTAT = {
     }
 }
 
-SPOOKY_SQUID = {
+BTR_JARTAR_SPOOKY_SQUID = {
     desc = spooky_squid_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -3095,10 +2580,6 @@ SPOOKY_SQUID = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = jartar_planet
-        }
     }
     on_success = {
         1 = {
@@ -3107,9 +2588,9 @@ SPOOKY_SQUID = {
     }
 }
 
-FOOLS_GOLD = {
+BTR_KLENSAL_FOOLS_GOLD = {
     desc = fools_gold_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -3119,10 +2600,6 @@ FOOLS_GOLD = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = klensal_planet
-        }
     }
     on_success = {
         1 = {
@@ -3131,9 +2608,9 @@ FOOLS_GOLD = {
     }
 }
 
-FOUL_WATERS = {
+BTR_GREMAR_FOUL_WATERS = {
     desc = foul_waters_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -3143,10 +2620,6 @@ FOUL_WATERS = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = gremar_planet
-        }
     }
     on_success = {
         1 = {
@@ -3155,9 +2628,9 @@ FOUL_WATERS = {
     }
 }
 
-HIDDEN_MOONS = {
+BTR_TUNSHAGON_HIDDEN_MOONS = {
     desc = hidden_moons_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
  #   spawn_chance = {
@@ -3167,10 +2640,6 @@ HIDDEN_MOONS = {
  #   }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = tunshagon_planet
-        }
     }
     on_success = {
         1 = {
@@ -3179,9 +2648,9 @@ HIDDEN_MOONS = {
     }
 }
 
-BLUE_LAVA = {
+BTR_NONVEL_BLUE_LAVA = {
     desc = blue_lava_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     level = 1
 
   #  spawn_chance = {
@@ -3191,10 +2660,6 @@ BLUE_LAVA = {
   #  }
     spawn_chance = {
         base = 0
-        modifier = {
-            add = 10
-            has_planet_flag = nonuel_planet
-        }
     }
     on_success = {
         1 = {

@@ -1,11 +1,11 @@
-btr_archeology_lost_regiment = {
+btr_archeology_lost_regiment = { # TODO: add unique interactions for Caleston/Gothones
     desc = btr_archeology_lost_regiment_site_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 3
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
+		is_ship_class = shipclass_science_ship
+		exists = leader
         owner = {
             has_origin = turian_hie_origin
         }
@@ -39,12 +39,12 @@ btr_archeology_lost_regiment = {
 }
 btr_archeology_crashed_ship = {
     desc = btr_archeology_crashed_ship_site_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 4
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
+		is_ship_class = shipclass_science_ship
+		exists = leader
     }
     visible = {
         default_site_visible_trigger = yes
@@ -79,12 +79,12 @@ btr_archeology_crashed_ship = {
 }
 btr_archeology_space_hulk = {
     desc = btr_archeology_space_hulk_site_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 4
     max_instances = 1
     allow = {
-        is_a_planet = no
-        exists = owner
+        is_ship_class = shipclass_science_ship
+		exists = leader
     }
     visible = {
         default_site_visible_trigger = yes
@@ -118,15 +118,14 @@ btr_archeology_space_hulk = {
     }
 }
 
-btr_archeology_krogan_warlord = {
+btr_archeology_krogan_warlord = { # TODO: add unique interactions for Krogan 
     desc = btr_archeology_krogan_warlord_site_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 2
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
-        #TODO Not in human space
+		is_ship_class = shipclass_science_ship
+		exists = leader
     }
     visible = {
         default_site_visible_trigger = yes
@@ -150,15 +149,14 @@ btr_archeology_krogan_warlord = {
     }
 }
 
-btr_archeology_geth_probe = {
+btr_archeology_geth_probe = { # TODO: add unique interactions for Geth 
     desc = btr_archeology_geth_probe_site_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 3
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
-        #TODO Spawn in the terminus/skyllian
+		is_ship_class = shipclass_science_ship
+		exists = leader
     }
     visible = {
         default_site_visible_trigger = yes
@@ -187,15 +185,14 @@ btr_archeology_geth_probe = {
     }
 }
 
-btr_archeology_salarian_scientists = {
+btr_archeology_salarian_scientists = { # TODO: add unique interaction for salarian/lystheni 
     desc = btr_archeology_salarian_scientists_site_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 3
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
-        #TODO Not in human space
+		is_ship_class = shipclass_science_ship
+		exists = leader
     }
     visible = {
         default_site_visible_trigger = yes
@@ -226,13 +223,12 @@ btr_archeology_salarian_scientists = {
 
 btr_archeology_rites_of_beast = {
     desc = btr_archeology_rites_of_beast_site_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 5
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
-        #TODO Not in human space
+		is_ship_class = shipclass_science_ship
+		exists = leader
     }
     visible = {
         default_site_visible_trigger = yes
@@ -271,15 +267,14 @@ btr_archeology_rites_of_beast = {
     }
 }
 
-btr_archeology_echoes_rachni_war = {
+btr_archeology_echoes_rachni_war = { # TODO: add unique interactions for Krogan/Asari/Salarians/Turians
     desc = btr_archeology_echoes_rachni_war_site_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 5
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
-        #TODO Not in human space
+		is_ship_class = shipclass_science_ship
+		exists = leader
     }
     visible = {
         default_site_visible_trigger = yes
@@ -318,15 +313,14 @@ btr_archeology_echoes_rachni_war = {
     }
 }
 
-btr_archeology_vorcha_colony = {
+btr_archeology_vorcha_colony = { # TODO: add unique interactions for Krogan/Vorcha
     desc = btr_archeology_vorcha_colony_site_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 2
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
-        #TODO in the terminus
+		is_ship_class = shipclass_science_ship
+		exists = leader
     }
     visible = {
         default_site_visible_trigger = yes
@@ -349,15 +343,14 @@ btr_archeology_vorcha_colony = {
     }
 }
 
-btr_archeology_failed_pilgrimage = {
+btr_archeology_failed_pilgrimage = { # TODO: add unique interactions for Quarians/Geth
     desc = btr_archeology_failed_pilgrimage_site_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 2
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
-        #TODO in the terminus
+		is_ship_class = shipclass_science_ship
+		exists = leader
     }
     visible = {
         default_site_visible_trigger = yes
@@ -382,12 +375,12 @@ btr_archeology_failed_pilgrimage = {
 
 btr_archeology_hidden_titans = {
     desc = btr_archeology_hidden_titans_site_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 5
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
+		is_ship_class = shipclass_science_ship
+		exists = leader
     }
     visible = {
         default_site_visible_trigger = yes
@@ -420,15 +413,17 @@ btr_archeology_hidden_titans = {
     }
 }
 
-btr_archeology_aritificial_gladiation = {
+btr_archeology_aritificial_gladiation = { 
     desc = btr_archeology_aritificial_gladiation_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 6
     max_instances = 1
     allow = {
-        is_a_planet = yes
-        exists = owner
-        #TODO Make only on barren worlds
+        has_anomaly = no
+        NOR = { 
+            exists = archaeological_site 
+            has_planet_flag = suppress_archaeological_sites 
+        }
     }
     visible = {
         default_site_visible_trigger = yes
@@ -463,7 +458,7 @@ btr_archeology_aritificial_gladiation = {
 
 btr_archeology_the_scoop = {
     desc = btr_archeology_the_scoop_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 6
     max_instances = 1
     allow = {
@@ -508,7 +503,7 @@ btr_archeology_the_scoop = {
 
 btr_archeology_the_xultec = {
     desc = btr_archeology_the_xultec_desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE ME
     stages = 5
     max_instances = 1
     allow = {
