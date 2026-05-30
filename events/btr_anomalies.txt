@@ -7,48 +7,6 @@
 namespace = btr_anomaly
 
 ship_event = {
-    id = btr_anomaly.a
-    title = "btr_anomaly.1.name"
-    desc = "btr_anomaly.1.desc"
-    picture = GFX_evt_mining_station
-    show_sound = event_ship_bridge
-    location = FROM
-
-    is_triggered_only = yes
-
-    immediate = {
-    }
-
-    option = {
-        name = btr_anomaly.1.a
-        leader = {
-            add_experience = 200
-        }
-    }
-
-    option = {
-        exclusive_trigger = {
-            owner = {
-                has_origin = turian_hie_origin
-            }
-        }
-        # icon = { # TODO make this a Turian Icon
-        #     icon = #TODO 
-        #     # text = IS_LITHOID_EMPIRE_ICON_TIP
-        # }
-        name = btr_anomaly.1.b
-        leader = {
-            add_experience = 200
-        }
-        owner = {
-            add_resource = {
-                influence = 25
-            }
-        }
-    }
-}
-
-ship_event = {
     id = btr_anomaly.1
     title = "btr_anomaly.1.name"
     desc = "btr_anomaly.1.desc"
