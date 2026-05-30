@@ -3212,7 +3212,7 @@ sys_harsa_init = {
             init_effect = {
                 if = {
                     limit = {
-                        check_for_batarian_player = yes
+                        check_for_batarian_player = yes # TODO: invalid
                     }
                     create_archaeological_site = btr_precursor_ancient_return
                 }
