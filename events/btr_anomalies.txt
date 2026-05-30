@@ -7,6 +7,48 @@
 namespace = btr_anomaly
 
 ship_event = {
+    id = btr_anomaly.a
+    title = "btr_anomaly.1.name"
+    desc = "btr_anomaly.1.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.1.a
+        leader = {
+            add_experience = 200
+        }
+    }
+
+    option = {
+        exclusive_trigger = {
+            owner = {
+                has_origin = turian_hie_origin
+            }
+        }
+        # icon = { # TODO make this a Turian Icon
+        #     icon = #TODO 
+        #     # text = IS_LITHOID_EMPIRE_ICON_TIP
+        # }
+        name = btr_anomaly.1.b
+        leader = {
+            add_experience = 200
+        }
+        owner = {
+            add_resource = {
+                influence = 25
+            }
+        }
+    }
+}
+
+ship_event = {
     id = btr_anomaly.1
     title = "btr_anomaly.1.name"
     desc = "btr_anomaly.1.desc"
@@ -288,7 +330,7 @@ ship_event = {
         name = btr_anomaly.10.b
         trigger = {
             owner = {
-                has_origin = turian_hier_origin
+                has_origin = turian_hie_origin
             }
         }
         FROM = {
@@ -1133,7 +1175,7 @@ ship_event = {
                 OR = {
                     has_origin = salarian_uni_origin
                     has_origin = asari_rep_origin
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                 }
             }
         }
@@ -1245,7 +1287,6 @@ ship_event = {
                     add_opinion_modifier = {
                         who = root
                         modifier = opinion_insult
-                        days = 1800
                     }
                 }
             }
@@ -1337,7 +1378,7 @@ ship_event = {
                     has_origin = vol_pro_origin
                     has_origin = courts_dek_origin
                     has_origin = systems_all_origin
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                     has_origin = salarian_uni_origin
                     has_origin = asari_rep_origin
                 }
@@ -1603,7 +1644,7 @@ ship_event = {
         name = btr_anomaly.48.b
         trigger = {
             owner = {
-                has_origin = has_origin = asari_rep_origin
+                has_origin = asari_rep_origin
             }
         }
         FROM = {
@@ -2805,7 +2846,7 @@ ship_event = {
             owner = {
                 NOR = {
                     has_origin = vol_pro_origin
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                     has_origin = migrant_fle_origin
                     has_origin = courts_dek_origin
                 }
@@ -2822,7 +2863,7 @@ ship_event = {
             owner = {
                 OR = {
                     has_origin = vol_pro_origin
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                     has_origin = migrant_fle_origin
                     has_origin = courts_dek_origin
                 }
@@ -3493,7 +3534,7 @@ ship_event = {
         name = btr_anomaly.101.c
         trigger = {
             owner = {
-                has_origin = turian_hier_origin
+                has_origin = turian_hie_origin
             }
         }
         owner = {
@@ -3718,7 +3759,7 @@ ship_event = {
         trigger = {
             owner = {
                 OR = {
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                     has_origin = asari_rep_origin
                     has_origin = salarian_uni_origin
                 }
@@ -4522,5 +4563,47 @@ ship_event = {
             add_trait = leader_trait_expertise_materials
         }
         #TODO Possibly add an eezo deposit based on the localization? Probably a size 1.
+    }
+}
+
+ship_event = { # Written by Jontxu8831
+    id = pressha.a
+    title = "pressha.1.name"
+    desc = "pressha.1.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = pressha.1.a
+        leader = {
+            add_experience = 200
+        }
+    }
+
+    option = {
+        exclusive_trigger = {
+            owner = {
+                has_origin = turian_hie_origin
+            }
+        }
+        # icon = { # TODO make this a Turian Icon
+        #     icon = #TODO
+        #    # text = IS_LITHOID_EMPIRE_ICON_TIP
+        # }
+        name = pressha.1.b
+        leader = {
+            add_experience = 200
+        }
+        owner = {
+            add_resource = {
+                influence = 25
+            }
+        }
     }
 }

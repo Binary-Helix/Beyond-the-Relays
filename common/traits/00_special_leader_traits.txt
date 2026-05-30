@@ -560,7 +560,7 @@ leader_trait_chosen = {
 		potential = {
 			is_ruler = no
 			leader_class = commander
-			from.controller = {
+			from.controller = { # TODO: Error in target. Link controller was used in scope Country but expected [Planet; Starbase; Fleet; Ship; Debris]
 				has_tradition = tr_psionics_shroud_clairvoyance
 				has_country_flag = psionic_traditions_unlocked
 			}

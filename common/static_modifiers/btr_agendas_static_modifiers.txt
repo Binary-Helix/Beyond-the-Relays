@@ -78,7 +78,7 @@ agenda_cyberdreams_finish = {
     pop_amenities_usage_mult = 0.25
     planet_jobs_produces_mult = 0.4
     bonus_pop_growth = -0.1
-    entertainer_jobs_bonus_workforce_mult = 0.1
+    # entertainer_jobs_bonus_workforce_mult = 0.1 # TODO: invalid modifier
     pop_culture_worker_bonus_workforce_mult = 0.1
   #  planet_entertainer_produces_mult = 0.1
    # planet_culture_worker_mult = 0.1
@@ -171,10 +171,10 @@ agenda_anarchy_finish = {
     country_trade_fee = -0.4
     country_trade_attractiveness = 0.4
     planet_branch_offices_cost_mult = -0.5
-    planet_max_branch_office_buildings_un = 5
-    planet_branch_offices_society_research_produces_add = 5
-   # planet_branch_offices_unity_produces_mult = 0.5
-   # planet_branch_offices_society_research_produces_mult = 0.5
+    # planet_max_branch_office_buildings_un = 5 # TODO: invalid modifier
+    # planet_branch_offices_society_research_produces_add = 5 # TODO: invalid modifier
+    # planet_branch_offices_unity_produces_mult = 0.5 # TODO: invalid modifier
+    # planet_branch_offices_society_research_produces_mult = 0.5 # TODO: invalid modifier
 }
 
 agenda_existence_finish = {
@@ -545,9 +545,9 @@ agenda_advancement_finish = {
     planet_biologists_unity_produces_add = 2
     planet_physicists_unity_produces_add = 2
     planet_engineers_unity_produces_add = 2
-    pop_biologist_bonus_workforce_add = 100
-    pop_physicist_bonus_workforce_add = 100
-    pop_engineer_bonus_workforce_add = 100
+    # pop_biologist_bonus_workforce_add = 100 # TODO: invalid modifier
+    # pop_physicist_bonus_workforce_add = 100 # TODO: invalid modifier
+    # pop_engineer_bonus_workforce_add = 100 # TODO: invalid modifier
 }
 
 agenda_decentralization_finish = {
