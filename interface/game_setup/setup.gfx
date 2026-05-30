@@ -1,0 +1,273 @@
+# TODO: update for Nomads
+
+spriteTypes = {
+	corneredTileSpriteType = {
+        name = "GFX_frontend_bg"
+        texturefile = "gfx/loadingscreens/load_1.dds"
+        effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		borderSize = { x=0 y= 0 }
+		size = {  x=1920 y= 1200 }
+		tilingCenter = no
+	}
+
+	spriteType = {
+		name = "GFX_tab_gamesetup"
+		texturefile = "gfx/interface/buttons/settings_tab_game_details.dds"
+		effectFile = "gfx/FX/buttonstate.shader"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_random_player_preview"
+		texturefile = "gfx/interface/game_setup/gamesetup_player_empire_unknown.dds"
+	}
+
+	spriteType = {
+		name = "GFX_random_ai_preview"
+		texturefile = "gfx/interface/game_setup/gamesetup_ai_empire_unknown.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_authority_border_accent"
+		texturefile = "gfx/interface/game_setup/authority_border_accent.dds"
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_tiles_dark_area_square_cut"
+		textureFile = "gfx/interface/tiles/dark_area_square_cut.dds"
+		borderSize = { x = 4 y = 4 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_galaxy_preview_stripes"
+		texturefile = "gfx/interface/game_setup/stripes/galaxy_preview_image_texture.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		animation = {
+			animationmaskfile = "gfx/interface/game_setup/stripes/galaxy_preview_image_stripes.dds"
+			animationtexturefile = "gfx/interface/game_setup/stripes/galaxy_preview_image_mask.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 30.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+	}
+
+	### Galaxy shape previews
+
+	# TODO: add BTR variants for Canon 600, 1300, 1500, and Sandbox 600, 1300, 1500
+
+	spriteType = {
+	 	name = "GFX_galaxy_preview_elliptical"
+	 	texturefile = "gfx/interface/game_setup/galaxy_preview/galaxy_preview_elliptical.dds"
+	}
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_preview_ring"
+	# 	texturefile = "gfx/interface/game_setup/galaxy_preview/galaxy_preview_ring.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_preview_spiral_2"
+	# 	texturefile = "gfx/interface/game_setup/galaxy_preview/galaxy_preview_spiral_2.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_preview_spiral_3"
+	# 	texturefile = "gfx/interface/game_setup/galaxy_preview/galaxy_preview_spiral_3.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_preview_spiral_4"
+	# 	texturefile = "gfx/interface/game_setup/galaxy_preview/galaxy_preview_spiral_4.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_preview_spiral_6"
+	# 	texturefile = "gfx/interface/game_setup/galaxy_preview/galaxy_preview_spiral_6.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_preview_bar"
+	# 	texturefile = "gfx/interface/game_setup/galaxy_preview/galaxy_preview_barred_spiral.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_preview_starburst"
+	# 	texturefile = "gfx/interface/game_setup/galaxy_preview/galaxy_preview_starburst.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_preview_cartwheel"
+	# 	texturefile = "gfx/interface/game_setup/galaxy_preview/galaxy_preview_cartwheel.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_preview_spoked"
+	# 	texturefile = "gfx/interface/game_setup/galaxy_preview/galaxy_preview_spoked.dds"
+	# }
+
+	### Galaxy shape button icons
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_button_elliptical"
+	# 	texturefile = "gfx/interface/game_setup/button_galaxy_shape_elliptical.dds"
+	# 	noOfFrames = 3
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_button_ring"
+	# 	texturefile = "gfx/interface/game_setup/button_galaxy_shape_ring.dds"
+	# 	noOfFrames = 3
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_button_spiral_2"
+	# 	texturefile = "gfx/interface/game_setup/button_galaxy_shape_spiral_2_arms.dds"
+	# 	noOfFrames = 3
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_button_spiral_3"
+	# 	texturefile = "gfx/interface/game_setup/button_galaxy_shape_spiral_3_arms.dds"
+	# 	noOfFrames = 3
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_button_spiral_4"
+	# 	texturefile = "gfx/interface/game_setup/button_galaxy_shape_spiral_4_arms.dds"
+	# 	noOfFrames = 3
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_button_spiral_6"
+	# 	texturefile = "gfx/interface/game_setup/button_galaxy_shape_spiral_6_arms.dds"
+	# 	noOfFrames = 3
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_button_bar"
+	# 	texturefile = "gfx/interface/game_setup/button_galaxy_shape_barred_spiral.dds"
+	# 	noOfFrames = 3
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_button_starburst"
+	# 	texturefile = "gfx/interface/game_setup/button_galaxy_shape_starburst.dds"
+	# 	noOfFrames = 3
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_button_cartwheel"
+	# 	texturefile = "gfx/interface/game_setup/button_galaxy_shape_cartwheel.dds"
+	# 	noOfFrames = 3
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_galaxy_button_spoked"
+	# 	texturefile = "gfx/interface/game_setup/button_galaxy_shape_spoked.dds"
+	# 	noOfFrames = 3
+	# }
+
+	### Difficulty bar
+
+	spriteType = {
+		name = "GFX_difficulty_bar_1"
+		texturefile = "gfx/interface/game_setup/difficulty_bar_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_difficulty_bar_2"
+		texturefile = "gfx/interface/game_setup/difficulty_bar_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_difficulty_bar_3"
+		texturefile = "gfx/interface/game_setup/difficulty_bar_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_difficulty_bar_4"
+		texturefile = "gfx/interface/game_setup/difficulty_bar_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_difficulty_bar_5"
+		texturefile = "gfx/interface/game_setup/difficulty_bar_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_difficulty_bar_6"
+		texturefile = "gfx/interface/game_setup/difficulty_bar_6.dds"
+	}
+
+	spriteType = {
+		name = "GFX_difficulty_bar_7"
+		texturefile = "gfx/interface/game_setup/difficulty_bar_7.dds"
+	}
+
+	# spriteType = {
+	# 	name = "GFX_precursor_button"
+	# 	texturefile = "gfx/interface/game_setup/button_precursor.dds"
+	# 	noOfFrames = 3
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_precursor_vultaum"
+	# 	textureFile = "gfx/interface/game_setup/precursors/precursor_vultaum_star.dds"
+	# 	alwaystransparent = yes	
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_precursor_yuth"
+	# 	textureFile = "gfx/interface/game_setup/precursors/precursor_yuth_empire.dds"
+	# 	alwaystransparent = yes	
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_precursor_first_league"
+	# 	textureFile = "gfx/interface/game_setup/precursors/precursor_first_league.dds"
+	# 	alwaystransparent = yes	
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_precursor_irassian"
+	# 	textureFile = "gfx/interface/game_setup/precursors/precursor_irassian_concordat.dds"
+	# 	alwaystransparent = yes	
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_precursor_cybrex"
+	# 	textureFile = "gfx/interface/game_setup/precursors/precursor_cybrex.dds"
+	# 	alwaystransparent = yes	
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_precursor_baol"
+	# 	textureFile = "gfx/interface/game_setup/precursors/precursor_baol.dds"
+	# 	alwaystransparent = yes	
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_precursor_zroni"
+	# 	textureFile = "gfx/interface/game_setup/precursors/precursor_zroni.dds"
+	# 	alwaystransparent = yes	
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_precursor_inetian"
+	# 	textureFile = "gfx/interface/game_setup/precursors/precursor_inetian_traders.dds"
+	# 	alwaystransparent = yes	
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_precursor_adakkaria"
+	# 	textureFile = "gfx/interface/game_setup/precursors/precursor_adakkaria.dds"
+	# 	alwaystransparent = yes	
+	# }
+}
