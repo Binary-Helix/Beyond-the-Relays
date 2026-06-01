@@ -3870,11 +3870,11 @@ has_research_building = {
 }
 
 is_orbital_ring = {
-	is_orbital_ring = yes
+	has_starbase_size >= orbital_ring_tier_1
 }
 
 is_normal_starbase = {
-	is_normal_starbase = yes
+	has_starbase_size >= starbase_outpost
 }
 
 is_faction_allowed = {
