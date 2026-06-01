@@ -1,0 +1,505 @@
+################
+### RED RIFT ###
+################
+
+sys_erzbeta_init = {
+    name = "Erzbeta"
+    class = sc_o_super
+	max_instances = 1
+
+    flags = { terminus_systems sector_t3 red_rift erzbeta_system }
+
+    planet = {
+		name = "Erzbeta"
+        class = pc_o_super_star
+        orbit_distance = 0
+        size = 20
+        flags = { erzbeta_star }
+    }
+
+    planet = {
+        name = "Draazska"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 303
+        size = 14
+        flags = { draazska_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Tagumta"
+        class = pc_molten
+        orbit_distance = 80
+        orbit_angle = 279
+        size = 10
+        flags = { tagumta_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Echeron"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 226
+        size = 9
+        flags = { echeron_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Jindia"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 297
+        size = 15
+        flags = { jindia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Komaron"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 270
+        size = 16
+        flags = { komaron_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Nalanta"
+        class = pc_iron
+        orbit_distance = 80
+        orbit_angle = 296
+        size = 7
+        flags = { nalanta_planet }
+        has_ring = no
+    }
+}
+
+sys_fardral_init = {
+    name = "Fardral"
+    class = sc_l
+	max_instances = 1
+
+    flags = { terminus_systems sector_t3 red_rift fardral_system secondary_relay_system }
+
+    planet = {
+		name = "Fardral"
+        class = pc_l_star
+        orbit_distance = 0
+        size = 20
+        flags = { fardral_star }
+    }
+
+    planet = {
+        name = "Grasp"
+        class = pc_carbon
+        orbit_distance = 70
+        orbit_angle = 103
+        size = 7
+        flags = { grasp_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Yilpas"
+        class = pc_iron
+        orbit_distance = 70
+        orbit_angle = 221
+        size = 21
+        has_ring = no
+
+        moon = {
+            name = "Xandakta"
+            class = pc_barren
+            orbit_distance = 20
+            orbit_angle = 180
+            size = 3
+            flags = {xandakta_planet yilpas_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Marvil"
+        class = pc_ice_giant
+        orbit_distance = 70
+        orbit_angle = 263
+        size = 25
+        flags = { marvil_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Oposden"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 165
+        size = 36
+        flags = { oposden_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Girbraldet"
+        class = pc_barren_cold
+        orbit_distance = 70
+        orbit_angle = 82
+        size = 9
+        flags = { girbraldet_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Sandas'bus"
+        class = pc_ice_giant
+        orbit_distance = 70
+        orbit_angle = 134
+        size = 26
+        flags = { sandasbus_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Finlar"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 169
+        size = 16
+        flags = { finlar_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_3_secondaryrelay" 
+			name = "Sector T3 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_qezdura_init = {
+    name = "Qezdura"
+    class = sc_f
+	max_instances = 1
+
+    flags = { terminus_systems sector_t3 red_rift qezdura_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 280
+    }
+
+    planet = {
+		name = "Qezdura"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 20
+        flags = { qezdura_star }
+    }
+
+    planet = {
+        name = "Tistryr"
+        class = pc_molten
+        orbit_distance = 70
+        orbit_angle = 33
+        size = 11
+        flags = { tistryr_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Dar'tis"
+        class = pc_barren
+        orbit_distance = 70
+        orbit_angle = 207
+        size = 8
+        flags = { dartis_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Kondraa"
+        class = pc_carbon
+        orbit_distance = 70
+        orbit_angle = 262
+        size = 14
+        flags = { kondraa_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Helio K-47"
+        class = pc_asteroid
+        orbit_distance = 70
+        orbit_angle = 46
+        size = 3
+        flags = { helio_k_47_planet }
+        has_ring = no
+    }
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Mamayor"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 133
+        size = 38
+        flags = { mamayor_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Hugr"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 130
+        size = 33
+        has_ring = no
+
+        moon = {
+            name = "Bohil"
+            class = pc_frozen
+            orbit_distance = 20
+            orbit_angle = 180
+            size = 4
+            flags = {bohil_planet hugr_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Soldirtas"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 93
+        size = 18
+        flags = { soldirtas_planet }
+        has_ring = no
+
+    }
+}
+
+sys_qiroyeta_init = {
+    name = "Qiroyeta"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t3 red_rift qiroyeta_system }
+
+    asteroid_belt = {
+        type = icy_asteroid_belt
+        radius = 500
+    }
+
+    planet = {
+		name = "Qiroyeta"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { qiroyeta_star }
+    }
+
+    planet = {
+        name = "Waldrar"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 187
+        size = 22
+        flags = { waldrar_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Yar'vras"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 140
+        size = 10
+        flags = { yarvras_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Rerskr"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 123
+        size = 14
+        flags = { rerskr_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Condos"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 156
+        size = 33
+        has_ring = yes
+
+        moon = {
+            name = "Husuef"
+            class = pc_ammonia
+            orbit_distance = 20
+            orbit_angle = 54
+            size = 6
+            flags = {husuef_planet condos_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Xares"
+        class = pc_asteroid
+        orbit_distance = 100
+        orbit_angle = 24
+        size = 1
+        flags = { xares_planet }
+        has_ring = no
+    }
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_yamala_init = {
+    name = "Yamala"
+    class = sc_o
+	max_instances = 1
+
+    flags = { terminus_systems sector_t3 red_rift yamala_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 140
+    }
+
+    planet = {
+		name = "Yamala"
+        class = pc_o_star
+        orbit_distance = 0
+        size = 20
+        flags = { yamala_star }
+    }
+
+    planet = {
+        name = "Iondar"
+        class = pc_hot_giant
+        orbit_distance = 70
+        orbit_angle = 321
+        size = 38
+        flags = { iondar_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Mirdalan"
+        class = pc_asteroid
+        orbit_distance = 70
+        orbit_angle = 246
+        size = 2
+        flags = { mirdalan_planet }
+        has_ring = no
+    }
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Furkrur"
+        class = pc_ice_giant
+        orbit_distance = 70
+        orbit_angle = 234
+        size = 27
+        has_ring = no
+
+        moon = {
+            name = "Undastre"
+            class = pc_frozen
+            orbit_distance = 20
+            orbit_angle = 256
+            size = 4
+            flags = {undastre_planet furkrur_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Ereta"
+            class = pc_frozen
+            orbit_distance = 5
+            orbit_angle = 284
+            size = 2
+            flags = { ereta_planet }
+            has_ring = no
+        }
+
+        moon = {
+            name = "Londas"
+            class = pc_barren_cold
+            orbit_distance = 5
+            orbit_angle = 213
+            size = 7
+            flags = { londas_planet }
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Xoltar"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 292
+        size = 35
+        flags = { xoltar_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Dostres"
+        class = pc_iron
+        orbit_distance = 70
+        orbit_angle = 257
+        size = 7
+        flags = { dostres_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Mindresfav"
+        class = pc_ammonia
+        orbit_distance = 70
+        orbit_angle = 240
+        size = 20
+        flags = { mindresfav_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Huota"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 88
+        size = 8
+        flags = { huota_planet }
+        has_ring = no
+    }
+}

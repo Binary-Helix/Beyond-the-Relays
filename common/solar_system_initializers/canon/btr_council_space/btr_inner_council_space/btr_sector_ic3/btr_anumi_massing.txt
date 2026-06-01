@@ -1,0 +1,337 @@
+#####################
+### ANUMI MASSING ###
+#####################
+
+sys_dartiz_init = {
+	name = "Dartiz"
+    class = sc_k
+	max_instances = 1
+
+    flags = { inner_council sector_ic3 anumi_massing dartiz_system primary_relay_system }
+
+	planet = {
+	    name = "Dartiz"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 30
+        flags = { dartiz_star }
+    }
+
+	planet = {
+	    name = "Sio"
+        class = pc_iron
+        orbit_distance = 80
+        size = 8
+        flags = { sio_planet }
+    }
+
+	planet = {
+	    name = "Vass"
+        class = pc_barren
+        orbit_distance = 80
+        size = 9
+        flags = { vass_planet }
+	}
+
+	planet = {
+	    name = "Holin"
+        class = pc_barren	
+        orbit_distance = 80
+        size = 7
+        flags = { holin_planet }
+    }
+
+	planet = {
+	    name = "Imness"
+        class = pc_gas_giant
+        orbit_distance = 80
+        size = 34
+        flags = { imness_planet }
+		has_ring = yes
+	}
+
+	planet = {
+		name = "Avot"
+		class = pc_gas_giant
+		orbit_distance = 80
+		size = 38
+		flags = { avot_planet }
+		has_ring = yes
+	}
+
+	planet = {
+		name = "Arlon"
+		class = pc_frozen
+		orbit_distance = 80
+		size = 5
+		flags = { arlon_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "anumimassing_maezoracluster_primaryrelay" 
+			name = "Sector IC3 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_maekran_init = {
+	name = "Maekran"
+    class = sc_m
+	max_instances = 1
+
+    flags = { inner_council sector_ic3 anumi_massing maekran_system }
+
+	planet = {
+	    name = "Maekran"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 30
+        flags = { maekran_star }
+    }
+
+	planet = {
+	    name = "Lonar"
+        class = pc_iron
+        orbit_distance = 80
+        size = 5
+        flags = { lonar_planet }
+    }
+
+	planet = {
+	    name = "Inoste"
+        class = pc_hothouse
+        orbit_distance = 80
+        size = 11
+        flags = { inoste_planet }
+	}
+
+	planet = {
+	    name = "Marab"
+        class = pc_molten	
+        orbit_distance = 80
+        size = 13
+        flags = { marab_planet }
+    }
+
+	planet = {
+	    name = "Sekat"
+        class = pc_barren_cold
+        orbit_distance = 80
+        size = 6
+        flags = { sekat_planet }
+	}
+
+	planet = {
+		name = "Haruta"
+		class = pc_highgrav_ammonia
+		orbit_distance = 80
+		size = 24
+		flags = { haruta_planet }
+	}
+
+	planet = {
+		name = "Sayn"
+		class = pc_barren_cold
+		orbit_distance = 80
+		size = 12
+		flags = { sayn_planet }
+	}
+}
+
+sys_vallun_init = {
+	name = "Vallun"
+    class = sc_g
+	max_instances = 1
+
+    flags = { inner_council sector_ic3 anumi_massing vallun_system secondary_relay_system }
+
+	planet = {
+	    name = "Maekran"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+        flags = { maekran_star }
+    }
+
+	planet = {
+	    name = "Sellea"
+        class = pc_carbon
+        orbit_distance = 60
+        size = 7
+        flags = { sellea_planet }
+    }
+
+	planet = {
+	    name = "Jeirt"
+        class = pc_molten
+        orbit_distance = 60
+        size = 12
+        flags = { jeirt_planet }
+	}
+
+	planet = {
+	    name = "Foris"
+        class = pc_iron	
+        orbit_distance = 60
+        size = 10
+        flags = { foris_planet }
+    }
+
+	planet = {
+	    name = "Jundub"
+        class = pc_gas_giant
+        orbit_distance = 60
+        size = 36
+        flags = { jundub_planet }
+	}
+
+	planet = {
+		name = "Chaleen"
+		class = pc_frozen
+		orbit_distance = 60
+		size = 9
+		flags = { chaleen_planet }
+	}
+
+	planet = {
+		name = "Jath"
+		class = pc_frozen
+		orbit_distance = 60
+		size = 10
+		moon = {
+			name = "Dalastre"
+			class = pc_frozen
+			orbit_distance = 20
+			size = 6			
+			flags = {dalastre_planet jath_planet}
+		}
+	}
+
+	planet = {
+		name = "Ahz"
+		class = pc_gas_giant
+		orbit_distance = 60
+		size = 37
+		flags = { ahz_planet }
+		has_ring = yes
+	}
+
+	planet = {
+		name = "Alcheru"
+		class = pc_ice_giant
+		orbit_distance = 60
+		size = 24
+		flags = { alcheru_planet }
+		has_ring = yes
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "inner_council_sector_3_secondaryrelay" 
+			name = "Sector IC3 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_zaebant_init = {
+	name = "Zaebant"
+    class = sc_m
+	max_instances = 1
+
+    flags = { inner_council sector_ic3 anumi_massing zaebant_system primary_relay_system }
+
+    init_effect = {
+        save_global_event_target_as = salarianSci1
+    }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 500
+	}
+
+	planet = {
+	    name = "Zaebant"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 30
+        flags = { zaebant_star }
+    }
+
+	planet = {
+	    name = "Yirrant"
+        class = pc_barren_cold
+        orbit_distance = 125
+        size = 5
+        flags = { yirrant_planet }
+    }
+
+	planet = {
+	    name = "Trandos"
+        class = pc_hothouse
+        orbit_distance = 125
+        size = 12
+        flags = { trandos_planet }
+	}
+
+	planet = {
+	    name = "Patikk"
+        class = pc_hothouse
+        orbit_distance = 125
+        size = 13
+        flags = { patikk_planet }
+    }
+
+	planet = {
+	    name = "Ledra"
+        class = pc_ice_giant
+        orbit_distance = 100
+        size = 30
+
+		moon = {
+			name = "Ochen"
+			class = pc_molten
+			orbit_distance = 20
+			size = 6
+			flags = {ochen_planet ledra_planet}
+		}
+
+		moon = {
+			name = "Pachenco"
+			class = pc_frozen
+			orbit_distance = 5
+			size = 3
+			flags = { pachenco_planet }
+		}
+
+		moon = {
+			name = "Melon"
+			class = pc_barren_cold	
+			orbit_distance = 5
+			size = 5
+			flags = { melon_planet }
+		}
+    }
+
+    change_orbit = 25
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "anumimassing_lilusocluster_primaryrelay" 
+			name = "Sector IC3 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

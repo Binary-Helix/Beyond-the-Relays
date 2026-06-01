@@ -1,0 +1,214 @@
+###############
+### FAR RIM ###
+###############
+
+sys_dholen_init = {
+    name = "Dholen"
+    class = sc_m_hyper
+	max_instances = 1
+
+    flags = { terminus_systems sector_t8 far_rim dholen_system primary_relay_system geth_consensus_system }
+
+    init_effect = {
+        save_global_event_target_as = gethCon1
+    }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 325
+	}
+
+    planet = {
+		name = "Dholen"
+        class = pc_m_hyper_star
+        orbit_distance = 0
+        size = 30
+        flags = { dholen_star }
+    }
+
+    planet = {
+        name = "Gotha"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 239
+        has_ring = no
+		size = 2
+		flags = { gotha_planet }
+        init_effect = {
+            add_deposit = d_eezo_3
+        }
+    }
+
+    planet = {
+        name = "Charoum"
+        class = pc_gas_giant
+        orbit_distance = 150
+        orbit_angle = 214
+        has_ring = no
+		size = 34
+        flags = { charoum_planet }
+
+        moon = {
+			name = "Charoum a"
+			class = pc_frozen
+            orbit_distance = 20
+            orbit_angle = { min = 90 max = 270 }
+        }	
+    }
+
+    change_orbit = 25
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Haestrom"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 90
+        has_ring = no
+		size = 16	
+        flags = { haestrom_planet }
+    }	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "farrim_cassiopeiacluster_primaryrelay" 
+			name = "Sector T8 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_disul_init = {
+    name = "Disul"
+    class = sc_m_hyper
+	max_instances = 1
+
+    flags = { terminus_systems sector_t8 far_rim disul_system secondary_relay_system }
+
+    planet = {
+		name = "Disul"
+        class = pc_m_hyper_star
+        orbit_distance = 0
+        size = 20
+        flags = { disul_star }
+    }
+	
+    planet = {
+        name = "Vasri"
+        class = pc_iron
+        orbit_distance = 150
+        orbit_angle = 239
+        has_ring = no
+		size = 8
+		flags = { vasri_planet }
+    }
+
+    planet = {
+        name = "Ciko"
+        class = pc_molten
+        orbit_distance = 150
+        orbit_angle = 214
+        has_ring = no
+		size = 10
+		flags = { ciko_planet }
+    }
+
+    planet = {
+        name = "Goraka"
+        class = pc_barren
+        orbit_distance = 150
+        orbit_angle = 90
+        has_ring = no
+		size = 12
+		flags = { goraka_planet }
+    }
+	
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_8_secondaryrelay" 
+			name = "Sector T8 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_maat_init = {
+    name = "Ma-at"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t8 far_rim maat_system secondary_relay_system geth_consensus_system }
+
+    planet = {
+		name = "Ma-at"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { ma_at_star }
+    }
+
+    planet = {
+        name = "Ammut"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 146
+        has_ring = no
+		size = 41
+        
+        moon = {
+			name = "Ammut a"
+			class = pc_molten
+            orbit_distance = 20
+            orbit_angle = { min = 90 max = 270 }
+            flags = {ammuta_planet ammut_planet}
+        }
+
+		moon = {
+			name = "Ammut b"
+			class = pc_barren
+            orbit_distance = 5
+            orbit_angle = { min = 90 max = 270 }
+            flags = { ammutb_planet }
+        }
+
+		moon = {
+			name = "Ammut c"
+			class = pc_barren_cold
+            orbit_distance = 5
+            orbit_angle = { min = 90 max = 270 }
+            flags = { ammutc_planet }
+        }
+
+		moon = {
+			name = "Ammut d"
+			class = pc_frozen
+            orbit_distance = 5
+            orbit_angle = { min = 90 max = 270 }
+            flags = { ammutd_planet }
+        }
+
+		moon = {
+			name = "Ammut e"
+			class = pc_asteroid
+            orbit_distance = 5
+            orbit_angle = { min = 90 max = 270 }
+        }
+    }	
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_7_secondaryrelay" 
+			name = "Sector T8 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

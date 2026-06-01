@@ -1,0 +1,257 @@
+########################
+### GHRANAK FRONTIER ###
+########################
+
+sys_brapor_init = {
+	name = "Brapor"
+    class = sc_k_giant
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf1 ghranak_frontier brapor_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 350
+	}
+
+	planet = {
+	    name = "Brapor"
+        class = pc_k_giant_star
+        orbit_distance = 0
+        size = 29
+        flags = { brapor_star }
+    }
+
+	planet = {
+	    name = "Pomsarr"
+        class = pc_molten
+        orbit_distance = 100
+        size = 6
+        flags = { pomsarr_planet }
+    }
+
+	planet = {
+	    name = "Pab'gelak"
+        class = pc_mephitic
+        orbit_distance = 100
+        size = 18
+        flags = { pabgelak_planet }
+	}
+
+	planet = {
+	    name = "Dhokdochar"
+        class = pc_ice_giant
+        orbit_distance = 100
+        size = 26
+        flags = { dhokdochar_planet }
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Redraba"
+        class = pc_frozen
+        orbit_distance = 50
+        size = 6
+        flags = { redraba_planet }
+    }
+
+	planet = {
+	    name = "Ronya"
+        class = pc_frozen
+        orbit_distance = 100
+        size = 5
+        flags = { ronya_planet }
+	}
+}	
+
+sys_grensanak_init = {
+	name = "Gren'sanak"
+    class = sc_w_azure
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf1 ghranak_frontier grensanak_system secondary_relay_system }
+
+	planet = {
+	    name = "Gren'sanak"
+        class = pc_w_azure_star
+        orbit_distance = 0
+        size = 35
+        flags = { grensanak_star }
+    }
+
+	planet = {
+	    name = "Banrarr"
+        class = pc_hothouse
+        orbit_distance = 125
+        size = 13
+        flags = { banrarr_planet }
+    }
+
+	planet = {
+	    name = "Ekaphe"
+        class = pc_barren
+        orbit_distance = 125
+        size = 10
+        flags = { ekaphe_planet }
+	}
+
+	planet = {
+	    name = "Ecalla"
+        class = pc_barren_cold
+        orbit_distance = 125
+        size = 12
+        flags = { ecalla_planet }
+    }
+
+	planet = {
+	    name = "Dalea"
+        class = pc_methane
+        orbit_distance = 125
+        size = 18
+        flags = { dalea_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_8_secondaryrelay" 
+			name = "Sector BF1 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_kheprk_init = {
+	name = "Kheprk"
+    class = sc_w_azure
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf1 ghranak_frontier kheprk_system primary_relay_system }
+
+	planet = {
+	    name = "Kheprk"
+        class = pc_w_azure_star
+        orbit_distance = 0
+        size = 32
+        flags = { kheprk_star }
+    }
+
+	planet = {
+	    name = "Ofathor"
+        class = pc_barren
+        orbit_distance = 150
+        size = 10
+        flags = { ofathor_planet }
+    }
+
+	planet = {
+	    name = "Idracor"
+        class = pc_iron
+        orbit_distance = 150
+        size = 8
+        flags = { idracor_planet }
+	}
+
+	planet = {
+	    name = "Creffesk"
+        class = pc_molten
+        orbit_distance = 150
+        size = 14
+        flags = { creffesk_planet }
+    }
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "ghranakfrontier_daralakshaven_primaryrelay" 
+			name = "Sector BF1 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_kralo_init = {
+	name = "Kralo"
+    class = sc_k_giant
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf1 ghranak_frontier kralo_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 350
+	}
+
+	planet = {
+	    name = "Kralo"
+        class = pc_k_giant_star
+        orbit_distance = 0
+        size = 36
+        flags = { kralo_star }
+    }
+
+	planet = {
+	    name = "Cothe"
+        class = pc_iron
+        orbit_distance = 80
+        size = 6
+        flags = { cothe_planet }
+    }
+
+	planet = {
+	    name = "Kapril"
+        class = pc_gas_giant
+        orbit_distance = 80
+        size = 38
+        flags = { kapril_planet }
+		has_ring = yes
+	}
+
+	planet = {
+	    name = "Gemos"
+        class = pc_gas_giant
+        orbit_distance = 80
+        size = 36
+        flags = { gemos_planet }
+    }
+
+	planet = {
+	    name = "Drocseroh"
+        class = pc_barren_cold
+        orbit_distance = 80
+        size = 6
+        flags = { drocseroh_planet }
+    }
+
+	change_orbit = 30
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Daf'facan"
+        class = pc_frozen
+        orbit_distance = 50
+        size = 5
+        flags = { daffacan_planet }
+	}
+
+	planet = {
+	    name = "Faskrovran"
+        class = pc_iron
+        orbit_distance = 80
+        size = 5
+        flags = { faskrovran_planet }
+	}
+}

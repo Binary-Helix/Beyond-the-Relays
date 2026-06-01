@@ -1,0 +1,282 @@
+#######################
+### VESUVIUS NEBULA ###
+#######################
+
+sys_herculaneum_init = {
+    name = "Herculaneum"
+    class = sc_m_giant
+	max_instances = 1
+
+    flags = { inner_council sector_ic1 vesuvius_nebula herculaneum_system primary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 80
+	}	
+
+    planet = {
+	    name = "Herculaneum"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 20
+        flags = { herculaneum_star }
+	}
+
+    change_orbit = 60
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		name = "Abu"
+		class = pc_molten
+        orbit_distance = 45
+		size = 15
+		flags = { abu_planet }
+	}
+
+	planet = {
+		name = "Gede"
+		class = pc_hothouse
+        orbit_distance = 125
+		size = 12
+		flags = { gede_planet }
+	}
+
+	planet = {
+		name = "Yasur"
+		class = pc_dextro_savannah
+        orbit_distance = 125
+		size = 7
+		flags = {subclass_world yasur_planet}
+		entity = "veld_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = veld_world
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "Shasta"
+		class = pc_frozen
+        orbit_distance = 125
+		size = 16
+		flags = { shasta_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "vesuviusnebula_andaniansea_primaryrelay" 
+			name = "Sector IC1 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_pompeii_init = {
+    name = "Pompeii"
+    class = sc_g
+	max_instances = 1
+    usage = custom_empire
+
+    flags = { inner_council sector_ic1 vesuvius_nebula pompeii_system secondary_relay_system }
+
+    init_effect = {
+        generate_btr_home_system_resources = yes
+    }
+
+    planet = {
+	    name = "Pompeii"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { pompeii_star }
+    }
+	
+	planet = {
+		name = "Rakhana"
+		class = pc_desert
+		orbit_distance = 150
+		size = 18
+        starting_planet = yes
+		entity = "mephitic_desert_planet_12_entity"
+		flags = { rakhana_planet subclass_world }
+        deposit_blockers = none
+        modifiers = none
+		init_effect = {
+            add_modifier = {
+                modifier = dust_world
+                days = -1
+            }
+            save_global_event_target_as = drellHomeworld
+			if = {
+				limit = {
+					exists = event_target:drellHomeworld
+				}
+				log = "Drell Homeworld Event Target Set"
+			}
+            prevent_anomaly = yes
+
+            check_for_drell_player = yes
+
+            if = {
+				limit = {
+					any_country = {
+						has_country_flag = remnants_of_rakhana_player
+					}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = remnants_of_rakhana_player
+					}
+					save_global_event_target_as = remnants_of_rakhana
+				}
+                generate_empire_home_planet = yes
+			}
+			else = {
+				generate_remnants_of_rakhana_country = yes
+			}
+            set_capital = yes
+			set_owner = event_target:remnants_of_rakhana
+			create_colony = {
+				owner = event_target:remnants_of_rakhana
+				species = event_target:drellSpecies
+				ethos = owner
+			}
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/canon/remnants_rak_origin"
+            generate_dre_rakhana_pops = yes
+            event_target:remnants_of_rakhana = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+		}
+	}
+
+	planet = {
+		name = "Kahtack"
+		class = pc_iron
+		orbit_distance = 150
+		size = 8
+		flags = { kahtack_planet }
+	}
+
+	planet = {
+		name = "Erusa"
+		class = pc_gas_giant
+		orbit_distance = 150
+		size = 34
+		flags = { erusa_planet }
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "inner_council_sector_1_secondaryrelay" 
+			name = "Sector IC1 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_stabiae_init = {
+    name = "Stabiae"
+    class = sc_g
+	max_instances = 1
+
+    flags = { inner_council sector_ic1 vesuvius_nebula stabiae_system illuminated_primacy_system }
+
+    init_effect = {
+        save_global_event_target_as = primacySciCon1
+    }
+
+    planet = {
+	    name = "Stabiae"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { stabiae_star }
+    }
+
+    planet = {
+        name = "Delos"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 80
+        has_ring = no
+        size = 6
+        flags = { delos_planet }
+    }
+
+    planet = {
+        name = "Belan"
+        class = pc_tropical
+        orbit_distance = 100
+        orbit_angle = 329
+        has_ring = no
+		size = 20
+        entity = "coastal_planet_01_entity"
+        flags = { belan_planet }
+        init_effect = {
+            add_modifier = {
+                modifier = coastal_world
+                days = -1
+            }
+        }
+
+		moon = {
+			name = "Sepontu"
+			class = pc_carbon
+			orbit_distance = 20
+			size = 12
+			flags = { sepontu_planet }
+		}	
+    }
+
+    planet = {
+        name = "Uaeton"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 155
+        has_ring = no
+		size = 38
+		flags = { uaeton_planet }
+    }
+
+    planet = {
+        name = "Brimyell"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 155
+        has_ring = yes
+		size = 36
+		flags = { brimyell_planet }
+    }
+
+    planet = {
+        name = "Olohir"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 155
+        has_ring = no
+		size = 29
+		flags = { olohir_planet }
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "vesuviusnebula_serpentnebula_primaryrelay" 
+			name = "Sector IC1 - Primary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

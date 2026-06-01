@@ -1,0 +1,248 @@
+#####################
+### ATTICAN ALPHA ###
+#####################
+
+sys_ggulu_init = {
+    name = "Ggulu"
+    class = sc_k
+	max_instances = 1
+
+	flags = { attican_traverse sector_at4 attican_alpha ggulu_system primary_relay_system }
+
+    planet = {
+		name = "Ggulu"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 20
+        flags = { ggulu_star }
+    }
+
+    planet = {
+        name = "Urtutu"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 1
+        has_ring = no
+		flags = { subclass_world }
+    }
+
+    planet = {
+        name = "Dasda"
+        class = pc_desert
+        orbit_distance = 80
+        orbit_angle = 124
+        has_ring = no
+
+        moon = {
+            name = "Turech"
+            class = pc_iron
+            orbit_distance = 20
+            orbit_angle = 180
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Jogri"
+        class = pc_molten
+        orbit_distance = 80
+        orbit_angle = 135
+        has_ring = no
+    }
+
+    planet = {
+        name = "Saxaf"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 153
+        has_ring = no
+    }
+
+    planet = {
+        name = "Indota"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 157
+        has_ring = no
+
+        moon = {
+            name = "Indota a"
+            class = pc_molten
+            orbit_distance = 11
+            orbit_angle = 20
+            has_ring = no
+        }
+
+		moon = {
+            name = "Indota b"
+            class = pc_frozen
+            orbit_distance = 11
+            orbit_angle = 5
+            has_ring = no
+        }
+
+		moon = {
+            name = "Indota c"
+            class = pc_barren
+            orbit_distance = 11
+            orbit_angle = 5
+            has_ring = no
+        }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "atticanalpha_azuresea_primaryrelay" 
+			name = "Sector AT4 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_kintu_init = {
+    name = "Kintu"
+    class = sc_g
+	max_instances = 1
+
+	flags = { attican_traverse sector_at4 attican_alpha kintu_system }
+	
+    planet = {
+		name = "Kintu"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { kintu_star }
+    }
+
+    planet = {
+        name = "Andea"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 4
+		size = 8
+		flags = { andea_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Amaia"
+        class = pc_toxic
+        orbit_distance = 100
+        orbit_angle = 144
+        size = 12
+        flags = { amaia_planet }
+		has_ring = no
+    }
+
+    planet = {
+        name = "Lussu"
+        class = pc_toxic
+        orbit_distance = 100
+        orbit_angle = 235
+		size = 17
+		flags = { lussu_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Korbas"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 218
+		size = 5
+		flags = { korbas_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Tejas"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 199
+        size = 28
+        flags = { tejas_planet }
+		has_ring = no
+    }
+}
+
+sys_nambi_init = {
+    name = "Nambi"
+    class = sc_magnetar
+	max_instances = 1
+
+	flags = { attican_traverse sector_at4 attican_alpha nambi_system }
+
+    planet = {
+		name = "Nambi"
+        class = pc_magnetar
+        orbit_distance = 0
+        size = 20
+        flags = { nambi_planet }
+    }
+}
+
+sys_naslo_init = {
+    name = "Naslo"
+    class = sc_a_super
+	max_instances = 1
+
+	flags = { attican_traverse sector_at4 attican_alpha naslo_system secondary_relay_system }
+
+    planet = {
+		name = "Naslo"
+        class = pc_a_super_star
+        orbit_distance = 0
+        size = 20
+        flags = { naslo_star }
+    }
+
+    planet = {
+        name = "Kadaga"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 195
+		size = 8
+		flags = { kadaga_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Mangeni"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 181
+		size = 11
+		flags = { mangeni_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Jinja"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 131
+		size = 3
+		flags = { jinja_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Aleixo"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 141
+		size = 8
+		flags = { aleixo_planet }
+        has_ring = no
+    }	
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_4_secondaryrelay" 
+			name = "Sector AT4 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

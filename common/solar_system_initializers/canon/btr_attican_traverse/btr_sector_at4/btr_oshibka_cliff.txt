@@ -1,0 +1,584 @@
+#####################
+### OSHIBKA CLIFF ###
+#####################
+
+sys_cubseh_init = {
+    name = "Cubseh"
+    class = sc_g
+	max_instances = 1
+
+	flags = { attican_traverse sector_at4 oshibka_cliff cubseh_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 170
+	}
+	
+    planet = {
+		name = "Cubseh"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+        flags = { cubseh_star }
+    }
+	
+	planet = {
+		name = "Qualog"
+		class = pc_molten
+        orbit_distance = 70
+		size = 6
+		flags = { qualog_planet }
+	}
+	
+	planet = { 
+		name = "Toaloc"
+		class = pc_hothouse
+        orbit_distance = 70
+		size = 16
+		flags = { toaloc_planet }
+	}	
+
+	change_orbit = 30
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Phelinia"
+		class = pc_dextro_ocean
+        orbit_distance = 40
+		size = 17
+		flags = { phelinia_planet }
+	}	
+	
+	planet = {
+		name = "Jarg"
+		class = pc_gas_giant
+        orbit_distance = 70
+		size = 39
+		flags = { jarg_planet }
+		has_ring = yes
+	}
+
+	planet = {
+		name = "Ythwoem"
+		class = pc_tropical
+        orbit_distance = 70
+		size = 16
+		flags = { ythwoem_planet }
+	}
+
+	planet = {
+		name = "Asta"
+		class = pc_frozen
+        orbit_distance = 70
+		size = 8
+		flags = { asta_planet }
+	}	
+
+	planet = {
+		name = "Tonat"
+		class = pc_frozen
+        orbit_distance = 70
+		size = 4
+		flags = { tonat_planet }
+	}	
+}
+
+sys_klin_init = {
+	name = "Klin"
+	class = sc_pulsar
+	max_instances = 1
+
+	flags = { attican_traverse sector_at4 oshibka_cliff klin_system primary_relay_system }
+
+    planet = {
+		name = "Klin"
+        class = pc_pulsar
+        orbit_distance = 0
+        size = 15
+        flags = { klin_planet }
+    }
+	
+	planet = {
+		name = "Orbid"
+		class = pc_iron
+        orbit_distance = 250
+		size = 20
+		flags = { orbid_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = mineral_rich
+				days = -1
+			}
+		}
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "oshbikacliff_nemeanalpha_primaryrelay" 
+			name = "Sector AT4 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_sardi_init = {
+	name = "Sardi"
+	class = sc_t
+	max_instances = 1
+
+	flags ={ attican_traverse sector_at4 oshibka_cliff sardi_system primary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 210
+	}
+
+	planet = {
+		name = "Sardi"
+        class = pc_t_star
+        orbit_distance = 0
+        size = 30
+        flags = { sardi_star }
+	}
+
+	planet = {
+        name = "Ruskrat"
+        class = pc_iron
+        orbit_distance = 60
+        orbit_angle = 142
+        has_ring = no
+		size = 10
+		flags = { ruskrat_planet }
+	}	
+
+	planet = {
+        name = "Ferti"
+        class = pc_iron
+        orbit_distance = 60
+        orbit_angle = 142
+        has_ring = no
+		size = 13
+		flags = { ferti_planet }
+	}	
+
+	planet = {
+        name = "Lloral"
+        class = pc_hothouse
+        orbit_distance = 60
+        orbit_angle = 142
+        has_ring = no
+		size = 17
+		flags = { lloral_planet }
+	}	
+
+	change_orbit = 30
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+        name = "Bilvas"
+        class = pc_hothouse
+        orbit_distance = 30
+        orbit_angle = 142
+        has_ring = no
+		size = 10
+		flags = { bilvas_planet }
+    }
+
+	planet = {
+        name = "Moreinha"
+        class = pc_barren
+        orbit_distance = 60
+        orbit_angle = 142
+        has_ring = no
+		size = 7
+		flags = { moreinha_planet }
+	}	
+
+	planet = {
+        name = "Gasclosa"
+        class = pc_gas_giant
+        orbit_distance = 60
+        orbit_angle = 142
+        has_ring = yes
+		size = 35
+		flags = { gasclosa_planet }
+    }
+
+	planet = {
+        name = "Yimdi"
+        class = pc_ice_giant
+        orbit_distance = 60
+        orbit_angle = 142
+        has_ring = no
+		size = 31
+
+		moon = {
+			name = "Quscao"
+			class = pc_barren
+			orbit_distance = 20
+			orbit_angle = 15
+			has_ring = no
+			size = 6
+			flags = {quscao_planet yimdi_planet}
+    	}
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "oshbikacliff_softbrume_primaryrelay" 
+			name = "Sector AT4 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_webel_init = {
+	name = "Webel"
+	class = sc_m_hyper
+	max_instances = 1
+
+	flags = { attican_traverse sector_at4 oshibka_cliff webel_system secondary_relay_system planet_state }
+
+	planet = {
+		name = "Webel"
+        class = pc_m_hyper_star
+        orbit_distance = 0
+        size = 38
+        flags = { webel_star }
+    }
+
+	planet = {
+        name = "Tifta"
+        class = pc_barren
+        orbit_distance = 150
+        orbit_angle = 142
+        has_ring = yes
+		size = 10
+		flags = { tifta_planet }
+    }
+
+	planet = {
+        name = "Kosh"
+        class = pc_continental
+        orbit_distance = 150
+        orbit_angle = 142
+        has_ring = yes
+		size = 19
+		deposit_blockers = none
+        modifiers = none
+		flags = { subclass_world kosh_planet }
+		# init_effect = {
+		# 	save_global_event_target_as = koshHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:citadelHomeworld
+        #         }
+        #         log = "Citadel Station Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+		# 	generate_kosh_development_corporation_country = yes
+        #
+		# 	set_capital = yes
+		# 	set_owner = event_target:kosh_development_corporation
+		# 	create_colony = {
+		# 		owner = event_target:kosh_development_corporation
+		# 		species = event_target:asariSpecies
+		# 		ethos = owner
+		# 	}
+        #
+		# 	generate_kosh_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = temperate_world
+		# 		days = -1
+		# 	}
+		# }
+	}	
+
+	planet = {
+        name = "Fasulei"
+        class = pc_iron
+        orbit_distance = 150
+        orbit_angle = 142
+        has_ring = yes
+		size = 12
+		flags = { fasulei_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_4_secondaryrelay" 
+			name = "Sector AT4 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+####################
+### SAPPHIRE SEA ###
+####################
+
+sys_falastan_init = {
+	name = "Falastan"
+    class = sc_k
+	max_instances = 1
+
+	flags = { attican_traverse sector_at4 sapphire_sea falastan_system }
+
+	planet = {
+	    name = "Falastan"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 32
+        flags = { falastan_star }
+    }
+
+	planet = {
+	    name = "Vnaus"
+        class = pc_hothouse
+        orbit_distance = 70
+        size = 6
+        flags = { vnaus_planet }
+    }
+
+	planet = {
+	    name = "Iallorev"
+        class = pc_iron
+        orbit_distance = 70
+        size = 8
+        flags = { iallorev_planet }
+    }
+	
+	planet = {
+	    name = "Jeollna"
+        class = pc_dextro_savannah
+        orbit_distance = 70
+        size = 17
+        flags = { jeollna_planet }
+    }
+
+	planet = {
+	    name = "Heurnthea"
+        class = pc_highgrav_mephitic
+        orbit_distance = 70
+        size = 19	
+        flags = { heurnthea_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Leldux"
+        class = pc_gas_giant
+        orbit_distance = 70
+        size = 34
+        flags = { leldux_planet }
+    }
+
+	planet = {
+	    name = "Miolalio"
+        class = pc_ice_giant
+        orbit_distance = 70
+        size = 32
+        flags = { miolalio_planet }
+		has_ring = yes
+    }
+	
+	planet = {
+	    name = "Dier"
+        class = pc_gas_giant
+        orbit_distance = 70
+        size = 33
+        flags = { dier_planet }
+		has_ring = yes
+    }
+}
+
+sys_lotora_init = {
+	name = "Lotora"
+    class = sc_binary_k_k
+	max_instances = 1
+
+	flags = { attican_traverse sector_at4 sapphire_sea lotora_system primary_relay_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 350
+	}
+
+	planet = {
+	    name = "Lotora A"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 27
+        flags = { lotora_a_star }
+    }
+
+	planet = {
+	    name = "Lotora B"
+        class = pc_k_star
+        orbit_distance = 30
+        size = 34
+        flags = { lotora_b_star }
+    }
+
+	planet = {
+	    name = "Eulalalia"
+        class = pc_mephitic
+        orbit_distance = 70
+        size = 10
+        flags = { eulalalia_planet }
+    }
+
+	planet = {
+	    name = "Yainae"
+        class = pc_iron
+        orbit_distance = 100
+        size = 18
+        flags = { yainae_planet }
+    }
+	
+	planet = {
+	    name = "Ruus"
+        class = pc_dextro_savannah
+        orbit_distance = 100
+        size = 17		
+
+		moon = {
+			name = "Nostra"
+			class = pc_barren_cold
+			orbit_distance = 20
+			size = 3
+			flags = {nostra_planet ruus_planet}
+		}
+    }
+
+	change_orbit = 50
+
+	planet = {
+	    name = "Porais"
+        class = pc_frozen
+        orbit_distance = 50
+        size = 6
+        flags = { porais_planet }
+    }
+
+	planet = {
+	    name = "Vofintia"
+        class = pc_barren_cold
+        orbit_distance = 100
+        size = 8
+        flags = { vofintia_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "sapphiresea_olmsteadcluster_primaryrelay" 
+			name = "Sector AT4 - Primary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_makelele_init = {
+	name = "Makelele"
+    class = sc_nova_2
+	max_instances = 1
+
+	flags = { attican_traverse sector_at4 sapphire_sea makelele_system secondary_relay_system }
+
+	planet = {
+	    name = "Makelele"
+        class = pc_nova_2
+        orbit_distance = 0
+        size = 28
+        flags = { makelele_planet }
+    }
+
+	planet = {
+	    name = "Tris"
+        class = pc_arid
+        orbit_distance = 400
+        size = 20
+        flags = { tris_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_4_secondaryrelay" 
+			name = "Sector AT4 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_undayme_init = {
+	name = "Undayme"
+    class = sc_o_hyper
+	max_instances = 1
+
+	flags = { attican_traverse sector_at4 sapphire_sea undayme_system }
+
+	planet = {
+	    name = "Undayme"
+        class = pc_o_hyper_star
+        orbit_distance = 0
+        size = 32
+        flags = { undayme_star }
+    }
+
+	planet = {
+	    name = "Prina"
+        class = pc_barren
+        orbit_distance = 125
+        size = 4
+        flags = { prina_planet }
+    }
+
+	planet = {
+	    name = "Jatar"
+        class = pc_hothouse
+        orbit_distance = 125
+        size = 12
+        flags = { jatar_planet }
+    }
+	
+	planet = {
+	    name = "Ledahi"
+        class = pc_barren_cold
+        orbit_distance = 125
+        size = 7
+        flags = { ledahi_planet }
+    }
+
+	planet = {
+	    name = "Joesse"
+        class = pc_hothouse
+        orbit_distance = 125
+        size = 14	
+		moon = {
+			name = "Pheezla"
+			class = pc_iron
+			orbit_distance = 20
+			size = 4
+			flags = {pheezla_planet joesse_planet}
+		}
+    }
+}

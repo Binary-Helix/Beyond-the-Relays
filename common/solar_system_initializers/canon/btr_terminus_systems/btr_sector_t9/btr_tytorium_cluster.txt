@@ -1,0 +1,284 @@
+########################
+### TYTORIUM CLUSTER ###
+########################
+
+sys_patriae_init = {
+    name = "Patriae"
+    class = sc_m
+	max_instances = 1
+
+    flags = { terminus_systems sector_t9 tytorium_cluster patriae_system primary_relay_system }
+
+    init_effect = {
+        save_global_event_target_as = illiumSci1
+    }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 400
+    }
+
+    planet = {
+		name = "Patriae"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { patriae_star }
+    }
+
+    planet = {
+        name = "Phordia"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 19
+        size = 25
+        flags = { phordia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Poltavlia"
+        class = pc_asteroid
+        orbit_distance = 100
+        orbit_angle = 64
+        size = 2
+        flags = { poltavlia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Caelus"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 6
+        size = 36
+        flags = { caelus_planet }
+        has_ring = no
+    }
+
+    change_orbit = 100
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Adraril"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 325
+        size = 38
+        has_ring = yes
+
+        moon = {
+            name = "Bellscus"
+            class = pc_barren
+            orbit_distance = 20
+            orbit_angle = 180
+            size = 4
+            flags = {bellscus_planet adraril_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Graci"
+            class = pc_molten
+            orbit_distance = 5
+            orbit_angle = 61
+            size = 6
+            flags = { graci_planet }
+            has_ring = no
+        }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "tytoriumcluster_mouthoffandrar_primaryrelay" 
+			name = "Sector T9 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_postis_init = {
+    name = "Postis"
+    class = sc_f
+	max_instances = 1
+
+    flags = { terminus_systems sector_t9 tytorium_cluster postis_system }
+
+    planet = {
+		name = "Postis"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 20
+        flags = { postis_star }
+    }
+
+    planet = {
+        name = "Nazanicus"
+        class = pc_hot_giant
+        orbit_distance = 80
+        orbit_angle = 103
+        size = 36
+        flags = { nazanicus_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Sanmus"
+        class = pc_molten
+        orbit_distance = 80
+        orbit_angle = 133
+        size = 11
+        flags = { sanmus_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Sulles"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 204
+        size = 12
+        flags = { sulles_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Juvia"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 257
+        size = 16
+        flags = { juvia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Salosondia"
+        class = pc_mephitic
+        orbit_distance = 80
+        orbit_angle = 272
+        size = 19
+        flags = { salosondia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Gratdos"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 266
+        size = 16
+        flags = { gratdos_planet }
+        has_ring = no
+    }
+}
+
+sys_victrinus_init = {
+    name = "Victrinus"
+    class = sc_f
+	max_instances = 1
+
+    flags = { terminus_systems sector_t9 tytorium_cluster victrinus_system secondary_relay_system }
+
+    planet = {
+		name = "Victrinus"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 20
+        flags = { victrinus_star }
+    }
+
+    planet = {
+        name = "Cameginia"
+        class = pc_barren
+        orbit_distance = 60
+        orbit_angle = 75
+        size = 8
+        flags = { cameginia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Fardilakli"
+        class = pc_iron
+        orbit_distance = 60
+        orbit_angle = 8
+        size = 11
+        flags = { fardilakli_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Macrino"
+        class = pc_hothouse
+        orbit_distance = 60
+        orbit_angle = 305
+        has_ring = no
+    }
+
+    planet = {
+        name = "Barbanis"
+        class = pc_chlorine
+        orbit_distance = 60
+        orbit_angle = 275
+        size = 15
+        flags = { barbanis_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Gradia"
+        class = pc_hothouse
+        orbit_distance = 60
+        orbit_angle = 297
+        size = 10
+        flags = { gradia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Axtanie"
+        class = pc_frozen
+        orbit_distance = 60
+        orbit_angle = 120
+        size = 15
+        flags = { axtanie_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Viteliana"
+        class = pc_frozen
+        orbit_distance = 60
+        orbit_angle = 184
+        size = 18
+        flags = { viteliana_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Abertumus"
+        class = pc_barren_cold
+        orbit_distance = 60
+        orbit_angle = 238
+        size = 13
+        flags = { abertumus_planet }
+        has_ring = no
+    }
+	
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_9_secondaryrelay" 
+			name = "Sector T9 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

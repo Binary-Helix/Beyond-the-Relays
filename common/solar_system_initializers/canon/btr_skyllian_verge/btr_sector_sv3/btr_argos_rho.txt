@@ -1,0 +1,315 @@
+#################
+### ARGOS RHO ###
+#################
+
+sys_gorgon_init = {
+    name = "Gorgon"
+    class = sc_b_super
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv3 argos_rho gorgon_system primary_relay_system }
+
+    planet = {
+		name = "Gorgon"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 20
+        flags = { gorgon_star }
+    }
+
+    planet = {
+        name = "Wuo"
+        class = pc_methane
+        orbit_distance = 100
+        orbit_angle = 23
+        has_ring = no
+		size = 17
+		flags = {subclass_world wuo_planet}
+		entity = "ammonia_arid_planet_07_entity"
+	}	
+
+    planet = {
+        name = "Vectra"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 132
+        has_ring = no
+		size = 36	
+		flags = { vectra_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_VECTRA_MASSIVE_COMMET
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Camaron"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 149
+        has_ring = no
+		size = 15
+		flags = { camaron_planet }
+    }
+
+    planet = {
+        name = "Sharblu"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 311
+        has_ring = no
+		size = 25
+		flags = { sharblu_planet }
+    }
+
+    planet = {
+        name = "Slekon"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 115
+        has_ring = yes
+		size = 38
+		flags = { slekon_planet }
+    }
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "argosrho_mkalipool_primaryrelay" 
+			name = "Sector SV3 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_hydra_init = {
+    name = "Hydra"
+    class = sc_g
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv3 argos_rho hydra_system secondary_relay_system }
+
+    planet = {
+		name = "Hydra"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 15
+        flags = { hydra_star }
+    }
+
+    planet = {
+        name = "Varmalus"
+        class = pc_primal
+        orbit_distance = 100
+        orbit_angle = 344
+        has_ring = no
+		size = 24
+		flags = { varmalus_planet }
+        init_effect = {
+            add_anomaly = {
+                category =BTR_VARMALUS_MOLE_MEN
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Metgos"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 307
+        has_ring = no
+		size = 18
+		flags = {subclass_world metgos_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = btr_unwise_mining_venture
+				days = -1
+			}	
+	    }
+	}
+
+    planet = {
+        name = "Theyar"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 247
+        has_ring = no
+		size = 35
+		flags = { theyar_planet }
+	}
+
+    planet = {
+        name = "Canrum"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 127
+        has_ring = no
+		size = 13
+		flags = { canrum_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_CANRUM_WOMEN_WARRIOR
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Syba"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 66
+        has_ring = no
+		size = 32
+		flags = { syba_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_3_secondaryrelay" 
+			name = "Sector SV3 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_phoenix_init = {
+    name = "Phoenix"
+    class = sc_f
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv3 argos_rho phoenix_system primary_relay_system }
+
+	init_effect = {
+		save_global_event_target_as = citadelThirdFleet
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 450
+	}
+
+    planet = {
+		name = "Phoenix"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 30
+        flags = { phoenix_star }
+    }
+
+    planet = {
+        name = "Patashi"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 319
+        has_ring = no
+		size = 17
+		flags = {subclass_world patashi_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}	
+	    }
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Sylsalto"
+        class = pc_ice_giant
+        orbit_distance = 50
+        orbit_angle = 258
+        has_ring = no
+		size = 34
+		flags = { sylsalto_planet }
+    }
+
+    planet = {
+        name = "Intai'sei"
+        class = pc_desert
+        orbit_distance = 100
+        orbit_angle = 68
+        has_ring = no
+		size = 14
+		flags = {subclass_world intaisei_planet}
+		entity = "dune_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dune_world
+				days = -1
+			}
+            add_anomaly = {
+                category = BTR_INTAI'SEI_HOT_GARDEN
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+	    }
+    }
+
+    planet = {
+        name = "Tuntau"
+        class = pc_highgrav_methane
+        orbit_distance = 100
+        orbit_angle = 148
+        has_ring = no
+		size = 25
+		flags = {subclass_world tuntau_planet}
+		entity = "methane_continental_planet_09_entity"
+    }
+	
+	planet = {
+		name = "Pinnacle Station"
+		class = pc_habitat
+		orbit_distance = 50
+		size = 2
+		flags = { pinnacle_station_station }
+	}
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Vebinok"
+        class = pc_barren_cold
+        orbit_distance = 50
+        orbit_angle = 227
+        has_ring = yes
+		size = 8
+		flags = { vebinok_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_VEBINOK_CRASH_SPILL
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+	}	
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "argosrho_maroonsea_primaryrelay" 
+			name = "Sector SV3 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

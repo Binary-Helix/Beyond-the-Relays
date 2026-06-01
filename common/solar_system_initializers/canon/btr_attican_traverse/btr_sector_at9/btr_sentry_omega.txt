@@ -1,0 +1,223 @@
+####################
+### SENTRY OMEGA ###
+####################
+
+sys_hoc_init = {
+    name = "Hoc"
+    class = sc_g
+	max_instances = 1
+
+	flags = { attican_traverse sector_at9 sentry_omega hoc_system primary_relay_system }
+	
+    planet = {
+		name = "Hoc"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+        flags = { hoc_star }
+	}
+
+    planet = {
+        name = "Jarfor" 
+        class = pc_hot_giant
+        orbit_distance = 100
+        orbit_angle = 350
+        has_ring = no
+		size = 35
+		flags = {subclass_world jarfor_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+            add_anomaly = {
+                category = BTR_JARFOR_WINDY_WORLD
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+    }
+
+    planet = {
+        name = "Nemata"
+        class = pc_toxic
+        orbit_distance = 100
+        orbit_angle = 302
+        has_ring = no
+		size = 18
+		flags = {subclass_world nemata_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = btr_scorching_surface
+				days = -1
+			}
+			add_modifier = {
+				modifier = btr_unwise_mining_venture
+				days = -1
+			}
+			add_modifier = {
+				modifier = mineral_rich
+				days = -1
+			}
+    	}
+	}	
+
+    planet = {
+        name = "Virmire"
+        class = pc_tropical
+        orbit_distance = 100
+        orbit_angle = 296
+        has_ring = no
+		size = 16
+		flags = {subclass_world virmire_planet}
+		entity = "tropical_planet_01_entity"
+		init_effect = {		
+			add_modifier = {
+				modifier = lush_planet
+				days = -1
+			}
+			add_modifier = {
+				modifier = natural_beauty
+				days = -1
+			}
+			add_modifier = {
+				modifier = atoll_world
+			}
+            add_anomaly = {
+                category = BTR_VIRMIRE
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+    }
+
+    planet = {
+        name = "Cloroplon"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 148
+        has_ring = no
+		size = 29
+		flags = {subclass_world cloroplon_planet}
+    }
+
+    planet = {
+        name = "Prescyla"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 142
+        has_ring = no
+		size = 5
+		flags = {subclass_world prescyla_planet}
+        init_effect = {
+            add_anomaly = {
+                category = BTR_PRESCYLA_A_MESSAGE
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "sentryomega_tirandiveil_primaryrelay" 
+			name = "Sector AT9 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_sn046_init = {
+	name = "SN-046"
+	class = sc_deep_space
+	max_instances = 1
+
+	flags = { attican_traverse sector_at9 sentry_omega sn046_system }
+
+	planet = {
+		name = "SN-046"
+		class = pc_gas_giant
+        orbit_distance = 0
+		size = 36
+		flags = {subclass_world sn_046_planet}	
+		has_ring = no
+
+		moon = {
+			name = "S/2186-046 I"
+			class = pc_asteroid
+			orbit_distance = 20
+			size = 3
+			flags = { s/2186_046_i_planet }
+		}	
+
+		moon = {
+			name = "S/2186-046 II"
+			class = pc_iron
+			orbit_distance = 5
+			size = 8
+			flags = { s/2186_046_ii_planet }
+		}	
+
+		moon = {
+			name = "S/2186-046 III"
+			class = pc_met_asteroid
+			orbit_distance = 5
+			size = 3
+			flags = { s/2186_046_iii_planet }
+		}
+
+		moon = {
+			name = "S/2186-046 IV"
+			class = pc_sil_asteroid
+			orbit_distance = 5
+			size = 8
+			flags = { s/2186_046_iv_planet }
+		}
+
+		moon = {
+			name = "S/2186-046 V"
+			class = pc_iron
+			orbit_distance = 5
+			size = 8
+			flags = { s/2186_046_v_planet }
+		}	
+	}
+}
+
+sys_telith_init = {
+	name = "Telith"
+	class = sc_b_super
+	max_instances = 1
+
+	flags = { attican_traverse sector_at9 sentry_omega telith_system secondary_relay_system }
+	
+	planet = {
+		name = "Telith"
+		class = pc_b_super_star
+        orbit_distance = 0
+		size = 45
+		flags = { telith_star }
+	}
+	
+	planet = {
+		name = "Sapfir"
+		class = pc_chthonian
+        orbit_distance = 250
+		has_ring = no
+		size = 12
+		flags = {subclass_world sapfir_planet}
+        init_effect = {
+            add_anomaly = {
+                category = BTR_SAPFIR_GEM_WORLD
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_9_secondaryrelay" 
+			name = "Sector AT9 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

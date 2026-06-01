@@ -1,0 +1,212 @@
+#####################
+### NEMEAN DEPTHS ###
+#####################
+
+sys_anticorum_init = {
+	name = "Anticorum"
+	class = sc_d
+	max_instances = 1
+
+    flags = { terminus_systems sector_t10 nemean_depths anticorum_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 500
+	}
+
+	planet = {
+		name = "Anticorum"
+		class = pc_d_star
+		orbit_distance = 0
+		size = 18
+		flags = { anticorum_star }
+	}
+
+	planet = {
+		name = "Anticorum I"
+		class = pc_hothouse
+		orbit_distance = 125
+		size = 16
+		flags = { anticorum_i_planet }
+	}
+
+	planet = {
+		name = "Anticorum II"
+		class = pc_barren
+		orbit_distance = 125
+		size = 7
+		flags = { anticorum_ii_planet }
+	}	
+
+	planet = {
+		name = "Anticorum III"
+		class = pc_barren_cold
+		orbit_distance = 125
+		size = 12
+
+		flags = { anticorum_iii_planet }
+        init_effect = {
+            add_deposit = d_eezo_1
+        }
+	}	
+
+	planet = {
+		name = "Anticorum IV"
+		class = pc_gas_giant
+		orbit_distance = 125
+		size = 37
+		flags = { anticorum_iv_planet }
+		has_ring = yes
+	}
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+
+sys_testudo_init = {
+    name = "Testudo"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t10 nemean_depths testudo_system }
+
+    planet = {
+	    name = "Testudo"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { testudo_star }
+    }
+
+    planet = {
+        name = "Cherepakha"
+        class = pc_molten
+        orbit_distance = 250
+        orbit_angle = 53
+        has_ring = no
+		size = 6
+		flags = { cherepakha_planet }
+        init_effect = {
+            add_deposit = d_eezo_5
+        }
+    }
+
+    planet = {
+        name = "Kilpikonna"
+        class = pc_gas_giant
+        orbit_distance = 250
+        orbit_angle = 210
+        has_ring = yes
+		size = 36
+
+		moon = {
+			name = "Kilpikonna a"
+			class = pc_iron
+			orbit_distance = 20
+			orbit_angle = 348
+			has_ring = no
+			size = 8
+			flags = {kilpikonna_a_planet kilpikonna_planet}
+		}
+    }
+}
+
+sys_tiedaur_init = {
+    name = "Tiedaur"
+    class = sc_black_hole
+	max_instances = 1
+
+    flags = { terminus_systems sector_t10 nemean_depths tiedaur_system secondary_relay_system }
+
+    planet = {
+		name = "Tiedaur"
+        class = pc_black_hole
+        orbit_distance = 0
+        size = 20
+        flags = { tiedaur_planet }
+    }
+
+    planet = {
+        name = "Mnoth"
+        class = pc_chthonian
+        orbit_distance = 250
+        orbit_angle = 348
+        has_ring = no
+		size = 14
+		flags = { mnoth_planet }
+    }
+
+    planet = {
+        name = "Zied'nar"
+        class = pc_frozen
+        orbit_distance = 250
+        orbit_angle = 227
+        has_ring = yes
+		size = 6
+		flags = { ziednar_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_10_secondaryrelay" 
+			name = "Sector T10 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_volucris_init = {
+    name = "Volucris"
+    class = sc_m
+	max_instances = 1
+
+    flags = { terminus_systems sector_t10 nemean_depths volucris_system }
+
+    planet = {
+		name = "Volucris"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { volucris_star }
+    }
+
+    planet = {
+        name = "Narsis"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 348
+        has_ring = no
+		size = 12
+
+		flags = { narsis_planet }
+        init_effect = {
+            add_deposit = d_eezo_3
+        }
+    }
+
+    planet = {
+        name = "Shaan"
+        class = pc_gas_giant
+        orbit_distance = 150
+        orbit_angle = 227
+        has_ring = yes
+		size = 34
+		flags = { shaan_planet }
+    }
+
+    planet = {
+        name = "Jarti"
+        class = pc_ice_giant
+        orbit_distance = 150
+        orbit_angle = 310
+        has_ring = no
+		size = 28
+		flags = { jarti_planet }
+    }
+}

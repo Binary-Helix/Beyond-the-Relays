@@ -1,0 +1,301 @@
+####################
+### TIRANDI VEIL ###
+####################
+
+sys_eldialdioc_init = {
+	name = "Eldi'al'Dioc"
+    class = sc_m
+	max_instances = 1
+
+	flags = { attican_traverse sector_at8 tirandi_veil eldialdioc_system secondary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 120
+	}
+
+	planet = {
+	    name = "Eldi'al'Dioc"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 25
+        flags = { eldialdioc_star }
+    }
+
+	planet = {
+	    name = "Zurlilok"
+        class = pc_molten
+        orbit_distance = 80
+        size = 12
+        flags = { zurlilok_planet }
+    }
+
+	change_orbit = 40
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+	    name = "Nossoloeb"
+        class = pc_hothouse
+        orbit_distance = 40
+        size = 17
+        flags = { nossoloeb_planet }
+    }
+
+	planet = {
+	    name = "Wiarda"
+        class = pc_barren
+        orbit_distance = 80
+        size = 12
+        flags = { wiarda_planet }
+    }
+
+	planet = {
+	    name = "Wethmy"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 6
+        flags = { wethmy_planet }
+    }
+
+	planet = {
+	    name = "Melmim"
+        class = pc_iron	
+        orbit_distance = 80
+        size = 3
+        flags = { melmim_planet }
+    }
+
+	planet = {
+	    name = "Junush"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 13
+        flags = { junush_planet }
+    }
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_8_secondaryrelay" 
+			name = "Sector AT8 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_kartulm_init = {
+	name = "Kartulm"
+    class = sc_g
+	max_instances = 1
+
+	flags = { attican_traverse sector_at8 tirandi_veil kartulm_system primary_relay_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 350
+	}
+
+	planet = {
+	    name = "Kartulm"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 35
+        flags = { kartulm_star }
+    }
+
+	planet = {
+	    name = "Blolgi"
+        class = pc_hothouse
+        orbit_distance = 100
+        size = 10
+        flags = { blolgi_planet }
+    }
+	
+	planet = {
+	    name = "Shargren"
+        class = pc_nuked
+        orbit_distance = 100
+        size = 15
+        flags = { shargren_planet }
+    }
+
+	planet = {
+	    name = "Uhgurgri"
+        class = pc_gas_giant
+        orbit_distance = 100
+        size = 34
+        flags = { uhgurgri_planet }
+		has_ring = no
+    }
+
+	planet = {
+	    name = "Ghibrulbun"
+        class = pc_asteroid
+        orbit_distance = 50
+        size = 3
+        flags = { ghibrulbun_planet }
+    }
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Crirdoanzutch"
+        class = pc_gas_giant
+        orbit_distance = 50
+        size = 37
+        flags = { crirdoanzutch_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Skihlu"
+        class = pc_frozen
+        orbit_distance = 100
+        size = 14
+        flags = { skihlu_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "tirandiveil_sentryomega_primaryrelay" 
+			name = "Sector AT8 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_kruxtruxak_init = {
+	name = "Krux'Trux'ak"
+    class = sc_nova_1
+	max_instances = 1
+
+	flags = { attican_traverse sector_at8 tirandi_veil kruxtruxak_system primary_relay_system }
+
+	init_effect = {
+		save_global_event_target_as = gothonesSciCon1
+	}
+
+	planet = {
+        class = pc_nova_1
+        orbit_distance = 0
+        size = 35
+    }
+
+	planet = {
+	    name = "Krux'Trux'ak"
+        class = pc_collapsar
+        orbit_distance = 25
+        size = 35
+        flags = { kruxtruxak_planet }
+    }
+
+	planet = {
+	    name = "Blolgi"
+        class = pc_molten
+        orbit_distance = 150
+        size = 13
+        flags = { blolgi_planet }
+    }
+	
+	planet = {
+	    name = "Shargren"
+        class = pc_chthonian
+        orbit_distance = 150
+        size = 20
+        flags = { shargren_planet }
+    }
+
+	planet = {
+	    name = "Uhgurgri"
+        class = pc_molten
+        orbit_distance = 150
+        size = 10
+        flags = { uhgurgri_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "tirandiveil_jarvasglobular_primaryrelay" 
+			name = "Sector AT8 - Primary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_tultil_init = {
+	name = "Tultil"
+    class = sc_b
+	max_instances = 1
+
+	flags = { attican_traverse sector_at8 tirandi_veil tultil_system }
+
+	planet = {
+	    name = "Tultil"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 35
+        flags = { tultil_star }
+    }
+
+	planet = {
+	    name = "Egil"
+        class = pc_iron
+        orbit_distance = 80
+        size = 6
+        flags = { egil_planet }
+    }
+
+	planet = {
+	    name = "Biphius"
+        class = pc_hothouse
+        orbit_distance = 80
+        size = 12
+        flags = { biphius_planet }
+    }
+	
+	planet = {
+	    name = "Sunnyius"
+        class = pc_barren_cold
+        orbit_distance = 80
+        size = 5
+        flags = { sunnyius_planet }
+    }
+
+	planet = {
+	    name = "Drodraedrael"
+        class = pc_ice_giant
+        orbit_distance = 80
+        size = 29
+        flags = { drodraedrael_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Yidronnil"
+        class = pc_barren_cold
+        orbit_distance = 80
+        size = 13
+        flags = { yidronnil_planet }
+    }
+
+	planet = {
+	    name = "Cehnel"
+        class = pc_barren
+        orbit_distance = 80
+        size = 4
+        flags = { cehnel_planet }
+    }
+}	

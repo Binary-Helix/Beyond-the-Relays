@@ -1,0 +1,267 @@
+########################
+### BRINSUUN ABYSSAL ###
+########################
+
+sys_jwess_init = {
+	name = "Jwess"
+    class = sc_o_super
+	max_instances = 1
+
+	flags = { attican_traverse sector_at13 brinsuun_abyssal jwess_system secondary_relay_system }
+
+	planet = {
+	    name = "Jwess"
+        class = pc_o_super_star
+        orbit_distance = 0
+        size = 38
+        flags = { jwess_star }
+    }
+
+	planet = {
+	    name = "Zothozla"
+        class = pc_iron
+        orbit_distance = 80
+        size = 8
+        flags = { zothozla_planet }
+    }
+
+	planet = {
+	    name = "Corlq"
+        class = pc_hothouse
+        orbit_distance = 80
+        size = 11
+        flags = { corlq_planet }
+	}
+
+	planet = {
+	    name = "Buaddee"
+        class = pc_molten
+        orbit_distance = 80
+        size = 12
+        flags = { buaddee_planet }
+    }
+
+	planet = {
+	    name = "Cores"
+        class = pc_gas_giant
+        orbit_distance = 80
+        size = 36
+        flags = { cores_planet }
+    }
+	
+	planet = {
+	    name = "Fokka"
+        class = pc_ice_giant	
+        orbit_distance = 80
+        size = 29
+        flags = { fokka_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Vid"
+        class = pc_ice_giant
+        orbit_distance = 80
+        size = 30
+
+        flags = { vid_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_13_secondaryrelay" 
+			name = "Sector AT13 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_radd_init = {
+	name = "Radd"
+    class = sc_m
+	max_instances = 1
+
+	flags = { attican_traverse sector_at13 brinsuun_abyssal radd_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 270
+	}
+
+	planet = {
+	    name = "Radd"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 25
+        flags = { radd_star }
+    }
+
+	planet = {
+	    name = "Goratt"
+        class = pc_gas_giant
+        orbit_distance = 80
+        size = 31
+        flags = { goratt_planet }
+    }
+
+	planet = {
+	    name = "Kun"
+        class = pc_gas_giant
+        orbit_distance = 80
+        size = 36
+        flags = { kun_planet }
+		has_ring = yes
+	}
+
+	planet = {
+	    name = "Umagg"
+        class = pc_barren_cold
+        orbit_distance = 80
+        size = 9
+        flags = { umagg_planet }
+    }
+
+	change_orbit = 30
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Nazen"
+        class = pc_frozen
+        orbit_distance = 50
+        size = 11
+        flags = { nazen_planet }
+    }
+	
+	planet = {
+	    name = "Ruddosid"
+        class = pc_barren_cold	
+        orbit_distance = 80
+        size = 13
+        flags = { ruddosid_planet }
+    }
+
+	planet = {
+	    name = "Pozas"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 8
+        flags = { pozas_planet }
+    }
+}
+
+
+sys_thita_init = {
+	name = "Thita"
+    class = sc_m
+	max_instances = 1
+
+	flags = { attican_traverse sector_at13 brinsuun_abyssal thita_system }
+
+	planet = {
+	    name = "Thita"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 25
+        flags = { thita_star }
+    }
+
+	planet = {
+	    name = "Kal"
+        class = pc_hothouse
+        orbit_distance = 125
+        size = 12
+        flags = { kal_planet }
+    }
+
+	planet = {
+	    name = "Drifal"
+        class = pc_hothouse
+        orbit_distance = 125
+        size = 13
+        flags = { drifal_planet }
+	}
+
+	planet = {
+	    name = "Tenu"
+        class = pc_savannah
+        orbit_distance = 125
+        size = 14
+        flags = { tenu_planet }
+    }
+
+	planet = {
+	    name = "Sabat"
+        class = pc_iron
+        orbit_distance = 125
+        size = 10
+
+		moon = {
+			name = "Tassed"
+			class = pc_iron
+			orbit_distance = 20
+			size = 11
+			flags = {tassed_planet sabat_planet}
+		}
+    }
+}
+
+sys_thwik_init = {
+	name = "Thwik"
+    class = sc_m_giant
+	max_instances = 1
+
+	flags = { attican_traverse sector_at13 brinsuun_abyssal thwik_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 270
+	}
+
+	planet = {
+	    name = "Thwik"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 31
+        flags = { thwik_star }
+    }
+
+	planet = {
+	    name = "Nek"
+        class = pc_ocean
+        orbit_distance = 150
+        size = 13
+        flags = { nek_planet }
+    }	
+
+	change_orbit = 120
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Ais"
+        class = pc_molten
+        orbit_distance = 30
+        size = 9
+        flags = { ais_planet }
+	}
+
+	planet = {
+	    name = "Hu"
+        class = pc_barren
+        orbit_distance = 150
+        size = 6
+        flags = { hu_planet }
+    }
+}

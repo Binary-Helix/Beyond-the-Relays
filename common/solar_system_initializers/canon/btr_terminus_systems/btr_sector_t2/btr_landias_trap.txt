@@ -1,0 +1,449 @@
+#####################
+### LANDIA'S TRAP ### 
+#####################
+
+sys_baskria_init = {
+    name = "Baskria"
+    class = sc_o_hyper
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 landias_trap baskria_system primary_relay_system }
+
+    planet = {
+		name = "Baskria"
+        class = pc_o_hyper_star
+        orbit_distance = 0
+        size = 20
+        flags = { baskria_star }
+    }
+
+    planet = {
+        name = "Rostriak"
+        class = pc_shattered
+        orbit_distance = 50
+        orbit_angle = 330
+        size = 7
+        flags = { rostriak_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Damaror"
+        class = pc_hothouse
+        orbit_distance = 50
+        orbit_angle = 328
+        size = 9
+        flags = { damaror_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Bakukeo"
+        class = pc_ocean
+        orbit_distance = 50
+        orbit_angle = 287
+        size = 15
+        flags = { bakukeo_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Iasa"
+        class = pc_ammonia
+        orbit_distance = 50
+        orbit_angle = 84
+        size = 11
+        flags = { iasa_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Zukrej"
+        class = pc_hothouse
+        orbit_distance = 50
+        orbit_angle = 319
+        size = 8
+        flags = { zukrej_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Bismead"
+        class = pc_hothouse
+        orbit_distance = 50
+        orbit_angle = 37
+        size = 14
+        has_ring = no
+
+        moon = {
+            name = "Loronti"
+            class = pc_barren_cold
+            orbit_distance = 20
+            orbit_angle = 310
+            has_ring = no
+			size = 4
+			flags = {loronti_planet bismead_planet}
+        }
+    }
+
+    planet = {
+        name = "Gigandra"
+        class = pc_gas_giant
+        orbit_distance = 50
+        orbit_angle = 109
+        size = 35
+        has_ring = no
+
+        moon = {
+            name = "Tritokuv"
+            class = pc_barren
+            orbit_distance = 20
+            orbit_angle = 180
+            size = 3
+            flags = {tritokuv_planet gigandra_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Wertru"
+            class = pc_barren
+            orbit_distance = 5
+            orbit_angle = 287
+            has_ring = no
+        }
+
+        moon = {
+            name = "Gorell"
+            class = pc_barren_cold
+            orbit_distance = 5
+            orbit_angle = 298
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Dosbet"
+        class = pc_frozen
+        orbit_distance = 50
+        orbit_angle = 37
+        size = 17
+        flags = { dosbet_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Hochiocho"
+        class = pc_carbon
+        orbit_distance = 50
+        orbit_angle = 48
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "landiastrap_leviathanstide_primaryrelay" 
+			name = "Sector T2 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_meraia_init = {
+    name = "Meraia"
+    class = sc_m_giant
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 landias_trap meraia_system secondary_relay_system }
+
+    planet = {
+		name = "Meraia"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 20
+        flags = { meraia_star }
+    }
+
+    planet = {
+        name = "Praxdike"
+        class = pc_iron
+        orbit_distance = 40
+        orbit_angle = 125
+        size = 7
+        flags = { praxdike_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Badmeyer"
+        class = pc_molten
+        orbit_distance = 40
+        orbit_angle = 333
+        size = 17
+        flags = { badmeyer_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Viserrmstong"
+        class = pc_tundra
+        orbit_distance = 40
+        orbit_angle = 175
+        size = 22
+        flags = { viserrmstong_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Kellerot"
+        class = pc_iron
+        orbit_distance = 40
+        orbit_angle = 85
+        size = 13
+        flags = { kellerot_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Fomane"
+        class = pc_ice_giant
+        orbit_distance = 40
+        orbit_angle = 226
+        size = 25
+        flags = { fomane_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Stonexia"
+        class = pc_gas_giant
+        orbit_distance = 40
+        orbit_angle = 179
+        size = 33
+        flags = { stonexia_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Erekra"
+        class = pc_asteroid
+        orbit_distance = 40
+        orbit_angle = 74
+        size = 3
+        flags = { erekra_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Bukane"
+        class = pc_barren_cold
+        orbit_distance = 40
+        orbit_angle = 205
+        size = 7
+        flags = { bukane_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Chavero"
+        class = pc_mephitic
+        orbit_distance = 40
+        orbit_angle = 129
+        size = 16
+        flags = { chavero_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Motianaka"
+        class = pc_frozen
+        orbit_distance = 40
+        orbit_angle = 305
+        size = 23
+        flags = { motianaka_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Rathmore"
+        class = pc_gas_giant
+        orbit_distance = 40
+        orbit_angle = 146
+        size = 39
+        has_ring = yes
+
+        moon = {
+            name = "Killoran"
+            class = pc_iron
+            orbit_distance = 20
+            orbit_angle = 171
+            size = 2
+            flags = {killoran_planet rathmore_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Aimen"
+            class = pc_methane
+            orbit_distance = 5
+            orbit_angle = 54
+            size = 5
+            flags = { aimen_planet }
+            has_ring = no
+        }
+
+        moon = {
+            name = "Venkalth"
+            class = pc_frozen
+            orbit_distance = 5
+            orbit_angle = 278
+            size = 2
+            flags = { venkalth_planet }
+            has_ring = no
+        }
+
+        moon = {
+            name = "Maxirt"
+            class = pc_molten
+            orbit_distance = 5
+            orbit_angle = 225
+            size = 7
+            flags = { maxirt_planet }
+            has_ring = no
+        }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_2_secondaryrelay" 
+			name = "Sector T2 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_pylfas_init = {
+    name = "Pylfas"
+    class = sc_d
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 landias_trap pylfas_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 400
+    }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 480
+    }
+
+    planet = {
+		name = "Pylfas"
+        class = pc_d_star
+        orbit_distance = 0
+        size = 20
+        flags = { pylfas_star }
+    }
+
+    planet = {
+        name = "Sharetur"
+        class = pc_continental
+        orbit_distance = 80
+        orbit_angle = 185
+        size = 15
+        flags = { sharetur_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Piklicka"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 28
+        size = 13
+        flags = { piklicka_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Gadorra"
+        class = pc_molten
+        orbit_distance = 80
+        orbit_angle = 351
+        size = 15
+        flags = { gadorra_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Yemisedi"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 71
+        size = 17
+        flags = { yemisedi_planet }
+        has_ring = no
+    }
+
+    change_orbit = 80
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Wufa"
+        class = pc_asteroid
+        orbit_distance = 80
+        orbit_angle = 220
+        size = 20
+        flags = { wufa_planet }
+        has_ring = no
+    }
+}
+
+sys_salinda_init = {
+    name = "Salinda"
+    class = sc_pulsar
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 landias_trap salinda_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 150
+    }
+
+    planet = {
+		name = "Salinda"
+        class = pc_pulsar
+        orbit_distance = 0
+        size = 20
+        flags = { salinda_planet }
+    }
+
+    change_orbit = 150
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Lanter"
+        class = pc_gas_giant
+        orbit_distance = 300
+        orbit_angle = 163
+        size = 38
+        flags = { lanter_planet }
+        has_ring = no
+    }
+}

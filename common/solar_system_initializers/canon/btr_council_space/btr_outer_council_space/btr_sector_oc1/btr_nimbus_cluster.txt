@@ -1,0 +1,671 @@
+######################
+### NIMBUS CLUSTER ###
+######################
+
+sys_agaiou_init = {
+    name = "Agaiou"
+    class = sc_binary_f_f
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 nimbus_cluster agaiou_system }
+	
+    planet = {
+		name = "Agaiou"
+        class = pc_m_giant_star
+        size = 30
+        flags = { agaiou_star }
+        orbit_distance = 0
+        orbit_angle = 180
+    }
+
+    planet = {
+		name = "Hali"
+        class = pc_f_star
+        size = 25
+        flags = { hali_star }
+        orbit_distance = 30
+        orbit_angle = { min = 90 max = 270 }
+    }
+
+    planet = {
+        name = "Carcosa"
+        class = pc_hothouse
+        orbit_distance = 235
+        orbit_angle = 214
+        size = 18
+        flags = { carcosa_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Neargas"
+        class = pc_frozen
+        orbit_distance = 235
+        orbit_angle = 145
+        size = 9
+        flags = { neargas_planet }
+        has_ring = no
+    }
+}
+
+sys_kallini_init = {
+    name = "Kallini"
+    class = sc_f
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 nimbus_cluster kallini_system secondary_relay_system }
+
+    planet = {
+	    name = "Kallini"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 25
+        flags = { kallini_star }
+    }
+
+    planet = {
+        name = "Ithrone"
+        class = pc_molten
+        orbit_distance = 150
+        orbit_angle = 229
+        size = 25
+        flags = { ithrone_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Pania"
+        class = pc_barren
+        orbit_distance = 150
+        orbit_angle = 126
+        size = 12
+        flags = { pania_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Lemnia"
+        class = pc_barren
+        orbit_distance = 150
+        orbit_angle = 250
+        size = 19
+        flags = { lemnia_planet }
+        has_ring = no
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "outer_council_sector_1_secondaryrelay" 
+			name = "Sector OC1 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_kappaiota_init = {
+	name = "Kappa Iota"
+    class = sc_g
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 nimbus_cluster kappaiota_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 400
+	}
+
+	planet = {
+	    name = "Kappa Iota"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+        flags = { kappa_iota_star }
+    }
+
+	planet = {
+        name = "Yomi"
+        class = pc_highgrav_methane
+        orbit_distance = 250
+        orbit_angle = 229
+        size = 25
+        has_ring = no
+		flags = {subclass_world yomi_planet}
+		entity = "methane_continental_planet_02_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+			add_modifier = {
+				modifier = forest_world
+			}
+		}
+    }
+
+    change_orbit = 150
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_mesana_init = {
+    name = "Mesana"
+    class = sc_m
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 nimbus_cluster mesana_system primary_relay_system asari_republics_system }
+
+    planet = {
+	    name = "Mesana"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { mesana_star }
+    }
+
+    planet = {
+        name = "Lesuss"
+        class = pc_continental
+        orbit_distance = 75
+        orbit_angle = 35
+        size = 15
+        has_ring = no
+		modifiers = none
+        flags = { lesuss_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = bleak_planet
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Lymetis"
+        class = pc_barren_station
+        orbit_distance = 100
+        orbit_angle = 107
+        size = 10
+        flags = { lymetis_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Medokos"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 129
+        size = 35
+        flags = { medokos_planet }
+        has_ring = no	
+    }
+
+    planet = {
+        name = "Shastessia"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 68
+        size = 34
+        flags = { shastessia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Vylius"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 200
+        size = 27
+        flags = { vylius_planet }
+        has_ring = yes
+    }	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "nimbuscluster_athenanebula_primaryrelay" 
+			name = "Sector OC1 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_pelion_init = {
+    name = "Pelion"
+    class = sc_b_super
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 nimbus_cluster pelion_system asari_republics_system }
+	
+    planet = {
+	    name = "Pelion"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 20
+        flags = { pelion_star }
+    }
+
+    planet = {
+        name = "Zosteros"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 185
+        size = 25
+        flags = { zosteros_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Sthenia"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 170
+        size = 19
+        flags = { sthenia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Trategos"
+        class = pc_arctic
+        orbit_distance = 125
+        orbit_angle = 229
+        size = 17
+        has_ring = no
+		modifiers = none
+		flags = { subclass_world trategos_planet }
+		entity = "snow_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = snow_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Aitis"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 302
+        size = 20
+        flags = { aitis_planet }
+        has_ring = no
+    }
+}
+
+#####################
+### PETUNA CLUSTER###
+#####################
+
+sys_barayie_init = {
+    name = "Barayie"
+    class = sc_f
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 petuna_cluster barayie_system primary_relay_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 320
+    }
+
+    planet = {
+		name = "Barayie"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 35
+        flags = { barayie_star }
+    }
+
+    planet = {
+        name = "Foreesande"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 345
+        has_ring = no
+    }
+
+    planet = {
+        name = "Mardulaas"
+        class = pc_carbon
+        orbit_distance = 125
+        orbit_angle = 137
+        size = 20
+        flags = { mardulaas_planet }
+        has_ring = no
+    }
+
+    change_orbit = 70
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Raftanan"
+        class = pc_frozen
+        orbit_distance = 55
+        orbit_angle = 95
+        size = 14
+        flags = { raftanan_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Chisei"
+        class = pc_barren_cold
+        orbit_distance = 125
+        orbit_angle = 137
+        size = 10
+        flags = { chisei_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "petunacluster_ismarfrontier_primaryrelay" 
+			name = "Sector OC1 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_daquie_init = {
+    name = "Daquie"
+    class = sc_m
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 petuna_cluster daquie_system secondary_relay_system }
+
+    asteroid_belt = {
+        type = icy_asteroid_belt
+        radius = 385
+    }
+
+    planet = {
+		name = "Daquie"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 25
+        flags = { daquie_star }
+    }
+
+    planet = {
+        name = "Xeltas"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 344
+        size = 16
+        flags = { xeltas_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Lamys"
+        class = pc_barren
+        orbit_distance = 150
+        orbit_angle = 140
+        size = 17
+        flags = { lamys_planet }
+        has_ring = no
+    }
+
+    change_orbit = 85
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Tauvim"
+        class = pc_ice_giant
+        orbit_distance = 65
+        orbit_angle = 90
+        size = 27
+        flags = { tauvim_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "outer_council_sector_1_secondaryrelay" 
+			name = "Sector OC1 - Secondary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_piaas_init = {
+    name = "Piaas"
+    class = sc_b_super
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 petuna_cluster piaas_system }
+
+    planet = {
+		name = "Piaas"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 31
+        flags = { piaas_star }
+    }
+
+    planet = {
+        name = "Digar"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 335
+        size = 17
+        flags = { digar_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Ashpez"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 187
+        size = 20
+        flags = { ashpez_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Alamaat"
+        class = pc_mephitic
+        orbit_distance = 150
+        orbit_angle = 55
+        size = 21
+        flags = { alamaat_planet }
+        has_ring = no
+    }
+}
+
+sys_vorjuun_init = {
+    name = "Vorjuun"
+    class = sc_a
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 petuna_cluster vorjuun_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 425
+    }
+
+    planet = {
+		name = "Vorjuun"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 28
+        flags = { vorjuun_star }
+    }
+
+    planet = {
+        name = "Baumigat"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 205
+        size = 13
+        flags = { baumigat_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Katinae"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 160
+        size = 33
+        flags = { katinae_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Meteleb"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 303
+        size = 40
+        flags = { meteleb_planet }
+        has_ring = yes
+    }
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Phistas"
+        class = pc_barren_cold
+        orbit_distance = 75
+        orbit_angle = 218
+        size = 17
+        has_ring = no
+
+        moon = {
+            name = "Turchuumdan"
+            class = pc_met_asteroid
+            orbit_distance = 20
+            orbit_angle = 35
+            size = 2
+            flags = {turchuumdan_planet phistas_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Daakya"
+            class = pc_iron
+            orbit_distance = 5
+            orbit_angle = 184
+            size = 6
+            flags = { daakya_planet }
+            has_ring = no
+        }
+    }
+}
+
+sys_ziaada_init = {
+    name = "Ziaada"
+    class = sc_b
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 petuna_cluster ziaada_system }
+
+    planet = {
+		name = "Ziaada"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 32
+        flags = { ziaada_star }
+    }
+
+    planet = {
+        name = "Milikiar"
+        class = pc_hothouse
+        orbit_distance = 70
+        orbit_angle = 203
+        size = 8
+        flags = { milikiar_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Parridaan"
+        class = pc_iron
+        orbit_distance = 70
+        orbit_angle = 139
+        size = 12
+        flags = { parridaan_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Mrakhas"
+        class = pc_iron
+        orbit_distance = 70
+        orbit_angle = 127
+        size = 17
+        flags = { mrakhas_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Daquie"
+        class = pc_barren
+        orbit_distance = 70
+        orbit_angle = 136
+        size = 12
+        flags = { daquie_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Karahye"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 326
+        size = 34
+        flags = { karahye_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Agrezi"
+        class = pc_ice_giant
+        orbit_distance = 70
+        orbit_angle = 141
+        size = 32
+        flags = { agrezi_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Thaar"
+        class = pc_frozen
+        orbit_distance = 70
+        orbit_angle = 202
+        size = 16
+        flags = { thaar_planet }
+        has_ring = no
+    }
+}
