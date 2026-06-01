@@ -1,0 +1,284 @@
+########################
+### YGGDRASIL NEBULA ###
+########################
+
+sys_baldr_init = {
+    name = "Baldr"
+    class = sc_y
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv4 yggdrasil_nebula baldr_system secondary_relay_system systems_alliance_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 125
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 375
+	}	
+
+    planet = {
+		name = "Baldr"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 28
+        flags = { baldr_star }
+    }
+
+	change_orbit = 125
+
+	planet = {
+		name = "Mindoir"
+		class = pc_alpine
+		orbit_distance = 125
+		size = 17
+		flags = { mindoir_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_MINDOIR_DANGEROUS_PARADISE
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+	}
+
+	change_orbit = 125
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Coten"
+		class = pc_iron
+		orbit_angle = 125
+		size = 6
+		flags = { coten_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_4_secondaryrelay" 
+			name = "Sector SV4 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+
+sys_brekkenz_init = {
+    name = "Brekkenz"
+    class = sc_d
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv4 yggdrasil_nebula brekkenz_system }
+	
+    planet = {
+		name = "Brekkenz"
+        class = pc_d_star
+        orbit_distance = 0
+        size = 20
+        flags = { brekkenz_star }
+    }	
+
+	planet = {
+		name = "Bil"
+		class = pc_toxic
+		orbit_angle = random
+		orbit_distance = 250
+		size = 14
+		flags = { bil_planet }
+	}
+
+	planet = {
+		name = "Yuki"
+		class = pc_ammonia
+		orbit_angle = random
+		has_ring = yes
+		orbit_distance = 250
+		size = 16
+		flags = { yuki_planet }
+	}		
+}
+
+
+sys_fen_init = {
+    name = "Fen"
+    class = sc_k
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv4 yggdrasil_nebula fen_system primary_relay_system }
+
+    planet = {
+		name = "Fen"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 28
+        flags = { fen_star }
+    }
+	
+	planet = {
+		name = "Vingolf"
+		class = pc_molten
+		orbit_angle = random
+		orbit_distance = 150
+	}	
+	
+	planet = {
+		name = "Amsvartnir"
+		class = pc_molten
+		orbit_angle = random
+		orbit_distance = 150
+		size = 13
+		
+		moon = 	{
+			name = "Amar"
+			class = pc_dextro_ocean
+			orbit_angle = random
+			orbit_distance = 20
+			size = 4
+			flags = {amar_planet amsvartnir_planet}
+			init_effect = {
+				add_modifier = {
+					modifier = low_gravity
+					days = -1
+				}
+                add_anomaly = {
+                    category = BTR_AMAR_LOW_G
+                    # target = this # TODO: remove this once it's proven to be unneeded
+                }
+			}
+		}	
+	}
+
+	planet = {
+		name = "Lyngvi"
+		class = pc_carbon
+		orbit_angle = random
+		orbit_distance = 150
+		size = 12
+		flags = { lyngvi_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "yggdrasilnebula_atticanbeta_primaryrelay" 
+			name = "Sector SV4 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_hedek_init = {
+	name = "Hedek"
+	class = sc_m
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv4 yggdrasil_nebula hedek_system primary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 80
+	}	
+	
+	planet = {
+		name = "Hedek"
+		class = pc_m_star
+		size = 26
+		flags = { hedek_star }
+	}	
+
+	change_orbit = 80
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Yubrariska"
+		class = pc_barren
+        orbit_distance = 70
+		size = 16
+		flags = { yubrariska_planet }
+	}
+
+	planet = {
+		name = "Nu'uk"
+		class = pc_hothouse
+        orbit_distance = 150
+		size = 16
+		flags = { nuuk_planet }
+	}
+
+	planet = {
+		name = "Dahar"
+		class = pc_ice_giant
+        orbit_distance = 150
+		size = 16
+		flags = { dahar_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "yggdrasilnebula_priscillacluster_primaryrelay" 
+			name = "Sector SV4 - Primary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_qedek_init = {
+    name = "Qedek"
+    class = sc_tt_red
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv4 yggdrasil_nebula qedek_system }
+	
+    planet = {
+		name = "Qedek"
+        class = pc_tt_red_star
+        orbit_distance = 0
+        size = 20
+        flags = { qedek_star }
+	}	
+}
+
+sys_vali_init = {
+    name = "Vali"
+    class = sc_black_hole
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv4 yggdrasil_nebula vali_system }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 250
+	}
+
+    planet = {
+		name = "Vali"
+        class = pc_black_hole
+        orbit_distance = 0
+        size = 30
+        flags = { vali_planet }
+	}	
+
+	change_orbit = 250
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}

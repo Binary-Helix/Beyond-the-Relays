@@ -1,0 +1,504 @@
+###################
+### DABO'S KNOT ###
+###################
+
+sys_cobines_init = {
+	name = "Cobi Nes"
+	class = sc_k_giant
+	max_instances = 1
+
+    flags = { inner_council sector_ic8 dabos_knot cobi_nes_system vol_protectorate_system }
+
+    init_effect = {
+        save_global_event_target_as = volCon1
+    }
+
+	planet = {
+		name = "Cobi Nes"
+		class = pc_k_giant_star
+        orbit_distance = 0
+		size = 29
+		flags = { cobi_nes_star }
+	}
+
+    planet = {
+        name = "Salau"
+        class = pc_highgrav_ammonia
+        orbit_distance = 150
+        orbit_angle = 15
+        has_ring = no
+		size = 20
+		entity = "ammonia_arid_planet_10_entity"
+        flags = { salau_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = dune_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Reval"
+			class = pc_frozen
+			orbit_distance = 20
+			size = 7
+			flags = { reval_planet }
+		}	
+    }
+
+    planet = {
+        name = "Quon Fuz"
+        class = pc_chlorine
+        orbit_distance = 150
+        orbit_angle = 181
+        has_ring = no
+		size = 16
+		flags = { quon_fuz_planet }
+		entity = "chlorine_swamp_planet_04_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = bog_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Lahman"
+        class = pc_ice_giant
+        orbit_distance = 150
+        orbit_angle = 80
+        has_ring = no
+		size = 27
+		flags = { lahman_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "inner_council_sector_8_secondaryrelay" 
+			name = "Inner Secondary - Sector 8 Relay"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_gravnaz_init = {
+	name = "Grav'naz"
+	class = sc_a
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv1 dabos_knot gravnaz_system hegemony_of_kharshan_system }
+
+    
+    init_effect = {
+        save_global_event_target_as = hegemonSciCon1
+    }
+
+	planet = {
+		name = "Grav'naz"
+		class = pc_a_star
+        orbit_distance = 0
+		size = 30
+		flags = { gravnaz_star }
+	}
+
+    planet = {
+        name = "Molga"
+        class = pc_molten
+        orbit_distance = 35
+        orbit_angle = 15
+        has_ring = no
+		size = 10
+		flags = { molga_planet }
+    }
+
+    planet = {
+        name = "Rekk'ud"
+        class = pc_molten
+        orbit_distance = 25
+        orbit_angle = 181
+        has_ring = no
+		size = 14
+		flags = { rekkud_planet }
+    }
+
+    planet = {
+        name = "Fragga"
+        class = pc_gas_giant
+        orbit_distance = 60
+        orbit_angle = 80
+        has_ring = no
+		size = 31
+
+		moon = {
+			name = "Mught"
+			class = pc_alpine
+			orbit_distance = 8
+			has_ring = no
+			size = 7
+			flags = {mught_planet subclass_world fragga_planet}
+			entity = "highland_planet_03_entity"
+			init_effect = {
+				add_modifier = {
+					modifier = highland_world
+					days = -1
+				}	
+			}
+		}
+    }	
+
+	planet = {
+		name = "Ygdra"
+		class = pc_ice_giant
+        orbit_distance = 45
+		has_ring = yes
+		size = 30
+		flags = { ygdra_planet }
+	}
+
+	planet = {
+		name = "Jorastan"
+		class = pc_ice_giant
+        orbit_distance = 30
+		has_ring = no
+		size = 28
+		flags = { jorastan_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "dabosknot_merariring_primaryrelay" 
+			name = "Dabo 2 Relay"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_kesd_init = {
+	name = "Kesd"
+	class = sc_black_hole
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv1 dabos_knot kesd_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 90
+	}
+
+	planet = {
+		name = "Kesd"
+		class = pc_black_hole
+        orbit_distance = 0
+		size = 30
+		flags = { kesd_planet }
+	}
+
+    change_orbit = 90
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+        name = "Krokko"
+        class = pc_gas_giant
+        orbit_distance = 160
+        orbit_angle = 15
+        has_ring = no
+		size = 33		
+		flags = { krokko_planet }
+    }
+
+    planet = {
+        name = "Alstarz"
+        class = pc_iron
+        orbit_distance = 250
+        orbit_angle = 181
+        has_ring = no
+		size = 14
+		flags = { alstarz_planet }
+    }
+}
+
+sys_omaverizh_init = {
+	name = "Oma Verizh"
+	class = sc_m_giant
+	max_instances = 1
+
+    flags = { inner_council sector_ic8 dabos_knot omaverizh_system vol_protectorate_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 175	
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 300
+	}
+
+	planet = {
+		name = "Oma Verizh"
+		class = pc_m_giant_star
+        orbit_distance = 0
+		size = 30
+		flags = { oma_verizh_star }
+	}
+
+	planet = {
+        name = "Ida Ro"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 15
+        has_ring = no
+		size = 9
+		flags = { ida_ro_planet }
+    }
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Gundua Mic"
+        class = pc_carbon
+        orbit_distance = 75
+        orbit_angle = 45
+        has_ring = no
+		size = 7
+		flags = { gundua_mic_planet }
+    }
+
+    change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		name = "Walden"
+        class = pc_ammonia
+        orbit_distance = 75
+        orbit_angle = 45
+        has_ring = no
+		size = 22
+		entity = "ammonia_savannah_planet_06_entity"
+        flags = { walden_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = steppe_world
+				days = -1
+			}
+		}
+    }
+
+	planet = {
+		name = "Furwond"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 45
+        has_ring = yes
+		size = 22
+		flags = { furwond_planet }
+    }
+}
+
+sys_sanu_init = {
+	name = "Sanu"
+	class = sc_k
+	max_instances = 1
+
+    flags = { inner_council sector_ic8 dabos_knot sanu_system }
+
+	planet = {
+		name = "Sanu"
+		class = pc_k_star
+        orbit_distance = 0
+		size = 14
+		flags = { sanu_star }
+	}
+
+	planet = {
+        name = "Morn'yep"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 15
+        has_ring = no
+		size = 13
+		flags = { mornyep_planet }
+    }
+
+	planet = {
+		name = "Destren"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 45
+        has_ring = no
+		size = 5
+		flags = { destren_planet }
+    }
+
+	planet = {
+		name = "Gornal"
+        class = pc_carbon
+        orbit_distance = 125
+        orbit_angle = 45
+        has_ring = yes
+		size = 8
+		flags = { gornal_planet }
+    }	
+
+	planet = {
+		name = "Qurl"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 45
+        has_ring = yes
+		size = 16
+		flags = { qurl_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "dabosknot_onofspot_primaryrelay" 
+			name = "Dabo 1 Relay"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_shuoma_init = {
+	name = "Shuoma"
+	class = sc_m
+	max_instances = 1
+
+    flags = { inner_council sector_ic8 dabos_knot shuoma_system hegemony_of_kharshan_system }
+	
+	planet = {
+		name = "Shuoma"
+		class = pc_m_star
+        orbit_distance = 0
+		size = 20
+		flags = { shuoma_star }
+	}
+
+	planet = {
+       	name = "Bumi"
+       	class = pc_ammonia
+       	orbit_distance = 100
+       	orbit_angle = 2
+		size = 17
+	   	has_ring = no
+		flags = {subclass_world bumi_planet}
+		entity = "ammonia_continental_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = prairie_world
+				days = -1
+			}
+		}
+	}
+	
+	planet = {
+	    name = "Sec Tur"
+	    class = pc_barren
+	    orbit_distance = 100
+	    orbit_angle = 87
+		size = 21
+		flags = { sec_tur_planet }
+	    has_ring = no   
+	}
+	
+	planet = {
+        name = "Nukvarn"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 207
+		size = 35
+		has_ring = yes
+
+		moon = {
+            name = "Makrag"
+            class = pc_carbon
+            orbit_distance = 20
+            orbit_angle = 200
+            has_ring = no
+            size = 3
+            flags = {makrag_planet nukvarn_planet}
+		}
+
+		moon = {
+            name = "Gorbak'pa"
+            class = pc_frozen
+            orbit_distance = 5
+            orbit_angle = 359
+            has_ring = no
+            size = 5
+            flags = { gorbakpa_planet }
+        }
+	}
+	
+	planet = {
+        name = "Ghra'da"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 2
+		size = 35
+		has_ring = no
+
+		moon = {
+            name = "Orn'Tvarn"
+            class = pc_methane
+            orbit_distance = 20
+            orbit_angle = 189
+            has_ring = no
+			size = 4
+			entity = "methane_ocean_planet_05_entity"
+			flags = {subclass_world orntvarn_planet ghrada_planet}
+			init_effect = {
+				add_modifier = {
+					modifier = coldocean_world
+					days = -1
+				}
+			}
+        }
+	}
+	
+	planet = {
+        name = "Qdurn"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 84
+		size = 30
+        has_ring = no
+
+		moon = {
+            name = "Nefari"
+            class = pc_barren
+            orbit_distance = 20
+            orbit_angle = 90
+            has_ring = no
+			size = 10
+            flags = {nefari_planet qdurn_planet}
+		}
+    }
+}

@@ -1,0 +1,549 @@
+#######################
+### SIGURD'S CRADLE ###
+#######################
+
+sys_cyclades_init = {
+	name = "Cyclades"
+    class = sc_g
+	max_instances = 1
+
+	flags = { terminus_systems sector_t12 sigurds_cradle cyclades_system secondary_relay_system }
+
+	planet = {
+		name = "Cyclades"
+		class = pc_g_star
+		size = 34
+		flags = { cyclades_star }
+	}
+
+	planet = {
+        name = "Temporum"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 70
+        has_ring = no
+		size = 34
+		flags = { temporum_planet }
+    }
+
+	planet = {
+        name = "Cyclades B"
+        class = pc_pulsar
+        orbit_distance = 300
+        orbit_angle = 70
+        has_ring = no
+		size = 28
+		flags = { cyclades_b_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_12_secondaryrelay" 
+			name = "Sector T12 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_decoris_init = {
+    name = "Decoris"
+    class = sc_g
+	max_instances = 1
+
+	flags = { terminus_systems sector_t12 sigurds_cradle decoris_system planet_state }
+
+    planet = {
+	    name = "Decoris"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { decoris_star }
+    }
+
+    planet = {
+        name = "Laena"
+        class = pc_hothouse
+        orbit_distance = 40
+        orbit_angle = 218
+        has_ring = no
+		size = 15
+		flags = { laena_planet }
+    }
+
+    planet = {
+        name = "Sanctum"
+        class = pc_dextro_arctic
+        orbit_distance = 40
+        orbit_angle = 178
+        has_ring = no
+		size = 16
+        flags = { subclass_world dextro_world sanctum_planet }
+        deposit_blockers = none
+        modifiers = none
+		entity = "snow_planet_03_entity"
+		# init_effect = {
+        #     save_global_event_target_as = sanctumHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:sanctumHomeworld
+        #         }
+        #         log = "Sanctum Metals Group Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_sanctum_metals_group_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:sanctum_metals_group
+		# 	create_colony = {
+		# 		owner = event_target:sanctum_metals_group
+		# 		species = event_target:turianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_sanctum_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = snow_world
+		# 		days = -1
+		# 	}
+        #
+        #     add_deposit = d_eezo_scarce
+		# }
+    }	
+}
+
+sys_floritana_init = {
+    name = "Floritana"
+    class = sc_o_hyper
+	max_instances = 1
+
+	flags = { terminus_systems sector_t12 sigurds_cradle floritana_system }
+
+    planet = {
+		name = "Floritana"
+        class = pc_o_hyper_star
+        orbit_distance = 0
+        size = 30
+        flags = { floritana_star }
+    }
+
+    planet = {
+        name = "Optitius"
+        class = pc_dextro_desert
+        orbit_distance = 150
+        orbit_angle = 26
+        has_ring = no
+		size = 25
+        flags = {subclass_world optitius_planet}
+		entity = "cenote_09_planet_entity"
+		init_effect = {		
+			add_modifier = {
+				modifier = cenote_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = dextro_world
+				days = -1
+			}
+		}
+    }
+}
+
+sys_lenal_init = {
+    name = "Lenal"
+    class = sc_f
+	max_instances = 1
+
+	flags = { terminus_systems sector_t12 sigurds_cradle lenal_system planet_state }
+
+    planet = {
+	    name = "Lenal"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 22
+        flags = { lenal_star }
+    }
+
+    planet = {
+        name = "Laconix"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 129
+        has_ring = no
+		size = 25
+		flags = { laconix_planet }
+    }
+
+    planet = {
+        name = "Triginta Petra"
+        class = pc_dextro_arid
+        orbit_distance = 125
+        orbit_angle = 238
+        size = 20
+        has_ring = no
+		flags = {subclass_world trigintapetra_planet triginta_petra_planet}
+		entity = "badlands_planet_08_entity"
+        deposit_blockers = none
+        modifiers = none
+		# init_effect = {
+        #     save_global_event_target_as = trigintapetraHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:trigintapetraHomeworld
+        #         }
+        #         log = "Trigintan League Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_trigintan_league_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:trigintan_league
+		# 	create_colony = {
+		# 		owner = event_target:trigintan_league
+		# 		species = event_target:turianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_triginta_petra_pops = yes
+        #
+        #     add_modifier = {
+		# 		modifier = badlands_world
+		# 		days = -1
+		# 	}
+		# }
+    }
+
+    planet = {
+        name = "Choitadix"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 266
+        has_ring = no
+		size = 3
+		flags = { choitadix_planet }
+    }
+
+    planet = {
+        name = "Nutus"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 284
+        has_ring = yes
+		size = 33
+
+		moon = {
+			name = "Urdus"
+			class = pc_barren
+			orbit_distance = 20
+			size = 10
+			flags = {urdus_planet nutus_planet}
+		}
+
+		moon = {
+			name = "Etrat"
+			class = pc_frozen
+			orbit_distance = 5
+			size = 6
+			flags = { etrat_planet }
+		}	
+    }
+}
+
+sys_mil_init = {
+    name = "Mil"
+    class = sc_g
+	max_instances = 1
+
+	flags = { terminus_systems sector_t12 sigurds_cradle mil_system planet_state }
+
+    planet = {
+		name = "Mil"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { mil_star }
+    }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 450
+	}
+
+    planet = {
+        name = "Akraia"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 223
+        has_ring = no
+		size = 7
+		flags = { akraia_planet }
+    }
+
+    planet = {
+        name = "Lisir"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 99
+        has_ring = no
+		size = 14
+		flags = { lisir_planet }
+    }
+
+    planet = {
+        name = "Chalkhos"
+        class = pc_tropical
+        orbit_distance = 100
+        orbit_angle = 196
+        has_ring = no
+		size = 12
+        deposit_blockers = none
+        modifiers = none
+        flags = {subclass_world chalkos_planet chalkhos_planet}
+        init_effect = {
+            save_global_event_target_as = chalkosHomeworld
+            if = {
+                limit = {
+                    exists = event_target:chalkosHomeworld
+                }
+                log = "Chalkos Freehold Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_chalkhos_freehold_country = yes
+            
+            set_capital = yes
+			set_owner = event_target:chalkhos_freehold
+			create_colony = {
+				owner = event_target:chalkhos_freehold
+				species = event_target:asariSpecies
+				ethos = owner
+			}
+
+            generate_chalkhos_pops = yes
+
+        }
+    }
+
+    planet = {
+        name = "Selvos"
+        class = pc_desert
+        orbit_distance = 100
+        orbit_angle = 343
+        has_ring = no
+		size = 15
+        flags = {subclass_world selvos_planet}
+		entity = "dune_planet_12_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dune_world
+				days = -1
+			}
+		}
+    }
+
+	planet = {
+		name = "Mylasi"
+		class = pc_asteroid
+        orbit_distance = 50
+		size = 1
+		flags = { mylasi_planet }
+	}	
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Terapso"
+        class = pc_gas_giant
+        orbit_distance = 50
+        orbit_angle = 250
+        has_ring = no
+		size = 35
+
+		moon = {
+			name = "Taranis"
+			class = pc_barren_cold
+			orbit_distance = 20
+			size = 8
+			flags = {taranis_planet terapso_planet}
+		}
+	}	
+}
+
+sys_psitophet_init = {
+    name = "Psi Tophet"
+    class = sc_g
+	max_instances = 1
+
+	flags = { terminus_systems sector_t12 sigurds_cradle psi_tophet_system }
+
+    planet = {
+		name = "Psi Tophet"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { psi_tophet_star }
+    }
+
+    planet = {
+        name = "2181 Despoina"
+        class = pc_ocean
+        orbit_distance = 40
+        orbit_angle = 318
+        has_ring = no
+		size = 17
+		flags = { 2181_despoina_planet }
+    }
+
+    planet = {
+        name = "2181 Arion"
+        class = pc_frozen
+        orbit_distance = 20
+        orbit_angle = 59
+        has_ring = no
+		size = 11
+		flags = { 2181_arion_planet }
+    }
+
+    planet = {
+        name = "2181 Eubolos"
+        class = pc_gas_giant
+        orbit_distance = 50
+        orbit_angle = 223
+        has_ring = yes
+		size = 36
+
+		moon = {
+			name = "2181 Eubolos I"
+			class = pc_frozen
+			orbit_distance = 20
+			size = 9
+			flags = {2181_eubolos_i_planet 2181_eubolos_planet}
+		}
+    }
+}
+
+sys_skepsis_init = {
+    name = "Skepsis"
+    class = sc_g
+	max_instances = 1
+
+	flags = { terminus_systems sector_t12 sigurds_cradle skepsis_system primary_relay_system }
+
+    planet = {
+		name = "Skepsis"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+        flags = { skepsis_star }
+    }
+
+    planet = {
+        name = "Wallace"
+        class = pc_hot_giant
+        orbit_distance = 50
+        orbit_angle = 26
+        has_ring = no
+		size = 31
+		flags = { wallace_planet }
+    }
+
+    planet = {
+        name = "Darwin"
+        class = pc_hothouse
+        orbit_distance = 20
+        orbit_angle = 174
+        has_ring = no
+		size = 17
+		flags = { darwin_planet }
+    }
+
+    planet = {
+        name = "Watson"
+        class = pc_alpine
+        orbit_distance = 30
+        orbit_angle = 315
+        has_ring = no
+		size = 16
+        flags = {subclass_world watson_planet}
+		entity = "highland_planet_02_entity"
+        init_effect = {
+            add_modifier = {
+                modifier = highland_world
+                days = -1
+            }
+
+            add_deposit = d_eezo_abundant
+        }
+
+        moon = {
+            name = "Franklin"
+            class = pc_barren_cold
+            orbit_distance = 10
+            orbit_angle = 180
+            has_ring = no
+			size = 9
+			flags = { franklin_planet }
+        }
+    }
+
+    planet = {
+        name = "Crick"
+        class = pc_frozen
+        orbit_distance = 20
+        orbit_angle = 70
+        has_ring = no
+		size = 11
+		flags = { crick_planet }
+    }
+
+    planet = {
+        name = "Pauling"
+        class = pc_gas_giant
+        orbit_distance = 20
+        orbit_angle = 192
+        has_ring = yes
+		size = 32
+
+		moon = {
+			name = "Pauling a"
+			class = pc_molten
+			orbit_distance = 8
+			size = 4
+			flags = {pauling_a_planet pauling_planet}
+		}
+    }
+
+    planet = {
+        name = "Keimowitz"
+        class = pc_carbon
+        orbit_distance = 20
+        orbit_angle = 262
+        has_ring = no
+		size = 25
+
+		moon = {
+			name = "Noa"
+			class = pc_carbon
+			orbit_distance = 8
+			size = 7
+			flags = {noa_planet keimowitz_planet}
+		}	
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "sigurdscradle_serenitysea_primaryrelay" 
+			name = "Sector T12 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

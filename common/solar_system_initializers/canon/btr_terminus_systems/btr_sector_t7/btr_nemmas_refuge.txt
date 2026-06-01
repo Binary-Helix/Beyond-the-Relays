@@ -1,0 +1,370 @@
+######################
+### NEMMA'S REFUGE ###
+######################
+
+sys_caanu_init = {
+    name = "Caanu"
+    class = sc_tt_red
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 nemmas_refuge caanu_system }
+
+    planet = {
+		name = "Caanu"
+        class = pc_tt_red_star
+        orbit_distance = 0
+        size = 30
+        flags = { caanu_star }
+    }
+
+    planet = {
+        name = "Naem"
+        class = pc_gas_giant
+        orbit_distance = 250
+        orbit_angle = 178
+        size = 35
+        flags = { naem_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Wila"
+        class = pc_carbon
+        orbit_distance = 250
+        orbit_angle = 134
+        size = 12
+        flags = { wila_planet }
+        has_ring = no
+
+    }
+}
+
+sys_cosulnar_init = {
+    name = "Cosul'Nar"
+    class = sc_k
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 nemmas_refuge cosulnar_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 70
+    }
+
+    planet = {
+		name = "Cosul'Nar"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 29
+        flags = { cosulnar_star }
+    }
+
+    change_orbit = 70
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Tamor"
+        class = pc_dextro_swamp
+        orbit_distance = 80
+        orbit_angle = 309
+        size = 14
+        has_ring = no
+
+        moon = {
+            name = "Guca"
+            class = pc_barren_cold
+            orbit_distance = 20
+            orbit_angle = 270
+            size = 5
+            flags = {guca_planet tamor_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Zunna'Von"
+        class = pc_ice_giant
+        orbit_distance = 150
+        orbit_angle = 282
+        size = 26
+        flags = { zunnavon_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Tapan"
+        class = pc_iron
+        orbit_distance = 150
+        orbit_angle = 184
+        size = 19
+        flags = { tapan_planet }
+        has_ring = no
+    }
+}
+
+sys_jaavo_init = {
+    name = "Jaavo"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 nemmas_refuge jaavo_system disciples_of_nazara_system }
+
+    planet = {
+		name = "Jaavo"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+        flags = { jaavo_star }
+    }
+
+    planet = {
+        name = "Herris"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 146
+        has_ring = no
+		size = 12
+		flags = { herris_planet }
+    }
+
+	planet = {
+        name = "Gaezal'Jenal"
+        class = pc_dextro_alpine
+        orbit_distance = 125
+        orbit_angle = 146
+        has_ring = no
+		size = 22
+        flags = { gaezaljenal_planet subclass_world }
+        entity = "highland_planet_02_entity"
+		init_effect = {
+            add_modifier = {
+                modifier = highland_world
+                days = -1
+            }
+		}
+    }
+
+	planet = {
+        name = "Gernal"
+        class = pc_barren_cold
+        orbit_distance = 125
+        orbit_angle = 146
+        has_ring = no
+		size = 18
+		flags = { gernal_planet }
+    }
+
+	planet = {
+        name = "Lofirn"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 146
+        has_ring = no
+		size = 18
+		flags = { lofirn_planet }
+    }
+}
+
+sys_mawibteejinzay_init = {
+    name = "Mawib-Teeji-Nzay"
+    class = sc_m
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 nemmas_refuge mawibteejinzay_system }
+
+    planet = {
+		name = "Mawib-Teeji-Nzay"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 30
+        flags = { mawib_teeji_nzay_star }
+    }
+
+    planet = {
+        name = "Teeji"
+        class = pc_k_star
+        orbit_distance = 32
+        orbit_angle = 208
+        size = 34
+        flags = { teeji_star }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Nzay"
+        class = pc_d_star
+        orbit_distance = 13
+        orbit_angle = 75
+        size = 28
+        flags = { nzay_star }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Haere"
+        class = pc_hothouse
+        orbit_distance = 35
+        orbit_angle = 245
+        size = 10
+        flags = { haere_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Shaera'Shomos"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 88
+        size = 11
+        flags = { shaerashomos_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Caaha"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 144
+        has_ring = no
+    }
+
+    planet = {
+        name = "Heena"
+        class = pc_arctic
+        orbit_distance = 80
+        orbit_angle = 280
+        size = 16
+        flags = { heena_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Mofis"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 167
+        size = 35
+        flags = { mofis_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Suma"
+        class = random
+        orbit_distance = 80
+        orbit_angle = 89
+        size = 9
+        flags = { suma_planet }
+        has_ring = no
+    }
+}
+
+sys_shewa_init = {
+    name = "Shewa"
+    class = sc_f
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 nemmas_refuge shewa_system secondary_relay_system }
+
+    init_effect = {
+        save_global_event_target_as = gethSci2
+    }
+
+    planet = {
+		name = "Shewa"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 20
+        flags = { shewa_star }
+    }
+
+    planet = {
+        name = "Taejol"
+        class = pc_molten
+        orbit_distance = 70
+        orbit_angle = 176
+        has_ring = no
+    }
+
+    planet = {
+        name = "Lora"
+        class = pc_hothouse
+        orbit_distance = 60
+        orbit_angle = 280
+        size = 14
+        flags = { lora_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Vezom"
+        class = pc_hothouse
+        orbit_distance = 60
+        orbit_angle = 228
+        has_ring = no
+    }
+
+    planet = {
+        name = "Hator'Helon"
+        class = pc_molten
+        orbit_distance = 60
+        orbit_angle = 272
+        size = 12
+        flags = { hatorhelon_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Ronn"
+        class = pc_mephitic
+        orbit_distance = 60
+        orbit_angle = 254
+        size = 19
+        has_ring = no
+
+        moon = {
+            name = "Vur"
+            class = pc_molten
+            orbit_distance = 20
+            orbit_angle = 270
+            size = 5
+            flags = {vur_planet ronn_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Tiwa"
+        class = pc_barren_cold
+        orbit_distance = 55
+        orbit_angle = 307
+        size = 11
+        flags = { tiwa_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Lareh"
+        class = pc_frozen
+        orbit_distance = 59
+        orbit_angle = 205
+        size = 19
+        flags = { lareh_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_7_secondaryrelay" 
+			name = "Sector T7 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

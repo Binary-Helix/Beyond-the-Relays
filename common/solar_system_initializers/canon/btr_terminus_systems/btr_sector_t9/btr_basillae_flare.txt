@@ -1,0 +1,224 @@
+######################
+### BASILLAE FLARE ###
+######################
+
+sys_adiratna_init = {
+	name = "Adiratna"
+	class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t9 basillae_flare adiratna_system }
+
+	planet = {
+		name = "Adiratna"
+		class = pc_k_star
+		size = 25
+		flags = { adiratna_star }
+	}
+
+	planet = {
+		name = "Undira"
+		class = pc_barren
+        orbit_distance = 150
+		size = 5
+		flags = { undira_planet }
+	}
+
+	planet = {
+		name = "Monrini"
+		class = pc_tundra
+        orbit_distance = 150
+		size = 18
+		flags = { subclass_world monrini_planet }
+        deposit_blockers = none
+        modifiers = none
+		entity = "mire_planet_01_entity"
+		# init_effect = {
+        #     save_global_event_target_as = monriniHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:monriniHomeworld
+        #         }
+        #         log = "Monrini Syndicate Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_monrini_syndicate_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:monrini_syndicate
+		# 	create_colony = {
+		# 		owner = event_target:monrini_syndicate
+		# 		species = event_target:salarianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_monrini_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = mire_world
+		# 		days = -1
+		# 	}
+		# }
+	}
+
+	planet = {
+		name = "Safas"
+		class = pc_gas_giant
+        orbit_distance = 150
+		size = 35
+		flags = { safas_planet }
+		has_ring = yes
+	}
+}
+
+sys_esu_init = {
+	name = "Esu"
+	class = sc_m_hyper
+	max_instances = 1
+
+    flags = { terminus_systems sector_t9 basillae_flare esu_system primary_relay_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 375
+	}
+
+	planet = {
+		name = "Esu"
+		class = pc_m_hyper_star
+		size = 40
+		flags = { esu_star }
+	}
+
+	planet = {
+		name = "Arzhana"
+		class = pc_dextro_arctic
+		size = 16
+		orbit_distance = 250
+		flags = {subclass_world arzhana_planet}
+		entity = "cryovolcanic_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = cryovolcanic_world
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Arzhana a"
+			class = pc_barren_cold
+			size = 5
+			flags = { arzhana_a_planet }
+			orbit_distance = 20
+		}
+	}
+
+    change_orbit = 125
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "basillaeflare_hourglassnebula_primaryrelay" 
+			name = "Sector T9 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_jornous_init = {
+	name = "Jornous"
+	class = sc_k
+	max_instances = 1
+
+    flags = { terminus_systems sector_t9 basillae_flare jornous_system }
+	
+	planet = {
+		name = "Jornous"
+		class = pc_k_star
+		size = 25
+		flags = { jornous_star }
+	}
+
+	planet = {
+		name = "Ynnel"
+		class = pc_molten
+        orbit_distance = 125
+		size = 12
+		flags = { ynnel_planet }
+	}
+
+	planet = {	
+		name = "Kopanis"
+		class = pc_savannah
+        orbit_distance = 125
+		size = 16	
+		flags = { kopanis_planet }
+	}	
+
+	planet = {
+		name = "Seachel"
+		class = pc_dextro_arid
+        orbit_distance = 125
+		size = 17
+		flags = {subclass_world seachel_planet}
+		entity = "aquifer_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dextro_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = aquifer_world
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Dasrau"
+			class = pc_frozen
+			orbit_distance = 20
+			size = 11
+			flags = { dasrau_planet }
+		}
+	}
+	
+	planet = {
+		name = "Ekim"
+		class = pc_frozen
+        orbit_distance = 125
+		size = 20
+		flags = { ekim_planet }
+	}
+}
+
+sys_khongordzol_init = {
+	name = "Khongordzol"
+	class = sc_tt_red
+	max_instances = 1
+
+    flags = { terminus_systems sector_t9 basillae_flare khongordzol_system secondary_relay_system }
+	
+	planet = {
+		name = "Khongordzol"
+		class = pc_tt_red_star
+		size = 40
+		flags = { khongordzol_star }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_9_secondaryrelay" 
+			name = "Sector T9 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

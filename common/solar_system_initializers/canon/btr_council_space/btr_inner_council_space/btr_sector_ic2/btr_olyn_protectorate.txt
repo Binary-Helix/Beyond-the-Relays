@@ -1,0 +1,433 @@
+#########################
+### OLYN PROTECTORATE ###
+#########################
+
+sys_bedi_init = {
+	name = "Bedi"
+	class = sc_m
+	max_instances = 1
+
+    flags = { inner_council sector_ic2 olyn_protectorate bedi_system salarian_union_system }
+
+    init_effect = {
+        save_global_event_target_as = salarianSciCon2
+    }
+
+	planet = {
+		name = "Bedi"
+		class = pc_m_star
+		size = 30
+		flags = { bedi_star }
+	}
+
+	planet = {
+		name = "Olor"
+		class = pc_savannah
+        orbit_distance = 250
+        size = 18
+        flags = { olor_planet }
+	}
+}
+
+sys_dark_current_init = {
+    name = "Dark Current"
+    class = sc_l
+	max_instances = 1
+
+    flags = { inner_council sector_ic2 olyn_protectorate dark_current_system }
+
+    planet = {
+	    name = "Dark Current"
+        class = pc_l_star
+        orbit_distance = 0
+        size = 20
+        flags = { dark_current_star }
+    }
+
+    planet = {
+        name = "Scalding Boulder"
+        class = pc_chlorine
+        orbit_distance = 250
+        orbit_angle = 342
+        has_ring = no
+        size = 14
+		flags = {subclass_world scalding_boulder_planet}
+		entity = "chlorine_tropical_planet_05_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = atoll_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Twirling Pebble"
+        class = pc_shattered
+        orbit_distance = 250
+        orbit_angle = 141
+        has_ring = no
+        size = 8
+        flags = { twirling_pebble_planet }
+    }
+}
+
+sys_kanala_init = {
+    name = "Kanala"
+    class = sc_a
+	max_instances = 1
+    usage = custom_empire
+
+    flags = { inner_council sector_ic2 olyn_protectorate kanala_system }
+
+    init_effect = {
+        save_global_event_target_as = primacyFirstFleet
+        generate_btr_home_system_resources = yes
+    }
+
+    asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 325
+	}	
+
+    planet = {
+	    name = "Kanala"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 20
+        flags = { kanala_star }
+    }
+
+    planet = {
+        name = "Jenakala"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 334
+        has_ring = no
+        size = 12
+        flags = { jenakala_planet }
+    }
+
+    planet = {
+        name = "Kahje"
+        class = pc_ocean
+        orbit_distance = 125
+        orbit_angle = 169
+        has_ring = no
+        size = 20
+        starting_planet = yes
+        flags = { kahje_planet subclass_world }
+        deposit_blockers = none
+        modifiers = none
+		init_effect = {
+            add_modifier = {
+                modifier = coldocean_world
+                days = -1
+            }
+			save_global_event_target_as = hanarHomeworld
+			if = {
+				limit = {
+					exists = event_target:hanarHomeworld
+				}
+				log = "Hanar Homeworld Event Target Set"
+			}
+            prevent_anomaly = yes
+
+            check_for_hanar_player = yes
+
+            if = {
+				limit = {
+					any_country = {
+						has_country_flag = illuminated_primacy_player
+					}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = illuminated_primacy_player
+					}
+					save_global_event_target_as = illuminated_primacy
+				}
+                generate_empire_home_planet = yes
+            }
+			else = {
+				generate_illuminated_primacy_country = yes
+			}
+            set_capital = yes
+			set_owner = event_target:illuminated_primacy
+			create_colony = {
+				owner = event_target:illuminated_primacy
+				species = event_target:hanarSpecies
+				ethos = owner
+			}
+            clear_blockers = yes
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/canon/illuminated_pri_origin"
+            generate_han_kahje_pops = yes
+            event_target:illuminated_primacy = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+            create_archaeological_site = btr_precursor_everywhere
+		}
+
+        moon = {
+            name = "Libin"
+            class = pc_barren
+            orbit_distance = 20
+            orbit_angle = 134
+            has_ring = no
+            size = 5
+            flags = { libin_planet }
+        }
+
+        moon = {
+            name = "Nalynder"
+            class = pc_iron
+            orbit_distance = 5
+            orbit_angle = 81
+            has_ring = no
+            size = 7
+
+            flags = { nalynder_planet }
+            init_effect = {
+                add_deposit = d_eezo_3
+            }
+        }
+
+        moon = {
+            name = "Iyuhum"
+            class = pc_iron
+            orbit_distance = 5
+            orbit_angle = 200
+            has_ring = no
+            size = 4
+            flags = { iyuhum_planet }
+        }
+    }
+
+    change_orbit = 75
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Hohnle"
+        class = pc_iron
+        orbit_distance = 50
+        orbit_angle = 80
+        has_ring = no
+        size = 8
+        flags = { hohnle_planet }
+    }
+
+    planet = {
+        name = "Pohdenar"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 257
+        has_ring = no
+        size = 27
+        flags = { pohdenar_planet }
+    }
+}
+
+sys_obek_init = {
+    name = "Obek"
+    class = sc_m
+	max_instances = 1
+
+    flags = { inner_council sector_ic2 olyn_protectorate obek_system illuminated_primacy_system }
+
+    planet = {
+		name = "Obek"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { obek_star }
+    }
+
+    planet = {
+        name = "Acodu"
+        class = pc_tropical
+        orbit_distance = 125
+        orbit_angle = 333
+        has_ring = no
+        size = 10
+        entity = "atoll_planet_02_entity"
+        flags = { acodu_planet }
+        init_effect = {
+            add_modifier = {
+                modifier = atoll_world
+                days = -1
+            }
+        }
+        moon = {
+			name = "Uwanba"
+			class = pc_iron
+			orbit_distance = 20
+			orbit_angle = { min = 90 max = 270 }
+			size = 6
+			flags = { uwanba_planet }
+        }		
+    }
+
+    planet = {
+        name = "Volar"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 67
+        size = 30
+        has_ring = no
+
+        moon = {
+			name = "Bedil"
+			class = pc_barren
+			orbit_distance = 20
+			orbit_angle = { min = 90 max = 270 }
+			size = 6
+			flags = {bedil_planet volar_planet}
+        }	
+    }
+
+    planet = {
+        name = "Mdu"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 182
+        has_ring = no
+        size = 35
+        flags = { mdu_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
+    }
+    
+    planet = {
+        name = "Zahni"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 67
+        size = 17
+        has_ring = no
+        flags = { zahni_planet }
+        init_effect = {
+            add_deposit = d_eezo_scarce
+        }
+        moon = {
+			name = "Lirian"
+			class = pc_frozen
+			orbit_distance = 20
+			orbit_angle = { min = 90 max = 270 }
+			size = 6
+			flags = { lirian_planet }
+        }	
+    }
+}
+
+sys_thundering_trench_init = {
+    name = "Thundering Trench"
+    class = sc_g
+	max_instances = 1
+
+    flags = { inner_council sector_ic2 olyn_protectorate thundering_trench_system }
+
+    planet = {
+	    name = "Thundering Trench"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { thundering_trench_star }
+    }
+
+	planet = {
+		name = "Rilol"
+		class = pc_dextro_tundra
+        orbit_distance = 150
+        size = 8
+		flags = {subclass_world rilol_planet}
+		entity = "basalt_planet_02_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dextro_world
+			}
+			add_modifier = {
+				modifier = basalt_world
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "Hudim"
+		class = pc_hothouse
+        orbit_distance = 150
+        size = 18
+
+		moon = {
+			name = "Hilon"
+			class = pc_iron
+			orbit_distance = 9
+            size = 6
+            flags = {hilon_planet hudim_planet}
+		}
+	}
+	
+	planet = {
+		name = "Frigid Depths"
+		class = pc_ice_giant
+        orbit_distance = 150
+        size = 34
+        flags = { frigid_depths_planet }
+		has_ring = yes
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "olynprotectorate_olmsteadcluster_primaryrelay" 
+			name = "Olyn 1 Relay"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_warmest_shoal_init = {
+    name = "Warmest Shoal"
+    class = sc_k
+	max_instances = 1
+
+    flags = { inner_council sector_ic2 olyn_protectorate warmest_shoal_system }
+
+    planet = {
+	    name = "Warmest Shoal"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 20
+        flags = { warmest_shoal_star }
+    }
+	
+	planet = {
+		name = "Solitary Mist"
+		class = pc_iron
+        orbit_distance = 250
+        size = 10
+        flags = { solitary_mist_planet }
+	}
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "inner_council_sector_2_secondaryrelay" 
+			name = "Sector IC2 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

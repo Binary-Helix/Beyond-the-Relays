@@ -1,0 +1,316 @@
+#####################
+### CARINA NEBULA ###
+#####################
+
+sys_farladis_init = {
+    name = "Farla'dis"
+    class = sc_k_giant
+	max_instances = 1
+
+	flags = { attican_traverse sector_at5 carina_nebula farladis_system primary_relay_system }
+
+    planet = {
+		name = "Farla'dis"
+        class = pc_k_giant_star
+        orbit_distance = 0
+        size = 20
+        flags = { farladis_star }
+    }
+
+    planet = {
+        name = "Drag'silras"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 213
+        size = 16
+        flags = { dragsilras_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Kargath"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 176
+        size = 31
+        flags = { kargath_planet }
+        has_ring = yes
+	}
+
+    planet = {
+        name = "Ygh'se"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 259
+        size = 13
+        flags = { yghse_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Brabarrar"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 161
+        size = 6
+        flags = { brabarrar_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Ganjak"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 86
+        size = 34
+        flags = { ganjak_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "carinanebula_tauruslambda_primaryrelay" 
+			name = "Sector AT5 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_juel_init = {
+    name = "Juel"
+    class = sc_ae
+	max_instances = 1
+
+	flags = { attican_traverse sector_at5 carina_nebula juel_system primary_relay_system }
+
+    planet = {
+		name = "Juel"
+        class = pc_ae_star
+        orbit_distance = 0
+        size = 20
+        flags = { juel_star }
+    }
+
+    planet = {
+        name = "Juel I"
+        class = pc_hot_giant
+        orbit_distance = 80
+        orbit_angle = 203
+        size = 14
+        flags = { juel_i_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Juel II"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 211
+        has_ring = no
+
+        moon = {
+            name = "Juel IIa"
+            class = pc_molten
+            orbit_distance = 20
+            orbit_angle = 109
+            size = 6
+            flags = {juel_iia_planet juel_ii_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Juel III"
+        class = pc_iron
+        orbit_distance = 80
+        orbit_angle = 297
+        size = 17
+        flags = { juel_iii_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Juel IV"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 235
+        has_ring = no
+    }
+
+    planet = {
+        name = "Juel V"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 172
+        size = 14
+        flags = { juel_v_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Juel VI"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 231
+        size = 29
+        flags = { juel_vi_planet }
+        has_ring = yes
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "carinanebula_omeganebula_primaryrelay" 
+			name = "Sector AT5 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_neil_init = {
+    name = "Neil"
+    class = sc_g
+	max_instances = 1
+
+	flags = { attican_traverse sector_at5 carina_nebula neil_system secondary_relay_system }
+
+    planet = {
+		name = "Neil"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { neil_star }
+    }
+
+    planet = {
+        name = "Pon'parr"
+        class = pc_gas_giant
+        orbit_distance = 150
+        orbit_angle = 296
+        size = 33
+        flags = { ponparr_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Mordezhan"
+        class = pc_continental
+        orbit_distance = 150
+        orbit_angle = 259
+        size = 18
+        flags = { mordezhan_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Ubeth"
+        class = pc_highgrav_methane
+        orbit_distance = 150
+        orbit_angle = 193
+        size = 20
+        flags = { ubeth_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_5_secondaryrelay" 
+			name = "Sector AT5 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_qorda_init = {
+    name = "Qorda"
+    class = sc_c_giant
+	max_instances = 1
+
+	flags = { attican_traverse sector_at5 carina_nebula qorda_system }
+
+    planet = {
+		name = "Qorda"
+        class = pc_c_giant_star
+        orbit_distance = 0
+        size = 20
+        flags = { qorda_star }
+    }
+
+    planet = {
+        name = "Khalrok"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 322
+        size = 7
+        flags = { khalrok_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Krakon"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 158
+        size = 14
+        flags = { krakon_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Bep'maral"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 90
+        size = 10
+        flags = { bepmaral_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Agandras"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 176
+        size = 30
+        flags = { agandras_planet }
+        has_ring = no
+    }
+}
+
+sys_venoss_init = {
+    name = "Venoss"
+    class = sc_b_super
+	max_instances = 1
+
+	flags = { attican_traverse sector_at5 carina_nebula venoss_system }
+
+    planet = {
+		name = "Venoss"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 20
+        flags = { venoss_star }
+    }
+
+	planet = {
+		name = "Shelba"
+		class = pc_mephitic
+		orbit_distance = 250
+		size = 21
+		flags = { shelba_planet }
+		has_ring = yes
+		entity = "mephitic_tropical_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = jungle_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = natural_beauty 
+				days = -1
+			}
+		}
+	}
+}

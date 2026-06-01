@@ -1,0 +1,229 @@
+######################
+### RALMAIT NEBULA ###
+######################
+
+sys_err_init = {
+	name = "Err"
+    class = sc_m_hyper
+	max_instances = 1	
+
+	flags = { attican_traverse sector_at14 ralmait_nebula err_system }	
+
+	planet = {
+	    name = "Err"
+        class = pc_m_hyper_star
+        orbit_distance = 0
+        size = 39
+        flags = { err_star }
+    }
+
+	planet = {
+	    name = "Sqon"
+        class = pc_barren
+        orbit_distance = 80
+        size = 10
+        flags = { sqon_planet }
+    }
+
+	planet = {
+	    name = "Vrugg"
+        class = pc_barren
+        orbit_distance = 80
+        size = 10
+        flags = { vrugg_planet }
+	}
+
+	planet = {
+	    name = "Bnerrp"
+        class = pc_hothouse
+        orbit_distance = 80
+        size = 14
+        flags = { bnerrp_planet }
+    }
+
+	planet = {
+	    name = "Snalk"
+        class = pc_gas_giant
+        orbit_distance = 80
+        size = 38
+		has_ring = yes
+
+		moon = {
+			name = "Wass"
+			class = pc_asteroid
+			orbit_distance = 20
+			size = 2
+			flags = {wass_planet snalk_planet}
+		}
+
+		moon = {
+			name = "Vrors"
+			class = pc_frozen
+			orbit_distance = 5
+			size = 4
+			flags = { vrors_planet }
+		}
+
+		moon = {
+			name = "Glut"
+			class = pc_frozen	
+			orbit_distance = 5
+			size = 6
+			flags = { glut_planet }
+		}
+    }
+}
+
+sys_gatetothedark_init = {
+    name = "Geata Dorch"
+    class = sc_w_purple
+	max_instances = 1	
+
+	flags = { attican_traverse sector_at14 ralmait_nebula geatadorch_system }	
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 500
+    }
+
+    planet = {
+		name = "Geata Dorch"
+        class = pc_w_purple_star
+        orbit_distance = 0
+        size = 20
+        flags = { geata_dorch_star }
+    }
+
+    planet = {
+        name = "Nasem"
+        class = pc_ammonia
+        orbit_distance = 110
+        orbit_angle = 90
+        size = 30
+        flags = { nasem_planet }
+        has_ring = no
+    }
+
+	change_orbit = 390
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_jocir_init = {
+	name = "Jocir"
+    class = sc_b
+	max_instances = 1	
+
+	flags = { attican_traverse sector_at14 ralmait_nebula jocir_system secondary_relay_system }	
+
+	planet = {
+	    name = "Jocir"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 30
+        flags = { jocir_star }
+    }
+
+	planet = {
+	    name = "Hugo"
+        class = pc_iron
+        orbit_distance = 60
+        size = 7
+        flags = { hugo_planet }
+    }
+
+	planet = {
+	    name = "Nibiro"
+        class = pc_tropical
+        orbit_distance = 60
+        size = 19
+        flags = { nibiro_planet }
+	}
+
+	planet = {
+	    name = "Zosti"
+        class = pc_ice_giant
+        orbit_distance = 60
+        size = 29
+        flags = { zosti_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Wegais"
+        class = pc_barren_cold
+        orbit_distance = 60
+        size = 8
+        flags = { wegais_planet }
+    }
+
+	planet = {
+	    name = "Akturg"
+        class = pc_ammonia
+        orbit_distance = 60
+        size = 20
+        flags = { akturg_planet }
+    }
+
+	planet = {
+	    name = "Chonn"
+        class = pc_frozen
+        orbit_distance = 60
+        size = 11
+        flags = { chonn_planet }
+    }
+
+	planet = {
+	    name = "Ouroch"
+        class = pc_frozen
+        orbit_distance = 60
+        size = 4
+        flags = { ouroch_planet }
+    }
+
+	planet = {
+	    name = "Drax"
+        class = pc_barren
+        orbit_distance = 60
+        size = 8
+        flags = { drax_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_14_secondaryrelay" 
+			name = "Sector AT14 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_sygg_init = {
+	name = "Sygg"
+    class = sc_black_hole
+	max_instances = 1	
+
+	flags = { attican_traverse sector_at14 ralmait_nebula sygg_system primary_relay_system }	
+
+	planet = {
+	    name = "Sygg"
+        class = pc_black_hole
+        orbit_distance = 0
+        size = 38
+        flags = { sygg_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "ralmaitnebula_voyagercluster_primaryrelay" 
+			name = "Sector AT14 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

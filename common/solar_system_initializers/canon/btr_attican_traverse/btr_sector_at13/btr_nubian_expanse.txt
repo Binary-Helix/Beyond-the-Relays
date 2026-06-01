@@ -1,0 +1,551 @@
+######################
+### NUBIAN EXPANSE ###
+######################
+
+sys_dakka_init = {
+    name = "Dakka"
+    class = sc_g
+	max_instances = 1	
+
+	flags = { attican_traverse sector_at13 nubian_expanse dakka_system }
+		
+    planet = {
+		name = "Dakka"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+        flags = { dakka_star }
+	}
+
+    planet = {
+        name = "Bannik"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 22
+        has_ring = no
+		size = 20
+		flags = { bannik_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_BANNIK_BLUE_ROCKS
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Pragia"
+        class = pc_tropical
+        orbit_distance = 100
+        orbit_angle = 156
+        has_ring = no
+		flags = {subclass_world pragia_planet}
+		size = 12
+		entity = "jungle_planet_10_entity"
+        init_effect = {
+			add_modifier = {
+				modifier = jungle_world
+				days = -1
+			}
+            add_anomaly = {
+                category = BTR_PRAGIA_VAULT22
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+    }
+
+    planet = {
+        name = "Alkonost"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 64
+        has_ring = no
+		size = 26
+		flags = { alkonost_planet }
+    }
+
+    planet = {
+        name = "Gamayun"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 81
+        has_ring = no
+		size = 33
+
+		moon = { 
+			name = "Gamayun a"
+			class = pc_barren
+			orbit_angle = 145
+			orbit_distance = 20
+			size = 3
+			flags = {gamayun_a_planet gamayun_planet}
+		}	
+
+		moon = { 
+			name = "Gamayun b"
+			class = pc_frozen
+			orbit_angle = 82
+			orbit_distance = 5
+			size = 2
+			flags = { gamayun_b_planet }
+		}
+
+		moon = { 
+			name = "Gamayun c"
+			class = pc_iron
+			orbit_angle = 340
+			orbit_distance = 5
+			size = 2
+			flags = { gamayun_c_planet }
+		}
+
+		moon = { 
+			name = "Gamayun d"
+			class = pc_iron
+			orbit_angle = 1
+			orbit_distance = 5
+			size = 5
+			flags = { gamayun_d_planet }
+		}
+
+		moon = { 
+			name = "Gamayun e"
+			class = pc_asteroid
+			orbit_angle = 160
+			orbit_distance = 5
+			size = 2
+			flags = { gamayun_e_planet }
+		}
+
+		moon = { 
+			name = "Gigula"
+			class = pc_frozen
+			orbit_angle = 16
+			orbit_distance = 5
+			size = 4
+			flags = { gigula_planet }
+		}		
+    }
+
+    planet = {
+        name = "Zirnitra"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 264
+        has_ring = no
+		size = 6
+		flags = { zirnitra_planet }
+    }
+}
+
+sys_debod_init = {
+    name = "Debod"
+    class = sc_m
+	max_instances = 1	
+
+	flags = { attican_traverse sector_at13 nubian_expanse debod_system secondary_relay_system }
+	
+    planet = {
+		name = "Debod"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 30
+        flags = { debod_star }
+    }
+
+    planet = {
+        name = "Philae"
+        class = pc_barren_cold
+        orbit_distance = 250
+        orbit_angle = 350
+        has_ring = no
+		size = 10
+		flags = { philae_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_PHILAE_QUIET_OUTPOST
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Agilkia"
+        class = pc_gas_giant
+        orbit_distance = 250
+        orbit_angle = 205
+        has_ring = yes
+		size = 30		
+		flags = { agilkia_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_13_secondaryrelay" 
+			name = "Sector AT13 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_kalabsha_init = {
+    name = "Kalabsha"
+    class = sc_g
+	max_instances = 1	
+
+	flags = { attican_traverse sector_at13 nubian_expanse kalabsha_system primary_relay_system planet_state }
+
+    planet = {
+		name = "Kalabsha"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+        flags = { kalabsha_star }
+    }
+
+    planet = {
+        name = "Yamm"
+        class = pc_ocean
+        orbit_distance = 250
+        orbit_angle = 337
+        has_ring = no
+		size = 16
+		flags = { subclass_world yamm_planet }
+		deposit_blockers = none
+        modifiers = none
+		entity = "storm_planet_07_entity"
+		init_effect = {
+			save_global_event_target_as = yammHomeworld
+            if = {
+                limit = {
+                    exists = event_target:yammHomeworld
+                }
+                log = "Yamm Free Trade Zone Event Target Set"
+            }
+            prevent_anomaly = yes
+
+			generate_yamm_free_trade_zone_country = yes
+
+			set_capital = yes
+			set_owner = event_target:yamm_free_trade_zone
+			create_colony = {
+				owner = event_target:yamm_free_trade_zone
+				species = event_target:hanarSpecies
+				ethos = owner
+			}
+
+			generate_yamm_pops = yes
+
+			add_modifier = {
+				modifier = storm_world
+			}
+			add_modifier = {
+				modifier = hazardous_weather
+				days = -1
+			}
+			add_modifier = {
+				modifier = wild_storms
+				days = -1
+			}
+
+			add_deposit = d_eezo_scarce
+            add_anomaly = {
+                category = BTR_YAMM_THALASSOPHOBIA
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+    }
+
+    planet = {
+        name = "Tefnut"
+        class = pc_gas_giant
+        orbit_distance = 250
+        orbit_angle = 296
+        has_ring = no
+		size = 34
+		flags = { tefnut_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "nubianexpanse_priscillacluster_primaryrelay" 
+			name = "Sector AT13 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_nx2176_init = {
+    name = "NX-2176"
+    class = sc_k
+	max_instances = 1	
+
+	flags = { attican_traverse sector_at13 nubian_expanse nx2176_system primary_relay_system }
+	
+    planet = {
+		name = "NX-2176"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 35
+        flags = { nx_2176_star }
+    }	
+
+	asteroid_belt = {
+		type = "rocky_asteroid_belt"
+		radius = 80
+	}
+	
+    planet = {
+        name = "NX-2176 I"
+        class = pc_molten
+        orbit_distance = 45
+        orbit_angle = 142
+        has_ring = no
+		size = 13		
+		flags = { nx_2176_i_planet }
+    }
+    
+	planet = {
+        name = "NX-2176 II"
+        class = pc_hothouse
+        orbit_distance = 35
+        orbit_angle = 76
+        has_ring = no
+		size = 13	
+		flags = { nx_2176_ii_planet }
+    }
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+        name = "NX-2176 III"
+        class = pc_dextro_ocean
+        orbit_distance = 45
+        orbit_angle = 280
+        has_ring = no
+		size = 13
+		flags = {subclass_world nx_2176_iii_planet}
+		entity = "storm_planet_02_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = coldocean_world
+				days = -1
+			}
+		}
+    }	
+	
+	planet = {
+        name = "NX-2176 IV"
+        class = pc_iron
+        orbit_distance = 60
+        orbit_angle = 300
+        has_ring = no
+		size = 17		
+		flags = { nx_2176_iv_planet }
+    }	
+	
+	planet = {
+        name = "NX-2176 V"
+        class = pc_ice_giant
+        orbit_distance = 50
+        orbit_angle = 15
+        has_ring = no
+		size = 30
+
+		moon = {
+			name = "NX-2176 Va"
+			class = pc_frozen
+			orbit_angle = random
+			orbit_distance = 8
+			size = 12
+			flags = {nx_2176_va_planet nx_2176_v_planet}
+		}	
+		moon = {
+			name = "NX-2176 Vb"
+			class = pc_barren
+			orbit_angle = random
+			orbit_distance = 9
+			size = 8
+			flags = { nx_2176_vb_planet }
+		}
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "nubianexpanse_ralmaitnebula_primaryrelay" 
+			name = "Sector AT13 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_nx2185_init = {
+    name = "NX-2185"
+    class = sc_m_super
+	max_instances = 1	
+
+	flags = { attican_traverse sector_at13 nubian_expanse nx2185_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 340
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 500
+	}
+
+    planet = {
+		name = "NX-2185"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 45
+        flags = { nx_2185_star }
+    }
+
+    planet = {
+        name = "113 Kerad"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 353
+        has_ring = no
+		size = 6
+		flags = { 113_kerad_planet }
+    }
+
+    planet = {
+        name = "433 Spidau"
+        class = pc_nuked
+        orbit_distance = 125
+        orbit_angle = 89
+        has_ring = no
+		size = 15
+        init_effect = {
+            add_anomaly = {
+                category = BTR_433_SPIDAU_FINAL_FLAMES
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+	
+		moon = {
+			name = "433 Spidau a"
+			class = pc_iron
+			orbit_angle = random
+			orbit_distance = 20
+			size = 5
+			flags = {433_spidau_a_planet 433_spidau_planet}
+		}
+    }
+
+    planet = {
+        name = "704 Jarwinar"
+        class = pc_gas_giant
+        orbit_distance = 75
+        orbit_angle = 33
+        has_ring = no
+		size = 36
+
+		moon = {
+			name = "704 Jawinor a"
+			class = pc_frozen
+			orbit_angle = random
+			orbit_distance = 6
+			size = 8
+			flags = {704_jawinor_a_planet 704_jarwinar_planet}
+		}
+
+		moon = {
+			name = "704 Jawinor b"
+			class = pc_ammonia
+			orbit_angle = random
+			orbit_distance = 8
+			size = 4
+			flags = { 704_jawinor_b_planet }
+		}			
+    }
+
+	change_orbit = 15
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	change_orbit = 160
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_qertassi_init = {
+    name = "Qertassi"
+    class = sc_g_giant
+	max_instances = 1	
+
+	flags = { attican_traverse sector_at13 nubian_expanse nx2185_system }
+	
+    planet = {
+		name = "Qertassi"
+        class = pc_g_giant_star
+        orbit_distance = 0
+        size = 60
+        flags = { qertassi_star }
+    }
+
+    planet = {
+        name = "Norehsa"
+        class = pc_ice_giant
+        orbit_distance = 250
+        orbit_angle = 22
+        has_ring = no
+		size = 32
+        init_effect = {
+            add_anomaly = {
+                category = BTR_NORESHA_STELLAR_LONELINESS
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+
+		moon = {
+			name = "Norehsa a"
+			class = pc_frozen
+			orbit_angle = 76
+			orbit_distance = 6
+			size = 4
+			flags = {norehsa_a_planet norehsa_planet}
+		}
+
+		moon = {
+			name = "Norehsa b"
+			class = pc_iron
+			orbit_angle = 114
+			orbit_distance = 7
+			size = 3
+			flags = { norehsa_b_planet }
+		}
+	
+		moon = {
+			name = "Norehsa c"
+			class = pc_barren_cold
+			orbit_angle = 196
+			orbit_distance = 6
+			size = 4
+			flags = { norehsa_c_planet }
+		}		
+    }
+}

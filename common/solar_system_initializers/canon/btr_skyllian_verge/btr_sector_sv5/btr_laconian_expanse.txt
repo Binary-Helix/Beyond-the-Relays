@@ -1,0 +1,360 @@
+########################
+### LACONIAN EXPANSE ###
+########################
+
+sys_latronus_init = {
+    name = "Latronus"
+    class = sc_k
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv5 laconian_expanse latronus_system }	
+
+    planet = {
+		name = "Latronus"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 35
+        flags = { latronus_star }
+    }
+
+    planet = {
+        name = "Torida"
+        class = pc_molten
+        orbit_distance = 50
+        orbit_angle = 182
+        size = 9
+        flags = { torida_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Sarik"
+        class = pc_hothouse
+        orbit_distance = 50
+        orbit_angle = 113
+        size = 16
+        flags = { sarik_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Arinius"
+        class = pc_dextro_continental
+        orbit_distance = 50
+        orbit_angle = 115
+        size = 19
+        flags = { arinius_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Ehlam"
+        class = pc_hothouse
+        orbit_distance = 50
+        orbit_angle = 139
+        size = 16
+        flags = { ehlam_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Korus"
+        class = pc_gas_giant
+        orbit_distance = 50
+        orbit_angle = 88
+        size = 33
+        flags = { korus_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Vandrix"
+        class = pc_barren
+        orbit_distance = 50
+        orbit_angle = 66
+        size = 12
+        flags = { vandrix_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Pala"
+        class = pc_barren_cold
+        orbit_distance = 50
+        orbit_angle = 105
+        size = 14
+        flags = { pala_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Vator"
+        class = pc_barren_cold
+        orbit_distance = 50
+        orbit_angle = 62
+        size = 19
+        flags = { vator_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Erlum"
+        class = pc_frozen
+        orbit_distance = 50
+        orbit_angle = 85
+        size = 11
+        flags = { erlum_planet }
+        has_ring = no
+    }
+}
+
+sys_preitor_init = {
+    name = "Preitor"
+    class = sc_d
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv5 laconian_expanse preitor_system secondary_relay_system }	
+
+    planet = {
+		name = "Preitor"
+        class = pc_d_star
+        orbit_distance = 0
+        size = 38
+        flags = { preitor_star }
+    }
+
+    planet = {
+        name = "Octa"
+        class = pc_chthonian
+        orbit_distance = 150
+        orbit_angle = 219
+        size = 14
+        flags = { octa_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Anela"
+        class = pc_barren
+        orbit_distance = 150
+        orbit_angle = 144
+        size = 19
+        flags = { anela_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Anixara"
+        class = pc_gas_giant
+        orbit_distance = 150
+        orbit_angle = 137
+        size = 36
+        has_ring = no
+
+        moon = {
+            name = "Kala"
+            class = pc_barren_cold
+            orbit_distance = 20
+            orbit_angle = 14
+            size = 6
+            flags = {kala_planet anixara_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Zothera"
+            class = pc_barren_cold
+            orbit_distance = 5
+            orbit_angle = 166
+            size = 4
+            flags = { zothera_planet }
+            has_ring = no
+        }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_7_secondaryrelay" 
+			name = "Sector SV5 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_ternitus_init = {
+    name = "Ternitus"
+    class = sc_w_azure
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv5 laconian_expanse ternitus_system }	
+
+    planet = {
+		name = "Ternitus"
+        class = pc_w_azure_star
+        orbit_distance = 0
+        size = 35
+        flags = { ternitus_star }
+    }
+
+    planet = {
+        name = "Desolas"
+        class = pc_iron
+        orbit_distance = 80
+        orbit_angle = 217
+        size = 13
+        flags = { desolas_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Jondam"
+        class = pc_iron
+        orbit_distance = 80
+        orbit_angle = 219
+        size = 14
+        flags = { jondam_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Lorik"
+        class = pc_mephitic
+        orbit_distance = 80
+        orbit_angle = 236
+        size = 17
+        flags = { lorik_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Illo"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 272
+        size = 14
+        flags = { illo_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Orinda"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 267
+        size = 14
+        flags = { orinda_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Pavan"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 287
+        size = 10
+        flags = { pavan_planet }
+        has_ring = no
+    }
+}
+
+sys_tonn_init = {
+    name = "Tonn"
+    class = sc_b
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv5 laconian_expanse tonn_system }	
+
+    planet = {
+		name = "Tonn"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 40
+        flags = { tonn_star }
+    }
+
+    planet = {
+        name = "Faros"
+        class = pc_gas_giant
+        orbit_distance = 250
+        orbit_angle = 177
+        size = 36
+        flags = { faros_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Elgus"
+        class = pc_gas_giant
+        orbit_distance = 250
+        orbit_angle = 241
+        size = 35
+        flags = { elgus_planet }
+        has_ring = no
+    }
+}
+
+sys_ulrixen_init = {
+    name = "Ulrixen"
+    class = sc_tt_red
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv5 laconian_expanse ulrixen_system }	
+
+    planet = {
+		name = "Ulrixen"
+        class = pc_tt_red_star
+        orbit_distance = 0
+        size = 35
+        flags = { ulrixen_star }
+    }
+
+    planet = {
+        name = "Norel"
+        class = pc_dextro_tropical
+        orbit_distance = 125
+        orbit_angle = 198
+        size = 21
+        has_ring = no
+
+        moon = {
+            name = "Trabixian"
+            class = pc_iron
+            orbit_distance = 20
+            orbit_angle = 139
+            size = 6
+            flags = {trabixian_planet norel_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Raviero"
+        class = pc_carbon
+        orbit_distance = 125
+        orbit_angle = 90
+        size = 13
+        flags = { raviero_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Pala"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 293
+        size = 13
+        flags = { pala_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Digrin"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 270
+        size = 9
+        flags = { digrin_planet }
+        has_ring = no
+    }
+}

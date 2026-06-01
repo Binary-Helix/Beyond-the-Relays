@@ -1,0 +1,322 @@
+#######################
+### SELOQUEL NEBULA ###
+#######################
+
+sys_mindil_init = {
+    name = "Mindil"
+    class = sc_b
+	max_instances = 1
+
+    flags = { inner_council sector_ic3 seloquel_nebula mindil_system secondary_relay_system }
+
+    init_effect = {
+        save_global_event_target_as = salarianSciCon1
+    }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 450
+    }
+
+    planet = {
+		name = "Mindil"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 36
+        flags = { mindil_star }
+    }
+
+    planet = {
+        name = "Daroth"
+        class = pc_molten
+        orbit_distance = 80
+        orbit_angle = 320
+        size = 14
+        flags = { daroth_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Erash"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 237
+        size = 16
+        flags = { erash_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Turwin"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 243
+        size = 10
+        flags = { turwin_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Renko"
+        class = pc_carbon
+        orbit_distance = 80
+        orbit_angle = 192
+        size = 18
+        flags = { renko_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Narid"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 269
+        size = 20
+        flags = { narid_planet }
+        has_ring = no
+    }
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Dorad"
+        class = pc_frozen
+        orbit_distance = 30
+        orbit_angle = 197
+        size = 18
+        flags = { dorad_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "inner_council_sector_3_secondaryrelay" 
+			name = "Sector IC3 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_padtin_init = {
+    name = "Padtin"
+    class = sc_protostar
+	max_instances = 1
+
+    flags = { inner_council sector_ic3 seloquel_nebula padtin_system primary_relay_system }
+
+    planet = {
+        class = pc_protostar
+        orbit_distance = 0
+        size = 25
+    }
+
+    planet = {
+        name = "Ammar"
+        class = pc_barren_cold
+        orbit_distance = 150
+        orbit_angle = 223
+        size = 13
+        flags = { ammar_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Kannik"
+        class = pc_molten
+        orbit_distance = 150
+        orbit_angle = 214
+        size = 19
+        flags = { kannik_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Ijib"
+        class = pc_iron
+        orbit_distance = 150
+        orbit_angle = 248
+        size = 15
+        flags = { ijib_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "seloquelnebula_horseheadnebula_primaryrelay" 
+			name = "Sector IC3 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_pekiss_init = {
+    name = "Pekiss"
+    class = sc_a
+	max_instances = 1
+
+    flags = { inner_council sector_ic3 seloquel_nebula pekiss_system }
+
+    planet = {
+		name = "Pekiss"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 28
+        flags = { pekiss_star }
+    }
+
+    planet = {
+        name = "Narra"
+        class = pc_hot_giant
+        orbit_distance = 100
+        orbit_angle = 75
+        size = 37
+        flags = { narra_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Urc"
+        class = pc_shattered
+        orbit_distance = 100
+        orbit_angle = 114
+        size = 17
+        flags = { urc_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Oeghur"
+        class = pc_methane
+        orbit_distance = 100
+        orbit_angle = 107
+        size = 17
+        flags = { oeghur_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Kallo"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 117
+        size = 12
+        flags = { kallo_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Fargut"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 165
+        size = 10
+        flags = { fargut_planet }
+        has_ring = no
+    }
+}
+
+sys_tizdon_init = {
+    name = "Tizdon"
+    class = sc_b
+	max_instances = 1
+
+    flags = { inner_council sector_ic3 seloquel_nebula tizdon_system primary_relay_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 450
+    }
+
+    planet = {
+		name = "Tizdon"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 36
+        flags = { tizdon_star }
+    }
+
+    planet = {
+        name = "Ganto"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 208
+        size = 15
+        flags = { ganto_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Kendo"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 110
+        size = 19
+        flags = { kendo_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Morl"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 111
+        has_ring = no
+    }
+
+    change_orbit = 75
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Kalanhai"
+        class = pc_gas_giant
+        orbit_distance = 50
+        orbit_angle = 134
+        size = 36
+        has_ring = no
+
+        moon = {
+            name = "Tar"
+            class = pc_ammonia
+            orbit_distance = 15
+            orbit_angle = 86
+            size = 7
+            flags = {tar_planet kalanhai_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Cizena"
+            class = pc_barren
+            orbit_distance = 15
+            orbit_angle = 133
+            size = 4
+            flags = { cizena_planet }
+            has_ring = no
+        }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "seloquelnebula_annosbasin_primaryrelay" 
+			name = "Sector IC3 - Primary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

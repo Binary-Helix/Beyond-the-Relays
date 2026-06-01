@@ -1,0 +1,267 @@
+#####################
+### PARADOX'S END ###
+#####################
+
+sys_ahuramazda_init = {
+	name = "Ahura Mazda"
+    class = sc_d
+	max_instances = 1
+
+	flags = { attican_traverse sector_at11 paradoxs_end ahuramazda_system primary_relay_system }
+
+	planet = {
+	    name = "Ahura Mazda"
+        class = pc_d_star
+        orbit_distance = 0
+        size = 32
+        flags = { ahura_mazda_star }
+    }
+
+	planet = {
+	    name = "Zoroaster"
+        class = pc_hot_giant
+        orbit_distance = 100
+        size = 38
+        flags = { zoroaster_planet }
+    }
+
+	planet = {
+	    name = "Asha"
+        class = pc_barren
+        orbit_distance = 100
+        size = 12
+        flags = { asha_planet }
+	}
+
+	planet = {
+	    name = "Aka Manah"
+        class = pc_barren
+        orbit_distance = 100
+        size = 9
+        flags = { aka_manah_planet }
+    }
+
+	planet = {
+	    name = "Angra Mainyu"
+        class = pc_iron
+        orbit_distance = 100
+        size = 10
+        flags = { angra_mainyu_planet }
+    }
+
+	planet = {
+	    name = "Spenta Mainyu"
+        class = pc_gas_giant
+        orbit_distance = 100
+        size = 33
+		moon = {
+			name = "Druj"
+			class = pc_ammonia
+			orbit_distance = 20
+			size = 9
+			flags = {druj_planet spenta_mainyu_planet}
+		}
+		moon = {
+			name = "Avesta"
+			class = pc_frozen
+			orbit_distance = 5
+			size = 4
+			flags = { avesta_planet }
+		}
+    }
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "paradoxsend_maroonsea_primaryrelay" 
+			name = "Sector AT11 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_axiom_init = {
+	name = "Axiom"
+    class = sc_b
+	max_instances = 1
+
+	flags = { attican_traverse sector_at11 paradoxs_end axiom_system secondary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 50
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 350
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 500
+	}
+
+	planet = {
+	    name = "Axiom"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 33
+        flags = { axiom_star }
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Vatsyana"
+        class = pc_molten
+        orbit_distance = 50
+        size = 7
+        flags = { vatsyana_planet }
+    }
+
+	planet = {
+	    name = "Confucious"
+        class = pc_hothouse
+        orbit_distance = 100
+        size = 13
+        flags = { confucious_planet }
+	}
+
+	planet = {
+	    name = "Plato"
+        class = pc_methane
+        orbit_distance = 100
+        size = 17
+		moon = {
+			name = "Mani"
+			class = pc_barren
+			orbit_distance = 20
+			size = 5
+			flags = {mani_planet plato_planet}
+		}
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Seneca"
+        class = pc_gas_giant
+        orbit_distance = 50
+        size = 36
+        flags = { seneca_planet }
+    }
+
+	planet = {
+	    name = "Gaudapada"
+        class = pc_gas_giant
+        orbit_distance = 50
+        size = 33
+        flags = { gaudapada_planet }
+		has_ring = yes
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_11_secondaryrelay" 
+			name = "Sector AT11 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_iufrik_init = {
+	name = "Iufrik"
+    class = sc_a
+	max_instances = 1	
+
+	flags = { attican_traverse sector_at11 paradoxs_end axiom_system primary_relay_system }
+
+	planet = {
+	    name = "Iufrik"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 30
+        flags = { iufrik_star }
+    }
+
+	planet = {
+	    name = "Vifta"
+        class = pc_hothouse
+        orbit_distance = 80
+        size = 9
+        flags = { vifta_planet }
+    }
+
+	planet = {
+	    name = "Venom Anjelik"
+        class = pc_arctic
+        orbit_distance = 80
+        size = 18
+        flags = { venom_anjelik_planet }
+	}
+
+	planet = {
+	    name = "Maskut"
+        class = pc_barren_cold
+        orbit_distance = 80
+        size = 12
+        flags = { maskut_planet }
+    }
+
+	planet = {
+	    name = "Jendrik"
+        class = pc_iron
+        orbit_distance = 80
+        size = 14
+        flags = { jendrik_planet }
+    }
+
+	planet = {
+	    name = "Cordrak"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 7
+        flags = { cordrak_planet }
+    }
+
+	planet = {
+	    name = "Wustril"
+        class = pc_ice_giant
+        orbit_distance = 80
+        size = 32
+        flags = { wustril_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "paradoxsend_keplerverge_primaryrelay" 
+			name = "Sector AT11 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

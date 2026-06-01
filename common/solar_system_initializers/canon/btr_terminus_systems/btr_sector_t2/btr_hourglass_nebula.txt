@@ -1,0 +1,372 @@
+########################
+### HOURGLASS NEBULA ###
+########################
+
+sys_faryar_init = {
+    name = "Faryar"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 hourglass_nebula faryar_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 450
+	}
+
+    planet = {
+		name = "Faryar"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { faryar_star }
+	}
+
+    planet = {
+        name = "Quarem"
+        class = pc_hothouse
+        orbit_distance = 70
+        orbit_angle = 197
+        has_ring = no
+		size = 7
+		flags = { quarem_planet }
+    }
+
+    planet = {
+        name = "Daratar"
+        class = pc_arid
+        orbit_distance = 70
+        orbit_angle = 194
+        has_ring = no
+		size = 9
+		flags = {subclass_world daratar_planet}
+		entity = "dust_planet_04_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dust_world
+				days = -1
+			}
+
+            add_deposit = d_eezo_scarce
+		}
+    }
+
+    planet = {
+        name = "Tunfigel"
+        class = pc_iron
+        orbit_distance = 70
+        orbit_angle = 266
+        has_ring = no
+		size = 25
+		flags = { tunfigel_planet }
+    }
+
+    planet = {
+        name = "Nephros"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 183
+        has_ring = no
+		size = 31
+		flags = { nephros_planet }
+    }
+
+    planet = {
+        name = "Alingon"
+        class = pc_iron
+        orbit_distance = 70
+        orbit_angle = 107
+        has_ring = no
+		size = 7
+		flags = { alingon_planet }
+    }
+
+    planet = {
+        name = "Wenrum"
+        class = pc_iron
+        orbit_distance = 70
+        orbit_angle = 158
+        has_ring = no
+		size = 3
+		flags = { wenrum_planet }
+    }
+
+    change_orbit = 30
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Antictra"
+        class = pc_iron
+        orbit_distance = 40
+        orbit_angle = 250
+        has_ring = no
+		size = 14
+		flags = { antictra_planet }
+    }
+}
+
+sys_osun_init = {
+    name = "Osun"
+    class = sc_f
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 hourglass_nebula osun_system primary_relay_system planet_state }
+
+    planet = {
+		name = "Osun"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 30
+        flags = { osun_star }
+    }
+
+    planet = {
+        name = "Orunmila"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 334
+        has_ring = no
+		size = 29
+		flags = { orunmila_planet }
+    }
+
+    planet = {
+        name = "Erinle"
+        class = pc_swamp
+        orbit_distance = 125
+        orbit_angle = 202
+        has_ring = no
+		size = 16
+		flags = { subclass_world erinle_planet }
+        deposit_blockers = none
+        modifiers = none
+		entity = "bog_planet_02_entity"
+		# init_effect = {
+        #     save_global_event_target_as = erinleHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:erinleHomeworld
+        #         }
+        #         log = "Erinle Conservancy Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_erinle_conservancy_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:erinle_conservancy
+		# 	create_colony = {
+		# 		owner = event_target:erinle_conservancy
+		# 		species = event_target:salarianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_erinle_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = bog_world
+		# 		days = -1
+		# 	}
+        #
+        #     add_deposit = d_eezo_scarce
+		# }
+    }
+
+    planet = {
+        name = "Aganju"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 297
+        has_ring = no
+		size = 25
+		flags = { aganju_planet }
+    }
+
+    planet = {
+        name = "Olokun"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 66
+        has_ring = yes
+		size = 35
+		flags = { olokun_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "hourglassnebula_basillaeflare_primaryrelay" 
+			name = "Sector T2 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_ploitari_init = {
+    name = "Ploitari"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 hourglass_nebula ploitari_system }
+
+    planet = {
+		name = "Ploitari"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 15
+        flags = { ploitari_star }
+    }
+
+    planet = {
+        name = "Aigela"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 8
+        has_ring = no
+		size = 3
+		flags = { aigela_planet }
+    }
+
+    planet = {
+        name = "Zanethu"
+        class = pc_barren_cold
+        orbit_distance = 125
+        orbit_angle = 5
+        has_ring = no
+		size = 16
+		flags = { zanethu_planet }
+    }
+
+    planet = {
+        name = "Synalus"
+        class = pc_mephitic
+        orbit_distance = 125
+        orbit_angle = 77
+        has_ring = no
+		size = 13
+		flags = {subclass_world synalus_planet}
+		entity = "mephitic_desert_planet_08_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dune_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Thegan"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 132
+        has_ring = no
+		size = 8	
+
+		flags = { thegan_planet }
+        init_effect = {
+            add_deposit = d_eezo_1
+        }
+    }
+}
+
+sys_sowilo_init = {
+    name = "Sowilo"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 hourglass_nebula sowilo_system secondary_relay_system }
+
+    planet = {
+		name = "Sowilo"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 23
+        flags = { sowilo_star }
+    }
+
+    planet = {
+        name = "Uruz"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 163
+        has_ring = no
+		size = 23
+		flags = { uruz_planet }
+    }
+
+    planet = {
+        name = "Kenaz"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 154
+        has_ring = no
+		size = 15
+		flags = { kenaz_planet }
+    }
+
+    planet = {
+        name = "Hagalaz"
+        class = pc_mephitic
+        orbit_distance = 80
+        orbit_angle = 266
+        has_ring = no
+		size = 15
+		flags = {subclass_world hagalaz_planet}
+		entity = "mephitic_swamp_planet_02_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = wild_storms
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Ansuz"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 318
+        has_ring = no
+		size = 22
+
+		flags = { ansuz_planet }
+        init_effect = {
+            add_deposit = d_eezo_2
+        }
+    }
+
+    planet = {
+        name = "Thurisaz"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 177
+        has_ring = no
+		size = 34
+		flags = { thurisaz_planet }
+    }
+
+    planet = {
+        name = "Isa"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 93
+        has_ring = no
+		size = 18
+		flags = { isa_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_2_secondaryrelay" 
+			name = "Sector T2 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

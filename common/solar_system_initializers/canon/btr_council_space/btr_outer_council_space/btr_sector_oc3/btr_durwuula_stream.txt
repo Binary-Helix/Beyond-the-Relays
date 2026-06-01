@@ -1,0 +1,332 @@
+#######################
+### DURWUULA STREAM ###
+#######################
+
+sys_bisalas_init = {
+	name = "Bisalas"
+	class = sc_g
+	max_instances = 1
+
+    flags = { outer_council sector_oc3 durwuula_stream bisalas_system courts_of_dekuuna_system }
+
+	planet = {
+	    name = "Bisalas"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+        flags = { bisalas_star }
+    }
+
+	planet = {
+        name = "Tuee"
+        class = pc_carbon
+        orbit_distance = 35
+        orbit_angle = 177
+        size = 9
+        flags = { tuee_planet }
+        has_ring = no	
+    }
+
+	planet = {
+        name = "Urdaum"
+        class = pc_gas_giant
+        orbit_distance = 55
+        orbit_angle = 177
+        size = 32
+        has_ring = no
+
+		moon = {
+			name = "Yapolam"
+			class = pc_highgrav_swamp
+			orbit_distance = 13
+			orbit_angle = 177
+			size = 25	
+			flags = {yapolam_planet subclass_world urdaum_planet}
+			entity = "lake_planet_03_entity"
+			init_effect = {
+				add_modifier = {
+					modifier = high_gravity
+					days = -1
+				}
+				add_modifier = {
+					modifier = lake_world
+					days = -1
+				}
+			}						
+		}
+    }
+
+	planet = {
+        name = "Gendul"
+        class = pc_highgrav_mephitic
+        orbit_distance = 35
+        orbit_angle = 177
+        size = 24
+        has_ring = no
+		flags = {subclass_world gendul_planet}
+		entity = "mephitic_desert_planet_02_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = cenote_world
+				days = -1
+			}
+		}
+    }
+
+	planet = {
+        name = "Funtuus"
+        class = pc_frozen
+        orbit_distance = 40
+        orbit_angle = 177
+        size = 9
+        flags = { funtuus_planet }
+        has_ring = no
+    }
+
+	planet = {
+        name = "Isdame"
+        class = pc_barren_cold
+        orbit_distance = 20
+        orbit_angle = 177
+        size = 9
+        flags = { isdame_planet }
+        has_ring = no
+    }
+}
+
+sys_nasdora_init = {
+	name = "Nasdora"
+	class = sc_a
+	max_instances = 1
+
+    flags = { outer_council sector_oc3 durwuula_stream nasdora_system secondary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 110
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 220
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 375
+	}
+
+	planet = {
+	    name = "Nasdora"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 25
+        flags = { nasdora_star }
+    }
+
+    change_orbit = 110
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    change_orbit = 110
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+        name = "Phinda"
+        class = pc_ice_giant
+        orbit_distance = 30
+        orbit_angle = 177
+        size = 28
+        flags = { phinda_planet }
+        has_ring = no
+    }
+
+    change_orbit = 125
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "outer_council_sector_3_secondaryrelay" 
+			name = "Sector OC3 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_resyadum_init = {
+	name = "Resyadum"
+	class = sc_k
+	max_instances = 1
+
+    flags = { outer_council sector_oc3 durwuula_stream resyadum_system courts_of_dekuuna_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 50
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 200
+	}
+
+	planet = {
+	    name = "Resyadum"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+        flags = { resyadum_star }
+    }
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+        name = "Ordas"
+        class = pc_chlorine
+        orbit_distance = 100
+        orbit_angle = 177
+        size = 9
+        flags = { ordas_planet }
+        has_ring = no
+    }
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+        name = "Sargen"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 177
+        size = 32
+        flags = { sargen_planet }
+        has_ring = no
+    }
+
+	planet = {
+        name = "Jurdal"
+        class = pc_highgrav_continental
+        orbit_distance = 150
+        orbit_angle = 177
+        size = 24
+        has_ring = no
+		flags = { jurdal_planet subclass_world }
+		entity = "forest_planet_10_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = forest_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+		}						
+	}
+}
+
+sys_wadoa_init = {
+	name = "Wadoa"
+	class = sc_m
+	max_instances = 1
+
+    flags = { outer_council sector_oc3 durwuula_stream wadoa_system primary_relay_system }
+
+	planet = {
+	    name = "Wadoa"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 25
+        flags = { wadoa_star }
+    }
+
+	planet = {
+        name = "Esdara"
+        class = pc_hot_giant
+        orbit_distance = 100
+        orbit_angle = 177
+        size = 39
+        flags = { esdara_planet }
+        has_ring = no
+    }
+
+	planet = {
+        name = "Turana"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 177
+        size = 18
+        flags = { turana_planet }
+        has_ring = no
+    }
+
+	planet = {
+        name = "Ironte"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 177
+        size = 11
+        flags = { ironte_planet }
+        has_ring = no
+    }
+
+	planet = {
+        name = "Maruna"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 177
+        size = 9
+        flags = { maruna_planet }
+        has_ring = no	
+    }
+
+	planet = {
+        name = "Pholda"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 177
+        size = 34
+        flags = { pholda_planet }
+        has_ring = yes
+    }
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "durwuulastream_serpentnebula_primaryrelay" 
+			name = "Sector OC3 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

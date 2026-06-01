@@ -1,0 +1,504 @@
+#######################
+### VOYAGER CLUSTER ###
+#######################
+
+sys_amazon_init = {
+    name = "Amazon"
+    class = sc_m_giant
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf2 voyager_cluster amazon_system primary_relay_system }
+
+    planet = {
+		name = "Amazon"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 20
+        flags = { amazon_star }
+    }
+
+    planet = {
+        name = "Agebinium"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 352
+        has_ring = no
+		size = 12
+		flags = { agebinium_planet }
+    }
+
+    planet = {
+        name = "Derneuca"
+        class = pc_highgrav_mephitic
+        orbit_distance = 100
+        orbit_angle = 290
+        has_ring = no
+		size = 25
+		flags = {subclass_world derneuca_planet}
+		entity = "mephitic_tundra_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = basalt_world
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Derneuca_a"
+			class = pc_asteroid
+			orbit_distance = 20
+			size = 5
+			flags = { derneuca_a_planet }
+		}
+
+		moon = {
+			name = "Derneuca_b"
+			class = pc_asteroid
+			orbit_distance = 5
+			size = 2
+			flags = { derneuca_b_planet }
+		}
+
+		moon = {
+			name = "Derneuca_c"
+			class = pc_asteroid
+			orbit_distance = 5
+			size = 1
+			flags = { derneuca_c_planet }
+		}			
+    }
+
+    planet = {
+        name = "Sonedma"
+        class = pc_highgrav_mephitic
+        orbit_distance = 100
+        orbit_angle = 55
+        has_ring = no
+		size = 24
+		flags = {subclass_world sonedma_planet}
+		entity = "mephitic_arctic_planet_01_entity"
+    }
+
+    planet = {
+        name = "Sybin"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 300
+        has_ring = no
+		size = 11
+		flags = { sybin_planet }
+    }
+
+    planet = {
+        name = "Tremar"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 309
+        has_ring = no
+		size = 35
+		flags = { tremar_planet }
+    }	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "voyagercluster_atticanbeta_primaryrelay" 
+			name = "Sector BF2 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_columbia_init = {
+    name = "Columbia"
+    class = sc_g
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf2 voyager_cluster columbia_system secondary_relay_system }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 190
+	}
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 430
+	}
+
+    planet = {
+		name = "Columbia"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { columbia_star }
+    }
+	
+    planet = {
+        name = "Clojiia"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 219
+        has_ring = no
+		size = 17
+		flags = { clojiia_planet }
+    }
+
+	change_orbit = 65
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Nepheron"
+        class = pc_barren
+        orbit_distance = 60
+        orbit_angle = 103
+        has_ring = no
+		size = 16
+
+		moon = {
+			name = "Nepheron a"
+			class = pc_iron
+			orbit_distance = 6
+			size = 4
+			flags = {nepheron_a_planet nepheron_planet}
+		}	
+    }
+
+    planet = {
+        name = "Ontaheter"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 279
+        has_ring = no
+		size = 9
+		flags = { ontaheter_planet }
+    }
+
+	change_orbit = 75
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Gromar"
+        class = pc_barren_cold
+        orbit_distance = 75
+        orbit_angle = 121
+        has_ring = no
+		size = 12
+		flags = { gromar_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_9_secondaryrelay" 
+			name = "Sector BF2 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_patella_init = {
+	name = "Patella"
+	class = sc_a
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf2 voyager_cluster patella_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 250
+	}
+
+	planet = {
+		name = "Patella"
+		class = pc_a_star
+        orbit_distance = 0
+		orbit_angle = 1
+		size = 33
+		flags = { patella_star }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Yavo"
+		class = pc_molten
+        orbit_distance = 100
+		orbit_angle = { min = 1 max = 360 }
+		size = 14
+		flags = { yavo_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Eperuis"
+		class = pc_barren
+        orbit_distance = 100
+		orbit_angle = { min = 1 max = 360 }
+		size = 15
+		has_ring = no
+
+		moon = {
+			name = "Qiop"
+			class = pc_frozen
+			orbit_distance = 20
+			orbit_angle = { min = 90 max = 270 }
+			size = 2
+			flags = {qiop_planet eperuis_planet}
+		}
+	}
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Xra"
+		class = pc_tundra
+        orbit_distance = 50
+		orbit_angle = { min = 1 max = 360 }
+		size = 19
+		has_ring = no
+		flags = {subclass_world xra_planet}
+		entity = "fungal_planet_09_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = fungal_world
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Tryon"
+			class = pc_iron
+			orbit_distance = 20
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+			flags = { tryon_planet }
+		}
+
+		moon = {
+			name = "Pryon"
+			class = pc_barren_cold
+			orbit_distance = 5
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+			flags = { pryon_planet }
+		}
+	}
+
+	planet = {
+		name = "Grand Luxon"
+		class = pc_gas_giant
+        orbit_distance = 100
+		orbit_angle = { min = 1 max = 360 }
+		size = 37
+		flags = { grand_luxon_planet }
+		change_orbit = 8
+		has_ring = yes
+	}
+
+	planet = {
+		name = "Second Luxon"
+		class = pc_ice_giant
+        orbit_distance = 100
+		orbit_angle = { min = 1 max = 360 }
+		size = 27
+		change_orbit = 5
+		has_ring = no
+
+		moon = {
+			name = "SL-1"
+			class = pc_frozen
+			orbit_distance = 20
+			orbit_angle = { min = 1 max = 360 }
+			size = 2	
+			flags = {sl_1_planet second_luxon_planet}
+		}
+
+		moon = {
+			name = "SL-2"
+			class = pc_frozen
+			orbit_distance = 5
+			orbit_angle = { min = 1 max = 360 }
+			size = 1
+			flags = { sl_2_planet }
+		}
+
+		moon = {
+			name = "SL-3"
+			class = pc_barren_cold
+			orbit_distance = 5
+			orbit_angle = { min = 1 max = 360 }
+			size = 3
+			flags = { sl_3_planet }
+		}
+
+		moon = {
+			name = "SL-4"
+			class = pc_iron
+			orbit_distance = 5
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+			flags = { sl_4_planet }
+		}
+
+		moon = {
+			name = "SL-5"
+			class = pc_dextro_arctic
+			orbit_distance = 5
+			orbit_angle = { min = 1 max = 360 }
+			size = 7
+			flags = {subclass_world sl_5_planet}
+			entity = "cryovolcanic_planet_02_entity"
+			init_effect = {
+				add_modifier = {
+					modifier = dextro_world
+					days = -1
+				}
+				add_modifier = {
+					modifier = cryovolcanic_world
+					days = -1
+				}
+			}	
+		}
+
+		moon = {
+			name = "SL-6"
+			class = pc_ammonia
+			orbit_distance = 5
+			orbit_angle = { min = 1 max = 360 }
+			size = 8
+			flags = {subclass_world sl_6_planet}
+			init_effect = {
+				add_modifier = {
+					modifier = snow_world
+					days = -1
+				}
+			}
+		}
+
+		moon = {
+			name = "SL-7"
+			class = pc_frozen
+			orbit_distance = 5
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+			flags = { sl_7_planet }
+		}
+
+		moon = {
+			name = "SL-8"
+			class = pc_gel_asteroid
+			orbit_distance = 5
+			orbit_angle = { min = 1 max = 360 }
+			size = 3
+			flags = { sl_8_planet }
+		}
+	}
+}
+
+sys_yangtze_init = {
+    name = "Yangtze"
+    class = sc_f
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf2 voyager_cluster yangtze_system primary_relay_system }
+
+    planet = {
+		name = "Yangtze"	
+        class = pc_f_star
+        orbit_distance = 0
+        size = 30
+        flags = { yangtze_star }
+    }
+
+    planet = {
+        name = "Renshato"
+        class = pc_hot_giant
+        orbit_distance = 50
+        orbit_angle = 275
+        has_ring = no
+		size = 28
+		flags = { renshato_planet }
+    }
+
+    planet = {
+        name = "Binthu"
+        class = pc_chlorine
+        orbit_distance = 150
+        orbit_angle = 47
+        has_ring = no
+		size = 16
+
+		moon = {
+			name = "Trentatia"
+			class = pc_iron
+			orbit_distance = 20
+			size = 7
+			flags = {trentatia_planet binthu_planet}
+		}	
+    }
+
+    planet = {
+        name = "Dregir"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 19
+        has_ring = no
+		size = 7
+		flags = { dregir_planet }
+    }
+
+    planet = {
+        name = "Alrumter"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 198
+        has_ring = no
+		size = 9
+		flags = { alrumter_planet }
+    }
+
+    planet = {
+        name = "Patajiri"
+        class = pc_chlorine
+        orbit_distance = 100
+        orbit_angle = 116
+        has_ring = no
+		size = 18
+		flags = {subclass_world patajiri_planet}
+		entity = "chlorine_arctic_planet_12_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = antar_world
+				days = -1
+			}
+		}
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "voyagercluster_ralmaitnebula_primaryrelay" 
+			name = "Sector BF2 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
