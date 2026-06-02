@@ -4524,10 +4524,11 @@ ship_event = {
     }
 }
 
-ship_event = { # Written by Jontxu8831
-    id = pressha.a
-    title = "pressha.1.name"
-    desc = "pressha.1.desc"
+ship_event = { # Written by Jontxu8831 
+    # TODO: verify that pressha is behaving appropriately
+    id = btr_anomaly.135
+    title = "btr_anomaly.135.name"
+    desc = "btr_anomaly.135.desc"
     picture = GFX_evt_mining_station
     show_sound = event_ship_bridge
     location = FROM
@@ -4538,7 +4539,7 @@ ship_event = { # Written by Jontxu8831
     }
 
     option = {
-        name = pressha.1.a
+        name = btr_anomaly.135.a
         leader = {
             add_experience = 200
         }
@@ -4554,7 +4555,7 @@ ship_event = { # Written by Jontxu8831
         #     icon = #TODO
         #    # text = IS_LITHOID_EMPIRE_ICON_TIP
         # }
-        name = pressha.1.b
+        name = btr_anomaly.135.b
         leader = {
             add_experience = 200
         }

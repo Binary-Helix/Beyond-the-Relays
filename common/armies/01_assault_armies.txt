@@ -459,7 +459,11 @@ xenomorph_army = {
 	icon = GFX_army_type_xenomorph
 	has_species = no
 
-	potential_country = { always = no }
+	potential_country = {
+		is_machine_empire = no
+		is_wilderness_empire = no
+		is_btr_empire = no
+	}
 
 	resources = {
 		category = armies
@@ -486,12 +490,6 @@ xenomorph_army = {
 		upkeep = {
 			energy = 2
 		}
-	}
-
-	potential_country = {
-		is_machine_empire = no
-		is_wilderness_empire = no
-		is_btr_empire = no
 	}
 
 	prerequisites = { "tech_morphogenetic_field_mastery" }
@@ -955,8 +953,6 @@ warpling_army = {
 		}
 	}
 
-	potential_country = { always = no }
-
 	potential_country = {
 		has_astral_planes_dlc = yes
 		has_country_flag = unlocked_warplings
@@ -979,7 +975,11 @@ flamestorm_troopers_army = {
 	time = 150
 	icon = GFX_army_type_flamestorm
 
-	potential_country = { always = no }
+	potential_country = {
+		has_astral_planes_dlc = yes
+		has_country_flag = unlocked_flamestorm_troopers
+		is_btr_empire = no
+	}
 
 	resources = {
 		category = armies
@@ -990,12 +990,6 @@ flamestorm_troopers_army = {
 		upkeep = {
 			energy = 3
 		}
-	}
-
-	potential_country = {
-		has_astral_planes_dlc = yes
-		has_country_flag = unlocked_flamestorm_troopers
-		is_btr_empire = no
 	}
 
 	ai_weight = {
