@@ -1,9 +1,23 @@
 @base_tradition_agenda_cost = 7000
 @short_agenda_cost = 3500
+
+agenda_entertainment = { # TODO: agenda is incomplete
+    agenda_cost = @base_tradition_agenda_cost
+    allow = {
+        has_tradition = tr_btr_entertainment_adoption
+    }
+    potential = {
+        has_paragon_dlc = yes
+    }
+    modifier = {
+        planet_jobs_upkeep_mult = -0.1 # TODO: placeholder modifier
+    }
+    finish_modifier = agenda_entertainment_finish
+}
 agenda_vigilance = {
     agenda_cost = @base_tradition_agenda_cost
     allow = {
-        has_tradition = tr_btr_vigilance_adopt
+        has_tradition = tr_btr_vigilance_adoption
     }
     potential = {
         has_paragon_dlc = yes
@@ -14,9 +28,9 @@ agenda_vigilance = {
         country_starbase_influence_cost_distance_mult = -0.15
     }
     finish_modifier = agenda_vigilance_finish
-   # effect = {
-    #    custom_tooltip = council_agenda_agenda_superior_colonies_effect
-    #}
+    # effect = {
+    #     custom_tooltip = council_agenda_agenda_superior_colonies_effect
+    # }
 }
 
 agenda_infiltration = {
@@ -39,7 +53,7 @@ agenda_infiltration = {
 agenda_discipline = {
     agenda_cost = @base_tradition_agenda_cost
     allow = {
-        has_tradition = tr_btr_discipline_adopt
+        has_tradition = tr_btr_discipline_adoption
     }
     potential = {
         has_paragon_dlc = yes

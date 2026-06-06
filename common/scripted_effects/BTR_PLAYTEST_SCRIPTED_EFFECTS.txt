@@ -1758,6 +1758,27 @@ generate_independent_world_playtest_setup = {
 
 
 generate_canon_starting_resources = {
+    add_resource = { energy = 10000	}
+    add_resource = { minerals = 10000 }
+    add_resource = { food = 10000 }
+    add_resource = { consumer_goods = 10000 }
+    add_resource = { light_alloys = 10000	}
+    add_resource = { beryllium = 10000 }
+    add_resource = { lithium = 10000 }
+    add_resource = { titanium = 10000 }
+    add_resource = { heavy_alloys = 10000	}
+    add_resource = { iridium = 10000 }
+    add_resource = { palladium = 10000 }
+    add_resource = { platinum = 10000 }
+    add_resource = { antimatter_fuel = 10000 }
+    add_resource = { helium_3 = 10000 }
+    add_resource = { hydrogen = 10000 }
+    add_resource = { uranium = 10000 }
+    add_resource = { eezo = 10000 }
+    add_resource = { trade = 10000 }
+    add_resource = { influence = 100 }
+    add_resource = { unity = 450 }  
+    
     every_country = {
         if = {
             limit = {
@@ -1917,27 +1938,3 @@ generate_canon_starting_resources = {
         }
     }
 }
-
-
-add_resource = { energy = 10000	}
-add_resource = { minerals = 10000 }
-add_resource = { food = 10000 }
-add_resource = { consumer_goods = 10000 }
-add_resource = { light_alloys = 10000	}
-add_resource = { beryllium = 10000 }
-add_resource = { lithium = 10000 }
-add_resource = { titanium = 10000 }
-add_resource = { heavy_alloys = 10000	}
-add_resource = { iridium = 10000 }
-add_resource = { palladium = 10000 }
-add_resource = { platinum = 10000 }
-add_resource = { antimatter_fuel = 10000 }
-add_resource = { helium_3 = 10000 }
-add_resource = { hydrogen = 10000 }
-add_resource = { uranium = 10000 }
-add_resource = { eezo = 10000 }
-add_resource = { trade = 10000 }
-add_resource = { influence = 100 }
-add_resource = { unity = 450 }
-
-

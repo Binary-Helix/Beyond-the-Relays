@@ -1,0 +1,753 @@
+#####################
+### CALESTON RIFT ###
+#####################
+
+sys_aysur_init = {
+    name = "Aysur"
+    class = sc_g
+	max_instances = 1
+
+    flags = { attican_traverse sector_at8 caleston_rift aysur_system planet_state }
+
+	planet = {
+	    name = "Aysur"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+        flags = { aysur_star }
+    }
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 270
+	}
+	
+    planet = {
+        name = "Agnin"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 316
+        has_ring = no
+		size = 12
+		flags = {subclass_world agnin_planet}
+    }
+
+    planet = {
+        name = "Shasu"
+        class = pc_mephitic
+        orbit_distance = 80
+        orbit_angle = 198
+        has_ring = no
+		size = 3
+		flags = {subclass_world shasu_planet}
+        init_effect = {
+            add_anomaly = {
+                category = BTR_SHASU_MAGMA
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Dranen"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 186
+        has_ring = no
+		size = 37
+		flags = {subclass_world dranen_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+            add_anomaly = {
+                category = BTR_DRANEN_GREAT_SPOT
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+
+		moon = {
+            name = "Arvuna"
+            class = pc_ocean
+            orbit_distance = 20
+            orbit_angle = 169
+            has_ring = no
+			size = 16
+			flags = { subclass_world arvuna_planet }
+			 init_effect = {
+			 	save_global_event_target_as = arvunaHomeworld
+			 	if = {
+			 		limit = {
+			 			exists = event_target:arvunaHomeworld
+			 		}
+			 		log = "Arvunan Administration Zone Event Target Set"
+			 	}
+			 	prevent_anomaly = yes
+
+			 	generate_arvunan_administration_country = yes
+
+			 	set_capital = yes
+			 	set_owner = event_target:arvunan_administration
+			 	create_colony = {
+			 		owner = event_target:arvunan_administration
+			 		species = event_target:humanSpecies
+			 		ethos = owner
+			 	}
+
+			 	generate_arvuna_pops = yes
+
+			 	add_modifier = {
+			 		modifier = dangerous_wildlife
+			 		days = -1
+			 	}
+
+			 	add_deposit = d_eezo_trace
+			    add_anomaly = {
+                    category = BTR_ARVUNA_PRIMORDIAL
+                    # target = this # TODO: remove this once it's proven to be unneeded
+                }
+			 }
+		}	
+
+		moon = {
+			name = "Alahya"
+			class = pc_ammonia
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			size = 8
+			flags = { subclass_world alahya_planet }		
+			deposit_blockers = none
+			modifiers = none
+			# init_effect = {
+			# 	save_global_event_target_as = alahyaHomeworld
+			# 	if = {
+			# 		limit = {
+			# 			exists = event_target:alahyaHomeworld
+			# 		}
+			# 		log = "Alahyan Terraformation Zone Event Target Set"
+			# 	}
+			# 	prevent_anomaly = yes
+            #
+			# 	generate_alahyan_terraformation_zone_country = yes
+            #
+			# 	set_capital = yes
+			# 	set_owner = event_target:alahyan_terraformation_zone
+			# 	create_colony = {
+			# 		owner = event_target:alahyan_terraformation_zone
+			# 		species = event_target:volusSpecies
+			# 		ethos = owner
+			# 	}
+            #
+			# 	generate_alahya_pops = yes
+			# }
+		}	
+		
+		moon = {
+			name = "Dranen d"
+			count = 1
+			class = pc_barren_cold
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			size = 6
+			flags = { dranen_d_planet }
+		}
+		
+		moon = {
+			name = "Dranen e"
+			count = 1
+			class = pc_molten
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			size = 4
+			flags = { dranen_e_planet }
+		}		
+	}
+
+	change_orbit = 30
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Mahavid"
+		class = pc_asteroid
+        orbit_distance = 0
+		orbit_angle = 40
+	}
+
+    planet = {
+        name = "Alformus"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 206
+        has_ring = no
+		size = 36
+		flags = {subclass_world alformus_planet}
+    }
+
+    planet = {
+        name = "Shir"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 34
+        has_ring = no
+		size = 12
+		flags = {subclass_world shir_planet}
+    }
+
+    planet = {
+        name = "Tamgauta"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 289
+        has_ring = no
+		size = 8
+		flags = {subclass_world tamgauta_planet}
+    }
+}
+
+sys_balor_init = {
+    name = "Balor"
+    class = sc_m
+	usage = custom_empire
+
+	flags = { attican_traverse sector_at8 caleston_rift balor_system }
+
+	init_effect = {
+		save_global_event_target_as = calestonFirstFleet
+		save_global_event_target_as = calestonCorpSec
+	}
+
+	max_instances = 1
+
+    planet = {
+	    name = "Balor"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 15
+        flags = { balor_star }
+    }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 250
+	}
+
+    planet = {
+        name = "Cernunnos"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 165
+        has_ring = no
+		size = 32
+
+        moon = {
+            name = "Caleston"
+            class = pc_molten_station
+            orbit_distance = 20
+            orbit_angle = 180
+            has_ring = no
+			size = 16
+			starting_planet = yes
+			flags = {caleston_planet subclass_world cernunnos_planet}
+			deposit_blockers = none
+			modifiers = none
+			init_effect = {
+                add_modifier = {
+                    modifier = unstable_tectonics
+                    days = -1
+                }
+                add_deposit = d_eezo_abundant
+                add_deposit = d_eezo_abundant
+				save_global_event_target_as = calestonHomePlanet
+
+				prevent_anomaly = yes
+
+				check_for_turian_player = yes
+
+				if = {
+					limit = {
+						any_country = {
+							has_country_flag = caleston_directorate_player
+						}
+					}
+					random_country = {
+						limit = {
+							has_country_flag = caleston_directorate_player
+						}
+						save_global_event_target_as = caleston_directorate
+					}
+                    generate_empire_home_planet = yes
+				}
+				else = {
+					generate_caleston_directorate_country = yes
+				}
+				set_capital = yes
+				set_owner = event_target:caleston_directorate
+				create_colony = {
+					owner = event_target:caleston_directorate
+					species = event_target:turianSpecies
+					ethos = owner
+				}
+                generate_btr_start_deposits_and_blockers = yes
+                btr_generate_canon_planetary_features = yes
+                inline_script = "game_start/canon/caleston_dir_origin"
+				generate_caleston_pops = yes
+                event_target:caleston_directorate = {
+                    create_starting_leaders = yes
+                    country_event = { id = game_start.9 }
+                }
+                add_anomaly = {
+                    category = BTR_CLAESTON_UNIQUE
+                    # target = this # TODO: remove this once it's proven to be unneeded
+                }
+			}
+        }
+	} 
+
+    planet = {
+        name = "Bres"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 141
+        has_ring = no
+		size = 2
+		flags = { bres_planet }
+    }
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Elatha"
+        class = pc_barren_cold
+        orbit_distance = 125
+        orbit_angle = 102
+        has_ring = no
+        size = 4		
+        flags = { elatha_planet }
+    }
+
+    planet = {
+        name = "Partholon"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 154
+        has_ring = no
+		size = 25
+
+		flags = { partholon_planet }
+		init_effect = {
+			add_deposit = d_eezo_2
+		}
+	}
+}
+
+sys_eilor_init = {
+	name = "Eilor"
+	class = sc_b
+	max_instances = 1
+
+	flags = { attican_traverse sector_at8 caleston_rift eilor_system secondary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 425
+	}
+
+	planet = {
+		name = "Eilor"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 28
+        flags = { eilor_star }
+    }
+
+    planet = {
+        name = "Rupaico"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 198
+        has_ring = no
+		size = 30
+		flags = {subclass_world rupaico_planet}
+
+	}	
+
+	planet = {
+        name = "Lomanup"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 198
+        has_ring = yes
+		size = 34
+		flags = {subclass_world lomanup_planet}
+
+		moon = {
+			name = "Lomanup a"
+			class = pc_asteroid
+			orbit_distance = 20
+			orbit_angle = 198
+			has_ring = no
+			size = 3
+			flags = { lomanup_a_planet }
+		}
+
+		moon = {
+			name = "Lomanup b"
+			class = pc_carbon
+			orbit_distance = 5
+			orbit_angle = 198
+			has_ring = no
+			size = 6
+			flags = { lomanup_b_planet }
+		}
+    }
+
+	# planet = {
+	# 	name = "Haephaestus Station"
+	# 	class = pc_habitat
+    #     orbit_distance = 125
+	# 	orbit_angle = 198
+	# 	has_ring = no
+	# 	size = 12
+	# }
+
+	change_orbit = 50
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Trewia"
+		class = pc_frozen
+        orbit_distance = 125
+		orbit_angle = 198
+		has_ring = no
+		size = 18
+		flags = { trewia_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_8_secondaryrelay" 
+			name = "Sector AT8 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_solveig_init = {
+    name = "Solveig"
+    class = sc_g
+	max_instances = 1
+
+	flags = { attican_traverse sector_at8 caleston_rift solveig_system primary_relay_system }
+
+    planet = {
+	    name = "Solveig"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+        flags = { solveig_star }
+	}	
+
+    planet = {
+        name = "Surtur"
+        class = pc_iron
+        orbit_distance = 40
+        orbit_angle = 179
+        has_ring = no
+		size = 11
+		flags = {subclass_world surtur_planet}
+
+        moon = {
+            name = "Sinmara"
+            class = pc_carbon
+            orbit_distance = 20
+            orbit_angle = 169
+            has_ring = no
+			size = 3
+			flags = { sinmara_planet }
+        }
+    }
+
+    planet = {
+        name = "Thrivaldi"
+        class = pc_gas_giant
+        orbit_distance = 60
+        orbit_angle = 189
+        has_ring = yes
+		size = 30
+		flags = {subclass_world thrivaldi_planet}
+
+		moon = {
+			name = "Thrivaldi a"
+			count = 1
+			class = pc_barren
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 20
+			size = 6
+
+			flags = { thrivaldi_a_planet }
+		}		
+		moon = {
+			name = "Thrivaldi b"
+			count = 1
+			class = pc_barren_cold
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 0
+			size = 8
+
+			flags = { thrivaldi_b_planet }
+		}
+    }
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "calestonrift_hindaraglobular_primaryrelay" 
+			name = "Sector AT8 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_talava_init = {
+    name = "Talava"
+    class = sc_f
+
+	max_instances = 1
+
+	flags = { attican_traverse sector_at8 caleston_rift talava_system turian_hierarchy_system }
+
+    planet = {
+	    name = "Talava"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 20
+        flags = { talava_star }
+    }
+
+    planet = {
+        name = "Aitarus"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 304
+        has_ring = no
+		size = 22
+		flags = { aitarus_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+			add_modifier = {
+				modifier = unstable_tectonics
+				days = -1
+			}
+			add_modifier = {
+				modifier = btr_scorching_surface
+				days = -1
+			}
+		}
+	}	
+
+    planet = {
+        name = "Kaushus"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 177
+        has_ring = no
+		size = 15
+		flags = { kaushus_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = btr_unwise_mining_venture
+				days = -1
+			}
+			add_modifier = {
+				modifier = unstable_tectonics
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Maitrum"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 293
+        has_ring = no
+		size = 14
+		flags = { maitrum_planet }
+    }
+
+    planet = {
+        name = "Taitus"
+        class = pc_mephitic
+        orbit_distance = 125
+        orbit_angle = 142
+        has_ring = no
+		size = 11
+		flags = { taitus_planet }
+    }	
+}
+
+sys_yakawa_init = {
+    name = "Yakawa"
+    class = sc_g
+	max_instances = 1
+
+	flags = { attican_traverse sector_at8 caleston_rift yakawa_system vol_protectorate_system }
+
+    planet = {
+	    name = "Yakawa"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 24
+        flags = { yakawa_star }
+    }
+
+    planet = {
+        name = "Sakata"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 98
+        has_ring = no
+		size = 25
+		flags = { sakata_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = strong_magnetic_field
+				days = -1
+			}
+            add_anomaly = {
+                category = BTR_SAKATA_CRUSHER
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+    }
+
+    planet = {
+        name = "Nambu"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 210
+        has_ring = yes
+		size = 32
+
+		moon = {
+			name = "Sumiko"
+			class = pc_molten
+			orbit_distance = 20
+			has_ring = no
+			size = 6
+			flags = {sumiko_planet nambu_planet}
+            init_effect = {
+                add_anomaly = {
+                    category = BTR_SUMIKO_TECTONISM
+                    # target = this # TODO: remove this once it's proven to be unneeded
+                }
+            }
+        }
+
+		moon = {
+			name = "Nambu b"
+			count = 1
+			class = pc_barren
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 20
+			size = 6
+			flags = { nambu_b_planet }
+		}
+
+		moon = {
+			name = "Nambu c"
+			count = 1
+			class = pc_barren
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			size = 8
+			flags = { nambu_c_planet }
+		}	
+    }
+
+    planet = {
+        name = "Maskawa"
+        class = pc_ammonia
+        orbit_distance = 100
+        orbit_angle = 293
+        has_ring = no
+		size = 17
+		entity = "ammonia_alpine_planet_01_entity"
+		flags = { maskawa_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = crag_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Karumto"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 151
+        has_ring = no
+		size = 16
+		flags = { karumto_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = unstable_tectonics
+				days = -1
+			}
+            add_anomaly = {
+                category = BTR_KARUMTO_RUINS_OF_RUIN
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+    }
+
+    planet = {
+        name = "Kobayashi"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 134
+        has_ring = yes
+		size = 29
+
+		moon = {
+			name = "Kobayashi a"
+			class = pc_barren
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 20
+			size = 8
+			flags = {kobayashi_a_planet kobayashi_planet}
+		}
+		
+		moon = {
+			name = "Kobayashi b"
+			class = pc_frozen
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			size = 4
+			flags = { kobayashi_b_planet }
+		}		
+    }	
+}

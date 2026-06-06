@@ -1,0 +1,368 @@
+######################
+### ALTNURO NEBULA ###
+######################
+
+sys_numrula_init = {
+    name = "Numrula"
+    class = sc_g_giant
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 altnuro_nebula numrula_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 150
+    }
+
+    planet = {
+		name = "Numrula"
+        class = pc_g_giant_star
+        orbit_distance = 0
+        size = 25
+        flags = { numrula_star }
+    }
+
+    planet = {
+        name = "Kimura"
+        class = pc_molten
+        orbit_distance = 60
+        orbit_angle = 260
+        size = 8
+        flags = { kimura_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Ximurmos"
+        class = pc_molten
+        orbit_distance = 60
+        orbit_angle = 239
+        size = 14
+        flags = { ximurmos_planet }
+        has_ring = no
+    }
+
+    change_orbit = 30
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Temlyn"
+        class = pc_carbon
+        orbit_distance = 30
+        orbit_angle = 206
+        size = 20
+        has_ring = no
+
+        moon = {
+            name = "Xales"
+            class = pc_carbon
+            orbit_distance = 20
+            orbit_angle = 302
+            size = 3
+            flags = {xales_planet temlyn_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Rinnera"
+        class = pc_ice_giant
+        orbit_distance = 60
+        orbit_angle = 226
+        size = 34
+        has_ring = no
+
+        moon = {
+            name = "Pekrun"
+            class = pc_methane
+            orbit_distance = 20
+            orbit_angle = 104
+            size = 7
+            flags = {pekrun_planet rinnera_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Dalbes"
+        class = pc_frozen
+        orbit_distance = 60
+        orbit_angle = 107
+        size = 19
+        flags = { dalbes_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Nelnuro"
+        class = pc_gas_giant
+        orbit_distance = 60
+        orbit_angle = 281
+        size = 40
+        flags = { nelnuro_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Telno"
+        class = pc_ice_giant
+        orbit_distance = 60
+        orbit_angle = 230
+        size = 36
+        flags = { telno_planet }
+        has_ring = yes
+    }
+}
+
+sys_phanes_init = {
+    name = "Phanes"
+    class = sc_g_giant
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 altnuro_nebula phanes_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 250
+    }
+
+    planet = {
+		name = "Phanes"
+        class = pc_g_giant_star
+        orbit_distance = 0
+        size = 29
+        flags = { phanes_star }
+    }
+
+    planet = {
+        name = "Graicingu"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 310
+        size = 13
+        flags = { graicingu_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Belchy"
+        class = pc_hot_giant
+        orbit_distance = 100
+        orbit_angle = 251
+        size = 35
+        flags = { belchy_planet }
+        has_ring = yes
+    }
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Tuthumra"
+        class = pc_hothouse
+        orbit_distance = 50
+        orbit_angle = 205
+        size = 17
+        flags = { tuthumra_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Churlunga"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 78
+        size = 38
+        has_ring = yes
+
+        moon = {
+            name = "Licorice"
+            class = pc_barren_cold
+            orbit_distance = 20
+            orbit_angle = 309
+            size = 2
+            flags = {licorice_planet churlunga_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Dolce"
+            class = pc_iron
+            orbit_distance = 5
+            orbit_angle = 108
+            size = 3
+            flags = { dolce_planet }
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Mascuum"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 240
+        size = 8
+        flags = { mascuum_planet }
+        has_ring = no
+    }
+}
+
+sys_rilnero_init = {
+    name = "Rilnero"
+    class = sc_g
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 altnuro_nebula rilnero_system primary_relay_system }
+
+    planet = {
+		name = "Rilnero"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 27
+        flags = { rilnero_star }
+    }
+
+    planet = {
+        name = "Parkeena"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 262
+        size = 8
+        flags = { parkeena_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Nereas"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 166
+        size = 13
+        flags = { nereas_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Wunnuro"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 273
+        size = 19
+        flags = { wunnuro_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Milkeena"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 179
+        size = 23
+        has_ring = no
+
+        moon = {
+            name = "Nillyn"
+            class = pc_barren_cold
+            orbit_distance = 20
+            orbit_angle = 330
+            size = 3
+            flags = {nillyn_planet milkeena_planet}
+            has_ring = no
+        }
+    }
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alturnonebula_eaglenebula_primaryrelay" 
+			name = "Sector OC2 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+
+sys_xirrun_init = {
+    name = "Xirrun"
+    class = sc_k
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 altnuro_nebula xirrun_system secondary_relay_system }
+
+    planet = {
+        class = pc_k_star
+        orbit_distance = 0
+        size = 38
+    }
+
+    planet = {
+        name = "Thenron"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 304
+        size = 8
+        flags = { thenron_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Thuneno"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 226
+        size = 13
+        flags = { thuneno_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Nemro"
+        class = pc_chlorine
+        orbit_distance = 100
+        orbit_angle = 66
+        size = 22
+        flags = { nemro_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Patok"
+        class = pc_highgrav_swamp
+        orbit_distance = 100
+        orbit_angle = 139
+        size = 18
+        flags = { patok_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Ziessa"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 255
+        size = 11
+        flags = { ziessa_planet }
+        has_ring = no
+    }
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "outer_council_sector_2_secondaryrelay" 
+			name = "Sector OC2 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

@@ -1,0 +1,227 @@
+######################
+### SAVIAN ABYSSAL ###
+######################
+
+sys_deslora_init = {
+	name = "Deslora"
+	class = sc_nova_1
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 savian_abyssal deslora_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 150
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 250
+	}
+
+	planet = {
+		name = "Deslora"
+		class = pc_nova_1
+		size = 30
+		flags = { deslora_planet }
+	}
+
+    change_orbit = 150
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    change_orbit = 100
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}	
+
+sys_jiro_init = {
+	name = "Jiro"
+	class = sc_m
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 savian_abyssal jiro_system primary_relay_system }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 500
+	}	
+	
+	planet = {
+		name = "Jiro"
+		class = pc_m_star
+		size = 30
+		flags = { jiro_star }
+	}
+	
+	planet = {
+		name = "Yvis"
+		class = pc_hothouse
+        orbit_distance = 250
+		size = 15
+
+		moon = {
+			name = "Yvis a"
+			class = pc_iron
+			orbit_distance = 20
+			size = 8
+			flags = {yvis_a_planet yvis_planet}
+		}
+	}	
+
+	planet = {
+		name = "Pasol Ziden"
+		class = pc_ammonia
+        orbit_distance = 230
+		size = 23
+		flags = {subclass_world pasol_ziden_planet}
+		entity = "ammonia_swamp_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = bog_world
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Pasol Ziden b"
+			class = pc_frozen
+			orbit_distance = 20
+			size = 7
+			flags = { pasol_ziden_b_planet }
+		}
+	}		
+
+    change_orbit = 20
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "savianabyssal_sakuranebula_primaryrelay" 
+			name = "Sector T7 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_tydeous_init = {
+	name = "Tydeous"
+	class = sc_k
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 savian_abyssal tydeous_system secondary_relay_system planet_state }
+    
+	planet = {
+		name = "Tydeous"
+		class = pc_k_star
+		size = 30
+		flags = { tydeous_star }
+	}
+
+	planet = {
+		name = "Farmac"
+		class = pc_hothouse
+        orbit_distance = 125
+		size = 8
+		flags = { farmac_planet }
+	}	
+
+	planet = {
+		name = "Freedom's Progress"
+		class = pc_desert
+        orbit_distance = 125
+		size = 14
+		starting_planet = no
+		deposit_blockers = none
+		modifiers = none
+		entity = "badlands_planet_01_entity"
+		flags = { subclass_world freedoms_progress_planet }
+		# init_effect = {
+        #     save_global_event_target_as = freedomsprogressHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:freedomsprogressHomeworld
+        #         }
+        #         log = "Freehold of Freedom's Progress Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_freehold_of_freedoms_progress_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:freehold_of_freedoms_progress
+		# 	create_colony = {
+		# 		owner = event_target:freehold_of_freedoms_progress
+		# 		species = event_target:humanSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_freedoms_progress_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = badlands_world
+		# 		days = -1
+		# 	}
+		# }
+
+		moon = {
+			name = "Freedom's Progress a"
+			class = pc_iron
+			orbit_distance = 20
+			size = 5
+			flags = { freedoms_progress_a_planet }
+		}
+
+		moon = {
+			name = "Freedom's Progress b"
+			class = pc_barren_cold
+			orbit_distance = 5
+			size = 7			
+			flags = { freedoms_progress_b_planet }
+		}
+	}	
+
+	planet = {
+		name = "Eurptune"
+		class = pc_gas_giant
+        orbit_distance = 125
+		size = 37
+		flags = { eurptune_planet }
+		has_ring = yes
+	}		
+	
+	planet = {
+		name = "Saptiter"
+		class = pc_ice_giant
+        orbit_distance = 125
+		has_ring = no
+		size = 29
+		flags = { saptiter_planet }
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_7_secondaryrelay" 
+			name = "Sector T7 - Secondary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

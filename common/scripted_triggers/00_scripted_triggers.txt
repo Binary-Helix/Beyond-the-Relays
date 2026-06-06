@@ -1148,11 +1148,12 @@ is_binary_star = {
 		is_star_class = sc_binary_8
 		is_star_class = sc_binary_9
 		is_star_class = sc_binary_10
-		is_star_class = sc_crisis_binary_1
-		is_star_class = sc_crisis_binary_2
-		is_star_class = sc_crisis_binary_5
-		is_star_class = sc_crisis_binary_7_8_9
-		is_star_class = sc_crisis_binary_10
+		# TODO: sc_crisis_binary_X might be deprecated
+		# is_star_class = sc_crisis_binary_1
+		# is_star_class = sc_crisis_binary_2
+		# is_star_class = sc_crisis_binary_5
+		# is_star_class = sc_crisis_binary_7_8_9
+		# is_star_class = sc_crisis_binary_10
 	}
 }
 
@@ -1275,10 +1276,11 @@ is_trinary_star = {
 		is_star_class = sc_trinary_2
 		is_star_class = sc_trinary_3
 		is_star_class = sc_trinary_4
-		is_star_class = sc_crisis_trinary_1
-		is_star_class = sc_crisis_trinary_2
-		is_star_class = sc_crisis_trinary_3
-		is_star_class = sc_crisis_trinary_4
+		# TODO: sc_crisis_binary_X might be deprecated
+		# is_star_class = sc_crisis_trinary_1
+		# is_star_class = sc_crisis_trinary_2
+		# is_star_class = sc_crisis_trinary_3
+		# is_star_class = sc_crisis_trinary_4
 	}
 }
 
@@ -3868,11 +3870,11 @@ has_research_building = {
 }
 
 is_orbital_ring = {
-	is_orbital_ring = yes
+	has_starbase_size >= orbital_ring_tier_1
 }
 
 is_normal_starbase = {
-	is_normal_starbase = yes
+	has_starbase_size >= starbase_outpost
 }
 
 is_faction_allowed = {
@@ -4581,8 +4583,8 @@ has_toxic_baths_building = {
 
 is_human_species = {
 	OR = {
-		is_human_species = yes
-		
+		species_portrait = human
+		species_portrait = human_legacy
 		species_portrait = pla17
 		species_portrait = cyb12
 	}
@@ -4904,7 +4906,11 @@ blocks_minister_of_state = {
 }
 
 is_terraforming_candidate = {
-	OR = { is_terraforming_candidate = yes }
+	OR = { 
+		has_modifier = terraforming_candidate
+		has_modifier = frozen_terraforming_candidate
+		has_modifier = toxic_terraforming_candidate
+	}
 }
 
 has_engineered_evolution_synergy = {
@@ -5412,5 +5418,5 @@ has_good_relationships = {
 }
 
 is_specialist_category = {
-	is_specialist_category = yes
+	is_pop_category = specialist
 }

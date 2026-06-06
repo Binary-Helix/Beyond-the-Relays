@@ -1,0 +1,227 @@
+########################
+### THE SEA OF LIGHT ###
+########################
+
+sys_agalama_init = {
+    name = "Agalama"
+    class = sc_k_giant
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 the_sea_of_light agalama_system primary_relay_system }
+
+    init_effect = {
+        save_global_event_target_as = asariScience2
+    }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 200
+    }
+
+    planet = {
+		name = "Agalama"
+        class = pc_k_giant_star
+        orbit_distance = 0
+        size = 28
+        flags = { agalama_star }
+    }
+
+    planet = {
+        name = "Diacea"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 218
+        size = 23
+        flags = { diacea_planet }
+        has_ring = no
+    }
+
+    change_orbit = 75
+    
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Aettia"
+        class = pc_carbon
+        orbit_distance = 50
+        orbit_angle = 169
+        size = 10
+        flags = { aettia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Clisphormin"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 101
+        size = 35
+        flags = { clisphormin_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Gaegas"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 195
+        size = 37
+        flags = { gaegas_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "seaoflight_serpentnebula_primaryrelay" 
+			name = "Sector OC2 - Primary Relay 5"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_kalinios_init = {
+    name = "Kalinios"
+    class = sc_o
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 the_sea_of_light kalinios_system }
+
+    planet = {
+		name = "Kalinios"
+        class = pc_o_star
+        orbit_distance = 0
+        size = 26
+        flags = { kalinios_star }
+    }
+
+    planet = {
+        name = "Melliphomeus"
+        class = pc_molten
+        orbit_distance = 80
+        orbit_angle = 240
+        size = 8
+        flags = { melliphomeus_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Lipparias"
+        class = pc_molten
+        orbit_distance = 80
+        orbit_angle = 224
+        size = 13
+        flags = { lipparias_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Lairitiada"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 211
+        size = 15
+        flags = { lairitiada_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Eniphae"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 207
+        size = 9
+        flags = { eniphae_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Alprymnes"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 64
+        size = 14
+        flags = { alprymnes_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Paurotreon"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 148
+        size = 22
+        flags = { paurotreon_planet }
+        has_ring = no
+    }
+}
+
+sys_phernas_init = {
+    name = "Phernas"
+    class = sc_b
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 the_sea_of_light phernas_system secondary_relay_system }
+
+    planet = {
+		name = "Phernas"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 27
+        flags = { phernas_star }
+    }
+
+    planet = {
+        name = "Cyrynano"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 279
+        size = 9
+        flags = { cyrynano_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Sasaeneu"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 267
+        size = 12
+        flags = { sasaeneu_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Kronides"
+        class = pc_methane
+        orbit_distance = 125
+        orbit_angle = 190
+        size = 24
+        flags = { kronides_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Cydotera"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 185
+        size = 10
+        flags = { cydotera_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "outer_council_sector_2_secondaryrelay" 
+			name = "Sector OC2 - Secondary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

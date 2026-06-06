@@ -1,0 +1,122 @@
+# Settings shown in the game setup UI.
+# Settings are divided into tabs and categories. (NOTE: Currently only 2 tabs are supported (General Settings and Advanced Settings).)
+#
+# categories = {					Categories in the tab.
+#	name = KEY						Name of the category.
+#	settings = {					Settings in the category.
+#		setting = ironman			Token of the setting.
+#		game_mode = single_player	Setting is hidden if the game mode doesn't match. Options: all (default), single_player, multiplayer
+#		visible = {}				Setting is hidden if this trigger is false (no scope).
+#	}
+# }
+
+# TODO: update for Nomads
+
+{	# General Settings
+	categories = {
+		{
+			name = "GALAXY_SETTINGS_CATEGORY_GAMEPLAY"
+			settings = {
+				{
+					setting = difficulty
+				}
+				{
+					setting = ironman
+					game_mode = single_player
+				}
+			}
+		}
+		{
+			name = "GALAXY_SETTINGS_CATEGORY_GALAXY"
+			settings = {
+				{
+					setting = galaxy_size
+				}
+			}
+		}
+	}
+}
+{	# Advanced Settings
+	categories = {
+		{
+			name = "GALAXY_SETTINGS_CATEGORY_GAMEPLAY"
+			settings = {
+				{
+					setting = crisis_type
+				}
+				{
+					setting = crises
+				}
+				{
+					setting = scaling
+				}
+				{
+					setting = difficulty_adjusted_ai_modifiers
+				}
+				{
+					setting = aggressiveness
+				}
+				{
+					setting = logistic_ceiling
+				}
+				{
+					setting = growth_scale
+				}
+				{
+					setting = technology
+				}
+				{
+					setting = traditions
+				}
+				{
+					setting = technology_difficulty_scale
+				}
+				{
+					setting = naval_capacity_mult
+				}
+				{
+					setting = command_limit_galaxy_mult
+				}
+				{
+					setting = logistics_fleet_upkeep_costs
+				}
+				{
+					setting = logistics_planet_deficit_costs
+				}
+				{
+					setting = transfer_speed
+				}
+			}
+		}
+		# {
+		# 	# TODO add custom BTR related precursor options
+		# 	name = "GALAXY_SETTINGS_CATEGORY_PRECURSORS"
+		# 	settings = {
+		# 		{
+
+		# 		}
+		# 	}
+		# }
+		{
+			name = "GALAXY_SETTINGS_CATEGORY_GAME_LENGTH"
+			settings = {
+				{
+					setting = mid_game_start
+				}
+				{
+					setting = end_game_start
+				}
+				{
+					setting = victory_year
+				}
+			}
+		}
+		# {
+		# 	# TODO: add custom BTR DLC related settings
+		# 	name = "GALAXY_SETTINGS_CATEGORY_DLC"
+		# 	settings = {
+		#
+		# 	}
+		# }
+	}
+}

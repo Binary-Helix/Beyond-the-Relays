@@ -1,0 +1,584 @@
+####################
+### PYLOS NEBULA ###
+####################
+
+sys_aap3421119_init = {
+    name = "AAP3421119"
+    class = sc_magnetar
+	max_instances = 1
+
+	flags = { attican_traverse sector_at7 pylos_nebula aap3421119_system secondary_relay_system }
+
+	planet = {
+		name = "AAP3421119"
+        class = pc_magnetar
+        orbit_distance = 0
+        size = 30
+        flags = { aap3421119_planet }
+	}
+
+	planet = {
+        name = "AAP34211+19 I" 
+        class = pc_barren
+        orbit_distance = 250
+        orbit_angle = 350
+        has_ring = no
+		size = 18
+		flags = { aap34211+19_i_planet }
+    }
+
+	planet = {
+        name = "AAP34211+19 II" 
+        class = pc_barren_cold
+        orbit_distance = 250
+        orbit_angle = 350
+        has_ring = no
+		size = 20
+		flags = { aap34211+19_ii_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_7_secondaryrelay" 
+			name = "Sector AT7 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_dirada_init = {
+    name = "Dirada"
+    class = sc_b_super
+	max_instances = 1
+
+	flags = { attican_traverse sector_at7 pylos_nebula dirada_system }
+		
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 45
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 75
+	}
+
+    planet = {
+		name = "Dirada"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 45
+        flags = { dirada_star }
+    }
+
+	change_orbit = 45
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	change_orbit = 25
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Siano"
+        class = pc_barren
+        orbit_distance = 10
+        orbit_angle = 329
+        has_ring = no
+		size = 12
+		flags = {subclass_world siano_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+
+			add_deposit = d_eezo_1
+            add_anomaly = {
+                category = BTR_SIANO_BUNKERS
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+    }
+
+    planet = {
+        name = "Thenusi"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 112
+        has_ring = no
+		size = 9
+		flags = {subclass_world thenusi_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Canalus"
+        class = pc_molten
+        orbit_distance = 80
+        orbit_angle = 272
+        has_ring = no
+		size = 11
+		flags = {subclass_world canalus_planet}
+        init_effect = {
+            add_anomaly = {
+                category = BTR_CANALUS_HOT_SPIN
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Zeth"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 318
+        has_ring = no
+		size = 35
+		flags = {subclass_world zeth_planet}
+    }
+
+    planet = {
+        name = "Sineus"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 310
+        has_ring = yes
+		size = 33
+		flags = {subclass_world sineus_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Sineus a"
+			class = pc_iron
+			orbit_angle = 170
+			orbit_distance = 20
+			size = 6
+			flags = { sineus_a_planet }
+		}	
+
+		moon = {
+			name = "Sineus b"
+			class = pc_mephitic
+			orbit_angle = 240
+			orbit_distance = 5
+			size = 6
+			flags = { sineus_b_planet }
+		}
+
+		moon = {
+			name = "Sineus c"
+			class = pc_carbon
+			orbit_angle = 35
+			orbit_distance = 5
+			size = 8
+			flags = { sineus_c_planet }
+		}		
+    }
+
+    planet = {
+        name = "Vioresa"
+        class = pc_ice_giant
+        orbit_distance = 80
+        orbit_angle = 295
+        has_ring = no
+		size = 28
+		flags = {subclass_world vioresa_planet}
+
+		moon = {
+			name = "Vioresa a"
+			class = pc_frozen
+			orbit_angle = 60
+			orbit_distance = 20
+			size = 4
+			flags = { vioresa_a_planet }
+		}	
+
+		moon = {
+			name = "Vioresa b"
+			class = pc_iron
+			orbit_angle = 260
+			orbit_distance = 5
+			size = 4
+			flags = { vioresa_b_planet }
+		}			
+    }
+}
+
+sys_kriseroi_init = {
+    name = "Kriseroi"
+    class = sc_m
+	max_instances = 1
+
+	flags = { attican_traverse sector_at7 pylos_nebula kriseroi_system }
+	
+    planet = {
+		name = "Kriseroi"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 25
+        flags = { kriseroi_star }
+    }
+
+    planet = {
+        name = "Neidus"
+        class = pc_arctic
+        orbit_distance = 25
+        orbit_angle = 11
+        has_ring = no
+		size = 12
+		flags = {subclass_world neidus_planet}
+		entity = "antarctic_planet_05_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+			add_modifier = {
+				modifier = dangerous_wildlife
+				days = -1
+			}
+			add_modifier = {
+				modifier = antar_world
+				days = -1
+			}
+            add_anomaly = {
+                category = BTR_NEIDUS_FROZEN_LOCKED
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+    }
+
+    planet = {
+        name = "Theonax"
+        class = pc_arctic
+        orbit_distance = 100
+        orbit_angle = 202
+        has_ring = no
+		size = 25
+		flags = {subclass_world theonax_planet}
+		entity = "cryovolcanic_planet_07_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = cryovolcanic_world
+				days = -1
+			}
+            add_anomaly = {
+                category = BTR_CHITHES_FROZEN_PAST
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}		
+    }
+
+    planet = {
+        name = "Uzin"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 313
+        has_ring = no
+		size = 29
+		flags = {subclass_world uzin_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Chithess"
+			class = pc_frozen
+			orbit_angle = 90
+			orbit_distance = 20
+			size = 9
+			flags = { chithess_planet }
+		}
+    }
+
+    planet = {
+        name = "Geus"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 219
+        has_ring = no
+		size = 29
+		flags = {subclass_world geus_planet}
+    }
+
+    planet = {
+        name = "Tenoth"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 4
+        has_ring = no
+		size = 3
+		flags = { tenoth_planet }
+    }	
+}
+
+sys_nariph_init = {
+    name = "Nariph"
+    class = sc_m
+	max_instances = 1
+
+	flags = { attican_traverse sector_at7 pylos_nebula nariph_system }
+	
+    planet = {
+		name = "Nariph"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { nariph_star }
+    }
+
+    planet = {
+        name = "Isale"
+        class = pc_gas_giant
+        orbit_distance = 250
+        orbit_angle = 339
+        has_ring = yes
+		size = 35
+		flags = {subclass_world isale_planet}
+        init_effect = {
+            add_anomaly = {
+                category = BTR_ISALE_STRONG_MAGNET
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Jonus"
+        class = pc_ice_giant
+        orbit_distance = 250
+        orbit_angle = 190
+        has_ring = no
+		size = 25
+		flags = {subclass_world jonus_planet}
+
+		moon = {
+			name = "Fargone"
+			class = pc_frozen
+			orbit_angle = 100
+			orbit_distance = 20
+			size = 8
+			flags = { fargone_planet }
+		}		
+    }
+}
+
+sys_satent_init = {
+    name = "Satent"
+    class = "sc_m"
+	max_instances = 1
+
+	flags = { attican_traverse sector_at7 pylos_nebula satent_system }
+
+    planet = {
+		name = "Satent"
+        class = "pc_m_star"
+        orbit_distance = 0
+        size = 25
+        flags = { satent_star }
+    }
+
+    planet = {
+        name = "Rescel"
+        class = "pc_hot_giant"
+        orbit_distance = 30
+        orbit_angle = 172
+        has_ring = no
+		size = 36
+		flags = {subclass_world rescel_planet}
+        init_effect = {
+            add_anomaly = {
+                category = BTR_RESCEL_HOT_JUPITER
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Raisaris"
+        class = "pc_iron"
+        orbit_distance = 40
+        orbit_angle = 231
+        has_ring = no
+		size = 9
+		flags = {subclass_world raisaris_planet}
+
+		init_effect = {
+			add_deposit = d_eezo_3
+		}
+    }
+
+    planet = {
+        name = "Anedia"
+        class = "pc_frozen"
+        orbit_distance = 45
+        orbit_angle = 198
+        has_ring = no
+		size = 7
+		flags = {subclass_world anedia_planet}
+        init_effect = {
+            add_anomaly = {
+                category = BTR_ANEDIA_ICE_BANDITS
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Boro"
+        class = "pc_ammonia"
+        orbit_distance = 40
+        orbit_angle = 148
+        has_ring = no
+		size = 25
+		flags = {subclass_world boro_planet}
+
+		init_effect = {
+			add_deposit = d_eezo_scarce
+		}
+    }
+
+    planet = {
+        name = "Nataisa"
+        class = "pc_ice_giant"
+        orbit_distance = 45
+        orbit_angle = 306
+        has_ring = no
+		size = 26
+		flags = {subclass_world nataisa_planet}
+    }
+}
+
+sys_zaherin_init = {
+    name = "Zaherin"
+    class = sc_k
+	max_instances = 1
+
+	flags = { attican_traverse sector_at7 pylos_nebula zaherin_system primary_relay_system }	
+	
+    planet = {
+		name = "Zaherin"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 30
+        flags = { zaherin_star }
+		init_effect = {
+			create_ambient_object = {
+				type = "nebula_2"
+				entity_offset_height = -5
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+		}
+    }
+
+    planet = {
+        name = "Ehstag"
+        class = pc_desert
+        orbit_distance = 125
+        orbit_angle = 326
+        has_ring = no
+		size = 17
+		flags = {subclass_world ehstag_planet}
+		entity = "dune_planet_03_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dune_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = btr_scorching_surface
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Namakli"
+        class = pc_desert
+        orbit_distance = 125
+        orbit_angle = 75
+        has_ring = no
+		size = 25
+		flags = {subclass_world namakli_planet}
+		entity = "mesa_planet_03_entity"
+        init_effect = {
+            add_anomaly = {
+                category = BTR_NAMAKLI_VORCHA_FARM
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Azrahas"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 181
+        has_ring = no
+		size = 11
+		flags = {subclass_world azrahas_planet}
+        init_effect = {
+            add_anomaly = {
+                category = BTR_AZRAHAS_ANCIENT_RESEARCH
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Rotesk"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 112
+        has_ring = yes
+		size = 26
+		flags = {subclass_world rotesk_planet}
+        init_effect = {
+            add_anomaly = {
+                category = BTR_ROSTESK_DERELICT_FUEL
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "pylosnebula_radanaburst_primaryrelay" 
+			name = "Sector AT7 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

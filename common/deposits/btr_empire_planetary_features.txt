@@ -458,7 +458,7 @@ d_palaven_temple_palaven_ruins = {
 	}
 
 	planet_modifier = {
-		planet_doctors_society_research_produces_mult = 0.10
+		# planet_doctors_society_research_produces_mult = 0.10 # TODO: invalid modifier
 	}
 
 	drop_weight = {
@@ -1286,7 +1286,7 @@ d_kharshan_dizesh_slave_market = {
 
 	planet_modifier = {
 		planet_jobs_trade_produces_add = 10
-		planet_jobs_slave_produces_mult = 0.50
+		# planet_jobs_slave_produces_mult = 0.50 # TODO: invalid modifier
 	}
 
 	drop_weight = {
@@ -1341,7 +1341,7 @@ d_tuchanka_scars_of_rebellion = {
 			owner = { has_origin = aralakh_kah_origin }
 		}
 		modifier = {
-			job_researcher_add = 200
+			planet_jobs_engineering_research_produces_mult = 0.1
 		}
 	}
 
@@ -2654,7 +2654,7 @@ d_vindicta_bella_saevix = {
 	category = deposit_cat_rare	
 
 	planet_modifier = {
-		planet_doctors_society_research_produces_mult = 0.2
+		# planet_doctors_society_research_produces_mult = 0.2 # TODO: invalid modifier
 	}
 
 	triggered_planet_modifier = {

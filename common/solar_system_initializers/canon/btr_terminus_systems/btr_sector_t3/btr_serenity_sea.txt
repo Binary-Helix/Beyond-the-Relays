@@ -1,0 +1,358 @@
+####################
+### SERENITY SEA ###
+####################
+
+sys_azen_init = {
+    name = "Azen"
+    class = sc_f
+	max_instances = 1
+
+    flags = { terminus_systems sector_t3 serenity_sea azen_system primary_relay_system }
+
+    planet = {
+		name = "Azen"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 30
+        flags = { azen_star }
+    }
+
+    planet = {
+        name = "Irix"
+        class = pc_barren
+        orbit_distance = 70
+        orbit_angle = 41
+        size = 11
+        flags = { irix_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Oran"
+        class = pc_molten
+        orbit_distance = 70
+        orbit_angle = 147
+        size = 14
+        flags = { oran_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Miu"
+        class = pc_swamp
+        orbit_distance = 70
+        orbit_angle = 84
+        size = 16
+        flags = { miu_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Diyor"
+        class = pc_hothouse
+        orbit_distance = 70
+        orbit_angle = 179
+        size = 17
+        flags = { diyor_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Jernart"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 102
+        size = 26
+        has_ring = no
+
+        moon = {
+            name = "Janusa"
+            class = pc_frozen
+            orbit_distance = 15
+            orbit_angle = 13
+            size = 5
+            flags = {janusa_planet jernart_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Inis"
+            class = pc_barren_cold
+            orbit_distance = 15
+            orbit_angle = 209
+            size = 3
+            flags = { inis_planet }
+            has_ring = no
+        }
+
+        moon = {
+            name = "Felorth"
+            class = pc_iron
+            orbit_distance = 15
+            orbit_angle = 286
+            size = 4
+            flags = { felorth_planet }
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Bedelao"
+        class = pc_iron
+        orbit_distance = 70
+        orbit_angle = 145
+        size = 15
+        flags = { bedelao_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Sazena"
+        class = pc_frozen
+        orbit_distance = 70
+        orbit_angle = 287
+        size = 12
+        flags = { sazena_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "serenitysea_byenzinecloud_primaryrelay" 
+			name = "Sector T3 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_irullin_init = {
+    name = "Irullin"
+    class = sc_k
+	max_instances = 1
+
+    flags = { terminus_systems sector_t11 serenity_sea irullin_system primary_relay_system }
+
+    asteroid_belt = {
+        type = icy_asteroid_belt
+        radius = 480
+    }
+
+    planet = {
+		name = "Irullin"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 26
+        flags = { irullin_star }
+    }
+
+    planet = {
+        name = "Emun"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 325
+        size = 14
+        flags = { emun_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Vogip"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 231
+        size = 18
+        flags = { vogip_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Volona"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 267
+        size = 13
+        flags = { volona_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Jolbane"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 178
+        size = 20
+        flags = { jolbane_planet }
+        has_ring = no
+    }
+
+    change_orbit = 80
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Nehort"
+        class = pc_chlorine
+        orbit_distance = 20
+        orbit_angle = 97
+        size = 15
+        flags = { nehort_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "serenitysea_sigurdscradle_primaryrelay" 
+			name = "Sector T3 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_kiss_init = {
+    name = "Kis's"
+    class = sc_k
+	max_instances = 1
+
+    flags = { terminus_systems sector_t3 serenity_sea kiss_system secondary_relay_system }
+
+    init_effect = {
+        save_global_event_target_as = lystheniSciCon2
+    }
+
+    planet = {
+		name = "Kis's"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 23
+        flags = { kiss_star }
+    }
+
+    planet = {
+        name = "Eralae"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 121
+        size = 10
+        flags = { eralae_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Gebat"
+        class = pc_tundra
+        orbit_distance = 150
+        orbit_angle = 208
+        size = 17
+        has_ring = no
+
+        moon = {
+            name = "Rogon"
+            class = pc_barren_cold
+            orbit_distance = 15
+            orbit_angle = 5
+            size = 3
+            flags = {rogon_planet gebat_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Pawow"
+        class = pc_ice_giant
+        orbit_distance = 150
+        orbit_angle = 245
+        size = 25
+        has_ring = no
+
+        moon = {
+            name = "Siral"
+            class = pc_molten
+            orbit_distance = 15
+            orbit_angle = 107
+            size = 5
+            flags = {siral_planet pawow_planet}
+            has_ring = no
+        }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_3_secondaryrelay" 
+			name = "Sector T3 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_yonis_init = {
+    name = "Yonis"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t12 serenity_sea yonis_system }
+
+    planet = {
+		name = "Yonis"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 32
+        flags = { yonis_star }
+    }
+
+    planet = {
+        name = "Olana"
+        class = pc_gas_giant
+        orbit_distance = 150
+        orbit_angle = 215
+        size = 35
+        has_ring = no
+
+        moon = {
+            name = "Inika"
+            class = pc_barren
+            orbit_distance = 16
+            orbit_angle = 253
+            size = 4
+            flags = {inika_planet olana_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Amanore"
+            class = pc_barren_cold
+            orbit_distance = 14
+            orbit_angle = 217
+            size = 6
+            flags = { amanore_planet }
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Maeponi"
+        class = pc_barren
+        orbit_distance = 150
+        orbit_angle = 230
+        size = 17
+        flags = { maeponi_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Paebene"
+        class = pc_carbon
+        orbit_distance = 150
+        orbit_angle = 240
+        size = 15
+        flags = { paebene_planet }
+        has_ring = no
+    }
+}

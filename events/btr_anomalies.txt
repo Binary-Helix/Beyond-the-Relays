@@ -288,7 +288,7 @@ ship_event = {
         name = btr_anomaly.10.b
         trigger = {
             owner = {
-                has_origin = turian_hier_origin
+                has_origin = turian_hie_origin
             }
         }
         FROM = {
@@ -1133,7 +1133,7 @@ ship_event = {
                 OR = {
                     has_origin = salarian_uni_origin
                     has_origin = asari_rep_origin
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                 }
             }
         }
@@ -1245,7 +1245,6 @@ ship_event = {
                     add_opinion_modifier = {
                         who = root
                         modifier = opinion_insult
-                        days = 1800
                     }
                 }
             }
@@ -1337,7 +1336,7 @@ ship_event = {
                     has_origin = vol_pro_origin
                     has_origin = courts_dek_origin
                     has_origin = systems_all_origin
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                     has_origin = salarian_uni_origin
                     has_origin = asari_rep_origin
                 }
@@ -1503,8 +1502,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.45
-    title = btr_anomaly.45.name
-    desc = btr_anomaly.45.desc
+    title = "btr_anomaly.45.name"
+    desc = "btr_anomaly.45.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -1531,8 +1530,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.46
-    title = btr_anomaly.46.name
-    desc = btr_anomaly.46.desc
+    title = "btr_anomaly.46.name"
+    desc = "btr_anomaly.46.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -1563,8 +1562,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.47
-    title = btr_anomaly.47.name
-    desc = btr_anomaly.47.desc
+    title = "btr_anomaly.47.name"
+    desc = "btr_anomaly.47.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -1582,8 +1581,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.48
-    title = btr_anomaly.48.name
-    desc = btr_anomaly.48.desc
+    title = "btr_anomaly.48.name"
+    desc = "btr_anomaly.48.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -1603,7 +1602,7 @@ ship_event = {
         name = btr_anomaly.48.b
         trigger = {
             owner = {
-                has_origin = has_origin = asari_rep_origin
+                has_origin = asari_rep_origin
             }
         }
         FROM = {
@@ -1628,8 +1627,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.49
-    title = btr_anomaly.49.name
-    desc = btr_anomaly.49.desc
+    title = "btr_anomaly.49.name"
+    desc = "btr_anomaly.49.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -1647,8 +1646,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.50
-    title = btr_anomaly.50.name
-    desc = btr_anomaly.50.desc
+    title = "btr_anomaly.50.name"
+    desc = "btr_anomaly.50.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -1669,8 +1668,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.51
-    title = btr_anomaly.51.name
-    desc = btr_anomaly.51.desc
+    title = "btr_anomaly.51.name"
+    desc = "btr_anomaly.51.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -1755,8 +1754,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.52
-    title = btr_anomaly.52.name
-    desc = btr_anomaly.52.desc
+    title = "btr_anomaly.52.name"
+    desc = "btr_anomaly.52.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -1780,8 +1779,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.53
-    title = btr_anomaly.53.name
-    desc = btr_anomaly.53.desc
+    title = "btr_anomaly.53.name"
+    desc = "btr_anomaly.53.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -1866,8 +1865,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.54
-    title = btr_anomaly.54.name
-    desc = btr_anomaly.54.desc
+    title = "btr_anomaly.54.name"
+    desc = "btr_anomaly.54.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -1895,8 +1894,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.55
-    title = btr_anomaly.55.name
-    desc = btr_anomaly.55.desc
+    title = "btr_anomaly.55.name"
+    desc = "btr_anomaly.55.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -1937,8 +1936,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.56
-    title = btr_anomaly.56.name
-    desc = btr_anomaly.56.desc
+    title = "btr_anomaly.56.name"
+    desc = "btr_anomaly.56.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -1958,8 +1957,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.57
-    title = btr_anomaly.57.name
-    desc = btr_anomaly.57.desc
+    title = "btr_anomaly.57.name"
+    desc = "btr_anomaly.57.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -1979,8 +1978,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.58
-    title = btr_anomaly.58.name
-    desc = btr_anomaly.58.desc
+    title = "btr_anomaly.58.name"
+    desc = "btr_anomaly.58.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2005,8 +2004,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.59
-    title = btr_anomaly.59.name
-    desc = btr_anomaly.59.desc
+    title = "btr_anomaly.59.name"
+    desc = "btr_anomaly.59.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2045,8 +2044,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.60
-    title = btr_anomaly.60.name
-    desc = btr_anomaly.60.desc
+    title = "btr_anomaly.60.name"
+    desc = "btr_anomaly.60.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2074,8 +2073,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.61
-    title = btr_anomaly.61.name
-    desc = btr_anomaly.61.desc
+    title = "btr_anomaly.61.name"
+    desc = "btr_anomaly.61.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2103,8 +2102,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.62
-    title = btr_anomaly.62.name
-    desc = btr_anomaly.62.desc
+    title = "btr_anomaly.62.name"
+    desc = "btr_anomaly.62.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2145,8 +2144,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.63
-    title = btr_anomaly.63.name
-    desc = btr_anomaly.63.desc
+    title = "btr_anomaly.63.name"
+    desc = "btr_anomaly.63.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2186,8 +2185,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.64
-    title = btr_anomaly.64.name
-    desc = btr_anomaly.64.desc
+    title = "btr_anomaly.64.name"
+    desc = "btr_anomaly.64.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2205,8 +2204,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.65
-    title = btr_anomaly.65.name
-    desc = btr_anomaly.65.desc
+    title = "btr_anomaly.65.name"
+    desc = "btr_anomaly.65.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2260,8 +2259,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.66
-    title = btr_anomaly.66.name
-    desc = btr_anomaly.66.desc
+    title = "btr_anomaly.66.name"
+    desc = "btr_anomaly.66.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2280,8 +2279,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.67
-    title = btr_anomaly.67.name
-    desc = btr_anomaly.67.desc
+    title = "btr_anomaly.67.name"
+    desc = "btr_anomaly.67.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2307,8 +2306,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.68
-    title = btr_anomaly.68.name
-    desc = btr_anomaly.68.desc
+    title = "btr_anomaly.68.name"
+    desc = "btr_anomaly.68.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2339,8 +2338,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.69
-    title = btr_anomaly.69.name
-    desc = btr_anomaly.69.desc
+    title = "btr_anomaly.69.name"
+    desc = "btr_anomaly.69.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2361,8 +2360,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.70
-    title = btr_anomaly.70.name
-    desc = btr_anomaly.70.desc
+    title = "btr_anomaly.70.name"
+    desc = "btr_anomaly.70.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2382,8 +2381,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.71
-    title = btr_anomaly.71.name
-    desc = btr_anomaly.71.desc
+    title = "btr_anomaly.71.name"
+    desc = "btr_anomaly.71.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2408,8 +2407,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.72
-    title = btr_anomaly.72.name
-    desc = btr_anomaly.72.desc
+    title = "btr_anomaly.72.name"
+    desc = "btr_anomaly.72.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2430,8 +2429,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.73
-    title = btr_anomaly.73.name
-    desc = btr_anomaly.73.desc
+    title = "btr_anomaly.73.name"
+    desc = "btr_anomaly.73.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2462,8 +2461,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.74
-    title = btr_anomaly.74.name
-    desc = btr_anomaly.74.desc
+    title = "btr_anomaly.74.name"
+    desc = "btr_anomaly.74.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2484,8 +2483,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.75
-    title = btr_anomaly.75.name
-    desc = btr_anomaly.75.desc
+    title = "btr_anomaly.75.name"
+    desc = "btr_anomaly.75.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2577,8 +2576,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.76
-    title = btr_anomaly.76.name
-    desc = btr_anomaly.76.desc
+    title = "btr_anomaly.76.name"
+    desc = "btr_anomaly.76.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2598,8 +2597,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.77
-    title = btr_anomaly.77.name
-    desc = btr_anomaly.77.desc
+    title = "btr_anomaly.77.name"
+    desc = "btr_anomaly.77.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2620,8 +2619,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.78
-    title = btr_anomaly.78.name
-    desc = btr_anomaly.78.desc
+    title = "btr_anomaly.78.name"
+    desc = "btr_anomaly.78.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2646,8 +2645,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.79
-    title = btr_anomaly.79.name
-    desc = btr_anomaly.79.desc
+    title = "btr_anomaly.79.name"
+    desc = "btr_anomaly.79.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2667,8 +2666,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.80
-    title = btr_anomaly.80.name
-    desc = btr_anomaly.80.desc
+    title = "btr_anomaly.80.name"
+    desc = "btr_anomaly.80.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2734,8 +2733,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.81
-    title = btr_anomaly.81.name
-    desc = btr_anomaly.81.desc
+    title = "btr_anomaly.81.name"
+    desc = "btr_anomaly.81.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2763,8 +2762,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.82
-    title = btr_anomaly.82.name
-    desc = btr_anomaly.82.desc
+    title = "btr_anomaly.82.name"
+    desc = "btr_anomaly.82.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2788,8 +2787,8 @@ ship_event = {
 }
 ship_event = {
     id = btr_anomaly.83
-    title = btr_anomaly.83.name
-    desc = btr_anomaly.83.desc
+    title = "btr_anomaly.83.name"
+    desc = "btr_anomaly.83.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2805,7 +2804,7 @@ ship_event = {
             owner = {
                 NOR = {
                     has_origin = vol_pro_origin
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                     has_origin = migrant_fle_origin
                     has_origin = courts_dek_origin
                 }
@@ -2822,7 +2821,7 @@ ship_event = {
             owner = {
                 OR = {
                     has_origin = vol_pro_origin
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                     has_origin = migrant_fle_origin
                     has_origin = courts_dek_origin
                 }
@@ -2837,8 +2836,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.84
-    title = btr_anomaly.84.name
-    desc = btr_anomaly.84.desc
+    title = "btr_anomaly.84.name"
+    desc = "btr_anomaly.84.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2863,8 +2862,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.85
-    title = btr_anomaly.85.name
-    desc = btr_anomaly.85.desc
+    title = "btr_anomaly.85.name"
+    desc = "btr_anomaly.85.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2889,8 +2888,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.86
-    title = btr_anomaly.86.name
-    desc = btr_anomaly.86.desc
+    title = "btr_anomaly.86.name"
+    desc = "btr_anomaly.86.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2911,8 +2910,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.87
-    title = btr_anomaly.87.name
-    desc = btr_anomaly.87.desc
+    title = "btr_anomaly.87.name"
+    desc = "btr_anomaly.87.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2932,8 +2931,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.88
-    title = btr_anomaly.88.name
-    desc = btr_anomaly.88.desc
+    title = "btr_anomaly.88.name"
+    desc = "btr_anomaly.88.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2953,8 +2952,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.89
-    title = btr_anomaly.89.name
-    desc = btr_anomaly.89.desc
+    title = "btr_anomaly.89.name"
+    desc = "btr_anomaly.89.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -2974,8 +2973,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.90
-    title = btr_anomaly.90.name
-    desc = btr_anomaly.90.desc
+    title = "btr_anomaly.90.name"
+    desc = "btr_anomaly.90.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3015,8 +3014,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.91
-    title = btr_anomaly.91.name
-    desc = btr_anomaly.91.desc
+    title = "btr_anomaly.91.name"
+    desc = "btr_anomaly.91.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3041,8 +3040,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.92
-    title = btr_anomaly.92.name
-    desc = btr_anomaly.92.desc
+    title = "btr_anomaly.92.name"
+    desc = "btr_anomaly.92.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3089,8 +3088,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.93
-    title = btr_anomaly.93.name
-    desc = btr_anomaly.93.desc
+    title = "btr_anomaly.93.name"
+    desc = "btr_anomaly.93.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3151,8 +3150,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.94
-    title = btr_anomaly.94.name
-    desc = btr_anomaly.94.desc
+    title = "btr_anomaly.94.name"
+    desc = "btr_anomaly.94.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3300,8 +3299,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.95
-    title = btr_anomaly.95.name
-    desc = btr_anomaly.95.desc
+    title = "btr_anomaly.95.name"
+    desc = "btr_anomaly.95.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3326,8 +3325,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.96
-    title = btr_anomaly.96.name
-    desc = btr_anomaly.96.desc
+    title = "btr_anomaly.96.name"
+    desc = "btr_anomaly.96.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3352,8 +3351,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.97
-    title = btr_anomaly.97.name
-    desc = btr_anomaly.97.desc
+    title = "btr_anomaly.97.name"
+    desc = "btr_anomaly.97.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3371,8 +3370,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.98
-    title = btr_anomaly.98.name
-    desc = btr_anomaly.98.desc
+    title = "btr_anomaly.98.name"
+    desc = "btr_anomaly.98.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3397,8 +3396,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.99
-    title = btr_anomaly.99.name
-    desc = btr_anomaly.99.desc
+    title = "btr_anomaly.99.name"
+    desc = "btr_anomaly.99.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3418,8 +3417,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.100
-    title = btr_anomaly.100.name
-    desc = btr_anomaly.100.desc
+    title = "btr_anomaly.100.name"
+    desc = "btr_anomaly.100.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3439,8 +3438,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.101
-    title = btr_anomaly.101.name
-    desc = btr_anomaly.101.desc
+    title = "btr_anomaly.101.name"
+    desc = "btr_anomaly.101.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3493,7 +3492,7 @@ ship_event = {
         name = btr_anomaly.101.c
         trigger = {
             owner = {
-                has_origin = turian_hier_origin
+                has_origin = turian_hie_origin
             }
         }
         owner = {
@@ -3519,8 +3518,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.102
-    title = btr_anomaly.102.name
-    desc = btr_anomaly.102.desc
+    title = "btr_anomaly.102.name"
+    desc = "btr_anomaly.102.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3545,8 +3544,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.103
-    title = btr_anomaly.103.name
-    desc = btr_anomaly.103.desc
+    title = "btr_anomaly.103.name"
+    desc = "btr_anomaly.103.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3566,8 +3565,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.104
-    title = btr_anomaly.104.name
-    desc = btr_anomaly.104.desc
+    title = "btr_anomaly.104.name"
+    desc = "btr_anomaly.104.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3592,8 +3591,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.105
-    title = btr_anomaly.105.name
-    desc = btr_anomaly.105.desc
+    title = "btr_anomaly.105.name"
+    desc = "btr_anomaly.105.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3637,8 +3636,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.106
-    title = btr_anomaly.106.name
-    desc = btr_anomaly.106.desc
+    title = "btr_anomaly.106.name"
+    desc = "btr_anomaly.106.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3695,8 +3694,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.107
-    title = btr_anomaly.107.name
-    desc = btr_anomaly.107.desc
+    title = "btr_anomaly.107.name"
+    desc = "btr_anomaly.107.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3718,7 +3717,7 @@ ship_event = {
         trigger = {
             owner = {
                 OR = {
-                    has_origin = turian_hier_origin
+                    has_origin = turian_hie_origin
                     has_origin = asari_rep_origin
                     has_origin = salarian_uni_origin
                 }
@@ -3749,8 +3748,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.108
-    title = btr_anomaly.108.name
-    desc = btr_anomaly.108.desc
+    title = "btr_anomaly.108.name"
+    desc = "btr_anomaly.108.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3775,8 +3774,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.109
-    title = btr_anomaly.109.name
-    desc = btr_anomaly.109.desc
+    title = "btr_anomaly.109.name"
+    desc = "btr_anomaly.109.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3824,8 +3823,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.110
-    title = btr_anomaly.110.name
-    desc = btr_anomaly.110.desc
+    title = "btr_anomaly.110.name"
+    desc = "btr_anomaly.110.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3843,8 +3842,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.111
-    title = btr_anomaly.111.name
-    desc = btr_anomaly.111.desc
+    title = "btr_anomaly.111.name"
+    desc = "btr_anomaly.111.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3864,8 +3863,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.112
-    title = btr_anomaly.112.name
-    desc = btr_anomaly.112.desc
+    title = "btr_anomaly.112.name"
+    desc = "btr_anomaly.112.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3890,8 +3889,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.113
-    title = btr_anomaly.113.name
-    desc = btr_anomaly.113.desc
+    title = "btr_anomaly.113.name"
+    desc = "btr_anomaly.113.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3914,8 +3913,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.114
-    title = btr_anomaly.114.name
-    desc = btr_anomaly.114.desc
+    title = "btr_anomaly.114.name"
+    desc = "btr_anomaly.114.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3936,8 +3935,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.115
-    title = btr_anomaly.115.name
-    desc = btr_anomaly.115.desc
+    title = "btr_anomaly.115.name"
+    desc = "btr_anomaly.115.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -3984,8 +3983,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.116
-    title = btr_anomaly.116.name
-    desc = btr_anomaly.116.desc
+    title = "btr_anomaly.116.name"
+    desc = "btr_anomaly.116.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4010,8 +4009,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.117
-    title = btr_anomaly.117.name
-    desc = btr_anomaly.117.desc
+    title = "btr_anomaly.117.name"
+    desc = "btr_anomaly.117.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4036,8 +4035,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.118
-    title = btr_anomaly.118.name
-    desc = btr_anomaly.118.desc
+    title = "btr_anomaly.118.name"
+    desc = "btr_anomaly.118.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4062,8 +4061,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.119
-    title = btr_anomaly.119.name
-    desc = btr_anomaly.119.desc
+    title = "btr_anomaly.119.name"
+    desc = "btr_anomaly.119.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4081,8 +4080,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.120
-    title = btr_anomaly.120.name
-    desc = btr_anomaly.120.desc
+    title = "btr_anomaly.120.name"
+    desc = "btr_anomaly.120.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4107,8 +4106,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.121
-    title = btr_anomaly.121.name
-    desc = btr_anomaly.121.desc
+    title = "btr_anomaly.121.name"
+    desc = "btr_anomaly.121.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4128,8 +4127,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.122
-    title = btr_anomaly.122.name
-    desc = btr_anomaly.122.desc
+    title = "btr_anomaly.122.name"
+    desc = "btr_anomaly.122.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4147,8 +4146,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.123
-    title = btr_anomaly.123.name
-    desc = btr_anomaly.123.desc
+    title = "btr_anomaly.123.name"
+    desc = "btr_anomaly.123.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4173,8 +4172,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.124
-    title = btr_anomaly.124.name
-    desc = btr_anomaly.124.desc
+    title = "btr_anomaly.124.name"
+    desc = "btr_anomaly.124.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4194,8 +4193,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.125
-    title = btr_anomaly.125.name
-    desc = btr_anomaly.125.desc
+    title = "btr_anomaly.125.name"
+    desc = "btr_anomaly.125.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4229,8 +4228,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.126
-    title = btr_anomaly.126.name
-    desc = btr_anomaly.126.desc
+    title = "btr_anomaly.126.name"
+    desc = "btr_anomaly.126.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4256,8 +4255,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.127
-    title = btr_anomaly.127.name
-    desc = btr_anomaly.127.desc
+    title = "btr_anomaly.127.name"
+    desc = "btr_anomaly.127.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4287,8 +4286,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.128
-    title = btr_anomaly.128.name
-    desc = btr_anomaly.128.desc
+    title = "btr_anomaly.128.name"
+    desc = "btr_anomaly.128.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4309,8 +4308,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.129
-    title = btr_anomaly.129.name
-    desc = btr_anomaly.129.desc
+    title = "btr_anomaly.129.name"
+    desc = "btr_anomaly.129.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4330,8 +4329,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.130
-    title = btr_anomaly.130.name
-    desc = btr_anomaly.130.desc
+    title = "btr_anomaly.130.name"
+    desc = "btr_anomaly.130.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4378,8 +4377,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.131
-    title = btr_anomaly.131.name
-    desc = btr_anomaly.131.desc
+    title = "btr_anomaly.131.name"
+    desc = "btr_anomaly.131.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4431,8 +4430,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.132
-    title = btr_anomaly.132.name
-    desc = btr_anomaly.132.desc
+    title = "btr_anomaly.132.name"
+    desc = "btr_anomaly.132.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4479,8 +4478,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.133
-    title = btr_anomaly.133.name
-    desc = btr_anomaly.133.desc
+    title = "btr_anomaly.133.name"
+    desc = "btr_anomaly.133.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4505,8 +4504,8 @@ ship_event = {
 
 ship_event = {
     id = btr_anomaly.134
-    title = btr_anomaly.134.name
-    desc = btr_anomaly.134.desc
+    title = "btr_anomaly.134.name"
+    desc = "btr_anomaly.134.desc"
     picture = GFX_evt_warm_barren
     show_sound = event_mystic_reveal
     location = FROM
@@ -4522,5 +4521,48 @@ ship_event = {
             add_trait = leader_trait_expertise_materials
         }
         #TODO Possibly add an eezo deposit based on the localization? Probably a size 1.
+    }
+}
+
+ship_event = { # Written by Jontxu8831 
+    # TODO: verify that pressha is behaving appropriately
+    id = btr_anomaly.135
+    title = "btr_anomaly.135.name"
+    desc = "btr_anomaly.135.desc"
+    picture = GFX_evt_mining_station
+    show_sound = event_ship_bridge
+    location = FROM
+
+    is_triggered_only = yes
+
+    immediate = {
+    }
+
+    option = {
+        name = btr_anomaly.135.a
+        leader = {
+            add_experience = 200
+        }
+    }
+
+    option = {
+        exclusive_trigger = {
+            owner = {
+                has_origin = turian_hie_origin
+            }
+        }
+        # icon = { # TODO make this a Turian Icon
+        #     icon = #TODO
+        #    # text = IS_LITHOID_EMPIRE_ICON_TIP
+        # }
+        name = btr_anomaly.135.b
+        leader = {
+            add_experience = 200
+        }
+        owner = {
+            add_resource = {
+                influence = 25
+            }
+        }
     }
 }

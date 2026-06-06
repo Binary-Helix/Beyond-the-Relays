@@ -1,0 +1,550 @@
+###################
+### ANNOS BASIN ###
+###################
+
+sys_aezeni_init = {
+    name = "Aezeni"
+    class = sc_b_super
+	max_instances = 1
+
+    flags = { inner_council sector_ic5 annos_basin aezeni_system secondary_relay_system }
+	
+	planet = {
+	    name = "Aezeni"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 20
+        flags = { aezeni_star }
+	}
+
+	planet = {
+		name = "Wiui"
+		class = pc_arid
+        orbit_distance = 250
+        size = 10
+        flags = { wiui_planet }
+	}
+
+	planet = {
+		name = "Cabami"
+		class = pc_molten
+        orbit_distance = 250
+        size = 25
+
+		moon = {
+			name = "Lagar"
+			class = pc_frozen
+			orbit_distance = 20
+            size = 9
+            flags = {lagar_planet cabami_planet}
+		}	
+
+		moon = {
+			name = "Janoko"
+			class = pc_barren_cold
+			orbit_distance = 5
+            size = 6
+            flags = { janoko_planet }
+		}
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "inner_council_sector_5_secondaryrelay" 
+			name = "Sector IC5 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_endera_init = {
+	name = "Endera"
+	class = "sc_m_super"
+	max_instances = 1
+
+    flags = { inner_council sector_ic5 annos_basin endera_system }
+
+	planet = {
+		name = "Endera"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 20
+        flags = { endera_star }
+	}
+
+	planet = {
+		name = "Indiralia"
+		class = pc_carbon
+        orbit_distance = 125
+        size = 13
+        flags = { indiralia_planet }
+	}
+
+	planet = {
+		name = "Qest'En"
+		class = pc_mephitic
+        orbit_distance = 125
+        size = 10
+        flags = { qesten_planet }
+		has_ring = no
+	}	
+		
+	planet = {
+		name = "Bunf"
+		class = pc_gas_giant
+        orbit_distance = 125
+        size = 36
+		has_ring = yes
+
+		moon = {
+			name = "Bunf a"
+			class = pc_chlorine
+			orbit_distance = 20
+			size = 8
+			flags = {bunf_a_planet bunf_planet}
+		}
+
+		moon = {
+			name = "Bunf b"
+			class = pc_asteroid
+			orbit_distance = 5
+			size = 2
+			flags = { bunf_b_planet }
+		}
+
+		moon = {
+			name = "Bunf c"
+			class = pc_iron
+			orbit_distance = 5
+			size = 6
+			flags = { bunf_c_planet }
+		}
+	}	
+
+	planet = {
+		name = "Lambda"
+		class = pc_ice_giant
+        orbit_distance = 125
+        size = 28
+        flags = { lambda_planet }
+		has_ring = no
+	}	
+}
+
+sys_ilhani_init = {
+    name = "Ilhani"
+    class = sc_g
+	max_instances = 1
+
+    flags = { inner_council sector_ic5 annos_basin ilhani_system primary_relay_system }
+
+    planet = {
+		name = "Ilhani"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { ilhani_star }
+	}
+	
+	planet = {
+		name = "Opua"
+		class = pc_hothouse
+        orbit_distance = 35
+        size = 14
+        flags = { opua_planet }
+	}
+
+	planet = {
+		name = "Makai"
+		class = pc_ocean
+        orbit_distance = 30
+        size = 19
+        flags = { makai_planet }
+		has_ring = no
+	}	
+		
+	planet = {
+		name = "Enekini"
+		class = pc_gas_giant
+        orbit_distance = 55
+        size = 36
+        flags = { enekini_planet }
+		has_ring = yes
+	}
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "annosbasin_seloquelnebula_primaryrelay" 
+			name = "Sector IC5 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_pranas_init = {
+    name = "Pranas"
+    class = sc_g
+	max_instances = 1
+    usage = custom_empire
+
+    flags = { inner_council sector_ic5 annos_basin pranas_system salarian_union_system }
+
+    init_effect = {
+        save_global_event_target_as = salarianSecondFleet
+        generate_btr_home_system_resources = yes
+    }
+    
+    asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 450
+	}	
+
+    planet = {
+		name = "Pranas"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { pranas_star }
+	}
+
+    planet = {
+        name = "Saradril"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 148
+        size = 13
+        flags = { saradril_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Sur'Kesh"
+        class = pc_tropical
+        orbit_distance = 100
+        orbit_angle = 179
+        size = 16
+        starting_planet = yes
+        has_ring = no	
+        flags = { surkesh_planet subclass_world }
+        deposit_blockers = none
+        modifiers = none
+        init_effect = {
+            add_modifier = {
+                modifier = jungle_world
+                days = -1
+            }
+			save_global_event_target_as = salarianHomeworld
+			if = {
+				limit = {
+					exists = event_target:salarianHomeworld
+				}
+				log = "Salarian Homeworld Event Target Set"
+			}
+            prevent_anomaly = yes
+
+            check_for_salarian_player = yes
+
+            if = {
+				limit = {
+					any_country = {
+						has_country_flag = salarian_union_player
+					}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = salarian_union_player
+					}
+					save_global_event_target_as = salarian_union
+				}
+                generate_empire_home_planet = yes
+            }
+			else = {
+				generate_salarian_union_country = yes
+			}
+            set_capital = yes
+			set_owner = event_target:salarian_union
+			create_colony = {
+				owner = event_target:salarian_union
+				species = event_target:salarianSpecies
+				ethos = owner
+			}
+            clear_blockers = yes
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/canon/salarian_uni_origin"
+            generate_sal_surkesh_pops = yes
+            event_target:salarian_union = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+		}
+    }
+
+    planet = {
+        name = "Dragel"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 221
+        size = 3
+        flags = { dragel_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Halegeuse"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 202
+        size = 33
+        has_ring = no
+
+		moon = {
+			name = "Lor'ala"
+			class = pc_barren_cold
+			orbit_distance = 20
+			orbit_angle = 73
+			size = 8
+            flags = {lorala_planet halegeuse_planet}
+		}	
+    }
+
+    planet = {
+        name = "Paeto"
+        class = pc_asteroid
+        orbit_distance = 50
+        orbit_angle = 52
+        size = 4
+        flags = { paeto_planet }
+        has_ring = no
+
+        init_effect = {
+            add_deposit = d_eezo_3
+        }
+	}
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_rothila_init = {
+    name = "Rothila"
+    class = sc_f
+	max_instances = 1
+
+    flags = { inner_council sector_ic5 annos_basin rothila_system salarian_union_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 450
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 500
+	}
+
+    planet = {
+		name = "Rothila"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 20
+        flags = { rothila_star }
+	}	
+	
+	planet = {
+		name = "Friga"
+		class = pc_frozen
+        orbit_distance = 100
+        size = 4
+        flags = { friga_planet }
+	}
+
+	planet = {
+		name = "Dagnes"
+		class = pc_alpine
+        orbit_distance = 100
+        size = 14 
+        flags = { dagnes_planet }
+
+		moon = {
+			name = "Warrik"
+			class = pc_barren
+			orbit_distance = 20
+            size = 6
+            flags = { warrik_planet }
+		}
+
+		moon = {
+			name = "Yomala"
+			class = pc_iron
+			orbit_distance = 5
+            size = 4
+            flags = { yomala_planet }
+		}		
+
+		moon = {
+			name = "Ferwen"
+			class = pc_chlorine
+			orbit_distance = 5
+            size = 11
+            flags = { ferwen_planet }
+		}	
+
+		moon = {
+			name = "Cuzene"
+			class = pc_frozen
+			orbit_distance = 5
+            size = 8
+            flags = { cuzene_planet }
+		}	
+	}
+
+	planet = {
+		name = "Tinoth"
+		class = pc_gas_giant
+        orbit_distance = 100
+        size = 33
+		has_ring = yes
+
+		moon = {
+			name = "Baleia"
+			class = pc_frozen
+			orbit_distance = 20
+			size = 12
+			flags = {baleia_planet tinoth_planet}
+		}	
+	}
+
+	planet = {
+		name = "Jikkart"
+		class = pc_methane
+        orbit_distance = 100
+        size = 14
+        flags = { jikkart_planet }
+	}	
+
+	planet = {
+		name = "1896 Valta"
+		class = pc_asteroid
+        orbit_distance = 50
+        size = 1
+        flags = { 1896_valta_planet }
+	}
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "1897 Niti"
+		class = pc_ice_asteroid
+        orbit_distance = 50
+        size = 2
+        flags = { 1897_niti_planet }
+	}
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}	
+
+sys_ruoshca_init = {
+	name = "Ruoshca"
+	class = sc_g
+	max_instances = 1
+
+    flags = { inner_council sector_ic5 annos_basin ruoshca_system salarian_union_system }
+
+	planet = {
+	    name = "Ruoshca"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+        flags = { ruoshca_star }
+    }
+
+	planet = {
+        name = "Bek'Non"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 277
+        has_ring = no
+        size = 9
+        flags = { beknon_planet }
+    }
+
+    planet = {
+        name = "Aschendal"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 249
+        has_ring = no
+        size = 12
+        flags = { aschendal_planet }
+    }
+
+	planet = {
+        name = "Osu'Debal"
+        class = pc_carbon
+        orbit_distance = 125
+        orbit_angle = 231
+        has_ring = no
+        size = 10
+        flags = { osudebal_planet }
+    }
+
+    planet = {
+        name = "Mannovai"
+        class = pc_swamp
+        orbit_distance = 125
+        orbit_angle = 154
+        has_ring = no
+        size = 24
+        flags = { mannovai_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "annosbasin_andurasector_primaryrelay" 
+			name = "Sector IC5 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_vothi_init = {
+	name = "Vothi"
+	class = "sc_k"
+	max_instances = 1
+
+    flags = { inner_council sector_ic5 annos_basin vothi_system salarian_union_system }
+
+	planet = {
+	    name = "Vothi"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+        flags = { vothi_star }
+    }
+	
+	planet = {
+		name = "Nasurn"
+		class = pc_tropical
+		orbit_distance = 225
+		size = 23
+        flags = { nasurn_planet }
+	}
+}

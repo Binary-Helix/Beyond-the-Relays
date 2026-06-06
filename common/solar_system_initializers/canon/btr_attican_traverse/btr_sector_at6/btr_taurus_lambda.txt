@@ -1,0 +1,267 @@
+#####################
+### TAURUS LAMBDA ###
+#####################
+
+sys_babylonia_init = {
+	name = "Babylonia"
+    class = sc_lbv_green
+	max_instances = 1
+
+    flags = { attican_traverse sector_at6 taurus_lambda babylonia_system primary_relay_system }
+
+	planet = {
+	    name = "Babylonia"
+        class = pc_lbv_green_star
+        orbit_distance = 0
+        size = 30
+        flags = { babylonia_star }
+    }
+
+	planet = {
+	    name = "Tigris"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 4
+        flags = { tigris_planet }
+    }
+
+	planet = {
+	    name = "Euphrates"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 5
+        flags = { euphrates_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "tauruslambda_hindaraglobular_primaryrelay" 
+			name = "Sector AT6 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_canaan_init = {
+	name = "Canaan"
+    class = sc_w_azure
+	max_instances = 1
+
+    flags = { attican_traverse sector_at6 taurus_lambda canaan_system secondary_relay_system }
+
+	planet = {
+	    name = "Canaan"
+        class = pc_w_azure_star
+        orbit_distance = 0
+        size = 34
+        flags = { canaan_star }
+    }
+
+	planet = {
+	    name = "Moloch"
+        class = pc_hothouse
+        orbit_distance = 80
+        size = 14
+        flags = { moloch_planet }
+    }
+
+	planet = {
+	    name = "Asherah"
+        class = pc_iron
+        orbit_distance = 80
+        size = 5
+        flags = { asherah_planet }
+    }
+	
+	planet = {
+	    name = "Baalah"
+        class = pc_gas_giant
+        orbit_distance = 80
+        size = 31
+        flags = { baalah_planet }
+		has_ring = no		
+    }
+
+	planet = {
+	    name = "Bel"
+        class = pc_barren
+        orbit_distance = 80
+        size = 12
+
+        flags = { bel_planet }
+		init_effect = {
+			add_deposit = d_eezo_3
+		}
+    }
+
+	planet = {
+	    name = "Chemosh"
+        class = pc_iron
+        orbit_distance = 80
+        size = 8
+        flags = { chemosh_planet }
+    }
+
+	planet = {
+	    name = "Qos"
+        class = pc_ice_giant
+        orbit_distance = 80
+        size = 31
+
+		moon = {
+			name = "Sydyk"
+			class = pc_frozen
+			orbit_distance = 20
+			size = 5
+			flags = {sydyk_planet qos_planet}
+		}
+
+		moon = {
+			name = "Yarikh"
+			class = pc_barren
+			orbit_distance = 5
+			size = 3
+			flags = { yarikh_planet }
+		}
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_6_secondaryrelay" 
+			name = "Sector AT6 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_hittite_init = {
+	name = "Hittite"
+    class = sc_y
+	max_instances = 1
+
+	flags = { attican_traverse sector_at6 taurus_lambda hittite_system }
+
+	planet = {
+	    name = "Hittite"
+        class = pc_y_star
+        orbit_distance = 0
+        size = 35
+        flags = { hittite_star }
+    }
+
+	planet = {
+	    name = "Tudhaliya"
+        class = pc_arctic
+        orbit_distance = 80
+        size = 9
+        flags = { tudhaliya_planet }
+    }
+
+	planet = {
+	    name = "Hattusili"
+        class = pc_barren_cold
+        orbit_distance = 80
+        size = 5
+        flags = { hattusili_planet }
+    }
+	
+	planet = {
+	    name = "Kurunta"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 7
+        flags = { kurunta_planet }
+    }
+
+	planet = {
+	    name = "Amuwanda"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 12
+        flags = { amuwanda_planet }
+    }
+
+	planet = {
+	    name = "Mursili"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 9
+        flags = { mursili_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "tauruslambda_carinanebula_primaryrelay" 
+			name = "Sector AT6 - Primary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_sumer_init = {
+	name = "Sumer"
+    class = sc_g_super
+	max_instances = 1
+
+	flags = { attican_traverse sector_at6 taurus_lambda sumer_system }
+
+	planet = {
+	    name = "Sumer"
+        class = pc_g_super_star
+        orbit_distance = 0
+        size = 30
+        flags = { sumer_star }
+    }
+
+	planet = {
+	    name = "Nammu"
+        class = pc_barren
+        orbit_distance = 80
+        size = 4
+        flags = { nammu_planet }
+    }
+
+	planet = {
+	    name = "Ki"
+        class = pc_molten
+        orbit_distance = 80
+        size = 5
+        flags = { ki_planet }
+    }
+	
+	planet = {
+	    name = "An"
+        class = pc_molten
+        orbit_distance = 80
+        size = 13		
+        flags = { an_planet }
+    }
+
+	planet = {
+	    name = "Enlil"
+        class = pc_hothouse
+        orbit_distance = 80
+        size = 12
+        flags = { enlil_planet }
+    }
+
+	planet = {
+	    name = "Enki"
+        class = pc_gas_giant
+        orbit_distance = 80
+        size = 32
+        flags = { enki_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Kur"
+        class = pc_barren_cold
+        orbit_distance = 80
+        size = 11
+        flags = { kur_planet }
+    }
+}

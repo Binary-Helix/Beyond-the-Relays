@@ -184,7 +184,6 @@ swarm_army = {
 		is_country_type = "swarm"
 	}
 
-	potential_country = { always = no }
 }
 
 # Rampaging Tree Armies
@@ -579,7 +578,7 @@ imperial_legion = {
 		}
 	}
 
-	potential_country = {
+	potential_country = { # TODO: this needs to be retooled for BTR purposes
 		is_galactic_emperor = yes
 		is_active_resolution = "resolution_emperor_imperial_legions"
 	}
@@ -596,8 +595,6 @@ imperial_legion = {
 		# }
 		always = no
 	}
-
-	potential_country = { always = no }
 
 	on_queued = {
 	}
@@ -713,7 +710,6 @@ crystal_kraken_army = {
 	}
 }
 
-# Zroni Legacy - Shroud Creatures
 shroud_monstrosities = {
 	defensive = yes
 	damage = 15.00

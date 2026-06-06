@@ -1,0 +1,445 @@
+###########################
+### THE PHOENIX MASSING ###
+###########################
+
+sys_chomos_init = {
+    name = "Chomos"
+    class = sc_f
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 the_phoenix_massing chomos_system }
+
+    planet = {
+		name = "Chomos"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 20
+        flags = { chomos_star }
+    }
+
+    planet = {
+        name = "Trigestis"
+        class = pc_gas_giant
+        orbit_distance = 250
+        orbit_angle = 194
+        has_ring = no
+		size = 34
+
+		moon = {
+			name = "Sidacha"
+			class = pc_molten
+			orbit_distance = 20
+			size = 4
+			flags = {sidacha_planet trigestis_planet}
+		}	
+
+		moon = {
+			name = "Norem"
+			class = pc_carbon
+			orbit_distance = 5
+			size = 3
+			flags = { norem_planet }
+		}	
+
+		moon = {
+			name = "Bestia"
+			class = pc_frozen
+			orbit_distance = 5
+			size = 6	
+			flags = { bestia_planet }
+		}
+	}	
+
+    planet = {
+        name = "Lattesh"
+        class = pc_mephitic
+        orbit_distance = 250
+        orbit_angle = 119
+        has_ring = no
+		size = 13
+		flags = {subclass_world lattesh_planet}
+		entity = "mephitic_arctic_planet_03_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = antar_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = bleak_planet
+				days = -1
+			}
+		}
+    }
+}
+
+sys_ekarii_init = {
+	name = "Ekarii"
+	class = sc_m
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 the_phoenix_massing ekarii_system primary_relay_system }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 100
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 250
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 300
+	}	
+	
+	planet = {
+		name = "Ekarii"
+		class = pc_m_star
+        orbit_distance = 0
+		size = 20
+		flags = { ekarii_star }
+	}
+
+    change_orbit = 100
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Serak"
+		class = pc_iron
+        orbit_distance = 50
+		size = 6
+		flags = { serak_planet }
+	}	
+
+    change_orbit = 100
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Gotea"
+		class = pc_ice_giant
+        orbit_distance = 100
+		size = 34
+		flags = { gotea_planet }
+		has_ring = yes
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "phoenixmassing_xosarverge_primaryrelay" 
+			name = "Sector T7 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_salahiel_init = {
+    name = "Salahiel"
+    class = sc_k
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 the_phoenix_massing salahiel_system courts_of_dekuuna_system }
+
+    planet = {
+		name = "Salahiel"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+        flags = { salahiel_star }
+    }
+
+    planet = {
+        name = "Ekuna"
+        class = pc_highgrav_savannah
+        orbit_distance = 250
+        orbit_angle = 24
+        has_ring = no
+		size = 25
+		flags = { ekuna_planet subclass_world }
+		entity = "veld_planet_10_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+			add_modifier = {
+				modifier = veld_world
+				days = -1
+			}
+
+            add_deposit = d_eezo_trace
+		}
+	}		
+}
+
+sys_tassrah_init = {
+    name = "Tassrah"
+    class = sc_a
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 the_phoenix_massing tassrah_system }
+
+    init_effect = {
+        save_global_event_target_as = courtsSci
+    }
+
+    planet = {
+	    name = "Tassrah"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 30
+        flags = { tassrah_star }
+    }
+
+    planet = {
+        name = "Pahhur"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 218
+        has_ring = no
+		size = 25
+		flags = { pahhur_planet }
+	}	
+
+    planet = {
+        name = "Sarapai"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 234
+        has_ring = no
+		size = 15
+		flags = { sarapai_planet }
+	}	
+
+    planet = {
+        name = "Ishassara"
+        class = pc_ice_giant
+        orbit_distance = 150
+        orbit_angle = 95
+        has_ring = no
+		size = 27
+		flags = { ishassara_planet }
+	}
+}	
+
+
+sys_the_sea_of_storms_init = {
+    name = "The Sea of Storms"
+    class = sc_deep_space
+	max_instances = 1
+    usage = custom_empire
+
+    flags = { terminus_systems sector_t7 the_phoenix_massing the_sea_of_storms_system }
+
+    init_effect = {
+        save_global_event_target_as = nazaraFirstFleet
+    }
+
+	planet = {
+		class = pc_invisible_star
+		size = 30
+	}
+
+	change_orbit = 90
+
+    planet = {
+        name = "Heretic Station"
+        class = pc_heretic_station
+        orbit_distance = 0
+        orbit_angle = 144
+        size = 22
+        has_ring = no   
+        starting_planet = yes
+        flags = {heretic_station heretic_station_planet}
+        deposit_blockers = none
+        modifiers = none
+        init_effect = {
+			save_global_event_target_as = disciplesHomeStation
+
+            prevent_anomaly = yes
+
+            check_for_geth_player = yes
+
+            if = {
+				limit = {
+					any_country = {
+						has_country_flag = disciples_of_nazara_player
+					}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = disciples_of_nazara_player
+					}
+					save_global_event_target_as = disciples_of_nazara
+				}
+                generate_empire_home_planet = yes
+            }
+			else = {
+				generate_disciples_of_nazara_country = yes
+			}
+            set_capital = yes
+			set_owner = event_target:disciples_of_nazara
+			create_colony = {
+				owner = event_target:disciples_of_nazara
+				species = event_target:gethSpecies
+				ethos = owner
+			}
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/canon/disciples_naz_origin"
+            generate_naz_station_pops = yes
+            event_target:disciples_of_nazara = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+        }
+    }
+}
+
+sys_typhon_init = {
+    name = "Typhon"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 the_phoenix_massing typhon_system secondary_relay_system planet_state }
+
+    planet = {
+	    name = "Typhon"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+        flags = { typhon_star }
+    }
+
+    planet = {
+        name = "Echidna"
+        class = pc_hot_giant
+        orbit_distance = 60
+        orbit_angle = 198
+        has_ring = no
+		size = 27
+
+		flags = { echidna_planet }
+        init_effect = {
+            add_deposit = d_eezo_4
+        }
+	}	
+
+    planet = {
+        name = "Aite"
+        class = pc_continental
+        orbit_distance = 190
+        orbit_angle = 204
+        has_ring = yes
+		size = 15
+		entity = "temperate_planet_04_entity"
+		deposit_blockers = none
+		modifiers = none
+		flags = {subclass_world aite_planet}
+		init_effect = {
+            save_global_event_target_as = aiteHomeworld
+            set_planet_flag = aite_planet
+            if = {
+                limit = {
+                    exists = event_target:aiteHomeworld
+                }
+                log = "Aite Warring States Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_aite_warring_states_country = yes
+
+            set_capital = yes
+			set_owner = event_target:aite_warring_states
+            set_controller = event_target:aite_warring_states
+			create_colony = {
+				owner = event_target:aite_warring_states
+				species = event_target:batarianSpecies
+				ethos = owner
+			}
+
+            generate_aite_pops = yes
+
+			add_modifier = {
+				modifier = temperate_world
+				days = -1
+			}
+		}
+
+        moon = {
+            name = "Litae"
+            class = pc_frozen
+            orbit_distance = 20
+            orbit_angle = 180
+            has_ring = no
+			size = 5
+			flags = { litae_planet }
+        }
+
+        moon = {
+            name = "Andrasteia"
+            class = pc_iron
+            orbit_distance = 5
+            orbit_angle = 180
+            has_ring = no
+			size = 3		
+			flags = { andrasteia_planet }
+		}
+	}	
+
+    planet = {
+        name = "Moros"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 249
+        has_ring = no
+		size = 10
+
+		flags = { moros_planet }
+        init_effect = {
+            add_deposit = d_eezo_1
+        }
+    }
+
+    planet = {
+        name = "Ponos"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 77
+        has_ring = no
+		size = 36	
+		flags = { ponos_planet }
+	}	
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_7_secondaryrelay" 
+			name = "Sector T7 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

@@ -1,0 +1,533 @@
+####################
+### TEARING LAKE ###
+####################
+
+sys_hildos_init = {
+	name = "Hildos"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t4 tearing_lake hildos_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 440
+	}
+
+	planet = {
+	    name = "Hildos"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+        flags = { hildos_star }
+    }
+
+	planet = {
+	    name = "Acivei"
+        class = pc_barren
+        orbit_distance = 100
+        size = 11
+		flags = {subclass_world acivei_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = cenote_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = dextro_world
+				days = -1
+			}
+		}
+    }
+
+	planet = {
+	    name = "Protastus"
+        class = pc_swamp
+        orbit_distance = 100
+        size = 13
+        flags = { protastus_planet }
+    }
+
+	planet = {
+	    name = "Habrius"
+        class = pc_barren
+        orbit_distance = 100
+        size = 6
+        flags = { habrius_planet }
+    }
+
+	planet = {
+	    name = "Rutitora"
+        class = pc_frozen
+        orbit_distance = 100
+        size = 8
+        flags = { rutitora_planet }
+    }
+
+    change_orbit = 40
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Gegatia"
+        class = pc_frozen
+        orbit_distance = 60
+        size = 10
+        flags = { gegatia_planet }
+    }
+}	
+
+sys_jeltin_init = {
+	name = "Jeltin"
+    class = sc_a
+	max_instances = 1
+
+    flags = { terminus_systems sector_t4 tearing_lake jeltin_system secondary_relay_system }
+
+	planet = {
+	    name = "Jeltin"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 32
+        flags = { jeltin_star }
+    }
+
+	planet = {
+	    name = "Dasorn"
+        class = pc_hothouse
+        orbit_distance = 60
+        size = 28
+        flags = { dasorn_planet }
+    }
+
+	planet = {
+	    name = "Uwa Ercha"
+        class = pc_savannah
+        orbit_distance = 60
+        size = 28
+        flags = { uwa_ercha_planet }
+    }
+
+	planet = {
+	    name = "Tar Dram"
+        class = pc_iron
+        orbit_distance = 60
+        size = 28
+        flags = { tar_dram_planet }
+    }
+
+	planet = {
+	    name = "Opuste"
+        class = pc_iron
+        orbit_distance = 60
+        size = 28
+        flags = { opuste_planet }
+    }
+
+	planet = {
+	    name = "Jiris"
+        class = pc_ice_giant
+        orbit_distance = 60
+        size = 28
+        flags = { jiris_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Undarn Che"
+        class = pc_barren
+        orbit_distance = 60
+        size = 28
+        flags = { undarn_che_planet }
+    }
+
+	planet = {
+	    name = "Zaniss"
+        class = pc_frozen
+        orbit_distance = 60
+        size = 28
+        flags = { zaniss_planet }
+    }
+
+	planet = {
+	    name = "Vasarn"
+        class = pc_barren_cold
+        orbit_distance = 60
+        size = 28
+        flags = { vasarn_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_4_secondaryrelay" 
+			name = "Sector T4 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_lintiss_init = {
+	name = "Lintiss"
+    class = sc_k
+	max_instances = 1
+
+    flags = { terminus_systems sector_t12 tearing_lake lintiss_system }
+
+	planet = {
+	    name = "Lintiss"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 32
+        flags = { lintiss_star }
+    }
+
+	planet = {
+	    name = "Tillyn"
+        class = pc_hothouse
+        orbit_distance = 80
+        size = 9
+        flags = { tillyn_planet }
+    }
+
+	planet = {
+	    name = "Lenlus"
+        class = pc_hothouse
+        orbit_distance = 80
+        size = 12
+        flags = { lenlus_planet }
+    }
+
+	planet = {
+	    name = "Gathering Storm"
+        class = pc_gas_giant
+        orbit_distance = 80
+        size = 34
+		has_ring = no
+		moon = {
+			name = "Zyrdira"
+			class = pc_savannah
+			orbit_distance = 20
+			size = 14
+			flags = {zyrdira_planet gathering_storm_planet}
+		}
+    }
+
+	planet = {
+	    name = "Heart of the Tempest"
+        class = pc_gas_giant
+        orbit_distance = 80
+        size = 33
+		has_ring = yes		
+		moon = {
+			name = "Xinlyn"
+			class = pc_iron
+			orbit_distance = 20
+			size = 28
+			flags = {xinlyn_planet heart_of_the_tempest_planet}
+		}
+		moon = {
+			name = "Kanela"
+			class = pc_barren
+			orbit_distance = 5
+			size = 6
+			flags = { kanela_planet }
+		}
+    }
+
+	planet = {
+	    name = "Henol"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 10
+        flags = { henol_planet }
+    }
+
+	planet = {
+	    name = "Ikder"
+        class = pc_iron
+        orbit_distance = 80
+        size = 4
+        flags = { ikder_planet }
+    }
+}	
+
+sys_mekasus_init = {
+	name = "Mekasus"
+    class = sc_a
+	max_instances = 1
+
+    flags = { terminus_systems sector_t12 tearing_lake mekasus_system }
+
+	planet = {
+	    name = "Mekasus"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 32
+        flags = { mekasus_star }
+    }
+
+	planet = {
+	    name = "Archena"
+        class = pc_hot_giant
+        orbit_distance = 150
+        size = 37
+        flags = { archena_planet }
+    }
+
+	planet = {
+	    name = "Ledaro"
+        class = pc_hothouse
+        orbit_distance = 150
+        size = 18
+        flags = { ledaro_planet }
+    }
+
+	planet = {
+	    name = "Jalana"
+        class = pc_barren_cold
+        orbit_distance = 150
+        size = 12
+        flags = { jalana_planet }
+    }
+}	
+
+sys_nurate_init = {
+	name = "Nurate"
+    class = sc_b
+	max_instances = 1
+
+    flags = { terminus_systems sector_t4 tearing_lake mekasus_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 25
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 490
+	}
+
+	planet = {
+	    name = "Nurate"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 28
+        flags = { nurate_star }
+    }
+
+    change_orbit = 25
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Niremy"
+        class = pc_barren
+        orbit_distance = 25
+        size = 4
+        flags = { niremy_planet }
+    }
+
+	planet = {
+	    name = "Hesakria"
+        class = pc_barren
+        orbit_distance = 50
+        size = 6
+        flags = { hesakria_planet }
+    }
+
+	planet = {
+	    name = "Opasia"
+        class = pc_dextro_desert
+        orbit_distance = 50
+        size = 16
+        flags = { opasia_planet }
+    }
+
+	planet = {
+	    name = "Falinglia"
+        class = pc_hothouse
+        orbit_distance = 50
+        size = 19
+        flags = { falinglia_planet }
+    }
+
+	planet = {
+	    name = "Yaess"
+        class = pc_molten
+        orbit_distance = 50
+        size = 14
+        flags = { yaess_planet }
+    }
+	
+	planet = {
+	    name = "Jonme"
+        class = pc_mephitic
+        orbit_distance = 50
+        size = 21
+        flags = { jonme_planet }
+    }
+
+	planet = {
+	    name = "Kelarnya"
+        class = pc_ice_giant
+        orbit_distance = 50
+        size = 29
+        flags = { kelarnya_planet }
+    }
+
+	planet = {
+	    name = "Misavi"
+        class = pc_gas_giant
+        orbit_distance = 50
+        size = 34
+        flags = { misavi_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Eravame"
+        class = pc_gas_giant
+        orbit_distance = 50
+        size = 37
+
+		moon = {
+			name = "Iotria"
+			class = pc_barren_cold
+			orbit_distance = 20
+			size = 30
+			flags = {iotria_planet eravame_planet}
+		}
+
+		moon = {
+			name = "Xanellsha"
+			class = pc_methane
+			orbit_distance = 5
+			size = 30
+			flags = { xanellsha_planet }
+		}
+
+		moon = {
+			name = "Moraze"
+			class = pc_barren
+			orbit_distance = 5
+			size = 30
+			flags = { moraze_planet }
+		}		
+    }
+
+    change_orbit = 40
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_phodos_init = {
+	name = "Phodos"
+    class = sc_m_giant
+	max_instances = 1
+
+    flags = { terminus_systems sector_t4 tearing_lake phodos_system }
+
+	planet = {
+	    name = "Phodos"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 30
+        flags = { phodos_star }
+    }
+
+	planet = {
+	    name = "Florigatus"
+        class = pc_molten
+        orbit_distance = 80
+        size = 11
+        flags = { florigatus_planet }
+    }
+
+	planet = {
+	    name = "Daxtrius"
+        class = pc_barren
+        orbit_distance = 80
+        size = 13
+        flags = { daxtrius_planet }
+    }
+
+	planet = {
+	    name = "Namoklae"
+        class = pc_hothouse
+        orbit_distance = 80
+        size = 12
+        flags = { namoklae_planet }
+    }
+
+	planet = {
+	    name = "Barbarea"
+        class = pc_barren
+        orbit_distance = 80
+        size = 8
+        flags = { barbarea_planet }
+    }
+
+	planet = {
+	    name = "Cititia"
+        class = pc_ocean
+        orbit_distance = 80
+        size = 10
+
+		moon = {
+			name = "Acpia"
+			class = pc_barren_cold
+			orbit_distance = 20
+			size = 10			
+			flags = {acpia_planet cititia_planet}
+		}
+    }
+
+	planet = {
+	    name = "Vopiruns"
+        class = pc_ice_giant
+        orbit_distance = 80
+        size = 10
+		has_ring = yes
+
+		moon = {
+			name = "Nemenis"
+			class = pc_frozen
+			orbit_distance = 20
+			size = 7			
+			flags = {nemenis_planet vopiruns_planet}
+		}
+
+		moon = {
+			name = "Mercados"
+			class = pc_frozen
+			orbit_distance = 5
+			size = 10			
+			flags = { mercados_planet }
+		}
+
+		moon = {
+			name = "Elvonus"
+			class = pc_methane
+			orbit_distance = 5
+			size = 10			
+			flags = { elvonus_planet }
+		}
+    }
+}

@@ -1,0 +1,286 @@
+####################
+### BULUC NEBULA ###
+####################
+
+sys_chabtan_init = {
+    name = "Chabtan"
+    class = sc_m_super
+	max_instances = 1
+	usage = custom_empire
+
+    flags = { attican_traverse sector_at1 buluc_nebula chabtan_system secondary_relay_system }
+	
+    planet = {
+		name = "Chabtan"	
+        class = pc_m_super_star
+        orbit_distance = 0
+        size = 45
+        flags = { chabtan_star }
+		has_ring = no
+    }
+	
+	planet = {
+		name = "Moscon"
+		class = pc_iron
+		orbit_distance = 125
+		orbit_angle = { min = 1 max = 360 }
+		size = 7
+		has_ring = no
+
+		moon = {
+			name = "Twuiq"
+			class = pc_frozen
+			orbit_distance = 20
+			orbit_angle = { min = 90 max = 270 }
+			size = 1
+			flags = {twuiq_planet moscon_planet}
+		}
+	}
+
+    planet = {
+        name = "Parnack"
+        class = pc_desert
+        orbit_distance = 125
+		orbit_angle = { min = 40 max = 180 }
+		size = 16
+		has_ring = no
+		starting_planet = yes
+		entity = "badlands_planet_07_entity"
+		flags = { parnack_planet subclass_world }
+		deposit_blockers = none
+        modifiers = none
+		# init_effect = {
+		# 	save_global_event_target_as = yahgHomeworld
+		# 	if = {
+		# 		limit = {
+		# 			exists = event_target:yahgHomeworld
+		# 		}
+		# 		log = "Yahg Homeworld Event Target Set"
+		# 	}
+        #     prevent_anomaly = yes
+        #
+        #     check_for_yahg_player = yes
+        #
+        #     if = {
+		# 		limit = {
+		# 			any_country = {
+		# 				has_country_flag = parnack_regime_player
+		# 			}
+		# 		}
+		# 		random_country = {
+		# 			limit = {
+		# 				has_country_flag = parnack_regime_player
+		# 			}
+		# 			save_global_event_target_as = parnack_regime
+		# 		}
+		# 	}
+		# 	else = {
+		# 		generate_paranack_regime_primitive = yes
+		# 	}
+        #     set_capital = yes
+		# 	set_owner = event_target:parnack_regime
+		# 	create_colony = {
+		# 		owner = event_target:parnack_regime
+		# 		species = event_target:yahgSpecies
+		# 		ethos = owner
+		# 	}
+        #     generate_yah_parnack_pops = yes
+		# 	add_modifier = {
+		# 		modifier = badlands_world
+		# 		days = -1
+		# 	}
+		# 	generate_yah_parnack_capital_buildings = yes
+		# }
+	}			
+	
+	planet = {
+		name = "Libel"
+		class = pc_carbon
+		orbit_distance = 125
+		orbit_angle = { min = 1 max = 360 }
+		size = 5
+		flags = { libel_planet }
+		has_ring = no
+	}
+
+    planet = {
+        name = "Noviz"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 126
+        has_ring = no
+    }	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_1_secondaryrelay" 
+			name = "Sector AT1 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_fragotz_init = {
+    name = "Fragotz"
+    class = sc_a
+	max_instances = 1
+
+    flags = { attican_traverse sector_at1 buluc_nebula fragotz_system }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 145
+	}	
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 155
+	}	
+
+    planet = {
+		name = "Fragotz"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 40
+        flags = { fragotz_star }
+    }
+
+	change_orbit = 145
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	change_orbit = 10
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_koryfi_init = {
+    name = "Koryfi"
+    class = sc_b
+	max_instances = 1
+
+    flags = { attican_traverse sector_at1 buluc_nebula koryfi_system }
+	
+    planet = {
+		name = "Koryfi"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 40
+        flags = { koryfi_star }
+    }
+
+	planet = {
+        name = "Theoratas"
+        class = pc_gas_giant
+        orbit_distance = 250
+        orbit_angle = 131
+		size = 3
+		flags = { theoratas_planet }
+        has_ring = no
+	}	
+
+	planet = {
+        name = "Agrypnia Station"
+        class = pc_habitat
+        orbit_distance = 250
+        orbit_angle = 131
+		size = 3
+		flags = { agrypnia_station_station }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Kor"
+        class = pc_frozen
+        orbit_distance = 250
+        orbit_angle = 141
+		size = 8
+		flags = { kor_planet }
+        has_ring = no
+    }
+}
+
+sys_ubroni_init = {
+    name = "Ubroni"
+    class = sc_m
+	max_instances = 1
+
+
+    flags = { attican_traverse sector_at1 buluc_nebula ubroni_system }
+	
+    planet = {
+		name = "Ubroni"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 22
+        flags = { ubroni_star }
+	} 
+
+    planet = {
+        name = "Zankep"
+        class = pc_gas_giant
+        orbit_distance = 150
+        orbit_angle = 13
+        has_ring = no
+		init_effect = {
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Zankep a"
+			class = pc_iron
+			orbit_angle = random
+			orbit_distance = 8
+			size = 4
+			flags = {zankep_a_planet zankep_planet}
+		}	
+
+		moon = {
+			name = "Zankep b"
+			class = pc_frozen
+			orbit_angle = random
+			orbit_distance = 6
+			size = 6
+			flags = { zankep_b_planet }
+		}
+
+		moon = {
+			name = "Zankep c"
+			class = pc_iron
+			orbit_angle = random
+			orbit_distance = 5
+			size = 3
+			flags = { zankep_c_planet }
+		}		
+    }
+
+    planet = {
+        name = "Unoweb"
+        class = pc_ice_giant
+        orbit_distance = 150
+        orbit_angle = 140
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Hasik"
+        class = pc_frozen
+        orbit_distance = 150
+        orbit_angle = 130
+        has_ring = no
+    }
+}

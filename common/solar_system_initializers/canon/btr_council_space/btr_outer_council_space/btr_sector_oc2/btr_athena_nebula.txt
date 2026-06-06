@@ -1,0 +1,584 @@
+#####################
+### ATHENA NEBULA ###
+#####################
+
+sys_ialessa_init = {
+	name = "Ialessa"
+	class = sc_g
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 athena_nebula ialessa_system secondary_relay_system asari_republics_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 225
+	}
+
+	planet = {
+		name = "Ialessa"
+		class = pc_g_star
+		size = 30	
+		flags = { ialessa_star }
+	}
+	
+	planet = {
+		name = "Ilmnos"
+		class = pc_iron
+        orbit_distance = 100
+		orbit_angle = 65
+		size = 16
+		flags = { ilmnos_planet }
+		has_ring = no	
+	}
+
+	planet = {
+		name = "Sanves"
+		class = pc_savannah
+        orbit_distance = 100
+		orbit_angle = 170
+		size = 18
+		has_ring = no
+		modifiers = none
+		flags = { subclass_world sanves_planet }
+		entity = "retinal_planet_09_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = retinal_world
+				days = -1
+			}
+		}
+	}
+
+    change_orbit = 25
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		name = "Zylium"
+		class = pc_gas_giant
+        orbit_distance = 75
+		orbit_angle = 35
+		size = 35	
+		flags = { zylium_planet }
+	}
+	
+	planet = {
+		name = "Trikalon"
+		class = pc_barren
+        orbit_distance = 100
+		orbit_angle = 150
+		size = 4
+		flags = { trikalon_planet }
+		has_ring = no	
+	}
+	
+	planet = {
+		name = "Nossia"
+		class = pc_barren_cold
+        orbit_distance = 100
+		orbit_angle = 20
+		size = 25
+		flags = { nossia_planet }
+		has_ring = no		
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "outer_council_sector_2_secondaryrelay" 
+			name = "Sector OC1 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_orisoni_init = {	
+	name = "Orisoni"
+	class = sc_g
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 athena_nebula orisoni_system primary_relay_system asari_republics_system }
+
+	planet = {
+		name = "Orisoni"
+		class = pc_g_star
+		size = 20	
+		flags = { orisoni_star }
+	}
+	
+	planet = {
+		name = "Thissioni"
+		class = pc_barren
+        orbit_distance = 125
+		orbit_angle = 75
+		size = 15
+		flags = { thissioni_planet }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Niacal"
+		class = pc_mephitic
+        orbit_distance = 125
+		orbit_angle = 90
+		size = 25
+		has_ring = no
+		modifiers = none
+		flags = { subclass_world niacal_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = lush_planet
+				days = -1
+			}
+		}
+	}
+	
+	planet = {
+		name = "Kralla"
+		class = pc_carbon
+        orbit_distance = 125
+		orbit_angle = 130
+		size = 14
+		flags = { kralla_planet }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Egalic"
+		class = pc_gas_giant
+        orbit_distance = 125
+		orbit_angle = -90
+		size = 36
+		flags = { egalic_planet }
+		has_ring = yes		
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "athenanebula_nimbuscluster_primaryrelay" 
+			name = "Sector OC2 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_parnitha_init = {
+	name = "Parnitha"	
+    class = sc_g
+	max_instances = 1
+    usage = empire_init
+    usage = custom_empire
+
+    flags = { outer_council sector_oc2 athena_nebula parnitha_system }
+
+    init_effect = {
+        save_global_event_target_as = asariSecondFleet
+        generate_btr_home_system_resources = yes
+    }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 280
+	}
+	
+	planet = {
+		name = "Parnitha"
+		class = pc_g_star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 26
+		flags = { parnitha_star }
+		has_ring = no	
+	}
+	
+	planet = {
+		name = "Kurinth"
+		class = pc_hothouse
+		orbit_distance = 80
+		orbit_angle = 15
+		size = 10
+		flags = { kurinth_planet }
+		has_ring = no	
+	}
+	
+	planet = {
+		name = "Thessia"
+		class = pc_continental
+		orbit_distance = 80
+		orbit_angle = 80
+		size = 25
+        starting_planet = yes
+		has_ring = no
+		entity = "temperate_planet_01_entity"
+		flags = { thessia_planet subclass_world }	
+        deposit_blockers = none
+        modifiers = none
+		init_effect = {
+            add_modifier = {
+                modifier = temperate_world
+                days = -1
+            }
+			save_global_event_target_as = asariHomeworld
+			if = {
+				limit = {
+					exists = event_target:asariHomeworld
+				}
+				log = "Asari Homeworld Event Target Set"
+			}
+            prevent_anomaly = yes
+
+            check_for_asari_player = yes
+
+            if = {
+				limit = {
+					any_country = {
+						has_country_flag = asari_republics_player
+					}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = asari_republics_player
+					}
+					save_global_event_target_as = asari_republics
+				}
+                generate_empire_home_planet = yes
+            }
+			else = {
+                generate_asari_republics_country = yes
+			}
+            set_capital = yes
+			set_owner = event_target:asari_republics
+			create_colony = {
+				owner = event_target:asari_republics
+				species = event_target:asariSpecies
+				ethos = owner
+			}
+            clear_blockers = yes
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/canon/asari_rep_origin"
+            generate_asr_thessia_pops = yes
+            event_target:asari_republics = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+            create_archaeological_site = btr_precursor_original_pillar
+		}
+	}
+
+	planet = {
+		name = "Piares"
+		class = pc_mephitic
+		orbit_distance = 80
+		orbit_angle = 70
+		size = 15
+		flags = { piares_planet }
+		has_ring = no
+	}
+
+    change_orbit = 40
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Lucen"
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 40 max = 100 }
+		size = 1	
+		flags = { lucen_planet }
+	}
+	
+	planet = {
+		name = "Janiri"
+		class = pc_gas_giant
+		orbit_distance = 40
+		orbit_angle = -60
+		size = 33
+		flags = { janiri_planet }
+		has_ring = yes		
+	}
+	
+	planet = {
+		name = "Athame"
+		class = pc_gas_giant
+		orbit_distance = 80
+		orbit_angle = -100
+		size = 35
+		flags = { athame_planet }
+		has_ring = yes		
+	}
+	
+	planet = {
+		name = "Tevura"
+		class = pc_ice_giant
+		orbit_distance = 80
+		orbit_angle = -170
+		size = 25
+		has_ring = no
+
+		moon = {
+			name = "Tevura I"
+			class = pc_iron
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 20
+			size = 2
+			flags = {tevura_i_planet tevura_planet}
+		}	
+
+		moon = {
+			name = "Tevura II"
+			class = pc_frozen
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			size = 3
+			flags = { tevura_ii_planet }
+		}	
+
+		moon = {
+			name = "Tevura III"
+			class = pc_iron
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			size = 4
+			flags = { tevura_iii_planet }
+		}
+    }
+}
+
+sys_tomaros_init = {
+	name = "Tomaros"
+	class = sc_g
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 athena_nebula tomaros_system asari_republics_system }
+
+	planet = {
+		name = "Tomaros"
+		class = pc_g_star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 16
+		flags = { tomaros_star }
+		has_ring = no	
+	}
+	
+	planet = {
+		name = "Lusia"
+		class = pc_tropical
+        orbit_distance = 125
+		orbit_angle = 110
+		size = 21
+		has_ring = no
+		modifiers = none
+		entity = "coastal_planet_06_entity"
+		flags = { subclass_world lusia_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = coastal_world
+				days = -1
+			}
+		}
+	}
+	
+	planet = {
+		name = "Niagolon"
+		class = pc_gas_giant
+        orbit_distance = 125
+		orbit_angle = -160
+		size = 34
+		flags = { niagolon_planet }
+		has_ring = yes
+	}
+	
+	planet = {
+		name = "Pronoia"
+		class = pc_ice_giant
+        orbit_distance = 125
+		orbit_angle = 100
+		size = 24
+		flags = { pronoia_planet }
+		has_ring = no		
+	}
+	
+	planet = {
+		name = "Beness"
+		class = pc_ice_giant
+        orbit_distance = 125
+		orbit_angle = 100
+		size = 26
+		flags = { beness_planet }
+		has_ring = no	
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "athenanebula_sileannebula_primaryrelay" 
+			name = "Sector OC2 - Primary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_vernio_init = {
+	name = "Vernio"
+	class = sc_f
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 athena_nebula vernio_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 280
+	}
+
+	planet = {
+		name = "Vernio"
+		class = pc_f_star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 20
+		flags = { vernio_star }
+		has_ring = no	
+	}
+	
+	planet = {
+		name = "Nauti"
+		class = pc_hothouse
+        orbit_distance = 125
+		orbit_angle = -90
+		size = 25
+		flags = { nauti_planet }
+		has_ring = no	
+	}
+	
+	planet = {
+		name = "Promavess"
+		class = pc_methane
+        orbit_distance = 125
+		orbit_angle = 70
+		size = 16
+		flags = { promavess_planet }
+		has_ring = no
+	}
+
+    change_orbit = 30
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		name = "Sotera"
+		class = pc_barren
+        orbit_distance = 0
+		orbit_angle = 50
+		size = 12
+		flags = { sotera_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Tritogenith"
+		class = pc_gas_giant
+        orbit_distance = 110
+		orbit_angle = 130
+		size = 33
+		has_ring = no
+
+		moon = {
+			name = "Tritogenith I"
+			class = pc_molten
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 20
+			size = 8
+			flags = {tritogenith_i_planet tritogenith_planet}
+		}		
+
+		moon = {
+			name = "Tritogenith II"
+			class = pc_barren_cold
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			size = 6
+			flags = { tritogenith_ii_planet }
+		}
+
+		moon = {
+			name = "Mavote"
+			class = pc_frozen
+			orbit_distance = 5
+			size = 10
+			flags = { mavote_planet }
+		}	
+	}
+	
+	planet = {
+		name = "Polissa"
+		class = pc_gas_giant
+        orbit_distance = 110
+		orbit_angle = -135
+		size = 25
+		has_ring = yes
+
+		moon = {
+			name = "Polissa I"
+			class = random_non_colonizable
+			orbit_angle = { min = 45 max = 270 }
+			orbit_distance = 20
+			size = 2
+			flags = {polissa_i_planet polissa_planet}
+		}	
+
+		moon = {
+			name = "Polissa VI"
+			class = random_non_colonizable
+			orbit_angle = { min = 45 max = 270 }
+			orbit_distance = 5
+			size = 1
+			flags = { polissa_vi_planet }
+		}	
+
+		moon = {
+			name = "Polissa XI"
+			class = pc_barren_cold
+			orbit_angle = { min = 45 max = 270 }
+			orbit_distance = 5
+			size = 2
+			flags = { polissa_xi_planet }
+		}	
+
+		moon = {
+			name = "Polissa XV"
+			class = pc_iron
+			orbit_angle = { min = 45 max = 270 }
+			orbit_distance = 5
+			size = 3
+			flags = { polissa_xv_planet }
+		}	
+
+		moon = {
+			name = "Polissa XX"
+			class = pc_frozen
+			orbit_angle = { min = 45 max = 270 }
+			orbit_distance = 5
+			size = 2
+			flags = { polissa_xx_planet }
+		}	
+	}
+}
