@@ -25,7 +25,7 @@ from pathlib import Path
 DEFAULT_LOG = Path(os.path.expanduser("~")) / "Documents" / \
     "Paradox Interactive" / "Stellaris" / "logs" / "error.log"
 
-RE_HEAD = re.compile(r"^\[(?:\d[\d:.]*)\]\[([a-z_A-Z0-9]+\.cpp):(\d+)\]:\s*(.*)$")
+RE_HEAD = re.compile(r"^\[(?:\d[\d:.]*)\]\[([a-z_A-Z0-9]+\.(?:cpp|h)):(\d+)\]:\s*(.*)$")
 RE_FILE = re.compile(r'file:\s*"?([^\s",]+)')
 RE_LINE_REF = re.compile(r"\b(?:line|near line):?\s*\d+")
 RE_NUM = re.compile(r"\b\d+\b")
