@@ -62,10 +62,27 @@ def tally(path: Path):
     return total, subs, sigs, files
 
 
-def fmt_report(path: Path, top: int) -> str:
+def noise_sigs(path: Path | None) -> set:
+    """Signature set from a vanilla-only (no mods) run, to subtract."""
+    if not path:
+        return set()
+    _, _, sigs, _ = tally(path)
+    return set(sigs)
+
+
+def fmt_report(path: Path, top: int, noise: set | None = None) -> str:
     total, subs, sigs, files = tally(path)
+    if noise:
+        dropped = sum(c for k, c in sigs.items() if k in noise)
+        sigs = Counter({k: c for k, c in sigs.items() if k not in noise})
+        subs = Counter()
+        for (s, _), c in sigs.items():
+            subs[s] += c
+        total_note = f" ({dropped} lines matched vanilla noise floor and were excluded)"
+    else:
+        total_note = ""
     out = [f"# error.log report — `{path}`", "",
-           f"**{total} parsed error lines**", "",
+           f"**{total} parsed error lines**{total_note}", "",
            "## By subsystem", "", "| count | subsystem |", "|---|---|"]
     out += [f"| {c} | {s} |" for s, c in subs.most_common(top)]
     out += ["", f"## Top signatures (top {top})", "",
@@ -77,9 +94,13 @@ def fmt_report(path: Path, top: int) -> str:
     return "\n".join(out) + "\n"
 
 
-def fmt_diff(base: Path, new: Path, top: int) -> tuple[str, int]:
+def fmt_diff(base: Path, new: Path, top: int,
+             noise: set | None = None) -> tuple[str, int]:
     bt, _, bsigs, _ = tally(base)
     nt, _, nsigs, _ = tally(new)
+    if noise:
+        bsigs = Counter({k: c for k, c in bsigs.items() if k not in noise})
+        nsigs = Counter({k: c for k, c in nsigs.items() if k not in noise})
     new_only = {k: c for k, c in nsigs.items() if k not in bsigs}
     grown = {k: (bsigs[k], c) for k, c in nsigs.items()
              if k in bsigs and c > bsigs[k]}
@@ -110,16 +131,19 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("logs", nargs="*", help="error.log path(s)")
     ap.add_argument("--diff", nargs=2, metavar=("BASE", "NEW"))
+    ap.add_argument("--noise", help="vanilla-only error.log whose signatures are excluded")
     ap.add_argument("--md", help="also write report to this file")
     ap.add_argument("--top", type=int, default=40)
     args = ap.parse_args()
 
+    noise = noise_sigs(Path(args.noise)) if args.noise else None
     if args.diff:
-        report, net_new = fmt_diff(Path(args.diff[0]), Path(args.diff[1]), args.top)
+        report, net_new = fmt_diff(Path(args.diff[0]), Path(args.diff[1]),
+                                   args.top, noise)
         rc = 1 if net_new else 0
     else:
         target = Path(args.logs[0]) if args.logs else DEFAULT_LOG
-        report, rc = fmt_report(target, args.top), 0
+        report, rc = fmt_report(target, args.top, noise), 0
 
     print(report)
     if args.md:
