@@ -105,15 +105,6 @@ clerk = {
 
 	inline_script = "jobs/automodding_priority_trade"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 technician = {
@@ -245,15 +236,6 @@ technician = {
 
 	inline_script = "jobs/automodding_priority_energy"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 miner = {
@@ -485,15 +467,6 @@ miner = {
 
 	inline_script = "jobs/automodding_priority_minerals"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 crystal_miner = {
@@ -756,15 +729,6 @@ farmer = {
 
 	inline_script = "jobs/automodding_priority_food"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 mortal_initiate = {
@@ -835,15 +799,6 @@ mortal_initiate = {
 
 	inline_script = "jobs/automodding_priority_unity"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 scrap_miner = {
@@ -1021,15 +976,6 @@ squire = {
 		factor = 1.2
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 foundry_prison_worker = {
@@ -1108,15 +1054,6 @@ foundry_prison_worker = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 catalytic_technician_prison_worker = {
@@ -1199,15 +1136,6 @@ catalytic_technician_prison_worker = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 artisan_prison_worker = {
@@ -1309,15 +1237,6 @@ artisan_prison_worker = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 artificer_prison_worker = {
@@ -1403,13 +1322,4 @@ artificer_prison_worker = {
 
 	inline_script = "jobs/automodding_priority_trade"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }

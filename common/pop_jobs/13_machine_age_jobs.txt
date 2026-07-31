@@ -128,15 +128,6 @@ haruspex = {
 
 	inline_script = "jobs/automodding_priority_unity"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 technophant = {
@@ -217,15 +208,6 @@ technophant = {
 
 	inline_script = "jobs/automodding_priority_unity"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = ruler
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 # COSMOGENESIS
@@ -290,25 +272,7 @@ neural_chip_processing = {
 		}
 	}
 
-	demotion = {
-		time = 0
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = chip_slave
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 
-	promotion = {
-		time = 0
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = chip_slave
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -340,59 +304,6 @@ neural_chip_unprocessing = {
 		}
 	}
 
-	demotion = {
-		time = 0
-		effect = {
-			if = {
-				limit = {
-					owner = {
-						is_gestalt = no
-					}
-				}
-				pop_amount_change_category = {
-					CATEGORY = civilian
-					AMOUNT = local_pop_amount
-				}
-			}
-			else_if = {
-				limit = {
-					owner = {
-						is_gestalt = yes
-						has_valid_civic = civic_machine_servitor
-					}
-					species = { is_robotic = no }
-				}
-				pop_amount_change_category = {
-					CATEGORY = bio_trophy
-					AMOUNT = local_pop_amount
-				}
-			}
-			else_if = {
-				limit = {
-					owner = {
-						is_gestalt = yes
-						is_wilderness_empire = no
-					}
-				}
-				pop_amount_change_category = {
-					CATEGORY = maintenance_drone
-					AMOUNT = local_pop_amount
-				}
-			}
-			else_if = {
-				limit = {
-					owner = {
-						is_gestalt = yes
-						is_wilderness_empire = yes
-					}
-				}
-				pop_amount_change_category = {
-					CATEGORY = wilderness_heart_strata
-					AMOUNT = local_pop_amount
-				}
-			}
-		}
-	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -512,15 +423,6 @@ augmentor = { # Normal empire
 
 	inline_script = "jobs/automodding_priority_research"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 augmentor_drone = { # Gestalt empire
@@ -643,15 +545,6 @@ augmentor_drone = { # Gestalt empire
 
 	inline_script = "jobs/automodding_priority_research"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 identity_designer = {
@@ -900,15 +793,6 @@ cyberdome_duelist = {
 
 	inline_script = "jobs/automodding_priority_charisma"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 cyberdome_spectator = {
@@ -946,15 +830,6 @@ cyberdome_spectator = {
 
 	inline_script = "jobs/automodding_priority_trade"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 ## Obsessional Directive Purge
@@ -972,15 +847,6 @@ clip_maximizer = {
 
 	tags = { consumer_goods }
 
-	demotion = {
-		time = 0
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = purge
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1082,15 +948,6 @@ nanotech_research_unit = {
 
 	inline_script = "jobs/automodding_priority_research"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 nanotech_researcher = {
@@ -1178,13 +1035,4 @@ nanotech_researcher = {
 
 	inline_script = "jobs/automodding_priority_research"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }

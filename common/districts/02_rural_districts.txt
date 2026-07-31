@@ -689,7 +689,7 @@ district_melting = {
 	max_for_deposits_on_planet = 15
 
 	# Volcanic Worlds build Magma Forges instead of "mining districts".
-	inherits_capped_modifiers_from = district_mining
+	shared_capacity_modifier = district_mining
 
 	zone_slots = {
 		slot_minerals

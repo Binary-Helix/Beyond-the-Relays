@@ -426,15 +426,6 @@ politician = {
 
 	inline_script = "jobs/automodding_priority_charisma"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = ruler
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 knight_commander = {
@@ -515,15 +506,6 @@ knight_commander = {
 
 	inline_script = "jobs/automodding_priority_charisma"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = ruler
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 dystopian_enforcer = {
@@ -626,15 +608,6 @@ dystopian_enforcer = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = ruler
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 dystopian_telepath = {
@@ -679,15 +652,6 @@ dystopian_telepath = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = ruler
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 # Fake jobs for leader backgrounds

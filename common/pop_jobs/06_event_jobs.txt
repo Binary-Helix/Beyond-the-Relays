@@ -11,15 +11,6 @@ event_purge = {
 
 	purge = purge_normal
 
-	demotion = {
-		time = 0
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = purge
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 
 	possible = {
 		has_pop_group_flag = event_purge
@@ -88,15 +79,6 @@ ratling_scavenger = {
 
 	inline_script = "jobs/automodding_priority_food"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 odd_factory_worker = {
@@ -155,15 +137,6 @@ odd_factory_worker = {
 	}
 	inline_script = "jobs/automodding_priority_alloys"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 odd_factory_drone = {
@@ -209,15 +182,6 @@ odd_factory_drone = {
 	}
 	inline_script = "jobs/automodding_priority_alloys"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = simple_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 underground_trade_worker = {
@@ -487,15 +451,6 @@ dimensional_portal_researcher = {
 
 	inline_script = "jobs/automodding_priority_research"
 
-		promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 dimensional_portal_researcher_gestalt = {
@@ -737,15 +692,6 @@ dimensional_portal_researcher_gestalt = {
 
 	inline_script = "jobs/automodding_priority_research"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 space_time_anomaly_researcher = {
@@ -811,15 +757,6 @@ space_time_anomaly_researcher = {
 
 	inline_script = "jobs/automodding_priority_research"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 space_time_anomaly_researcher_gestalt = {
@@ -899,15 +836,6 @@ space_time_anomaly_researcher_gestalt = {
 
 	inline_script = "jobs/automodding_priority_research"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 ### Feral Overload Jobs
@@ -964,15 +892,6 @@ gas_plant_engineer = {
 		mult = value:job_weights_modifier|JOB|gas_plant_engineer|RESOURCE|exotic_gases|
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 # Gestalt Species
@@ -1026,15 +945,6 @@ gas_plant_engineer_gestalt = {
 		mult = value:job_weights_modifier|JOB|gas_plant_engineer_gestalt|RESOURCE|exotic_gases|
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 # Feral Overload - Exterminate Option - Cave Cleaners
@@ -1103,15 +1013,6 @@ cave_cleaner_gestalt = {
 
 	inline_script = "jobs/automodding_priority_minerals"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = simple_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Dinosaur Hunters
@@ -1192,15 +1093,6 @@ robot_caretaker = {
 
 	inline_script = "jobs/automodding_priority_unity"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Turtle Miner Regular
@@ -1291,15 +1183,6 @@ turtle_miner_gestalt = {
 
 	inline_script = "jobs/automodding_priority_minerals"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = simple_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 # Bio-assistants
@@ -1560,15 +1443,6 @@ manufactorium_specialist = {
 	}
 	inline_script = "jobs/automodding_priority_alloys"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 manufactorium_complex_drone = {
@@ -1729,15 +1603,6 @@ manufactorium_complex_drone = {
 	}
 	inline_script = "jobs/automodding_priority_alloys"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 manufactorium_scraper = {
@@ -1789,15 +1654,6 @@ manufactorium_scraper_drone = {
 
 	inline_script = "jobs/automodding_priority_minerals"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = simple_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 # Ancient Manufactorium Complex event job
@@ -1888,15 +1744,6 @@ archivist = {
 
 	inline_script = "jobs/automodding_priority_research"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 puddle_technician = {
@@ -2054,15 +1901,6 @@ puddle_technician = {
 
 	inline_script = "jobs/automodding_priority_food"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 puddle_technician_drone = {
@@ -2220,15 +2058,6 @@ puddle_technician_drone = {
 
 	inline_script = "jobs/automodding_priority_food"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = simple_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Stasis Prison Colony Chain Jobs
@@ -2337,15 +2166,6 @@ stasis_warden = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 stasis_warden_drone = {
@@ -2425,15 +2245,6 @@ stasis_warden_drone = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 astrogarbage_collector = {
@@ -2504,15 +2315,6 @@ astrogarbage_collector = {
 	}
 	inline_script = "jobs/automodding_priority_alloys"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 # Gestalt Species
@@ -2563,15 +2365,6 @@ astrogarbage_collector_gestalt = {
 	}
 	inline_script = "jobs/automodding_priority_alloys"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = simple_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 @power_farmer_output = 12
@@ -2617,15 +2410,6 @@ myrmeku_power_farmer = {
 
 	inline_script = "jobs/automodding_priority_energy"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 myrmeku_power_farmer_gestalt = {
@@ -2668,15 +2452,6 @@ myrmeku_power_farmer_gestalt = {
 
 	inline_script = "jobs/automodding_priority_energy"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Stratovent colony event chain jobs
@@ -2741,15 +2516,6 @@ stratovent_researcher = {
 
 	inline_script = "jobs/automodding_priority_research"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 stratovent_refiner = {
@@ -2789,15 +2555,6 @@ stratovent_refiner = {
 		mult = value:job_weights_multiple_resources_modifier|JOB|stratovent_refiner|RESOURCE1|hydrogen|WEIGHT1|0.7|RESOURCE2|helium_3|WEIGHT2|0.3|
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 stratovent_refiner_upg = {
@@ -2836,15 +2593,6 @@ stratovent_refiner_upg = {
 		mult = value:job_weights_multiple_resources_modifier|JOB|stratovent_refiner_minerals|RESOURCE1|hydrogen|WEIGHT1|0.7|RESOURCE2|helium_3|WEIGHT2|0.3|
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 stratovent_refiner_minerals = {
@@ -2884,15 +2632,6 @@ stratovent_refiner_minerals = {
 	}
 	inline_script = "jobs/automodding_priority_minerals"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = specialist
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Glacial Crisis event chain jobs
@@ -2951,15 +2690,6 @@ mineral_diver_drone = {
 
 	inline_script = "jobs/automodding_priority_minerals"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = simple_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Rapid Desertification event chain jobs
@@ -3032,13 +2762,4 @@ alien_hunter = {
 
 	inline_script = "jobs/automodding_priority_food"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = worker
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }

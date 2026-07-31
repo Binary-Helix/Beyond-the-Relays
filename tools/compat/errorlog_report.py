@@ -105,6 +105,8 @@ def fmt_diff(base: Path, new: Path, top: int) -> tuple[str, int]:
 
 
 def main() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser()
     ap.add_argument("logs", nargs="*", help="error.log path(s)")
     ap.add_argument("--diff", nargs=2, metavar=("BASE", "NEW"))

@@ -237,15 +237,6 @@ spawning_drone = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Swap for origin_progenitor_hive
@@ -326,15 +317,6 @@ replicator = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Gestation World Only
@@ -442,15 +424,6 @@ gestation_drone = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 ## Special job for Gestalts
@@ -513,15 +486,6 @@ evaluator = {
 
 	inline_script = "jobs/automodding_priority_unity"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 ##Unity Jobs
@@ -704,15 +668,6 @@ coordinator = {
 
 	inline_script = "jobs/automodding_priority_unity"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Swap for auth_hive
@@ -1029,15 +984,6 @@ calculator_physicist = {
 
 	inline_script = "jobs/automodding_priority_research"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Swap for auth_hive
@@ -1260,15 +1206,6 @@ calculator_biologist = {
 
 	inline_script = "jobs/automodding_priority_research"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Swap for auth_hive
@@ -1464,15 +1401,6 @@ calculator_engineer = {
 
 	inline_script = "jobs/automodding_priority_research"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Swap for auth_hive
@@ -1580,15 +1508,6 @@ artisan_drone = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 ##Alloys Jobs
@@ -1694,15 +1613,6 @@ fabricator = {
 	}
 	inline_script = "jobs/automodding_priority_alloys"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Swap for auth_hive
@@ -1829,15 +1739,6 @@ chemist_drone = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Crystals
@@ -1931,15 +1832,6 @@ translucer_drone = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Gases
@@ -2033,15 +1925,6 @@ gas_refiner_drone = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 ##Crime Jobes
@@ -2135,15 +2018,6 @@ patrol_drone = {
 	}
 	inline_script = "jobs/automodding_priority_unity"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #SR Mining Jobs
@@ -2359,15 +2233,6 @@ logistics_drone = {
 
 	inline_script = "jobs/automodding_priority_trade"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = simple_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 ##Mineral Jobs
@@ -2534,15 +2399,6 @@ mining_drone = {
 
 	inline_script = "jobs/automodding_priority_minerals"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = simple_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 #Swap for d_space_ship_graveyard + shattered_ring_world
@@ -2718,15 +2574,6 @@ agri_drone = {
 
 	inline_script = "jobs/automodding_priority_food"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = simple_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 ##Energy Jobs
@@ -2838,15 +2685,6 @@ technician_drone = {
 
 	inline_script = "jobs/automodding_priority_energy"
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = simple_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 ##Maintenance Drones
@@ -3116,15 +2954,6 @@ warrior_drone = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 
 ##Toxic Bath Jobs

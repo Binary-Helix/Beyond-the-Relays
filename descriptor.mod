@@ -12,4 +12,4 @@ tags={
 	"Spaceships"
 }
 name="Beyond the Relays"
-supported_version="v4.0.23"
+supported_version="v4.4.*"

@@ -19,14 +19,16 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 SCAN_DIRS = ["common", "events"]
 
-# token -> (regex, note)
-TOKENS: dict[str, tuple[str, str]] = {
-    "promotion block":  (r"^\s*promotion\s*=\s*\{", "B-2: removed in 4.4 (unemployment rework)"),
-    "demotion block":   (r"^\s*demotion\s*=\s*\{", "B-2: removed in 4.4"),
-    "custom_demotion_*": (r"\bcustom_demotion_(?:loc|icon)\b", "B-2: removed with demotion"),
-    "unemployment cat/key": (r"\b\w*_unemployment\b|\bunemployment_\w*\b", "B-2: category removed; migrate to forced_integration"),
-    "is_capped_by_modifier": (r"\bis_capped_by_modifier\b", "B-5: -> shared_capacity_modifier"),
-    "inherits_capped_modifiers_from": (r"\binherits_capped_modifiers_from\b", "B-3: -> shared_capacity_modifier"),
+# token -> (regex, note, path-substring filter or None)
+# NOTE: is_capped_by_modifier is still valid in pop_jobs/buildings on 4.4;
+# it was only removed from the *districts* schema — scan districts only.
+TOKENS: dict[str, tuple[str, str, str | None]] = {
+    "promotion block":  (r"^\s*promotion\s*=\s*\{", "B-2: removed in 4.4 (unemployment rework)", None),
+    "demotion block":   (r"^\s*demotion\s*=\s*\{", "B-2: removed in 4.4", None),
+    "custom_demotion_*": (r"\bcustom_demotion_(?:loc|icon)\b", "B-2: removed with demotion", None),
+    "unemployment cat/key": (r"\b\w*_unemployment\b|\bunemployment_\w*\b", "B-2: category removed; migrate to forced_integration", None),
+    "is_capped_by_modifier (districts)": (r"\bis_capped_by_modifier\b", "B-5: invalid in districts; drop or use shared_capacity_modifier", "common/districts/"),
+    "inherits_capped_modifiers_from": (r"\binherits_capped_modifiers_from\b", "B-3: -> shared_capacity_modifier", None),
 }
 
 EXCLUDE_PARTS = {"COMPAT-AUDIT-4.4-PEGASUS-2026-06-17", "tools", ".git"}
@@ -37,7 +39,8 @@ def main() -> None:
     ap.add_argument("-v", "--verbose", action="store_true", help="per-file detail")
     args = ap.parse_args()
 
-    compiled = {name: (re.compile(rx), note) for name, (rx, note) in TOKENS.items()}
+    compiled = {name: (re.compile(rx), note, where)
+                for name, (rx, note, where) in TOKENS.items()}
     hits: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
 
     for d in SCAN_DIRS:
@@ -53,7 +56,9 @@ def main() -> None:
                 code = line.split("#", 1)[0]
                 if not code.strip():
                     continue
-                for name, (rx, _) in compiled.items():
+                for name, (rx, _, where) in compiled.items():
+                    if where and where not in rel:
+                        continue
                     n = len(rx.findall(code))
                     if n:
                         hits[name][rel] += n
@@ -61,7 +66,7 @@ def main() -> None:
     print(f"{'token':38} {'total':>6}  {'files':>5}  note")
     print("-" * 110)
     all_zero = True
-    for name, (_, note) in compiled.items():
+    for name, (_, note, _) in compiled.items():
         total = sum(hits[name].values())
         if total:
             all_zero = False
