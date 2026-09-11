@@ -63,7 +63,7 @@ set_btr_canon_starting_communications = {
 			any_relation = {
 				OR = {
 					is_country_type = default
-					is_country_type = planet_state
+					is_country_type = planet_state # TODO: btr_independent_colonies.txt
 				}
 			}
 		}

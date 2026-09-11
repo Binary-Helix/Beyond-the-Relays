@@ -20,10 +20,18 @@ event = {
 		set_global_flag = has_beyond_the_relays
 		log = "Playing Beyond the Relays"
 
+		# set scripted empire target variables and communications
+		set_btr_global_targets = yes
+		if = {
+			limit = {
+				is_btr_canon_map = yes
+			}
+			set_btr_canon_starting_communications = yes
+		}
+
 		every_country = {
 			limit = { is_btr_empire = yes }
 			country_event = { id = btr_game_start.4 days = 0 } #Set starting Territory
-			country_event = { id = btr_game_start.10 days = 2 } #Set Starting Contacts and Flags
 			country_event = { id = btr_game_start.11 days = 1 } #Set Species Rights
 		}
 
@@ -2192,27 +2200,6 @@ planet_event = {
 
 			log = "btr_start_country.4 - Completed"
 		}
-	}
-}
-
-#Set Species Contacts
-country_event = {
-	id = btr_game_start.10
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {  }
-	immediate = {
-		log = "btr_game_start.10 - Started"
-		every_country = {
-			set_btr_global_targets = yes
-			if = {
-				limit = {
-					is_btr_canon_map = yes
-				}
-				set_btr_canon_starting_communications = yes
-			}
-		}
-		log = "btr_game_start.10 - Completed"
 	}
 }
 
