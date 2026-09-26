@@ -18,13 +18,7 @@ fleet_event = {
         fleet.solar_system = {
             save_event_target_as = colonizer_last_known_location
         }
-        random_list = {
-            95 = {
-            }
-            5 = {
-                fleet_event = { id = btr_terrorist.10 }
-            }
-        }
+        random = { chance = 5 fleet_event = { id = btr_terrorist.10 } }
     }
 }
 
@@ -58,7 +52,7 @@ fleet_event = {
                     limit = { is_capital = yes }
                     add_modifier = {
                         modifier = colony_loss_unrest
-                        days = 1800
+                        years = 5
                     }
                 }
 
@@ -211,7 +205,7 @@ country_event = {
                 }
                 add_modifier = {
                     modifier = terrorist_minor_stability_reduction
-                    days = 1800
+                    years = 5
                 }
             }
             change_variable = { which = btr_terrorist_modifier value = 1 }  # +1% future chance
@@ -227,11 +221,11 @@ country_event = {
                 }
                 add_modifier = {
                     modifier = terrorist_betrayal_unrest
-                    days = 3600
+                    years = 10
                 }
                 add_modifier = {
                     modifier = terrorist_stability_reduction
-                    days = 1800
+                    years = 5
                 }
             }
         }
@@ -287,11 +281,11 @@ country_event = {
                 limit = { is_capital = yes }
                 add_modifier = {
                     modifier = colony_loss_unrest
-                    days = 1800
+                    years = 5
                 }
                 add_modifier = {
                     modifier = terrorist_stability_reduction
-                    days = 1800
+                    years = 5
                 }
             }
         }
@@ -355,7 +349,7 @@ country_event = {
                 limit = { is_capital = yes }
                 add_modifier = {
                     modifier = terrorist_minor_stability_reduction
-                    days = 360
+                    years = 1
                 }
             }
             # Some colonist losses represented by resource penalty
@@ -373,11 +367,11 @@ country_event = {
                 limit = { is_capital = yes }
                 add_modifier = {
                     modifier = military_casualties_mourning
-                    days = 900
+                    months = 30
                 }
                 add_modifier = {
                     modifier = terrorist_reduced_stability_reduction
-                    days = 360
+                    years = 1
                 }
             }
         }
@@ -391,11 +385,11 @@ country_event = {
             every_owned_planet = {
                 add_modifier = {
                     modifier = military_failure_unrest
-                    days = 1800
+                    years = 5
                 }
                 add_modifier = {
                     modifier = terrorist_stability_reduction
-                    days = 1800
+                    years = 5
                 }
             }
         }
@@ -429,11 +423,11 @@ country_event = {
             limit = { is_capital = yes }
             add_modifier = {
                 modifier = colony_loss_unrest
-                days = 1800
+                years = 5
             }
             add_modifier = {
                 modifier = terrorist_stability_reduction
-                days = 1800
+                years = 5
             }
         }
 

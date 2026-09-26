@@ -1,0 +1,63 @@
+tr_btr_dominance_adoption = {
+    possible = {
+        has_origin = parnack_reg_origin
+    }
+    unlocks_agenda = agenda_dominance
+    modifier = {
+        ship_starting_experience_add = 100
+        army_starting_experience_add = 100
+    }
+}
+
+tr_btr_dominance_finish = {
+    modifier = {
+        country_claim_influence_cost_mult = -0.1
+        country_base_influence_produces_add = 1
+        ascension_perks_add = 1
+    }
+}
+
+tr_btr_dominance_bred_to_conquer = {
+    modifier = {
+        bonus_pop_growth_mult = 0.1
+      #  founder_species_growth_mult = 0.1
+        habitability_floor_mult = 0.05
+    }
+}
+
+tr_btr_dominance_violence_unrestrained = {
+    possible = {
+        has_tradition = tr_btr_dominance_bred_to_conquer
+    }
+    modifier = {
+        army_attack_damage_mult = 0.1
+        army_collateral_damage_mult = 1
+        job_soldier_per_pop = 0.022
+    }
+}
+
+tr_btr_dominance_superiority_through_strength = {
+    possible = {
+        has_tradition = tr_btr_dominance_violence_unrestrained
+    }
+    modifier = {
+        ship_weapon_range_mult = 0.05
+        ship_fire_rate_mult = 0.05
+    }
+}
+
+tr_btr_dominance_dominant_diplomacy = {
+    possible = { has_tradition = tr_btr_dominance_violence_unrestrained }
+    modifier = {
+        divided_patrongage_max_subjects = 100
+        monthly_loyalty = 3
+    }
+}
+
+tr_btr_dominance_new_and_improved = {
+    possible = { has_tradition = tr_btr_dominance_violence_unrestrained }
+    modifier = {
+        planet_colony_development_speed_mult = 0.2
+        starbase_upgrade_cost_mult = -0.20
+    }
+}

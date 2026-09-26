@@ -1,0 +1,418 @@
+########################
+### LEVIATHAN'S TIDE ###
+########################
+
+sys_361lt_init = {
+    name = "361-LT"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t1 leviathans_tide 361lt_system primary_relay_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 450
+    }
+
+    planet = {
+		name = "361-LT"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 29
+        flags = { 361_lt_star }
+    }
+
+    planet = {
+        name = "361-LT-1"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 236
+        size = 15
+        flags = { 361_lt_1_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "361-LT-2"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 146
+        size = 19
+        flags = { 361_lt_2_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "361-LT-3"
+        class = pc_tropical
+        orbit_distance = 100
+        orbit_angle = 97
+        size = 19
+        has_ring = no
+
+        moon = {
+            name = "361-LT-3a"
+            class = pc_frozen
+            orbit_distance = 20
+            orbit_angle = 180
+            size = 5
+            flags = {361_lt_3a_planet 361_lt_3_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "361-LT-4"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 103
+        size = 33
+        flags = { 361_lt_4_planet }
+        has_ring = no
+    }
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "361-LT-5"
+        class = pc_gas_giant
+        orbit_distance = 50
+        orbit_angle = 98
+        size = 35
+        flags = { 361_lt_5_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "leviathanstide_landiastrap_primaryrelay" 
+			name = "Sector T1 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_512lt_init = {
+    name = "512-LT"
+    class = sc_tt_red
+	max_instances = 1
+
+    flags = { terminus_systems sector_t1 leviathans_tide 512lt_system secondary_relay_system }
+
+    planet = {
+		name = "512-LT"
+        class = pc_tt_red_star
+        orbit_distance = 0
+        size = 31
+        flags = { 512_lt_star }
+    }
+
+    planet = {
+        name = "512-LT 1"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 209
+        size = 12
+        has_ring = no
+
+        moon = {
+            name = "512-LT-1a"
+            class = pc_barren
+            orbit_distance = 10
+            orbit_angle = 180
+            size = 6
+            flags = {512_lt_1a_planet 512_lt_1_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "512-LT-2"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 102
+        size = 15
+        flags = { 512_lt_2_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "512-LT-3"
+        class = pc_barren_cold
+        orbit_distance = 125
+        orbit_angle = 106
+        size = 21
+        has_ring = no
+
+        moon = {
+            name = "512-LT-3a"
+            class = pc_iron
+            orbit_distance = 10
+            orbit_angle = 180
+            size = 7
+            flags = {512_lt_3a_planet 512_lt_3_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "512-LT-4"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 132
+        size = 29
+        flags = { 512_lt_4_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_1_secondaryrelay" 
+			name = "Sector T1 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_904lt_init = {
+    name = "904-LT"
+    class = sc_k
+	max_instances = 1
+
+    flags = { terminus_systems sector_t1 leviathans_tide 904lt_system }
+
+    planet = {
+		name = "904-LT"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 29
+        flags = { 904_lt_star }
+    }
+
+    planet = {
+        name = "904-LT-1"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 184
+        size = 18
+        flags = { 904_lt_1_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "904-LT-2"
+        class = pc_dextro_tropical
+        orbit_distance = 125
+        orbit_angle = 94
+        size = 21
+        flags = { 904_lt_2_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "905-LT-3"
+        class = pc_barren_cold
+        orbit_distance = 125
+        orbit_angle = 100
+        size = 14
+        flags = { 905_lt_3_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "904-LT-4"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 102
+        size = 39
+        has_ring = no
+
+        moon = {
+            name = "904-LT-4a"
+            class = pc_molten
+            orbit_distance = 20
+            orbit_angle = 138
+            size = 7
+            flags = {904_lt_4a_planet 904_lt_4_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "904-LT-4b"
+            class = pc_hothouse
+            orbit_distance = 5
+            orbit_angle = 33
+            size = 5
+            flags = { 904_lt_4b_planet }
+            has_ring = no
+        }
+
+        moon = {
+            name = "904-LT-4c"
+            class = pc_mephitic
+            orbit_distance = 5
+            orbit_angle = 173
+            size = 8
+            flags = { 904_lt_4c_planet }
+            has_ring = no
+        }
+    }
+}
+
+sys_987lt_init = {
+    name = "987-LT"
+    class = sc_d
+	max_instances = 1
+
+    flags = { terminus_systems sector_t1 leviathans_tide 987lt_system }
+
+    planet = {
+        class = star
+        orbit_distance = 0
+        size = 27
+    }
+
+    planet = {
+        name = "987-LT-1"
+        class = pc_barren
+        orbit_distance = 150
+        orbit_angle = 197
+        size = 17
+        flags = { 987_lt_1_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "987-LT-2"
+        class = pc_barren_cold
+        orbit_distance = 150
+        orbit_angle = 74
+        size = 24
+        flags = { 987_lt_2_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "987-LT-3"
+        class = pc_frozen
+        orbit_distance = 150
+        orbit_angle = 156
+        size = 16
+        flags = { 987_lt_3_planet }
+        has_ring = no
+    }
+}
+
+
+sys_1101lt_init = {
+    name = "1101-LT"
+    class = sc_trinary_f_k_m
+	max_instances = 1
+
+    flags = { terminus_systems sector_t1 leviathans_tide 1101lt_system }
+
+    planet = {
+        name = "1101-LT-1"
+        class = pc_k_star
+        orbit_distance = 0
+        orbit_angle = 213
+        size = 33
+        flags = { 1101_lt_1_star }
+        has_ring = no
+    }
+
+    planet = {
+        name = "1101-LT-2"
+        class = pc_m_star
+        orbit_distance = 44
+        orbit_angle = 213
+        size = 33
+        flags = { 1101_lt_2_star }
+        has_ring = no
+    }
+
+    planet = {
+        name = "1101-LT-3"
+        class = pc_f_star
+        orbit_distance = 59
+        orbit_angle = 216
+        size = 28
+        flags = { 1101_lt_3_star }
+        has_ring = no
+    }
+}
+
+sys_1265lt_init = {
+    name = "1265-LT"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t1 leviathans_tide 1265lt_system }
+
+    planet = {
+		name = "1265-LT"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+        flags = { 1265_lt_star }
+    }
+
+    planet = {
+        name = "1265-LT-1"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 153
+        size = 15
+        flags = { 1265_lt_1_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "1265-LT-2"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 169
+        size = 21
+        flags = { 1265_lt_2_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "1265-LT-3"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 82
+        size = 33
+        flags = { 1265_lt_3_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "1265-LT-4"
+        class = pc_carbon
+        orbit_distance = 100
+        orbit_angle = 78
+        size = 19
+        flags = { 1265_lt_4_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "1265-LT-5"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 121
+        size = 16
+        flags = { 1265_lt_5_planet }
+        has_ring = no
+    }
+}

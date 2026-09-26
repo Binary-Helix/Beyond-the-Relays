@@ -20,23 +20,52 @@ orbital_ring_tier_1 = {
 		ship_fire_rate_mult = 1.0
 		ship_weapon_range_mult = 1.0
 	}
-	max_hitpoints = 5000
+	max_hitpoints = @outpost_hp
 	base_buildtime = 720
 	resources = {
 		category = starbases
 		cost = {
-			#alloys = 1000
-			light_alloys = 700
-			heavy_alloys = 300
 			influence = 50
 		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			alloys = @starhold_cost
+			light_alloys = 700
+			heavy_alloys = 300
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			alloys = @starhold_cost
+			light_alloys = 700
+			heavy_alloys = 300
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @starhold_cost
+			mult = @halved_alloy_to_food_cost_ratio
+		}
+
 		upkeep = {
 			energy = 2
 		}
 	}
 
-	combat_size_multiplier = 5
-	size_multiplier = 4
+	combat_size_multiplier = 20
+	size_multiplier = 20
+	map_counter_icon = ship_counter_16
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }
@@ -94,23 +123,51 @@ orbital_ring_tier_2 = {
 		ship_fire_rate_mult = 1.0
 		ship_weapon_range_mult = 1.50
 	}
-	max_hitpoints = 10000
+	max_hitpoints = @starport_hp
 	base_buildtime = 900
 	resources = {
 		category = starbases
 		cost = {
-			#alloys = 1500
+			influence = 100
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @starfort_cost
 			light_alloys = 1000
 			heavy_alloys = 500
-			influence = 100
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @starfort_cost
+			light_alloys = 1000
+			heavy_alloys = 500
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @starfort_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 		upkeep = {
 			energy = 3
 		}
 	}
 
-	combat_size_multiplier = 20
-	size_multiplier = 4
+	combat_size_multiplier = 40
+	size_multiplier = 40
+	map_counter_icon = ship_counter_32
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }
@@ -168,24 +225,51 @@ orbital_ring_tier_3 = {
 		ship_fire_rate_mult = 1.0
 		ship_weapon_range_mult = 2.0
 	}
-	max_hitpoints = 20000
+	max_hitpoints = @starhold_hp
 	base_buildtime = 1080
 	resources = {
 		category = starbases
 		cost = {
-			#alloys = 2000
-			light_alloys = 1400
-			heavy_alloys = 600
 			influence = 150
 		}
-
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @citadel_cost
+			light_alloys = 1400
+			heavy_alloys = 600
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @citadel_cost
+			light_alloys = 1400
+			heavy_alloys = 600
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @citadel_cost
+			mult = @halved_alloy_to_food_cost_ratio
+		}
 		upkeep = {
 			energy = 4
 		}
 	}
 
-	combat_size_multiplier = 20
-	size_multiplier = 4
+	combat_size_multiplier = 80
+	size_multiplier = 80
+	map_counter_icon = ship_counter_64
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }

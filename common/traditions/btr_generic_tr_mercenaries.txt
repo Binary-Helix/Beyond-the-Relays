@@ -1,0 +1,91 @@
+tr_btr_mercenaries_adoption = {
+    #possible = {
+    #}
+    unlocks_agenda = agenda_mercenary
+    modifier = {
+        country_enclave_capacity_add = 1
+        #Officials generate influence, handled in the leaders script
+    }
+}
+
+tr_btr_mercenaries_finish = {
+    modifier = {
+        #custom_tooltip = btr_vigilance_finish_desc
+        commander_exp_gain = 0.1
+        ascension_perks_add = 1
+        #Also unlocks 4 special resolutions
+    }
+}
+
+tr_btr_mercenaries_soldiers = {
+    #Handled through galcom.300
+    modifier = {
+        country_energy_produces_mult = 0.05
+        country_trade_produces_mult = 0.05
+    }
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_mercenaries_plausible = {
+    possible = {
+        has_tradition = tr_btr_mercenaries_soldiers
+    }
+    modifier = {
+        country_border_friction_mult = 0.1
+        #TODO -25 relations with all foreign empires
+
+    }
+
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_mercenaries_unrestricted = {
+    possible = {
+    }
+    modifier = {
+        army_damage_mult = 0.2
+        army_attack_morale_mult = 0.2
+
+    }
+    #Handled through galcom.305
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_mercenaries_political = {
+    possible = {
+        has_tradition = tr_btr_mercenaries_unrestricted
+    }
+    modifier = {
+        diplo_weight_mult = 0.15
+    }
+    #Handled through galcom.310-315
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+"tr_btr_mercenaries_private" = {
+    possible = {
+        has_tradition = tr_btr_mercenaries_political
+        has_tradition = tr_btr_mercenaries_plausible
+    }
+
+    modifier = {
+        job_enforcer_per_pop = 0.3
+        planet_crime_mult = -0.05
+        planet_enforcers_energy_upkeep_add = 1
+
+    }
+
+    ai_weight = {
+        factor = 5000
+    }
+}

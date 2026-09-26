@@ -1,0 +1,325 @@
+######################
+### EXODUS CLUSTER ###
+######################
+
+sys_asgard_init = {
+    name = "Asgard"
+    class = sc_g
+	max_instances = 1
+
+    flags = { orion_spur sector_os1 exodus_cluster asgard_system systems_alliance_system systems_alliance_system }
+
+    planet = {
+		name = "Asgard"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+        flags = { asgard_star }
+    }
+
+    planet = {
+        name = "Terra Nova"
+        class = pc_savannah
+        orbit_distance = 125
+        orbit_angle = 2
+		size = 13
+        has_ring = no
+		flags = { terra_nova_planet }
+    }
+
+    planet = {
+        name = "Borr"
+        class = pc_t_star
+        orbit_distance = 125
+        orbit_angle = 283
+		size = 34
+        has_ring = no
+
+		moon = {
+			name = "Borr a"
+			class = pc_iron
+			orbit_distance = 20
+			size = 4
+			flags = {borr_a_planet borr_star}
+		}	
+
+		moon = {
+			name = "Borr b"
+			class = pc_barren
+			orbit_distance = 5
+			size = 7
+			flags = { borr_b_planet }
+		}		
+
+		moon = {
+            name = "Asteroid X57"
+            class = pc_asteroid
+            orbit_distance = 5
+            orbit_angle = 189
+            has_ring = no
+			size = 3
+			flags = { asteroid_x57_planet }
+        }
+    }
+
+    planet = {
+        name = "Tyr"
+        class = pc_mephitic
+        orbit_distance = 125
+        orbit_angle = 102
+		size = 15
+        has_ring = no
+		flags = { tyr_planet }
+    }
+
+    planet = {
+        name = "Loki"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 109
+		size = 9
+		flags = { loki_planet }
+        has_ring = no
+    }
+}
+
+
+sys_asramas_init = {
+    name = "Asramas"
+    class = sc_g
+	max_instances = 1
+
+    flags = { orion_spur sector_os1 exodus_cluster asramas_system primary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 200
+	}	
+
+    planet = {
+		name = "Asramas"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+        flags = { asramas_star }
+    }
+
+	planet = {
+		name = "Macharya"
+		class = pc_barren_cold
+        orbit_distance = 125
+		size = 11
+		flags = { macharya_planet }
+		has_ring = no
+	}
+
+	change_orbit = 75
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		name = "Grihastha"
+		class = pc_chlorine
+        orbit_distance = 50
+		size = 17
+		has_ring = no
+
+		moon = {
+			name = "Grihastha a"
+			class = pc_iron
+			size = 4
+			flags = {grihastha_a_planet grihastha_planet}
+			orbit_distance = 20
+		}
+	}
+	
+	planet = {
+		name = "Vanaprastha"
+		class = pc_shattered
+        orbit_distance = 125
+		size = 20
+		flags = { vanaprastha_planet }
+	}
+	
+	planet = {
+		name = "Sannyasa"
+		class = pc_ice_giant
+        orbit_distance = 125
+		size = 29
+		flags = { sannyasa_planet }
+		has_ring = yes
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "exoduscluster_petranebula_primaryrelay" 
+			name = "Sector OS1 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_svarga_init = {
+    name = "Svarga"
+    class = sc_o_super
+	max_instances = 1
+
+    flags = { orion_spur sector_os1 exodus_cluster svarga_system }
+
+	init_effect = {
+		save_global_event_target_as = allianceSciCon1
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 50
+	}	
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 130
+	}	
+
+    planet = {
+		name = "Svarga"
+        class = pc_o_super_star
+        orbit_distance = 0
+		size = 35
+		flags = { svarga_star }
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	change_orbit = 80
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "exoduscluster_horseheadnebula_primaryrelay" 
+			name = "Sector OS1 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_utopia_init = {
+    name = "Utopia"
+    class = sc_g
+	max_instances = 1
+
+    flags = { orion_spur sector_os1 exodus_cluster utopia_system secondary_relay_system systems_alliance_system }
+
+    planet = {
+		name = "Utopia"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+        flags = { utopia_star }
+    }
+
+    planet = {
+        name = "Arcadia"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 295
+		size = 25
+		flags = { arcadia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Eden Prime"
+        class = pc_continental
+        orbit_distance = 100
+        orbit_angle = 41
+		size = 17
+        has_ring = no
+		flags = { eden_prime_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_EDEN_PRIME_THE_START
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Zion"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 29
+		size = 37
+        has_ring = no
+
+		moon = {
+			name = "Asphodel"
+			class = pc_carbon
+			orbit_distance = 20
+			size = 13
+			flags = {asphodel_planet zion_planet}
+		}	
+    }
+
+    planet = {
+        name = "Nirvana"
+        class = pc_arctic
+        orbit_distance = 100
+        orbit_angle = 231
+		size = 8
+        has_ring = no
+		entity = "cryovolcanic_planet_05_entity"
+		flags = {subclass_world nirvana_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = cryovolcanic_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Xanadu"
+        class = pc_methane
+        orbit_distance = 100
+        orbit_angle = 329
+		size = 9
+        has_ring = no
+		flags = {subclass_world xanadu_planet}
+		entity = "methane_arctic_planet_02_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = antar_world
+				days = -1
+			}
+		}
+    }
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_1_secondaryrelay" 
+			name = "Sector OS1 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

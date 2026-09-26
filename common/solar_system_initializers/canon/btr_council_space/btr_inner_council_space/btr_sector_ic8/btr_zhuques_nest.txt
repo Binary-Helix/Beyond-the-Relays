@@ -1,0 +1,558 @@
+#####################
+### ZHUQUE'S NEST ###
+#####################
+
+sys_bomdus_init = {
+	name = "Bomdus"
+	class = sc_g
+	max_instances = 1
+
+    flags = { inner_council sector_ic8 zhuquesnest bomdus_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 350
+	}
+
+	planet = {
+		name = "Bomdus"
+		class = pc_g_star
+        orbit_distance = 0
+		orbit_angle = 1
+		size = 17
+		flags = { bomdus_star }
+		has_ring = no
+	}
+	
+	planet = {
+        name = "Bomdus I"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 0
+        size = 12
+        flags = { bomdus_i_planet }
+        has_ring = no
+	}
+	
+	planet = {
+        name = "Bomdus II"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 14
+        size = 30
+        flags = { bomdus_ii_planet }
+        has_ring = yes
+	}
+	
+	planet = {
+        name = "Bomdus III"
+        class = pc_carbon
+        orbit_distance = 100
+        orbit_angle = 0
+        size = 14
+        flags = { bomdus_iii_planet }
+        has_ring = no
+	}
+
+    change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+        name = "Bomdus IV"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 14
+        size = 30
+        flags = { bomdus_iv_planet }
+        has_ring = yes
+	}
+	
+	planet = {
+        name = "Bomdus V"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 0
+        size = 14
+        flags = { bomdus_v_planet }
+        has_ring = no
+	}
+}
+
+sys_cafka_init = {
+	name = "Cafka"
+	class = sc_b
+	max_instances = 1
+
+    flags = { inner_council sector_ic8 zhuquesnest cafka_system }
+
+	planet = {
+	    name = "Cafka"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 25
+        flags = { cafka_star }
+	}
+
+	planet = {
+        name = "Cafka I"
+        class = pc_hothouse
+        orbit_distance = 55
+        orbit_angle = 14
+        size = 11
+        flags = { cafka_i_planet }
+        has_ring = no
+	}
+	
+	planet = {
+        name = "Cafka II"
+        class = pc_molten
+        orbit_distance = 115
+        orbit_angle = 270
+        size = 14
+        has_ring = no
+
+		moon = {
+			name = "Cafka IIb"
+			class = pc_iron
+			orbit_distance = 20
+			size = 8
+			flags = {cafka_iib_planet cafka_ii_planet}
+		}
+	}
+	
+	planet = {
+        name = "Cafka III"
+        class = pc_barren_cold
+        orbit_distance = 200
+        orbit_angle = 340
+        size = 16
+        flags = { cafka_iii_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "inner_council_sector_8_secondaryrelay" 
+			name = "Inner Secondary - Sector 8 Relay"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_kyrix_init = {
+	name = "Kyrix"
+	class = sc_m_giant
+	max_instances = 1
+
+    flags = { inner_council sector_ic8 zhuquesnest kyrix_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 350
+	}
+
+	planet = {
+	    name = "Kyrix"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 25
+        flags = { kyrix_star }
+	}
+	
+	planet = {
+        name = "Omi Deyaer"
+        class = pc_nuked
+        orbit_distance = 60
+        orbit_angle = 0
+        size = 14
+        flags = { omi_deyaer_planet }
+        has_ring = no
+	}
+	
+	planet = {
+        name = "Kyrix II"
+        class = pc_barren
+        orbit_distance = 60
+        orbit_angle = 14
+        size = 11
+        flags = { kyrix_ii_planet }
+        has_ring = no
+	}
+	
+	planet = {
+        name = "Kyrix III"
+        class = pc_frozen
+        orbit_distance = 60
+        orbit_angle = 28
+        size = 14
+        flags = { kyrix_iii_planet }
+        has_ring = no
+	}
+	
+	planet = {
+        name = "Kyrix IV" 
+        class = pc_barren_cold
+        orbit_distance = 60
+        orbit_angle = 84
+        size = 18
+        flags = { kyrix_iv_planet }
+        has_ring = no
+	}
+	
+	planet = {
+        name = "Kyrix V"
+        class = pc_frozen
+        orbit_distance = 60
+        orbit_angle = 218
+        size = 15
+        flags = { kyrix_v_planet }
+        has_ring = no
+	}
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+        name = "Kyrix VI"
+        class = pc_barren_cold
+        orbit_distance = 10
+        orbit_angle = 14
+        size = 18
+        flags = { kyrix_vi_planet }
+        has_ring = no
+	}
+	
+	planet = {
+        name = "Kyrix VII"
+        class = pc_arctic
+        orbit_distance = 60
+        orbit_angle = 270
+        size = 20
+        flags = { kyrix_vii_planet }
+        has_ring = no
+		entity = "glacial_planet_05_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = glacial_world
+				days = -1
+			}
+		}
+	}
+	
+	planet = {
+        name = "Kyrix VIII"
+        class = pc_frozen
+        orbit_distance = 60
+        orbit_angle = 340
+        size = 10
+        flags = { kyrix_viii_planet }
+        has_ring = no
+    }
+}
+
+sys_monak_init = {
+	name = "Monak"
+	class = sc_d
+	max_instances = 1
+
+    flags = { inner_council sector_ic8 zhuquesnest monak_system }	
+
+	planet = {
+		name = "Monak"
+		class = pc_d_star
+        orbit_distance = 0
+		orbit_angle = 1
+		size = 33
+		flags = { monak_star }
+		has_ring = no
+	}	
+
+	planet = {
+        name = "Monak I"
+        class = pc_molten
+        orbit_distance = 150
+        orbit_angle = 275
+        has_ring = no
+		size = 7
+		flags = { monak_i_planet }
+    }
+
+    planet = {
+        name = "Monak II"
+        class = pc_toxic
+        orbit_distance = 150
+        orbit_angle = 47
+        has_ring = no
+		size = 13
+
+		moon = {
+			name = "Monak II a"
+			class = pc_methane
+			orbit_distance = 20
+			size = 7
+			flags = {monak_ii_a_planet monak_ii_planet}
+			entity = "methane_alpine_planet_10_entity"
+			init_effect = {
+				add_modifier = {
+					modifier = highland_world
+					days = -1
+				}
+			}
+		}	
+    }
+
+    planet = {
+        name = "Monak III"
+        class = pc_ice_giant
+        orbit_distance = 150
+        orbit_angle = 19
+        has_ring = no
+		size = 27
+		flags = { monak_iii_planet }
+    }
+}
+
+sys_opeidum_init = {
+	name = "Opeidum"
+	class = sc_g
+	max_instances = 1
+
+    flags = { inner_council sector_ic8 zhuquesnest opeidum_system }	
+
+	planet = {
+	    name = "Opeidum"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 25
+        flags = { opeidum_star }
+	}
+
+	planet = {
+        name = "Opeidum I"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 0
+        size = 12
+        flags = { opeidum_i_planet }
+        has_ring = no
+	}
+	
+	planet = {
+        name = "Opeidum II"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 14
+        size = 11
+        flags = { opeidum_ii_planet }
+        has_ring = yes
+	}
+	
+	planet = {
+        name = "Opeidum III"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 0
+        size = 37
+        has_ring = no
+
+		moon = {
+			name = "Opeidum IIIa"
+			class = pc_hothouse
+			orbit_distance = 20
+			size = 11
+			flags = {opeidum_iiia_planet opeidum_iii_planet}
+		}
+	}
+
+	planet = {
+        name = "Opeidum IV"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 0
+        size = 14
+        flags = { opeidum_iv_planet }
+        has_ring = no
+	}
+}
+
+sys_piandal_init = {
+	name = "Piandal"
+	class = sc_d
+	max_instances = 1
+
+    flags = { inner_council sector_ic8 zhuquesnest piandal_system }
+
+	planet = {
+		name = "Piandal"
+		class = pc_d_star
+        orbit_distance = 0
+		orbit_angle = 1
+		size = 22
+		flags = { piandal_star }
+		has_ring = no
+	}	
+
+	planet = {
+        name = "Piandal I"
+        class = pc_frozen
+        orbit_distance = 250
+        orbit_angle = 0
+        size = 14
+        flags = { piandal_i_planet }
+        has_ring = no
+	}
+	
+	planet = {
+        name = "Piandal II"
+        class = pc_ice_giant
+        orbit_distance = 250
+        orbit_angle = 14
+        size = 30
+        flags = { piandal_ii_planet }
+        has_ring = yes
+	}
+}
+
+sys_pinathus_init = {
+	name = "Pinathus"
+	class = "sc_a"
+	max_instances = 1
+
+    flags = { inner_council sector_ic8 zhuquesnest pinathus_system }	
+
+	planet = {
+	    name = "Pinathus"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 25
+        flags = { pinathus_star }
+	}
+
+	planet = {
+        name = "Pinathus I"
+        class = pc_methane
+        orbit_distance = 55
+        orbit_angle = 14
+        size = 19
+        flags = { pinathus_i_planet }
+        has_ring = no
+		entity = "methane_alpine_planet_03_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = crag_world
+				days = -1
+			}
+		}
+	}
+	
+	planet = {
+        name = "Pinathus II"
+        class = pc_barren_cold
+        orbit_distance = 115
+        orbit_angle = 270
+        size = 21
+        flags = { pinathus_ii_planet }
+        has_ring = no
+	}
+}
+
+sys_tartror_init = {
+	name = "Tartror"
+	class = sc_pulsar
+	max_instances = 1
+
+    flags = { inner_council sector_ic8 zhuquesnest tartror_system }
+
+	planet = {
+		name = "Tartror"
+		class = pc_pulsar
+        orbit_distance = 0
+		orbit_angle = 1
+		size = 24
+		flags = { tartror_planet }
+		has_ring = no
+	}	
+
+	planet = {
+		name = "Tartror I"
+		class = pc_shattered
+        orbit_distance = 250
+		orbit_angle = 1
+		size = 39
+		flags = { tartror_i_planet }
+		has_ring = no
+	}	
+}
+
+sys_warlak_init = {
+	name = "Warlak"
+	class = sc_m_hyper
+	max_instances = 1
+
+    flags = { inner_council sector_ic8 zhuquesnest warlak_system }
+
+	planet = {
+		name = "Warlak"
+		class = pc_m_hyper_star
+        orbit_distance = 0
+		orbit_angle = 1
+		size = 33
+		flags = { warlak_star }
+		has_ring = no
+	}	
+
+
+	planet = {
+        name = "Warlak I"
+        class = pc_iron
+        orbit_distance = 150
+        orbit_angle = 275
+        has_ring = no
+		size = 12
+		flags = { warlak_i_planet }
+    }
+
+    planet = {
+        name = "Warlak II"
+        class = pc_frozen
+        orbit_distance = 150
+        orbit_angle = 47
+        has_ring = no
+		size = 13
+
+		moon = {
+			name = "Warlak II a"
+			class = pc_iron
+			orbit_distance = 20
+			size = 7
+			flags = {warlak_ii_a_planet warlak_ii_planet}
+		}	
+    }
+
+    planet = {
+        name = "Warlak III"
+        class = pc_ice_giant
+        orbit_distance = 150
+        orbit_angle = 19
+        has_ring = no
+		size = 27
+		flags = { warlak_iii_planet }
+    }
+}
+
+############################################
+##### OUTER COUNCIL SPACE INITIALIZERS #####
+############################################

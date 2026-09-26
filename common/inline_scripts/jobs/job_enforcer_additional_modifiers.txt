@@ -21,18 +21,6 @@ triggered_planet_modifier = {
 	pop_happiness = -0.025
 }
 
-# Cyber Dictatorial Individualist
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			is_cyber_dictatorial = yes
-			has_country_flag = cyber_individualist
-		}
-	}
-	everyone_but_dystopian_specialist_workforce_mult = 0.025
-}
-
 # Synth Oligarchic Physical / Virtual
 triggered_planet_modifier = {
 	potential = {
@@ -72,9 +60,17 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		planet_stability_add = 2
+		planet_stability_add = 1
 	}
 }
+
+triggered_planet_modifier = {
+	modifier = {
+		planet_stability_add = 1
+	}
+	mult = planet.modifier:job_enforcer_stability_add
+}
+
 
 #BtR Caleston CyberDreams Tradition
 triggered_planet_modifier = {

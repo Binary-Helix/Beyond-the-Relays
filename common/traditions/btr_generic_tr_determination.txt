@@ -1,0 +1,98 @@
+tr_btr_determination_adoption = {
+    #possible = {
+    #}
+    unlocks_agenda = agenda_determination
+    modifier = {
+        commander_initial_skill = 1
+        #Officials generate influence, handled in the leaders script
+    }
+}
+
+tr_btr_determination_finish = {
+    modifier = {
+        #custom_tooltip = btr_vigilance_finish_desc
+        country_ship_upgrade_cost_mult = -0.2
+        starbase_shipyard_build_speed_mult = 0.2
+        ascension_perks_add = 1
+        #Also unlocks 4 special resolutions
+    }
+}
+
+tr_btr_determination_stand = {
+    #Handled through galcom.300
+    modifier = {
+        army_defense_damage_mult = 0.1
+        army_defense_damage_mult = 0.5
+    }
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_determination_land = {
+    possible = {
+        has_tradition = tr_btr_determination_stand
+    }
+    modifier = {
+        job_soldier_per_pop = 0.033
+        planet_soldiers_unity_produces_add = 1
+       # planet_soldier_unity_produces_add = 1
+    }
+
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_determination_defeated = {
+    possible = {
+        has_tradition = tr_btr_determination_stand
+    }
+    modifier = {
+        country_war_exhaustion_mult = -0.2
+    }
+    #Handled through galcom.305
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_determination_decorum = {
+    possible = {
+        has_tradition = tr_btr_determination_land
+    }
+    modifier = {
+        planet_army_build_speed_mult = 0.3
+        army_attack_damage_mult = 0.2
+        army_morale = 0.2
+    }
+    #Handled through galcom.310-315
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+"tr_btr_determination_part" = {
+    possible = {
+        has_tradition = tr_btr_determination_defeated
+    }
+
+    triggered_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_at_war = yes
+            }
+        }
+        modifier = {
+            planet_jobs_produces_mult = 0.1
+            #TODO Make this apply only when at war
+        }
+    }
+
+    ai_weight = {
+        factor = 5000
+    }
+}

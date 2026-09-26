@@ -1,0 +1,534 @@
+##########################
+### PRODICATORE'S SCAR ###
+##########################
+
+sys_cameram_init = {
+	name = "Cameram"
+	class = sc_m
+	max_instances = 1
+
+    flags = { inner_council sector_ic6 prodicatores_scar cameram_system }
+
+	planet = {
+	    name = "Cameram"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { cameram_star }
+    }
+
+	planet = {
+		name = "Gothis"
+		class = pc_nuked
+        orbit_distance = 150
+        size = 18
+        flags = { gothis_planet }
+	}
+
+	planet = {
+		name = "Utam"
+		class = pc_gas_giant
+        orbit_distance = 150
+        size = 38
+        flags = { utam_planet }
+		has_ring = yes
+	}
+	
+	planet = {
+		name = "Trento"
+		class = pc_ice_giant
+        orbit_distance = 150
+        size = 31
+        flags = { trento_planet }
+		has_ring = no
+	}
+}
+
+sys_cete_init = {
+	name = "Cete"
+	class = sc_g
+	max_instances = 1
+
+    flags = { inner_council sector_ic6 prodicatores_scar cete_system secondary_relay_system }
+
+	planet = {
+	    name = "Cete"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { cete_star }
+    }
+
+	planet = {
+		name = "Viruus"
+		class = pc_molten
+        orbit_distance = 125
+        size = 10
+        flags = { viruus_planet }
+	}
+
+	planet = {
+		name = "Poldar"
+		class = pc_carbon
+        orbit_distance = 125
+        size = 8
+        flags = { poldar_planet }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Farindasa"
+		class = pc_iron
+        orbit_distance = 125
+        size = 11
+        flags = { farindasa_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Gresquir"
+		class = pc_frozen
+        orbit_distance = 125
+        size = 11
+        flags = { gresquir_planet }
+		has_ring = no
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "inner_council_sector_6_secondaryrelay" 
+			name = "Sector IC6 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_gramen_init = {
+	name = "Gramen"
+	class = sc_d
+	max_instances = 1
+
+    flags = { inner_council sector_ic6 prodicatores_scar gramen_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 350
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 450
+	}
+
+	planet = {
+	    name = "Gramen"
+        class = pc_d_star
+        orbit_distance = 0
+        size = 20
+        flags = { gramen_star }
+    }
+
+	planet = {
+		name = "Vardes"
+		class = pc_hothouse
+        orbit_distance = 100
+        size = 9
+        flags = { vardes_planet }
+	}
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Estrondia"
+		class = pc_barren
+        orbit_distance = 50
+        size = 12
+        flags = { estrondia_planet }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Ramdia"
+		class = pc_methane
+        orbit_distance = 100
+        size = 11
+		has_ring = no
+		flags = {subclass_world ramdia_planet}
+		entity = "methane_swamp_planet_12_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = bog_world
+				days = -1
+			}
+		}
+	}
+	
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Tyvlar"
+		class = pc_iron
+        orbit_distance = 50
+        size = 11
+        flags = { tyvlar_planet }
+		has_ring = no
+	}
+
+    change_orbit = 50
+    
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Urdansa"
+		class = pc_ice_giant
+        orbit_distance = 50
+        size = 31
+        flags = { urdansa_planet }
+		has_ring = yes
+	}	
+}
+
+sys_laudate_init = {
+	name = "Laudate"
+	class = sc_f
+	max_instances = 1
+
+    flags = { inner_council sector_ic6 prodicatores_scar laudate_system primary_relay_system turian_hierarchy_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 390
+	}
+
+	planet = {
+	    name = "Laudate"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 20
+        flags = { laudate_star }
+    }
+
+	planet = {
+		name = "Arabor"
+		class = pc_molten
+        orbit_distance = 60
+        size = 13
+        flags = { arabor_planet }
+	}
+
+	planet = {
+		name = "Lutum"
+		class = pc_hothouse
+        orbit_distance = 60
+        size = 18
+        flags = { lutum_planet }
+		has_ring = no	
+	}
+	
+	planet = {
+		name = "Magna"
+		class = pc_dextro_tundra
+        orbit_distance = 60
+        size = 18
+		has_ring = no
+        flags = { magna_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = dextro_world
+				days = -1
+			}
+			add_deposit = d_veiny_cliffs
+			add_deposit = d_lichen_fields
+		}
+	}
+
+	planet = {
+		name = "Petram"
+		class = pc_iron
+        orbit_distance = 60
+        size = 12
+        flags = { petram_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Iuto"
+		class = pc_barren_cold
+        orbit_distance = 60
+        size = 14
+        flags = { iuto_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Lapellam"
+		class = pc_gas_giant
+        orbit_distance = 60
+        size = 34
+        flags = { lapellam_planet }
+		has_ring = no
+	}
+
+    change_orbit = 30
+    
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Caerulus"
+		class = pc_iron
+        orbit_distance = 30
+        size = 17
+        flags = { caerulus_planet }
+		has_ring = yes	
+	}
+
+	planet = {
+		name = "Dilatelux"
+		class = pc_ice_giant
+        orbit_distance = 60
+        size = 29
+        flags = { dilatelux_planet }
+		has_ring = yes	
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "prodicatoresscar_krogandmz_primaryrelay" 
+			name = "Sector IC6 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_pistrix_init = {
+	name = "Pistrix"
+	class = sc_pulsar
+	max_instances = 1
+
+    flags = { inner_council sector_ic6 prodicatores_scar pistrix_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 250
+	}
+
+	planet = {
+	    name = "Pistrix"
+        class = pc_pulsar
+        orbit_distance = 0
+        size = 30
+        flags = { pistrix_planet }
+    }
+
+    change_orbit = 250
+
+        
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_sabulum_init = {
+	name = "Sabulum"
+	class = sc_m
+	max_instances = 1
+
+    flags = { inner_council sector_ic6 prodicatores_scar sabulum_system turian_hierarchy_system }
+
+	planet = {
+	    name = "Sabulum"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { sabulum_star }
+    }
+
+	planet = {
+		name = "Edessan"
+		class = pc_dextro_highgrav_desert
+        orbit_distance = 125
+        size = 24
+        flags = { edessan_planet }
+		init_effect = {
+			add_deposit = d_veiny_cliffs
+		}
+	}
+
+	planet = {
+		name = "Caustes"
+		class = pc_methane
+        orbit_distance = 125
+        size = 13
+        flags = { caustes_planet }
+	}
+	
+	planet = {
+		name = "Jactatum"
+		class = pc_gas_giant
+        orbit_distance = 125
+        size = 33
+        flags = { jactatum_planet }
+	}
+
+	planet = {
+		name = "Vastus"
+		class = pc_frozen
+        orbit_distance = 125
+        size = 10	
+        flags = { vastus_planet }
+	}
+}
+
+sys_spinam_init = {
+	name = "Spinam"
+	class = sc_k
+	max_instances = 1
+
+    flags = { inner_council sector_ic6 prodicatores_scar spinam_system primary_relay_system }
+
+	planet = {
+	    name = "Spinam"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 20
+        flags = { spinam_star }
+    }
+
+	planet = {
+		name = "Vasullun"
+		class = pc_hothouse
+        orbit_distance = 250
+        size = 11
+        flags = { vasullun_planet }
+	}
+
+	planet = {
+		name = "Syglar"
+		class = pc_nuked
+        orbit_distance = 250
+        size = 19
+        flags = { syglar_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "prodicatoresscar_sileannebula_primaryrelay" 
+			name = "Sector IC6 - Primary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_ursantra_init = {
+	name = "Ursantra"
+	class = sc_g
+	max_instances = 1
+
+    flags = { inner_council sector_ic6 prodicatores_scar ursantra_system primary_relay_system }
+
+	planet = {
+	    name = "Ursantra"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { ursantra_star }
+	}
+
+	planet = {
+		name = "Ranad"
+		class = pc_hot_giant
+        orbit_distance = 30
+        size = 36
+
+		moon = {
+			name = "Consulia"
+			class = pc_molten
+			orbit_distance = 8
+			size = 4			
+			flags = {consulia_planet ranad_planet}
+		}
+	}
+
+	planet = {
+		name = "Tracda"
+		class = pc_barren
+        orbit_distance = 45
+        size = 13
+        flags = { tracda_planet }
+	}
+	
+	planet = {
+		name = "Uresium"
+		class = pc_chthonian
+        orbit_distance = 30
+        size = 33
+        flags = { uresium_planet }
+	}
+
+	planet = {
+		name = "Girallia"
+		class = pc_barren_cold
+        orbit_distance = 45
+        size = 16
+        flags = { girallia_planet }
+	}
+
+	planet = {
+		name = "Yoluum"
+		class = pc_ammonia
+        orbit_distance = 45
+        size = 12
+		entity = "ammonia_alpine_planet_01_entity"
+		flags = {subclass_world yoluum_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = cascadian_world
+				days = -1
+			}
+		}
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "prodicatoresscar_serpentnebula_primaryrelay" 
+			name = "Sector IC6 - Primary Relay 5"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

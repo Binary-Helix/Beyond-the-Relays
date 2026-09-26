@@ -1,0 +1,496 @@
+#####################
+### SAKURA NEBULA ###
+#####################
+
+sys_edheras_init = {
+    name = "Edheras"
+    class = sc_l
+	max_instances = 1
+
+	flags = { attican_traverse sector_at7 sakura_nebula edheras_system }	
+
+    planet = {
+		name = "Edheras"
+        class = pc_l_star
+        orbit_distance = 0
+        size = 20
+        flags = { edheras_star }
+    }
+
+    planet = {
+        name = "Ufmas"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 219
+        size = 18
+        flags = { ufmas_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Alathor"
+        class = pc_barren_cold
+        orbit_distance = 125
+        orbit_angle = 45
+        size = 7
+        flags = { alathor_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Khem"
+        class = pc_arid
+        orbit_distance = 125
+        orbit_angle = 244
+        size = 24
+        flags = { khem_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Creckak"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 233
+        size = 26
+        has_ring = yes
+
+        moon = {
+            name = "Prartor"
+            class = pc_mephitic
+            orbit_distance = 20
+            orbit_angle = 201
+            size = 7
+            flags = {prartor_planet creckak_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Sothor"
+            class = pc_molten
+            orbit_distance = 5
+            orbit_angle = 346
+            size = 2
+            flags = { sothor_planet }
+            has_ring = no
+
+        }
+    }
+}
+
+sys_erentis_init = {
+    name = "Erentis"
+    class = sc_g
+	max_instances = 1
+
+	flags = { attican_traverse sector_at7 sakura_nebula erentis_system }	
+
+    planet = {
+		name = "Erentis"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { erentis_star }
+    }
+
+    planet = {
+        name = "Arashu"
+        class = pc_hot_giant
+        orbit_distance = 80
+        orbit_angle = 41
+        size = 40
+        flags = { arashu_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Pistren"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 255
+        size = 16
+        flags = { pistren_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Yimire"
+        class = pc_relic
+        orbit_distance = 80
+        orbit_angle = 290
+        size = 22
+        flags = { yimire_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Hustrika"
+        class = pc_ammonia
+        orbit_distance = 80
+        orbit_angle = 280
+        size = 11
+        flags = { hustrika_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Lorintia"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 238
+        size = 35
+        flags = { lorintia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Tasza"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 162
+        size = 11
+        flags = { tasza_planet }
+        has_ring = no
+    }
+}
+
+sys_numunas_init = {
+    name = "Numun As"
+    class = sc_a_super
+	max_instances = 1
+
+	flags = { attican_traverse sector_at7 sakura_nebula numunas_system secondary_relay_system }	
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 160
+    }
+
+    planet = {
+		name = "Numun As"
+        class = pc_a_super_star
+        orbit_distance = 0
+        size = 20
+        flags = { numun_as_star }
+    }
+
+    planet = {
+        name = "Sasho"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 172
+        size = 8
+        flags = { sasho_planet }
+        has_ring = no
+    }
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Nimi"
+        class = pc_ocean
+        orbit_distance = 80
+        orbit_angle = 125
+        size = 17
+        flags = { nimi_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Opus Mas"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 59
+        size = 10
+        flags = { opus_mas_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Iblil Gin"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 172
+        size = 16
+        flags = { iblil_gin_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Kowu"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 297
+        size = 19
+        flags = { kowu_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_7_secondaryrelay" 
+			name = "Sector AT7 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_rastriux_init = {
+    name = "Rastriux"
+    class = sc_a
+	max_instances = 1
+
+	flags = { attican_traverse sector_at7 sakura_nebula rastriux_system primary_relay_system }	
+
+    asteroid_belt = {
+        type = icy_asteroid_belt
+        radius = 405
+    }
+
+    planet = {
+		name = "Rastriux"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 20
+        flags = { rastriux_star }
+    }
+
+    planet = {
+        name = "Quaril"
+        class = pc_molten
+        orbit_distance = 45
+        orbit_angle = 164
+        size = 9
+        flags = { quaril_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Esterton"
+        class = pc_hothouse
+        orbit_distance = 45
+        orbit_angle = 66
+        size = 11
+        flags = { esterton_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Tremortus"
+        class = pc_iron
+        orbit_distance = 45
+        orbit_angle = 306
+        size = 15
+        flags = { tremortus_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Poptite"
+        class = pc_mephitic
+        orbit_distance = 45
+        orbit_angle = 91
+        size = 10
+        flags = { poptite_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Victronis"
+        class = pc_hothouse
+        orbit_distance = 45
+        orbit_angle = 326
+        size = 16
+        flags = { victronis_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Aititus"
+        class = pc_gas_giant
+        orbit_distance = 45
+        orbit_angle = 145
+        size = 33
+        flags = { aititus_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Seveda"
+        class = pc_gas_giant
+        orbit_distance = 45
+        orbit_angle = 289
+        size = 37
+        flags = { seveda_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Generica"
+        class = pc_gas_giant
+        orbit_distance = 45
+        orbit_angle = 88
+        has_ring = no
+    }
+
+    planet = {
+        name = "Konoha"
+        class = pc_asteroid
+        orbit_distance = 45
+        orbit_angle = 178
+        size = 2
+        flags = { konoha_planet }
+        has_ring = no
+    }
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Opigi"
+        class = pc_methane
+        orbit_distance = 45
+        orbit_angle = 292
+        size = 16
+        flags = { opigi_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Caskli"
+        class = pc_frozen
+        orbit_distance = 45
+        orbit_angle = 153
+        size = 19
+        flags = { caskli_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "sakuranebula_savianabyssal_primaryrelay" 
+			name = "Sector AT7 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_ubila_init = {
+    name = "Ubila"
+    class = sc_neutron_star
+	max_instances = 1
+
+	flags = { attican_traverse sector_at7 sakura_nebula ubila_system primary_relay_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 300
+    }
+
+    planet = {
+		name = "Ubila"
+        class = pc_neutron_star
+        orbit_distance = 0
+        size = 20
+        flags = { ubila_star }
+    }
+
+    planet = {
+        name = "Jalki"
+        class = pc_molten
+        orbit_distance = 60
+        orbit_angle = 96
+        size = 16
+        flags = { jalki_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Lilant"
+        class = pc_carbon
+        orbit_distance = 60
+        orbit_angle = 181
+        size = 19
+        flags = { lilant_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Borborm"
+        class = pc_ammonia
+        orbit_distance = 60
+        orbit_angle = 269
+        size = 14
+        flags = { borborm_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Dondae"
+        class = pc_hothouse
+        orbit_distance = 60
+        orbit_angle = 157
+        size = 8
+        flags = { dondae_planet }
+        has_ring = no
+    }
+
+	change_orbit = 60
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Samirai"
+        class = pc_frozen
+        orbit_distance = 60
+        orbit_angle = 135
+        size = 20
+        flags = { samirai_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Tertoki"
+        class = pc_methane
+        orbit_distance = 60
+        orbit_angle = 153
+        size = 7
+        flags = { tertoki_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Delorn"
+        class = pc_barren_cold
+        orbit_distance = 60
+        orbit_angle = 210
+        size = 12
+        flags = { delorn_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "sakuranebula_eyesofmizhuna_primaryrelay" 
+			name = "Sector AT7 - Primary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		}
+	}
+}

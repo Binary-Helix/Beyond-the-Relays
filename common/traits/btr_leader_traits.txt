@@ -1,0 +1,19 @@
+btr_leader_trait_council_spectre = {
+    leader_trait_type = veteran
+    inline_script = {
+        script = trait/icon
+        CLASS = leader
+        ICON = "GFX_leader_trait_council_spectre"
+        RARITY = veteran
+        COUNCIL = no
+        TIER = 1
+    }
+
+    self_modifier = {
+        leader_initial_skill = 2
+    }
+
+    custom_tooltip_with_modifiers = leader_trait_adventurous_spirit_effect
+    leader_class = { btr_council_spectre }
+
+}

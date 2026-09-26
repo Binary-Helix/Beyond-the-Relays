@@ -1,0 +1,89 @@
+tr_btr_agrarianism_adoption = {
+    #possible = {
+    #}
+    unlocks_agenda = agenda_agrarian
+    modifier = {
+        planet_pops_consumer_goods_upkeep_mult = -0.05        #Officials generate influence, handled in the leaders script
+    }
+}
+
+tr_btr_agrarianism_finish = {
+    modifier = {
+        #custom_tooltip = btr_vigilance_finish_desc
+        planet_farmers_minerals_produces_add = 1
+       # planet_farmer_minerals_produces_add = 1
+        ascension_perks_add = 1
+        #Also unlocks 4 special resolutions
+    }
+}
+
+tr_btr_agrarianism_rural = {
+    #Handled through galcom.300
+    modifier = {
+        #TODO Make Farming districts provide 1 unity and 3 happniess
+            }
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_agrarianism_local = {
+    possible = {
+    }
+    modifier = {
+        #TODO Make City districts provide 100 farmer jobs
+
+    }
+
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_agrarianism_honest = {
+    possible = {
+        has_tradition = tr_btr_agrarianism_rural
+    }
+    modifier = {
+        #TODO Make farming districts cost 50% less to build and 50% faster to build while industrial and mining districts cost 50% more and build 50% slower
+
+    }
+    #Handled through galcom.305
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_agrarianism_communities = {
+    possible = {
+        has_tradition = tr_btr_agrarianism_local
+    }
+    modifier = {
+        planet_stability_add = 5
+        pop_resettlement_cost_mult = 1
+        colony_start_urban_districts_add = 1
+       # colony_start_num_pops_add = 1
+    }
+    #Handled through galcom.310-315
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+"tr_btr_agrarianism_clean" = {
+    possible = {
+        has_tradition = tr_btr_agrarianism_communities
+        has_tradition = tr_btr_agrarianism_honest
+    }
+
+    modifier = {
+        #TODO Make planets with more farming districts than industrial and mining districts combined gain 10% pop growth, 5% happiness and 5 stability
+
+    }
+
+    ai_weight = {
+        factor = 5000
+    }
+}

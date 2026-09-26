@@ -1,0 +1,344 @@
+#################
+### AZURE SEA ###
+#################
+
+sys_saleste_init = {
+	name = "Saleste"
+    class = sc_b_super
+	max_instances = 1
+
+	flags = { attican_traverse sector_at3 saleste_system primary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 375
+	}
+
+	planet = {
+	    name = "Saleste"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 30
+        flags = { saleste_star }
+    }
+
+	planet = {
+	    name = "Veria"
+        class = pc_hothouse	
+        orbit_distance = 125
+        size = 13
+        flags = { veria_planet }
+    }
+
+	planet = {
+	    name = "Darlandes"
+        class = pc_barren_cold
+        orbit_distance = 125
+        size = 15
+        flags = { darlandes_planet }
+    }
+
+	change_orbit = 125
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "azuresea_crescentnebula_primaryrelay" 
+			name = "Sector AT3 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_tamara_init = {
+	name = "Tamara"
+    class = sc_g_giant
+	max_instances = 1
+
+	flags = { attican_traverse sector_at3 tamara_system }
+	
+	planet = {
+	    name = "Tamara"
+        class = pc_g_giant_star
+        orbit_distance = 0
+        size = 30
+        flags = { tamara_star }
+    }
+
+	planet = {
+	    name = "Relactria"
+        class = pc_hothouse	
+        orbit_distance = 125
+        size = 13
+        flags = { relactria_planet }
+    }
+
+	planet = {
+	    name = "Fastenos"
+        class = pc_iron
+        orbit_distance = 125
+        size = 15
+        flags = { fastenos_planet }
+    }
+	
+	planet = {
+	    name = "Mulos"
+        class = pc_gas_giant
+        orbit_distance = 125
+        size = 11		
+        flags = { mulos_planet }
+    }
+
+	planet = {
+	    name = "Bistroe"
+        class = pc_iron
+        orbit_distance = 125
+        size = 14
+        flags = { bistroe_planet }
+    }
+}
+
+sys_teleukria_init = {
+	name = "Teleukria"
+    class = sc_a_super
+	max_instances = 1
+
+	flags = { attican_traverse sector_at3 teleukria_system }
+
+	init_effect = {
+		save_global_event_target_as = illiumCon2
+	}
+
+	planet = {
+	    name = "Teleukria"
+        class = pc_a_super_star
+        orbit_distance = 0
+        size = 30
+        flags = { teleukria_star }
+    }
+
+	planet = {
+	    name = "Perazor"
+        class = pc_barren	
+        orbit_distance = 70
+        size = 6
+        flags = { perazor_planet }
+    }
+
+	planet = {
+	    name = "Edavo"
+        class = pc_arid
+        orbit_distance = 70
+        size = 15
+        flags = { edavo_planet }
+    }
+	
+	planet = {
+	    name = "Lessajah"
+        class = pc_barren_cold
+        orbit_distance = 70
+        size = 13		
+
+		moon = {
+			name = "Lisana"
+			class = pc_iron
+			orbit_distance = 20
+			size = 8
+			flags = {lisana_planet lessajah_planet}
+		}
+    }
+
+	planet = {
+	    name = "Matis"
+        class = pc_ice_giant
+        orbit_distance = 70
+        size = 27
+        flags = { matis_planet }
+    }
+
+	planet = {
+	    name = "Xanmeley"
+        class = pc_ice_giant
+        orbit_distance = 70
+        size = 27
+        flags = { xanmeley_planet }
+    }
+	
+	planet = {
+	    name = "Skanus"
+        class = pc_methane
+        orbit_distance = 70
+        size = 18
+        flags = { skanus_planet }
+    }
+
+	planet = {
+	    name = "Jianle"
+        class = pc_frozen
+        orbit_distance = 70
+        size = 11
+        flags = { jianle_planet }
+    }
+}	
+
+sys_ustende_init = {
+	name = "Ustende"
+    class = sc_m_hyper
+	max_instances = 1
+
+	flags = { attican_traverse sector_at3 ustende_system secondary_relay_system }
+
+	planet = {
+	    name = "Ustende"
+        class = pc_m_hyper_star
+        orbit_distance = 0
+        size = 28
+        flags = { ustende_star }
+    }
+
+	planet = {
+	    name = "Makelis"
+        class = pc_hot_giant
+        orbit_distance = 80
+        size = 39
+        flags = { makelis_planet }
+    }
+
+	planet = {
+	    name = "Muraava"
+        class = pc_iron
+        orbit_distance = 80
+        size = 9
+        flags = { muraava_planet }
+    }
+	
+	planet = {
+	    name = "Henae"
+        class = pc_alpine
+        orbit_distance = 80
+        size = 16
+        flags = { henae_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Kyari"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 8
+        flags = { kyari_planet }
+    }
+
+	planet = {
+	    name = "Beneseer"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 9
+        flags = { beneseer_planet }
+    }
+
+	planet = {
+	    name = "Teseri"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 4
+        flags = { teseri_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_3_secondaryrelay" 
+			name = "Sector AT3 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_virmana_init = {
+	name = "Virmana"
+    class = sc_b_super
+	max_instances = 1
+
+	flags = { attican_traverse sector_at3 virmana_system primary_relay_system }
+
+	planet = {
+	    name = "Virmana"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 28
+        flags = { virmana_star }
+    }
+
+	planet = {
+	    name = "Kanmala"
+        class = pc_hothouse	
+        orbit_distance = 80
+        size = 17
+        flags = { kanmala_planet }
+    }
+
+	planet = {
+	    name = "Janre"
+        class = pc_carbon
+        orbit_distance = 80
+        size = 12
+        flags = { janre_planet }
+    }
+	
+	planet = {
+	    name = "Falamavia"
+        class = pc_arctic
+        orbit_distance = 80
+        size = 20
+
+		moon = {
+			name = "Lucnete"
+			class = pc_hothouse	
+			orbit_distance = 20
+			size = 6
+			flags = {lucnete_planet falamavia_planet}
+		}
+    }
+
+	planet = {
+	    name = "Pralas"
+        class = pc_hothouse	
+        orbit_distance = 80
+        size = 10
+        flags = { pralas_planet }
+    }
+
+	planet = {
+	    name = "Holintia"
+        class = pc_barren_cold
+        orbit_distance = 80
+        size = 15
+        flags = { holintia_planet }
+    }
+
+	planet = {
+	    name = "Moith"
+        class = pc_gas_giant
+        orbit_distance = 80
+        size = 35
+        flags = { moith_planet }
+		has_ring = yes
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "azuresea_atticanalpha_primaryrelay" 
+			name = "Sector AT3 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

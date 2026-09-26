@@ -1,0 +1,411 @@
+####################
+### KEPLER VERGE ###
+####################
+
+sys_aryabhata_init = {
+	name = "Aryabhata"
+    class = sc_b_super
+	max_instances = 1
+
+	flags = { attican_traverse sector_at12 kepler_verge aryabhata_system secondary_relay_system }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+
+    planet = {
+		name = "Aryabhata"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 30
+        flags = { aryabhata_star }
+    }
+
+	planet = {
+        name = "Dhriti"
+        class = pc_hot_giant
+        orbit_distance = 100
+        orbit_angle = 292
+        has_ring = no
+		size = 36
+		flags = { dhriti_planet }
+	}	
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Ekram"
+        class = pc_dextro_savannah
+        orbit_distance = 50
+        orbit_angle = 196
+        has_ring = no
+		size = 14
+		flags = {subclass_world ekram_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = aquifer_world
+			}
+		}
+
+		moon = {
+			name = "Alpa"
+			class = pc_asteroid
+			orbit_distance = 20
+			size = 7
+			flags = { alpa_planet }
+			has_ring = no
+
+			init_effect = {
+				add_deposit = d_eezo_1
+			}
+    	}
+	}	
+
+    planet = {
+        name = "Charvi"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 211
+        has_ring = yes
+		size = 31
+		flags = {subclass_world charvi_planet}
+
+		moon = {
+			name = "Amav"
+			class = pc_barren
+			size = 6
+			flags = { amav_planet }
+			orbit_distance = 20
+			has_ring = no
+		}
+    }
+
+	planet = {
+        name = "Manit"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 196
+        has_ring = no
+		size = 14
+		flags = {subclass_world manit_planet}
+	}	
+
+	planet = {
+        name = "Gautam"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 196
+        has_ring = no
+		size = 14
+		flags = {subclass_world gautam_planet}
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_12_secondaryrelay" 
+			name = "Sector AT12 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_herschel_init = {
+    name = "Herschel"
+    class = sc_o_super
+	max_instances = 1
+
+	flags = { attican_traverse sector_at12 kepler_verge herschel_system }
+
+    planet = {
+		name = "Herschel"
+        class = pc_o_super_star
+        orbit_distance = 0
+        size = 38
+        flags = { herschel_star }
+    }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 175
+	}
+
+    planet = {
+        name = "Tungel"
+        class = pc_chthonian
+        orbit_distance = 125
+        orbit_angle = 14
+        has_ring = no
+		size = 25
+		flags = {subclass_world tungel_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = mineral_rich
+				days = -1
+			}
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+		}
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Matol"
+        class = pc_mephitic
+        orbit_distance = 75
+        orbit_angle = 265
+        has_ring = no
+		size = 10
+		flags = {subclass_world matol_planet}
+		init_effect = {
+			# add_modifier = {
+			# 	modifier = terraforming_candidate
+			# 	days = -1
+			# }
+			add_modifier = {
+				modifier = low_gravity
+				days = -1
+			}
+			add_modifier = {
+				modifier = weak_magnetic_field
+				days = -1
+			}
+            add_anomaly = {
+                category = BTR_MATOL_MATOL
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}	
+    }
+
+    planet = {
+        name = "Clugon"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 234
+        has_ring = no
+		size = 26
+		flags = {subclass_world clugon_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+			add_anomaly = {
+				category = GAS_CLOUDY_CAT
+			}
+		}
+
+        moon = {
+			name= "Clugon a"
+            class = pc_iron
+            orbit_distance = 20
+            orbit_angle = 118
+            has_ring = no
+			size = 4
+			flags = { clugon_a_planet }
+        }
+
+        moon = {
+			name= "Clugon b"
+            class = pc_iron
+            orbit_distance = 5
+            orbit_angle = 99
+            has_ring = no
+			size = 5
+			flags = { clugon_b_planet }
+        }
+
+        moon = {
+			name= "Clugon c"
+            class = pc_frozen
+            orbit_distance = 5
+            orbit_angle = 116
+            has_ring = no
+			size = 3
+			flags = { clugon_c_planet }
+        }
+    }
+
+    planet = {
+        name = "Clobaka"
+        class = pc_toxic
+        orbit_distance = 125
+        orbit_angle = 186
+        has_ring = yes
+		size = 20
+		flags = { clobaka_planet }
+    }	
+}
+
+sys_newton_init = {
+    name = "Newton"
+    class = sc_k
+	max_instances = 1
+
+	flags = { attican_traverse sector_at12 kepler_verge newton_system primary_relay_system }
+	
+    planet = {
+		name = "Newton"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 30
+        flags = { newton_star }
+    }
+
+    planet = {
+        name = "Ontarom"
+        class = pc_savannah
+        orbit_distance = 50
+        orbit_angle = 32
+        has_ring = no
+		size = 16
+		flags = {subclass_world ontarom_planet}
+
+		moon = {
+			name = "Thonal"
+			class = pc_iron
+			orbit_angle = 86
+			orbit_distance = 5
+			size = 5
+			flags = { thonal_planet }
+		}	
+
+		moon = {
+			name = "Ontarom b"
+			class = pc_carbon
+			orbit_angle = 246
+			orbit_distance = 9
+			size = 4
+			flags = { ontarom_b_planet }
+		}		
+    }
+
+    planet = {
+        name = "Klencory"
+        class = pc_chlorine
+        orbit_distance = 50
+        orbit_angle = 292
+        has_ring = no
+		size = 19
+		flags = {subclass_world klencory_planet}		
+		init_effect = {
+			add_modifier = {
+				modifier = bleak_planet
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Juncrom"
+        class = pc_gas_giant
+        orbit_distance = 45
+        orbit_angle = 196
+        has_ring = no
+		size = 36
+		flags = { juncrom_planet }
+    }
+
+    planet = {
+        name = "Sesmose"
+        class = pc_frozen
+        orbit_distance = 50
+        orbit_angle = 211
+        has_ring = yes
+		size = 7
+		flags = { sesmose_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_SESMOSE_BACKSPRAY
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "keplerverge_paradoxsend_primaryrelay" 
+			name = "Sector AT12 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_tombaugh_init = {
+	name = "Tombaugh"
+    class = sc_a
+	max_instances = 1
+
+	flags = { attican_traverse sector_at12 kepler_verge tombaugh_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 375
+	}
+
+	planet = {
+		name = "Tombaugh"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 30
+        flags = { tombaugh_star }
+    }
+
+	planet = {
+        name = "Plundo"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 168
+        size = 17
+        flags = { plundo_planet }
+        has_ring = no
+    }
+
+	planet = {
+        name = "Disferia"
+        class = pc_toxic
+        orbit_distance = 150
+        orbit_angle = 168
+        size = 17
+        flags = { disferia_planet }
+        has_ring = no
+	}	
+
+	change_orbit = 75
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+        name = "Balmury"
+        class = pc_toxic
+        orbit_distance = 75
+        orbit_angle = 168
+        size = 17
+        flags = { balmury_planet }
+        has_ring = no
+	}
+}

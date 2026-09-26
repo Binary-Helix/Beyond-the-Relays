@@ -1,0 +1,375 @@
+#######################
+### JARVAS GLOBULAR ###
+#######################
+
+sys_guc_init = {
+    name = "Guc"
+    class = sc_tt_orange
+	max_instances = 1
+
+	flags = { attican_traverse sector_at12 jarvas_globular guc_system primary_relay_system }
+
+	planet = {
+        class = pc_tt_orange_star
+        orbit_distance = 0
+        size = 20
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "jarvasglobular_tirandiveil_primaryrelay" 
+			name = "Sector AT12 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_mer_gor_init = {
+    name = "Mer Gor"
+    class = sc_black_hole
+	max_instances = 1
+
+	flags = { attican_traverse sector_at12 jarvas_globular mer_gor_system secondary_relay_system }
+
+	planet = {
+		name = "Mer Gor"
+        class = pc_black_hole
+        orbit_distance = 0
+        size = 20
+        flags = { mer_gor_planet }
+    }
+
+    planet = {
+        name = "Buth"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 166
+        size = 15
+        flags = { buth_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Gik"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 88
+        size = 18
+        flags = { gik_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Juz Mum"
+        class = pc_carbon
+        orbit_distance = 125
+        orbit_angle = 172
+        size = 20
+        flags = { juz_mum_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Gib Tap"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 249
+        size = 30
+        flags = { gib_tap_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_12_secondaryrelay" 
+			name = "Sector AT12 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_nalu_init = {
+    name = "Nalu"
+    class = sc_k
+	max_instances = 1
+
+	flags = { attican_traverse sector_at12 jarvas_globular nalu_system }
+
+	asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 400
+    }
+
+    planet = {
+		name = "Nalu"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 20
+        flags = { nalu_star }
+    }
+
+    planet = {
+        name = "Buzto"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 155
+        size = 14
+        flags = { buzto_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Barp"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 62
+        size = 16
+        flags = { barp_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Rard"
+        class = pc_chthonian
+        orbit_distance = 80
+        orbit_angle = 181
+        size = 24
+        flags = { rard_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Horb"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 266
+        size = 38
+        flags = { horb_planet }
+        has_ring = yes
+    }
+
+	change_orbit = 80
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Duft"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 103
+        size = 14
+        flags = { duft_planet }
+        has_ring = no
+    }
+}
+
+sys_thuva_init = {
+    name = "Thuva"
+    class = sc_f
+	max_instances = 1
+
+	flags = { attican_traverse sector_at12 jarvas_globular thuva_system }
+
+	planet = {
+		name = "Thuva"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 20
+        flags = { thuva_star }
+    }
+
+    planet = {
+        name = "Hagumai"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 130
+        size = 11
+        flags = { hagumai_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Voralum"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 286
+        has_ring = no
+    }
+
+    planet = {
+        name = "Dharomen"
+        class = pc_tropical
+        orbit_distance = 100
+        orbit_angle = 172
+        size = 23
+        flags = { dharomen_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Montak"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 85
+        size = 16
+        flags = { montak_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Xuko"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 237
+        has_ring = no
+    }
+}
+
+sys_ultio_init = {
+    name = "Ultio"
+    class = sc_o_super
+	max_instances = 1
+	usage = custom_empire
+
+	flags = { attican_traverse sector_at12 jarvas_globular ultio_system }
+
+	init_effect = {
+		save_global_event_target_as = gothonesFirstFleet
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 125
+	}
+
+    planet = {
+		name = "Ultio"
+        class = pc_o_super_star
+        orbit_distance = 0
+        size = 25
+        flags = { ultio_star }
+    }
+
+    planet = {
+        name = "Vis"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 313
+        has_ring = no
+		size = 10	
+		flags = { vis_planet }
+    }
+
+	change_orbit = 25
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+    planet = {
+        name = "Mollitiam"
+        class = pc_molten
+        orbit_distance = 75
+        orbit_angle = 313
+        has_ring = no
+		size = 17
+		flags = { mollitiam_planet }
+    }
+
+	planet = {
+        name = "Vindicta"
+        class = pc_dextro_tropical
+        orbit_distance = 100
+        orbit_angle = 313
+        has_ring = no
+		size = 22
+		starting_planet = yes
+		entity = "biolum_planet_03_entity"
+		flags = { vindicta_planet subclass_world }
+		deposit_blockers = none
+        modifiers = none
+		init_effect = {
+            add_modifier = {
+                modifier = biolum_world
+                days = -1
+            }
+            add_modifier = {
+                modifier = dextro_world
+                days = -1
+            }
+			save_global_event_target_as = gothonesHomeworld
+			if = {
+				limit = {
+					exists = event_target:gothonesHomeworld
+				}
+				log = "Gothones Homeworld Event Target Set"
+			}
+            prevent_anomaly = yes
+
+            check_for_gothones_player = yes
+
+            if = {
+				limit = {
+					any_country = {
+						has_country_flag = gothones_remnant_player
+					}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = gothones_remnant_player
+					}
+					save_global_event_target_as = gothones_remnant
+				}
+                generate_empire_home_planet = yes
+			}
+			else = {
+				generate_gothones_remnant_country = yes
+			}
+            set_capital = yes
+			set_owner = event_target:gothones_remnant
+			create_colony = {
+				owner = event_target:gothones_remnant
+				species = event_target:gothonesSpecies
+				ethos = owner
+			}
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/canon/gothones_rem_origin"
+            generate_got_vindicta_pops = yes
+            event_target:gothones_remnant = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+		}
+    }
+
+	planet = {
+        name = "Evol"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 313
+        has_ring = yes
+		size = 38
+		flags = { evol_planet }
+    }
+	
+	planet = {
+        name = "Absolutus"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 313
+        has_ring = no
+		size = 30
+		flags = { absolutus_planet }
+    }
+}

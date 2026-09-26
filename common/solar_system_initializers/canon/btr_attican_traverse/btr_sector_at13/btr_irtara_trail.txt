@@ -1,0 +1,406 @@
+#####################
+### IRTA'RA TRAIL ###
+#####################
+
+sys_ayukan_init = {
+	name = "Ayukan"
+    class = sc_o_hyper
+	max_instances = 1
+
+	flags = { attican_traverse sector_at13 irtara_trail ayukan_system }
+
+	planet = {
+	    name = "Ayukan"
+        class = pc_o_hyper_star
+        orbit_distance = 0
+        size = 27
+        flags = { ayukan_star }
+    }
+
+	planet = {
+	    name = "Yupolai"
+        class = pc_hothouse
+        orbit_distance = 50
+        size = 10
+        flags = { yupolai_planet }
+    }
+
+	planet = {
+	    name = "Jaskrett"
+        class = pc_carbon
+        orbit_distance = 50
+        size = 11
+        flags = { jaskrett_planet }
+	}
+
+	planet = {
+	    name = "Indosi"
+        class = pc_barren
+        orbit_distance = 50
+        size = 16
+        flags = { indosi_planet }
+    }
+
+	planet = {
+	    name = "Fasda'as"
+        class = pc_barren
+        orbit_distance = 50
+        size = 15
+        flags = { fasdaas_planet }
+    }
+
+	planet = {
+	    name = "Orum"
+        class = pc_molten
+        orbit_distance = 50
+        size = 10
+        flags = { orum_planet }
+    }
+	
+	planet = {
+	    name = "Telukra"
+        class = pc_gas_giant
+        orbit_distance = 50
+        size = 34
+        flags = { telukra_planet }
+		has_ring = yes
+	}
+
+	planet = {
+	    name = "Namapp"
+        class = pc_barren_cold
+        orbit_distance = 50
+        size = 5
+        flags = { namapp_planet }
+    }
+
+	planet = {
+	    name = "Cioletas"
+        class = pc_frozen
+        orbit_distance = 50
+        size = 7
+        flags = { cioletas_planet }
+    }
+
+	planet = {
+	    name = "Toldasp"
+        class = pc_gas_giant
+        orbit_distance = 50
+        size = 30
+        flags = { toldasp_planet }
+    }
+}
+
+sys_iostapa_init = {
+	name = "Iostapa"
+    class = sc_g
+	max_instances = 1
+
+	flags = { attican_traverse sector_at13 irtara_trail iostapa_system secondary_relay_system }
+
+	planet = {
+	    name = "Iostapa"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 27
+        flags = { iostapa_star }
+    }
+
+	planet = {
+	    name = "Yarnat"
+        class = pc_molten
+        orbit_distance = 100
+        size = 12
+        flags = { yarnat_planet }
+    }
+
+	planet = {
+	    name = "Vadu'as"
+        class = pc_carbon
+        orbit_distance = 100
+        size = 8
+        flags = { vaduas_planet }
+	}
+
+	planet = {
+	    name = "Opio'lo"
+        class = pc_dextro_continental
+        orbit_distance = 100
+        size = 18
+        flags = { opiolo_planet }
+    }
+
+	planet = {
+	    name = "Carcus"
+        class = pc_barren
+        orbit_distance = 100
+        size = 5
+        flags = { carcus_planet }
+    }
+
+	planet = {
+	    name = "Sarta'em"
+        class = pc_barren_cold
+        orbit_distance = 100
+        size = 8
+        flags = { sartaem_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_13_secondaryrelay" 
+			name = "Sector AT13 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_papapp_init = {
+	name = "Papapp"
+    class = sc_k_giant
+	max_instances = 1
+
+	flags = { attican_traverse sector_at13 irtara_trail papapp_system primary_relay_system }
+
+	planet = {
+	    name = "Papapp"
+        class = pc_k_giant_star
+        orbit_distance = 0
+        size = 33
+        flags = { papapp_star }
+    }
+
+	planet = {
+	    name = "Kondor'is"
+        class = pc_hothouse
+        orbit_distance = 250
+        size = 10
+        flags = { kondoris_planet }
+    }
+
+	planet = {
+	    name = "Vameccan"
+        class = pc_continental
+        orbit_distance = 250
+        size = 19
+        flags = { vameccan_planet }
+	}
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "irtaratrail_hadesnexus_primaryrelay" 
+			name = "Sector AT13 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_turipan_init = {
+	name = "Turipan"
+    class = sc_a
+	max_instances = 1
+
+	flags = { attican_traverse sector_at13 irtara_trail turipan_system }
+
+	planet = {
+	    name = "Turipan"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 32
+        flags = { turipan_star }
+    }
+
+	planet = {
+	    name = "Jarmao"
+        class = pc_gas_giant
+        orbit_distance = 150
+        size = 37
+        flags = { jarmao_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Fester'ur"
+        class = pc_gas_giant
+        orbit_distance = 150
+        size = 38
+        flags = { festerur_planet }
+		has_ring = yes
+	}
+
+	planet = {
+	    name = "Jelkkenda"
+        class = pc_ice_giant
+        orbit_distance = 150
+        size = 34
+        flags = { jelkkenda_planet }
+		has_ring = yes
+    }
+}
+
+sys_welvap_init = {
+	name = "Welvap"
+    class = sc_m
+	max_instances = 1
+
+	flags = { attican_traverse sector_at13 irtara_trail welvap_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 315
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 500
+	}
+
+	planet = {
+	    name = "Welvap"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 27
+        flags = { welvap_star }
+    }
+
+	planet = {
+	    name = "Gastrass"
+        class = pc_hot_giant
+        orbit_distance = 70
+        size = 38
+        flags = { gastrass_planet }
+    }
+
+	planet = {
+	    name = "Opis'durr"
+        class = pc_hothouse
+        orbit_distance = 70
+        size = 14
+        flags = { opisdurr_planet }
+	}
+
+	planet = {
+	    name = "Barsarias"
+        class = pc_hothouse
+        orbit_distance = 70
+        size = 17
+        flags = { barsarias_planet }
+    }
+
+	planet = {
+	    name = "Kipick"
+        class = pc_highgrav_chlorine
+        orbit_distance = 70
+        size = 22
+        flags = { kipick_planet }
+		has_ring = yes
+    }
+
+	change_orbit = 35
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Iondar"
+        class = pc_barren_cold
+        orbit_distance = 35
+        size = 10
+        flags = { iondar_planet }
+    }
+	
+	planet = {
+	    name = "Hietass"
+        class = pc_frozen
+        orbit_distance = 70
+        size = 14
+        flags = { hietass_planet }
+	}
+
+	planet = {
+	    name = "Valdum"
+        class = pc_ice_giant
+        orbit_distance = 70
+        size = 25
+        flags = { valdum_planet }
+    }
+
+	change_orbit = 10
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_xodiss_init = {
+	name = "Xodiss"
+    class = sc_d
+	max_instances = 1
+
+	flags = { attican_traverse sector_at13 irtara_trail xodiss_system }
+
+	planet = {
+	    name = "Xodiss"
+        class = pc_d_star
+        orbit_distance = 0
+        size = 27
+        flags = { xodiss_star }
+    }
+
+	planet = {
+	    name = "Kondor'is"
+        class = pc_molten
+        orbit_distance = 80
+        size = 10
+        flags = { kondoris_planet }
+    }
+
+	planet = {
+	    name = "Vameccan"
+        class = pc_hothouse
+        orbit_distance = 80
+        size = 12
+        flags = { vameccan_planet }
+	}
+
+	planet = {
+	    name = "Yurvass"
+        class = pc_mephitic
+        orbit_distance = 80
+        size = 14
+        flags = { yurvass_planet }
+    }
+
+	planet = {
+	    name = "Iostas"
+        class = pc_tundra
+        orbit_distance = 80
+        size = 15
+        flags = { iostas_planet }
+    }
+
+	planet = {
+	    name = "Vesston"
+        class = pc_gas_giant
+        orbit_distance = 80
+        size = 38
+        flags = { vesston_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Bastupp"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 8
+        flags = { bastupp_planet }
+    }
+}

@@ -1,0 +1,157 @@
+#################################
+### GALACTIC CORE INITIALIZER ###
+#################################
+
+sys_tartarusdebrisfield_init = {
+    name = "Tartarus Debris Field"
+    class = sc_black_hole
+    max_instances = 1
+
+	flags = { terminus_systems sector_t13 galactic_core tartarus_debris_field primary_relay_system }	
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 100
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 200
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 250
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 300
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 350
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 400
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 450
+	}
+
+	planet = {
+		name = "Tartarus Debris Field"
+		class = pc_black_hole
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 70
+		flags = { tartarus_debris_field_planet }
+		has_ring = no
+		init_effect = {
+
+			while = {
+				count = 100
+				create_ambient_object = {
+					type = large_debris_object
+					entity_offset_height = { min = -10 max = -20 }
+					entity_offset = { min = 96 max = 400 }
+					entity_offset_angle = { min = 1 max = 360 }
+					scale = 3
+				}
+			}
+			while = {
+				count = 35
+				create_ambient_object = {
+					type = ancient_battlefield_02_object
+					entity_offset_height = { min = -10 max = -20 }
+					entity_offset = { min = 96 max = 400 }
+					entity_offset_angle = { min = 1 max = 360 }
+					scale = 3
+				}
+			}
+		}
+	}
+
+	planet = {
+		name = "Polus"
+		class = pc_asteroid
+		orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 2
+		flags = { polus_planet }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Inid"
+		class = pc_asteroid
+		orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 1
+		flags = { inid_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Collector Base"
+		class = pc_habitat
+		orbit_distance = 180
+		orbit_angle = 215
+		size = 12
+		has_ring = no
+		starting_planet = yes
+		entity = "collector_base_01_game_entity"
+		flags = {collector_base collector_base_station}
+		deposit_blockers = none
+        modifiers = none
+		# init_effect = {
+		# 	save_global_event_target_as = collectorsHomeworld
+		# 	if = {
+		# 		limit = {
+		# 			exists = event_target:collectorsHomeworld
+		# 		}
+		# 		log = "Collectors Homeworld Event Target Set"
+		# 	}
+        #     prevent_anomaly = yes
+
+        #     check_for_collectors_player = yes
+            
+        #     if = {
+		# 		limit = { 
+		# 			any_country = {
+		# 				has_country_flag = collectors_empire_player
+		# 			}
+		# 		}
+		# 		random_country = {
+		# 			limit = {
+		# 				has_country_flag = collectors_empire_player
+		# 			}
+		# 			save_global_event_target_as = collectors_empire
+		# 		}
+		# 	}
+		# 	else = {
+		# 		generate_collectors_empire_country = yes
+		# 	}
+        #     set_capital = yes
+		# 	set_owner = event_target:collectors_empire
+		# 	create_colony = {
+		# 		owner = event_target:collectors_empire
+		# 		species = event_target:collectorsSpecies
+		# 		ethos = owner
+		# 	}
+        #     generate_collector_base_pops = yes
+		# }		
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "galacticcore_omega4relay_primaryrelay" 
+			name = "Sector GC1 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	

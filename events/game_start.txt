@@ -10,7 +10,7 @@ event = {
 		set_global_flag = game_started
 
 
-		every_country = {
+		every_playable_country = {
 			limit = { is_ai = no }
 			country_event = { id = country.900 days = 460 random = 60 }
 			country_event = { id = game_start.74 }
@@ -184,11 +184,7 @@ event = {
 					is_drone_country_type = yes
 				}
 				set_faction_hostility = {
-					target = prev
-					set_hostile = no
-					set_neutral = no
-					set_friendly = yes
-				}
+					target = prev set_friendly = yes }
 			}
 		}
 
@@ -206,11 +202,7 @@ event = {
 					}
 				}
 				set_faction_hostility = {
-					target = prev
-					set_hostile = no
-					set_neutral = yes
-					set_friendly = no
-				}
+					target = prev set_neutral = yes }
 			}
 		}
 
@@ -228,11 +220,7 @@ event = {
 					}
 				}
 				set_faction_hostility = {
-					target = prev
-					set_hostile = no
-					set_neutral = yes
-					set_friendly = no
-				}
+					target = prev set_neutral = yes }
 			}
 		}
 
@@ -248,11 +236,7 @@ event = {
 			every_country = {
 				limit = { is_country_type = dormant_marauders }
 				set_faction_hostility = {
-					target = prev
-					set_hostile = no
-					set_neutral = no
-					set_friendly = yes
-				}
+					target = prev set_friendly = yes }
 			}
 		}
 
@@ -265,6 +249,11 @@ event = {
 			flag = nuclear_war_pre_ftl_global
 			years = 10
 		}
+
+		every_playable_country = {
+			add_modifier = { modifier = game_start years = 10 }
+		}
+
 
 		### ORIGINS
 
@@ -891,7 +880,7 @@ event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_country = {
+		every_playable_country = {
 			limit = { is_ai = no }
 			country_event = { id = tutorial.104 }
 		}
@@ -905,7 +894,7 @@ event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_country = {
+		every_playable_country = {
 			limit = { is_ai = no }
 			random_list = {
 				#1 = { country_event = { id = nomad.1 days = 1 } } # DEBUG

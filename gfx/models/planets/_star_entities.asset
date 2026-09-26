@@ -17,6 +17,19 @@ entity = {
 	scale = 15
 }
 
+entity = {
+	name = "red_giant_supernova_entity"
+	pdxmesh = "system_plane_collision_mesh"
+
+	default_state = "explode"
+	state = { name = "explode" state_time = 30 looping = no
+		event = { time = 0.0 	particle = "infernal_red_giant_explosion_effect"  keep_particle = yes trigger_once = no }
+		start_event = { node = "" light = "btr_m_giant_class_star" }
+	}
+
+	scale = 15
+}
+
 entity = { # A
 	name = "a_star_class_star_entity"
 	pdxmesh = "star_mesh"
@@ -25,6 +38,7 @@ entity = { # A
 	state = { name = "idle" animation = "idle"
 		event = { time = 0.0 node = "planet" particle = "a_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
 		event = { time = 0.0 node = "" particle = "btr_me_lens_flare_a_star"  keep_particle = yes trigger_once = yes }
+		start_event = { node = "" light = "btr_a_class_star" }
 	}
 
 	scale = 1.6
@@ -38,6 +52,7 @@ entity = { # B
 	state = { name = "idle" animation = "idle"
 		event = { time = 0.0 node = "planet" particle = "b_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
 		event = { time = 0.0 node = "" particle = "btr_me_lens_flare_b_star"  keep_particle = yes trigger_once = yes }
+		start_event = { node = "" light = "btr_b_class_star" }
 	}
 	scale = 1.8
 }
@@ -50,6 +65,7 @@ entity = { # F
 	state = { name = "idle" animation = "idle"
 		event = { time = 0.0 node = "planet" particle = "f_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
 		event = { time = 0.0 node = "" particle = "btr_me_lens_flare_f_star"  keep_particle = yes trigger_once = yes }
+		start_event = { node = "" light = "btr_f_class_star" }
 	}
 	scale = 1.5
 }
@@ -62,6 +78,7 @@ entity = { # G
 	state = { name = "idle" animation = "idle"
 		event = { time = 0.0 node = "planet" particle = "g_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
 		event = { time = 0.0 node = "" particle = "btr_me_lens_flare_g_star"  keep_particle = yes trigger_once = yes }
+		start_event = { node = "" light = "btr_g_class_star" }
 	}
 
 	scale = 1.3
@@ -75,6 +92,7 @@ entity = { # K
 	state = { name = "idle" animation = "idle"
 		event = { time = 0.0 node = "planet" particle = "k_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
 		event = { time = 0.0 node = "" particle = "btr_me_lens_flare_k_star"  keep_particle = yes trigger_once = yes }
+		start_event = { node = "" light = "btr_k_class_star" }
 	}
 	scale = 1.2
 }
@@ -87,6 +105,7 @@ entity = { # M
 	state = { name = "idle" animation = "idle"
 		event = { time = 0.0 node = "planet" particle = "m_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
 		event = { time = 0.0 node = "" particle = "btr_me_lens_flare_m_star"  keep_particle = yes trigger_once = yes }
+		start_event = { node = "" light = "btr_m_class_star" }
 	}
 	scale = 1.0
 }
@@ -99,6 +118,7 @@ entity = {
 	state = { name = "idle" animation = "idle"
 		event = { time = 0.0 node = "planet" particle = "a_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "neutron_star_idle_hum" } }
 		event = { time = 0.0 node = "" particle = "btr_me_lens_flare_neutron_star"  keep_particle = yes trigger_once = yes }
+		start_event = { node = "" light = "btr_neutron_star" }
 	}
 	scale = 1.3
 
@@ -153,7 +173,8 @@ entity = {
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" 
 		event = { time = 0.0 node = "" particle = "a_class_star_particle"  keep_particle = no trigger_once = yes }
-		event = { time = 0.0 node = "" particle = "btr_me_lens_flare_pulsar_star"  keep_particle = yes trigger_once = yes }
+		#event = { time = 0.0 node = "" particle = "btr_me_lens_flare_pulsar_star"  keep_particle = yes trigger_once = yes }
+		start_event = { node = "" light = "btr_neutron_star" }
 	}
 	
 	game_data = {
@@ -173,6 +194,7 @@ entity = { # ED
 	default_state = "idle"
 	state = { name = "idle" animation = "idle"
 		event = { time = 0.0 node = "planet" particle = "ed_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		start_event = { node = "" light = "btr_ed_class_star" }
 	 }
 
 	attach = { core = "extra_dimensional_system_effect_sun" }
@@ -190,10 +212,40 @@ entity = { # Toxoid
 	default_state = "idle"
 	state = { name = "idle" animation = "idle"
 		event = { time = 0.0 node = "planet" particle = "toxic_class_star_effect"  keep_particle = no trigger_once = yes sound = { soundeffect = "tox_amb_star_hum" } }
+		start_event = { node = "" light = "btr_tox_class_star" }
 	}
 
 	scale = 1
 	cull_radius = 20000	
 	attach = { root = "toxoid_class_star_entity" }	
 	attach = { root = "toxoid_class_star_wave_entity" }	
+}
+
+entity = { # M Red Giant Origin
+	name = "red_giant_tunnel_class_star_entity"
+	pdxmesh = "star_mesh"
+
+	locator = { name = portal_locator position = {-7.5 0 0} rotation = {-90 0 0 } }
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "m_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		event = { time = 0.0 node = "portal_locator" entity = "infernal_01_subspace_tunnel_tunnel_to_star_entity" }
+		start_event = { node = "" light = "btr_m_giant_class_star" }
+	 }
+	scale = 1.25
+}
+entity = { # M Red Giant Origin
+	name = "red_giant_tunnel_faint_class_star_entity"
+	pdxmesh = "star_mesh"
+
+	locator = { name = portal_locator position = {-7.5 0 0} rotation = {-90 0 0 } }
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle"
+		event = { time = 0.0 node = "planet" particle = "m_class_star_particle"  keep_particle = no trigger_once = yes sound = { soundeffect = "amb_star_fusion" } }
+		event = { time = 0.0 node = "portal_locator" entity = "infernal_01_subspace_tunnel_to_star_faint_entity" }
+		start_event = { node = "" light = "btr_m_giant_class_star" }
+	 }
+	scale = 1.25
 }

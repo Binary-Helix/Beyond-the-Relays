@@ -1,0 +1,306 @@
+#################
+### ONOF SPOT ###
+#################
+
+sys_burun_init = {
+	name = "Burun"
+	class = sc_m
+	max_instances = 1
+
+    flags = { inner_council sector_ic7 onof_spot burun_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 375
+	}
+
+	planet = {
+	    name = "Burun"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { burun_star }
+    }
+
+	planet = {
+		name = "Nur Yin"
+		class = pc_hothouse
+        orbit_distance = 250
+        size = 11
+        flags = { nur_yin_planet }
+	}
+
+    change_orbit = 125
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+		name = "Alab"
+		class = pc_barren_cold
+        orbit_distance = 125
+        size = 12
+        flags = { alab_planet }
+		has_ring = no
+	}
+}
+
+sys_lebnatch_init = {
+	name = "Lebnatch"
+	class = sc_g
+	max_instances = 1
+
+    flags = { inner_council sector_ic7 onof_spot lebnatch_system secondary_relay_system }
+
+	planet = {
+	    name = "Lebnatch"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { lebnatch_star }
+    }
+
+	planet = {
+		name = "Teol"
+		class = pc_iron
+        orbit_distance = 100
+        size = 6
+        flags = { teol_planet }
+	}
+
+	planet = {
+		name = "Hon Yor"
+		class = pc_dextro_savannah
+        orbit_distance = 100
+        size = 20
+		flags = {subclass_world hon_yor_planet}
+		entity = "steppe_planet_03_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = steppe_world
+				days = -1
+			}
+		}
+	}
+	
+	planet = {
+		name = "Gafreen"
+		class = pc_iron
+        orbit_distance = 100
+        size = 8
+        flags = { gafreen_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Val Nufrad"
+		class = pc_gas_giant
+        orbit_distance = 100
+        size = 33
+        flags = { val_nufrad_planet }
+	}
+	
+	planet = {
+		name = "Kiklan Tin"
+		class = pc_ice_giant
+        orbit_distance = 100
+        size = 28
+        flags = { kiklan_tin_planet }
+		has_ring = no
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "inner_council_sector_7_secondaryrelay" 
+			name = "Sector IC7 - Secondary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_lobu_init = {
+	name = "Lobu"
+	class = sc_ae
+	max_instances = 1
+
+    flags = { inner_council sector_ic7 onof_spot lobu_system }
+
+	planet = {
+	    name = "Lobu"
+        class = pc_ae_star
+        orbit_distance = 0
+        size = 20
+        flags = { lobu_star }
+    }
+
+	planet = {
+		name = "Doran"
+		class = pc_gas_giant
+        orbit_distance = 250
+        size = 37
+        flags = { doran_planet }
+	}
+}
+
+sys_menarel_init = {
+	name = "Mena Rel"
+	class = sc_k_giant
+	max_instances = 1
+
+    flags = { orion_spur sector_bf2 voyager_cluster menarel_system primary_relay_system vol_protectorate_system }
+
+	planet = {
+		name = "Mena Rel"
+        class = pc_k_giant_star
+        orbit_distance = 0
+        size = 20
+        flags = { mena_rel_star }
+	}
+
+	planet = {
+		name = "Tau Tram"
+		class = pc_ammonia
+        orbit_distance = 250
+        size = 14
+		entity = "arctic_planet_09_entity"
+        flags = { tau_tram_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = glacial_world
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "Yimunwol"
+		class = pc_ice_giant
+        orbit_distance = 250
+        size = 29
+        flags = { yimunwol_planet }
+		has_ring = yes
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "aethoncluster_meadecluster_primaryrelay" 
+			name = "Sector IC7 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_unok_init = {
+	name = "Unok"
+	class = sc_m
+	max_instances = 1
+
+    flags = { inner_council sector_ic7 onof_spot unok_system primary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 500
+	}
+
+	planet = {
+	    name = "Unok"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { unok_star }
+    }
+
+	planet = {
+		name = "Oleer Van"
+		class = pc_molten
+        orbit_distance = 150
+        size = 5
+        flags = { oleer_van_planet }
+	}
+
+	planet = {
+		name = "Pofri"
+		class = pc_ocean
+        orbit_distance = 150
+        size = 20
+		flags = {subclass_world pofri_planet}
+		entity = "hotocean_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = hotocean_world
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "Golu Hap"
+		class = pc_iron
+        orbit_distance = 150
+        size = 15
+        flags = { golu_hap_planet }
+	}
+    
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "onofspot_dabosknot_primaryrelay" 
+			name = "Sector IC7 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_veskyur_init = {
+	name = "Vesk Yur"
+	class = sc_m
+	max_instances = 1
+
+    flags = { inner_council sector_ic7 onof_spot veskyur_system }
+
+	planet = {
+	    name = "Vesk Yur"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { vesk_yur_star }
+    }
+
+	planet = {
+		name = "Car"
+		class = pc_carbon
+        orbit_distance = 50
+        size = 11
+        flags = { car_planet }
+	}
+
+	planet = {
+		name = "Kran"
+		class = pc_chlorine
+        orbit_distance = 30
+        size = 25
+		flags = {subclass_world kran_planet}
+		entity = "chlorine_ocean_planet_06_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = coldocean_world
+				days = -1
+			}
+		}
+	}
+}

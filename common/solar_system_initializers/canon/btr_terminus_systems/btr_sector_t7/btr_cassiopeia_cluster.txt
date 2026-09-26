@@ -1,0 +1,350 @@
+##########################
+### CASSIOPEIA CLUSTER ###
+##########################
+
+sys_gaalozozh_init = {
+    name = "Gaalo-Zozh"
+    class = sc_binary_b_t
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 cassiopeia_cluster gaalozozh_system primary_relay_system }
+
+    init_effect = {
+        save_global_event_target_as = gethCon2
+    }
+
+    planet = {
+		name = "Gaalo"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 30
+        flags = { gaalo_star }
+    }
+
+    planet = {
+        name = "Zozh"
+        class = pc_t_star
+        orbit_distance = 20
+        orbit_angle = 146
+        has_ring = no
+		size = 8
+		flags = { zozh_star }
+    }
+
+	planet = {
+        name = "Maeni"
+        class = pc_barren
+        orbit_distance = 60
+        orbit_angle = 146
+        has_ring = no
+		size = 15
+		flags = { maeni_planet }
+    }
+
+	planet = {
+        name = "Yena"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 146
+        has_ring = no
+		size = 10
+		flags = { yena_planet }
+    }
+
+	planet = {
+        name = "Sochol"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 146
+        has_ring = no
+		size = 18
+		flags = { sochol_planet }
+    }
+
+	planet = {
+        name = "Naara'Das"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 146
+        has_ring = yes
+		size = 34
+		flags = { naaradas_planet }
+    }
+
+	planet = {
+        name = "Tonbarr"
+        class = pc_chlorine
+        orbit_distance = 80
+        orbit_angle = 146
+        has_ring = no
+		size = 16
+        flags = {subclass_world tonbarr_planet}
+        entity = "chlorine_desert_planet_11_entity"
+        init_effect = {
+            add_modifier = {
+                modifier = oasis_world
+                days = -1
+            }
+        }
+    }
+
+	planet = {
+        name = "Vael"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 146
+        has_ring = no
+		size = 32
+
+		moon = {
+			name = "Yedu"
+			class = pc_methane
+			orbit_distance = 20
+			orbit_angle = 146
+			has_ring = no
+			size = 8
+            flags = {subclass_world yedu_planet vael_planet}
+            entity = "methane_arid_planet_04_entity"
+            init_effect = {
+                add_modifier = {
+                    modifier = aquifer_world
+                    days = -1
+                }
+            }
+		}
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "cassiopeiacluster_farrim_primaryrelay" 
+			name = "Sector T7 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_keelulon_init = {
+    name = "Kee-Lulon"
+    class = sc_binary_3
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 cassiopeia_cluster keelulon_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 200
+	}
+
+    asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 500
+	}
+
+    planet = {
+		name = "Kee"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 30
+        flags = { kee_star }
+    }
+
+	planet = {
+		name = "Lulon"
+        class = pc_b_star
+        orbit_distance = 30
+        size = 20
+        flags = { lulon_star }
+    }
+
+    change_orbit = 170
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Jaela"
+        class = pc_molten
+        orbit_distance = 80
+        orbit_angle = 239
+        has_ring = no
+		size = 12
+		flags = { jaela_planet }
+    }
+
+    planet = {
+        name = "Taedor"
+        class = pc_ice_giant
+        orbit_distance = 190
+        orbit_angle = 214
+        has_ring = no
+		size = 34
+		flags = { taedor_planet }
+    }
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_raadarum_init = {
+    name = "Raadarum"
+    class = sc_b_super
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 cassiopeia_cluster raadarum_system }
+
+    planet = {
+		name = "Raadarum"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 30
+        flags = { raadarum_star }
+    }
+	
+    planet = {
+        name = "Xonar"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 239
+        has_ring = no
+		size = 14
+		flags = { xonar_planet }
+    }
+
+    planet = {
+        name = "Rafeed"
+        class = pc_carbon
+        orbit_distance = 125
+        orbit_angle = 214
+        has_ring = no
+		size = 10
+		flags = { rafeed_planet }
+    }
+
+    planet = {
+        name = "Rayna"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 90
+        has_ring = no
+		size = 5
+		flags = { rayna_planet }
+    }	
+
+	planet = {
+        name = "Xulan"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 90
+        has_ring = yes
+		size = 35
+
+		moon = {
+			name = "Xulan a"
+			class = pc_barren_cold
+			orbit_distance = 20
+			orbit_angle = 90
+			has_ring = no
+			size = 3
+			flags = {xulan_a_planet xulan_planet}
+		}
+    }
+}	
+
+sys_ruvum_init = {
+    name = "Ruvum"
+    class = sc_d
+	max_instances = 1
+
+    flags = { terminus_systems sector_t7 cassiopeia_cluster ruvum_system secondary_relay_system }
+
+    init_effect = {
+        save_global_event_target_as = gethSci1
+    }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 325
+    }
+
+    planet = {
+		name = "Ruvum"
+        class = pc_d_star
+        orbit_distance = 0
+        size = 30
+        flags = { ruvum_star }
+    }
+
+    planet = {
+        name = "Refaes"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 146
+        has_ring = no
+		size = 8
+		flags = { refaes_planet }
+    }
+
+	planet = {
+        name = "Yulla'Saar"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 146
+        has_ring = no
+		size = 5
+		flags = { yullasaar_planet }
+    }
+
+    change_orbit = 75
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+        name = "Jessu"
+        class = pc_mephitic
+        orbit_distance = 50
+        orbit_angle = 146
+        has_ring = no
+		size = 20
+        entity = "mephitic_alpine_planet_11_entity"
+        flags = {subclass_world jessu_planet}
+        init_effect = {
+            add_modifier = {
+                modifier = crag_world
+                days = -1
+            }
+        }
+    }
+
+	planet = {
+        name = "Zeezorm Leemm"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 146
+        has_ring = no
+		size = 18
+		flags = { zeezorm_leemm_planet }
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_7_secondaryrelay" 
+			name = "Sector T7 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

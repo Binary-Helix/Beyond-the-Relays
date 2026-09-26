@@ -1,0 +1,509 @@
+####################
+### WHALE NEBULA ###
+####################
+
+sys_dannus_init = {
+	name = "Dannus"
+    class = sc_m
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 valhallan_threshold dannus_system secondary_relay_system }
+
+	planet = {
+	    name = "Dannus"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 30
+        flags = { dannus_star }
+    }
+
+	planet = {
+	    name = "Holut"
+        class = pc_iron	
+        orbit_distance = 80
+        size = 10
+        flags = { holut_planet }
+    }
+
+	planet = {
+	    name = "Bomun"
+        class = pc_iron
+        orbit_distance = 80
+        size = 12
+        flags = { bomun_planet }
+    }
+	
+	planet = {
+	    name = "Kezut"
+        class = pc_barren
+        orbit_distance = 80
+        size = 7
+        flags = { kezut_planet }
+    }
+
+	planet = {
+	    name = "Movath"
+        class = pc_gas_giant
+        orbit_distance = 80
+        size = 34
+        flags = { movath_planet }
+		has_ring = no
+    }
+
+	planet = {
+	    name = "Dazan"
+        class = pc_hothouse
+        orbit_distance = 80
+        size = 19
+        flags = { dazan_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Khumus"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 2
+        flags = { khumus_planet }
+		has_ring = yes
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_2_secondaryrelay" 
+			name = "Sector T2 - Secondary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_dhuoaul_init = {
+	name = "Dhuoaul"
+    class = sc_d
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 valhallan_threshold dhuoaul_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 330
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 390
+	}
+
+	planet = {
+	    name = "Dhuoaul"
+        class = pc_d_star
+        orbit_distance = 0
+        size = 30
+        flags = { dhuoaul_star }
+    }
+
+	planet = {
+	    name = "Tirrin"
+        class = pc_barren	
+        orbit_distance = 60
+        size = 10
+        flags = { tirrin_planet }
+    }
+
+	planet = {
+	    name = "Thadath"
+        class = pc_molten
+        orbit_distance = 60
+        size = 8
+        flags = { thadath_planet }
+    }
+	
+	planet = {
+	    name = "Guauan"
+        class = pc_molten
+        orbit_distance = 60
+        size = 7
+        flags = { guauan_planet }
+    }
+
+	planet = {
+	    name = "Lidan"
+        class = pc_tundra
+        orbit_distance = 60
+        size = 17
+        flags = { lidan_planet }
+    }
+
+	planet = {
+	    name = "Mulol"
+        class = pc_dextro_arid
+        orbit_distance = 60
+        size = 19
+
+		moon = {
+			name = "Varuk"
+			class = pc_barren
+			orbit_distance = 20
+			size = 3
+			flags = {varuk_planet mulol_planet}
+		}
+
+		moon = {
+			name = "Xartaf"
+			class = pc_barren_cold
+			orbit_distance = 5
+			size = 6
+			flags = { xartaf_planet }
+		}
+    }
+
+    change_orbit = 30
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Nulut"
+        class = pc_mephitic
+        orbit_distance = 30
+        size = 19
+        flags = { nulut_planet }
+    }
+
+	planet = {
+	    name = "Krennum"
+        class = pc_frozen
+        orbit_distance = 60
+        size = 6
+        flags = { krennum_planet }
+    }
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Ghevat"
+        class = pc_gas_giant
+        orbit_distance = 60
+        size = 38
+
+		moon = {
+			name = "Vozut"
+			class = pc_asteroid
+			orbit_distance = 20
+			size = 2
+			flags = {vozut_planet ghevat_planet}
+		}
+    }
+}	
+
+
+sys_honuth_init = {
+	name = "Honuth"
+    class = sc_o_hyper
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 valhallan_threshold honuth_system primary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 120
+	}
+
+	planet = {
+	    name = "Honuth"
+        class = pc_o_hyper_star
+        orbit_distance = 0
+        size = 30
+        flags = { honuth_star }
+    }
+
+	planet = {
+	    name = "Milarn"
+        class = pc_hothouse	
+        orbit_distance = 80
+        size = 6
+        flags = { milarn_planet }
+    }
+
+    change_orbit = 40
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Thodut"
+        class = pc_molten
+        orbit_distance = 40
+        size = 7
+        flags = { thodut_planet }
+    }
+	
+	planet = {
+	    name = "Huzim"
+        class = pc_barren_cold
+        orbit_distance = 80
+        size = 7
+        flags = { huzim_planet }
+    }
+
+	planet = {
+	    name = "Hurri"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 10
+        flags = { hurri_planet }
+    }
+
+	planet = {
+	    name = "Khollas"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 12
+        flags = { khollas_planet }
+    }
+
+	planet = {
+	    name = "Ralas"
+        class = pc_ice_giant
+        orbit_distance = 80
+        size = 26
+        flags = { ralas_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "whalenebula_byenzinecloud_primaryrelay" 
+			name = "Sector T2 - Primary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_lovin_init = {
+	name = "Lovin"
+    class = sc_magnetar
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 valhallan_threshold lovin_system }
+
+	planet = {
+	    name = "Lovin"
+        class = pc_magnetar
+        orbit_distance = 0
+        size = 32
+        flags = { lovin_planet }
+    }
+
+	planet = {
+	    name = "Riauil"
+        class = pc_gas_giant
+        orbit_distance = 250
+        size = 37
+        flags = { riauil_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Verral"
+        class = pc_ice_giant
+        orbit_distance = 250
+        size = 29
+        flags = { verral_planet }
+		has_ring = yes
+    }
+}	
+
+sys_maoaam_init = {
+	name = "Maoaam"
+    class = sc_m
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 valhallan_threshold maoaam_system }
+
+	planet = {
+	    name = "Maoaam"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 30	
+        flags = { maoaam_star }
+    }
+
+	planet = {
+	    name = "Zadan"
+        class = pc_iron	
+        orbit_distance = 60
+        size = 4
+        flags = { zadan_planet }
+    }
+
+	planet = {
+	    name = "Astropec"
+        class = pc_barren
+        orbit_distance = 60
+        size = 11
+        flags = { astropec_planet }
+    }
+	
+	planet = {
+	    name = "Melon"
+        class = pc_barren_cold
+        orbit_distance = 60
+        size = 8
+        flags = { melon_planet }
+    }
+
+	planet = {
+	    name = "Kaval"
+        class = pc_ammonia
+        orbit_distance = 60
+        size = 23
+        flags = { kaval_planet }
+    }
+
+	planet = {
+	    name = "Redul"
+        class = pc_gas_giant
+        orbit_distance = 60
+        size = 19
+		has_ring = yes
+
+		moon = {
+			name = "Thennim"
+			class = pc_barren_cold
+			orbit_distance = 20
+			size = 10
+			flags = {thennim_planet redul_planet}
+		}
+
+		moon = {
+			name = "Zuvuth"
+			class = pc_molten
+			orbit_distance = 5
+			size = 8
+			flags = { zuvuth_planet }
+		}
+    }
+}
+
+sys_mudun_init = {
+	name = "Mudun"
+    class = sc_m
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 valhallan_threshold mudun_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 350
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 500
+	}
+
+	planet = {
+	    name = "Mudun"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 30
+        flags = { mudun_star }
+    }
+
+	planet = {
+	    name = "Gholith"
+        class = pc_molten	
+        orbit_distance = 60
+        size = 10
+        flags = { gholith_planet }
+    }
+
+	planet = {
+	    name = "Zekil"
+        class = pc_iron
+        orbit_distance = 60
+        size = 12
+        flags = { zekil_planet }
+    }
+	
+	planet = {
+	    name = "Coskar"
+        class = pc_dextro_continental
+        orbit_distance = 60
+        size = 7
+        flags = { coskar_planet }
+    }
+
+	planet = {
+	    name = "Fistis"
+        class = pc_frozen
+        orbit_distance = 60
+        size = 34
+        flags = { fistis_planet }
+    }
+
+	planet = {
+	    name = "Hindron"
+        class = pc_carbon
+        orbit_distance = 60
+        size = 19
+        flags = { hindron_planet }
+    }
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Ristras"
+        class = pc_frozen
+        orbit_distance = 10
+        size = 2
+        flags = { ristras_planet }
+    }
+
+	planet = {
+	    name = "Lokdar"
+        class = pc_frozen
+        orbit_distance = 60
+        size = 13
+        flags = { lokdar_planet }
+    }
+
+	planet = {
+	    name = "Harit"
+        class = pc_iron
+        orbit_distance = 60
+        size = 6
+        flags = { harit_planet }
+    }
+
+    change_orbit = 20
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}

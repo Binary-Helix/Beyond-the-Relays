@@ -1,0 +1,341 @@
+####################
+### PETRA NEBULA ###
+####################
+
+sys_drakhar_init = {
+	name = "Drakhar"
+	class = "sc_o"
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv1 petra_nebula drakhar_system secondary_relay_system }
+	
+    init_effect = {
+        save_global_event_target_as = hegemonThirdFleet
+    }
+	
+    planet = {
+	    name = "Drakhar"
+        class = pc_m_hyper_star
+        orbit_distance = 0
+        size = 30
+        flags = { drakhar_star }
+    }
+
+    planet = {
+        name = "Uqbar"
+        class = pc_alpine
+        orbit_distance = 150
+        orbit_angle = 222
+		size = 7
+        has_ring = no
+		entity = "cascadian_planet_11_entity"
+		flags = {subclass_world uqbar_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = cascadian_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Druun"
+        class = pc_iron
+        orbit_distance = 150
+        orbit_angle = 267
+		size = 12
+		flags = { druun_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Trestak"
+        class = pc_gas_giant
+        orbit_distance = 150
+        orbit_angle = 172
+		size = 32
+		flags = { trestak_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_5_secondaryrelay" 
+			name = "Sector SV1 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_selvandia_init = {
+	name = "Selvandia"
+	class = sc_m
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv1 petra_nebula selvandia_system systems_alliance_system }
+
+    planet = {
+	    name = "Selvandia"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 30
+        flags = { selvandia_star }
+    }
+
+    planet = {
+        name = "Sinaloa"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 222
+		size = 7
+		flags = { sinaloa_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Manoa"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 267
+		size = 15
+		flags = { manoa_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Yandoa"
+        class = pc_savannah
+        orbit_distance = 100
+        orbit_angle = 172
+		size = 18
+        has_ring = no
+		flags = { yandoa_planet }
+
+		init_effect = {
+			add_deposit = d_eezo_trace #TODO: CREATE COLONY EVENT BASED ON YANDOA
+		}
+    }
+
+	planet = {
+        name = "Urksone"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 267
+		size = 10
+		flags = { urksone_planet }
+        has_ring = no	
+    }
+
+    planet = {
+        name = "Turiel"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 172
+		size = 18
+		flags = { turiel_planet }
+        has_ring = no
+    }
+}
+
+sys_urdu_pos_init = {
+    name = "Urdu'pos" 
+    class = sc_k
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv1 petra_nebula urdu_pos_system primary_relay_system hegemony_of_kharshan_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 425
+	}
+
+    planet = {
+	    name = "Urdu'pos"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 30
+        flags = { urdupos_star }
+    }
+
+    planet = {
+        name = "Porlon"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 222
+		size = 12
+		flags = { porlon_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Juxhi"
+        class = pc_alpine
+        orbit_distance = 125
+        orbit_angle = 267
+		size = 14
+        has_ring = no
+		entity = "cascadian_planet_06_entity"
+		flags = { juxhi_planet subclass_world }
+		init_effect = {
+			add_modifier = {
+				modifier = cascadian_world
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Yando"
+			class = pc_barren
+			orbit_distance = 20
+			orbit_angle = 172
+			size = 7
+			flags = { yando_planet }
+			has_ring = no	
+		}
+
+		moon = {
+			name = "Budmi"
+			class = pc_arctic
+			orbit_distance = 5
+			orbit_angle = 172
+			size = 5
+			has_ring = no
+			flags = {subclass_world budmi_planet}
+			entity = "cryovolcanic_planet_03_entity"
+			init_effect = {
+				add_modifier = {
+					modifier = cryovolcanic_world
+					days = -1
+				}
+			}
+		}
+    }
+
+	planet = {
+        name = "Siav'man"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 172
+		size = 28
+		flags = { siavman_planet }
+        has_ring = yes
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Qonfod"
+        class = pc_frozen
+        orbit_distance = 75
+        orbit_angle = 172
+		size = 19
+		flags = { qonfod_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "petranebula_llewynnebula_primaryrelay" 
+			name = "Sector BF2 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_vetus_init = {
+    name = "Vetus"
+    class = sc_m
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv1 petra_nebula vetus_system primary_relay_system systems_alliance_system  }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 160
+	}
+
+    planet = {
+	    name = "Vetus"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 30
+        flags = { vetus_star }
+    }
+
+    planet = {
+        name = "Tyre"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 222
+		size = 14
+		flags = { tyre_planet }
+        has_ring = no
+    }
+
+	change_orbit = 60
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Elysium"
+        class = pc_alpine
+        orbit_distance = 40
+        orbit_angle = 267
+		size = 14
+        has_ring = no
+		flags = { elysium_planet }
+    }
+
+    planet = {
+        name = "Sidon"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 172
+		size = 19
+		flags = { sidon_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Joppa"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 84
+		size = 34
+		flags = { joppa_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Gilead"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 117
+		size = 5
+		flags = { gilead_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "petranebula_exoduscluster_primaryrelay" 
+			name = "Sector BF2 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

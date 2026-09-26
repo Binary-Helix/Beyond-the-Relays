@@ -1,4 +1,5 @@
-@section_cost = 30
+@section_cost = 40
+@section_cost_frigate = 60
 
 ship_section_template = {
 	key = "CORVETTE_MID_M1S1" # Used by the Frigate, not the Corvette
@@ -32,15 +33,15 @@ ship_section_template = {
 		locatorname = "medium_gun_01"
 	}
 
-	small_utility_slots = 4
-	aux_utility_slots = 1
+	small_utility_slots = 5
+	aux_utility_slots = 2 # Extra slot for the Frigate
 
 	resources = {
 		category = ship_sections
 		cost = {
 			#alloys = @section_cost
-			light_alloys = @section_cost
-			heavy_alloys = @section_cost
+			light_alloys = @section_cost_frigate
+			heavy_alloys = @section_cost_frigate
 		}
 	}
 }

@@ -1,0 +1,617 @@
+###################
+### HADES GAMMA ###
+###################
+
+sys_antaeus_init = {
+    name = "Antaeus"
+    class = sc_k
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf2 hades_gamma antaeus_system }
+
+    planet = {
+		name = "Antaeus"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+        flags = { antaeus_star }
+    }
+
+    planet = {
+        name = "Ageko"
+        class = pc_iron
+        orbit_distance = 80
+        orbit_angle = 142
+        has_ring = no
+		size = 5
+		flags = { ageko_planet }
+    }
+
+    planet = {
+        name = "Edmos"
+        class = pc_ice_giant
+        orbit_distance = 80
+        orbit_angle = 171
+        has_ring = no
+		size = 30
+		flags = { edmos_planet }
+    }
+
+    planet = {
+        name = "Ploba"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 37
+        has_ring = no
+		size = 37
+		flags = { ploba_planet }
+        init_effect = {
+            add_anomaly = {
+                category =BTR_PLOBA_BIG_BRAIN
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Trebin"
+        class = pc_mephitic
+        orbit_distance = 80
+        orbit_angle = 251
+        has_ring = no
+		size = 13
+		flags = {subclass_world trebin_planet}
+		entity = "mephitic_arid_planet_02_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dune_world
+				days = -1
+			}
+            add_anomaly = {
+                category = BTR_TREBIN_WATER_BOY
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+
+		moon = {
+			name = "Trebin a"
+			class = pc_dextro_arctic
+			orbit_distance = 20
+			size = 4
+			flags = { trebin_a_planet }
+		}	
+    }
+
+    planet = {
+        name = "Vemal"
+        class = pc_methane
+        orbit_distance = 80
+        orbit_angle = 147
+        has_ring = no
+		size = 25
+		flags = {subclass_world vemal_planet}
+		entity = "methane_arctic_planet_07_entity"
+    }
+
+    planet = {
+        name = "Hunidor"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 272
+        has_ring = no
+		size = 9
+		flags = { hunidor_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_HUNIDOR_SMOOTH_WORLD
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+	}
+}
+
+sys_cacus_init = {
+    name = "Cacus"
+    class = sc_f
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf2 hades_gamma cacus_system secondary_relay_system }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 350
+	}
+
+    planet = {
+		name = "Cacus"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 20
+        flags = { cacus_star }
+    }
+
+    planet = {
+        name = "Zayarter"
+        class = pc_mephitic
+        orbit_distance = 100
+        orbit_angle = 159
+        has_ring = no
+		size = 13
+		flags = {subclass_world zayarter_planet}
+		entity = "mephitic_arid_planet_03_entity"
+        init_effect = {
+            add_anomaly = {
+                category = BTR_ZAYARTER_ALL_OF_THE_LIGHTS
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Chohe"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 220
+        has_ring = no
+		size = 20
+init_effect = {
+    add_anomaly = {
+        category = BTR_COHE_FAMILY_THERMOSTAT
+        # target = this # TODO: remove this once it's proven to be unneeded
+    }
+}
+
+		moon = {
+			name = "Chohe a"
+			class = pc_dextro_savannah
+			orbit_distance = 20
+			size = 14
+			flags = {chohe_a_planet chohe_planet}
+		}	
+    }
+
+    planet = {
+        name = "Xamarri"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 301
+        has_ring = no
+		size = 5
+		flags = { xamarri_planet }
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Faringor"
+        class = pc_frozen
+        orbit_distance = 50
+        orbit_angle = 335
+        has_ring = no
+		size = 25
+
+		moon = {
+			name = "Faringor a"
+			class = pc_iron
+			orbit_distance = 20
+			size = 6
+			flags = {faringor_a_planet faringor_planet}
+		}
+
+		moon = {
+			name = "Faringor b"
+			class = pc_iron
+			orbit_distance = 5
+			size = 4
+			flags = { faringor_b_planet }
+		}		
+    }
+
+    planet = {
+        name = "Treyarmus"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 312
+        has_ring = no
+		size = 31
+		flags = { treyarmus_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_9_secondaryrelay" 
+			name = "Sector BF1 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}	
+}
+
+sys_cavalcante_init = {
+    name = "Cavalcante"
+    class = sc_m
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv5 hades_gamma cavalcante_system planet_state }
+
+    planet = {
+		name = "Cavalcante"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 30
+        flags = { cavalcante_star }
+	}
+
+    planet = {
+		name = "Anansi"
+        class = pc_savannah
+        orbit_distance = 250
+        size = 30
+		entity = "biolum_planet_04_entity"
+		flags = { subclass_world anansi_planet }
+		deposit_blockers = none
+        modifiers = none
+		# init_effect = {
+		# 	save_global_event_target_as = anansiHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:anansiHomeworld
+        #         }
+        #         log = "Anansi Manufacturing Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+		#
+		# 	generate_anansi_manufacturing_country = yes
+		#
+		# 	set_capital = yes
+		# 	set_owner = event_target:anansi_manufacturing
+		# 	create_colony = {
+		# 		owner = event_target:anansi_manufacturing
+		# 		species = event_target:hanarSpecies
+		# 		ethos = owner
+		# 	}
+		#
+		# 	generate_anansi_pops = yes
+		#
+		# 	add_modifier = {
+		# 		modifier = biolum_world
+		# 		days = -1
+		# 	}
+		# }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_7_secondaryrelay" 
+			name = "Sector SV5 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_dis_init = {
+    name = "Dis"
+    class = sc_m
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv5 hades_gamma dis_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 350
+	}
+
+    planet = {
+		name = "Dis"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 25
+        flags = { dis_star }
+    }
+	
+    planet = {
+        name = "Jartar"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 30
+        has_ring = no
+		size = 3
+		flags = { jartar_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_JARTAR_SPOOKY_SQUID
+            # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Nearrum"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 292
+        has_ring = no
+		size = 17
+
+		moon = {
+			name = "Nearrum a"
+			class = pc_iron
+			orbit_distance = 20
+			size = 6
+			flags = {nearrum_a_planet nearrum_planet}
+		}
+    }
+
+    planet = {
+        name = "Klensal"
+        class = pc_mephitic
+        orbit_distance = 100
+        orbit_angle = 283
+        has_ring = no
+		size = 13
+    init_effect = {
+        add_anomaly = {
+            category = BTR_KLENSAL_FOOLS_GOLD
+            # target = this # TODO: remove this once it's proven to be unneeded
+        }
+    }
+
+		moon = {
+			name = "Klensal a"
+			class = pc_iron
+			orbit_distance = 20
+			size = 5
+			flags = {klensal_a_planet klensal_planet}
+		}	
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Gremar"
+        class = pc_ammonia
+        orbit_distance = 50
+        orbit_angle = 292
+        has_ring = no
+		size = 9
+		flags = {subclass_world gremar_planet}
+		entity = "ammonia_tundra_planet_07_entity"
+        init_effect = {
+            add_anomaly = {
+                category = BTR_GREMAR_FOUL_WATERS
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Raysha"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 133
+        has_ring = no
+		size = 29
+
+		moon = {
+			name = "Raysha a"
+			class = pc_iron
+			orbit_distance = 20
+			size = 7
+			flags = {raysha_a_planet raysha_planet}
+		}	
+
+		moon = {
+			name = "Raysha b"
+			class = pc_frozen
+			orbit_distance = 5
+			size = 4
+			flags = { raysha_b_planet }
+		}		
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "hadesgamma_lobartercluster_primaryrelay" 
+			name = "Sector SV5 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_farinata_init = {
+    name = "Farinata"
+    class = sc_b_super
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv5 hades_gamma farinata_system }
+
+	init_effect = {
+		save_global_event_target_as = hegemonSciCon2
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 175
+	}
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 225
+	}
+
+    planet = {
+		name = "Farinata"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 20
+        flags = { farinata_star }
+    }
+	
+    planet = {
+        name = "Tunshagon" 
+        class = pc_gas_giant 
+        orbit_distance = 150
+        orbit_angle = 357
+        has_ring = no
+		size = 31
+		flags = {subclass_world tunshagon_planet}
+		init_effect = {
+			add_anomaly = {
+				category = GAS_CLOUDY_CAT
+			}
+            add_anomaly = {
+                category = BTR_TUNSHAGON_HIDDEN_MOONS
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+    }
+
+	change_orbit = 25
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Juntauma"
+        class = pc_barren
+        orbit_distance = 75
+        orbit_angle = 274
+        has_ring = no
+		size = 10
+		flags = {subclass_world juntauma_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Nepneu"
+        class = pc_iron
+        orbit_distance = 150
+        orbit_angle = 258
+        has_ring = no
+		size = 9
+		flags = { nepneu_planet }
+    }
+}
+
+sys_plutus_init = {
+    name = "Plutus"
+    class = sc_b_super
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv5 hades_gamma plutus_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 195
+	}
+
+    planet = {
+		name = "Plutus"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 30
+        flags = { plutus_star }
+    }
+	
+    planet = {
+        name = "Mingito"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 335
+        has_ring = no
+		size = 11
+		flags = { mingito_planet }
+    }
+
+	change_orbit = 95
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Maidla"
+        class = pc_molten
+        orbit_distance = 5
+        orbit_angle = 90
+        has_ring = no
+		size = 17
+		flags = { maidla_planet }
+    }
+
+    planet = {
+        name = "Clocrolis"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 289
+        has_ring = no
+		size = 9
+		flags = { clocrolis_planet }
+    }
+
+    planet = {
+        name = "Nonuel"
+        class = pc_mephitic
+        orbit_distance = 100
+        orbit_angle = 26
+        has_ring = no
+		size = 11
+		flags = {subclass_world nonuel_planet}
+		entity = "mephitic_arid_planet_01_entity"
+
+		init_effect = {
+			add_deposit = d_eezo_scarce
+            add_anomaly = {
+                category = BTR_NONVEL_BLUE_LAVA
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+    }
+
+    planet = {
+        name = "Veyaria"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 318
+        has_ring = no
+		size = 38
+		flags = { veyaria_planet }
+    }
+}

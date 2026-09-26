@@ -1,0 +1,537 @@
+######################
+### JORMUN'S AEGIR ###
+######################
+
+sys_cardak_init = {
+	name = "Cardak"
+	class = sc_d
+	max_instances = 1
+
+    flags = { inner_council sector_ic4 jormuns_aegir cardak_system }
+
+    planet = {
+		name = "Cardak"
+        class = pc_d_star
+        orbit_distance = 0
+        size = 20
+        flags = { cardak_star }
+    }
+
+    planet = {
+        name = "Zraif"
+        class = pc_hot_giant
+        orbit_distance = 75
+        orbit_angle = 337
+		size = 36
+		flags = { zraif_planet }
+		has_ring = no
+    }
+
+    planet = {
+        name = "Gordol"
+        class = pc_gas_giant
+        orbit_distance = 225
+        orbit_angle = 132
+		size = 33
+		flags = { gordol_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Wroksar"
+        class = pc_ice_giant
+        orbit_distance = 150
+        orbit_angle = 155
+		size = 28
+		flags = { wroksar_planet }
+        has_ring = no
+    }
+}
+
+sys_gerklok_init = {
+	name = "Gerklok"
+	class = "sc_collapsar"
+	max_instances = 1
+
+    flags = { inner_council sector_ic4 jormuns_aegir gerklok_system }
+
+    init_effect = {
+        save_global_event_target_as = aralakhSci1
+    }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 300
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 450
+	}
+
+	planet = {
+		name = "Gerklok"
+        class = pc_collapsar
+        orbit_distance = 0
+        size = 35
+
+        flags = { gerklok_planet }
+        init_effect = {
+            add_deposit = d_eezo_5
+        }
+    }
+
+    change_orbit = 150
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    change_orbit = 150
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    change_orbit = 150
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_horu_init = {
+    name = "Horu"
+    class = sc_g
+	max_instances = 1
+
+    flags = { inner_council sector_ic4 jormuns_aegir horu_system }
+
+    planet = {
+		name = "Horu"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { horu_star }
+    }
+
+    planet = {
+        name = "Sintor"
+        class = pc_barren
+        orbit_distance = 70
+        orbit_angle = 337
+		size = 10
+		flags = { sintor_planet }
+		has_ring = no
+    }
+
+    planet = {
+        name = "Tactack"
+        class = pc_barren
+        orbit_distance = 70
+        orbit_angle = 132
+		size = 7
+		flags = { tactack_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Vern"
+        class = pc_mephitic
+        orbit_distance = 70
+        orbit_angle = 155
+		size = 14
+        has_ring = no
+		flags = {subclass_world vern_planet}
+		entity = "mephitic_swamp_planet_10_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = mangrove_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Bumar"
+        class = pc_carbon
+        orbit_distance = 70
+        orbit_angle = 282
+		size = 9
+		flags = { bumar_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Drodtar"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 213
+		size = 36
+        has_ring = no
+		init_effect = {
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Drodtar a"
+			class = pc_molten
+			orbit_distance = 20
+			size = 7
+			flags = {drodtar_a_planet drodtar_planet}
+		}
+
+		moon = {
+			name = "Drodtar b"
+			class = pc_barren_cold
+			orbit_distance = 5
+			size = 4
+			flags = { drodtar_b_planet }
+		}
+
+		moon = {
+			name = "Drodtar c"
+			class = pc_ice_asteroid
+			orbit_distance = 5
+			size = 3
+			flags = { drodtar_c_planet }
+		}
+
+		moon = {
+			name = "Drodtar d"
+			class = pc_methane
+			orbit_distance = 5
+			size = 9
+			flags = {subclass_world drodtar_d_planet}
+			entity = "methane_tundra_planet_01_entity"
+			init_effect = {
+				add_modifier = {
+					modifier = lichen_world
+					days = -1
+				}
+			}
+		}
+
+		moon = {
+			name = "Drodtar e"
+			class = pc_iron
+			orbit_distance = 5
+			size = 4
+			flags = { drodtar_e_planet }
+		}
+
+		moon = {
+			name = "Drodtar f"
+			class = pc_sil_asteroid
+			orbit_distance = 5
+			size = 3
+			flags = { drodtar_f_planet }
+		}
+
+		moon = {
+			name = "Drodtar g"
+			class = pc_barren_cold
+			orbit_distance = 5
+			size = 5
+			flags = { drodtar_g_planet }
+		}
+
+		moon = {
+			name = "Drodtar h"
+			class = pc_chlorine
+			orbit_distance = 5
+			size = 10
+			flags = {subclass_world drodtar_h_planet}
+			entity = "chlorine_arctic_planet_03_entity"
+			init_effect = {
+				add_modifier = {
+					modifier = snow_world
+					days = -1
+				}
+			}
+		}
+    }
+
+    planet = {
+        name = "Wuska"
+        class = pc_ice_giant
+        orbit_distance = 70
+        orbit_angle = 326
+		size = 28
+		flags = { wuska_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Piyax"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 147
+		size = 34
+		flags = { piyax_planet }
+        has_ring = yes
+    }
+}
+
+sys_jutilakh_init = {
+	name = "Jutilakh"
+	class = sc_trinary_a_l_t
+	max_instances = 1
+
+    flags = { inner_council sector_ic4 jormuns_aegir jutilakh_system secondary_relay_system }
+
+    init_effect = {
+        save_global_event_target_as = aralakhCon1
+    }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 350
+	}
+
+	planet = {
+		name = "Jutilakh A"
+        class = pc_a_star
+        orbit_distance = 5
+        size = 30
+        flags = { jutilakh_a_star }
+    }
+	
+	
+	planet = {
+		name = "Jutilakh B"
+        class = pc_l_star
+        orbit_distance = 25
+        size = 20
+        flags = { jutilakh_b_star }
+    }
+
+    planet = {
+        name = "Qondru"
+        class = pc_molten
+        orbit_distance = 40
+        orbit_angle = 337
+		size = 10
+		flags = { qondru_planet }
+		has_ring = no
+    }
+
+    planet = {
+        name = "Stramar"
+        class = pc_barren
+        orbit_distance = 40
+        orbit_angle = 132
+		size = 12
+		flags = { stramar_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Terbok"
+        class = pc_hothouse
+        orbit_distance = 40
+        orbit_angle = 155
+		size = 7
+		flags = { terbok_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Qigare"
+        class = pc_gas_giant
+        orbit_distance = 40
+        orbit_angle = 282
+		size = 35
+        has_ring = no
+
+		moon = {
+			name = "Stratdara"
+			class = pc_molten
+			orbit_distance = 20
+			orbit_angle = 213
+			size = 9
+			flags = {stratdara_planet qigare_planet}
+			has_ring = no
+		}	
+    }
+
+    planet = {
+        name = "Gasku"
+        class = pc_barren_cold
+        orbit_distance = 40
+        orbit_angle = 326
+		size = 8
+		flags = { gasku_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Memar"
+        class = pc_ice_giant
+        orbit_distance = 40
+        orbit_angle = 147
+		size = 28
+		flags = { memar_planet }
+        has_ring = yes
+    }
+
+	planet = {
+		name = "Jutilakh C"
+        class = pc_l_star
+        orbit_distance = 50
+        size = 25
+
+		planet = {
+			name = "Daggo"
+			class = pc_mephitic
+			orbit_distance = 50
+			orbit_angle = 147
+			size = 13
+			has_ring = yes
+			flags = {subclass_world daggo_planet jutilakh_c_star}
+			entity = "mephitic_arctic_planet_11_entity"
+			init_effect = {
+				add_modifier = {
+					modifier = antar_world
+					days = -1
+				}
+			}
+		}
+
+        change_orbit = 30
+
+        planet = {
+            count = { min = 1 max = 4 }
+            class = pc_asteroid
+            orbit_distance = 0
+            orbit_angle = { min = 90 max = 270 }
+        }
+
+		planet = {
+			name = "Tirgi"
+			class = pc_frozen
+			orbit_distance = 20
+			orbit_angle = 147
+			size = 13
+			flags = { tirgi_planet }
+			has_ring = yes
+		}
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "inner_council_sector_4_secondaryrelay" 
+			name = "Sector IC4 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_qardan_init = {
+	name = "Qardan"
+	class = "sc_o_hyper"
+	max_instances = 1
+
+    flags = { inner_council sector_ic4 jormuns_aegir qardan_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 450
+	}
+
+	planet = {
+		name = "Qardan"
+        class = pc_o_hyper_star
+        orbit_distance = 0
+        size = 30
+        flags = { qardan_star }
+    }
+
+	planet = {
+        name = "Pragase"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 213
+		size = 11
+		flags = { pragase_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Dranar"
+        class = pc_mephitic
+        orbit_distance = 100
+        orbit_angle = 326
+		size = 17
+        has_ring = no
+		flags = {subclass_world dranar_planet}
+		entity = "mephitic_continental_planet_06_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = prairie_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Curbol"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 147
+		size = 10
+		flags = { curbol_planet }
+        has_ring = yes
+    }
+
+	planet = {
+		name = "Horo"
+        class = pc_iron
+        orbit_distance = 100
+        size = 8
+        flags = { horo_planet }
+    }
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Bayaso"
+        class = pc_arctic
+        orbit_distance = 50
+        size = 12
+		flags = {subclass_world bayaso_planet}
+		entity = "glacial_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = glacial_world
+				days = -1
+			}
+		}
+    }
+}

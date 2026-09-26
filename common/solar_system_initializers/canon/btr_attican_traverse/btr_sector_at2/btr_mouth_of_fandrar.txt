@@ -1,0 +1,350 @@
+########################
+### Mouth of Fandrar ###
+########################
+
+sys_andril_init = {
+    name = "Andril"
+    class = sc_b
+	max_instances = 1
+
+	flags = { attican_traverse sector_at2 mouth_of_fandrar andril_system secondary_relay_system }
+
+	init_effect = {
+		save_global_event_target_as = illiumCon1
+	}
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 210
+    }
+
+    planet = {
+		name = "Andril"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 20
+        flags = { andril_star }
+    }
+
+    planet = {
+        name = "Yinnindril"
+        class = pc_barren
+        orbit_distance = 70
+        orbit_angle = 228
+        size = 19
+        flags = { yinnindril_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Handerusi"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 222
+        size = 32
+        flags = { handerusi_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Torsia"
+        class = pc_asteroid
+        orbit_distance = 70
+        orbit_angle = 94
+        size = 1
+        flags = { torsia_planet }
+        has_ring = no
+    }
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Tagnes"
+        class = pc_hothouse
+        orbit_distance = 70
+        orbit_angle = 151
+        size = 9
+        flags = { tagnes_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Bannas"
+        class = pc_ocean
+        orbit_distance = 70
+        orbit_angle = 296
+        size = 22
+        flags = { bannas_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Opeldeis"
+        class = pc_methane
+        orbit_distance = 70
+        orbit_angle = 132
+        size = 13
+        flags = { opeldeis_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Quev'fis"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 165
+        size = 37
+        flags = { quevfis_planet }
+        has_ring = no
+
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_2_secondaryrelay" 
+			name = "Sector AT2 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_dalal_init = {
+    name = "Dalal"
+    class = sc_k
+	max_instances = 1
+
+	flags = { attican_traverse sector_at2 mouth_of_fandrar dalal_system primary_relay_system }
+
+    planet = {
+		name = "Dalal"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 20
+        flags = { dalal_star }
+    }
+
+    planet = {
+        name = "Taluse"
+        class = pc_methane
+        orbit_distance = 150
+        orbit_angle = 45
+        size = 13
+        has_ring = no
+
+        moon = {
+            name = "Gindirael"
+            class = pc_iron
+            orbit_distance = 20
+            orbit_angle = 180
+            size = 3
+            flags = {gindirael_planet taluse_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Mindas"
+        class = pc_frozen
+        orbit_distance = 150
+        orbit_angle = 122
+        size = 11
+        flags = { mindas_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "mouthoffandrar_tytoriumcluster_primaryrelay" 
+			name = "Sector AT2 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_jispae_init = {
+    name = "Jispae"
+    class = sc_t
+	max_instances = 1
+
+	flags = { attican_traverse sector_at2 mouth_of_fandrar jispae_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 100
+    }
+
+    planet = {
+		name = "Jispae"
+        class = pc_t_star
+        orbit_distance = 0
+        size = 20
+        flags = { jispae_star }
+    }
+
+    planet = {
+        name = "Aslan B60"
+        class = pc_asteroid
+        orbit_distance = 100
+        orbit_angle = 141
+        size = 2
+        flags = { aslan_b60_planet }
+        has_ring = no
+    }
+	
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Anubdan"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 20
+        size = 8
+        flags = { anubdan_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Larindae"
+        class = pc_chlorine
+        orbit_distance = 100
+        orbit_angle = 45
+        size = 10
+        flags = { larindae_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Ipiscas"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 150
+        size = 27
+        flags = { ipiscas_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Blanda"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 276
+        size = 7
+        flags = { blanda_planet }
+        has_ring = no
+    }
+}
+
+sys_loruscha_init = {
+    name = "Loruscha"
+    class = sc_l
+	max_instances = 1
+
+	flags = { attican_traverse sector_at2 mouth_of_fandrar loruscha_system primary_relay_system }
+
+    planet = {
+		name = "Loruscha"
+        class = pc_l_star
+        orbit_distance = 0
+        size = 20
+        flags = { loruscha_star }
+    }
+
+    planet = {
+        name = "Loruscha Beta"
+        class = pc_t_star
+        orbit_distance = 37
+        orbit_angle = 230
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Estella"
+        class = pc_hothouse
+        orbit_distance = 63
+        orbit_angle = 346
+        size = 8
+        flags = { estella_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Yandruval"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 149
+        size = 13
+        flags = { yandruval_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Manndos"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 115
+        size = 12
+        has_ring = no
+
+
+        moon = {
+            name = "Gudurili"
+            class = pc_barren_cold
+            orbit_distance = 20
+            orbit_angle = 180
+            size = 5
+            flags = {gudurili_planet manndos_planet}
+            has_ring = no
+
+        }
+    }
+
+    planet = {
+        name = "Fia'talae"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 152
+        size = 16
+        flags = { fiatalae_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Rimandril"
+        class = pc_chlorine
+        orbit_distance = 100
+        orbit_angle = 142
+        size = 18
+        flags = { rimandril_planet }
+        has_ring = no
+
+    }
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "mouthoffandrar_nemeanalpha_primaryrelay" 
+			name = "Sector AT2 - Primary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

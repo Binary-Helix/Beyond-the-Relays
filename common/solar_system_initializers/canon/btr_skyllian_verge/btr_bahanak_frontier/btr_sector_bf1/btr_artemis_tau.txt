@@ -1,0 +1,512 @@
+###################
+### ARTEMIS TAU ###
+###################
+
+sys_athens_init = {
+    name = "Athens"
+    class = sc_g
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf1 artemis_tau athens_system }
+
+	init_effect = {
+		save_global_event_target_as = allianceSciCon2
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 250
+	}
+
+    planet = {
+		name = "Athens"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+        flags = { athens_star }
+    }
+
+    planet = {
+        name = "Salamis"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 348
+        has_ring = no
+		size = 17
+		flags = { salamis_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_SALAMIS_MOLTEN_CRUST
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Proteus"
+        class = pc_ocean
+        orbit_distance = 100
+        orbit_angle = 238
+        has_ring = no
+		size = 25
+		flags = {subclass_world proteus_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = storm_world
+				days = -1
+			}
+            add_anomaly = {
+                category = BTR_PROTEUS_HUMIDIFIER
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Nausicaa"
+        class = pc_gas_giant
+        orbit_distance = 50
+        orbit_angle = 104
+        has_ring = no
+		size = 34
+		flags = { nausicaa_planet }
+    }
+
+    planet = {
+        name = "Circe"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 302
+        has_ring = no
+		size = 27	
+		flags = { circe_planet }
+    }
+
+    planet = {
+        name = "Pharos"
+        class = pc_carbon
+        orbit_distance = 100
+        orbit_angle = 118
+        has_ring = no
+		size = 19
+		flags = { pharos_planet }
+    }	
+}
+
+sys_crete_init = { 
+	name = "Crete"
+	class = sc_m
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf1 artemis_tau crete_system planet_state }
+
+	init_effect = {
+		save_global_event_target_as = hegemonCon1
+	}
+
+    planet = {
+		name = "Crete"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { crete_star }
+    }	
+
+    planet = {
+        name = "Ponto"
+        class = pc_mephitic
+        orbit_distance = 45
+        orbit_angle = 182
+        has_ring = no
+		size = 10
+		flags = {subclass_world ponto_planet}
+		entity = "mephitic_ocean_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = coldocean_world
+			}
+		}
+    }
+	
+	planet = {
+        name = "Ishtar"
+        class = pc_arid
+        orbit_distance = 35
+        orbit_angle = 182
+        has_ring = no
+		size = 16
+		flags = { subclass_world ishtar_planet }
+		deposit_blockers = none
+        modifiers = none
+		entity = "mesa_planet_01_entity"
+		# init_effect = {
+		# 	save_global_event_target_as = ishtarHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:ishtarHomeworld
+        #         }
+        #         log = "Ishtar Emporium Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+		#
+		# 	generate_ishtar_emporium_country = yes
+		#
+		# 	set_capital = yes
+		# 	set_owner = event_target:ishtar_emporium
+		# 	create_colony = {
+		# 		owner = event_target:ishtar_emporium
+		# 		species = event_target:salarianSpecies
+		# 		ethos = owner
+		# 	}
+		#
+		# 	generate_ishtar_pops = yes
+		#
+		# 	add_modifier = {
+		# 		modifier = mesa_world
+		# 		days = -1
+		# 	}
+		# }
+    }
+
+	planet = {
+        name = "Elephontus"
+        class = pc_gas_giant
+        orbit_distance = 35
+        orbit_angle = 182
+        has_ring = no
+		size = 35
+		flags = { elephontus_planet }
+    }
+
+	planet = {
+        name = "Thracedon"
+        class = pc_frozen
+        orbit_distance = 35
+        orbit_angle = 182
+        has_ring = no
+		size = 10
+		flags = { thracedon_planet }
+    }
+}
+
+sys_knossos_init = {
+    name = "Knossos"
+    class = sc_g
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf1 artemis_tau knossos_system }
+		
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 450
+	}
+
+    planet = {
+		name = "Knossos"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { knossos_star }
+    }
+
+    planet = {
+        name = "Phaistos"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 182
+        has_ring = no
+		size = 10
+		flags = { phaistos_planet }
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Therum"
+        class = pc_primal
+        orbit_distance = 50
+        orbit_angle = 135
+        has_ring = no
+		size = 16
+		flags = { therum_planet }
+        init_effect = {
+            add_anomaly = {
+                # target = this # TODO: remove this once it's proven to be unneeded
+                category = BTR_THERUM_LOST_TROVE
+            }
+        }
+    }
+
+    planet = {
+        name = "Zakros"
+        class = pc_methane
+        orbit_distance = 100
+        orbit_angle = 19
+        has_ring = no
+		size = 11	
+		flags = { zakros_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_ZAKROS_CRYPTIC_MAZE
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Armeni"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 229
+        has_ring = no
+		size = 15
+		flags = { armeni_planet }
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Archanes"
+        class = pc_ice_giant
+        orbit_distance = 50
+        orbit_angle = 171
+        has_ring = no
+		size = 25
+		flags = { archanes_planet }
+	}		
+}
+
+sys_macedon_init = {
+    name = "Macedon"
+    class = sc_m
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf1 artemis_tau macedon_system primary_relay_system }
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 425
+	}
+
+    planet = {
+	    name = "Macedon"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { macedon_star }
+    }
+
+    planet = {
+        name = "Sharjila"
+        class = pc_ammonia
+        orbit_distance = 125
+        orbit_angle = 37
+        has_ring = no
+		size = 14
+		flags = { sharjila_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_SHARJILA_SILICA_LIFE
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Porolan"
+        class = pc_barren_cold
+        orbit_distance = 125
+        orbit_angle = 298
+        has_ring = no
+		size = 24
+		flags = { porolan_planet }
+    }
+
+    planet = {
+        name = "Patavig"
+        class = pc_ammonia
+        orbit_distance = 125
+        orbit_angle = 239
+        has_ring = no
+		size = 25	
+		flags = { patavig_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_PATAVIG_AMMONIA_AIR
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Fargeluse"
+        class = pc_ice_giant
+        orbit_distance = 75
+        orbit_angle = 291
+        has_ring = no
+		size = 31
+		flags = { fargeluse_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "kitesnest_llewynnebula_primaryrelay" 
+			name = "Sector BF1 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_sparta_init = {
+    name = "Sparta"
+    class = sc_g
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf1 artemis_tau sparta_system secondary_relay_system }
+		
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 450
+	}
+
+	planet = {
+		name = "Sparta"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { sparta_star }
+    }
+
+    planet = {
+        name = "Tremanre"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 221
+        has_ring = no
+		size = 3
+		flags = { tremanre_planet }
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Edolus"
+        class = pc_mephitic
+        orbit_distance = 50
+        orbit_angle = 163
+        has_ring = no
+		size = 14
+		flags = {subclass_world edolus_planet}
+		entity = "mephitic_desert_planet_05_entity"
+    }
+
+    planet = {
+        name = "Altaaya"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 138
+        has_ring = no
+		size = 25
+		flags = { altaaya_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_ALTAAYA_LOST_ATMOSPHERE
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Ontamalca"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 205
+        has_ring = no
+		size = 37
+		flags = { ontamalca_planet }
+        init_effect = {
+            add_anomaly = {
+                # target = this # TODO: remove this once it's proven to be unneeded
+                category = BTR_ONTAMALCA_CROWDED_SPACE
+            }
+        }
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Alsages"
+        class = pc_frozen
+        orbit_distance = 50
+        orbit_angle = 313
+        has_ring = no
+		size = 12
+		flags = { alsages_planet }
+    }	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_8_secondaryrelay" 
+			name = "Sector BF1 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

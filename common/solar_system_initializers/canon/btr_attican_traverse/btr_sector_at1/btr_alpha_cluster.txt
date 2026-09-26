@@ -1,0 +1,337 @@
+#####################
+### ALPHA CLUSTER ###
+#####################
+
+sys_ietus_init = {
+    name = "Ietus"
+    class = sc_l
+	max_instances = 1
+
+    flags = { attican_traverse sector_at1 alpha_cluster ietus_system }
+
+    planet = {
+		name = "Ietus"
+        class = pc_l_star
+        orbit_distance = 0
+        size = 20
+        flags = { ietus_star }
+    }
+
+    planet = {
+        name = "Khofas"
+        class = pc_hothouse
+        orbit_distance = 70
+        orbit_angle = 86
+        size = 8
+        flags = { khofas_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Nisissinia"
+        class = pc_hothouse
+        orbit_distance = 70
+        orbit_angle = 10
+        size = 13
+        flags = { nisissinia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Keijin"
+        class = pc_barren_cold
+        orbit_distance = 70
+        orbit_angle = 266
+        size = 21
+        flags = { keijin_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Matora"
+        class = pc_continental
+        orbit_distance = 70
+        orbit_angle = 193
+        size = 15
+        flags = { matora_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Kalenthia"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 102
+        size = 37
+        flags = { kalenthia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Tlonus"
+        class = pc_mephitic
+        orbit_distance = 70
+        orbit_angle = 105
+        size = 12
+        flags = { tlonus_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Haro"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 90
+        size = 7
+        flags = { haro_planet }
+        has_ring = no
+    }
+}
+
+sys_lucnetra_init = {
+    name = "Lucnetra"
+    class = sc_g
+	max_instances = 1
+
+    flags = { attican_traverse sector_at1 alpha_cluster lucnetra_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 80
+    }
+
+    planet = {
+		name = "Lucnetra"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { lucnetra_star }
+    }
+	
+	change_orbit = 80
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Jannior"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 83
+        size = 10
+        flags = { jannior_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Eundolos"
+        class = pc_carbon
+        orbit_distance = 80
+        orbit_angle = 352
+        size = 15
+        flags = { eundolos_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Gikratea"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 327
+        size = 22
+        flags = { gikratea_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Deraios"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 345
+        size = 14
+        flags = { deraios_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Beran"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 359
+        size = 12
+        flags = { beran_planet }
+        has_ring = no
+
+    }
+}
+
+sys_matoshi_init = {
+    name = "Matoshi"
+    class = sc_g_giant
+	max_instances = 1
+
+    flags = { attican_traverse sector_at1 alpha_cluster matoshi_system primary_relay_system }
+
+    planet = {
+		name = "Matoshi"
+        class = pc_g_giant_star
+        orbit_distance = 0
+        size = 20
+        flags = { matoshi_star }
+    }
+
+    planet = {
+        name = "Lucyrmey"
+        class = pc_barren_cold
+        orbit_distance = 125
+        orbit_angle = 310
+        size = 9
+        flags = { lucyrmey_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Numebian"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 98
+        size = 25
+        has_ring = yes
+
+        moon = {
+            name = "Shylme"
+            class = pc_frozen
+            orbit_distance = 20
+            orbit_angle = 53
+            size = 3
+            flags = {shylme_planet numebian_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Lidxeyia"
+            class = pc_methane
+            orbit_distance = 5
+            orbit_angle = 137
+            size = 5
+            flags = { lidxeyia_planet }
+            has_ring = no
+        }
+
+        moon = {
+            name = "Calyt"
+            class = pc_molten
+            orbit_distance = 5
+            orbit_angle = 88
+            size = 5
+            flags = { calyt_planet }
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Dikomia"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 86
+        size = 19
+        flags = { dikomia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Voezza"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 268
+        size = 7
+        flags = { voezza_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alphacluster_crescentnebula_primaryrelay" 
+			name = "Sector AT1 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_vodous_init = {
+    name = "Vodous"
+    class = sc_g
+	max_instances = 1
+
+    flags = { attican_traverse sector_at1 alpha_cluster vodous_system secondary_relay_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 375
+    }
+
+    planet = {
+		name = "Vodous"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { vodous_star }
+    }
+
+    planet = {
+        name = "Kasiama"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 277
+        size = 11
+        flags = { kasiama_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Jalyti"
+        class = pc_chthonian
+        orbit_distance = 125
+        orbit_angle = 216
+        size = 25
+        flags = { jalyti_planet }
+        has_ring = no
+
+    }
+
+	change_orbit = 125
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Chalik"
+        class = pc_chlorine
+        orbit_distance = 125
+        orbit_angle = 226
+        size = 16
+        flags = { chalik_planet }
+        has_ring = no
+
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_1_secondaryrelay" 
+			name = "Sector AT1 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

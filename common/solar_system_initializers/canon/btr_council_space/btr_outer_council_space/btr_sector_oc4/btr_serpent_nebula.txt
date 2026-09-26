@@ -1,0 +1,458 @@
+######################
+### SERPENT NEBULA ###
+######################
+
+sys_boltzmann_init = {
+    name = "Boltzmann"
+    class = sc_g
+	max_instances = 1
+
+    flags = { outer_council sector_oc4 serpent_nebula boltzmann_system systems_alliance_system }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 65
+	}
+
+    planet = {
+	    name = "Boltzmann"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { boltzmann_star }
+	}
+
+    change_orbit = 65
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Wheeler"
+        class = pc_mephitic
+        orbit_distance = 35
+        orbit_angle = 228
+        size = 19
+        has_ring = no
+		entity = "mephitic_arid_planet_03_entity"
+		flags = {subclass_world wheeler_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = dune_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Bekenstein"
+        class = pc_savannah
+        orbit_distance = 100
+        orbit_angle = 205
+        has_ring = no
+		entity = "medit_planet_01_entity"
+		flags = { bekenstein_planet subclass_world }
+		init_effect = {
+			add_modifier = {
+				modifier = medit_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Thooft"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 90
+        size = 8
+        flags = { thooft_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Veltman"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 303
+        size = 35
+        flags = { veltman_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Feynman"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 200
+        size = 31
+        flags = { feynman_planet }
+        has_ring = no
+    }
+}
+
+sys_elensia_init = {
+	name = "Elensia"
+	class = sc_g
+	max_instances = 1
+
+    flags = { outer_council sector_oc4 serpent_nebula elensia_system primary_relay_system asari_republics_system }
+
+    init_effect = {
+        save_global_event_target_as = asariSixthFleet
+    }
+
+	planet = {
+		name = "Elensia"
+        class = pc_g_star
+        size = 30
+        flags = { elensia_star }
+        orbit_distance = 0
+        orbit_angle = 180
+    }
+
+	planet = {
+		name = "Alatania"
+		class = pc_iron
+        orbit_distance = 80
+		size = 6
+		flags = { alatania_planet }
+	}	
+
+	planet = {
+		name = "Diras"
+		class = pc_ocean
+        orbit_distance = 80
+		size = 18
+        flags = { diras_planet }
+	}	
+	
+	planet = {
+		name = "Kosquia"
+		class = pc_ammonia
+        orbit_distance = 80
+		size = 16
+		flags = { kosquia_planet }
+	}		
+
+	planet = {
+		name = "Restu"
+		class = pc_barren
+        orbit_distance = 80
+		size = 9
+		flags = { restu_planet }
+	}	
+
+	planet = {
+		name = "Tracla"
+		class = pc_frozen
+        orbit_distance = 80
+		size = 10
+		flags = { tracla_planet }
+	}	
+
+	planet = {
+		name = "Gula"
+		class = pc_gas_giant
+        orbit_distance = 80
+		size = 36
+		flags = { gula_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "serpentnebula_seaoflight_primaryrelay" 
+			name = "Sector OC4 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_sovak_init = {
+    name = "Sovak"
+    class = sc_g
+	max_instances = 1
+
+    flags = { outer_council sector_oc4 serpent_nebula sovak_system primary_relay_system salarian_union_system }
+
+    planet = {
+		name = "Sovak"
+        class = pc_g_star
+        size = 30
+        flags = { sovak_star }
+        orbit_distance = 0
+        orbit_angle = 180
+    }
+
+	planet = {
+		name = "Farek"
+		class = pc_molten
+        orbit_distance = 150
+		size = 8
+		flags = { farek_planet }
+	}
+
+	planet = {
+		name = "Gataly"
+		class = pc_continental
+        orbit_distance = 150
+		size = 7
+        flags = { gataly_planet }
+	}
+
+	planet = {
+		name = "Ishka"
+		class = pc_gas_giant
+        orbit_distance = 150
+		size = 36
+		flags = { ishka_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "serpentnebula_andurasector_primaryrelay" 
+			name = "Sector OC4 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_terevan_init = {
+    name = "Terevan"
+    class = sc_a
+	max_instances = 1
+
+    flags = { outer_council sector_oc4 serpent_nebula terevan_system turian_hierarchy_system }
+
+    init_effect = {
+        save_global_event_target_as = turianSci1
+    }
+
+    planet = {
+	    name = "Terevan"
+        class = pc_a_star
+        size = 30
+        orbit_distance = 0
+        orbit_angle = 180
+		flags = { terevan_star }
+    }
+
+	planet = {
+		name = "Tracmus Duxes"
+		class = pc_dextro_savannah
+        orbit_distance = 250
+		size = 18
+        flags = { tracmus_duxes_planet }
+		init_effect = {
+			add_deposit = d_veiny_cliffs
+			add_deposit = d_lichen_fields
+		}
+	}	
+	
+	planet = {
+		name = "Lodantus"
+		class = pc_gas_giant
+        orbit_distance = 250
+		size = 34
+
+		moon = {
+			name = "Lodantus a"
+			class = pc_shattered
+			orbit_distance = 20
+			size = 8	
+			flags = {lodantus_a_planet lodantus_planet}
+		}
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "serpentnebula_prodicatoresscar_primaryrelay" 
+			name = "Sector OC4 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 350
+		} 
+	}
+}
+
+sys_totau_init = {
+    name = "Totau"
+    class = sc_g
+	max_instances = 1
+
+    flags = { outer_council sector_oc4 serpent_nebula totau_system primary_relay_system }
+
+    init_effect = {
+        save_global_event_target_as = salarianFirstFleet
+    }
+
+    planet = {
+	    name = "Totau"
+        class = pc_g_star
+        size = 30
+        flags = { totau_star }
+        orbit_distance = 0
+        orbit_angle = 180
+    }
+
+	planet = {
+		name = "Akfel"
+		class = pc_barren
+        orbit_distance = 100
+		size = 6
+		flags = { akfel_planet }
+	}	
+
+	planet = {
+		name = "Bisoq"
+		class = pc_barren_cold
+        orbit_distance = 100
+		size = 6
+		flags = { bisoq_planet }
+	}	
+	
+	planet = {
+		name = "Reof"
+		class = pc_barren
+        orbit_distance = 100
+		size = 6
+		flags = { reof_planet }
+	}		
+
+	planet = {
+		name = "Ifor"
+		class = pc_dextro_arctic
+        orbit_distance = 100
+		size = 18
+		flags = {subclass_world ifor_planet}
+		entity = "snow_planet_09_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = snow_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = dextro_world
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Ifor a"
+			class = pc_iron
+			orbit_distance = 20
+			size = 4
+			flags = { ifor_a_planet }
+		}
+
+		moon = {
+			name = "Ifor b"
+			class = pc_chlorine
+			orbit_distance = 5
+			size = 8
+			flags = { ifor_b_planet }
+		}
+
+		moon = {
+			name = "Ifor c"
+			class = pc_frozen
+			orbit_distance = 5
+			size = 6
+			flags = { ifor_c_planet }
+		}
+	}	
+
+	planet = {
+		name = "Erap"
+		class = pc_frozen
+        orbit_distance = 100
+		size = 6
+		flags = { erap_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "serpentnebula_vesuviusnebula_primaryrelay" 
+			name = "Sector OC4 - Primary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_widow_init = {
+    name = "Widow"
+    class = sc_b_super
+	max_instances = 1
+
+    flags = { outer_council sector_oc4 serpent_nebula widow_system primary_relay_system planet_state }
+
+    init_effect = {
+        save_global_event_target_as = citadelFirstFleet
+        generate_btr_home_system_resources = yes
+    }
+
+    planet = {
+	    name = "Widow"
+        class = pc_b_star
+        size = 30
+        flags = { widow_star }
+        orbit_distance = 0
+        orbit_angle = 1
+    }
+
+	planet = {
+		name = "The Citadel"
+		class = pc_habitat
+		orbit_distance = 150
+		orbit_angle = 215
+		size = 20
+		has_ring = no
+		flags = {megastructure habitat citadel_station the_citadel_station}
+        deposit_blockers = none
+        modifiers = none
+		entity = "btr_citadel_01_entity"		
+        # init_effect = {
+        #     save_global_event_target_as = citadelHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:citadelHomeworld
+        #         }
+        #         log = "Citadel Station Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_citadel_council_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:citadel_council
+		# 	create_colony = {
+		# 		owner = event_target:citadel_council
+		# 		species = event_target:asariSpecies
+		# 		ethos = owner
+		# 	}
+        #     clear_blockers = yes
+        #     generate_btr_start_deposits_and_blockers = yes
+        #     btr_generate_canon_planetary_features = yes
+        #     generate_citadel_station_pops = yes
+        #     event_target:citadel_council = {
+        #         create_starting_leaders = yes
+        #         country_event = { id = game_start.9 }
+        #     }
+        # }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "serpentnebula_krogandmz_primaryrelay" 
+			name = "Sector OC4 - Primary Relay 5"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

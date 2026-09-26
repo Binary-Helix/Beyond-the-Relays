@@ -1,0 +1,331 @@
+####################
+### MASMU NEBULA ###
+####################
+
+sys_dulayix_init = {
+	name = "Dula Yix"
+    class = sc_g_giant
+	max_instances = 1
+
+	flags = { attican_traverse sector_at8 masmu_nebula dulayix_system secondary_relay_system }
+
+	init_effect = {
+		save_global_event_target_as = calestonCon1
+	}
+
+	planet = {
+	    name = "Dula Yix"
+        class = pc_g_giant_star
+        orbit_distance = 0
+        size = 34
+        flags = { dula_yix_star }
+    }
+
+	planet = {
+	    name = "Maskit"
+        class = pc_barren
+        orbit_distance = 125
+        size = 6
+        flags = { maskit_planet }
+    }
+
+	planet = {
+	    name = "Fartuiog"
+        class = pc_swamp
+        orbit_distance = 125
+        size = 16
+
+		moon = {
+			name = "Zasoph"
+			class = pc_barren
+			orbit_distance = 20
+			size = 7
+			flags = {zasoph_planet fartuiog_planet}
+		}
+
+		moon = {
+			name = "Wertokh"
+			class = pc_barren_cold
+			orbit_distance = 5
+			size = 4
+			flags = { wertokh_planet }
+		}
+    }
+
+	planet = {
+	    name = "Ralkhos"
+        class = pc_iron
+        orbit_distance = 125
+        size = 12
+        flags = { ralkhos_planet }
+	}
+
+	planet = {
+	    name = "Onaxos"
+        class = pc_gas_giant
+        orbit_distance = 125
+        size = 33
+
+		moon = {
+			name = "Reshaptu"
+			class = pc_frozen
+			orbit_distance = 20
+			size = 3
+			flags = {reshaptu_planet onaxos_planet}
+		}
+
+		moon = {
+			name = "Borast"
+			class = pc_methane
+			orbit_distance = 5
+			size = 7
+			flags = { borast_planet }
+		}
+
+		moon = {
+			name = "Kiljas"
+			class = pc_carbon
+			orbit_distance = 5
+			size = 5
+			flags = { kiljas_planet }
+		}
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_8_secondaryrelay" 
+			name = "Sector AT8 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+
+sys_kiskuter_init = {
+	name = "Kisku Ter"
+    class = sc_m
+	max_instances = 1
+
+	flags = { attican_traverse sector_at8 masmu_nebula kiskuter_system }
+
+	planet = {
+	    name = "Kisku Ter"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 27
+        flags = { kisku_ter_star }
+    }
+
+	planet = {
+	    name = "Vus"
+        class = pc_molten
+        orbit_distance = 80
+        size = 12
+        flags = { vus_planet }
+    }
+
+	planet = {
+	    name = "Qerdo"
+        class = pc_hothouse
+        orbit_distance = 80
+        size = 16
+        flags = { qerdo_planet }
+	}
+
+	planet = {
+	    name = "Wendoph"
+        class = pc_molten
+        orbit_distance = 80
+        size = 15
+
+		moon = {
+			name = "Disko"
+			class = pc_frozen
+			orbit_distance = 20
+			size = 5			
+			flags = {disko_planet wendoph_planet}
+		}
+    }
+
+	planet = {
+	    name = "Lotruv"
+        class = pc_frozen
+        orbit_distance = 80
+        size = 6
+        flags = { lotruv_planet }
+    }
+
+	planet = {
+	    name = "Volundro"
+        class = pc_barren_cold
+        orbit_distance = 80
+        size = 3
+        flags = { volundro_planet }
+    }
+
+	planet = {
+	    name = "Xisjos"
+        class = pc_iron
+        orbit_distance = 80
+        size = 3
+        flags = { xisjos_planet }
+    }
+}
+
+sys_mollivix_init = {
+	name = "Molli Vix"
+    class = sc_m
+	max_instances = 1
+
+	flags = { attican_traverse sector_at8 masmu_nebula mollivix_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 250
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 350
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 500
+	}		
+
+	planet = {
+	    name = "Molli Vix"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 27
+        flags = { molli_vix_star }
+    }
+
+	planet = {
+	    name = "Jerkilatg"
+        class = pc_molten
+        orbit_distance = 100
+        size = 9
+        flags = { jerkilatg_planet }
+    }
+
+	planet = {
+	    name = "Tuph"
+        class = pc_hothouse
+        orbit_distance = 100
+        size = 14
+        flags = { tuph_planet }
+	}
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Ioskas"
+        class = pc_frozen
+        orbit_distance = 50
+        size = 16
+        flags = { ioskas_planet }
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Xokhap"
+        class = pc_frozen
+        orbit_distance = 50
+        size = 7
+        flags = { xokhap_planet }
+    }
+
+	planet = {
+	    name = "Eremuwan"
+        class = pc_gas_giant
+        orbit_distance = 50
+        size = 38
+        flags = { eremuwan_planet }
+		has_ring = yes
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_qopifas_init = {
+	name = "Qopi Fas"
+    class = sc_b_super
+	max_instances = 1
+
+	flags = { attican_traverse sector_at8 masmu_nebula qopifas_system primary_relay_system }
+
+	planet = {
+	    name = "Qopi Fas"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 36
+        flags = { qopi_fas_star }
+    }
+
+	planet = {
+	    name = "Kuis"
+        class = pc_iron
+        orbit_distance = 125
+        size = 15
+        flags = { kuis_planet }
+    }
+
+	planet = {
+	    name = "Triph"
+        class = pc_hothouse
+        orbit_distance = 125
+        size = 14
+        flags = { triph_planet }
+	}
+
+	planet = {
+	    name = "Heyufs"
+        class = pc_dextro_tundra
+        orbit_distance = 125
+        size = 10
+        flags = { heyufs_planet }
+    }
+
+	planet = {
+	    name = "Olimpakna"
+        class = pc_ice_giant
+        orbit_distance = 125
+        size = 30
+        flags = { olimpakna_planet }
+		has_ring = yes
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "masmunebula_styxtheta_primaryrelay" 
+			name = "Sector AT8 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

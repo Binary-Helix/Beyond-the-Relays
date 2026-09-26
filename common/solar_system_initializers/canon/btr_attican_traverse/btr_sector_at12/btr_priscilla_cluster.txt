@@ -1,0 +1,427 @@
+#########################
+### PRISCILLA CLUSTER ###
+#########################
+
+sys_aurelian_init = {
+    name = "Aurelian"
+    class = sc_g
+	max_instances = 1
+
+	flags = { attican_traverse sector_at12 priscilla_cluster aurelian_system }
+
+    planet = {
+		name = "Aurelian"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+        flags = { aurelian_star }
+    }
+
+    planet = {
+        name = "Julina"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 27
+        size = 10
+        flags = { julina_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Cecilio"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 100
+        size = 17
+        flags = { cecilio_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Milaus"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 86
+        size = 18
+        flags = { milaus_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Lucernio"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 63
+        has_ring = no
+    }
+
+    planet = {
+        name = "Espadaux"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 130
+        size = 35
+        has_ring = no
+
+        moon = {
+            name = "Valentie"
+            class = pc_barren
+            orbit_distance = 20
+            orbit_angle = 226
+            size = 8
+            flags = {valentie_planet espadaux_planet}
+            has_ring = no
+
+        }
+
+        moon = {
+            name = "Remolon"
+            class = pc_barren_cold
+            orbit_distance = 5
+            orbit_angle = 314
+            size = 5
+            flags = { remolon_planet }
+            has_ring = no
+
+        }
+    }
+}
+
+sys_cassios_init = {
+    name = "Cassios"
+    class = sc_f
+	max_instances = 1
+
+	flags = { attican_traverse sector_at12 priscilla_cluster cassios_system primary_relay_system }
+
+    asteroid_belt = {
+        type = icy_asteroid_belt
+        radius = 450
+    }
+
+    planet = {
+		name = "Cassios"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 25
+        flags = { cassios_star }
+    }
+
+    planet = {
+        name = "Opideus"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 218
+        size = 11
+        flags = { opideus_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Dostria"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 280
+        size = 17
+        flags = { dostria_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Petronia"
+        class = pc_dextro_tropical
+        orbit_distance = 125
+        orbit_angle = 261
+        size = 18
+        has_ring = no
+
+        moon = {
+            name = "Sason"
+            class = pc_mephitic
+            orbit_distance = 20
+            orbit_angle = 180
+            size = 5
+            flags = {sason_planet petronia_planet}
+            has_ring = no
+        }
+    }
+
+	change_orbit = 75
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Zalumia"
+        class = pc_frozen
+        orbit_distance = 50
+        orbit_angle = 250
+        size = 21
+        flags = { zalumia_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "priscillacluster_yggdrasilnebula_primaryrelay" 
+			name = "Sector AT12 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_cerindia_init = {
+	name = "Cerindia"
+    class = sc_g
+	max_instances = 1
+
+	flags = { attican_traverse sector_at12 priscilla_cluster cerindia_system secondary_relay_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 180
+    }
+
+    planet = {
+		name = "Cerindia"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 29
+        flags = { cerindia_star }
+    }
+
+    planet = {
+        name = "Manasclas"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 197
+        size = 9
+        flags = { manasclas_planet }
+        has_ring = no
+    }
+
+	change_orbit = 55
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Restrum"
+        class = pc_carbon
+        orbit_distance = 70
+        orbit_angle = 108
+        size = 11
+        flags = { restrum_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Uota"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 104
+        size = 35
+        flags = { uota_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Valrum"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 86
+        size = 34
+        flags = { valrum_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_12_secondaryrelay" 
+			name = "Sector AT12 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_felix_init = {
+    name = "Felix"
+    class = sc_k
+	max_instances = 1
+
+	flags = { attican_traverse sector_at12 priscilla_cluster felix_system primary_relay_system }
+
+    planet = {
+		name = "Felix"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 30
+        flags = { felix_star }
+    }
+
+    planet = {
+        name = "Felekli"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 201
+        size = 14
+        flags = { felekli_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Tornau"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 85
+        size = 16
+        flags = { tornau_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Xandis"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 123
+        size = 17
+        flags = { xandis_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Gioliae"
+        class = pc_dextro_alpine
+        orbit_distance = 100
+        orbit_angle = 90
+        size = 18
+        has_ring = no
+
+        moon = {
+            name = "Tande"
+            class = pc_barren
+            orbit_distance = 20
+            orbit_angle = 92
+            size = 8
+            flags = {tande_planet gioliae_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Nimeno"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 93
+        size = 19
+        flags = { nimeno_planet }
+        has_ring = no
+
+    }
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "priscillacluster_nubianexpanse_primaryrelay" 
+			name = "Sector AT12 - Primary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_magna_init = {
+    name = "Magna"
+    class = sc_k
+	max_instances = 1
+
+	flags = { attican_traverse sector_at12 priscilla_cluster magna_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 280
+    }
+
+    planet = {
+        class = pc_k_star
+        orbit_distance = 0
+        size = 31
+    }
+
+    planet = {
+        name = "Saltas"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 222
+        size = 15
+        flags = { saltas_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Jopine"
+        class = pc_iron
+        orbit_distance = 80
+        orbit_angle = 111
+        size = 17
+        flags = { jopine_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Bolima"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 174
+        size = 14
+        flags = { bolima_planet }
+        has_ring = no
+    }
+
+	change_orbit = 40
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Yimtre"
+        class = pc_ice_giant
+        orbit_distance = 40
+        orbit_angle = 250
+        size = 29
+        flags = { yimtre_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Calustos"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 197
+        size = 18
+        flags = { calustos_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Yondue"
+        class = pc_barren_cold
+        orbit_distance = 80
+        orbit_angle = 121
+        size = 13
+        flags = { yondue_planet }
+        has_ring = no
+    }
+}

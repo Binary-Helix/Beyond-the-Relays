@@ -1,0 +1,1554 @@
+## ASARI REPUBLIC ##
+generate_asr_sanves_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_major_capital
+    add_building = building_asari_rep_comm_center
+    add_building = building_medical_2
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 0 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 0 district = district_mining }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 9 district = district_farming }
+    add_building = {
+        building = building_hydroponics_farm
+        zone = zone_food
+    }
+    add_building = {
+        building = building_food_processing_center
+        zone = zone_food
+    }
+    add_building = {
+        building = building_farming_districts_3
+        zone = zone_food
+    }
+}
+
+generate_asr_lusia_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_asari_rep_comm_center
+    add_building = building_medical_2
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_zone = {
+        district = district_city
+        zone = zone_research
+    }
+    add_building = {
+        building = building_research_lab_1
+        zone = zone_research
+    }
+    add_building = {
+        building = building_research_upkeep_1
+        zone = zone_research
+    }
+    add_building = {
+        building = building_biolab_1
+        zone = zone_research
+    }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_mining }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_farming }
+}
+
+generate_asr_niacal_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_asari_rep_comm_center
+    add_building = building_medical_2
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_zone = {
+        district = district_city
+        zone = zone_research
+    }
+    add_building = {
+        building = building_research_lab_1
+        zone = zone_research
+    }
+    add_building = {
+        building = building_research_upkeep_1
+        zone = zone_research
+    }
+    add_building = {
+        building = building_engineering_facility_1
+        zone = zone_research
+    }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_farming }
+}
+
+generate_asr_espota_station_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_hab_capital
+    add_building = building_asari_rep_comm_center
+    add_building = building_medical_2
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_hab_housing }
+    add_zone = {
+        district = district_hab_housing
+        zone = zone_research
+    }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_hab_energy }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_hab_science }
+}
+
+generate_asr_agessia_colony_buildings = {
+
+}
+
+generate_asr_hyetiana_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_asari_rep_comm_center
+    add_building = building_medical_2
+    add_building = building_factory_1
+    add_building = building_foundry_2
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_mining }
+}
+
+generate_asr_nevos_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_asari_rep_comm_center
+    add_building = building_medical_2
+    add_building = building_commercial_zone
+    add_building = building_commercial_zone
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_mining }
+}
+
+generate_asr_cyone_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_asari_rep_comm_center
+    add_building = building_medical_2
+    add_building = building_commercial_zone
+    add_building = building_holo_theatres
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_generator }
+}
+
+generate_asr_trategos_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_asari_rep_comm_center
+    add_building = building_medical_2
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_mining }
+}
+
+generate_asr_lesuss_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_asari_rep_comm_center
+    add_building = building_medical_2
+    add_building = building_engineering_facility_1
+    add_building = building_biolab_1
+    add_building = building_physics_lab_1
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+}
+
+generate_asr_malkos_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_asari_rep_comm_center
+    add_building = building_medical_2
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_generator }
+}
+
+generate_asr_charias_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_asari_rep_comm_center
+    add_building = building_medical_2
+    add_building = building_commercial_zone
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_mining }
+}
+
+generate_asr_diras_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_asari_rep_comm_center
+    add_building = building_medical_2
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_generator }
+}
+
+## SALARIAN UNION ##
+generate_sal_mannovai_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_holo_theatres
+    add_building = building_hyper_entertainment_forum
+    add_building = building_refinery
+    add_building = building_factory_upkeep_1
+    add_building = building_foundry_upkeep_1
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_mining }
+    add_zone = {
+        district = district_city
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_foundry_2
+        zone = zone_industrial
+    }
+    add_zone = {
+        district = district_city
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_foundry_2
+        zone = zone_industrial
+    }
+}
+
+generate_sal_nasurn_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_medical_2
+    add_building = building_hyper_entertainment_forum
+    add_building = building_commercial_zone
+    add_building = building_bureaucratic_1
+    add_building = building_salarian_covert_collection
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 9 district = district_farming }
+    add_zone = {
+        district = district_farming
+        zone = zone_food
+    }
+    add_building = {
+        building = building_food_processing_centerity
+        zone = zone_food
+    }
+    add_building = {
+        building = building_hydroponics_farm
+        zone = zone_food
+    }
+    add_building = {
+        building = building_hydroponics_farm
+        zone = zone_food
+    }
+}
+
+generate_sal_jaeto_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_medical_2
+    add_building = building_luxury_residence
+    add_building = building_refinery
+    add_building = building_salarian_covert_collection
+    add_building = building_hyper_entertainment_forum
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 9 district = district_mining }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 5 district = district_farming }
+    add_zone = {
+        district = district_city
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+    add_zone = {
+        district = district_mining
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_mineral_purification_hub
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_engineering_facility_1
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_mine_generic
+        zone = zone_minerals_engineering
+    }
+    add_zone = {
+        district = district_farming
+        zone = zone_food
+    }
+    add_building = {
+        building = building_food_processing_center
+        zone = zone_food
+    }
+    add_building = {
+        building = building_hydroponics_farm
+        zone = zone_food
+    }
+    add_building = {
+        building = building_hydroponics_farm
+        zone = zone_food
+    }
+}
+
+generate_sal_gataly_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_refinery
+    add_building = building_salarian_covert_collection
+    add_building = building_luxury_residence
+    add_building = building_holo_theatres
+    add_building = building_factory_2
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_mining }
+
+    add_zone = {
+        district = district_city
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_1
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+    add_zone = {
+        district = district_mining
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_mineral_purification_hub
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_engineering_facility_1
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_mine_generic
+        zone = zone_minerals_engineering
+    }
+}
+
+generate_sal_senoquol_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_medical_2
+    add_building = building_refinery
+    add_building = building_commercial_zone
+    add_building = building_hyper_entertainment_forum
+    add_building = building_salarian_covert_collection
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_mining }
+
+    add_zone = {
+        district = district_city
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_foundry_2
+        zone = zone_industrial
+    }
+    add_zone = {
+        district = district_city
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_foundry_2
+        zone = zone_industrial
+    }
+    add_zone = {
+        district = district_mining
+        zone = zone_minerals
+    }
+    add_building = {
+        building = building_mineral_purification_hub
+        zone = zone_minerals
+    }
+    add_building = {
+        building = building_mine_generic
+        zone = zone_minerals
+    }
+    add_building = {
+        building = building_mine_generic
+        zone = zone_minerals
+    }
+}
+
+generate_sal_saetabelo_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_salarian_covert_collection
+    add_building = building_commercial_zone
+    add_building = building_bureaucratic_1
+    add_building = building_holo_theatres
+    add_building = building_medical_2
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 5 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 3 district = district_farming }
+    add_zone = {
+        district = district_city
+        zone = zone_research
+    }
+    add_building = {
+        building = building_engineering_facility_1
+        zone = zone_research
+    }
+    add_building = {
+        building = building_research_lab_1
+        zone = zone_research
+    }
+    add_building = {
+        building = building_research_efficiency_1
+        zone = zone_research
+    }
+    add_zone = {
+        district = district_generator
+        zone = zone_energy_physics
+    }
+    add_building = {
+        building = building_energy_grid
+        zone = zone_energy_physics
+    }
+    add_building = {
+        building = building_physics_lab_1
+        zone = zone_energy_physics
+    }
+    add_building = {
+        building = building_generator_generic
+        zone = zone_energy_physics
+    }
+    add_zone = {
+        district = district_farming
+        zone = zone_food
+    }
+    add_building = {
+        building = building_food_processing_center
+        zone = zone_food
+    }
+    add_building = {
+        building = building_hydroponics_farm
+        zone = zone_food
+    }
+    add_building = {
+        building = building_hydroponics_farm
+        zone = zone_food
+    }
+}
+
+generate_sal_voya_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_medical_2
+    add_building = building_commercial_zone
+    add_building = building_commercial_zone
+    add_building = building_bureaucratic_1
+    add_building = building_salarian_covert_collection
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 6 district = district_generator }
+    add_zone = {
+        district = district_generator
+        zone = zone_energy
+    }
+    add_building = {
+        building = building_energy_nexus
+        zone = zone_energy
+    }
+    add_building = {
+        building = building_generator_generic
+        zone = zone_energy
+    }
+    add_building = {
+        building = building_generator_generic
+        zone = zone_energy
+    }
+}
+
+generate_sal_gorot_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_medical_2
+    add_building = building_factory_2
+    add_building = building_commercial_zone
+    add_building = building_holo_theatres
+    add_building = building_salarian_covert_collection
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 7 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_mining }
+    add_zone = {
+        district = district_mining
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_mineral_purification_hub
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_mine_generic
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_engineering_facility_1
+        zone = zone_minerals_engineering
+    }
+}
+
+generate_sal_olor_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_medical_2
+    add_building = building_hyper_entertainment_forum
+    add_building = building_salarian_covert_collection
+    add_building = building_factory_2
+    add_building = building_factory_2
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 4 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 7 district = district_mining }
+    add_zone = {
+        district = district_mining
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_mineral_purification_hub
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_mine_generic
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_engineering_facility_1
+        zone = zone_minerals_engineering
+    }
+}
+
+generate_sal_rannandril_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_medical_2
+    add_building = building_holo_theatres
+    add_building = building_commercial_zone
+    add_building = building_salarian_covert_collection
+    add_building = building_bureaucratic_1
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 5 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 5 district = district_mining }
+    add_zone = {
+        district = district_mining
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_mineral_purification_hub
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_mine_generic
+        zone = zone_minerals_engineering
+    }
+    add_building = {
+        building = building_mine_generic
+        zone = zone_minerals_engineering
+    }
+}
+
+generate_sal_dagnes_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_capital
+    add_building = building_medical_2
+    add_building = building_commercial_zone
+    add_building = building_bureaucratic_1
+
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 1 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_generator }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_mining }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_farming }
+}
+
+generate_sal_lorala_colony_buildings = {
+    set_planet_flag = ignore_ai_building_limitations
+    remove_all_districts = yes
+    remove_all_buildings = yes
+
+    add_building = building_station_major_capital
+    add_building = building_medical_2
+    add_building = building_monorail
+    add_building = building_holo_theatres
+    add_building = building_luxury_residence
+    add_building = building_commercial_zone
+
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_city }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_mining }
+    add_district_and_planet_size_if_needed_effect_amount = { amount = 2 district = district_manufacturing_complex }
+
+    add_zone = {
+        district = district_mining
+        zone = zone_minerals
+    }
+    add_building = {
+        building = building_mineral_purification_hub
+        zone = zone_minerals
+    }
+    add_building = {
+        building = building_mine_generic
+        zone = zone_minerals
+    }
+    add_building = {
+        building = building_mine_generic
+        zone = zone_minerals
+    }
+    add_zone = {
+        district = district_manufacturing_complex
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_upkeep_1
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_factory_2
+        zone = zone_industrial
+    }
+    add_building = {
+        building = building_foundry_2
+        zone = zone_industrial
+    }
+}
+
+generate_sal_jarrahe_colony_buildings = {
+    add_building = building_hab_capital
+}
+
+
+# ## TURIAN HIERACHY ##
+# generate_tur_palaven_capital_buildings = {
+#     while = { count = 3 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 5 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_generator ignore_cap = yes }}
+#     while = { count = 5 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_major_capital
+#     add_building = building_stronghold
+#     add_building = building_research_lab_1
+#     add_building = building_factory_2
+# }
+#
+# generate_tur_parthia_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_food_processing_centerity
+#     add_building = building_holo_theatres
+#     add_building = building_factory_1
+# }
+#
+# generate_tur_oma_ker_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 5 add_district = { district_type = district_mining ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_stronghold
+#     add_building = building_mineral_purification_plant
+#     add_building = building_holo_theatres
+# }
+#
+# generate_tur_digeris_colony_buildings = {
+#     while = { count = 4 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 4 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+#     add_building = building_foundry_1
+#     add_building = building_factory_1
+# }
+#
+# generate_tur_taetrus_colony_buildings = {
+#     while = { count = 3 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_food_processing_centerity
+#     add_building = building_holo_theatres
+# }
+#
+# generate_tur_tracmus_duxes_colony_buildings = {
+#     while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_generator ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_energy_grid
+#     add_building = building_research_lab_1
+# }
+#
+# generate_tur_invictus_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 6 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_factory_2
+#     add_building = building_research_lab_1
+#     add_building = building_holo_theatres
+# }
+#
+# generate_tur_gellix_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_research_lab_1
+# }
+#
+# generate_tur_magna_colony_buildings = {
+#     while = { count = 3 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 5 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+#     add_building = building_research_lab_1
+# }
+#
+# generate_tur_edessan_colony_buildings = {
+#     while = { count = 2 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_food_processing_centerity
+#     add_building = building_holo_theatres
+#     add_building = building_research_lab_1
+# }
+#
+# generate_tur_aephus_colony_buildings = {
+#     while = { count = 3 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 5 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_factory_1
+#     add_building = building_holo_theatres
+# }
+#
+# generate_tur_epyrus_colony_buildings = {
+#     while = { count = 2 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+# }
+#
+# generate_tur_chatti_colony_buildings = {
+#     while = { count = 2 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 4 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+# }
+#
+# generate_tur_menae_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_residential_complex ignore_cap = yes }}
+#     add_building = building_station_major_capital
+# }
+#
+# generate_tur_pheiros_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_residential_complex ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_testing_site ignore_cap = yes }}
+#     add_building = building_station_capital
+# }
+#
+# generate_tur_nanus_colony_buildings = {
+#     add_building = building_station_major_capital
+# }
+#
+# generate_tur_nimines_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_residential_complex ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_mining_complex ignore_cap = yes }}
+#     add_building = building_station_capital
+# }
+#
+# generate_tur_maitrum_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_residential_complex ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes }}
+#     add_building = building_station_capital
+# }
+#
+#
+# ## SYSTEM ALLIANCE ##
+#
+# generate_sys_earth_deposits = {
+#
+# }
+#
+# generate_sys_earth_capital_buildings = {
+#     while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_generator ignore_cap = yes } }
+#     while = { count = 4 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_major_capital
+#     add_building = building_factory_1
+#     add_building = building_research_lab_1
+# }
+#
+# generate_sys_luna_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_fortified_bunkers ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_mars_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_experimental_complex ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_benning_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_demeter_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_sirona_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_elysium_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_factory_1
+# }
+#
+# generate_sys_eden_prime_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_shanxi_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_bekenstein_colony_buildings = {
+#     while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_factory_1
+# }
+#
+# generate_sys_terra_nova_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_factory_1
+# }
+#
+# generate_sys_yandoa_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_mindoir_colony_buildings = {
+#     add_building = building_capital
+# }
+#
+# generate_sys_tyr_colony_buildings = {
+#     add_building = building_capital
+# }
+#
+# generate_sys_arcturus_station_buildings = {
+#     add_building = building_hab_capital
+# }
+#
+#
+# ## ELCOR ##
+# generate_cod_dekuuna_capital_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 5 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes } }
+#     add_building = building_major_capital
+#     add_building = building_elcor_elders_assembly
+#     add_building = building_elcor_communal_croplands
+#     add_building = building_mineral_purification_plant
+#     add_building = building_factory_1
+# }
+#
+# generate_cod_thunawanuro_colony_buildings = {
+#     while = { count = 2 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+#     add_building = building_mineral_purification_plant
+# }
+#
+# generate_cod_ekuuna_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_generator ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+#     add_building = building_factory_1
+# }
+#
+# generate_cod_jurdal_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_cod_yapolam_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+#     add_building = building_factory_1
+#     add_building = building_research_lab_1
+# }
+#
+# generate_cod_oltan_colony_buildings = {
+#     add_building = building_capital
+#     add_building = building_elcor_communal_croplands
+#     add_building = building_hydroponics_greenhouse
+# }
+#
+#
+# ## VOLUS ##
+# generate_vol_irune_capital_buildings = {
+#     while = { count = 6 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_major_capital
+#     add_building = building_holo_theatres
+#     add_building = building_volus_economic_regulation_office
+#     add_building = building_factory_1
+# }
+#
+# generate_vol_maskawa_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_vol_daleon_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_vol_walden_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_volus_economic_regulation_office
+# }
+#
+# generate_vol_salau_colony_buildings = {
+#     while = { count = 2 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+#     add_building = building_volus_economic_regulation_office
+# }
+#
+# generate_vol_tau_tram_colony_buildings = {
+#     while = { count = 2 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 4 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+#     add_building = building_volus_economic_regulation_office
+#     add_building = building_factory_1
+# }
+#
+# generate_vol_doldit_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_residential_complex ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_commercial_wards ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# ## HANAR ##
+# generate_han_kahje_capital_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_major_capital
+#     add_building = building_temple
+# }
+#
+# generate_han_acodu_colony_buildings = {
+#     while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_generator ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_factory_1
+#     add_building = building_temple
+# }
+#
+# generate_han_belan_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_temple
+# }
+#
+# generate_han_zahni_colony_buildings = {
+#     while = { count = 2 add_district = { district_type = district_residential_complex ignore_cap = yes } }
+#     add_building = building_hab_capital
+# }
+#
+#
+# ## BATARIAN ##
+# generate_bat_kharshan_capital_buildings = {
+#     while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 4 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_major_capital
+#     add_building = building_factory_1
+# }
+#
+# generate_bat_bira_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_bureaucratic_center ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_residential_complex ignore_cap = yes } }
+#     add_building = building_hab_capital
+# }
+#
+# generate_bat_erszbat_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_foundry_1
+# }
+#
+# generate_bat_tikkud_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_bureaucratic_center ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_commercial_wards ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_bat_nefari_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_residential_complex ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_bureaucratic_center ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_commercial_wards ignore_cap = yes } }
+#     add_building = building_hab_capital
+# }
+#
+# generate_bat_mught_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_bat_khuramna_station_buildings = {
+#     while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_bat_dukraar_colony_buildings = {
+#     add_building = building_capital
+# }
+#
+# generate_bat_lorek_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_bat_juxhi_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_bat_adek_colony_buildings = {
+#     add_building = building_capital
+#     add_building = building_foundry_1
+# }
+#
+# generate_bat_camala_colony_buildings = {
+#     add_building = building_capital
+#     add_building = building_factory_1
+# }
+#
+# generate_bat_viwei_colony_buildings = {
+#     add_building = building_capital
+# }
+#
+# generate_bat_aratoht_colony_buildings = {
+#     add_building = building_capital
+# }
+#
+# ## KROGAN ##
+# generate_kro_tuchanka_capital_buildings = {
+#     while = { count = 2 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_generator ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_krogan_neutral_ground
+#     add_building = building_factory_1
+#     add_building = building_foundry_1
+# }
+#
+# # ## Quarian ##
+#
+# # ## Cerberus ##
+#
+# # generate_cerberus_cronos_buildings_and_districts = {
+# # 	while = { count = 3 add_district = district_hab_industrial }
+# # 	while = { count = 3 add_district = district_hab_energy }
+# # 	add_building = building_hab_major_capital
+# # 	add_building = building_foundry_1
+# # 	add_building = building_bureaucratic_1
+# # 	add_building = building_hydroponics_farm
+#
+# # }
+#
+# # generate_cerberus_lazarus_buildings_and_districts = {
+# # 	while = { count = 1 add_district = district_hab_science }
+# # 	add_building = building_hab_capital
+# # }
+#
+# # generate_cerberus_barn_buildings_and_districts = {
+# # 	while = { count = 1 add_district = district_hab_science }
+# # 	add_building = building_hab_capital
+# # 	add_building = building_bureaucratic_1
+# # 	add_building = building_hydroponics_farm
+# # }
+#
+# # generate_cerberus_vulcan_buildings_and_districts = {
+# # 	while = { count = 1 add_district = district_mil }
+# # 	while = { count = 1 add_district = district_industrial }
+# # 	add_building = building_hab_capital
+#
+# # }
+#
+# # generate_cerberus_therm_buildings_and_districts = {
+# # 	add_building = building_hab_capital
+# # 	add_building = building_bureaucratic_1
+# # 	add_building = building_research_lab_1
+# # }
+#
+# # generate_cerberus_minuteman_buildings_and_districts = {
+# # 	while = { count = 3 add_district = district_hab_science }
+# # 	add_building = building_hab_capital
+# # 	add_building = building_bureaucratic_1
+# # }
+#
+# # OMEGA ##
+# generate_omega_building_and_districts = {
+#     while = { count = 2 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_hab_major_capital
+# }
+#
+# ## ILLIUM ##
+# generate_illium_capital_buildings = {
+#     while = { count = 6 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_hydroponics_farm
+#     add_building = building_illium_trade_center
+#     add_building = building_factory_1
+# }
+#
+# ## Caleston ##
+# generate_caleston_capital_buildings = {
+#     while = { count = 6 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_caleston_great_dome
+#     add_building = building_caleston_energy_pits
+#     add_building = building_hydroponics_farm
+#     add_building = building_factory_1
+# }
+#
+# ## DRELL ##
+# generate_dre_rahkana_capital_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# set_destroyed_rakhana_buildings = {
+#     remove_all_buildings = yes
+#     add_deposit = d_ruined_building_blocker
+#     add_deposit = d_ruined_building_blocker
+#     add_deposit = d_ruined_building_blocker
+#     add_deposit = d_ruined_building_blocker
+#     add_deposit = d_ruined_building_blocker
+#     add_deposit = d_ruined_building_blocker
+#     add_deposit = d_ruined_building_blocker
+#     add_deposit = d_ruined_building_blocker
+#     add_deposit = d_ruined_building_blocker
+# }
+#
+# ## VORCHA ##
+# generate_vor_heshtok_buildings = {
+#     while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_vor_naskral_buildings = {
+#     add_building = building_capital
+# }
+#
+# generate_vor_parasc_buildings = {
+#     add_building = building_capital
+# }
+#
+# ## FORAYAN ##
+# generate_sed_sedriicae_capital_buildings = {
+#     while = { count = 5 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 6 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sed_perix_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sed_xixikii_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# ## LYSTHENI ##
+# generate_lys_sepkai_capital_buildings = {
+#     while = { count = 4 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# ## GOTHONES ##
+# generate_got_vindicta_capital_buildings = {
+#     while = { count = 2 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_generator ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+# }
+#
+# ## PARNACK ##
+# generate_yah_parnack_capital_buildings = {
+#     if = {
+#         limit = {
+#             planet.owner = {
+#                 has_country_flag = parnack_regime_player
+#             }
+#         }
+#         while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+#         while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#         while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
+#         while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
+#         while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
+#         remove_building = building_primitive_farm
+#         remove_building = building_primitive_factory
+#         remove_building = building_primitive_mine
+#         remove_building = building_primitive_power_plant
+#         remove_building = building_primitive_capital
+#         remove_building = building_urban_dwellings
+#         add_building = building_capital
+#     }
+#     else_if = {
+#         limit = {
+#             planet.owner = {
+#                 has_country_flag = parnack_regime_primitive
+#             }
+#         }
+#         add_building = building_primitive_farm
+#         add_building = building_primitive_factory
+#         add_building = building_primitive_mine
+#         add_building = building_primitive_power_plant
+#         add_building = building_primitive_capital
+#         add_building = building_urban_dwellings
+#     }
+# }
+#
+# ## RALOI ##
+# generate_ral_turvess_capital_buildings = {
+#     if = {
+#         limit = {
+#             planet.owner = {
+#                 has_country_flag = raloi_republic_player
+#             }
+#         }
+#         while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+#         while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#         while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
+#         while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
+#         while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
+#         remove_building = building_primitive_farm
+#         remove_building = building_primitive_factory
+#         remove_building = building_primitive_mine
+#         remove_building = building_primitive_power_plant
+#         remove_building = building_primitive_capital
+#         remove_building = building_urban_dwellings
+#         add_building = building_capital
+#     }
+#     else_if = {
+#         limit = {
+#             planet.owner = {
+#                 has_country_flag = raloi_republic_primitive
+#             }
+#         }
+#         add_building = building_primitive_farm
+#         add_building = building_primitive_factory
+#         add_building = building_primitive_mine
+#         add_building = building_primitive_power_plant
+#         add_building = building_primitive_capital
+#         add_building = building_urban_dwellings
+#     }
+# }
+#
+# ## GETH ##
+# generate_get_rannoch_capital_buildings = {
+#     while = { count = 5 add_district = { district_type = district_nexus ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_generator ignore_cap = yes } }
+#     add_building = building_machine_major_capital
+#     add_building = building_research_lab_1
+#     add_building = building_machine_assembly_plant
+# }
+#
+# generate_get_adas_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_machine_capital
+# }
+#
+# generate_get_charoum_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_nexus_complex ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_experimental_complex ignore_cap = yes } }
+#     add_building = building_machine_capital
+# }
+#
+# generate_get_naanacurrel_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_nexus ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_machine_capital
+# }
+#
+# generate_get_kasdavar_colony_buildings = {
+#     while = { count = 2 add_district = { district_type = district_nexus ignore_cap = yes } }
+#     add_building = building_machine_capital
+# }
+#
+# generate_get_ammut_colony_buildings = {
+#     add_building = building_hab_capital
+# }
+#
+# generate_get_haestrom_colony_buildings = {
+#     add_building = building_machine_capital
+#     add_building = building_research_lab_1
+# }
+#
+#
+# generate_btr_geth_incursion_start_buildings = {
+#     add_building = building_deployment_post
+# }
+#
+# ## DISCIPLES ##
+# generate_naz_heretic_station_capital_buildings = {
+#     while = { count = 2 add_district = { district_type = district_nexus ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_generator ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_machine_capital
+#     add_building = building_machine_assembly_plant
+# }
+#
+# generate_naz_rastrom_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_nexus ignore_cap = yes } }
+#     add_building = building_machine_capital
+# }
+#
+# generate_naz_saetoshar_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_nexus ignore_cap = yes } }
+#     add_building = building_machine_capital
+# }
+#
+# generate_geth_incursion_start_buildings = {
+#     add_building = building_deployment_post
+# }
+#
+# generate_naz_gaezaljenal_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_nexus ignore_cap = yes } }
+#
+#     add_building = building_hab_capital
+# }
+#
+# ## RACHNI ##
+# generate_rac_utukku_start_buildings = {
+#     while = { count = 3 add_district = { district_type = district_hive ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_hive_capital
+#     add_building = building_research_lab_1
+#     add_building = building_spawning_pool
+# }
+#
+# # ## COLLECTORS ##
+# # generate_btr_collectors_capital_buildings = {
+# # 	while = { count = 3 add_district = { district_type = district_rw_hive ignore_cap = yes } }
+# # 	while = { count = 3 add_district = { district_type = district_rw_generator ignore_cap = yes } }
+# # 	while = { count = 3 add_district = { district_type = district_rw_science ignore_cap = yes } }
+# # 	while = { count = 3 add_district = { district_type = district_rw_farming ignore_cap = yes } }
+# # 	while = { count = 3 add_district = { district_type = district_rw_industrial ignore_cap = yes } }
+# # 	add_building = building_hive_major_capital
+# # 	add_building = building_class_4_singularity
+# # 	add_building = building_sentinel_posts
+# # }

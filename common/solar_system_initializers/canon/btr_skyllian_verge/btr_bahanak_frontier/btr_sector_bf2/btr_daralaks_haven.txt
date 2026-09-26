@@ -1,0 +1,327 @@
+#######################
+### DARALAK'S HAVEN ###
+#######################
+
+sys_barva_init = {
+	name = "Barva"
+    class = sc_m
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf2 daralaks_haven barva_system secondary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 390
+	}
+
+	planet = {
+	    name = "Barva"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 27
+        flags = { barva_star }
+    }
+
+	planet = {
+	    name = "Grark"
+        class = pc_hothouse
+        orbit_distance = 70
+        size = 13
+        flags = { grark_planet }
+    }
+
+	planet = {
+	    name = "Focdaral"
+        class = pc_barren
+        orbit_distance = 70
+        size = 10
+        flags = { focdaral_planet }
+	}
+
+	planet = {
+	    name = "Prancastar"
+        class = pc_molten
+        orbit_distance = 70
+        size = 8
+        flags = { prancastar_planet }
+    }
+
+	planet = {
+	    name = "Rakl"
+        class = pc_dextro_arctic
+        orbit_distance = 70
+        size = 14
+        flags = { rakl_planet }
+    }
+
+	planet = {
+	    name = "Ser'mus"
+        class = pc_frozen
+        orbit_distance = 70
+        size = 7
+        flags = { sermus_planet }
+    }
+
+	change_orbit = 40
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Bosina"
+        class = pc_barren_cold
+        orbit_distance = 30
+        size = 15
+        flags = { bosina_planet }
+	}
+
+	planet = {
+	    name = "Edari"
+        class = pc_barren_cold
+        orbit_distance = 70
+        size = 11
+        flags = { edari_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_9_secondaryrelay" 
+			name = "Sector BF2 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_docbeg_init = {
+	name = "Docbeg"
+    class = sc_m
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf2 daralaks_haven docbeg_system }
+
+	planet = {
+	    name = "Docbeg"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 27
+        flags = { docbeg_star }
+    }
+
+	planet = {
+	    name = "Catin"
+        class = pc_barren
+        orbit_distance = 125
+        size = 10
+        flags = { catin_planet }
+    }
+
+	planet = {
+	    name = "San'sewar"
+        class = pc_savannah
+        orbit_distance = 125
+        size = 17
+        flags = { sansewar_planet }
+	}
+
+	planet = {
+	    name = "Qusjo"
+        class = pc_methane
+        orbit_distance = 125
+        size = 18
+        flags = { qusjo_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Redbegoh"
+        class = pc_t_star
+        orbit_distance = 125
+        size = 34
+        flags = { redbegoh_star }
+    }
+}	
+
+sys_kheprork_init = {
+	name = "Kheprork"
+    class = sc_b_super
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf2 daralaks_haven kheprork_system primary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 500
+	}
+
+	planet = {
+	    name = "Kheprork"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 27
+        flags = { kheprork_star }
+    }
+
+	planet = {
+	    name = "Ibomas"
+        class = pc_barren
+        orbit_distance = 125
+        size = 10
+        flags = { ibomas_planet }
+    }
+
+	planet = {
+	    name = "Fordor"
+        class = pc_savannah
+        orbit_distance = 125
+        size = 17
+        flags = { fordor_planet }
+	}
+
+	planet = {
+	    name = "Ikak"
+        class = pc_methane
+        orbit_distance = 125
+        size = 18
+        flags = { ikak_planet }
+		has_ring = yes
+    }
+
+	planet = {
+	    name = "Undelkon"
+        class = pc_t_star
+        orbit_distance = 75
+        size = 34
+        flags = { undelkon_star }
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "daralakshaven_ghranakfrontier_primaryrelay" 
+			name = "Sector BF2 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_sen_init = {
+	name = "Sen"
+    class = sc_m_giant
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf2 daralaks_haven sen_system }
+
+	planet = {
+	    name = "Sen"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 27
+        flags = { sen_star }
+    }
+
+	planet = {
+	    name = "Kacacba"
+        class = pc_molten
+        orbit_distance = 250
+        size = 13
+        flags = { kacacba_planet }
+    }
+
+	planet = {
+	    name = "Khodaron"
+        class = pc_ice_giant
+        orbit_distance = 250
+        size = 29
+		moon = {
+			name = "Grark"
+			class = pc_barren
+			orbit_distance = 20
+			size = 7			
+			flags = {grark_planet khodaron_planet}
+		}
+		moon = {
+			name = "Grark"
+			class = pc_iron
+			orbit_distance = 5
+			size = 5			
+			flags = { grark_planet }
+		}
+	}
+}
+
+sys_ushopak_init = {
+	name = "Ushopak"
+    class = sc_g
+	max_instances = 1
+
+    flags = { bahanak_frontier sector_bf2 daralaks_haven ushopak_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 390
+	}
+
+	planet = {
+	    name = "Ushopak"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 31
+        flags = { ushopak_star }
+    }
+
+	planet = {
+	    name = "Nahal"
+        class = pc_iron
+        orbit_distance = 125
+        size = 9
+        flags = { nahal_planet }
+    }
+
+	planet = {
+	    name = "Behan"
+        class = pc_molten
+        orbit_distance = 125
+        size = 12
+        flags = { behan_planet }
+	}
+
+	planet = {
+	    name = "Dedor"
+        class = pc_gas_giant
+        orbit_distance = 125
+        size = 33
+        flags = { dedor_planet }
+		has_ring = yes
+    }
+
+	change_orbit = 15
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Abrarnakk"
+        class = pc_barren_cold
+        orbit_distance = 110
+        size = 13
+        flags = { abrarnakk_planet }
+    }
+}

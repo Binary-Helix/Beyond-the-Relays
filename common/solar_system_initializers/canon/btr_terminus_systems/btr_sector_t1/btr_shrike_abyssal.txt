@@ -1,0 +1,495 @@
+######################
+### SHRIKE ABYSSAL ###
+######################
+
+sys_korkrov_init = {
+	name = "Korkrov"
+    class = sc_o
+	max_instances = 1
+
+    flags = { terminus_systems sector_t1 shrike_abyssal korkrov_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 175
+	}
+
+    planet = {
+	    name = "Korkrov"
+        class = pc_o_star
+        orbit_distance = 0
+        size = 31
+        flags = { korkrov_star }
+    }
+
+    change_orbit = 175
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Resdro"
+        class = pc_carbon
+        orbit_distance = 75
+        orbit_angle = 218
+        has_ring = no
+		size = 15
+		flags = { resdro_planet }
+    }
+}
+
+sys_kyzil_init = {
+    name = "Kyzil"
+    class = sc_k
+	max_instances = 1
+    usage = custom_empire
+
+    flags = { terminus_systems sector_t1 shrike_abyssal kyzil_system }
+
+    planet = {
+	    name = "Kyzil"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 15
+        flags = { kyzil_star }
+    }
+
+    planet = {
+        name = "Naskral"
+        class = pc_barren_station
+        orbit_distance = 100
+        orbit_angle = 331
+        has_ring = no
+		size = 4
+		flags = { naskral_planet }
+    }
+
+    planet = {
+        name = "Heshtok"
+        class = pc_primal
+        orbit_distance = 100
+        orbit_angle = 251
+        size = 9
+        has_ring = no		
+        starting_planet = yes
+        flags = { heshtok_planet }  
+        deposit_blockers = none
+        modifiers = none
+        init_effect = {
+			save_global_event_target_as = vorchaHomeworld
+			if = {
+				limit = {
+					exists = event_target:vorchaHomeworld
+				}
+				log = "Vorcha Homeworld Event Target Set"
+			}
+            prevent_anomaly = yes
+
+            check_for_vorcha_player = yes
+
+            if = {
+				limit = {
+					any_country = {
+						has_country_flag = vorcha_clandom_player
+					}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = vorcha_clandom_player
+					}
+					save_global_event_target_as = vorcha_clandom
+				}
+                generate_empire_home_planet = yes
+			}
+			else = {
+				generate_vorcha_clandom_country = yes
+			}
+            set_capital = yes
+			set_owner = event_target:vorcha_clandom
+			create_colony = {
+				owner = event_target:vorcha_clandom
+				species = event_target:vorchaSpecies
+				ethos = owner
+			}
+            clear_blockers = yes
+            generate_vor_heshtok_pops = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/canon/vorcha_cla_origin"
+            event_target:vorcha_clandom = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+		}
+    }	
+
+    planet = {
+        name = "Parasc"
+        class = pc_frozen_station
+        orbit_distance = 100
+        orbit_angle = 165
+        has_ring = no
+		size = 5
+		flags = { parasc_planet }
+    }
+
+    planet = {
+        name = "Lihrat"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 101
+        has_ring = no
+		size = 37	
+		flags = { lihrat_planet }
+    }
+
+    planet = {
+        name = "Rustaka"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 113
+        has_ring = no
+		size = 29
+		flags = { rustaka_planet }
+    }
+}
+
+sys_thal_init = {
+    name = "Thal"
+    class = sc_k
+	max_instances = 1
+
+    flags = { terminus_systems sector_t1 shrike_abyssal thal_system planet_state }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 425
+	}
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 500
+	}
+
+    planet = {
+	    name = "Thal"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 20
+        flags = { thal_star }
+    }
+
+    planet = {
+        name = "Garan"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 232
+        has_ring = no
+		size = 25
+		flags = { garan_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Sarait"
+        class = pc_highgrav_methane
+        orbit_distance = 125
+        orbit_angle = 196
+        has_ring = no
+		size = 25
+		flags = {subclass_world sarait_planet}
+		entity = "methane_swamp_planet_05_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = marsh_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Altakiril"
+        class = pc_dextro_tundra
+        orbit_distance = 125
+        orbit_angle = 253
+        has_ring = no
+		size = 14
+		flags = { subclass_world altakiril_planet }
+		entity = "fungal_planet_01_entity"
+		# init_effect = {
+        #     save_global_event_target_as = altakirilHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:altakirilHomeworld
+        #         }
+        #         log = "Altakiril Union Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_altakiril_union_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:altakiril_union
+		# 	create_colony = {
+		# 		owner = event_target:altakiril_union
+		# 		species = event_target:turianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_altakiril_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = fungal_world
+		# 		days = -1
+		# 	}
+		# 	add_modifier = {
+		# 		modifier = dextro_world
+		# 		days = -1
+		# 	}
+		# }
+    }
+
+    planet = {
+        name = "Tyrix"
+        class = pc_sil_asteroid
+        orbit_distance = 50
+        orbit_angle = 76
+        has_ring = no
+		size = 1
+		flags = { tyrix_planet }
+    }
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Xerceo"
+        class = pc_gas_giant
+        orbit_distance = 50
+        orbit_angle = 343
+        has_ring = yes
+		size = 37
+		flags = { xerceo_planet }
+    }
+
+    planet = {
+        name = "Virits"
+        class = pc_carb_asteroid
+        orbit_distance = 25
+        orbit_angle = 171
+        has_ring = no
+		size = 2
+		flags = { virits_planet }
+    }
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_urlarast_init = {
+    name = "Urla Rast"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t1 shrike_abyssal urlalast_system planet_state }
+	
+    planet = {
+	    name = "Urla Rast"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+        flags = { urla_rast_star }
+    }
+
+    planet = {
+        name = "Bovis Tor"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 164
+        has_ring = no
+		size = 18
+		flags = { bovis_tor_planet }
+    }
+
+    planet = {
+        name = "Talis Fia"
+        class = pc_ammonia
+        orbit_distance = 125
+        orbit_angle = 148
+        has_ring = no
+		size = 18
+		flags = {subclass_world talisfia_planet talis_fia_planet}
+		deposit_blockers = none
+        modifiers = none        
+		entity = "ammonia_continental_planet_02_entity"
+		# init_effect = {
+        #     save_global_event_target_as = talisfiaHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:talisfiaHomeworld
+        #         }
+        #         log = "Thalassocracy of Talis Fia Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_thalassocracy_of_talis_fia_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:thalassocracy_of_talis_fia
+		# 	create_colony = {
+		# 		owner = event_target:thalassocracy_of_talis_fia
+		# 		species = event_target:volusSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_talis_fia_pops = yes
+        #
+        #     add_modifier = {
+		# 		modifier = forest_world
+		# 		days = -1
+		# 	}
+        #
+        #     add_deposit = d_eezo_trace
+		# }
+    }
+
+    planet = {
+        name = "Doz Atab"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 38
+        has_ring = no
+		size = 32
+		flags = { doz_atab_planet }
+    }
+	
+    planet = {
+        name = "Rosh"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 38
+        size = 3
+        flags = { rosh_planet }
+        has_ring = no
+    }	
+}
+
+sys_xecha_init = {
+    name = "Xe Cha"
+    class = sc_k
+	max_instances = 1
+
+    flags = { terminus_systems sector_t1 shrike_abyssal xecha_system secondary_relay_system }
+
+    planet = {
+	    name = "Xe Cha"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+        flags = { xe_cha_star }
+    }
+
+    planet = {
+        name = "Zada Ban"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 306
+        has_ring = no
+		size = 19
+
+		flags = { zada_ban_planet }
+        init_effect = {
+            add_deposit = d_eezo_3
+        }
+    }
+
+    planet = {
+        name = "Aphras"
+        class = pc_dextro_tropical
+        orbit_distance = 125
+        orbit_angle = 56
+        has_ring = no
+		size = 11
+		flags = {subclass_world aphras_planet}
+		entity = "atoll_planet_03_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dextro_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = atoll_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Tosal Nym"
+        class = pc_dextro_desert
+        orbit_distance = 125
+        orbit_angle = 254
+        has_ring = no
+		size = 17
+		flags = {subclass_world tosal_nym_planet}
+		entity = "dune_planet_07_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dune_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = atoll_world
+				days = -1
+			}
+
+            add_deposit = d_eezo_scarce
+		}
+    }
+
+    planet = {
+        name = "Vem Osca"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 252
+        has_ring = no
+		size = 35
+
+		moon = {
+			name = "Yavris Rat"
+			class = pc_frozen
+			orbit_distance = 20
+			size = 9
+			flags = {yavris_rat_planet vem_osca_planet}
+		}
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_1_secondaryrelay" 
+			name = "Sector T1 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		}
+	}
+}

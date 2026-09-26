@@ -1,4 +1,3 @@
-
 set_deposit_flags = {
 	# Minerals
 	if = {
@@ -2885,11 +2884,11 @@ add_prospector_deposit = {
 
 set_pop_convicted = {
 	random_list = {
-		10 = { add_modifier = { modifier = pop_convicted days = 1800 } }
-		20 = { add_modifier = { modifier = pop_convicted days = 3600 } }
-		20 = { add_modifier = { modifier = pop_convicted days = 7200 } }
-		20 = { add_modifier = { modifier = pop_convicted days = 18000 } }
-		20 = { add_modifier = { modifier = pop_convicted days = 36000 } }
+		10 = { add_modifier = { modifier = pop_convicted years = 5 } }
+		20 = { add_modifier = { modifier = pop_convicted years = 10 } }
+		20 = { add_modifier = { modifier = pop_convicted years = 20 } }
+		20 = { add_modifier = { modifier = pop_convicted years = 50 } }
+		20 = { add_modifier = { modifier = pop_convicted years = 100 } }
 		10 = { add_modifier = { modifier = pop_convicted days = -1 } }
 	}
 	

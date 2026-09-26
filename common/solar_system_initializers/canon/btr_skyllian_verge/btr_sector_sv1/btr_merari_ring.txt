@@ -1,0 +1,173 @@
+###################
+### MERARI RING ###
+###################
+
+sys_ab113_init = {
+	name = "AB-113"
+    class = sc_k_giant
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv1 merari_ring ab113_system secondary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 400
+	}
+
+	planet = {
+		name = "Akili"
+        class = pc_k_giant_star
+        orbit_distance = 0
+        size = 28
+        flags = { akili_star }
+    }
+
+	planet = {	
+		name = "AB-431"
+		class = pc_barren
+        orbit_distance = 250
+		size = 36
+		flags = { ab_431_planet }
+	}
+
+	planet = {	
+		name = "AB-615"
+		class = pc_carb_asteroid
+        orbit_distance = 150
+		size = 4
+		flags = { ab_615_planet }
+	}
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_5_secondaryrelay" 
+			name = "Sector SV1 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_elam_init = {
+	name = "Elam"
+	class = sc_g
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv1 merari_ring elam_system }
+
+    planet = {
+		name = "Elam"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { elam_star }
+    }
+
+	planet = {	
+		name = "Cephas"
+		class = pc_molten
+        orbit_distance = 35
+		size = 13
+		flags = { cephas_planet }
+	}
+
+	planet = {
+		name = "Zillah"
+		class = pc_arid
+        orbit_distance = 45
+		size = 17
+		flags = {subclass_world zillah_planet}
+
+		moon = {
+			name = "Onfo a"
+			class = pc_asteroid
+			orbit_distance = 10
+			size = 4
+			flags = { onfo_a_planet }
+			init_effect = {
+				add_modifier = {
+					modifier = dune_world
+					days = -1
+				}	
+			}
+		}
+	}
+
+	planet = {
+		name = "Hagar" 
+		class = pc_gas_giant
+        orbit_distance = 40
+		size = 36
+		flags = { hagar_planet }
+	}
+}
+
+sys_hadassah_init = {
+	name = "Hadassah"
+	class = "sc_m"
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv1 merari_ring hadassah_system primary_relay_system }
+
+    planet = {
+		name = "Hadassah"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { hadassah_star }
+    }	
+
+	planet = {	
+		name = "Adah"
+		class = pc_tropical
+        orbit_distance = 125
+		size = 20
+		flags = {subclass_world adah_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = jungle_world
+				days = -1
+			}
+		}
+	}
+
+	planet = {	
+		name = "Tryphena"
+		class = pc_barren
+        orbit_distance = 125
+		size = 13
+		flags = { tryphena_planet }
+	}
+
+	planet = {
+		name = "Ithiel"
+		class = pc_barren_cold
+        orbit_distance = 125
+		size = 12
+		flags = { ithiel_planet }
+	}
+
+	planet = {
+		name = "Prisca" 
+		class = pc_frozen
+        orbit_distance = 125
+		size = 4
+		flags = { prisca_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "merariring_dabosknot_primaryrelay" 
+			name = "Sector SV1 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

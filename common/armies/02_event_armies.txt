@@ -184,7 +184,6 @@ swarm_army = {
 		is_country_type = "swarm"
 	}
 
-	potential = { always = no }
 }
 
 # Rampaging Tree Armies
@@ -579,7 +578,7 @@ imperial_legion = {
 		}
 	}
 
-	potential_country = {
+	potential_country = { # TODO: this needs to be retooled for BTR purposes
 		is_galactic_emperor = yes
 		is_active_resolution = "resolution_emperor_imperial_legions"
 	}
@@ -597,35 +596,14 @@ imperial_legion = {
 		always = no
 	}
 
-	potential = { always = no }
-
 	on_queued = {
-		owner = {
-			change_variable = {
-				which = "imperial_legion_soldier_count"
-				value = 1
-			}
-		}
 	}
 
 	on_unqueued = {
-		owner = {
-			change_variable = {
-				which = "imperial_legion_soldier_count"
-				value = -1
-			}
-		}
 	}
 
 	ai_weight = {
 		base = 500
-		modifier = {
-			set = 0
-			check_variable = {
-				which = "imperial_legion_soldier_count"
-				value >= 12
-			}
-		}
 	}
 }
 
@@ -688,7 +666,7 @@ mercenary_army = {
 		}
 	}
 
-	potential = {
+	potential_country = {
 		always = no
 	}
 }
@@ -712,7 +690,7 @@ mecha_army = {
 		}
 	}
 
-	potential = {
+	potential_country = {
 		always = no
 	}
 }
@@ -727,7 +705,27 @@ crystal_kraken_army = {
 	icon = GFX_army_type_undead
 	has_species = no
 
-	potential = {
+	potential_country = {
+		always = no
+	}
+}
+
+shroud_monstrosities = {
+	defensive = yes
+	damage = 15.00
+	health = 15.00
+	morale_damage = 2.00
+	collateral_damage = 5.00
+
+	icon = GFX_army_type_psionic
+	has_species = no
+	has_morale = no
+
+	resources = {
+		category = armies
+	}
+
+	potential_country = {
 		always = no
 	}
 }
@@ -740,7 +738,7 @@ subterranean_defense_army = {
 	morale = 1
 	icon = GFX_army_type_primitive
 
-	potential = {
+	potential_country = {
 		always = no
 	}
 }
@@ -819,6 +817,33 @@ behemoth_army = {
 	has_morale = no
 	icon = GFX_army_type_behemoth
 	has_species = no
+
+	potential_country = {
+		always = no
+	}
+}
+
+# Stormwardens, given by the Mindwarden Enclave
+mindwarden_army = {
+	damage = 1.10
+	health = 1.00
+	morale = 0.50
+	morale_damage = 1.00
+	collateral_damage = 2.50
+	war_exhaustion = 0.50
+
+	icon = GFX_army_type_assault
+	resources = {
+		category = armies
+
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	army_modifier = {
+		army_damage_against_psionic_mult = 1
+	}
 
 	potential_country = {
 		always = no

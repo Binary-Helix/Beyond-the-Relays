@@ -1,0 +1,399 @@
+#######################
+### ARCTURUS STREAM ###
+#######################
+
+sys_arcturus_init = {
+    name = "Arcturus"
+    class = sc_k
+	max_instances = 1
+
+    flags = { orion_spur sector_os1 arcturus_stream arcturus_system systems_alliance_system }
+	
+	init_effect = {
+		save_global_event_target_as = allianceFourthFleet
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 100
+	}
+
+	planet = {
+        name = "Arcturus"
+		class = pc_k_star
+        orbit_distance = 0
+        size = 30
+        flags = { arcturus_star }
+    }
+
+    planet = {
+        name = "Alcyoneus"
+        class = pc_asteroid
+        orbit_distance = 100
+        orbit_angle = 151
+		size = 2
+		flags = { alcyoneus_planet }
+		has_ring = no
+	}
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+        name = "Souq"
+        class = pc_asteroid
+        orbit_distance = 0
+        orbit_angle = 210
+		size = 2
+		flags = { souq_planet }
+        has_ring = no
+    }
+
+	planet = {
+		name = "Arcturus Station"
+		class = pc_habitat
+		orbit_distance = 30
+		size = 12
+		entity = "btr_alliance_arcturus_station_01_entity"
+		flags = {arcturus_station arcturus_station_station}
+	}
+
+    planet = {
+        name = "Themis"
+        class = pc_gas_giant
+        orbit_distance = 150
+        orbit_angle = 75
+		size = 34
+		flags = { themis_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Eirene"
+        class = pc_gas_giant
+        orbit_distance = 150
+        orbit_angle = 182
+		size = 31
+		flags = { eirene_planet }
+        has_ring = yes
+	}	   
+
+    planet = {
+        name = "Eunomia"
+        class = pc_frozen
+        orbit_distance = 150
+        orbit_angle = 289
+		size = 11
+		flags = { eunomia_planet }
+        has_ring = no
+	}
+}
+
+sys_euler_init = {
+    name = "Euler"
+    class = sc_g
+	max_instances = 1
+
+    flags = { orion_spur sector_os1 arcturus_stream euler_system systems_alliance_system }	
+
+    planet = {
+		name = "Euler"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { euler_star }
+    }
+
+    planet = {
+        name = "Fermi"
+        class = pc_carbon
+        orbit_distance = 125
+        orbit_angle = 14
+        size = 10
+        flags = { fermi_planet }
+		has_ring = no
+    }
+
+    planet = {
+        name = "Benning"
+        class = pc_continental
+        orbit_distance = 125
+        orbit_angle = 199
+        size = 23
+        has_ring = no
+		flags = { benning_planet }
+	}
+
+    planet = {
+        name = "Yukawa"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 109
+        size = 7
+        flags = { yukawa_planet }
+        has_ring = no	
+    }
+
+    planet = {
+        name = "Silva"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 197
+        size = 15
+        has_ring = no
+
+		moon = {
+			name = "Oliveira"
+			class = pc_barren_cold
+			orbit_distance = 20
+			size = 11
+			flags = {oliveira_planet silva_planet}
+		}	
+    }
+}
+
+sys_rua_init = {
+    name = "SM-2183 Rua"
+    class = sc_m_hyper
+	max_instances = 1
+
+    flags = { orion_spur sector_os1 arcturus_stream rua_system secondary_relay_system }	
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 300
+	}	
+
+    planet = {
+		name = "SM-2183 Rua"
+        class = pc_m_hyper_star
+        orbit_distance = 0
+        size = 30
+        flags = { sm_2183_rua_star }
+    }
+	
+	planet = {
+		name = "DH-1993"
+		class = pc_barren
+        orbit_distance = 125
+		size = 12
+		flags = { dh_1993_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_DH1993_RED_WIPE
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+	}
+
+	planet = {
+		name = "DC-1939"
+		class = pc_shattered
+        orbit_distance = 125
+		size = 18
+		flags = { dc_1939_planet }
+        init_effect = {
+            add_anomaly = {
+                category =BTR_DC1938_SHATTERED_WORLD
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+	}
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "L2183"
+		class = pc_iron
+        orbit_distance = 75
+		size = 9
+		flags = { l2183_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_L2183_WRONG_MINERALS
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+	}	
+
+	planet = {
+		name = "MV-1963"
+		class = pc_gas_giant
+        orbit_distance = 125
+		size = 37
+		flags = { mv_1963_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_MV1963_GHOST_MINING
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+	}
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_1_secondaryrelay" 
+			name = "Sector OS1 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+	
+sys_42518p_init = {
+    name = "42518-P"
+    class = sc_o_super
+	max_instances = 1
+
+    flags = { orion_spur sector_os1 arcturus_stream 42518p_system primary_relay_system }
+
+    planet = {
+		name = "42518-P"
+        class = pc_o_super_star
+        orbit_distance = 0
+        size = 20
+        flags = { 42518_p_star }
+	}
+	
+	planet = {
+		name = "42518-P I"
+		class = pc_molten
+        orbit_distance = 125
+		size = 25
+		flags = { 42518_p_i_planet }
+	}
+
+	planet = {
+		name = "42518-P II"
+		class = pc_ice_giant
+        orbit_distance = 125
+		size = 28
+		init_effect = {
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "42518-P II a"
+			class = pc_frozen
+			orbit_distance = 20
+			size = 13
+			flags = {42518_p_ii_a_planet 42518_p_ii_planet}
+		}
+
+		moon = {
+			name = "42518-P II b"
+			class = pc_asteroid
+			orbit_distance = 5
+			size = 3
+			flags = { 42518_p_ii_b_planet }
+		}		
+
+		moon = {
+			name = "42518-P II c"
+			class = pc_iron
+			orbit_distance = 5
+			size = 2
+			flags = { 42518_p_ii_c_planet }
+		}
+
+		moon = {
+			name = "42518-P II d"
+			class = pc_ammonia
+			orbit_distance = 5
+			size = 9
+			flags = { 42518_p_ii_d_planet }
+		}
+
+		moon = {
+			name = "42518-P II e"
+			class = pc_iron
+			orbit_distance = 5
+			size = 2
+			flags = { 42518_p_ii_e_planet }
+		}	
+
+		moon = {
+			name = "42518-P II f"
+			class = pc_iron
+			orbit_distance = 5
+			size = 2
+			flags = { 42518_p_ii_f_planet }
+		}		
+	}
+
+	planet = {
+		name = "42518-P III"
+		class = pc_toxic
+        orbit_distance = 125
+		size = 14
+		init_effect = {
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "42518-P III a"
+			class = pc_ammonia
+			orbit_distance = 20
+			size = 13
+			flags = {42518_p_iii_a_planet 42518_p_iii_planet}
+		}
+
+		moon = {
+			name = "42518-P III b"
+			class = pc_iron
+			orbit_distance = 5
+			size = 3
+			flags = { 42518_p_iii_b_planet }
+		}		
+
+		moon = {
+			name = "42518-P III c"
+			class = pc_frozen
+			orbit_distance = 5
+			size = 2
+			flags = { 42518_p_iii_c_planet }
+		}
+
+		moon = {
+			name = "42518-P III d"
+			class = pc_iron
+			orbit_distance = 5
+			size = 9
+			flags = { 42518_p_iii_d_planet }
+		}			
+	}
+
+	planet = {
+		name = "42518-P IV"
+		class = pc_t_star
+        orbit_distance = 125
+		size = 40
+		flags = { 42518_p_iv_star }
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "arcturusstream_xingyuncluster_primaryrelay" 
+			name = "Sector OS1 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

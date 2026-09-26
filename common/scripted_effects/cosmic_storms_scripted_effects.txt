@@ -1,4 +1,3 @@
-
 choose_storm_location_weighted = {
 	random_system = {
 		weights = {
@@ -1068,12 +1067,7 @@ shroud_storm_events = {
 			NOT = { is_planet_class = pc_molten }
 			NOT = { has_modifier = terraforming_candidate }
 		}
-		random_list = {
-			80 = {}
-			20 = {
-				planet_event = { id = cstorms.8500 }
-			}
-		}
+		random = { chance = 20 planet_event = { id = cstorms.8500 } }
 	}
 }
 

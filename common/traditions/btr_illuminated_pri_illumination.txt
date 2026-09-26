@@ -1,0 +1,386 @@
+tr_btr_illumination_adoption = {
+    possible = {
+        has_origin = illuminated_pri_origin
+    }
+    unlocks_agenda = agenda_illumination
+    modifier = {
+        pop_happiness = 0.1
+    }
+}
+
+tr_btr_illumination_finish = {
+    modifier = {
+        # relics_astral_threads_cost_mult = -0.5
+        # relics_advanced_logic_cost_mult = -0.5
+        # relics_sr_living_metal_cost_mult = -0.5
+        # relics_sr_dark_matter_cost_mult = -0.5
+        # relics_nanites_cost_mult = -0.5
+        # relics_biomass_cost_mult = -0.5
+        # relics_volatile_motes_cost_mult = -0.5
+        # relics_sr_zro_cost_mult = -0.5
+        # relics_exotic_gases_cost_mult = -0.5
+        # relics_rare_crystals_cost_mult = -0.5
+        relics_influence_cost_mult = -0.5
+        relics_unity_cost_mult = -0.5
+        relics_trade_cost_mult = -0.5
+        relics_engineering_research_cost_mult = -0.5
+        relics_society_research_cost_mult = -0.5
+        relics_physics_research_cost_mult = -0.5
+        relics_food_cost_mult = -0.5
+        relics_energy_cost_mult = -0.5
+        relics_minerals_cost_mult = -0.5
+        relics_beryllium_cost_mult = -0.5
+        relics_lithium_cost_mult = -0.5
+        relics_titanium_cost_mult = -0.5
+        relics_palladium_cost_mult = -0.5
+        relics_iridium_cost_mult = -0.5
+        relics_platinum_cost_mult = -0.5
+        relics_helium_3_cost_mult = -0.5
+        relics_hydrogen_cost_mult = -0.5
+        relics_antimatter_fuel_cost_mult = -0.5
+        relics_uranium_cost_mult = -0.5
+        relics_eezo_cost_mult = -0.5
+        relics_light_alloys_cost_mult = -0.5
+        relics_heavy_alloys_cost_mult = -0.5
+        relics_minor_artifacts_cost_mult = -0.5
+        relics_consumer_goods_cost_mult = -0.5
+
+        #   relics_cost_mult = -0.5
+        planet_biologists_minor_artifacts_produces_add = 0.20
+        planet_engineers_minor_artifacts_produces_add = 0.20
+        planet_physicists_minor_artifacts_produces_add = 0.20
+        ascension_perks_add = 1
+    }
+}
+
+tr_btr_illumination_chosen = {
+    modifier = {
+        pop_government_ethic_attraction = 0.25
+        country_unity_produces_mult = 0.1
+    }
+}
+
+tr_btr_illumination_polite = {
+    possible = {
+        has_tradition = tr_btr_illumination_chosen
+    }
+    modifier = {
+        country_trust_growth = 0.2
+        country_trust_cap_add = 100
+        envoy_improve_relations_mult = 0.25
+        country_border_friction_mult = -0.75
+    }
+}
+
+tr_btr_illumination_church = {
+    possible = {
+        has_tradition = tr_btr_illumination_chosen
+    }
+    modifier = {
+        job_politician_add = 100
+        country_base_influence_produces_add = 1
+    }
+}
+
+tr_btr_illumination_shadow = {
+    possible = { has_tradition = tr_btr_illumination_polite }
+    modifier = {
+        envoys_add = 2
+        intel_decryption_add = 4
+        espionage_operation_speed_mult = 0.1
+    }
+}
+
+tr_btr_illumination_citizen = {
+    possible = { has_tradition = tr_btr_illumination_church }
+    modifier = {
+        pop_government_ethic_attraction = 0.1
+        planet_bureaucrats_upkeep_mult = -0.2
+        job_bureaucrat_per_pop = 0.0015
+    }
+
+      on_enabled = {
+        every_neighbor_country = {
+            limit = {
+                NOT = {
+                    is_gestalt = yes
+                    has_country_flag = flag_btr_faith
+                }
+            }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_authoritarian
+                    }
+                }
+            }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = "mod_btr_faith_authoritarian"
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_authoritarian"
+                        days = -1
+                    }
+                }
+                if = {
+                    limit = {
+                        prev = {
+                            has_ethic = ethic_fanatic_authoritarian
+                        }
+                    }
+                    if = {
+                        limit = {
+                            not = {
+                                has_modifier = "mod_btr_faith_fan_authoritarian"
+                            }
+                        }
+                        add_modifier = {
+                            modifier = "mod_btr_faith_fan_authoritarian"
+                            days = -1
+                        }
+                    }
+                }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_egalitarian
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_egalitarian
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_egalitarian"
+                        days = -1
+                    }
+                }
+                limit = {
+                    prev = {
+                        has_ethic = ethic_fanatic_egalitarian
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_fan_egalitarian
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_fan_egalitarian"
+                        days = -1
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_xenophobe
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_xenophobe
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_xenophobe"
+                        days = -1
+                    }
+                }
+                limit = {
+                    prev = {
+                        has_ethic = ethic_fanatic_xenophobe
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_fan_xenophobe
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_fan_xenophobe"
+                        days = -1
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_xenophile
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_xenophile
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_xenophile"
+                        days = -1
+                    }
+                }
+                limit = {
+                    prev = {
+                        has_ethic = ethic_fanatic_xenophile
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_fan_xenophile
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_fan_xenophile"
+                        days = -1
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_militarist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_militarist
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_militarist"
+                        days = -1
+                    }
+                }
+                limit = {
+                    prev = {
+                        has_ethic = ethic_fanatic_militarist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_fan_militarist
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_fan_militarist"
+                        days = -1
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_pacifist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_pacifist
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_pacifist"
+                        days = -1
+                    }
+                }
+                limit = {
+                    prev = {
+                        has_ethic = ethic_fanatic_pacifist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_fan_pacifist
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_fan_pacifist"
+                        days = -1
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_materialist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_materialist
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_materialist"
+                        days = -1
+                    }
+                }
+                limit = {
+                    prev = {
+                        has_ethic = ethic_fanatic_materialist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_fan_materialist
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_fan_materialist"
+                        days = -1
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    prev = {
+                        has_ethic = ethic_spiritualist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_spiritualist
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_spiritualist"
+                        days = -1
+                    }
+                }
+                limit = {
+                    prev = {
+                        has_ethic = ethic_fanatic_spiritualist
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            has_modifier = mod_btr_faith_fan_spiritualist
+                        }
+                    }
+                    add_modifier = {
+                        modifier = "mod_btr_faith_fan_spiritualist"
+                        days = -1
+                    }
+                }
+            }
+        }
+    }
+}

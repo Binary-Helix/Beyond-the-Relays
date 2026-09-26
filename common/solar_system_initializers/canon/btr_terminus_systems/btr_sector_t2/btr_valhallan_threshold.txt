@@ -1,0 +1,347 @@
+###########################
+### VALHALLAN THRESHOLD ###
+###########################
+
+sys_micah_init = {
+    name = "Micah"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 valhallan_threshold micah_system secondary_relay_system }
+
+    planet = {
+	    name = "Micah"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { micah_star }
+    }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 450
+	}
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 500
+	}
+
+    planet = {
+        name = "Elohi"
+        class = pc_gas_giant
+        orbit_distance = 250
+        orbit_angle = 265
+        has_ring = no
+		size = 30
+
+		moon={
+			name = "Asaro"
+			class = pc_gel_asteroid
+			orbit_angle = { min =90 max = 270}
+			orbit_distance = 40
+			size = 3
+			flags = {asaro_planet elohi_planet}
+		}
+    }
+
+    planet = {
+        name = "Dumah"
+        class = pc_gas_giant
+        orbit_distance = 150
+        orbit_angle = 88
+        has_ring = no
+		size = 34
+        init_effect = {
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
+
+		moon = {
+            name = "Anafiel"
+            class = pc_frozen
+            orbit_distance = 20
+            orbit_angle = 180
+            has_ring = no
+			size = 6
+			flags = {anafiel_planet dumah_planet}
+        }
+    }
+
+    planet = {
+        name = "Farlas"
+        class = pc_carb_asteroid
+        orbit_distance = 50
+        orbit_angle = 214
+        has_ring = no
+		size = 1
+
+		flags = { farlas_planet }
+        init_effect = {
+            add_deposit = d_eezo_1
+        }
+    }
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Israfil"
+        class = pc_sil_asteroid
+        orbit_distance = 50
+        orbit_angle = 234
+        has_ring = no
+		size = 2
+
+		flags = { israfil_planet }
+        init_effect = {
+            add_deposit = d_eezo_1
+        }
+    }
+
+    planet = {
+        name = "Kakabel"
+        class = pc_carb_asteroid
+        orbit_distance = 0
+        orbit_angle = 246
+        has_ring = no
+		size = 1
+		flags = { kakabel_planet }
+        init_effect = {
+            add_deposit = d_eezo_1
+        }
+    }	
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_2_secondaryrelay" 
+			name = "Sector T2 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_paz_init = {
+    name = "Paz"
+    class = sc_a
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 valhallan_threshold paz_system planet_state }
+
+    planet = {
+	    name = "Paz"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 28
+        flags = { paz_star }
+    }
+
+    planet = {
+        name = "Garvug"
+        class = pc_arctic
+        orbit_distance = 60
+        orbit_angle = 313
+        has_ring = no
+		size = 15
+		entity = "snow_planet_01_entity"
+        deposit_blockers = none
+        modifiers = none
+		flags = { subclass_world garvug_planet }
+		# init_effect = {
+        #     save_global_event_target_as = garvugHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:garvugHomeworld
+        #         }
+        #         log = "State of Garvug Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_state_of_garvug_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:state_of_garvug
+		# 	create_colony = {
+		# 		owner = event_target:state_of_garvug
+		# 		species = event_target:kroganSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_garvug_pops = yes
+        #
+        #     add_modifier = {
+		# 		modifier = snow_world
+		# 		days = -1
+		# 	}
+        #     add_deposit = d_eezo_scarce
+		# }
+    }	
+}
+
+sys_raheelleyya_init = {
+    name = "Raheel-Leyya"
+    class = sc_binary_o_b
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 valhallan_threshold raheelleyya_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 130
+    }
+
+    planet = {
+		name = "Raheel-Leyya_A"
+        class = pc_b_super_star
+        size = 15
+        flags = { raheel_leyya_a_star }
+        orbit_distance = 30
+        orbit_angle = { min = 90 max = 270 }
+    }
+
+    planet = {
+        class = pc_b_super_star
+        name = "Raheel-Leyya_B"
+        size = 25 
+        flags = { raheel_leyya_b_star }
+        orbit_distance = 0
+        orbit_angle = 180	
+	}
+
+    change_orbit = 100
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_silah_init = {
+	name = "Silah"
+	class = sc_m_giant
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 valhallan_threshold silah_system primary_relay_system }
+
+	planet = {
+		name = "Silah"
+        class = pc_m_giant_star
+        size = 30
+        flags = { silah_star }
+        orbit_distance = 0
+    }
+
+	planet = {
+		name = "Dersona"
+        class = pc_iron
+        size = 10
+        flags = { dersona_planet }
+        orbit_distance = 125
+    }
+
+	planet = {
+		name = "Jifiel"
+        class = pc_iron
+        size = 13
+        flags = { jifiel_planet }
+        orbit_distance = 125
+    }
+
+	planet = {
+		name = "Garrdon"
+        class = pc_iron
+        size = 7
+        flags = { garrdon_planet }
+        orbit_distance = 125
+    }
+
+	planet = {
+		name = "Uyistra"
+        class = pc_iron
+        size = 32
+        flags = { uyistra_planet }
+        orbit_distance = 125
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "valhallanthreshold_titannebula_primaryrelay" 
+			name = "Sector T2 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_valia_init = {
+	name = "Valia"
+	class = sc_m
+	max_instances = 1
+
+    flags = { terminus_systems sector_t2 valhallan_threshold valia_system }
+
+	planet = {
+		name = "Valia"
+        class = pc_m_star
+        size = 28
+        flags = { valia_star }
+        orbit_distance = 0
+    }
+
+	planet = {
+		name = "Rastas"
+        class = pc_hot_giant
+        size = 37
+        flags = { rastas_planet }
+        orbit_distance = 40
+    }
+
+	planet = {
+		name = "Molienda"
+        class = pc_barren_cold
+        size = 10
+        flags = { molienda_planet }
+        orbit_distance = 120
+    }
+
+	planet = {
+		name = "Hastio"
+        class = pc_frozen
+        size = 16
+        flags = { hastio_planet }
+        orbit_distance = 80
+    }
+
+	planet = {
+		name = "Grano"
+        class = pc_barren
+        size = 8
+        flags = { grano_planet }
+        orbit_distance = 80
+    }
+
+	planet = {
+		name = "Coscas"
+        class = pc_iron
+        size = 6
+        flags = { coscas_planet }
+        orbit_distance = 80
+    }
+
+	planet = {
+		name = "Julios"
+        class = pc_frozen
+        size = 11
+        flags = { julios_planet }
+        orbit_distance = 80
+    }
+}

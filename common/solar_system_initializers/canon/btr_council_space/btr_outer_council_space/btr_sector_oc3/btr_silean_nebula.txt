@@ -1,0 +1,482 @@
+#####################
+### SILEAN NEBULA ###
+#####################
+
+sys_kypladon_init = {
+    name = "Kypladon"
+    class = sc_k
+	max_instances = 1
+
+    flags = { outer_council sector_oc3 silean_nebula kypladon_system primary_relay_system asari_republics_system }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 375
+	}
+
+    planet = {
+	    name = "Kypladon"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 23
+        flags = { kypladon_star }
+    }
+
+    planet = {
+        name = "Hanalei"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 198
+        size = 25
+        flags = { hanalei_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Cyone"
+        class = pc_tropical
+        orbit_distance = 150
+        orbit_angle = 137
+        size = 15
+        has_ring = no
+		modifiers = none
+		flags = { subclass_world cyone_planet }
+		init_effect = {
+			add_deposit = d_exotic_mountain
+			add_modifier = {
+				modifier = atoll_world
+				days = -1
+			}
+		}
+    }
+
+    change_orbit = 75
+
+    planet = {
+        name = "Tropai"
+        class = pc_asteroid
+        orbit_distance = 0
+        orbit_angle = 120
+        size = 2
+        flags = { tropai_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Lochia"
+        class = pc_asteroid
+        orbit_distance = 0
+        orbit_angle = 240
+        size = 2
+        flags = { lochia_planet }
+        has_ring = no
+    }
+	
+    planet = {
+        name = "Nili"
+        class = pc_asteroid
+        orbit_distance = 0
+        orbit_angle = 0
+        size = 2
+        flags = { nili_planet }
+        has_ring = no
+    }	
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Katebolo"
+        class = pc_ice_giant
+        orbit_distance = 75
+        orbit_angle = 68
+        size = 32
+        flags = { katebolo_planet }
+        has_ring = no
+    }	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "sileannebula_athenanebula_primaryrelay" 
+			name = "Sector OC3 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_loropi_init = {
+    name = "Loropi"
+    class = sc_a
+	max_instances = 1
+
+    flags = { outer_council sector_oc3 silean_nebula loropi_system primary_relay_system asari_republics_system }
+
+    init_effect = {
+        save_global_event_target_as = asariThirdFleet
+    }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 490
+	}
+
+    planet = {
+	    name = "Loropi"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 27
+        flags = { loropi_star }
+    }
+
+    planet = {
+        name = "Paphos"
+        class = pc_gas_giant
+        orbit_distance = 250
+        orbit_angle = 21
+        size = 37
+        flags = { paphos_planet }
+        has_ring = yes
+    }
+
+	planet = {
+        name = "Espota Station"
+        class = pc_habitat
+        orbit_distance = 125
+        orbit_angle = 117
+        size = 3
+        has_ring = no
+		modifiers = none
+        flags = {espota_station espota_station_station}
+	}
+
+    planet = {
+        name = "Yasilium"
+        class = pc_iron
+        orbit_distance = 115
+        orbit_angle = 117
+        size = 6
+        flags = { yasilium_planet }
+        has_ring = no
+	}	
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "sileannebula_prodicatoresscar_primaryrelay" 
+			name = "Sector OC3 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_nahuala_init = {
+    name = "Nahuala"
+    class = sc_k
+	max_instances = 1
+
+    flags = { outer_council sector_oc3 silean_nebula nahuala_system asari_republics_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 425
+	}
+
+    planet = {
+		name = "Nahuala"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+        flags = { nahuala_star }
+    }
+
+    planet = {
+        name = "Agessia"
+        class = pc_molten
+        orbit_distance = 75
+        orbit_angle = 49
+        size = 15
+        has_ring = no
+        flags = { agessia_planet }
+    }
+
+    planet = {
+        name = "Hyetiana"
+        class = pc_tundra
+        orbit_distance = 200
+        orbit_angle = 239
+        size = 25
+        has_ring = no
+		modifiers = none
+		entity = "tundra_planet_05_entity"
+        flags = { hyetiana_planet }
+		init_effect = {
+			add_deposit = d_cryogazers_valley			
+		}		
+    }
+
+    change_orbit = 150
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Phoros"
+        class = pc_gas_giant
+        orbit_distance = 50
+        orbit_angle = 297
+        size = 34
+        flags = { phoros_planet }
+        has_ring = yes
+    }
+}
+
+sys_phontes_init = {
+    name = "Phontes"
+    class = sc_g
+	max_instances = 1
+    usage = custom_empire
+
+    flags = { outer_council sector_oc3 silean_nebula phontes_system courts_of_dekuuna_system }
+
+    init_effect = {
+        save_global_event_target_as = courtsFirstFleet
+        generate_btr_home_system_resources = yes
+    }
+
+    planet = {
+	    name = "Phontes"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { phontes_star }
+    }
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 450
+	}
+
+    planet = {
+        name = "Lenuamund"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 26
+        has_ring = no
+		size = 25
+		flags = { lenuamund_planet }
+        init_effect = {
+            create_archaeological_site = btr_precursor_new_report
+        }
+    }
+
+    planet = {
+        name = "Dekuuna"
+        class = pc_highgrav_continental
+        orbit_distance = 125
+        orbit_angle = 256
+        size = 25
+		has_ring = no		
+        starting_planet = yes
+		flags = { dekuuna_planet subclass_world }	
+		entity = "prairie_planet_02_entity"
+        deposit_blockers = none
+        modifiers = none
+		init_effect = {
+            add_modifier = {
+                modifier = prairie_world
+                days = -1
+            }
+            add_modifier = {
+                modifier = btr_high_gravity
+                days = -1
+            }
+            save_global_event_target_as = elcorHomeworld
+			if = {
+				limit = {
+					exists = event_target:elcorHomeworld
+				}
+				log = "Elcor Homeworld Event Target Set"
+			}
+            prevent_anomaly = yes
+
+            check_for_elcor_player = yes
+
+            if = {
+				limit = {
+					any_country = {
+						has_country_flag = courts_of_dekuuna_player
+					}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = courts_of_dekuuna_player
+					}
+					save_global_event_target_as = courts_of_dekuuna
+				}
+                generate_empire_home_planet = yes
+            }
+            else = {
+                generate_courts_of_dekuuna_country = yes
+            }
+            set_capital = yes
+			set_owner = event_target:courts_of_dekuuna
+			create_colony = {
+				owner = event_target:courts_of_dekuuna
+				species = event_target:elcorSpecies
+				ethos = owner
+			}
+            clear_blockers = yes
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/canon/courts_dek_origin"
+            generate_cod_dekuuna_pops = yes
+            event_target:courts_of_dekuuna = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+		}
+
+		moon = {
+			name = "Oltan"
+			class = pc_barren_cold
+			orbit_distance = 20
+			orbit_angle = 300
+			has_ring = no
+			size = 16
+            flags = { oltan_planet }
+		}		
+	}
+
+    planet = {
+        name = "Telluune"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 300
+        has_ring = no
+		size = 25
+		flags = { telluune_planet }
+    }
+
+    change_orbit = 75
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Sangel"
+        class = pc_gas_giant
+        orbit_distance = 50
+        orbit_angle = 111
+        has_ring = no
+		size = 38
+		flags = { sangel_planet }
+    }
+}
+
+sys_teyolia_init = {
+    name = "Teyolia"
+    class = sc_m
+	max_instances = 1
+
+    flags = { outer_council sector_oc3 silean_nebula teyolia_system secondary_relay_system asari_republics_system }
+
+    planet = {
+		name = "Teyolia"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { teyolia_star }
+    }
+
+    planet = {
+        name = "Loxia"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 150
+        size = 7
+        flags = { loxia_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Nevos"
+        class = pc_continental
+        orbit_distance = 125
+        orbit_angle = 222
+        size = 17
+        has_ring = no
+		modifiers = none 
+		flags = { subclass_world nevos_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = temperate_world
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Fara"
+			class = pc_iron
+			orbit_distance = 20
+			size = 6
+			flags = { fara_planet }
+		}
+
+		moon = {
+			name = "Revulla"
+			class = pc_carbon
+			orbit_distance = 5
+			size = 5	
+			flags = { revulla_planet }
+		}	
+    }
+
+    planet = {
+        name = "Quirezia"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 310
+        size = 36
+        flags = { quirezia_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Atebolos"
+        class = pc_barren_cold
+        orbit_distance = 125
+        orbit_angle = 43
+        size = 20
+        flags = { atebolos_planet }
+        has_ring = no
+    }	
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "outer_council_sector_3_secondaryrelay" 
+			name = "Sector OC3 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

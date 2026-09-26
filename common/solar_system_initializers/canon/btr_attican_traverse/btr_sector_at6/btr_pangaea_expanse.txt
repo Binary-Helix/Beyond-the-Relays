@@ -1,0 +1,85 @@
+#######################
+### PANGAEA EXPANSE ###
+#######################
+
+sys_refuge_init = {
+    name = "Refuge"
+    class = sc_binary_g_t
+	max_instances = 1
+
+	flags = { attican_traverse sector_at6 pangaea_expanse refuge_system }
+	
+	planet = {
+		name = "Refuge A"
+        class = pc_t_star
+        size = 15
+        flags = { refuge_a_star }
+        orbit_distance = 20
+    }
+
+    planet = {
+		name = "Refuge B"
+        class = pc_g_star
+        size = 30
+        flags = { refuge_b_star }
+        orbit_distance = 25
+        orbit_angle = 180
+    }
+	
+    planet = {
+        name = "Agetoton"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 142
+        has_ring = no
+		size = 15
+		flags = {subclass_world agetoton_planet}
+        init_effect = {
+            add_anomaly = {
+                category = BTR_AGETON_DOWNED_SAT
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+    	name = "Ilos"
+    	class = pc_relic
+    	orbit_distance = 150
+    	orbit_angle = 258
+    	has_ring = no
+    	size = 21
+		flags = {subclass_world ilos_planet}
+        init_effect = {
+            add_anomaly = {
+                category = BTR_ILOS_LAST_AND_LOST
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+	}	
+
+    planet = {
+        name = "Zafe"
+        class = pc_ice_giant
+        orbit_distance = 150
+        orbit_angle = 191
+        has_ring = no
+		size = 29
+		flags = {subclass_world zafe_planet}
+        init_effect = {
+            add_anomaly = {
+                category = BTR_ZAFE_BELTS
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "pangaeaexpanse_hawkingeta_primaryrelay" 
+			name = "Sector AT6 - Primary Relay 5"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

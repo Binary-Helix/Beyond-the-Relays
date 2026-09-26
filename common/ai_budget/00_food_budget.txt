@@ -285,7 +285,7 @@ food_expenditure_colonies_expand = {
 			is_virtual_empire = yes
 		}
 		modifier = {
-			mult = 2
+			factor = 2
 			country_uses_bio_ships = yes
 		}
 	}
@@ -329,7 +329,7 @@ food_expenditure_colonies_expand = {
 			is_virtual_empire = yes
 		}
 		modifier = {
-			mult = 2
+			factor = 2
 			country_uses_bio_ships = yes
 		}
 	}
@@ -479,7 +479,7 @@ food_expenditure_ship_upgrades = {
 		country_uses_bio_ships = yes
 		is_at_war = no
 		any_owned_fleet = {
-			controller = { is_same_value = root }
+			controller = { is_same_empire = root }
 			can_be_upgraded = yes
 		}
 	}

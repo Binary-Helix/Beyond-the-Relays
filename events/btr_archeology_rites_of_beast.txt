@@ -15,24 +15,25 @@ ship_event = {
     id = btr_archeology_rites_of_beast.1
     title = "btr_archeology_rites_of_beast.name"
     desc = "btr_archeology_rites_of_beast.desc"
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE_ME [ART]
     location = from
     show_sound = event_wind_ruins
     fire_only_once = yes
-    #   is_triggered_only = yes
+    is_triggered_only = yes
 
     trigger = {
         host_has_dlc = "Ancient Relics Story Pack"
-        FROM = {
+        from = {
             has_anomaly = no
-            is_colony = yes
-            planet = {
-                is_capital = yes
+            NOR = { 
+                exists = archaeological_site 
+                has_planet_flag = suppress_archaeological_sites 
             }
-            habitable_planet = yes
-            owner = {
-                has_origin = aralakh_kah_origin
-            }
+            OR = {
+                has_star_flag = outer_council
+                has_star_flag = skyllian_verge
+                has_star_flag = systems_alliance_system
+            }            
         }
     }
 
@@ -50,7 +51,7 @@ fleet_event = {
     id = btr_archeology_rites_of_beast.2
     title = "btr_archeology_rites_of_beast.1.name"
     desc = btr_archeology_rites_of_beast.1.desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE_ME [ART]
     show_sound = event_wind_ruins
     location = from
 
@@ -68,7 +69,7 @@ fleet_event = {
     id = btr_archeology_rites_of_beast.3
     title = "btr_archeology_rites_of_beast.2.name"
     desc = btr_archeology_rites_of_beast.2.desc
-    picture = #TODO
+    picture = GFX_evt_black_hole # TODO: REPLACE_ME [ART]
     show_sound = event_whispering
     location = from
 

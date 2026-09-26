@@ -27,13 +27,13 @@ r_btr_ancient_generator = {
     active_effect = {
         add_modifier = {
             modifier = "ancient_generator"
-            days = 150
+            months = 5
         }
         #custom_tooltip = relic_triumph_cooldown
         hidden_effect = {
             add_modifier = {
                 modifier = "relic_activation_cooldown"
-                days = 150
+                months = 5
             }
         }
     }
@@ -76,7 +76,7 @@ r_btr_precursor_shadow = {
     active_effect = {
         add_modifier = {
             modifier = "precursor_shadow"
-            days = 150
+            months = 5
         }
         #custom_tooltip = relic_triumph_cooldown
         hidden_effect = {
@@ -125,7 +125,7 @@ r_btr_prothean_beacon_all = {
     active_effect = {
         add_modifier = {
             modifier = "prothean_beacon_all"
-            days = 150
+            months = 5
         }
         #custom_tooltip = relic_triumph_cooldown
         hidden_effect = {

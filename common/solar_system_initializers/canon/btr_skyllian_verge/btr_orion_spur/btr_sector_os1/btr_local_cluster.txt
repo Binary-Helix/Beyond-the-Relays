@@ -1,0 +1,690 @@
+#####################
+### LOCAL CLUSTER ###
+#####################
+
+sys_alpha_centauri_system = {	
+	name = "Alpha Centauri"
+	class = sc_trinary_1
+	max_instances = 1
+
+    flags = { orion_spur sector_os1 local_cluster alpha_centauri_system }
+
+	planet = {
+		name = "Alpha Centauri A"
+		class = pc_g_star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		flags = { alpha_centauri_a_star }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Rigil"
+		class = pc_barren
+		size = 9
+		flags = { rigil_planet }
+		orbit_distance = 75
+	}
+	
+	planet = {
+		name = "Manswell"
+		class = pc_savannah
+		size = 16
+		flags = { manswell_planet }
+		orbit_distance = 75
+	}
+
+	planet = {
+		name = "Lilith"
+		class = pc_frozen
+		size = 16
+		flags = { lilith_planet }
+		orbit_distance = 75
+	}		
+	
+	planet = {
+		name = "Kentaurus"
+		class = pc_gas_giant
+		orbit_angle = 330
+		orbit_distance = 75
+		size = 35
+
+		moon = {
+			name = "Kentaurus a"
+			class = pc_iron
+			orbit_distance = 8
+			size = 4
+			flags = {kentaurus_a_planet kentaurus_planet}
+		}	
+	}		
+	
+	planet = {
+		name = "Alpha Centauri B"
+		class = pc_k_star
+        orbit_distance = 400
+		orbit_angle = 40
+		size = 27
+		has_ring = no
+
+		planet = {
+			name = "Proxima Centauri"
+			class = pc_m_star
+			orbit_distance = 50
+			orbit_angle = 130
+			size = 20
+			flags = {proxima_centauri_star alpha_centauri_b_star}
+			has_ring = no
+		}
+	}	
+}
+
+sys_sirius_system = {
+	name = "Sirius"
+	class = sc_binary_a_d
+	max_instances = 1
+
+    flags = { orion_spur sector_os1 local_cluster sirius_system systems_alliance_system }
+
+	planet = {
+		name = "Sirius A"
+		class = pc_a_star
+		orbit_distance = 30
+		orbit_angle = 1
+		size = 35
+		flags = { sirius_a_star }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Sirius B"
+		class = pc_d_star
+		orbit_distance = 0
+		orbit_angle = 180
+		size = 25
+		flags = { sirius_b_star }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Demeter"
+		class = pc_savannah
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 150
+		size = 18
+		flags = { demeter_planet }
+	}
+	
+	planet = {
+		name = "Persephone"
+		class = pc_barren
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 150
+		size = 12
+		flags = { persephone_planet }
+	}
+	
+	planet = {
+		name = "Dionysus"
+		class = pc_iron
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 150
+		size = 10
+		flags = { dionysus_planet }
+	}
+}
+
+sys_sol_init = {
+	name = "Sol"
+	class = sc_g
+	max_instances = 1
+	usage = custom_empire
+
+    flags = { orion_spur sector_os1 local_cluster sol_system secondary_relay_system systems_alliance_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 225
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 495
+	}
+
+	planet = {
+		name = "Sol"
+		class = pc_g_star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		flags = { sol_star }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Mercury"
+		class = pc_iron
+		orbit_distance = 50
+		orbit_angle = 15
+		size = 8
+		flags = { mercury_planet }
+		has_ring = no
+		entity = "iron_planet_mercury_entity"	
+	}
+	
+	planet = {
+		name = "Venus"
+		class = pc_hothouse
+		orbit_distance = 50
+		orbit_angle = 125
+		size = 16
+		flags = { venus_planet }
+		has_ring = no
+		entity = "hothouse_planet_venus_entity"
+	}
+	
+	planet = {
+		name = "Earth"
+		class = pc_continental
+		orbit_distance = 50
+		orbit_angle = 120
+		size = 18
+		has_ring = no
+		starting_planet = yes
+		entity = "continental_planet_earth_entity"
+		flags = { earth_planet subclass_world }
+		deposit_blockers = none
+        modifiers = none
+		init_effect = {
+			add_modifier = {
+				modifier = temperate_world
+				days = -1
+			}
+			save_global_event_target_as = humanHomeworld
+			if = {
+				limit = {
+					exists = event_target:humanHomeworld
+				}
+				log = "Human Homeworld Event Target Set"
+			}
+            prevent_anomaly = yes
+
+            check_for_human_player = yes
+
+            if = {
+				limit = {
+					any_country = {
+						has_country_flag = systems_alliance_player
+					}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = systems_alliance_player
+					}
+					save_global_event_target_as = systems_alliance
+				}
+				generate_empire_home_planet = yes
+			}
+			else = {
+				generate_systems_alliance_country = yes
+			}
+            set_capital = yes
+			set_owner = event_target:systems_alliance
+			create_colony = {
+				owner = event_target:systems_alliance
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			clear_blockers = yes
+			generate_btr_start_deposits_and_blockers = yes
+			btr_generate_canon_planetary_features = yes
+			inline_script = "game_start/canon/systems_all_origin"
+			generate_sys_earth_pops = yes
+			event_target:systems_alliance = {
+				create_starting_leaders = yes
+				country_event = { id = game_start.9 }
+			}
+		}
+
+		moon = {
+			name = "Luna"
+			class = pc_barren_cold
+			size = 4
+			orbit_distance = 8
+			orbit_angle = 40
+			has_ring = no
+			flags = { luna_planet }
+			entity = "cold_barren_planet_luna_entity"
+		}
+	}
+	
+	planet = {
+		name = "Mars"
+		class = pc_mephitic
+		orbit_distance = 50
+		orbit_angle = 60
+		size = 13
+		has_ring = no
+		flags = { mars_planet subclass_world }
+		entity = "barren_planet_mars_entity"	
+		init_effect = {
+			add_deposit = d_eezo_trace
+            create_archaeological_site = btr_precursor_mars_triangle
+		}
+	}
+	
+	planet = {
+		name = "Ceres"
+		class = pc_frozen
+		orbit_distance = 25
+		orbit_angle = -210
+		size = 1
+		flags = { ceres_planet }
+		has_ring = no
+		entity = "frozen_ceres_entity"
+	}
+	
+	planet = {
+		name = "Pallas"
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = -95
+		size = 1
+		flags = { pallas_planet }
+		has_ring = no	
+	}
+	
+	planet = {
+		name = "Juno"
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = 285
+		size = 5
+		flags = { juno_planet }
+		has_ring = no	
+	}
+	
+	planet = {
+		name = "Vesta"
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 1
+		flags = { vesta_planet }
+		has_ring = no	
+	}
+	
+	planet = {
+		name = "Jupiter"
+		class = pc_gas_giant
+		orbit_distance = 25
+		orbit_angle = -160
+		size = 36
+		has_ring = no
+		flags = { jupiter_planet }
+		entity = "gas_giant_jupiter_entity"
+		change_orbit = 6
+
+		moon = {
+			name = "Io"
+			class = pc_molten
+			size = 4
+			flags = { io_planet }
+			orbit_distance = 20
+			orbit_angle = 110
+			has_ring = no
+			entity = "molten_io_entity"
+		}
+
+		moon = {
+			name = "Europa"
+			class = pc_frozen
+			size = 3
+			flags = { europa_planet }
+			orbit_distance = 5
+			orbit_angle = 10
+			has_ring = no
+			entity = "frozen_europa_entity"
+		}
+
+		moon = {
+			name = "Ganymede"
+			class = pc_frozen
+			size = 6
+			flags = { ganymede_planet }
+			orbit_distance = 5
+			orbit_angle = 80
+			has_ring = no
+			entity = "frozen_ganymede_entity"
+		}
+
+		moon = {
+			name = "Callisto"
+			class = pc_frozen
+			size = 12
+			flags = { callisto_planet }
+			orbit_distance = 5
+			orbit_angle = -155
+			has_ring = no
+			entity = "frozen_callisto_entity"
+		}
+	}
+	
+	planet = {
+		name = "Saturn"
+		class = pc_gas_giant
+		orbit_distance = 50
+		orbit_angle = 170
+		size = 34
+		has_ring = no
+		flags = { saturn_planet }
+		entity = "gas_giant_saturn_entity"
+	
+		moon = {
+			name = "Titan"
+			class = pc_frozen
+			size = 6
+			flags = { titan_planet }
+			orbit_distance = 20
+			orbit_angle = 320
+			has_ring = no
+			entity = "methane_titan_entity"	
+		}
+
+		moon = {
+			name = "Enceladus"
+			class = pc_frozen
+			size = 2
+			flags = { enceladus_planet }
+			orbit_distance = 5
+			orbit_angle = 320
+			has_ring = no
+			entity = "frozen_enceladus_entity"
+		}
+	}
+	
+	planet = {
+		name = "Uranus"
+		class = pc_ice_giant
+		orbit_distance = 50
+		orbit_angle = 125
+		size = 28
+		has_ring = no
+		flags = { uranus_planet }
+		entity = "ice_giant_uranus_entity"
+
+		moon = {
+			name = "Miranda"
+			class = pc_frozen
+			size = 1
+			flags = { miranda_planet }
+			orbit_distance = 20
+			orbit_angle = 115
+			has_ring = no
+			entity = "frozen_miranda_entity"
+		}
+
+		moon = {
+			name = "Ariel"
+			class = pc_frozen
+			size = 1
+			flags = { ariel_planet }
+			orbit_distance = 5
+			orbit_angle = 115
+			has_ring = no
+			entity = "frozen_ariel_entity"
+		}
+
+		moon = {
+			name = "Umbriel"
+			class = pc_frozen
+			size = 1
+			flags = { umbriel_planet }
+			orbit_distance = 5
+			orbit_angle = 115
+			has_ring = no
+			entity = "frozen_umbriel_entity"
+		}
+
+		moon = {
+			name = "Titania"
+			class = pc_frozen
+			size = 2
+			flags = { titania_planet }
+			orbit_distance = 5
+			orbit_angle = 115
+			has_ring = no
+			entity = "frozen_titania_entity"
+		}
+
+		moon = {
+			name = "Oberon"
+			class = pc_frozen
+			size = 2
+			flags = { oberon_planet }
+			orbit_distance = 5
+			orbit_angle = 115
+			has_ring = no
+			entity = "frozen_oberon_entity"
+		}
+	}
+	
+	planet = {
+		name = "Neptune"
+		class = pc_ice_giant
+		orbit_distance = 50
+		orbit_angle = -195
+		size = 27
+		has_ring = no
+		flags = { neptune_planet }
+		entity = "ice_giant_neptune_entity"
+
+		moon = {
+			name = "Triton"
+			class = pc_frozen
+			size = 3
+			flags = { triton_planet }
+			orbit_distance = 20
+			orbit_angle = 115
+			has_ring = no
+			entity = "frozen_triton_entity"
+		}
+	}
+
+	planet = {
+		name = "Pluto"
+		class = pc_frozen
+		modifiers = none
+		orbit_distance = 25
+		orbit_angle = -210
+		size = 3
+		flags = { pluto_planet }
+		has_ring = no
+		entity = "frozen_pluto_entity"
+	}
+
+	init_effect = {
+		spawn_megastructure = { 
+			type = "alliance_space_sector_1_secondaryrelay" 
+			name = "Sector OS1 - Secondary Relay 3"
+			orbit_angle = 0 
+			orbit_distance = 500
+		} 		
+	}
+
+	planet = {
+		name = "Makemake"
+		class = pc_frozen
+		orbit_distance = 0
+		orbit_angle = -95
+		size = 2
+		flags = { makemake_planet }
+		has_ring = no
+		entity = "frozen_makemake_entity"
+	}
+	
+	planet = {
+		name = "Haumea"
+		class = pc_frozen
+		orbit_distance = 0
+		orbit_angle = 285
+		size = 3
+		flags = { haumea_planet }
+		has_ring = no
+		entity = "frozen_haumea_entity"
+	}
+
+	planet = {
+		name = "Varuna"
+		class = pc_frozen
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		flags = { varuna_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Eris"
+		class = pc_frozen
+		modifiers = none
+		orbit_distance = 0
+		orbit_angle = -210
+		size = 3
+		flags = { eris_planet }
+		has_ring = no
+		entity = "frozen_eris_entity"
+	}
+}
+
+sys_ursaemajoris_init = {
+    name = "Ursae Majoris"
+    class = sc_g
+	max_instances = 1
+
+    flags = { orion_spur sector_os1 local_cluster ursae_majoris_system systems_alliance_system }
+
+		
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 175
+	}	
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 425
+	}
+
+    planet = {
+    name = "Ursae Majoris"	
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { ursae_majoris_star }
+    }
+	
+	planet = {
+		name = "Intarabus"
+		class = pc_molten
+        orbit_distance = 125
+		size = 6
+		flags = { intarabus_planet }
+	}
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Sirona"
+		class = pc_alpine
+        orbit_distance = 75
+		size = 20
+		flags = { sirona_planet }
+		moon = {
+			name = "Sirona a"
+			class = pc_iron
+			orbit_distance = 20
+			size = 4
+			flags = { sirona_a_planet }
+		}	
+	}		
+	
+	planet = {
+		name = "Lenus"
+		class = pc_gas_giant
+        orbit_distance = 125
+		size = 34
+
+		moon = {
+			name = "Ancamna"
+			class = pc_iron
+			orbit_angle = 20
+			size = 8	
+			flags = {ancamna_planet lenus_planet}
+		}	
+
+		moon = {
+			name = "Inciona"
+			class = pc_frozen
+			orbit_angle = 5
+			size = 6
+			flags = { inciona_planet }
+		}	
+
+		moon = {
+			name = "Xulsigiae"
+			class = pc_iron
+			orbit_angle = 5
+			size = 4
+			flags = { xulsigiae_planet }
+		}		
+	}
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		name = "Iovantucarus"
+		class = pc_ice_giant
+        orbit_distance = 75
+		has_ring = yes
+		size = 37
+
+		moon = {
+			name = "Iovantucarus a"
+			class = pc_carbon
+			orbit_distance = 20
+			size = 6
+			flags = {iovantucarus_a_planet iovantucarus_planet}
+		}	
+
+		moon = {
+			name = "Iovantucarus b"
+			class = pc_frozen
+			orbit_distance = 5
+			size = 5
+			flags = { iovantucarus_b_planet }
+		}
+		
+		moon = {
+			name = "Iovantucarus c"
+			class = pc_barren
+			orbit_distance = 5
+			size = 3
+			flags = { iovantucarus_c_planet }
+		}	
+	}	
+}

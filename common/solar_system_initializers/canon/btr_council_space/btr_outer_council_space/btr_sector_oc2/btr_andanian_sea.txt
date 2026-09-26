@@ -1,0 +1,409 @@
+####################
+### ANDANIAN SEA ###
+####################
+
+sys_aspoda_init = {
+	name = "Aspoda"
+	class = sc_g
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 andanian_sea aspoda_system }
+
+	planet = {
+		name = "Aspoda"	
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { aspoda_star }
+    }
+
+	planet = {
+		name = "Lamampisis"
+		class = pc_hothouse
+        orbit_distance = 150
+        size = 16
+        flags = { lamampisis_planet }
+	}
+	
+	planet = {
+		name = "Enankalis"
+		class = pc_molten
+        orbit_distance = 150
+        size = 11
+        flags = { enankalis_planet }
+	}
+
+	planet = {
+		name = "Macrosia"
+		class = pc_barren_cold
+        orbit_distance = 150
+        size = 14
+        flags = { macrosia_planet }
+	}
+}
+
+sys_fotia_init = {
+	name = "Fotia"
+	class = sc_binary_a_d
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 andanian_sea fotia_system asari_republics_system }
+
+	planet = {
+		name = "Fotia A"	
+        class = pc_a_star
+        orbit_distance = 10
+        size = 35
+        flags = { fotia_a_star }
+    }
+
+	planet = {
+		name = "Fotia B"	
+        class = pc_d_star
+        orbit_distance = 20
+        size = 30
+        flags = { fotia_b_star }
+    }
+
+	planet = {
+		name = "Oramona"
+		class = pc_gas_giant
+        orbit_distance = 150
+        size = 33
+        flags = { oramona_planet }
+		has_ring = yes
+	}
+	
+	planet = {
+		name = "Gallikimos"
+		class = pc_gas_giant
+        orbit_distance = 150
+        size = 11
+
+		moon = {
+			name = "Malkos"
+			class = pc_swamp
+			orbit_distance = 20
+			size = 11
+			modifiers = none
+			flags = {subclass_world malkos_planet gallikimos_planet}
+			init_effect = {
+				add_modifier = {
+					modifier = lake_world
+					days = -1
+				}
+			}
+		}
+	}
+
+	planet = {
+		name = "Kispois"
+		class = pc_methane
+        orbit_distance = 150
+        size = 18
+        flags = { kispois_planet }
+		entity = "methane_desert_planet_05_entity"
+	}
+}
+
+sys_mitrios_init = {
+	name = "Mitrios"
+	class = sc_f
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 andanian_sea mitrios_system secondary_relay_system asari_republics_system }
+
+	planet = {
+		name = "Mitrios"	
+        class = pc_f_star
+        orbit_distance = 0
+        size = 20
+        flags = { mitrios_star }
+    }
+
+	planet = {
+		name = "Echthronos"
+		class = pc_hothouse
+        orbit_distance = 150
+        size = 12
+        flags = { echthronos_planet }
+		has_ring = no	
+	}
+	
+	planet = {
+		name = "Charias"
+		class = pc_savannah
+        orbit_distance = 150
+        size = 21
+		has_ring = yes
+		modifiers = none
+        flags = { charias_planet }
+	}
+
+	planet = {
+		name = "Trintayllo"
+		class = pc_gas_giant
+        orbit_distance = 150
+        size = 36
+        flags = { trintayllo_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "outer_council_sector_2_secondaryrelay" 
+			name = "Sector OC2 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_myrtil_init = {
+	name = "Myrtil"
+	class = sc_a_super
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 andanian_sea myrtil_system primary_relay_system }
+
+    init_effect = {
+        save_global_event_target_as = asariFourthFleet
+    }
+
+	planet = {
+		name = "Myrtil"	
+        class = pc_a_super_star
+        orbit_distance = 0
+        size = 20
+        flags = { myrtil_star }
+    }
+
+	planet = {
+		name = "Apogema"
+		class = pc_iron
+        orbit_distance = 50
+        size = 9
+        flags = { apogema_planet }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Ysperatis"
+		class = pc_savannah
+        orbit_distance = 45
+        size = 21
+		has_ring = no
+		flags = {subclass_world ysperatis_planet}
+		entity = "medit_planet_08_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = medit_world
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "Sarla"
+		class = pc_iron
+        orbit_distance = 45
+        size = 13
+		flags = {subclass_world sarla_planet}
+
+		moon = {
+			name = "Amkzon"
+			class = pc_ammonia
+			orbit_distance = 20
+			size = 7
+			flags = { amkzon_planet }
+			entity = "ammonia_arctic_planet_03_entity"
+			init_effect = {
+				add_modifier = {
+					modifier = glacial_world
+					days = -1
+				}
+			}
+		}
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "andaniansea_vesuviusnebula_primaryrelay" 
+			name = "Sector OC2 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_statheta_init = {
+	name = "Statheta"
+	class = sc_o
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 andanian_sea statheta_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 200
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 360
+	}
+
+	planet = {
+		name = "Statheta"	
+        class = pc_o_star
+        orbit_distance = 0
+        size = 20
+        flags = { statheta_star }
+    }
+
+	planet = {
+		name = "Mnimendis"
+		class = pc_molten
+        orbit_distance = 80
+        size = 9
+        flags = { mnimendis_planet }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Oneiroia"
+		class = pc_hot_giant
+        orbit_distance = 80
+        size = 36
+        flags = { oneiroia_planet }
+		has_ring = no
+	}
+
+    change_orbit = 40
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Charionos"
+		class = pc_methane
+        orbit_distance = 40
+        size = 18
+		flags = {subclass_world charionos_planet}
+		entity = "methane_tropical_planet_04_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = atoll_world
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "Panypsils"
+		class = pc_iron
+        orbit_distance = 80
+        size = 9
+        flags = { panypsils_planet }
+		has_ring = no
+	}
+
+    change_orbit = 40
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		name = "Aloulodi"
+		class = pc_barren_cold
+        orbit_distance = 40
+        size = 7
+        flags = { aloulodi_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Pysa"
+		class = pc_methane
+        orbit_distance = 80
+        size = 18
+		has_ring = yes
+		flags = {subclass_world pysa_planet}
+		entity = "methane_ocean_planet_02_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = hotocean_world
+				days = -1
+			}
+		}
+	}
+}
+
+sys_vrastir_init = {
+	name = "Vrastir"
+	class = sc_k
+	max_instances = 1
+
+    flags = { outer_council sector_oc2 andanian_sea vrastir_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 475
+	}
+
+	planet = {
+		name = "Vrastir"	
+        class = pc_k_star
+        orbit_distance = 0
+        size = 20
+        flags = { vrastir_star }
+    }
+
+	planet = {
+		name = "Mesytila"
+		class = pc_barren
+        orbit_distance = 125
+        size = 11
+        flags = { mesytila_planet }
+	}
+
+	planet = {
+		name = "Calka"
+		class = pc_iron
+        orbit_distance = 125
+        size = 9
+        flags = { calka_planet }
+	}
+	
+	planet = {
+		name = "Ainiota"
+		class = pc_ice_giant
+        orbit_distance = 125
+        size = 14
+        flags = { ainiota_planet }
+	}
+
+    change_orbit = 100
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Evimeria"
+		class = pc_frozen
+        orbit_distance = 25
+        size = 8
+        flags = { evimeria_planet }
+	}
+}

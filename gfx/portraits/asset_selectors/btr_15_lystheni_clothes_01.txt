@@ -1,3 +1,9 @@
+# TODO: has_job is not a valid trigger in asset_selectors, so the job-specific overrides
+#       below were commented out and replaced with is_pop_category checks.
+#       Jobs that were originally attempted (restore if job-level selection becomes possible):
+#         - soldier, patrol_drone, warrior_drone  (armour; excluded from worker clothes)
+#         - enforcer, telepath, duelist            (armour; excluded from specialist clothes)
+
 # This is a template which multiple species can use. 
 
 lystheni_clothes_01 = {
@@ -48,9 +54,9 @@ lystheni_clothes_01 = {
 				}
 				NOR = {
 					is_pop_category = pre_sapients
-					has_job = soldier
-					has_job = patrol_drone
-					has_job = warrior_drone
+					# has_job = soldier
+					# has_job = patrol_drone
+					# has_job = warrior_drone
 				}
 			}
 			list = {
@@ -73,9 +79,9 @@ lystheni_clothes_01 = {
 				}
 				NOR = {
 					is_pop_category = pre_sapients
-					has_job = enforcer
-					has_job = telepath
-					has_job = duelist
+					# has_job = enforcer
+					# has_job = telepath
+					# has_job = duelist
 				}
 			}
 			list = {
@@ -100,12 +106,15 @@ lystheni_clothes_01 = {
 		random = {
 			trigger = {
 				OR = {
-					has_job = soldier
-					has_job = patrol_drone
-					has_job = warrior_drone
-					has_job = enforcer
-					has_job = telepath
-					has_job = duelist
+					# has_job = soldier
+					# has_job = patrol_drone
+					# has_job = warrior_drone
+					# has_job = enforcer
+					# has_job = telepath
+					# has_job = duelist
+					# replaced with the following
+					is_pop_category = specialist
+					is_pop_category = complex_drone
 				}
 			}
 			list = {

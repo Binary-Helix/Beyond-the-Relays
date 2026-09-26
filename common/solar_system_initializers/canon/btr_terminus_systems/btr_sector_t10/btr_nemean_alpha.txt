@@ -1,0 +1,321 @@
+####################
+### NEMEAN ALPHA ###
+####################
+
+sys_cheng_init = {
+	name = "Cheng"
+	class = sc_m_hyper
+	max_instances = 1
+
+    flags = { terminus_systems sector_t10 nemean_alpha cheng_system primary_relay_system planet_state }
+
+	planet = {
+		name = "Cheng"
+		class = pc_m_hyper_star
+		size = 35
+		flags = { cheng_star }
+	}
+
+	planet = {
+		name = "Jenera"
+		class = pc_dextro_savannah
+        orbit_distance = 250
+		size = 17
+		entity = "aquifer_planet_03_entity"
+        deposit_blockers = none
+        modifiers = none
+		flags = { subclass_world jenera_planet }
+		init_effect = {
+            save_global_event_target_as = jeneraHomeworld
+            if = {
+                limit = {
+                    exists = event_target:jeneraHomeworld
+                }
+                log = "Jenera Corporation Event Target Set"
+            }
+            prevent_anomaly = yes
+
+            generate_jenera_corporation_country = yes
+
+            set_capital = yes
+			set_owner = event_target:jenera_corporation
+			create_colony = {
+				owner = event_target:jenera_corporation
+				species = event_target:batarianSpecies
+				ethos = owner
+			}
+
+            generate_jenera_pops = yes
+
+            add_modifier = {
+				modifier = aquifer_world
+				days = -1
+			}
+
+            add_deposit = d_eezo_trace
+        }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "nemeanalpha_mouthoffandrar_primaryrelay" 
+			name = "Sector T10 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_drake_init = {
+	name = "Drake"
+	class = sc_m
+	max_instances = 1
+
+    flags = { terminus_systems sector_t10 nemean_alpha drake_system }
+	
+	planet = {
+		name = "Drake"
+		class = pc_m_star
+		size = 30
+		flags = { drake_star }
+	}
+	
+	planet = {
+		name = "Santiago"
+		class = pc_barren
+        orbit_distance = 150
+		size = 20
+
+		moon = {
+			name = "Santiago a"
+			class = pc_molten
+			orbit_distance = 20
+			size = 6
+			flags = {santiago_a_planet santiago_planet}
+		}
+	}
+
+	planet = {
+		name = "Cadiz"
+		class = pc_frozen
+        orbit_distance = 150
+		size = 25
+		flags = { cadiz_planet }
+	}
+
+	planet = {
+		name = "Domingo"
+		class = pc_ice_giant
+        orbit_distance = 150
+		size = 34
+		flags = { domingo_planet }
+		has_ring = yes
+	}
+}
+
+sys_fal_init = {
+	name = "Fal"
+	class = sc_m_hyper
+	max_instances = 1
+
+    flags = { terminus_systems sector_t10 nemean_alpha fal_system secondary_relay_system planet_state }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 450
+	}
+	
+	planet = {
+		name = "Fal"
+		class = pc_m_hyper_star
+		size = 30
+		flags = { fal_star }
+	}
+
+	planet = {
+		name = "Dinest"
+		class = pc_barren
+        orbit_distance = 100
+		size = 6
+		flags = { dinest_planet }
+	}
+
+	planet = {
+		name = "Siress"
+		class = pc_molten
+        orbit_distance = 100
+		size = 12
+
+		moon = {
+			name = "Siress a"
+			class = pc_barren
+			orbit_distance = 20
+			size = 4
+			flags = {siress_a_planet siress_planet}
+		}	
+	}
+
+	planet = {
+		name = "Yalson"
+		class = pc_hothouse_station
+        orbit_distance = 100
+		size = 15
+        deposit_blockers = none
+        modifiers = none
+        flags = { yalson_planet }
+        # init_effect = {
+        #     save_global_event_target_as = yalsonHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:yalsonHomeworld
+        #         }
+        #         log = "Fal III Manufactory Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_fal_iii_manufactory_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:fal_iii_manufactory
+		# 	create_colony = {
+		# 		owner = event_target:fal_iii_manufactory
+		# 		species = event_target:salarianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_yalson_pops = yes
+        #
+        #     add_deposit = d_eezo_trace
+        # }
+	}
+	
+	planet = {
+		name = "Tore"
+		class = pc_ice_giant
+        orbit_distance = 100
+		size = 28
+		flags = { tore_planet }
+	}
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Urjon"
+		class = pc_gas_giant
+        orbit_distance = 50
+		size = 32
+		flags = { urjon_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_10_secondaryrelay" 
+			name = "Sector T10 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}		
+
+sys_olonnais_init = {
+	name = "Olonnais"
+	class = sc_f
+	max_instances = 1
+
+    flags = { terminus_systems sector_t10 nemean_alpha olonnais_system primary_relay_system planet_state }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 375
+	}	
+	
+	planet = {
+		name = "Olonnais"
+		class = pc_f_star
+		size = 30
+		flags = { olonnais_star }
+	}
+	
+    planet = {
+        name = "Tortuga"
+        class = pc_tundra
+        orbit_distance = 250
+        orbit_angle = 223
+        has_ring = no
+		size = 16
+		flags = { subclass_world tortuga_planet }
+        deposit_blockers = none
+        modifiers = none
+		entity = "basalt_planet_06_entity"
+		# init_effect = {
+        #     save_global_event_target_as = tortugaHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:tortugaHomeworld
+        #         }
+        #         log = "Free Port of Tortuga Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_free_port_of_tortuga_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:free_port_of_tortuga
+		# 	create_colony = {
+		# 		owner = event_target:free_port_of_tortuga
+		# 		species = event_target:batarianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_tortuga_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = basalt_world
+		# 		days = -1
+		# 	}
+		# }
+
+        moon = {
+			name = "Batsch"
+            class = pc_iron
+            orbit_distance = 20
+            orbit_angle = 116
+            has_ring = no
+			size = 7
+			flags = { batsch_planet }
+        }
+    }
+
+    change_orbit = 125
+
+    planet = {
+		count = { min = 2 max = 4 }
+		class = pc_eezo_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		name = "Hayti"
+		class = pc_ice_giant
+        orbit_distance = 125
+		size = 28
+		flags = { hayti_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "nemeanalpha_oshbikacliff_primaryrelay" 
+			name = "Sector T10 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

@@ -106,65 +106,65 @@ minerals_expenditure_stations_high = {
 		weight = 0.05
 	}
 }
-#
-# minerals_expenditure_armies = {
-# 	resource = minerals
-# 	type = expenditure
-# 	category = armies
-#
-# 	potential = {
-# 		always = yes
-# 	}
-#
-# 	weight = {
-# 		weight = 0.1
-#
-# 		modifier = {
-# 			factor = 2
-# 			OR = {
-# 				any_neighbor_country = {
-# 					has_ascension_perk = ap_become_the_crisis
-# 				}
-# 				any_country = {
-# 					is_crisis_faction = yes
-# 				}
-# 			}
-# 		}
-#
-# 	}
-# }
-#
-# minerals_expenditure_armies_threatened = {
-# 	resource = minerals
-# 	type = expenditure
-# 	category = armies
-#
-# 	potential = {
-# 		highest_threat > 20
-# 	}
-#
-# 	weight = {
-# 		weight = 0.10
-# 	}
-# }
-#
-# minerals_expenditure_stations_expand = {
-# 	resource = minerals
-# 	type = expenditure
-# 	category = stations
-#
-# 	potential = {
-# 		exploitable_planets >= 1
-# 	}
-#
-# 	weight = {
-# 		weight = 0.05
-# 	}
-#
-# 	desired_min = {
-# 		base = 100
-# 	}
-# }
+
+minerals_expenditure_armies = {
+	resource = minerals
+	type = expenditure
+	category = armies
+
+	potential = {
+		country_uses_bio_ships = no
+	}
+
+	weight = {
+		weight = 0.1
+
+		modifier = {
+			factor = 2
+			OR = {
+				any_neighbor_country = {
+					has_ascension_perk = ap_become_the_crisis
+				}
+				any_country = {
+					is_crisis_faction = yes
+				}
+			}
+		}
+
+	}
+}
+
+minerals_expenditure_armies_threatened = {
+	resource = minerals
+	type = expenditure
+	category = armies
+
+	potential = {
+		highest_threat > 20
+	}
+
+	weight = {
+		weight = 0.10
+	}
+}
+
+minerals_expenditure_stations_expand = {
+	resource = minerals
+	type = expenditure
+	category = stations
+
+	potential = {
+		exploitable_planets >= 1
+	}
+
+	weight = {
+		weight = 0.05
+	}
+
+	desired_min = {
+		base = 100
+	}
+}
 
 minerals_expenditure_colonies_lithoid_expand = {
 	resource = minerals
@@ -332,59 +332,59 @@ minerals_upkeep_planets = {
 	}
 }
 
-minerals_expenditure_decisions = {
-	resource = minerals
-	type = expenditure
-	category = decisions
+# minerals_expenditure_decisions = {
+# 	resource = minerals
+# 	type = expenditure
+# 	category = decisions
 
-	potential = {
-		OR = {
-			AND = {
-				has_technology = tech_housing_2
-				any_owned_planet = {
-					is_planet_class = pc_relic
-					num_uncleared_blockers < 1
-				}
-			}
-			AND = {
-				has_ascension_perk = ap_arcology_project
-				any_owned_planet = {
-					is_artificial = no
-					NOR = {
-						is_planet_class = pc_city
-						is_planet_class = pc_relic
-						has_modifier = resort_colony
-						has_modifier = penal_colony
-						has_modifier = slave_colony
-						has_modifier = pm_wenkwort_custodian
-					}
-					num_uncleared_blockers < 1
-					free_district_slots < 1
-					OR = {
-						pop_amount >= 7000
-						is_capital = yes
-					}
-				}
-			}
-		}
-		# only consider these kinds of decisions when "wealthy"
-		has_resource = {
-			type = minerals
-			amount > 25000
-		}
-	}
+# 	potential = {
+# 		OR = {
+# 			AND = {
+# 				has_technology = tech_housing_2
+# 				any_owned_planet = {
+# 					is_planet_class = pc_relic
+# 					num_uncleared_blockers < 1
+# 				}
+# 			}
+# 			AND = {
+# 				has_ascension_perk = ap_arcology_project
+# 				any_owned_planet = {
+# 					is_artificial = no
+# 					NOR = {
+# 						is_planet_class = pc_city
+# 						is_planet_class = pc_relic
+# 						has_modifier = resort_colony
+# 						has_modifier = penal_colony
+# 						has_modifier = slave_colony
+# 						has_modifier = pm_wenkwort_custodian
+# 					}
+# 					num_uncleared_blockers < 1
+# 					free_district_slots < 1
+# 					OR = {
+# 						pop_amount >= 7000
+# 						is_capital = yes
+# 					}
+# 				}
+# 			}
+# 		}
+# 		# only consider these kinds of decisions when "wealthy"
+# 		has_resource = {
+# 			type = minerals
+# 			amount > 25000
+# 		}
+# 	}
 
-	weight = {
-		weight = 0.20
-	}
+# 	weight = {
+# 		weight = 0.20
+# 	}
 
-	desired_min = {
-		base = 20000
-	}
-	desired_max = {
-		base = 20000
-	}
-}
+# 	desired_min = {
+# 		base = 20000
+# 	}
+# 	desired_max = {
+# 		base = 20000
+# 	}
+# }
 
 minerals_expenditure_deposit_blockers = {
 	resource = minerals
@@ -396,6 +396,7 @@ minerals_expenditure_deposit_blockers = {
 			OR = {
 				has_deposit = d_ruined_arcology
 				has_deposit = d_resource_consolidation_1
+				has_deposit = d_machine_ongoing_construction
 				AND = {
 					OR = {
 						has_deposit = d_buried_lithoids
@@ -415,6 +416,7 @@ minerals_expenditure_deposit_blockers = {
 			# if we have any planet that is currently completely blocked
 			any_owned_planet = {
 				OR = {
+					has_deposit = d_machine_ongoing_construction
 					has_deposit = d_ruined_arcology
 					AND = {
 						OR = {

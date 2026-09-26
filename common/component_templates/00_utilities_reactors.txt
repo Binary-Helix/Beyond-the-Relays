@@ -1,1 +1,1992 @@
-# Vanilla Override
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes.
+
+#############
+# REACTORS #
+#############
+
+########################
+# Fission Reactors
+########################
+
+utility_component_template = {
+	key = "CORVETTE_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @corvette_reactor_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			uranium = @corvette_reactor_cost_1
+		}
+		upkeep = {
+			uranium = 0.01
+			lithium = 0.03
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_corvette_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "CORVETTE_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @destroyer_reactor_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			uranium = @destroyer_reactor_cost_1
+		}
+		upkeep = {
+			uranium = 0.02
+			lithium = 0.06
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_destroyer_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "DESTROYER_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @cruiser_reactor_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			uranium = @cruiser_reactor_cost_1
+		}
+		upkeep = {
+			uranium = 0.04
+			lithium = 0.12
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_cruiser_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "CRUISER_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @battleship_reactor_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			uranium = @battleship_reactor_cost_1
+		}
+		upkeep = {
+			uranium = 0.08
+			lithium = 0.24
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_battleship_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "BATTLESHIP_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @titan_reactor_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			uranium = @titan_reactor_cost_1
+		}
+		upkeep = {
+			uranium = 0.16
+			lithium = 0.3
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_titan_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "TITAN_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_FISSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @juggernaut_reactor_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			uranium = @juggernaut_reactor_cost_1
+		}
+		upkeep = {
+			uranium = 0.56
+			lithium = 1
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_juggernaut_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "JUGGERNAUT_FUSION_REACTOR"
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_FISSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @platform_reactor_power_1
+	resources = {
+		category = ship_components
+		cost = {
+			uranium = @platform_reactor_cost_1
+		}
+		upkeep = {
+			uranium = 0.02
+			lithium = 0.06
+		}
+	}
+
+	prerequisites = { "tech_fission_power" }
+	potential = {
+		ship_uses_platform_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	component_set = "power_core"
+	upgrades_to = "PLATFORM_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_FISSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_1"
+	icon_frame = 1
+	power = @starbase_reactor_power_1
+
+	prerequisites = { "tech_fission_power" }
+
+	component_set = "power_core"
+	potential = {
+		ship_uses_starbase_components = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "STARBASE_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+########################
+# Fusion Reactors
+########################
+
+utility_component_template = {
+	key = "CORVETTE_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @corvette_reactor_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			hydrogen = @corvette_reactor_cost_2
+			lithium = @corvette_reactor_cost_2
+		}
+		upkeep = {
+			hydrogen = 0.013
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_corvette_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "CORVETTE_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @destroyer_reactor_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			hydrogen = @destroyer_reactor_cost_2
+			lithium = @destroyer_reactor_cost_2
+		}
+		upkeep = {
+			hydrogen = 0.026
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_destroyer_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "DESTROYER_COLD_FUSION_REACTOR"
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @cruiser_reactor_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			hydrogen = @cruiser_reactor_cost_2
+			lithium = @cruiser_reactor_cost_2
+		}
+		upkeep = {
+			hydrogen = 0.052
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_cruiser_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "CRUISER_COLD_FUSION_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @battleship_reactor_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			hydrogen = @battleship_reactor_cost_2
+			lithium = @battleship_reactor_cost_2
+		}
+		upkeep = {
+			hydrogen = 0.104
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_battleship_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "BATTLESHIP_COLD_FUSION_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @titan_reactor_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			hydrogen = @titan_reactor_cost_2
+			lithium = @titan_reactor_cost_2
+		}
+		upkeep = {
+			hydrogen = 0.208
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_titan_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "TITAN_COLD_FUSION_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @juggernaut_reactor_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			hydrogen = @juggernaut_reactor_cost_2
+			lithium = @juggernaut_reactor_cost_2
+		}
+		upkeep = {
+			hydrogen = 0.728
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_juggernaut_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "JUGGERNAUT_COLD_FUSION_REACTOR"
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @platform_reactor_power_2
+	resources = {
+		category = ship_components
+		cost = {
+			hydrogen = @platform_reactor_cost_2
+			lithium = @platform_reactor_cost_2
+		}
+		upkeep = {
+			hydrogen = 0.026
+		}
+	}
+
+	prerequisites = { "tech_fusion_power" }
+	potential = {
+		ship_uses_platform_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	component_set = "power_core"
+	upgrades_to = "PLATFORM_COLD_FUSION_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_2"
+	icon_frame = 1
+	power = @starbase_reactor_power_2
+
+	prerequisites = { "tech_fusion_power" }
+	component_set = "power_core"
+
+	potential = {
+		ship_uses_starbase_components = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "STARBASE_COLD_FUSION_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+########################
+# Cold Fusion Reactors
+########################
+
+utility_component_template = {
+	key = "CORVETTE_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @corvette_reactor_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			helium_3 = @corvette_reactor_cost_3
+			beryllium = @corvette_reactor_cost_3
+		}
+		upkeep = {
+			helium_3 = 0.017
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_corvette_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "CORVETTE_ANTIMATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @destroyer_reactor_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			helium_3 = @destroyer_reactor_cost_3
+			beryllium = @destroyer_reactor_cost_3
+		}
+		upkeep = {
+			helium_3 = 0.034
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_destroyer_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "DESTROYER_ANTIMATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @cruiser_reactor_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			helium_3 = @cruiser_reactor_cost_3
+			beryllium = @cruiser_reactor_cost_3
+		}
+		upkeep = {
+			helium_3 = 0.068
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_cruiser_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "CRUISER_ANTIMATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @battleship_reactor_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			helium_3 = @battleship_reactor_cost_3
+			beryllium = @battleship_reactor_cost_3
+		}
+		upkeep = {
+			helium_3 = 0.135
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_battleship_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "BATTLESHIP_ANTIMATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @titan_reactor_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			helium_3 = @titan_reactor_cost_3
+			beryllium = @titan_reactor_cost_3
+		}
+		upkeep = {
+			helium_3 = 0.270
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_titan_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "TITAN_ANTIMATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_COLD_FUSION_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @juggernaut_reactor_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			helium_3 = @juggernaut_reactor_cost_3
+			beryllium = @juggernaut_reactor_cost_3
+		}
+		upkeep = {
+			helium_3 = 0.946
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_juggernaut_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "JUGGERNAUT_ANTIMATTER_REACTOR"
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_COLD_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @platform_reactor_power_3
+	resources = {
+		category = ship_components
+		cost = {
+			helium_3 = @platform_reactor_cost_3
+			beryllium = @platform_reactor_cost_3
+		}
+		upkeep = {
+			helium_3 = 0.026
+		}
+	}
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_platform_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "PLATFORM_ANTIMATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_COLD_FUSION_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_3"
+	icon_frame = 1
+	power = @starbase_reactor_power_3
+
+	prerequisites = { "tech_cold_fusion_power" }
+	component_set = "power_core"
+
+	potential = {
+		ship_uses_starbase_components = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "STARBASE_ANTIMATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+########################
+# Antimatter Reactors
+########################
+
+utility_component_template = {
+	key = "CORVETTE_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @corvette_reactor_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			antimatter_fuel = @corvette_reactor_cost_4
+		}
+		upkeep = {
+			antimatter_fuel = 0.022
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_corvette_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "CORVETTE_ZERO_POINT_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @destroyer_reactor_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			antimatter_fuel = @destroyer_reactor_cost_4
+		}
+		upkeep = {
+			antimatter_fuel = 0.044
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_destroyer_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "DESTROYER_ZERO_POINT_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @cruiser_reactor_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			antimatter_fuel = @cruiser_reactor_cost_4
+		}
+		upkeep = {
+			antimatter_fuel = 0.088
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_cruiser_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "CRUISER_ZERO_POINT_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @battleship_reactor_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			antimatter_fuel = @battleship_reactor_cost_4
+		}
+		upkeep = {
+			antimatter_fuel = 0.176
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_battleship_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "BATTLESHIP_ZERO_POINT_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @titan_reactor_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			antimatter_fuel = @titan_reactor_cost_4
+		}
+		upkeep = {
+			antimatter_fuel = 0.351
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_titan_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "TITAN_ZERO_POINT_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_ANTIMATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @juggernaut_reactor_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			antimatter_fuel = @juggernaut_reactor_cost_4
+		}
+		upkeep = {
+			antimatter_fuel = 1.230
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_juggernaut_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "JUGGERNAUT_ZERO_POINT_REACTOR"
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_ANTIMATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @platform_reactor_power_4
+	resources = {
+		category = ship_components
+		cost = {
+			antimatter_fuel = @platform_reactor_cost_4
+		}
+		upkeep = {
+			antimatter_fuel = 0.044
+		}
+	}
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_platform_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "PLATFORM_ZERO_POINT_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_ANTIMATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_4"
+	icon_frame = 1
+	power = @starbase_reactor_power_4
+
+	prerequisites = { "tech_antimatter_power" }
+	component_set = "power_core"
+
+	potential = {
+		ship_uses_starbase_components = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "STARBASE_ZERO_POINT_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 4
+	}
+}
+
+########################
+# Zero-Point Reactors
+########################
+
+utility_component_template = {
+	key = "CORVETTE_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @corvette_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @corvette_reactor_cost_5
+		}
+		upkeep = {
+			eezo = 0.028
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_corvette_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "CORVETTE_DARK_MATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @destroyer_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @destroyer_reactor_cost_5
+		}
+		upkeep = {
+			eezo = 0.057
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_destroyer_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "DESTROYER_DARK_MATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @cruiser_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @cruiser_reactor_cost_5
+		}
+		upkeep = {
+			eezo = 0.114
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_cruiser_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "CRUISER_DARK_MATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @battleship_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @battleship_reactor_cost_5
+		}
+		upkeep = {
+			eezo = 0.229
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_battleship_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "BATTLESHIP_DARK_MATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @titan_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @titan_reactor_cost_5
+		}
+		upkeep = {
+			eezo = 0.456
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_titan_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "TITAN_DARK_MATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @colossus_power
+
+	component_set = "power_core"
+	potential = {
+		ship_uses_colossus_components = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+	upgrades_to = "COLOSSUS_DARK_MATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @juggernaut_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @juggernaut_reactor_cost_5
+		}
+		upkeep = {
+			eezo = 1.599
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_juggernaut_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "JUGGERNAUT_DARK_MATTER_REACTOR"
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_ZERO_POINT_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @platform_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @platform_reactor_cost_5
+		}
+		upkeep = {
+			eezo = 0.057
+		}
+	}
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_platform_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "PLATFORM_DARK_MATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "ION_CANNON_ZERO_POINT_REACTOR"
+	size = small
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @cruiser_reactor_power_5
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @cruiser_reactor_cost_5
+		}
+	}
+
+	component_set = "power_core"
+	potential = {
+		ship_uses_ion_cannon_components = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+	upgrades_to = "ION_CANNON_DARK_MATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_ZERO_POINT_REACTOR"
+	size = large
+	icon = "GFX_ship_part_reactor_5"
+	icon_frame = 1
+	power = @starbase_reactor_power_5
+
+	prerequisites = { "tech_zero_point_power" }
+	component_set = "power_core"
+
+	potential = {
+		ship_uses_starbase_components = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+	upgrades_to = "STARBASE_DARK_MATTER_REACTOR"
+
+
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+####################
+# Engimatic Reactors
+####################
+
+utility_component_template = {
+	key = "CORVETTE_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @corvette_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @corvette_reactor_cost_6
+			#sr_dark_matter = 1
+		}
+		upkeep = {
+			energy = 0.37
+			alloys = 0.037
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_corvette_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "DESTROYER_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @destroyer_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @destroyer_reactor_cost_6
+			#sr_dark_matter = 2
+		}
+		upkeep = {
+			energy = 0.74
+			eezo = 0.074
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_destroyer_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "CRUISER_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @cruiser_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @cruiser_reactor_cost_6
+			#sr_dark_matter = 4
+		}
+		upkeep = {
+			energy = 1.48
+			eezo = 0.148
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_cruiser_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "BATTLESHIP_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @battleship_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @battleship_reactor_cost_6
+			#sr_dark_matter = 8
+		}
+		upkeep = {
+			energy = 2.98
+			eezo = 0.298
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_battleship_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "TITAN_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @titan_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @titan_reactor_cost_6
+			#sr_dark_matter = 16
+		}
+		upkeep = {
+			energy = 5.93
+			eezo = 0.593
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_titan_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "COLOSSUS_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @colossus_power
+	resources = {
+		category = ship_components
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_colossus_components = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	ai_weight = {
+		weight = 6
+	}
+}
+
+utility_component_template = {
+	key = "JUGGERNAUT_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @juggernaut_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @juggernaut_reactor_cost_6
+			#sr_dark_matter = 32
+		}
+		upkeep = {
+			energy = 20.79
+			eezo = 2.079
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_juggernaut_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "PLATFORM_DARK_MATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @platform_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @platform_reactor_cost_6
+			#sr_dark_matter = 4
+		}
+		upkeep = {
+			energy = 0.74
+			eezo = 0.074
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_platform_reactors = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "ION_CANNON_DARK_MATTER_REACTOR"
+	size = small
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @cruiser_reactor_power_6
+	resources = {
+		category = ship_components
+		cost = {
+			eezo = @cruiser_reactor_cost_6
+			#sr_dark_matter = 8
+		}
+	}
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+	potential = {
+		ship_uses_ion_cannon_components = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	ai_weight = {
+		weight = 6
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+utility_component_template = {
+	key = "STARBASE_DARK_MATTER_REACTOR"
+	size = large
+	icon = "GFX_ship_part_dark_matter_power_core"
+	icon_frame = 1
+	power = @starbase_reactor_power_6
+
+	prerequisites = { "tech_dark_matter_power_core" }
+	component_set = "power_core"
+
+	potential = {
+		ship_uses_starbase_components = yes
+		from = {
+			country_uses_bio_ships = no
+		}
+	}
+
+	show_tech_unlock_if = {
+		country_uses_bio_ships = no
+	}
+
+	ai_weight = {
+		weight = 6
+	}
+}

@@ -2,25 +2,25 @@
 on_game_start = {
 	events = {
 		timeline.0 # Initial Timeline Event. Gives for example the starting origin
-		#game_start.1 # Spawn special/hidden countries
-		#game_start.2 # removes random planet modifiers from homeworlds and spawns terraforming candidates
-		#game_start.3 # Hidden Game Start Event that resets tutorial for advisor trigger purposes
-		#game_start.5 # Countdown to Nomad Fleet
-		#game_start.31 # Create wormhole pairs
-		#distar.290 # Spawn Sealed System
-		#distar.252 # Phaseshifting Planet
-		#distar.295 # Connect Ratling Systems to one another
-		#distar.8000 # Randomize L-Cluster outcome
-		#colony_mod.100 #titanic life blocker setup
-		#game_start.50 # Set up Nebula system art
-		#galactic_features.420 # Spawn VLUUR
-		#clones.1 # Clone Army Origin, fix species before Leaders are generated
-		#central.1 # Central Crystal event
-		#ancrel.12050 # Surveillance Supercomputer system spawn
-		#astral_planes.1 # Spawn Astral Rifts
-		#grand_archive.3000 # Spawn Cutholoids
-		#situation.1999 # Randomize Kaleidoscope spawning
-		#cstorms.900 # Queue storm spawning
+		# game_start.1 # Spawn special/hidden countries
+		# game_start.2 # removes random planet modifiers from homeworlds and spawns terraforming candidates
+		# game_start.3 # Hidden Game Start Event that resets tutorial for advisor trigger purposes
+		# game_start.5 # Countdown to Nomad Fleet
+		# game_start.31 # Create wormhole pairs
+		# distar.290 # Spawn Sealed System
+		# distar.252 # Phaseshifting Planet
+		# distar.295 # Connect Ratling Systems to one another
+		# distar.8000 # Randomize L-Cluster outcome
+		# colony_mod.100 #titanic life blocker setup
+		# game_start.50 # Set up Nebula system art
+		# galactic_features.420 # Spawn VLUUR
+		# clones.1 # Clone Army Origin, fix species before Leaders are generated
+		# central.1 # Central Crystal event
+		# ancrel.12050 # Surveillance Supercomputer system spawn
+		# astral_planes.1 # Spawn Astral Rifts
+		# grand_archive.3000 # Spawn Cutholoids
+		# situation.1999 # Randomize Kaleidoscope spawning
+		# cstorms.900 # Queue storm spawning
 	}
 	random_events = {
 		16 = 0
@@ -66,6 +66,10 @@ on_game_start_country = {
 		unplugged.199		# Unplugged Origin Setup
 		wilderness.100		# Wilderness Origin setup
 		game_start.75		# Force reset slaves
+		shroud.200			# Superstitious Beliefs' Setup
+		shroud.1000			# Start Twisted Experimenters Situation
+		shroud.5000			# Secret Societies communication effect
+		infernals.10		# Infernal Misc
 	}
 }
 
@@ -98,7 +102,7 @@ on_monthly_pulse = {
 		graygoo.510
 		distar.10955
 		action.116				# enable resources for galactic market
-	#	paragon_2.1145			# Aptitude - Champions of the Empire Tradition effect
+		#	paragon_2.1145			# Aptitude - Champions of the Empire Tradition effect
 		pirate.48
 		pirate.4
 		crime.1000
@@ -116,7 +120,7 @@ on_monthly_pulse = {
 		cstorms.1000			# Cosmic Storms unity per system/planet
 		cstorms.1050			# Particle Storms unity per ships
 		cstorms.1100			# Cosmic Storms monthly affects
-        grand_archive.2104      # Voidworms Inside Borders - Monthly Clean Up
+		grand_archive.2104      # Voidworms Inside Borders - Monthly Clean Up
 		grand_archive.2106      # Voidworms Inside Borders - Monthly Check
 		grand_archive.3104      # Cutholoids Inside Borders - Monthly Clean Up
 		grand_archive.3106      # Cutholoids Inside Borders - Monthly Check
@@ -186,6 +190,8 @@ on_monthly_pulse_pre_ftl_observation = {
 		100 = strange_worlds.3000 # Suspicious Prophet
 		100 = strange_worlds.3035 # Crate Expectation
 		100 = strange_worlds.3065 # Ladders to Heaven
+		# Volcanic Worlds
+		50 = infernals.3050 # Kindled Myths
 	}
 }
 
@@ -216,6 +222,7 @@ on_monthly_pulse_pre_ftl_observation_broken_shackles = {
 on_yearly_pulse = {
 	events = {
 		leviathans.10	# Opinion increase with Enclaves
+		cara.4101 		# Caravan neighbor gatekeeper
 		crisis.204
 		crisis.205
 		crisis.208
@@ -281,7 +288,7 @@ on_decade_pulse = {
 	events = {
 		galactic_features.362 # Space fauna respawn
 		utopia.50		# Science Nexus (Think Tank) events
-#		syndaw.10		# machine leader malfunction chance
+		#		syndaw.10		# machine leader malfunction chance
 		syndaw.400		# machine uprising + warning events
 		galcom.14		# check if anyone's missing an invite to the Galactic Community
 		drones.100		# Ancient Mining Drone Expansion Fleet setup (unclaimed systems)
@@ -349,7 +356,6 @@ on_monthly_pulse_country = {
 		leader.300			# Favor Maker Councilor Trait
 		paragon.605			# Spawn Gestalt Nodes if any are missing
 		cyber.1570			# Remove Clear Thought Clinic modifiers
-		machine_age.2105	# Monthly Pulse to ensure that no spiritualist cybercreed pops have fallen between the cracks
 		crisis.7540			# Cosmogenesis - Empty lathe alert
 		cybernetics.5025	# Virtual Machine pop creation
 		cybernetics.5030	# Virtual Machine pop destruction
@@ -361,8 +367,21 @@ on_monthly_pulse_country = {
 		bio.5108			# Assign Purity Authority trait variable
 		bio.5118			# Assign EvoPred trait variable
 		biocrisis.205 		# Behemoth Growth Factor decrease
+		infernals.30		# World Forger civics terraforming
 		biocrisis.285 		# Behemoth
 		bio.1075			# EvoPred Faction Tracker
+		shroud.50			# Monthly attunement modifiers handling: Eater of Worlds
+		shroud.51			# Monthly attunement modifiers handling: Composer of Strands
+		shroud.52			# Monthly attunement modifiers handling: Instrument of Desire
+		shroud.53			# Monthly attunement modifiers handling: Cradle of Souls
+		shroud.54			# Monthly attunement modifiers handling: Whisperers in the Void
+		shroud.1505			# Ring Emitters monthly check if auras reemission is needed
+		shroud.10305 		# Patron Objective Counter: po_reach_excellent_relations
+		shroud.11000		# Greater Patrons roll
+		shroud.11230		# The Reckoning integrity update
+		infernals.2000		# Galactic Hyperthermia crisis
+		infernals.2020		# Hyperthermia crisis - Conduits do monthly damage
+		shroud.13000		# Zro deficit, chance of shroud incursion
 	}
 	random_events = {
 		75 = 0
@@ -374,7 +393,6 @@ on_monthly_pulse_country = {
 on_yearly_pulse_country = {
 	events = {
 		timeline.2				# Timeline event for the start of the year
-		cara.4101 				# Caravan neighbor gatekeeper
 		anomaly.6793 			# Ghost Ship follow-up event for psionic ascension
 		specialist.500 			# Scholarium Planetary Sensor
 		specialist.1100 		# Prospectorium Resource Discovery
@@ -390,10 +408,15 @@ on_yearly_pulse_country = {
 		fallen_empires_tasks.10 # Fallen Empire task Failure - timer ran out (previously: MTTH 12 months)
 		grand_archive.1100 		# Primal Calling origin - Revealing the Voidworm Nests
 		timeline.33				# Milestone Game End
-		bio.700 # Update Shared Genetics modifiers
-		biocrisis.115 #Make sure Behemoths are angry
-		unplugged.4000 # Gatekeeper event for early Pop Factions
-		biocrisis.190 	# Behemoth Victory
+		bio.700 				# Update Shared Genetics modifiers
+		biocrisis.115 			#Make sure Behemoths are angry
+		unplugged.4000 			# Gatekeeper event for early Pop Factions
+		biocrisis.190 			# Behemoth Victory
+		shroud.90				# AI bonus attunement
+		shroud.6211				# Yearly check for mindwarden AIs to upgrade Ancient Ward
+		shroud.8020				# Endbringers refresh paranoia modifier
+		shroud.12000			# Shroud leaders roll
+		infernals.2010			# Galactic Hyperthermia crisis
 	}
 }
 
@@ -692,6 +715,9 @@ on_custom_diplomacy = {
 		enclave.200 # Mercenary Enclave
 		enclave.300 # Salvager Enclave
 		enclave.400 # Shroudwalker Enclave
+		shroud_forged.400 # Shroud-Forged - Animator of Clay
+		shroud.4200 # Mindwarden Enclave
+		shroud.6010 # Exiled (Mindwarden origin)
 		astral_planes.3050 # Formless during The Seal
 		astral_planes.3100 # Formless if The Seal Situation is a success
 		astral_planes.3110 # Formless reward as allies
@@ -712,7 +738,6 @@ on_first_contact = {
 		pirate.155 #Thalassocracy pirates
 		first_contact_critters.1000 #Establish comms for most cases
 		fircon.3515 #The Chosen (you breached the wormhole)
-
 	}
 }
 
@@ -775,6 +800,7 @@ on_planet_attackers_win = {
 		graygoo.150		# Gray: "[Planet] Turns to Dust"
 		# Leader effects
 		paragon_2.1015	# (Hidden) Generals' Trait effects
+		shroud.3064		# (Hidden) Generals' Shroud-Warped Trait effects
 		# Event chains, etc.
 		paragon_2.2130	# (Hidden) 'Tzrynn Tithe' Trait effects
 		colony.114		# "Abandoned Terraforming Equipment": planet liberated from mutants
@@ -787,6 +813,7 @@ on_planet_attackers_win = {
 		ancrel.2068		# C.A.R.E Interactive Interface: destroy Mega-Warforms
 		ancrel.4064		# Sentinels: "[Planet] Liberated"
 		biocrisis.85 	# Behemoth takes over a planet
+		shroud.6240		# Mindwardens - Homeworld reclaimed
 	}
 }
 
@@ -831,6 +858,7 @@ on_planet_defenders_lose = {
 		colony.3051
 		preftl.1025		# Pre-FTL Robot Uprising Won
 		fircon.6036		# I'm a (non) believer - pre-FTLs wiped out by subterraneans
+		shroud.6230		# Mindwardens - Homeworld lost
 	}
 }
 
@@ -1012,6 +1040,9 @@ on_entering_system_fleet = {
 		biocrisis.90 			# Kaijus play with each other
 		biocrisis.270 			# Raging Behemoths crosses into foreign border
 		biocrisis.151			# Voidspawn System and Colony Effects
+		shroud.6100				# Mindwardens enter the buffer system
+		shroud.6220				# Mindwardens visit the buffer system again
+		shroud.6105				# Mindwardens enter an Exiled system
 	}
 }
 
@@ -1064,6 +1095,7 @@ on_survey_planet = {
 		origin.6160		# Fear of the Dark: "The Hunters"
 		uplift.6000		# "Upliftable/Pre-Sapient Species Found"
 		paragon_2.2000	# Prospector trait effects
+		grand_archive.2240	# deposit_increase_on_survey_chance modifier
 		awareness.115	# Uncloaked science ship surveys pre-ftl planet
 		fircon.5020		# "Habinte Unified Worlds Encountered" (Solarpunk)
 		origin.5000		# Broken Shackles: Encountering Main Pop Homeworld
@@ -1071,13 +1103,13 @@ on_survey_planet = {
 		origin.5009		# Broken Shackles: 2nd Encounter w/Other Pop Homeworld
 		astral_planes.6005
 		grand_archive.1015	# Chance to spawn Titanic Life if Primal Calling
-		grand_archive.2240	# Treasure Hoarder Council position effect
 		grand_archive.3010	# Cutholoid surveyed
 		grand_archive.8051	# Shattered world surveyed
 		grand_archive.8101	# Black Needle Base surveyed
 		grand_archive.8201	# Smeegibb shelter surveyed
 		timeline.12         # Milestone First Arc Site
 		unplugged.198 # Machine legacy planet surveyed as unplugged origin
+		extreme_frontiers.1430  # New Bratulla surveyed
 	}
 
 	random_events = {
@@ -1158,6 +1190,7 @@ on_system_survey_ship = {
 # Scope = Planet
 on_colonization_started = {
 	events = {
+		action.2105		# Clear any purge flags on the planet.
 		advisor.17
 		progress.3
 		progress.7
@@ -1207,7 +1240,9 @@ on_colonized = {
 		paragon.403			# Give boost if "Superior Colonies" Agenda
 		awareness.135		# Planet colonised in pre-ftl system
 		paragon.100 		# Potentially abort Beholder chain
-
+		shroud_forged.205	# Shroud Forged event chain update
+		shroud_forged.220	# Shroud Forged first colonization event
+		shroud_forged.304	# Shroud Forged Zroni planet colonization events
 		astral_planes.3080 	# Formless Haven reward
 		cyber.7000			# Create pre-sapient species for Genesis Guides
 		cyber.7001			# Create preserves for pre-sapients already there for Genesis Guides
@@ -1217,7 +1252,10 @@ on_colonized = {
 		focus.10			# Empire Focus
 		timeline.3          # Milestone First Colony
 		timeline.22         # Milestone First Holy World Colonized
+		astral_planes.2150	# Riftworld Rift Affinity modifier added to planet if there's an astral rift
 		bio.1010			# Evolutionary Predators modifier added to planet
+		shroud.10005 		# Patron Objective Counters: po_establish_colony / po_colonize_gaia_world / po_colonize_tomb_world
+		shroud.6544			# Mindwarden colonization of Exiled planet (can happen if planet was previously bombed to death)
 	}
 }
 
@@ -1228,7 +1266,11 @@ on_colony_destroyed = {
 		colony.2002
 		origin.3002 #ToL Tree death
 		colony.9895 #Remove 'Sprawling Slums' blockers
+		astral_planes.2155	# Riftworld Rift Affinity modifier Cleanup
 		cyber.7015	#Genesis Guide remove deposit on colony destroyed
+		shroud.6704
+		shroud.6707 # (Hidden) Mindwarden Origin : abort Sanctum of the Lost situation
+		infernals.32 # Stops Volcanic terraforming (scripted)
 	}
 }
 
@@ -1261,6 +1303,7 @@ on_entering_battle = {
 		astral_planes.3120	# Formless leader fights Extradimensionals
 		crisis.8065			# Try to fight the Synth Queen before you're ready
 		crisis.8150			# Attacking Synth Queen Convoy, nearby fleets join fight
+		shroud.4285			# Mindwarden Commander leaves after being attacked.
 		biocrisis.375		# Behemoth enters Frenzy
 		biocrisis.380		# Behemoth inspires friendly bioships
 	}
@@ -1273,7 +1316,7 @@ on_entering_battle = {
 on_ship_destroyed_victim = {
 	events = {
 		paragon.3903
-	#	syndaw.30
+		#	syndaw.30
 		nomad.95
 		leviathans.3002
 		leviathans.3101
@@ -1304,6 +1347,7 @@ on_ship_destroyed_victim = {
 		enclave.23		# destroy Mercenary Enclave
 		enclave.370		# destroy Salvager Enclave
 		enclave.430		# destroy Shroudwalker Enclave
+		shroud.4400		# destroy Mindwarden Enclave
 		origin.3260		# destroy Offspring ships
 		paragon.3070
 		paragon.285
@@ -1312,7 +1356,7 @@ on_ship_destroyed_victim = {
 		grand_archive.3025	# Spawn special debris for Cutholoids
 		grand_archive.10065	# Restorative Enzymes unique mutation healing
 		grand_archive.10090 # Catalytic Bladder unique mutation
-		crisis.7525		# Cosmogenesis Needle Destroyed
+		crisis.7525			# Cosmogenesis Needle Destroyed
 		grand_archive.1160	# Frenzied Voidworms starbase destroyed
 		grand_archive.10100	# Fissile Cores Unique Mutation
 		grand_archive.2095	# Voidworm Nest destruction
@@ -1355,6 +1399,11 @@ on_ship_destroyed_perp = {
 		bio.2026 # Starlit Citadel - Twilight of Fear
 		biocrisis.195 # behemoths kills a ship made of meat
 		biocrisis.505 # Behemoth Fury Crisis Objective: Capture or Destroy Space Fauna or Bioships
+		shroud.10505 # Patron Objective Counters: po_hunt_space_fauna / po_destroy_ship
+		shroud.10355 # Patron Objective Counter: po_destroy_pirates
+		shroud.10706 # Patron Objective Counter: po_build_defense_platform
+		shroud.11220 # The Reckoning ship destroy stat
+		shroud.12150 # Apostle of the End aura intensity reward on ship destroyed in EotC aura
 	}
 	random_events = {
 	}
@@ -1494,7 +1543,7 @@ on_fleet_destroyed_perp = {
 		pirate.24
 		akx.9318
 		akx.10030
-#		factions.330
+		#		factions.330
 		factions.10
 		crisis.2472
 		distar.5009
@@ -1533,6 +1582,11 @@ on_fleet_destroyed_perp = {
 		unplugged.100 # Unplugged civil war ships destroyed
 		unplugged.2390 # Unplugged machine legacy homeworld intercept fleet destroyed
 		unplugged.2400 # Unplugged machine legacy boss destroyed
+		shroud.11135 # Betrayed Patron defeated
+		extreme_frontiers.1533 # Georadiation Terraforming - GeoCorp's drones destroyed
+		shroud.8700  # The Reckoning is destroyed
+		infernals.2150 # Red Giant miner guards destroyed
+		infernals.2120 # Red Giant miner station destroyed
 	}
 	random_events = {
 		300 = 0
@@ -1558,6 +1612,7 @@ on_space_battle_won = {
 		origin.4020 #Payback debt collectors chain | won battle against the debt collectors
 		origin.4022 #Payback debt collectors chain | fallback - another empire destroys the debt collectors
 		focus.610
+		shroud.12100 # Disciple of the Eater reward
 	}
 }
 
@@ -1568,6 +1623,7 @@ on_space_battle_won = {
 # This fires whenever a fleet is finished with a combat through any means (emergency ftl, destroyed, disabled)
 on_space_battle_lost = {
 	events = {
+		shroud.11240	# Lost to the Reckoning
 	}
 }
 
@@ -1758,6 +1814,7 @@ on_building_starbase_outpost = {
 		origin.3505 # Slingshot to the Stars
 		origin.5010 # Broken Shackles - First Station
 		awareness.120 # Outpost, mining or research station built in pre-ftl system
+		shroud.10920 # Patron calling: po_construct_outpost
 	}
 }
 
@@ -1893,6 +1950,7 @@ on_uplift_completion = {
 		timeline.55 # Timeline Uplifted Species
 		bio.5105		# Assign Purity Authority trait variable
 		bio.5115		# Assign EvoPred trait variable
+		shroud.10475    # Patron Objective Counter: po_uplift_species
 	}
 }
 
@@ -1934,9 +1992,9 @@ on_terraforming_complete = {
 		focus.130			# Empire Focus
 		timeline.42			# Timeline First Terraform
 		strange_worlds.1055 # Junk Moon Event 2
+		shroud.10010 		# Patron Objective Counter: po_terraform_planet
 		wilderness.5 		# Wilderness Colonizing Planets
-		terra.200			# Hive World District assignment
-		terra.210			# Machine World District assignment
+		infernals.2015		# Hyperthermia crisis objective
 	}
 }
 
@@ -1951,12 +2009,19 @@ on_planet_class_changed = {
 		timeline.26         # Milestone First City Planet
 		timeline.57 # Timeline Origin Event Machine World Created
 		timeline.58 # Timeline Origin Event Ecumenopolis Restored
+		shroud.6250 # Mindwardens - Homeworld destroyed
+		infernals.2001		# Hyperthermia Conduits terraform a star
+		infernals.3225		# Removing the Blazing Scourge blockers var in case of a terraform
+		infernals.3215		# 10-year counter for fire cult demand
+		infernals.3230		# Burning Heaven + Volcanic Empire achievements
+		infernals.2585		# readd cosmic dawn deposit if it was purged by terraform
 	}
 }
 
 # Planet has taken damage from orbital bombardment - Damage is applied daily
 # This = Planet
 # From = Bombarder (country)
+# local_devastation = variable of daily devastation
 on_planet_bombarded = {
 	events = {
 		crisis.200
@@ -1982,7 +2047,11 @@ on_planet_bombarded = {
 		grand_archive.2190	# Planet bombarded by Voidworms
 		focus.145			# Empire Focus
 		biocrisis.80 	# Planet Bombarded by Behemoth
+		infernals.20
+		infernals.25		# Infernals Firestorm
+		infernals.2005		# Hyperthermia crisis objective
 		action.81 		# Turns planet into tombworld if using armageddon or pox stance
+		shroud.12110		# Disciple of the Eater reward
 	}
 }
 
@@ -1997,10 +2066,29 @@ on_planet_zero_pops = {
 	}
 }
 
+# Planet has taken damage from ground combat - Damage is applied daily
+# This = Planet
+# From = damaging country
+# local_devastation = variable of daily devastation
+on_ground_combat_devastation = {
+	events = {
+		shroud.12120		# Disciple of the Eater reward
+	}
+}
+
 # Planet has reached 0 pops from collateral damage
 # This = Planet
 # From = Army owner
 on_planet_zero_pops_ground_combat = {
+}
+
+# Planet has reached a new ascension tier.
+# This = Planet
+on_planet_ascension_tier_increased = {
+	events = {
+		shroud.10800	# Patron Objective Counter: po_ascend_planet
+		shroud.4845		# Stop free Planetary Ascension (Ascension Accord)
+	}
 }
 
 # Pop Group is abducted by raiding stance
@@ -2050,6 +2138,7 @@ on_post_communications_established = {
 		grand_archive.3995	# Galactic Curators / Curators fast forward communication
 		unplugged.3200 # Unplugged: A Legacy of Terror
 		unplugged.3249 # Unplugged: Fear of the Machine/Past
+		shroud.5010				# Secret Societes infiltration effect
 	}
 }
 
@@ -2082,6 +2171,26 @@ on_pop_bombed_to_death = {
 	events = {
 		action.100
 		grand_archive.2200		# Pop killed by a voidworm
+		shroud.10510			# Patron Objective Counter: po_kill_pop
+	}
+}
+
+# Executed whenever a pop is killed by its planet devastation, caused by another country (not by bombarbment)
+# This = Planet where the pop died
+# From = Attacker country
+on_pop_collateral_casualty = {
+	events = {
+		shroud.10510 # Patron Objective Counter: po_kill_pop
+	}
+}
+
+# Executed whenever a pop is sacrificed
+# This = Pop killed
+# From = Planet where the pop was killed
+# FromFrom = Country intentionally killing the pop
+on_pop_sacrificed = {
+	events = {
+		shroud.10515 # Patron Objective Counter: po_kill_pop
 	}
 }
 
@@ -2097,6 +2206,7 @@ on_new_heir = {
 # This = Heir
 on_heir_promoted_to_ruler = {
 	events = {
+		shroud.7035 	# Corporeal Imperium XP bonus
 	}
 }
 
@@ -2150,6 +2260,7 @@ on_leader_death = {
 		cybernetics.5095	# No exploiting Tactical Algorithms
 		cstorms.330			# Storm-Rider died in storm
 		timeline.39         # Timeline Emperor Dies
+		leader.330			# Remove divine sovereign civic
 	}
 }
 
@@ -2159,7 +2270,6 @@ on_leader_hired = {
 	events = {
 		focus.510 			# Set flag for Hire Official Focus
 		paragon.450			# On leader hired toast
-		astral_planes.5110	# Eternal Throne event
 		focus.46			# Empire Focus
 	}
 }
@@ -2175,6 +2285,7 @@ on_leader_fired = {
 		paragon.290
 		paragon.3906
 		distar.168 # Remove Event Node Traits
+		leader.330	# Remove divine sovereign civic
 	}
 }
 
@@ -2188,9 +2299,12 @@ on_leader_level_up = {
 		grand_archive.8295	# Prospect of treasure modifier update
 		focus.630			# Set up flag for Level 4 Commander Focus
 		focus.45			# Empire Focus
+		shroud.305          # Superstitious Beliefs Cycles: Councilors bonuses
+		shroud.10070		# Patron Objective Counter: po_scientist_level_up
 		focus.685			# Empire Focus - Scientist
 		focus.690			# Empire Focus - Commander
 		focus.695			# Empire Focus - Official
+		shroud.7030			# Transcendent Imperium Unity bonue
 	}
 }
 
@@ -2204,6 +2318,8 @@ on_leader_assigned = {
 		bio.505 	# Familiar Face Leader Portrait Swapback
 		bio.500 	# Familiar Face Leader Portrait Swap
 		bio.1115	# Evopred Oligarch Immortalilty
+		shroud.300	# Superstitious Beliefs Cycles: Councilors bonuses
+		toxoids.600			# Mutagenic Spas give Substance Abuser
 	}
 }
 
@@ -2213,6 +2329,7 @@ on_leader_unassigned = {
 	events = {
 		bio.505 	# Familiar Face Leader Portrait Swapback
 		bio.1120	# Evopred Oligarch Immortality Removal
+		shroud.300	# Superstitious Beliefs Cycles: Councilors bonuses
 	}
 }
 
@@ -2232,6 +2349,7 @@ on_ruler_set = {
 on_ruler_removed = {
 	events = {
 		grand_archive.8296	# Prospect of treasure modifier update
+		leader.330	# Remove the Divine Soverign civic
 	}
 }
 
@@ -2244,6 +2362,7 @@ on_blocker_cleared = {
 		terra.30		# Clear the Terraforming Blocker form terra.25
 		action.495		# Sets flag if blockers have been cleared on Wenkwort Artem.
 		astral_rift.2699 # Colonization Drones society bonus
+		shroud.10015 # Patron Objective Counter: po_clear_blocker
 		synth.311		# Biological Enclaves is cleared
 	}
 }
@@ -2269,6 +2388,7 @@ on_policy_changed = {
 		action.80 # banning AI will remove existing Synthetic Armies
 		preftl.55 # Changing interferance policy with pre-FTLs should remove certain actions
 		preftl.60 # Changing enlightenment policy with pre-FTLs should remove certain actions
+		shroud.10090 # Patron Objective Counter: po_change_policy
 	}
 }
 
@@ -2296,10 +2416,17 @@ on_ship_built = {
 		focus.16			# Empire Focus - Produce 5 Maulers
 		focus.605			# Set up flags for corvette building Focus 2/2
 		focus.625			# Set up flags for platform building focus 2/2
+		focus.705			# Set up flags for battleships building Focus 2/2
+		focus.710			# Set up flags for titans building Focus 2/2
+		focus.715			# Set up flags for juggernaut building Focus 2/2
 		focus.626			# Empire Focus - Produce 20 Weavers
 		timeline.45			# Timeline First 100K Fleet
 		timeline.48			# Timeline First Titan/Juggernaut/BioTitan/BioJuggernaut
 		biocrisis.500 # Behemoth Crisis Objective: Building Bioships and Breeding Space Fauna
+		shroud.10495		# Patron Objective Counter: po_build_ship_size_mult
+		shroud.10500		# Patron Objective Counter: po_clone_space_fauna
+		shroud.10705		# Patron Objective Counter: po_build_defense_platform
+		shroud.10940		# Patron Calling: po_clone_space_fauna_naval_capacity
 	}
 }
 
@@ -2342,6 +2469,7 @@ on_war_beginning = {
 		timeline.4 #  Milestone War Declared
 		bio.3160	# War declared when tasked with peace
 		bio.819		# Bodysnatchers declaring war
+		shroud.5051	# Proxy War bad opinion modifier set
 	}
 }
 
@@ -2357,6 +2485,7 @@ on_war_ended = {
 		paragon.5223
 		focus.140			# Empire Focus
 		focus.660			# Set Flags for Defeat Fallen Empire Task
+		infernals.1051		# Galactic Crucible captured by non-crisis
 	}
 }
 
@@ -2368,6 +2497,28 @@ on_war_ended = {
 on_country_released_in_war = {
 	events = {
 		action.320
+	}
+}
+
+# A Proxy War was started. To access the different wars it spawned, use on_war_beginning and is_from_proxy_war trigger
+# Root = instigator
+# From = victim
+# local_num_attackers = how many attackers were sent to war
+on_proxy_war_started = {
+	events = {
+		shroud.4999	# Proxy War on_start event (cooldown)
+		shroud.5035	# Secret Societies Playing Both Sides
+		shroud.5040	# Secret Societies proxy war bonus
+		shroud.5050	# Proxy War bad opinion modifier trigger
+	}
+}
+
+# A country has claimed one or more systems
+# This = Country
+# From = Country owning the system
+on_claim_system = {
+	events = {
+		shroud.10600 # Patron Objective Counter: po_claim_system
 	}
 }
 
@@ -2433,6 +2584,13 @@ on_tech_increased = {
 		timeline.25         # Milestone First Rare Tech
 		timeline.51         # Milestone First Repeatable Tech
 		bio.2024			# Starlit Citadel - Wormhole Exploration
+		shroud.1565			# Add aura intensification research option if we made a covenant
+		shroud.2150			# Breaching the Shroud situation - handle approaches upgrade
+		shroud.10080 		# Patron Objective Counter: technologies
+		shroud.6300			# Mindwarden Origin : psionic suppression tech
+		shroud.12140		# Shrouded Whispers zro reward on rare and psionics tech
+		tutorial.2600		# Tutorial - Psionic Aura
+		tutorial.2610		# Tutorial - Aura intensification
 	}
 }
 
@@ -2446,13 +2604,25 @@ on_tech_increased = {
 on_modification_complete = {
 	events = {
 		tutorial.65
-		utopia.2508 # Handle leader traits after species modification
-		utopia.6001 # Hive Mind species integration
-		astral_planes.5120 # Eternal Throne passive immortality
-		timeline.20 # Milestone First Modifiation
+		utopia.2508 		# Handle leader traits after species modification
+		utopia.6001 		# Hive Mind species integration
+		timeline.20 		# Milestone First Modifiation
 		bio.700 			# Update Shared Genetics modifiers
 		bio.5107			# Assign Purity Authority trait variable
 		bio.5117			# Assign EvoPred trait variable
+		shroud.10550    	# Patron Objective Counter: po_apply_species_template
+		shroud.10930        # Patron Objective Counter: po_apply_pop_template_tierX
+	}
+}
+
+# Triggers when a Special Project applying a species modification template is completed.
+# Note that this will trigger only once.
+#
+# This = Country
+# From = Species ( Post Modification )
+on_modification_completion = {
+	events = {
+		shroud.10935        # Patron Objective Counter: po_apply_pop_template_tierX
 	}
 }
 
@@ -2467,7 +2637,6 @@ on_subspecies_integration_step = {
 	events = {
 		utopia.2508 # Handle leader traits after species modification
 		utopia.6001 # Hive Mind species integration
-		astral_planes.5120 # Eternal Throne passive immortality
 	}
 }
 
@@ -2482,7 +2651,6 @@ on_subspecies_integration_complete = {
 	events = {
 		utopia.2508 # Handle leader traits after species modification
 		utopia.6001 # Hive Mind species integration
-		astral_planes.5120 # Eternal Throne passive immortality
 	}
 }
 
@@ -2501,7 +2669,8 @@ on_research_option_added = {
 # From = Country a favor is from
 on_favor_gained = {
 	events = {
-		focus.155 # Empire Focus
+		shroud.10710		# Patron Objective Counter: po_earn_favor
+		focus.155 			# Empire Focus
 	}
 }
 
@@ -2514,7 +2683,9 @@ on_planet_occupied = {
 		colony.9095
 		paragon.5930	# "Under One Rule": remove "Sustaining Apparatus" modifier
 		astral_planes.5020 # Celestial Tear Modifier Event removed
-		crisis.300		# Swarm gains control of a planet and starts purging it
+		crisis.300		# Crisis faction gains control of a planet and starts purging it
+		shroud_forged.322
+		shroud.6706			# (Hidden) Mindwarden Origin : abort / restart Sanctum of the Lost situation
 	}
 }
 
@@ -2525,7 +2696,8 @@ on_planet_occupied = {
 on_planet_returned = {
 	events = {
 		astral_planes.5010 # Celestial Tear Modifier Event
-		crisis.301			# Swarm loses control of a planet and stops purging it
+		crisis.301			# Crisis faction loses control of a planet and stops purging it
+		shroud.6701			# (Hidden) Mindwarden Origin : abort / restart Sanctum of the Lost situation
 	}
 }
 
@@ -2581,6 +2753,7 @@ on_emergency_ftl = {
 on_army_recruited = {
 	events = {
 		focus.645 	# Set Flags for Build Armies Task 2/2
+		shroud.10020 # Patron Objective Counter: po_build_army
 	}
 }
 
@@ -2594,10 +2767,12 @@ on_army_killed_in_combat = {
 		emperor.450
 		necroids.15
 		colony.9080
+		shroud_forged.323
 		paragon_2.1040
 		synth.1550 			# Synthetic Imperial virtual
 		bio.750 			# Acidic Vascularity
 		bio.770 			# Spare Organs
+		shroud.10100		# Patron Objective Counter: po_destroy_army
 	}
 }
 
@@ -2608,6 +2783,7 @@ on_army_killed_no_combat = {
 	events = {
 		emperor.450
 		colony.9082
+		shroud_forged.323
 	}
 }
 
@@ -2625,6 +2801,8 @@ on_building_complete = {
 		cybernetics.2026	# Virtual Machine pop creation
 		cybernetics.2031	# Virtual Machine pop destruction
 		focus.90			# Empire Focus
+		shroud.10055		# Patron Objective Counter: po_build_building / po_build_research_lab
+		action.2100			# Planetary/Sectory governor gains XP.
 	}
 }
 
@@ -2649,8 +2827,10 @@ on_building_upgraded = {
 		plant.100
 		megastructures.20	# Habitat Major Capital
 		megastructures.30	# Habitat System Capital
-		cybernetics.2026 # Virtual Machine pop creation
-		cybernetics.2031 # Virtual Machine pop destruction
+		cybernetics.2026 	# Virtual Machine pop creation
+		cybernetics.2031 	# Virtual Machine pop destruction
+		shroud.10350 		# Patron Objective Counters: po_upgrade_building / po_upgrade_building_X
+		action.2100			# Planetary/Sectory governor gains XP.
 	}
 }
 
@@ -2659,16 +2839,20 @@ on_building_upgraded = {
 on_building_demolished = {
 	events = {
 		emperor.62
-		cybernetics.2026 # Virtual Machine pop creation
-		cybernetics.2031 # Virtual Machine pop destruction
+		cybernetics.2026	# Virtual Machine pop creation
+		cybernetics.2031	# Virtual Machine pop destruction
+		infernals.32		# Stops Volcanic terraforming (scripted)
+		shroud.8030			# Chamber of Silence removed
+		shroud_forged.319	# Zroni equilibrator removed
 	}
 }
 # A building repair has finished
 # This = Planet
 on_building_repaired = {
 	events = {
-		cybernetics.2026 # Virtual Machine pop creation
-		cybernetics.2031 # Virtual Machine pop destruction
+		cybernetics.2026	# Virtual Machine pop creation
+		cybernetics.2031	# Virtual Machine pop destruction
+		action.2100			# Planetary/Sectory governor gains XP.
 	}
 }
 
@@ -2679,6 +2863,16 @@ on_district_complete = {
 		cybernetics.2026	# Virtual Machine pop creation
 		cybernetics.2031	# Virtual Machine pop destruction
 		focus.100			# Empire Focus
+		shroud.10000 	    # Patron Objective Counter: po_construct_district
+		action.2100			# Planetary/Sectory governor gains XP.
+	}
+}
+
+#A zone construction has been completed.
+# This = Planet
+on_zone_complete = {
+	events = {
+		action.2100			# Planetary/Sectory governor gains XP.
 	}
 }
 
@@ -2688,8 +2882,11 @@ on_building_replaced = {
 	events = {
 		akx.10000
 		emperor.62
-		cybernetics.2026 # Virtual Machine pop creation
-		cybernetics.2031 # Virtual Machine pop destruction
+		cybernetics.2026	# Virtual Machine pop creation
+		cybernetics.2031	# Virtual Machine pop destruction
+		action.2100			# Planetary/Sectory governor gains XP.
+		shroud.10055		# Patron Calling : po_build_building
+		infernals.33		# Pauses Volcanic terraforming (scripted)
 	}
 }
 
@@ -2699,6 +2896,20 @@ on_building_downgraded = {
 	events = {
 		cybernetics.2026 # Virtual Machine pop creation
 		cybernetics.2031 # Virtual Machine pop destruction
+		infernals.33 	 # Pauses Volcanic terraforming (scripted)
+	}
+}
+
+# A building has been wrecked by a enemy and is now ruined.
+# This = Planet
+# From = Enemy country
+on_building_ruined = {
+	events = {
+		shroud.10650		# Patron Objective Counter: po_ruin_enemy_building
+		shroud.8030			# Chamber of Silence removed
+		shroud_forged.319	# Zroni equilibrator removed
+		shroud.9000			# Aura Suppressors Event chain: check for Suppressors
+		infernals.33		# Pauses Volcanic terraforming (scripted)
 	}
 }
 
@@ -2790,6 +3001,7 @@ on_war_lost = {
 		origin.5140 # Broken Shackles - War vs Slavers
 		paragon.5028
 		timeline.15 # Timeline Lost War
+		shroud.5045	# Secret Societies proxy war bonus
 	}
 }
 
@@ -2804,6 +3016,7 @@ on_status_quo = {
 		action.39
 		action.45
 		origin.5141 #Broken Shackles vs MSI
+		shroud.5046	# Secret Societies proxy war bonus
 	}
 }
 
@@ -2820,12 +3033,28 @@ on_status_quo_forced = {
 	}
 }
 
+# A new species is hosted in the empire
+# Launched when:
+# - a pop with a new species joined our empire
+# - a pre-ftl species has been uplifted
+# - a species template has been applied
+#
+# This = Country
+# From = Newly added species
+on_host_new_species = {
+	events = {
+		shroud.10900 	# Patron Objective Counter: po_host_new_species
+	}
+}
+
 # A pop has been added to the planet
 # Root = pop
 # From = planet
+# local_pop_amount = variable of how much was grown
 on_pop_group_added = {
 	events = {
-#		origin.1
+		#		origin.1
+		shroud.12130 	# Strand Afflicted upgrade
 	}
 }
 
@@ -2847,6 +3076,7 @@ on_pop_growth = {
 	events = {
 		bio.755				# Nascent Stage Logic
 		assimilation.40 	# Replace assimilated growth for assimilation target growth
+		shroud.10910		# Patron calling: po_grow_pop
 	}
 }
 
@@ -2888,6 +3118,7 @@ on_pop_purged = {
 		necroids.25	# Mechromantic Cyber-Zombies
 		timeline.23 # Milestone First Purge
 		bio.1070 # EvoPred Gene Harvesting
+		shroud.10510 # Patron Objective Counter: po_kill_pop
 	}
 }
 
@@ -2911,6 +3142,7 @@ on_pop_displaced = {
 on_rebels_take_planet = {
 	events = {
 		action.30
+		shroud.6707 # (Hidden) Mindwarden Origin : abort Sanctum of the Lost situation
 	}
 }
 
@@ -2934,6 +3166,8 @@ on_planet_ownerless = {
 		clones.30 #Clone Army cleanup
 		terra.110 #Removes second home modifier
 		origin.3255 #Progenitor Hive cleanup
+		shroud_forged.200
+		shroud.8300		# Endbringers: Remove Chamber of Silence building
 		crisis.7520 # Cosmogenesis Colony pickup flag
 		cyber.7015		# Genesis Guide remove deposit on owner change
 		bio.1025		# Removes Biosphere Modifiers when Abandoning Planets as Evolutionary Predators
@@ -2946,6 +3180,7 @@ on_planet_ownerless = {
 # FromFrom = Country scope (previous owner, if any)
 on_planet_transfer = {
 	events = {
+		action.89			# Cleaning up planetary modifiers
 		mega.205			# remove invalid political Decisions
 		origin.3002			# "Tree of Life": Tree death
 		origin.3004			# "Tree of Life": update modifier
@@ -2955,28 +3190,37 @@ on_planet_transfer = {
 		action.350			# reset Ascension Tier to 0
 		origin.3225			# "Progenitor Hive": apply "Missing Offspring" modifier
 		origin.3240			# "Progenitor Hive": remove "Missing Offspring" modifier
-		toxoids.8024			# "Knights of the Toxic God": fire "Reconquering the Order's Keep"
+		toxoids.8024		# "Knights of the Toxic God": fire "Reconquering the Order's Keep"
 		preftl.2171			# "Organic Singularity": remove "Slaves to the Machine" modifier
 		factions.15			# remove Factions-specific modifiers
 		necroids.10			# "Necrophage": prevent Hive Minds from purging their own Pops
-		paragon.5930			# "Under One Rule": remove "Sustaining Apparatus" modifier
-		paragon.5931			# "Under One Rule": remove invalid Monument modifiers
+		paragon.5930		# "Under One Rule": remove "Sustaining Apparatus" modifier
+		paragon.5931		# "Under One Rule": remove invalid Monument modifiers
 		colony.9385			# "Myrmeku": modifier cleanup
 		cyber.1025			# For Sale: The Sky cleanup
 		crisis.7520			# Cosmogenesis Colony pickup flag
 		cyber.7015			# Genesis Guide remove deposit on owner change
-		cybernetics.5048		# Virtual Pops Destroyed
-		cybernetics.2026		# Virtual Machine pop creation
-		strange_worlds.205 		# Remove "Something in the water" modifiers
+		cybernetics.5048	# Virtual Pops Destroyed
+		cybernetics.2026	# Virtual Machine pop creation
+		strange_worlds.205 	# Remove "Something in the water" modifiers
 		focus.555 			# Set a Ringworld flag for Tasks
 		focus.65			# Empire Focus Take Fallen Empire World
+		astral_planes.2155	# Riftworld Rift Affinity modifier Cleanup
+		astral_planes.2150	# Riftworld Rift Affinity modifier added to planet if there's an astral rift
 		bio.1015			# Evolutionary Predator Planet Modifier Cleanup 15 needs to be before 10 else you will gain a new planet and instantly remove the good modifier
 		bio.1010			# Evolutionary Predator Gained Planet
 		bio.5106			# Assign Purity Authority trait variable
 		bio.5116			# Assign EvoPred Authority trait variable
 		bio.1110			# Removes EvoPred Hive World Flag
+		shroud_forged.200	# Cleanup of Shroud-Forged modifiers and Zroni Legacy event chain
+		shroud.6545			# Mindwarden Psionic War planet control
+		shroud.6701			# Mindwarden Origin : abort / restart Sanctum of the Lost situation
+		shroud.11210		# End of the Cycle marked planet transfer
+		shroud.8300			# Endbringers: Remove Chamber of Silence building
 		wilderness.300 		# Convert wilderness disctricts
 		wilderness.310		# Wilderness Planet Converter
+		infernals.32 		# Stops Volcanic terraforming (scripted)
+		origin.4001			# Payback Modifier is removed
 	}
 }
 
@@ -2989,11 +3233,11 @@ on_planet_conquer = {
 	events = {
 		action.42		# Land appropriation
 		action.84
-		action.89
 		crisis.5010		# Crisis Menace Objective: Conquer a Colony
 		cstorms.8100	# give special project to get rid of modifier
 		focus.150		# Empire Focus
 		focus.675		# Empire Focus - Sets Flag for Conquer Worlds focus 2/2
+		shroud.10150	# Patron Objective Counter: po_conquer_planet
 	}
 }
 
@@ -3064,6 +3308,7 @@ on_join_federation = {
 		origin.5150 # Broken Shackles - Federation formed with MSI
 		origin.5151 # Broken Shackles - Federation formed with generic slavers
 		focus.545 # Set up Flags for Form Federation Focus
+		shroud.10750 # Patron Objective Counter: po_form_or_upgrade_federation
 		timeline.18 # Timeline Form/Join Federation
 	}
 }
@@ -3084,6 +3329,7 @@ on_federation_law_vote_succeed = {
 	events = {
 		fedvote.1
 		federations3.2200 # Spiritualist Joint Operation start
+		shroud.10300 # Patron Objective Counter: po_pass_law_federation
 	}
 }
 
@@ -3122,6 +3368,14 @@ on_federation_leader_challenge = {
 	}
 }
 
+# A federation reached a new level for the first time
+# This = Federation Leader
+on_federation_new_level_unlocked = {
+	events = {
+		shroud.10755	# Patron Objective Counter: po_pass_law_federation
+	}
+}
+
 # A country is created via create_country or create_rebels
 # This = created country
 # From = root of context where create_country/create_rebels happens
@@ -3147,26 +3401,29 @@ on_country_created = {
 #From = optional, destroyer (country)
 on_country_destroyed = {
 	events = {
-		custodian.100 # Custodian destroyed
-		emperor.400 # Galactic Empire destroyed
-		crisis.210
-		crisis.1270
+		custodian.100 			# Custodian destroyed
+		emperor.400 			# Galactic Empire destroyed
+		crisis.210 				# Prethoryn Defeated
+		crisis.1270 			# Unbidden Defeated
 		action.61
-		crisis.2404
-		war_in_heaven.17 #WiH - both AFEs dead - do not flip the order here!
-		war_in_heaven.10 #WiH - first AFE dead by NAL - do not flip the order here
-		crisis.4020	# Menace Objective: Destroy Empire.
+		crisis.2404 			#Contingency Defeated
+		war_in_heaven.17 		#WiH - both AFEs dead - do not flip the order here!
+		war_in_heaven.10 		#WiH - first AFE dead by NAL - do not flip the order here
+		crisis.4020				# Menace Objective: Destroy Empire.
 		emperor.63
-		origin.3250 # Remove Progenitor Deposit
-		action.465 # Directive 67 achievement
-		action.470 # Destroy People of Earth achievement
-		action.480 # Zombie on my Lawn achievement
+		origin.3250 			# Remove Progenitor Deposit
+		action.465 				# Directive 67 achievement
+		action.470 				# Destroy People of Earth achievement
+		action.480 				# Zombie on my Lawn achievement
 		paragon.5935
 		paragon.5950
-		situation.2060 # Kaleidoscope - pass it to country destroyer
+		situation.2060 			# Kaleidoscope - pass it to country destroyer
 		astral_planes.3160		# Formless defeated their enemies
 		astral_planes.5006		# Remove Celestial Tear Modifier Event
 		grand_archive.500		# Curator destroyed
+		grand_archive.8067		# Unprotect Black Needle planet
+		shroud.6546				# Mindwarden Exiled destroyed (Psionic War ended)
+		infernals.1050			# Hyperthermia crisis destroyed
 	}
 }
 
@@ -3195,8 +3452,13 @@ on_megastructure_built = {
 		grand_archive.4120	# Curator Grand Archive Collection contact
 		grand_archive.4199	# Archivism handle edge case
 		focus.40			# Empire Focus
+		shroud.10025		# Patron Objective Counter: po_finish_megastructure
 		timeline.8          # Timeline Megastructure
 		timeline.61			# Timeline Origin Event Built Second Habitat
+		shroud.5375			# Shroudwalkers opinion of Shroud Seals
+		shroud.6305			# Mindwardens built a Shroud Seal in border system
+		shroud.6540			# Mindwardens Psionic War Shroud Seal build
+		shroud.6585			# Mindwardens Shroud Seal reconstruction
 	}
 }
 
@@ -3236,6 +3498,7 @@ on_megastructure_upgraded = {
 		action.460		# Strange Mood achievement
 		awareness.145	# Megastructure built or upgraded in pre-ftl system
 		focus.40		# Empire Focus
+		shroud.10060	# Patron Objective Counter: po_upgrade_megastructure
 	}
 }
 
@@ -3257,6 +3520,10 @@ on_colony_1_year_old = {
 		20 = strange_worlds.125 # Dark Matter Eruption
 		20 = strange_worlds.150 # Revolting Pests
 		20 = strange_worlds.175 # Something in the water
+		# Volcanic Worlds Colony Events
+		20 = infernals.3000 # Imminent Eruption
+		20 = infernals.3030 # Lava Sports
+		20 = infernals.3200 # Molten Core
 	}
 }
 
@@ -3289,6 +3556,7 @@ on_colony_2_years_old = {
 		8 = colony.9050 #Crystal Kraken
 		8 = colony.9295 #Metallic Puddles
 		8 = colony.9950 #Stratospheric Vents
+		15 = colony.10000 #A Court of Blossoms
 
 		15 = colony.2060 # Strange Mushrooms
 		8 = colony.7229 # Glacial Crisis, flag only
@@ -3425,7 +3693,7 @@ on_colony_10_years_old = {
 	random_events = {
 		150 = 0
 
-	# Colony Events
+		# Colony Events
 		10 = colony.7165 # Troublesome Critters, higher weight because it requires specific flag
 	}
 }
@@ -3440,7 +3708,9 @@ on_colony_25_years_old = {
 # Fires for each planet every month (counting up from colonisation date, includes home planet)
 on_colony_monthly_pulse = {
 	events = {
+		shroud.1500		# Psionic Aura spawning
 		necroids.250 	# makes zombie pops
+		shroud.1100		# Experimental Testing - Test subjects escape
 	}
 }
 
@@ -3452,10 +3722,10 @@ on_colony_yearly_pulse = {
 		awareness.140 # Colony in pre-ftl system
 	}
 	random_events = {
-		25 = crime.1 # Criminal Underworld Appears (Unemployment)
 		25 = crime.40 # Criminal Underworld Appears (High Crime)
 		25 = crime.41 # Criminal Underworld Disappears (Low Crime)
-		25 = 0
+		50 = 0
+		0 = crime.1 # Criminal Underworld Appears (Unemployment) - at 0 to prevent error log spam
 	}
 }
 
@@ -3522,7 +3792,7 @@ on_leader_spawned = {
 on_added_to_leader_pool = {
 	events = {
 		action.406 # Randomize Leader Pool Variations of skill and age
-		leader.100		# Additional traits from civics
+		leader.100		# Additional traits from civics and governments
 	}
 }
 
@@ -3530,7 +3800,7 @@ on_added_to_leader_pool = {
 # scope: country
 empire_init_add_technologies = {
 	events = {
-		#game_start.8
+		game_start.8
 	}
 }
 
@@ -3541,7 +3811,7 @@ empire_init_add_technologies = {
 # fromfrom: secondary species (if exists)
 empire_init_capital_planet = {
 	events = {
-		#game_start.12 # starting buildings, districts & pops
+		game_start.12 # starting buildings, districts & pops
 		# at this point the species might have changed (because we added traits), so FROMFROM might not be the secondary species anymore
 	}
 }
@@ -3569,6 +3839,17 @@ on_election_ended = {
 		paragon.501 # Clean up Flags about being on Council at Election start.
 		timeline.40 # Timeline Elections
 		bio.1095	# EvoPred Apex Predator Trait Giver
+		shroud.5030	# Secret Societes The Right Choice demand
+		shroud.7005	# Transcendent Aristocracy post-election modifier
+	}
+}
+
+# Called upon exploring a wormhole
+# This = Bypass
+# From = fleet
+on_bypass_explored = {
+	events = {
+		shroud.10076		# Patron Objective Counter: po_explore_wormhole / po_wormhole_and_locks
 	}
 }
 
@@ -3577,7 +3858,6 @@ on_election_ended = {
 # FROM = System jumping to
 # FROMFROM = System jumped from
 on_entering_gateway = {
-
 }
 
 # Called upon entering FTL (on-action name scripted on the Bypass type)
@@ -3720,18 +4000,19 @@ on_system_gained = {
 		galactic_features.298 	# Shielded World (Fallen Empire)
 		action.200				# recalc strategic war data
 		communications_spread.5 # Establish comms with any other countries in the system
-		leviathans.662  # Dragon Hoard system - eggs and bones (previously: MTTH 50 years)
-		specialist.200 # Add Bulwark Arrays to Bulwark subjects' starbases
-		astral_planes.25 # Crystal Sphere Gained from another country
-		astral_planes.5040 # Celestial Tear Modifier Event
-		astral_planes.117 # A Rift in Space situation trigger backup
-		astral_planes.118 # A Rift in Space situation trigger speedup
-		grand_archive.8052 # Shattered world system gained
-		grand_archive.8102 # Black Needle Base system gained
-		grand_archive.8202 # Smeegibb shelter system gained
-		timeline.35		   # Milestone First Unique System
+		leviathans.662		# Dragon Hoard system - eggs and bones (previously: MTTH 50 years)
+		specialist.200		# Add Bulwark Arrays to Bulwark subjects' starbases
+		astral_planes.25	# Crystal Sphere Gained from another country
+		astral_planes.5040	# Celestial Tear Modifier Event
+		astral_planes.117	# A Rift in Space situation trigger backup
+		astral_planes.118	# A Rift in Space situation trigger speedup
+		grand_archive.8052	# Shattered world system gained
+		grand_archive.8102	# Black Needle Base system gained
+		grand_archive.8202	# Smeegibb shelter system gained
+		timeline.35			# Milestone First Unique System
 		bio.3370			# Angered the Control Fragment by rebuilding the system too soon
-		wilderness.100			# Nudge to colonize worlds (after time delay)
+		wilderness.100		# Nudge to colonize worlds (after time delay)
+		shroud.60			# Psionic Aura suppression dismantled
 	}
 }
 
@@ -3745,7 +4026,6 @@ on_slave_sold_on_market = {
 on_relic_received = {
 	events = {
 		astral_planes.5000	# Celestial Tear Modifier Event
-		astral_planes.5100	# Eternal Throne Event
 		cyber.1522			# Initialize variables for the Rulerchip
 		timeline.21         # Milestone First Relic
 		timeline.31         # Milestone Obtained Galatron
@@ -3757,6 +4037,7 @@ on_relic_activated = {
 	events = {
 		achievement.5		# Unlimited Power achievement
 		astral_planes.1040	# Lateral Artifacting astral action
+		shroud.10065		# Patron Objective Counter: po_activate_relic
 		focus.135			# Empire Focus
 	}
 }
@@ -3772,7 +4053,9 @@ on_relic_lost = {
 # This = Fleet ( science vessel )
 # From = Archaeological Site
 on_arch_stage_finished = {
-
+	events = {
+		shroud.10045 # Patron Objective Counter: po_complete_arc_site_stage / po_complete_arc_site_or_rift_stage
+	}
 }
 
 on_arch_site_finished = {
@@ -3781,6 +4064,7 @@ on_arch_site_finished = {
 		ancrel.15050		# Generate Minor Artifacts deposits
 		grand_archive.4150	# Galactic Curators rewards
 		focus.35			# Empire Focus
+		shroud.10035		# Patron Objective Counter: po_complete_arc_site / po_complete_arc_site_or_rift
 	}
 	random_events = {
 		90 = 0
@@ -3828,6 +4112,10 @@ on_resolution_passed = {
 		grand_archive.5005		# Gavel of the Tribunal effect ends
 		timeline.75 			# Timeline Galactic Community Resolution Passed
 		bio.3335			# Fallen Empire Control Fragment Demand checker
+		shroud.5015			# Secret Societes Control the Narrative
+		shroud.5020			# Secret Societes United in Purpose
+		shroud.10200 		# Patron Objective Counters: po_pass_resolution_galcom / po_pass_X_resolution
+		shroud.10700 	 	# Patron Objective Counter: po_galcom_vote
 	}
 }
 
@@ -3839,6 +4127,8 @@ on_resolution_failed = {
 	events = {
 		bio.3340		# Fallen Empire Control Fragment Demand checker
 		bio.1085			# EvoPred Apex Predator Opposing Resolutions
+		shroud.5020	    # Secret Societes United in Purpose
+		shroud.10700 	# Patron Objective Counter: po_galcom_vote
 	}
 }
 
@@ -3898,6 +4188,7 @@ on_leave_alliance = {
 on_sign_commercial_pact = {
 	events = {
 		origin.5275 # Broken Shackles and MSI
+		shroud.10360 # Patron Objective Counters: po_establish_trade_agreement / po_establish_diplomatic_pact
 		timeline.41 # Timeline First Trade Deal
 	}
 }
@@ -3908,6 +4199,7 @@ on_sign_defensive_pact = {
 	events = {
 		origin.5275 # Broken Shackles and MSI
 		focus.520 # Set flag for Focus Check Defensive Pact
+		shroud.10365 # Patron Objective Counter: po_establish_defensive_pact / po_establish_diplomatic_pact
 	}
 }
 
@@ -3917,6 +4209,7 @@ on_sign_migration_pact = {
 	events = {
 		origin.6200 # Fear of the Dark
 		origin.5275 # Broken Shackles and MSI
+		shroud.10370 # Patron Objective Counter: po_establish_migration_treaty / po_establish_diplomatic_pact
 	}
 }
 
@@ -3926,6 +4219,7 @@ on_sign_non_aggression_pact = {
 	events = {
 		origin.5275 # Broken Shackles and MSI
 		focus.515 # Set flag for Focus Check Aggression Pact
+		shroud.10375 # Patron Objective Counter: po_establish_diplomatic_pact
 	}
 }
 
@@ -3934,6 +4228,7 @@ on_sign_non_aggression_pact = {
 on_sign_research_pact = {
 	events = {
 		origin.5275 # Broken Shackles and MSI
+		shroud.10380 # Patron Objective Counter: po_establish_research_agreement / po_establish_diplomatic_pact
 		focus.125	# Empire Focus
 	}
 }
@@ -3953,6 +4248,8 @@ on_becoming_subject = {
 		focus.700		# Empire focus
 		timeline.5		# Milestone First Vassal
 		bio.1090		# EvoPred Apex Predator Tracker
+		shroud.10385	# Patron Objective Counter: po_establish_diplomatic_pact
+		shroud.70		# Psionic Aura suppression dismantled from subjugation (Endbringers only)
 	}
 }
 
@@ -3965,6 +4262,10 @@ on_subject_integrated = {
 		action.500 	# Integrating Vassal gaining relic
 		cyber.7035 	# Intregrating Vassals with Pre-Sapient Preserves as a Genesis Guide Empire
 		grand_archive.4570	# Grand Archive Dismantled from subject integration
+		astral_planes.1001	# Delete Dimensional Fleet on Integration
+		shroud.4802			# Delete Eater Fleet on Integration
+		grand_archive.8065	# Unprotect Black Needle planet
+		shroud.75			# Psionic Aura suppression dismantled from subject integration
 	}
 }
 
@@ -3986,6 +4287,7 @@ on_released_as_vassal = {
 		game_start.70		# Council Generation
 		game_start.71		# Set starting planet governors
 		game_start.72		# Council Generation
+		shroud.10110 		# Patron Objective Counters: po_release_sector_as_vassal
 	}
 }
 
@@ -4061,6 +4363,7 @@ on_branch_office_closed = {
 on_system_occupied = {
 	events = {
 		crisis.6100
+		shroud.10520	# Patron Objective Counters: po_conquer_system
 	}
 }
 
@@ -4073,6 +4376,8 @@ on_system_controller_changed = {
 		astral_planes.5035	# Add/Remove Celestial Tear Modifier Event
 		grand_archive.4550	# Grand Archive Dismantled from giving system
 		grand_archive.8508	# Black Needle Sabotage: losing sabotaged system
+		shroud.65			# Psionic Aura suppression dismantled from giving system
+		infernals.2003		# Resets Starforging progress & removes starbase building
 	}
 }
 
@@ -4104,6 +4409,8 @@ on_operation_chapter_finished = {
 # FROM = Operation target
 on_operation_finished = {
 	events = {
+		shroud.5025	# Secret Societes Behind the Curtain
+		shroud.10715 # Patron Objective Counters: po_complete_operation
 	}
 }
 
@@ -4119,6 +4426,7 @@ on_operation_cancelled = {
 on_pre_government_changed = {
 	events = {
 		cyber.30 # Remove old effects before reforming cyber swap government
+		shroud.800 # Superstitious Beliefs check
 	}
 }
 
@@ -4128,21 +4436,23 @@ on_post_government_changed = {
 	events = {
 		specialist.1000
 		action.445 # Recalculate divided patronage modifier on government reform.
-		action.455 # Unlock Memorialist buildings for hive-minds that reform into the civic.
 		action.502 # Remove Imperial Heir trait on changing away from Imperial authority.
 		leader.201 # Add Imperial Ruler trait on changing to Imperial authority.
 		action.735 # Remove Void Hive modifiers
 		astral_planes.2000 # Dimensional Worship astral thread reward modifier computing
 		astral_planes.2200 # Hyperspace Specialty giving research
-		cyber.40 #  # Add new effects after reforming cyber swap government
+		cyber.40	# Add new effects after reforming cyber swap government
 		bio.1100	# EvoPred Apex Predator remove trait on leaving dictatorial
+		shroud.1000 # Start Twisted Experimenters Situation
 		bio.1095	# EvoPred Apex Predator add trait on enter dictatorial
 		bio.1130	# EvoPred Oligarch Immortality Removal
 		bio.1131	# EvoPred Oligarch Immortality Addition
 		bio.171		# Purity Authority trait handling - give trait
 		bio.172		# Purity Authority trait handling - remove trait
+		cyber.7016  # Genesis Guide remove preserves on abandoning civic
 		cyber.7040	# Ensuring that you can still build a colony ship after changing your civics and become a guided sapience empire
 		cyber.7045	# Ensuring that you can still build a colony ship after changing your civics and stop being a guided sapience empire
+		shroud.805	# Superstitious Beliefs cycles removal if needed
 	}
 }
 
@@ -4160,6 +4470,7 @@ on_tradition_picked = {
 	events = {
 		specialist.800
 		paragon.405
+		shroud.10050	# Patron Objective Counters: po_pick_X_tradition
 	}
 }
 
@@ -4180,6 +4491,8 @@ on_ascension_perk_picked = {
 on_megastructure_change_owner = {
 	events = {
 		crisis.6200	#Aetherophasic Engine captured by non-crisis
+		infernals.10530	#Crucible captured
+		infernals.1054	#Own Crucible captured
 	}
 }
 
@@ -4223,6 +4536,7 @@ on_admirals_bickering_event_chain = {
 on_establish_mercenary_enclave = {
 	events = {
 		enclave.2
+		shroud.6825
 	}
 }
 
@@ -4276,7 +4590,8 @@ on_debris_scavenged_and_researched = {
 # fromfromfrom = ship
 special_project_success = {
 	events = {
-		focus.30	# Empire Focus
+		focus.30		# Empire Focus
+		shroud.10040	# Patron Objective Counter: po_research_project
 	}
 }
 
@@ -4386,6 +4701,7 @@ on_astral_rift_spawned = {
 	events = {
 		astral_planes.7		# Trigger A Rift In Space situation
 		astral_planes.8		# Add Astral Threads deposits
+		astral_planes.2151	# Riftworld Rift Affinity modifier added to every colony
 	}
 }
 
@@ -4410,6 +4726,7 @@ on_astral_rift_exploration_start = {
 on_astral_rift_pre_event_fire = {
 	events = {
 		astral_planes.6		# Setup event description flags
+		shroud.10046		# Patron Objective Counter: po_complete_arc_site_or_rift_stage
 	}
 }
 
@@ -4421,11 +4738,13 @@ on_astral_rift_exploration_complete = {
 	events = {
 		astral_planes.4		# Unlock rift if it was possible to get a relic from it but we didn't
 		astral_planes.205	# Removes exploring leaders' death prevention
+		astral_planes.210	# Show event when getting out of a Rift after empire was destroyed by End of the Cycle
 		astral_planes.2104	# Formless contact Riftworld
 		astral_rift.1698	# Clears mirrored country global event target
 		astral_rift.2399	# Unlock Genesis rift
 		astral_planes.6059	# Astral Zeal modifier effect
 		focus.55			# Empire Focus
+		shroud.10036		# Patron Objective Counter: po_complete_arc_site_or_rift
 		timeline.11         # Milestone First Astral Rift
 	}
 	random_events = {
@@ -4433,7 +4752,6 @@ on_astral_rift_exploration_complete = {
 		49 = 0
 	}
 }
-
 
 # Fired when a Commercial Pact is Broken for both parties
 #This = Active Country
@@ -4452,6 +4770,15 @@ on_agenda_finished = {
 		paragon.404	# Give boost to young colonies if "Superior Colonies" Agenda is finished.
 		focus.505	# Set Launch Diplomatic Agenda Flag for Focus
 		focus.105	# Empire Focus
+	}
+}
+
+# Executed when a country activates an agenda early.
+# It's triggered in addition to on_agenda_finished just before it.
+# THIS = country
+on_agenda_finished_early = {
+	events = {
+		shroud.10030	# Patron Objective Counter: po_early_launch_agenda
 	}
 }
 
@@ -4517,6 +4844,15 @@ on_country_attacked = {
 	}
 }
 
+# Fired when a bypass in locked by a Dimensional Lock
+# This = Bypass
+# From = fleet locking the bypass
+on_bypass_locked = {
+	events = {
+		shroud.10075	# Patron Objective Counter: po_wormhole_and_locks
+	}
+}
+
 # Fired when a bypass Dimensional Lock expires
 # This = Bypass
 on_dimensional_lock_expired = {
@@ -4566,8 +4902,6 @@ on_synth_leader_malfunction = {
 #local_num_pops_changed = Num pops that switched ethic to This pop group
 on_daily_pop_ethics_divergence = {
 	events = {
-		machine_age.2100 # Cybernetic Creed - add Creed traits to spiritualist pops
-		machine_age.2101 # Cybernetic Creed - remove Creed traits from non-spiritualist pops
 		cyber.8 # Cyber objectors
 	}
 }
@@ -4675,6 +5009,62 @@ on_synth_queen_random_demand_list = {
 		5 = crisis.8295 # Synth Queen Demand - System
 		5 = crisis.8280 # Synth Queen Demand - Pops
 		5 = crisis.8300 # Synth Queen Demand - Habitable System
+	}
+}
+
+# Breach the Shroud Situation Random Social Event Pool | Fired by shroud.2200 during Stage 1
+# This = situation
+on_breach_the_shroud_situation_random_social_events_list = {
+	random_events = {
+		1 = shroud.2600 # S1 - Superiority Complex
+		1 = shroud.2605 # S2 - Anti-Psionic Backlash
+		1 = shroud.2610 # S3 - Fraudulent Behavior
+		1 = shroud.2615 # S4 - Reckless Experiments
+		1 = shroud.2620 # S5 - Psionic Separation (gestalt)
+		1 = shroud.2621 # S5 - Psionic Ostracization (non-gestalt)
+		1 = shroud.2625 # S6 - Psionic Disease (organic)
+		1 = shroud.2626 # S6 - Psionic Malfunction (machine)
+		1 = shroud.2630 # S7 - Failed Experiments
+		1 = shroud.2635 # S8 - Emergence of Empathy
+		1 = shroud.2640 # S9 - Deviant Psionics
+	}
+}
+
+# Breach the Shroud Situation Random Beneficial Event Pool | Fired by shroud.2200
+# This = situation
+on_breach_the_shroud_situation_random_beneficial_events_list = {
+	random_events = {
+		1 = shroud.2300 # A1 - Thought Transmission
+		1 = shroud.2305 # A2 - Phantom Presence
+		1 = shroud.2310 # A3 - Shroud Parasites
+		1 = shroud.2315 # A4 - Material Manifestations
+		1 = shroud.2320 # A5a - Psionic Doubling
+		1 = shroud.2325 # A5b - Psionic Observation
+	}
+}
+
+# Breach the Shroud Situation Random Balanced Event Pool | Fired by shroud.2200
+# This = situation
+on_breach_the_shroud_situation_random_balanced_events_list = {
+	random_events = {
+		1 = shroud.2400 # B1 - Matter in Flux
+		1 = shroud.2405 # B2 - Dead Heads
+		1 = shroud.2410 # B3a - Psionic Transformations
+		1 = shroud.2415 # B3b - Telekinetic Ethics
+		1 = shroud.2420 # B4 - A Growing Pain
+		1 = shroud.2425 # B5 - Psionic Underground
+	}
+}
+
+# Breach the Shroud Situation Random Chaotic Event Pool | Fired by shroud.2200
+# This = situation
+on_breach_the_shroud_situation_random_chaotic_events_list = {
+	random_events = {
+		1 = shroud.2500 # C1 - Shroudfall
+		1 = shroud.2505 # C2 - Out of Control
+		1 = shroud.2510 # C3 - Neural Overload
+		1 = shroud.2515 # C4 - Nightmares
+		1 = shroud.2520 # C5 - Monstruous Attacks
 	}
 }
 
@@ -4824,10 +5214,12 @@ on_fauna_capture_ended = {
 }
 
 # Fired when a space fauna is added to the vivarium
+# From = Design
 # This = Country
 on_vivarium_populated = {
 	events = {
 		grand_archive.1020		# Primal Calling bonus refresh
+		grand_archive.10500		# Astrozoology tradition gives resources
 	}
 }
 
@@ -5057,5 +5449,151 @@ on_genetic_ascension_hive_approach_mutation_events_list = {
 		# Bonus Events (any approach)
 		10 = bio.405
 		10 = bio.410
+	}
+}
+
+# Fired when attunement towards a Patron is gained (also fired when losing attunement since it's a gain for the opposite patron)
+# this = Country
+on_attunement_gained = {
+	events = {
+		shroud.1550	# Psionic Aura technology
+		shroud.5120	# Chosen civic unity per chosen attunement bonus
+		shroud.7015	# Update Psionic Nexus modifier per attunement points
+		shroud.7020	# Update Transcendent Mainframe modifier per attunement points
+		shroud.310	# Update Cycles' values
+	}
+}
+
+# Fired when a country completes a patron's first contact
+# This = Country
+on_patron_contact_completed = {
+	events = {
+	}
+}
+
+on_covenant_formed = {
+	events = {
+		shroud.1560	# Psionic Aura Intensification technology
+	}
+}
+
+on_active_accord_unlocked = {
+	events = {
+		shroud.3520 # Forge your own Path reward when unlocking all powers
+	}
+}
+
+on_superstitious_beliefs_random_positive_events_list = {
+	random_events = {
+		1 = shroud.500
+		1 = shroud.505
+		1 = shroud.510
+		1 = shroud.515
+		1 = shroud.520
+		1 = shroud.525
+		1 = shroud.530
+		1 = shroud.535
+		1 = shroud.540
+		1 = shroud.545
+		1 = shroud.550
+		1 = shroud.555
+		1 = shroud.560
+		1 = shroud.565
+		1 = shroud.570
+		1 = shroud.575
+	}
+}
+
+on_superstitious_beliefs_random_negative_events_list = {
+	random_events = {
+		1 = shroud.700
+		1 = shroud.705
+		1 = shroud.710
+		1 = shroud.715
+		1 = shroud.720
+		1 = shroud.725
+		1 = shroud.730
+		1 = shroud.735
+		1 = shroud.740
+		1 = shroud.745
+		1 = shroud.750
+		1 = shroud.755
+		1 = shroud.760
+		1 = shroud.765
+		1 = shroud.770
+		1 = shroud.775
+	}
+}
+
+# Fired by breach_shroud = yes
+# This = Country
+on_shroud_breached = {
+	events = {
+		shroud.1	# Refresh accords when breaching the shroud
+	}
+}
+
+# Fired when a country delves, no matter the result
+# This = Country
+on_shroud_delve = {
+	events = {
+		shroud.2 			# Pre-delve updates
+		shroud.7010 		# Transcendent Ethermind Leader XP bonus
+		shroud.7025 		# Transcendent Mainframe Research bonus
+		shroud.8400 		# Endbringers : update delve count
+	}
+	# the following events will take precedence over other delve POIs such as First Contacts
+	random_events = {
+		100 = shroud.10		# Synth Queen : contact the Animator
+		100 = shroud.5115	# Chosen - First Delve Event
+		100 = shroud.8410	# Endbringers - Delve Events
+		# Events with lower priority
+		1 = shroud.20		# Shroud Songs roll
+		1 = shroud.11250	# The End of the Cycle - Exiled event
+	}
+}
+
+# Fired when a country delves but finds nothing of interest
+# This = Country
+on_patron_delve_failed = {
+	random_events = {
+		0 = shroud.3     # Dummy call to avoid "shroud.3 is not fired from anywhere" error
+		100 = shroud.3000
+		100 = shroud.3005
+		100 = shroud.3010
+		100 = shroud.3015
+		100 = shroud.3020
+		100 = shroud.3025
+		100 = shroud.3030
+		100 = shroud.3035
+		100 = shroud.3040
+		100 = shroud.3045
+		100 = shroud.3050
+		100 = shroud.3055
+		100 = shroud.3060
+		100 = shroud.3065
+		100 = shroud.3070
+		100 = shroud.3100
+		100 = shroud.3105
+		100 = shroud.3110
+		100 = shroud.3115
+		100 = shroud.3120
+		100 = shroud.3200
+		100 = shroud.3210
+		100 = shroud.3220
+		100 = shroud.3230
+		100 = shroud.3240
+		100 = shroud.3250
+		100 = shroud.3260
+		100 = shroud.3270
+		1 = utopia.3002 # Fallback shroud events
+	}
+}
+
+# Fired when a player selects a new country during the game
+# This = Newly selected Country
+on_new_country_selected = {
+	events = {
+		shroud.8800
 	}
 }

@@ -1,0 +1,389 @@
+########################
+### HINDARA GLOBULAR ###
+########################
+
+sys_anashiri_init = {
+    name = "Anashiri"
+    class = sc_g_giant
+	max_instances = 1
+
+    flags = { attican_traverse sector_at7 hindara_globular anashiri_system }
+	
+    planet = {
+		name = "Anashiri"
+        class = pc_g_giant_star
+        orbit_distance = 0
+        size = 30
+        flags = { anashiri_star }
+    }
+
+	planet = {
+		name = "Yavia'is"
+		class = pc_highgrav_continental
+        orbit_distance = 250
+		size = 22
+		flags = {subclass_world yaviais_planet}
+		entity = "supercon_planet_03_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = supercon_world
+			}
+		}
+	}
+
+	planet = {
+		name = "Repele"
+		class = pc_ice_giant
+        orbit_distance = 250
+		size = 22
+		flags = { repele_planet }
+	}
+}
+
+sys_belas_init = {
+    name = "Belas"
+    class = sc_tt_orange
+	max_instances = 1
+
+    flags = { attican_traverse sector_at7 hindara_globular belas_system }
+
+	init_effect = {
+		save_global_event_target_as = calestonSci1
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}	
+
+    planet = {
+		name = "Belas"
+        class = pc_tt_orange_star
+        orbit_distance = 0
+        size = 30	
+        flags = { belas_star }
+    }
+
+	planet = {
+		class = pc_asteroid
+        orbit_distance = 150
+		count = 3
+		size = { min = 2 max = 4 }
+	}
+}	
+
+sys_osari_init = {
+    name = "Osari"
+    class = sc_b
+	max_instances = 1
+
+    flags = { attican_traverse sector_at7 hindara_globular osari_system }
+
+	init_effect = {
+		save_global_event_target_as = calestonCon2
+        add_anomaly = {
+            category = BTR_OSARI_SOARING_SOLAR
+            # target = this # TODO: remove this once it's proven to be unneeded
+        }
+	}
+
+    planet = {
+		name = "Osari"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 30
+        flags = { osari_star }
+    }
+
+	planet = {
+		name = "Powar"
+		class = pc_molten
+        orbit_distance = 150
+		size = 12
+		flags = { powar_planet }
+	}
+
+	planet = {
+		name = "Turupia"
+		class = pc_gas_giant
+        orbit_distance = 150
+		size = 33
+		has_ring = yes
+		flags = {subclass_world turupia_planet}
+
+		moon = {
+			name = "Rast'daa"
+			class = pc_toxic
+			orbit_distance = 10
+			size = 5
+			flags = { rastdaa_planet }
+		}
+	}
+
+	planet = {
+		name = "Nhascama"
+		class = pc_frozen
+        orbit_distance = 150
+		size = 6
+		flags = {subclass_world nhascama_planet}
+	}
+}
+
+sys_plenesh_init = {
+    name = "Plenesh"
+    class = sc_a
+	max_instances = 1
+
+    flags = { attican_traverse sector_at7 hindara_globular plenesh_system secondary_relay_system }
+
+    planet = {
+		name = "Plenesh"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 30
+        flags = { plenesh_star }
+    }
+
+	planet = {
+		name = "Ke'tosh"
+		class = pc_dextro_savannah
+        orbit_distance = 250
+		size = 18
+		flags = {subclass_world ketosh_planet}
+		entity = "retinal_planet_07_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = retinal_world
+				days = -1
+			}
+            add_anomaly = {
+                category = BTR_KET'OSH_LOST_HOMES
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+	}
+
+	planet = {
+		name = "Sian"
+		class = pc_methane
+        orbit_distance = 250
+		size = 20
+		flags = { sian_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_SIAN_SILENT_GRAVES
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_7_secondaryrelay" 
+			name = "Sector AT7 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_ranbaas_init = {
+    name = "Ran'baas"
+    class = sc_m
+	max_instances = 1
+
+    flags = { attican_traverse sector_at7 hindara_globular ranbaas_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 425
+	}
+
+    planet = {
+		name = "Ran'baas"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 30
+        flags = { ranbaas_star }
+    }
+
+	planet = {
+		name = "Madatirashu"
+		class = pc_hothouse
+        orbit_distance = 125
+		size = 12
+		flags = { madatirashu_planet }
+	}
+
+	planet = {
+		name = "Vasdia'yur"
+		class = pc_iron
+        orbit_distance = 125
+		size = 11
+		flags = { vasdiayur_planet }
+	}
+
+	planet = {
+		name = "Ralokxi"
+		class = pc_barren_cold
+        orbit_distance = 125
+		size = 11
+		flags = { ralokxi_planet }
+	}
+
+	planet = {
+		name = "Sana'a"
+		class = pc_ice_asteroid
+        orbit_distance = 50
+		size = 2
+		flags = { sanaa_planet }
+	}
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Qetior"
+		class = pc_ice_asteroid
+        orbit_distance = 0
+		size = 2
+		flags = { qetior_planet }
+	}
+
+	planet = {
+		name = "Basdir"
+		class = pc_frozen
+        orbit_distance = 125
+		size = 6
+		flags = { basdir_planet }
+	}
+}
+
+sys_shaihulud_init = {
+    name = "Shai'hulud"
+    class = sc_o_hyper
+	max_instances = 1
+
+    flags = { attican_traverse sector_at7 hindara_globular shaihulud_system primary_relay_system }
+
+	planet = {
+		name = "Shai'hulud"
+        class = pc_o_hyper_star
+        orbit_distance = 0
+        size = 30
+        flags = { shaihulud_star }
+    }
+
+	planet = {
+		name = "Arrakis"
+		class = pc_desert
+        orbit_distance = 45
+		size = 14
+		flags = {subclass_world arrakis_planet}
+		entity = "dune_planet_04_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dune_world
+			}
+		}
+	}
+
+	planet = {
+		name = "Leto"
+		class = pc_dextro_alpine
+        orbit_distance = 55
+		size = 19
+		flags = {subclass_world leto_planet}
+		entity = "alpine_planet_07_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = cascadian_world
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "Siaynoq"
+		class = pc_gas_giant
+        orbit_distance = 35
+		size = 34
+		has_ring = no
+		flags = {subclass_world siaynoq_planet}
+
+		moon = {
+			name = "Siona"
+			class = pc_frozen
+			orbit_distance = 35
+			size = 8			
+			flags = { siona_planet }
+		}
+	}
+
+	planet = {
+		name = "Kwisatz Haderach"
+		class = pc_highgrav_mephitic
+        orbit_distance = 30
+		size = 22
+		flags = {subclass_world kwisatz_haderach_planet}
+		entity = "ocean_planet_10_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = ocean_world
+				days = -1
+			}
+		}
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "hindaraglobular_calestonrift_primaryrelay" 
+			name = "Sector AT7 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_shanasuud_init = {
+    name = "Shana'suud"
+    class = sc_w_azure
+	max_instances = 1
+
+    flags = { attican_traverse sector_at7 hindara_globular shanasuud_system primary_relay_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 165
+	}
+
+    planet = {
+		name = "Shana'suud"
+        class = pc_w_azure_star
+        orbit_distance = 0
+        size = 30
+        flags = { shanasuud_star }
+	}	
+
+	change_orbit = 165
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "hindaraglobular_tauruslambda_primaryrelay" 
+			name = "Sector AT7 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

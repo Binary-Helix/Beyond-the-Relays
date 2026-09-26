@@ -1,0 +1,59 @@
+tr_btr_self_interest = {
+    tree_template = "btr_11_11_21"
+    adoption_bonus = "tr_btr_self_interest_adoption"
+    finish_bonus = "tr_btr_self_interest_finish"
+    traditions = {
+        "tr_btr_self_interest_imposition"
+        "tr_btr_self_interest_minimal"
+        "tr_btr_self_interest_closed"
+        "tr_btr_self_interest_before"
+        "tr_btr_self_interest_internal"
+    }
+     potential = {
+        NOR = {
+           has_tradition = tr_btr_pan_galactism_adoption
+            has_tradition = tr_btr_interventionism_adoption
+       }
+    }
+    ai_weight = {
+        factor = 5
+        modifier = {
+            factor = 10
+            is_part_of_galactic_council = yes
+        }
+        modifier = {
+            factor = 0
+            is_galactic_community_member = no
+        }
+        modifier = {
+            factor = 3
+            has_ethic = ethic_xenophile
+        }
+        modifier = {
+            factor = 6
+            has_ethic = ethic_fanatic_xenophile
+        }
+        modifier = {
+            factor = 3
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 6
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 0.5
+            has_ethic = ethic_xenophobe
+        }
+        modifier = {
+            factor = 0.25
+            has_ethic = ethic_fanatic_xenophobe
+        }
+        modifier = {
+            factor = 0
+            OR = {
+                is_homicidal = yes
+            }
+        }
+    }
+}

@@ -1,0 +1,521 @@
+######################
+### NINMAH CLUSTER ###
+######################
+
+sys_iustadal_init = {
+    name = "Iusta Dal"
+    class = sc_m_hyper
+	max_instances = 1
+
+	flags = { attican_traverse sector_at10 ninmah_cluster iustadal_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 235
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 245
+	}
+
+	planet = {
+		name = "Iusta Dal"
+        class = pc_m_hyper_star
+        orbit_distance = 0
+        size = 30
+        flags = { iusta_dal_star }
+    }
+
+	planet = {
+        name = "Lomgaraskha"
+        class = pc_hot_giant
+        orbit_distance = 70
+        orbit_angle = 350
+        has_ring = no
+		size = 37
+		flags = {subclass_world lomgaraskha_planet}
+    }
+
+	planet = {
+        name = "Virtufaf"
+        class = pc_alpine
+        orbit_distance = 70
+        orbit_angle = 350
+        has_ring = no
+		size = 17
+		flags = {subclass_world virtufaf_planet}
+		entity = "boreal_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = boreal_world
+			}
+		}
+    }
+	
+	planet = {
+        name = "Ximulak"
+        class = pc_frozen
+        orbit_distance = 70
+        orbit_angle = 350
+        has_ring = no
+		size = 13
+		flags = { ximulak_planet }
+	}	
+
+	change_orbit = 25
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	change_orbit = 10
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+        name = "Jretigakhas"
+        class = pc_ice_giant
+        orbit_distance = 35
+        orbit_angle = 350
+        has_ring = no
+		size = 35
+		flags = { jretigakhas_planet }
+	}	
+
+	planet = {
+        name = "Amankka"
+        class = pc_ice_giant
+        orbit_distance = 70
+        orbit_angle = 350
+        has_ring = no
+		size = 29
+		flags = {subclass_world amankka_planet}
+	}	
+}
+
+sys_maskimxul_init = {
+    name = "Maskim Xul"
+    class = "sc_m"
+	max_instances = 1
+
+	flags = { attican_traverse sector_at10 ninmah_cluster maskimxul_system }
+
+    planet = {
+		name = "Maskim Xul"
+        class = "pc_m_star"
+        orbit_distance = 0
+        size = 22
+        flags = { maskim_xul_star }
+    }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+
+    planet = {
+        name = "Suen"
+        class = pc_mephitic
+        orbit_distance = 150
+        orbit_angle = 39
+        size = 7
+        has_ring = no
+		starting_planet = yes
+		deposit_blockers = none		
+		modifiers = none
+		entity = "mephitic_desert_planet_09_entity"
+		flags = {subclass_world suen_planet}	
+		init_effect = {
+			add_modifier = {
+				modifier = badlands_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = tidal_locked
+				days =-1
+			}
+            add_anomaly = {
+                category = BTR_SUEN_OPERA_PHANTOM
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}	
+    }
+
+	planet = {
+		count = { min = 1 max = 3 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+    planet = {
+        class = pc_asteroid
+        orbit_distance = 0
+        orbit_angle = { min = 90 max = 270 }
+        flags = { listening_post_x_19_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_LISTENING_POST_X-19_EXILE_POST
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+        }
+    }
+
+    planet = {
+        name = "Kashshaptu"
+        class = pc_mephitic
+        orbit_distance = 150
+        orbit_angle = 206
+        has_ring = no
+		size = 3
+		entity = "mephitic_arid_planet_10_entity"
+		flags = {subclass_world kashshaptu_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = dust_world
+				days = -1
+			}
+
+			add_deposit = d_eezo_abundant
+            add_anomaly = {
+                category = BTR_KASHSHAPTU_ANCIENT_EEZO
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+    }
+
+    planet = {
+        name = "Damkianna"
+        class = "pc_gas_giant"
+        orbit_distance = 150
+        orbit_angle = 242
+        has_ring = no
+		size = 28
+		flags = { damkianna_planet }
+    }
+}
+
+sys_mullaxul_init = {
+    name = "Mulla Xul"
+    class = sc_k
+	max_instances = 1
+	usage = custom_empire
+
+	flags = { attican_traverse sector_at10 ninmah_cluster mullaxul_system }
+
+	init_effect = {
+		save_global_event_target_as = rachniFleet
+	}
+
+    planet = {
+		name = "Mulla Xul"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+        flags = { mulla_xul_star }
+    }
+    
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 375
+    }
+
+    planet = {
+        name = "Maldor"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 202
+        has_ring = no
+		size = 21
+		flags = { maldor_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = btr_scorching_surface
+				days = -1
+			}
+		}			
+    }
+
+    planet = {
+        name = "Utukku"
+        class = pc_arid
+        orbit_distance = 150
+        orbit_angle = 132
+        has_ring = no
+        size = 17
+		starting_planet = yes
+		entity = "badlands_planet_06_entity"
+		flags = { utukku_planet subclass_world }
+		deposit_blockers = none
+        modifiers = none
+		init_effect = {
+            add_modifier = {
+                modifier = badlands_world
+                days = -1
+            }
+			save_global_event_target_as = rachniHomeworld
+			if = {
+				limit = {
+					exists = event_target:rachniHomeworld
+				}
+				log = "Rachni Homeworld Event Target Set"
+			}
+            prevent_anomaly = yes
+
+            check_for_rachni_player = yes
+
+            if = {
+				limit = {
+					any_country = {
+						has_country_flag = rachni_hive_player
+					}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = rachni_hive_player
+					}
+					save_global_event_target_as = rachni_hive
+				}
+                generate_empire_home_planet = yes
+            }
+			else = {
+				generate_rachni_hive_country = yes
+			}
+            set_capital = yes
+			set_owner = event_target:rachni_hive
+			create_colony = {
+				owner = event_target:rachni_hive
+				species = event_target:rachniSpecies
+				ethos = owner
+			}
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/canon/rachni_hiv_origin"
+            generate_rac_utukku_pops = yes
+            event_target:rachni_hive = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+            add_anomaly = {
+                category = BTR_UTTUKU_WIND_SWEPT
+                # target = this # TODO: remove this once it's proven to be unneeded
+            }
+		}
+    }
+	
+	planet = { 
+		name = "Inakhos"
+		class = pc_asteroid
+		orbit_angle = 136
+		orbit_distance = 75
+		size = 1
+		flags = { inakhos_planet }
+	}	
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Keph"
+        class = pc_gas_giant
+        orbit_distance = 75
+        orbit_angle = 213
+        has_ring = yes
+		size = 37
+		flags = { keph_planet }
+        init_effect = {
+            add_anomaly = {
+                category = BTR_KEPH_DISAPPEARING_REFINERIES
+                target =    this
+            }
+        }
+    }
+}
+
+sys_taskumxil_init = {
+    name = "Taskum Xil"
+    class = sc_m_hyper
+	max_instances = 1
+ 
+	flags = { attican_traverse sector_at10 ninmah_cluster taskumxul_system secondary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+
+	planet = {
+		name = "Taskum Xil"
+        class = pc_m_hyper_star
+        orbit_distance = 0
+        size = 30
+        flags = { taskum_xil_star }
+    }
+
+	planet = {
+        name = "Quoristik"
+        class = pc_molten
+        orbit_distance = 125
+        orbit_angle = 350
+        has_ring = no
+		size = 10
+		flags = { quoristik_planet }
+	}	
+
+	change_orbit = 25
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+        name = "Xutulas"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 350
+        has_ring = no
+		size = 7
+		flags = { xutulas_planet }
+	}	
+	
+	planet = {
+        name = "Dertros"
+        class = pc_carbon
+        orbit_distance = 125
+        orbit_angle = 350
+        has_ring = no
+		size = 10
+		flags = { dertros_planet }
+	}	
+
+	planet = {
+        name = "Heguakhas"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 350
+        has_ring = no
+		size = 35
+	
+		moon = {
+			name = "Fandars"
+			class = pc_frozen
+			size = 7
+			flags = {fandars_planet heguakhas_planet}
+			orbit_distance = 20
+			has_ring = no
+		}
+    }
+
+	planet = {
+        name = "Muxaxak"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 350
+        has_ring = no
+		size = 29
+		flags = { muxaxak_planet }
+	}
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_10_secondaryrelay" 
+			name = "Sector AT10 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_worsazak_init = {
+    name = "Worsa Zak"
+    class = sc_g
+	max_instances = 1
+
+	flags = { attican_traverse sector_at10 ninmah_cluster worsazak_system primary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+
+	planet = {
+		name = "Worsa Zak"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+        flags = { worsa_zak_star }
+    }
+
+	planet = {
+        name = "Trafph"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 350
+        has_ring = no
+		size = 6
+		flags = { trafph_planet }
+	}	
+
+	change_orbit = 25
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+        name = "Jamdaktua"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 350
+        has_ring = no
+		size = 10
+		flags = { jamdaktua_planet }
+    }
+	
+	planet = {
+        name = "Fislatera"
+        class = pc_toxic
+        orbit_distance = 125
+        orbit_angle = 350
+        has_ring = no
+		size = 10
+		flags = { fislatera_planet }
+    }
+
+	planet = {
+        name = "Omakhros"
+        class = pc_toxic
+        orbit_distance = 125
+        orbit_angle = 350
+        has_ring = no
+		size = 10
+		flags = { omakhros_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "ninmahcluster_hawkingeta_primaryrelay" 
+			name = "Sector AT10 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

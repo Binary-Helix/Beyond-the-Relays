@@ -1,0 +1,454 @@
+#########################
+### HORSE HEAD NEBULA ###
+#########################
+
+sys_anadius_init = {
+    name = "Anadius"
+    class = "sc_m_giant"
+	max_instances = 1
+	usage = custom_empire
+
+    flags = { orion_spur sector_os2 horse_head_nebula anadius_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 300
+	}
+
+	planet = {
+		name = "Anadius"
+        class = "pc_m_giant_star"
+        orbit_distance = 0
+        size = 50
+        flags = { anadius_star }
+    }
+
+	planet = {
+		name = "Cronos Station"
+		class = pc_habitat
+		orbit_distance = 250
+		orbit_angle = 215
+		size = 12
+		has_ring = no
+		starting_planet = yes
+		flags = { cronos_station }
+		entity = "cerberus_cronos_01_game_entity"
+		deposit_blockers = none
+        modifiers = none
+		# init_effect = {
+		# 	save_global_event_target_as = cerberusHomeStation
+		#
+        #     prevent_anomaly = yes
+		#
+        #     check_for_human_player = yes
+        #
+        #     if = {
+		# 		limit = {
+		# 			any_country = {
+		# 				has_country_flag = cerberus_empire_player
+		# 			}
+		# 		}
+		# 		random_country = {
+		# 			limit = {
+		# 				has_country_flag = cerberus_empire_player
+		# 			}
+		# 			save_global_event_target_as = cerberus_empire
+		# 		}
+		# 	}
+		# 	else = {
+		# 		cerberus_cronos_station_setup = yes
+		# 	}
+        #     set_capital = yes
+		# 	set_owner = event_target:cerberus_empire
+		# 	create_colony = {
+		# 		owner = event_target:cerberus_empire
+		# 		species = event_target:humanSpecies
+		# 		ethos = owner
+		# 	}
+        #     generate_cerb_cronos_pops = yes
+		# }
+	}
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 4 max = 6 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_celaverimus_init = {
+	name = "Celaverimus"
+	class = sc_m_hyper
+	max_instances = 1
+
+    flags = { orion_spur sector_os2 horse_head_nebula celaverimus_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 350
+	}
+
+	planet = {
+		name = "Celaverimus"
+		class = pc_m_hyper_star
+		size = 40
+		flags = { celaverimus_star }
+		orbit_distance = 0
+	}	
+
+		planet = {
+        name = "Caerula"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 64
+        has_ring = no
+		size = 13
+		flags = { caerula_planet }
+    }
+
+	planet = {
+        name = "Celaverimus II"
+        class = pc_gas_giant
+        orbit_distance = 150
+        orbit_angle = 64
+        has_ring = no
+		size = 31
+		flags = { celaverimus_ii_planet }
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_fortuna_init = {
+    name = "Fortuna"
+    class = sc_m
+	max_instances = 1
+
+    flags = { orion_spur sector_os2 horse_head_nebula fortuna_system primary_relay_system }
+
+    planet = {
+		name = "Fortuna"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 15
+        flags = { fortuna_star }
+    }
+
+    planet = {
+        name = "Maganlis"
+        class = pc_toxic
+        orbit_distance = 125
+        orbit_angle = 272
+        size = 19
+        flags = { maganlis_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Therumlon"
+        class = pc_mephitic
+        orbit_distance = 125
+        orbit_angle = 224
+        size = 13
+        has_ring = no
+		flags = {subclass_world therumlon_planet}
+		entity = "mephitic_arctic_planet_04_entity"
+    }
+
+    planet = {
+        name = "Amaranthine"
+        class = pc_mephitic
+        orbit_distance = 125
+        orbit_angle = 171
+        size = 16
+        has_ring = no
+		entity = "ammonia_alpine_planet_09_entity"
+
+		moon = {
+			name = "Amaranthine a"
+			class = pc_iron
+			orbit_distance = 20
+			size = 6
+			flags = {amaranthine_a_planet amaranthine_planet}
+		}	
+    }
+
+    planet = {
+        name = "Wentania"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 261
+        size = 9
+        flags = { wentania_planet }
+	    has_ring = no
+    }
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "horseheadnebula_seloquelnebula_primaryrelay" 
+			name = "Sector OS2 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_lazarus_init = {
+	name = "Lazarus"
+	class = sc_deep_space
+	max_instances = 1
+
+    flags = { orion_spur sector_os2 horse_head_nebula lazarus_system }
+
+	planet = {
+		class = pc_invisible_star
+		size = 0
+		orbit_distance = 0
+	}	
+
+	change_orbit = 75
+}
+
+sys_lv426_init = {
+	name = "LV-426"
+	class = sc_k_giant
+	max_instances = 1
+
+    flags = { orion_spur sector_os2 horse_head_nebula lv426_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 200
+	}
+
+	planet = {
+		name = "LV-426"
+		class = pc_k_giant_star
+		size = 40
+		flags = { lv_426_star }
+		orbit_distance = 0
+	}	
+
+	planet = {
+        name = "LV-426 I"
+        class = pc_arid
+        orbit_distance = 150
+        orbit_angle = 64
+        has_ring = no
+		size = 17
+		flags = {subclass_world lv_426_i_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = badlands_world
+				days = -1
+			}
+		}
+    }
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+        name = "LV-426 II"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 64
+        has_ring = no
+		size = 4
+		flags = { lv_426_ii_planet }
+    }
+}
+
+sys_pax_init = {
+    name = "Pax"
+    class = sc_k
+	max_instances = 1
+
+    flags = { orion_spur sector_os2 horse_head_nebula pax_system primary_relay_system planet_state }
+	
+    planet = {
+		name = "Pax"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 30
+        flags = { pax_star }
+    }
+
+    planet = {
+        name = "Svarog"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 203
+        size = 29
+        flags = { svarog_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Noveria"
+        class = pc_arctic
+        orbit_distance = 125
+        orbit_angle = 107
+        size = 14
+		starting_planet = yes	
+		deposit_blockers = none
+		modifiers = none
+		entity = "antarctic_planet_01_entity"
+		flags = { subclass_world noveria_planet }		
+		# init_effect = {
+		# 	save_global_event_target_as = noveriaHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:citadelHomeworld
+        #         }
+        #         log = "Noveria Development Corporation Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+		#
+		# 	generate_noveria_development_corporation_country = yes
+		#
+		# 	set_capital = yes
+		# 	set_owner = event_target:noveria_development_corporation
+		# 	create_colony = {
+		# 		owner = event_target:noveria_development_corporation
+		# 		species = event_target:salarianSpecies
+		# 		ethos = owner
+		# 	}
+		#
+		# 	generate_noveria_pops = yes
+		#
+		# 	add_modifier = {
+		# 		modifier = antar_world
+		# 		days = -1
+		# 	}
+		# }
+	}
+
+    planet = {
+        name = "Morana"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 30
+        size = 2
+        flags = { morana_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Veles"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 352
+        size = 19
+        flags = { veles_planet }
+        has_ring = no
+    }	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "horseheadnebula_exoduscluster_primaryrelay" 
+			name = "Sector OS2 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_strenuus_init = {
+    name = "Strenuus"
+    class = sc_f
+	max_instances = 1
+
+    flags = { orion_spur sector_os2 horse_head_nebula pax_system secondary_relay_system }
+
+    planet = {
+		name = "Strenuus"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 20
+        flags = { strenuus_star }
+    }
+
+    planet = {
+        name = "Yunthorl"
+        class = pc_methane
+        orbit_distance = 30
+        orbit_angle = 145
+        size = 14
+		has_ring = no
+		entity = "methane_ocean_planet_04_entity"
+		flags = {subclass_world yunthorl_planet}
+		init_effect = {
+			add_modifier = {
+				modifier = hotocean_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Antitarra"
+        class = pc_ice_giant
+        orbit_distance = 20
+        orbit_angle = 236
+        size = 30
+        flags = { antitarra_planet }
+		has_ring = no
+    }
+
+    planet = {
+        name = "Trelyn"
+        class = pc_iron
+        orbit_distance = 20
+        orbit_angle = 208
+        size = 2
+        flags = { trelyn_planet }
+		has_ring = no
+    }
+
+    planet = {
+        name = "Xawin"
+        class = pc_mephitic
+        orbit_distance = 20
+        orbit_angle = 124
+        size = 14
+        flags = { xawin_planet }
+		has_ring = no
+		entity = "mephitic_arctic_planet_05_entity"
+    }
+
+    planet = {
+        name = "Thesalgon"
+        class = pc_gas_giant
+        orbit_distance = 20
+        orbit_angle = 313
+        size = 33
+        flags = { thesalgon_planet }
+		has_ring = no
+    }
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_2_secondaryrelay" 
+			name = "Sector OS2 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

@@ -1,0 +1,201 @@
+##########################
+### CORNUCOPIA EXPANSE ###
+##########################
+
+sys_delvav_init = {
+	name = "Delvav"
+    class = sc_b
+	max_instances = 1
+
+    flags = { inner_council sector_ic7 civilins_cluster delvav_system secondary_relay_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 350
+	}
+
+	planet = {
+	    name = "Delvav"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 31
+        flags = { delvav_star }
+    }
+
+	planet = {
+	    name = "Rem Dai"
+        class = pc_barren
+        orbit_distance = 125
+        size = 9
+        flags = { rem_dai_planet }
+    }
+
+	planet = {
+	    name = "Ciania"
+        class = pc_hothouse
+        orbit_distance = 125
+        size = 14
+        flags = { ciania_planet }
+	}
+
+    change_orbit = 100
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Pranumi"
+        class = pc_hothouse	
+        orbit_distance = 25
+        size = 13
+        flags = { pranumi_planet }
+   }
+
+	planet = {
+	    name = "Xio Vas"
+        class = pc_frozen
+        orbit_distance = 125
+        size = 11
+        flags = { xio_vas_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "inner_council_sector_7_secondaryrelay" 
+			name = "Sector IC7 - Secondary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_tamlox_init = {
+	name = "Tam Lox"
+    class = sc_d
+	max_instances = 1
+
+    flags = { inner_council sector_ic7 civilins_cluster tam_lox_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 350
+	}
+
+	planet = {
+	    name = "Tam Lox"
+        class = pc_d_star
+        orbit_distance = 0
+        size = 34
+        flags = { tam_lox_star }
+    }
+
+	planet = {
+	    name = "Baram"
+        class = pc_molten
+        orbit_distance = 100
+        size = 7
+        flags = { baram_planet }
+    }
+
+	planet = {
+	    name = "Ta Sion"
+        class = pc_molten
+        orbit_distance = 100
+        size = 12
+        flags = { ta_sion_planet }
+	}
+
+	planet = {
+	    name = "Dep An"
+        class = pc_gas_giant	
+        orbit_distance = 100
+        size = 33
+        flags = { dep_an_planet }
+		has_ring = yes
+    }
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+	    name = "Knepod"
+        class = pc_chlorine
+        orbit_distance = 50
+        size = 19
+        flags = { knepod_planet }
+	}
+
+	planet = {
+		name = "Winon"
+		class = pc_frozen
+		orbit_distance = 100
+		size = 5
+		flags = { winon_planet }
+	}
+}
+
+sys_vabto_init = {
+	name = "Vabto"
+    class = sc_ae
+	max_instances = 1
+
+    flags = { inner_council sector_ic7 civilins_cluster vabto_system }
+
+    init_effect = {
+        save_global_event_target_as = volSci1
+    }
+
+	planet = {
+	    name = "Vabto"
+        class = pc_ae_star
+        orbit_distance = 0
+        size = 31
+        flags = { vabto_star }
+    }
+
+	planet = {
+	    name = "Ni Topa"
+        class = pc_barren_cold
+        orbit_distance = 250
+        size = 9
+        flags = { ni_topa_planet }
+    }
+
+	planet = {
+	    name = "Eoin"
+        class = pc_ice_giant
+        orbit_distance = 250
+        size = 14
+		moon = {
+			name = "Eoin"
+			class = pc_barren
+			orbit_distance = 20
+			size = 14			
+			flags = { eoin_planet }
+		}
+		moon = {
+			name = "Eoin"
+			class = pc_molten
+			orbit_distance = 5
+			size = 14			
+			flags = { eoin_planet }
+		}
+		moon = {
+			name = "Eoin"
+			class = pc_barren_cold
+			orbit_distance = 5
+			size = 14			
+			flags = { eoin_planet }
+		}
+	}
+}

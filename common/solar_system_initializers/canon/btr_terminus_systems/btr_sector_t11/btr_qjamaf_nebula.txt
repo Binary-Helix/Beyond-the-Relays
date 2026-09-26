@@ -1,0 +1,503 @@
+#####################
+### QJAMAF NEBULA ###
+#####################
+
+
+sys_ifri_init = {
+    name = "Ifri"
+    class = sc_m
+	max_instances = 1
+
+	flags = { terminus_systems sector_t11 qjamaf_nebula ifri_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 350
+    }
+
+    planet = {
+		name = "Ifri"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 26
+        flags = { ifri_star }
+    }
+
+    planet = {
+        name = "Gurzil"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 99
+        size = 13
+        flags = { gurzil_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Antaeus"
+        class = pc_iron
+        orbit_distance = 80
+        orbit_angle = 109
+        size = 17
+        flags = { antaeus_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Neith"
+        class = pc_ocean
+        orbit_distance = 80
+        orbit_angle = 90
+        size = 18
+        flags = { neith_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Ament"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 232
+        size = 11
+        flags = { ament_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Tanit"
+        class = pc_gel_asteroid
+        orbit_distance = 30
+        orbit_angle = 294
+        size = 3
+        flags = { tanit_planet }
+        has_ring = no
+    }
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Baal"
+        class = pc_gas_giant
+        orbit_distance = 35
+        orbit_angle = 280
+        size = 35
+        flags = { baal_planet }
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Cyre"
+        class = pc_barren_cold
+        orbit_distance = 40
+        orbit_angle = 214
+        size = 13
+        flags = { cyre_planet }
+        has_ring = no
+
+    }
+}
+
+sys_popolvuh_init = {
+    name = "Popol Vuh"
+    class = sc_b
+	max_instances = 1
+
+	flags = { terminus_systems sector_t11 qjamaf_nebula popol_vuh_system }
+
+    planet = {
+		name = "Popol Vuh"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 37
+        flags = { popol_vuh_star }
+    }
+
+    planet = {
+        name = "Xlitlan"
+        class = pc_molten
+        orbit_distance = 80
+        orbit_angle = 101
+        size = 14
+        flags = { xlitlan_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Ajtzak"
+        class = pc_iron
+        orbit_distance = 80
+        orbit_angle = 250
+        size = 17
+        flags = { ajtzak_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Akaime"
+        class = pc_primal
+        orbit_distance = 80
+        orbit_angle = 186
+        size = 16
+        has_ring = no
+
+        moon = {
+            name = "Bitol"
+            class = pc_barren
+            orbit_distance = 15
+            orbit_angle = 317
+            size = 4
+            flags = {bitol_planet akaime_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Chirakata-Ixminasune"
+        class = pc_ice_giant
+        orbit_distance = 80
+        orbit_angle = 245
+        size = 30
+        has_ring = no
+
+        moon = {
+            name = "Kukulkan"
+            class = pc_molten
+            orbit_distance = 15
+            orbit_angle = 243
+            size = 5
+            flags = {kukulkan_planet chirakata_ixminasune_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Hun-Hunahpu"
+            class = pc_ammonia
+            orbit_distance = 15
+            orbit_angle = 222
+            size = 6
+            flags = { hun_hunahpu_planet }
+            has_ring = no
+        }
+
+        moon = {
+            name = "Ixmukane"
+            class = pc_iron
+            orbit_distance = 15
+            orbit_angle = 244
+            size = 4
+            flags = { ixmukane_planet }
+            has_ring = no
+        }
+
+        moon = {
+            name = "Ixpiyacoc"
+            class = pc_barren_cold
+            orbit_distance = 15
+            orbit_angle = 207
+            size = 3
+            flags = { ixpiyacoc_planet }
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Mulzencab"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 197
+        size = 27
+        flags = { mulzencab_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Tepeu"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 59
+        size = 14
+        flags = { tepeu_planet }
+        has_ring = no
+    }
+}
+
+sys_sute_init = {
+    name = "Sute"
+    class = sc_b
+	max_instances = 1
+
+	flags = { terminus_systems sector_t11 qjamaf_nebula sute_system }
+
+    init_effect = {
+        save_global_event_target_as = lystheniSciCon1
+    }
+
+    planet = {
+		name = "Sute"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 38
+        flags = { sute_star }
+    }
+
+    planet = {
+        name = "Beroa"
+        class = pc_chthonian
+        orbit_distance = 250
+        orbit_angle = 105
+        size = 24
+        flags = { beroa_planet }
+        has_ring = no
+    }
+}
+
+sys_tengri_init = {
+    name = "Tengri"
+    class = sc_f
+	max_instances = 1
+
+	flags = { terminus_systems sector_t11 qjamaf_nebula tengri_system secondary_relay_system }
+
+    planet = {
+		name = "Tengri"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 30
+        flags = { tengri_star }
+    }
+
+    planet = {
+        name = "Kayra"
+        class = pc_molten
+        orbit_distance = 70
+        orbit_angle = 89
+        size = 12
+        flags = { kayra_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Umay"
+        class = pc_barren
+        orbit_distance = 70
+        orbit_angle = 137
+        size = 15
+        flags = { umay_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Boz"
+        class = pc_tropical
+        orbit_distance = 70
+        orbit_angle = 113
+        size = 16
+        flags = { boz_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Mergen"
+        class = pc_frozen
+        orbit_distance = 70
+        orbit_angle = 188
+        size = 10
+        flags = { mergen_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Od"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 109
+        size = 36
+        flags = { od_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Erlik"
+        class = pc_barren
+        orbit_distance = 70
+        orbit_angle = 134
+        size = 18
+        flags = { erlik_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_11_secondaryrelay" 
+			name = "Sector T11 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_yelow_init = {
+    name = "Yelow"
+    class = sc_g_super
+	max_instances = 1
+
+	flags = { terminus_systems sector_t11 qjamaf_nebula yelow_system primary_relay_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 175
+    }
+
+    planet = {
+		name = "Yelow"
+        class = pc_g_super_star
+        orbit_distance = 0
+        size = 40
+        flags = { yelow_star }
+    }
+
+    planet = {
+        name = "Gul"
+        class = pc_g_star
+        orbit_distance = 60
+        orbit_angle = 340
+        size = 23
+        has_ring = no
+
+        moon = {
+            name = "Odette"
+            class = pc_barren
+            orbit_distance = 15
+            orbit_angle = 180
+            size = 17
+            flags = {odette_planet gul_star}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Zolty"
+        class = pc_g_star
+        orbit_distance = 60
+        orbit_angle = 192
+        size = 27
+        has_ring = no
+
+        moon = {
+            name = "Camilla"
+            class = pc_molten
+            orbit_distance = 15
+            orbit_angle = 85
+            size = 14
+            flags = {camilla_planet zolty_star}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Raoul"
+            class = pc_hothouse
+            orbit_distance = 15
+            orbit_angle = 213
+            size = 15
+            flags = { raoul_planet }
+            has_ring = no
+        }
+    }
+
+    change_orbit = 55
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Braith"
+        class = pc_iron
+        orbit_distance = 0
+        orbit_angle = 267
+        size = 10
+        flags = { braith_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Cassilda"
+        class = pc_tundra
+        orbit_distance = 65
+        orbit_angle = 171
+        size = 20
+        flags = { cassilda_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Pelagie"
+        class = pc_ice_giant
+        orbit_distance = 60
+        orbit_angle = 110
+        size = 28
+        has_ring = no
+
+        moon = {
+            name = "Sylvia"
+            class = pc_barren
+            orbit_distance = 15
+            orbit_angle = 214
+            size = 4
+            flags = {sylvia_planet pelagie_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Vance"
+            class = pc_methane
+            orbit_distance = 15
+            orbit_angle = 151
+            size = 6
+            flags = { vance_planet }
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Laffatt"
+        class = pc_frozen
+        orbit_distance = 60
+        orbit_angle = 83
+        size = 18
+        flags = { laffatt_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Boris"
+        class = pc_iron
+        orbit_distance = 60
+        orbit_angle = 132
+        size = 10
+        flags = { boris_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "qjamafnebula_omeganebula_primaryrelay" 
+			name = "Sector T11 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

@@ -1,0 +1,483 @@
+###################
+### XOSAR VERGE ###
+###################
+
+sys_haelazi_init = {
+    name = "Haelazi"
+    class = "sc_k"
+	max_instances = 1
+
+	flags = { attican_traverse sector_at9 xosar_verge haelazi_system primary_relay_system }	
+
+    planet = {
+		name = "Haelazi"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { haelazi_star }
+    }
+
+    planet = {
+        name = "Henbay"
+        class = pc_hothouse
+        orbit_distance = 150
+		orbit_angle = { min = 40 max = 180 }
+        size = 10
+        flags = { henbay_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Yimorn"
+		class = pc_gas_giant
+		orbit_distance = 150
+		size = 34
+		flags = { yimorn_planet }
+		has_ring = yes
+	}	
+
+    planet = {
+        name = "Ceeharu"
+        class = pc_mephitic
+        orbit_distance = 150
+        orbit_angle = 171
+        has_ring = no
+		size = 12
+        flags = {subclass_world ceeharu_planet}
+        entity = "mephitic_ocean_planet_11_entity"
+        init_effect = {
+            add_modifier = {
+                modifier = coldocean_world
+                days = -1
+            }
+        }
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "xosarverge_phoenixmassing_primaryrelay" 
+			name = "Sector AT9 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_seefisgaca_init = {
+	name = "Seefis'Gaca"
+	class = sc_k
+	max_instances = 1
+
+	flags = { attican_traverse sector_at9 xosar_verge seefisgaca_system secondary_relay_system disciples_of_nazara_system }	
+
+	planet = {
+		name = "Seefis'Gaca"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+        flags = { seefisgaca_star }
+    }
+
+	planet = {
+        name = "Ceeleya"
+        class = pc_hothouse
+        orbit_distance = 50
+		orbit_angle = 119
+        has_ring = no
+		size = 12
+		flags = { ceeleya_planet }
+    }
+	
+	planet = {
+        name = "Shaefirn"
+        class = pc_hothouse
+        orbit_distance = 50
+        orbit_angle = 119
+        has_ring = no
+		size = 14
+		flags = { shaefirn_planet }
+    }
+
+	planet = {
+        name = "Rastrom"
+        class = pc_methane
+        orbit_distance = 50
+        orbit_angle = 119
+        has_ring = no
+		size = 17
+        flags = { rastrom_planet subclass_world }
+        entity = "methane_savannah_planet_05_entity"
+		init_effect = {
+            add_modifier = {
+                modifier = steppe_world
+                days = -1
+            }
+		}
+    }
+	
+	planet = {
+        name = "Jael"
+        class = pc_carbon
+        orbit_distance = 50
+        orbit_angle = 119
+        has_ring = no
+		size = 9
+		flags = { jael_planet }
+    }
+
+	planet = {
+        name = "Yaestrom"
+        class = pc_barren_cold
+        orbit_distance = 50
+        orbit_angle = 119
+        has_ring = no
+		size = 6
+		flags = { yaestrom_planet }
+    }
+
+	planet = {
+        name = "Xandeka"
+        class = pc_frozen
+        orbit_distance = 50
+        orbit_angle = 119
+        has_ring = no
+		size = 11
+		flags = { xandeka_planet }
+    }
+	
+	planet = {
+        name = "Zeetalir"
+        class = pc_ammonia
+        orbit_distance = 50
+        orbit_angle = 119
+        has_ring = no
+		size = 18
+        entity = "ammonia_ocean_planet_08_entity"
+        flags = {subclass_world zeetalir_planet}
+        init_effect = {
+            add_modifier = {
+                modifier = coldocean_world
+                days = -1
+            }
+        }
+    }
+
+	planet = {
+        name = "Fito"
+        class = pc_frozen
+        orbit_distance = 50
+        orbit_angle = 119
+        has_ring = no
+		size = 3
+		flags = { fito_planet }
+    }
+
+	planet = {
+        name = "Waamornh"
+        class = pc_barren_cold
+        orbit_distance = 50
+        orbit_angle = 119
+        has_ring = no
+		size = 5
+		flags = { waamornh_planet }
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_9_secondaryrelay" 
+			name = "Sector AT9 - Secondary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_sesost_init = {
+	name = "Sesost"
+	class = sc_m_giant
+	max_instances = 1
+
+	flags = { attican_traverse sector_at9 xosar_verge sesost_system disciples_of_nazara_system }	
+
+	planet = {
+		name = "Sesost"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 35
+        flags = { sesost_star }
+    }
+
+	planet = {
+        name = "Heeris"
+        class = pc_molten
+        orbit_distance = 250
+        orbit_angle = 119
+        has_ring = no
+		size = 12
+		flags = { heeris_planet }
+    }
+	
+	planet = {
+        name = "Saeto'Shar"
+        class = pc_arctic
+        orbit_distance = 250
+        orbit_angle = 119
+        has_ring = no
+		size = 6
+        entity = "antarctic_planet_03_entity"
+        flags = { saetoshar_planet subclass_world }
+		init_effect = {
+            add_modifier = {
+                modifier = antar_world
+                days = -1
+            }
+		}
+    }
+}
+
+sys_xelazi_init = {
+	name = "Xelasi"
+	class = sc_a_super
+	max_instances = 1
+
+	flags = { attican_traverse sector_at9 xosar_verge xelazi_system }	
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 280
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 360
+	}
+
+    asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 440
+	}
+
+
+	planet = {
+		name = "Xelasi"
+        class = pc_a_super_star
+        orbit_distance = 0
+        size = 35
+        flags = { xelasi_star }
+    }
+
+	planet = {
+        name = "Raanbay"
+        class = pc_hot_giant
+        orbit_distance = 80
+        orbit_angle = 119
+        has_ring = no
+		size = 32
+		flags = { raanbay_planet }
+    }
+	
+	planet = {
+        name = "Rofo'Homma"
+        class = pc_molten
+        orbit_distance = 80
+        orbit_angle = 119
+        has_ring = no
+		size = 10
+		flags = { rofohomma_planet }
+    }
+	
+	planet = {
+        name = "Wesost"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 119
+        has_ring = no
+		size = 7
+		flags = { wesost_planet }
+    }
+
+	change_orbit = 40
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+        name = "Genn"
+        class = pc_iron
+        orbit_distance = 40
+        orbit_angle = 119
+        has_ring = no
+		size = 10
+		flags = { genn_planet }
+    }
+
+	change_orbit = 40
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Faso'Yul"
+        class = pc_barren
+        orbit_distance = 40
+        orbit_angle = 119
+        has_ring = no
+		size = 2
+		flags = { fasoyul_planet }
+	}
+
+	change_orbit = 40
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Jiman"
+        class = pc_ice_giant
+        orbit_distance = 40
+        orbit_angle = 119
+        has_ring = yes
+		size = 28
+		flags = { jiman_planet }
+	}
+}
+
+sys_yassu_init = {
+	name = "Yassu"
+	class = sc_g
+	max_instances = 1
+
+	flags = { attican_traverse sector_at9 xosar_verge yassu_system }	
+
+	planet = {
+		name = "Yassu"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+        flags = { yassu_star }
+    }
+
+	planet = {
+        name = "Hasha"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 119
+        has_ring = no
+		size = 8
+		flags = { hasha_planet }
+    }
+	
+	planet = {
+        name = "Shomos"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 119
+        has_ring = no
+		size = 16
+		flags = { shomos_planet }
+    }
+
+	planet = {
+        name = "Fael"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 119
+        has_ring = no
+		size = 38
+		flags = { fael_planet }
+    }
+	
+	planet = {
+        name = "Tunna"
+        class = pc_ice_giant
+        orbit_distance = 125
+        orbit_angle = 119
+        has_ring = no
+		size = 31
+
+		moon = {
+			name = "Jarul"
+			class = pc_arctic
+			orbit_distance = 10
+			orbit_angle = 119
+			has_ring = no
+			size = 4
+            entity = "cryovolcanic_planet_06_entity"
+            flags = {subclass_world jarul_planet tunna_planet}
+            init_effect = {
+                add_modifier = {
+                    modifier = cryovolcanic_world
+                    days = -1
+                }
+            }
+		}
+	}
+}
+
+sys_yeelixeeme_init = {
+	name = "Yeeli'Xeeme"
+	class = sc_m
+	max_instances = 1
+
+	flags = { attican_traverse sector_at9 xosar_verge yeelixeeme_system }	
+
+	planet = {
+		name = "Yeeli'Xeeme"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 25
+        flags = { yeelixeeme_star }
+    }
+
+	planet = {
+        name = "Viko"
+        class = pc_barren_cold
+        orbit_distance = 125
+        orbit_angle = 119
+        has_ring = no
+		size = 7
+		flags = { viko_planet }
+    }
+	
+	planet = {
+        name = "Jahi"
+        class = pc_shattered
+        orbit_distance = 125
+        orbit_angle = 119
+        has_ring = no
+		size = 14
+		flags = { jahi_planet }
+    }
+
+	planet = {
+        name = "Shewan"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 119
+        has_ring = no
+		size = 7
+		flags = { shewan_planet }
+    }
+	
+	planet = {
+        name = "Quiko"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 119
+        has_ring = no
+		size = 10
+		flags = { quiko_planet }
+    }
+}

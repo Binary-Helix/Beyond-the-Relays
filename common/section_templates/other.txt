@@ -1,5 +1,3 @@
-@section_cost = 30
-
 ###########################
 ## Civilian Stations
 ###########################
@@ -19,7 +17,7 @@ ship_section_template = {
 }
 
 ##################
-# Defensive Platform
+# Defense Platform
 ##################
 
 ship_section_template = {
@@ -69,9 +67,34 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = {
-			#alloys = @section_cost
-			light_alloys = @section_cost
-			heavy_alloys = @section_cost
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @defense_platform_section_cost
+			light_alloys = @defense_platform_section_cost
+			heavy_alloys = @defense_platform_section_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @defense_platform_section_cost
+			light_alloys = @defense_platform_section_cost
+			heavy_alloys = @defense_platform_section_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @defense_platform_section_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 	}
 
@@ -131,9 +154,34 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = {
-			#alloys = @section_cost
-			light_alloys = @section_cost
-			heavy_alloys = @section_cost
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @defense_platform_section_cost
+			light_alloys = @defense_platform_section_cost
+			heavy_alloys = @defense_platform_section_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @defense_platform_section_cost
+			light_alloys = @defense_platform_section_cost
+			heavy_alloys = @defense_platform_section_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @defense_platform_section_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 	}
 
@@ -175,9 +223,34 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = {
-			#alloys = @section_cost
-			light_alloys = @section_cost
-			heavy_alloys = @section_cost
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @defense_platform_section_cost
+			light_alloys = @defense_platform_section_cost
+			heavy_alloys = @defense_platform_section_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @defense_platform_section_cost
+			light_alloys = @defense_platform_section_cost
+			heavy_alloys = @defense_platform_section_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @defense_platform_section_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 	}
 
@@ -229,12 +302,37 @@ ship_section_template = {
 
  	resources = {
  		category = ship_sections
- 		cost = {
- 			#alloys = @section_cost
-			light_alloys = @section_cost
-			heavy_alloys = @section_cost
- 		}
- 	}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @defense_platform_section_cost
+			light_alloys = @defense_platform_section_cost
+			heavy_alloys = @defense_platform_section_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @defense_platform_section_cost
+			light_alloys = @defense_platform_section_cost
+			heavy_alloys = @defense_platform_section_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @defense_platform_section_cost
+			mult = @halved_alloy_to_food_cost_ratio
+		}
+	}
 
  	ai_weight = {
  		factor = 1
@@ -273,9 +371,34 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = {
-			#alloys = @section_cost
-			light_alloys = @section_cost
-			heavy_alloys = @section_cost
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @defense_platform_section_cost
+			light_alloys = @defense_platform_section_cost
+			heavy_alloys = @defense_platform_section_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @defense_platform_section_cost
+			light_alloys = @defense_platform_section_cost
+			heavy_alloys = @defense_platform_section_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @defense_platform_section_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 	}
 
@@ -321,9 +444,34 @@ ship_section_template = {
 	resources = {
 		category = ship_sections
 		cost = {
-			#alloys = @section_cost
-			light_alloys = @section_cost
-			heavy_alloys = @section_cost
+			trigger = {
+				from = {
+					country_uses_bio_ships = no
+				}
+			}
+			#alloys = @defense_platform_section_cost
+			light_alloys = @defense_platform_section_cost
+			heavy_alloys = @defense_platform_section_cost
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			#alloys = @defense_platform_section_cost
+			light_alloys = @defense_platform_section_cost
+			heavy_alloys = @defense_platform_section_cost
+			mult = 0.5
+		}
+		cost = {
+			trigger = {
+				from = {
+					country_uses_bio_ships = yes
+				}
+			}
+			food = @defense_platform_section_cost
+			mult = @halved_alloy_to_food_cost_ratio
 		}
 	}
 }

@@ -1,0 +1,261 @@
+#######################
+### MAEZORA CLUSTER ###
+#######################
+
+sys_fulano_init = {
+    name = "Fulano"
+	class = sc_f
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv3 maezora_cluster fulano_system secondary_relay_system }
+
+	planet = {
+		name = "Fulano"
+		class = pc_f_star
+		orbit_distance = 0
+		size = 30
+		flags = { fulano_star }
+	}
+
+	planet = {
+		name = "Fulano I"
+		class = pc_chthonian
+		orbit_distance = 100
+		orbit_angle = 159
+		size = 14
+		flags = { fulano_i_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Fulano II"
+		class = pc_hothouse
+		orbit_distance = 100
+		orbit_angle = 116
+		size = 14
+		flags = { fulano_ii_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Fulano III"
+		class = pc_ice_giant
+		orbit_distance = 100
+		orbit_angle = 117
+		size = 29
+		has_ring = no
+
+		moon = {
+			name = "803 Fulano IIIa"
+			class = pc_iron
+			orbit_distance = 20
+			orbit_angle = 115
+			size = 4
+			flags = {803_fulano_iiia_planet fulano_iii_planet}
+			has_ring = no
+		}
+	}
+
+	planet = {
+		name = "Fulano IV"
+		class = pc_barren_cold
+		orbit_distance = 100
+		orbit_angle = 98
+		size = 9
+		flags = { fulano_iv_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Fulano V"
+		class = pc_ammonia
+		orbit_distance = 100
+		orbit_angle = 269
+		size = 16
+		flags = { fulano_v_planet }
+		has_ring = no
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "alliance_space_sector_3_secondaryrelay" 
+			name = "Sector SV3 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_laenesi_init = {
+    name = "Laenesi"
+    class = sc_g
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv3 argos_rho laenesi_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 280
+    }
+
+    planet = {
+		name = "Laenesi"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 36
+        flags = { laenesi_star }
+    }
+
+    planet = {
+        name = "Laenesi I"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 183
+        size = 14
+        flags = { laenesi_i_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Laensi II"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 140
+        size = 12
+        flags = { laensi_ii_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Laenesi III"
+        class = pc_barren
+        orbit_distance = 80
+        orbit_angle = 107
+        size = 9
+        flags = { laenesi_iii_planet }
+        has_ring = no
+    }
+
+	change_orbit = 40
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Laenesi IV"
+        class = pc_frozen
+        orbit_distance = 40
+        orbit_angle = 162
+        size = 13
+        flags = { laenesi_iv_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Laenesi V"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 276
+        size = 19
+        flags = { laenesi_v_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Laenesi VI"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 160
+        size = 22
+        flags = { laenesi_vi_planet }
+        has_ring = no
+    }
+}
+
+sys_soloni_init = {
+    name = "Soloni"
+    class = sc_m
+	max_instances = 1
+
+    flags = { skyllian_verge sector_sv3 argos_rho soloni_system }
+
+    planet = {
+		name = "Soloni"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 35
+        flags = { soloni_star }
+    }
+
+    planet = {
+        name = "Soloni I"
+        class = pc_iron
+        orbit_distance = 250
+        orbit_angle = 182
+        size = 13
+        flags = { soloni_i_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Soloni II"
+        class = pc_gas_giant
+        orbit_distance = 250
+        orbit_angle = 203
+        size = 35
+        has_ring = no
+
+        moon = {
+            name = "Soloni IIa"
+            class = pc_barren
+            orbit_distance = 20
+            orbit_angle = 180
+            size = 4
+            flags = {soloni_iia_planet soloni_ii_planet}
+            has_ring = no
+        }
+
+        moon = {
+            name = "Soloni IIb"
+            class = pc_molten
+            orbit_distance = 5
+            orbit_angle = 317
+            size = 5
+            flags = { soloni_iib_planet }
+            has_ring = no
+        }
+
+        moon = {
+            name = "Soloni IIc"
+            class = pc_chlorine
+            orbit_distance = 5
+            orbit_angle = 186
+            size = 7
+            flags = { soloni_iic_planet }
+            has_ring = no
+        }
+
+        moon = {
+            name = "Soloni IId"
+            class = pc_barren_cold
+            orbit_distance = 5
+            orbit_angle = 286
+            size = 8
+            flags = { soloni_iid_planet }
+            has_ring = no
+        }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "maezoracluster_anumimassing_primaryrelay" 
+			name = "Sector SV3 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

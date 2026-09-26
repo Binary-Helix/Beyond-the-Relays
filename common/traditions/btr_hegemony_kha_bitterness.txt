@@ -1,0 +1,57 @@
+tr_btr_bitterness_adoption = {
+    possible = {
+        has_origin = hegemony_kha_origin
+    }
+    unlocks_agenda = agenda_bitterness
+    modifier = {
+        pop_government_ethic_attraction = 0.15
+    }
+}
+
+tr_btr_bitterness_finish = {
+    modifier = {
+        country_claim_influence_cost_mult = -0.35
+        ascension_perks_add = 1
+    }
+}
+
+tr_btr_bitterness_beaten = {
+    modifier = {
+        country_unity_produces_mult = 0.25
+    }
+}
+
+tr_btr_bitterness_never_forget = {
+    modifier = {
+        ship_fire_rate_mult = 0.1
+        ship_hull_mult = 0.05
+    }
+}
+
+tr_btr_bitterness_lessons_of_war = {
+    possible = {
+        has_tradition = tr_btr_bitterness_beaten
+        has_tradition = tr_btr_bitterness_never_forget
+    }
+    modifier = {
+        weapon_type_strike_craft_weapon_damage_mult = 0.25
+        ship_speed_mult = 0.15
+        ship_damage_against_starbases_mult = 0.1
+    }
+}
+
+tr_btr_bitterness_rally = {
+    possible = { has_tradition = tr_btr_bitterness_lessons_of_war }
+    modifier = {
+        country_naval_cap_mult = 0.25
+        ship_military_energy_cost_mult = 0.25
+    }
+}
+
+tr_btr_bitterness_rise = {
+    possible = { has_tradition = tr_btr_bitterness_rally }
+    modifier = {
+        country_war_exhaustion_mult = -0.2
+        ship_weapon_damage = 0.15
+    }
+}

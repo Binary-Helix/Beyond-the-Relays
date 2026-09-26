@@ -1,1 +1,69 @@
-# VANILLA OVERRIDES
+##################
+# Gravity Snares #
+##################
+
+# Standard Gravity Snare
+utility_component_template = {
+	key = "GRAVITY_SNARE_STANDARD"
+	size = aux
+	icon = "GFX_ship_part_cloak_2"
+	icon_frame = 1
+	power = @power_S1
+	resources = {
+		category = ship_components
+		cost = {
+			energy = 100
+			##alloys = 10
+			light_alloys = 10
+			heavy_alloys = 10
+		}
+		cost = {
+			energy = 50
+			#alloys = 5
+			mult = value:num_gravity_snare_upgrade_unlocked
+		}
+	}
+
+	custom_tooltip = "GRAVITY_SNARE_STANDARD_TOOLTIP"
+
+	ship_limit = 1
+
+	potential = {
+		is_ship_size = gravity_snare
+	}
+	component_set = "GRAVITY_SNARE_1"
+
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+# Boarding Cables
+utility_component_template = {
+	key = "BOARDING_CABLES_MODULES"
+	size = aux
+	icon = "GFX_ship_part_boarding_cables"
+	icon_frame = 1
+	power = @power_S1
+	resources = {
+		category = ship_components
+		cost = {
+			#alloys = 15
+			light_alloys = 15
+			heavy_alloys = 15
+		}
+	}
+
+	ship_modifier = {
+		ship_steal_defeated_ship_chance = 0.05
+		fleet_capture_defeated_leader_chance = 0.005
+	}
+
+	custom_tooltip = "BOARDING_CABLES_TOOLTIP"
+
+	potential = {
+		is_ship_class = shipclass_military
+	}
+	prerequisites = { tech_boarding_cables }
+	component_set = "BOARDING_CABLES"
+}

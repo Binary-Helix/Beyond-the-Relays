@@ -1,0 +1,428 @@
+####################
+### VAS'DIRI GAP ###
+####################
+
+sys_anunulibse_init = {
+	name = "Anunu'Lib'Se"
+	class = sc_binary_mg_g
+	max_instances = 1
+
+    flags = { inner_council sector_ic5 vasdiri_gap anunulibse_system salarian_union_system }
+
+	planet = {
+	    name = "Anunu'Lib'Se A"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { anunulibse_a_star }
+    }
+
+	planet = {
+	    name = "Anunu'Lib'Se B"
+        class = pc_m_giant_star
+        orbit_distance = 40
+        size = 30
+        flags = { anunulibse_b_star }
+    }
+
+    planet = {
+        name = "Osolaneb"
+        class = pc_molten
+        orbit_distance = 100
+        orbit_angle = 61
+        has_ring = no
+        size = 17
+        flags = { osolaneb_planet }
+    }
+
+    planet = {
+        name = "Rannandril"
+        class = pc_savannah
+        orbit_distance = 100
+        orbit_angle = 247
+        has_ring = no
+        size = 17
+        flags = { rannandril_planet }
+    }
+
+    planet = {
+        name = "Jensalas"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 245
+        has_ring = yes
+        size = 28
+        flags = { jensalas_planet }
+    }
+
+    planet = {
+        name = "Owoukeen"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 143
+        has_ring = no
+        size = 28	
+        flags = { owoukeen_planet }
+    }
+
+	planet = {
+        name = "Besk'Dit"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 143
+        has_ring = no
+        size = 16	
+        flags = { beskdit_planet }
+    }
+}
+
+sys_ardot_init = {
+	name = "Ardot"
+	class = sc_m_super
+	max_instances = 1
+
+    flags = { inner_council sector_ic5 vasdiri_gap ardot_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 385
+	}
+
+	planet = {
+	    name = "Ardot"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 20
+        flags = { ardot_star }
+    }
+
+    planet = {
+        name = "Sendolol"
+        class = pc_hothouse
+        orbit_distance = 70
+        orbit_angle = 61
+        has_ring = no
+        size = 13
+        flags = { sendolol_planet }
+    }
+
+    planet = {
+        name = "Onri"
+        class = pc_savannah
+        orbit_distance = 70
+        orbit_angle = 247
+        has_ring = no
+        size = 17
+		flags = {subclass_world onri_planet}
+		entity = "veld_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = veld_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Nelvar"
+        class = pc_iron
+        orbit_distance = 70
+        orbit_angle = 245
+        has_ring = yes
+        size = 6
+        flags = { nelvar_planet }
+    }
+
+    planet = {
+        name = "Belaevan"
+        class = pc_carbon
+        orbit_distance = 70
+        orbit_angle = 143
+        has_ring = no
+        size = 12
+        flags = { belaevan_planet }
+    }
+
+	planet = {
+        name = "Des'Osh"
+        class = pc_iron
+        orbit_distance = 70
+        orbit_angle = 143
+        has_ring = no
+        size = 10
+        flags = { desosh_planet }
+    }
+
+    change_orbit = 35
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+        name = "Vadess"
+        class = pc_gas_giant
+        orbit_distance = 35
+        orbit_angle = 143
+        has_ring = yes
+        size = 32
+        flags = { vadess_planet }
+    }
+
+	planet = {
+        name = "Zenabri"
+        class = pc_ice_giant
+        orbit_distance = 70
+        orbit_angle = 143
+        has_ring = no
+        size = 26
+        flags = { zenabri_planet }
+    }
+}
+
+sys_bowani_init = {
+	name = "Bowani"
+	class = sc_k
+	max_instances = 1
+
+    flags = { inner_council sector_ic5 vasdiri_gap bowani_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 200
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 350
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 500
+	}	
+
+	planet = {
+	    name = "Bowani"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 20
+        flags = { bowani_star }
+    }
+
+    planet = {
+        name = "Asdukhs"
+        class = pc_iron
+        orbit_distance = 150
+        orbit_angle = 61
+        has_ring = no
+        size = 10
+        flags = { asdukhs_planet }
+    }
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Yunalip"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 247
+        has_ring = no
+        size = 12
+        flags = { yunalip_planet }
+    }
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Boldile"
+        class = pc_carbon
+        orbit_distance = 150
+        orbit_angle = 245
+        has_ring = no
+        size = 11
+        flags = { boldile_planet }
+    }
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+}
+
+sys_gorot_init = {
+	name = "Gorot"
+	class = sc_w_red
+	max_instances = 1
+
+    flags = { inner_council sector_ic5 vasdiri_gap gorot_system salarian_union_system }
+
+	planet = {
+	    name = "Gorot"
+        class = pc_w_red_star
+        orbit_distance = 0
+        size = 20
+        flags = { gorot_star }
+    }
+
+    planet = {
+        name = "Gorot I"
+        class = pc_carbon
+        orbit_distance = 125
+        orbit_angle = 61
+        has_ring = no
+        size = 12
+        flags = { gorot_i_planet }
+    }
+
+    planet = {
+        name = "Gorot II"
+        class = pc_alpine
+        orbit_distance = 125
+        orbit_angle = 247
+        has_ring = no
+        size = 19
+        flags = {gorot_planet gorot_ii_planet}
+    }
+
+    planet = {
+        name = "Gorot III"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 245
+        has_ring = yes
+        size = 34
+        flags = { gorot_iii_planet }
+    }
+
+	planet = {
+        name = "Gorot IV"
+        class = pc_barren
+        orbit_distance = 125
+        orbit_angle = 245
+        has_ring = no
+        size = 11	
+        flags = { gorot_iv_planet }
+    }
+}
+
+sys_maceddei_init = {
+	name = "Maced'Dei"
+	class = sc_g
+	max_instances = 1
+
+    flags = { inner_council sector_ic5 vasdiri_gap maceddei_system secondary_relay_system salarian_union_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 375
+	}
+
+	planet = {
+	    name = "Maced'Dei"
+        class = pc_g_giant_star
+        orbit_distance = 0
+        size = 20
+        flags = { maceddei_star }
+    }
+
+    planet = {
+        name = "Jaeto"
+        class = pc_continental
+        orbit_distance = 250
+        orbit_angle = 61
+        has_ring = no
+        size = 19
+        flags = { jaeto_planet }
+    }
+
+    change_orbit = 125
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Gareta"
+        class = pc_continental
+        orbit_distance = 125
+        orbit_angle = 247
+        has_ring = no
+        size = 14
+        flags = { gareta_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "inner_council_sector_5_secondaryrelay" 
+			name = "Sector IC5 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_ostelo_init = {
+	name = "Ostelo"
+	class = sc_m
+	max_instances = 1
+
+    flags = { inner_council sector_ic5 vasdiri_gap ostelo_system }
+
+	planet = {
+	    name = "Ostelo"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { ostelo_star }
+    }
+
+    planet = {
+        name = "Renuip"
+        class = pc_iron
+        orbit_distance = 250
+        orbit_angle = 61
+        has_ring = no
+        size = 11
+        flags = { renuip_planet }
+    }
+
+    planet = {
+        name = "Cabas'On"
+        class = pc_methane
+        orbit_distance = 250
+        orbit_angle = 247
+        has_ring = no
+        size = 19
+		flags = {subclass_world cabason_planet}
+		entity = "methane_desert_planet_09_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dust_world
+				days = -1
+			}
+		}
+    }
+}

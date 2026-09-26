@@ -1,4 +1,3 @@
-
 zone_station_government = {
 	icon = GFX_diplomatic_weight_large
 	base_buildtime = @zone_buildtime
@@ -439,7 +438,7 @@ zone_station_energy_physics = {
 	}
 	
 	convert_to = {
-		zone_energy_physics
+		zone_research_physics
 	}
 	
 	zone_sets = {
@@ -597,7 +596,7 @@ zone_station_minerals_engineering = {
 	}
 	
 	convert_to = {
-		zone_minerals_engineering
+		zone_research_engineering
 	}
 
 	inline_script = {
@@ -642,7 +641,7 @@ zone_station_minerals_engineering = {
 		potential = {
 			always = yes
 		}
-		planet_engineers_produces_mult = @zone_rural_research_research_produces_mult
+		#planet_jobs_engineers_produces_mult = @zone_rural_research_research_produces_mult
 		planet_engineers_minerals_upkeep_add = @zone_rural_research_researcher_upkeep_add
 	}
 
@@ -1206,7 +1205,7 @@ zone_station_factory = {
 	}
 	
 	convert_to = {
-		zone_station_foundry
+		zone_factory
 	}
 	
 	zone_sets = {

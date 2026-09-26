@@ -1,0 +1,693 @@
+spriteTypes = {
+
+	### TRAIT ASSIGNMENT ASSETS
+
+	spriteType = {
+		name = "GFX_trait_assignment_new"
+		texturefile = "gfx/interface/leaders/trait_assignment_new.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_assignment_upgrade"
+		texturefile = "gfx/interface/leaders/trait_assignment_upgrade.dds"
+	}
+
+	### RARITY
+
+	spriteType = {
+		name = "GFX_leader_rarity_toast"
+		texturefile = "gfx/interface/leaders/leader_rarity_frame_toast.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_leader_rarity_frame_expanded"
+		texturefile = "gfx/interface/leaders/leader_rarity_frame_expanded.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/leaders/leader_rarity_frame_expanded_mask.dds"
+			animationtexturefile = "gfx/interface/leaders/leader_rarity_frame_animated_texture.dds"	 	# <- the animated file
+			animationrotation = 180.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 30				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 2 y = 0.5 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			#animationframes = { 1 2 3 }
+		}
+		legacy_lazy_load = no
+
+	}
+
+	spriteType = {
+		name = "GFX_leader_rarity_frame_vertical"
+		texturefile = "gfx/interface/leaders/leader_rarity_frame_vertical.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_leader_rarity_horizontal"
+		texturefile = "gfx/interface/leaders/leader_rarity_horizontal.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_leader_rarity_horizontal_slim"
+		texturefile = "gfx/interface/leaders/leader_rarity_horizontal_slim.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+		noOfFrames = 3
+	}
+
+	###
+
+	spriteType = {
+		name = "GFX_leader_class_bg_list"
+		texturefile = "gfx/interface/leaders/leader_class_bg_list.dds"
+		noOfFrames = 4
+	}
+
+	spriteType = {
+		name = "GFX_leader_class_bg_horizontal"
+		texturefile = "gfx/interface/leaders/leader_class_bg_horizontal.dds"
+		noOfFrames = 4
+	}
+
+	### Status BGs
+
+	spriteType = {
+		name = "GFX_leader_status_bg_no_assignment"
+		texturefile = "gfx/interface/leaders/leader_status_bg_no_assignment.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_status_bg_no_assignment_expanded"
+		texturefile = "gfx/interface/leaders/leader_status_bg_no_assignment_expanded.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_status_bg_no_assignment_vertical"
+		texturefile = "gfx/interface/leaders/leader_status_bg_no_assignment_vertical.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_status_bg_assigned"
+		texturefile = "gfx/interface/leaders/leader_status_bg_assigned.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_status_bg_assigned_expanded"
+		texturefile = "gfx/interface/leaders/leader_status_bg_assigned_expanded.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_status_bg_assigned_vertical"
+		texturefile = "gfx/interface/leaders/leader_status_bg_assigned_vertical.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_status_bg_available"
+		texturefile = "gfx/interface/leaders/leader_status_bg_available.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_status_bg_for_hire"
+		texturefile = "gfx/interface/leaders/leader_status_bg_for_hire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_status_bg_for_hire_expanded"
+		texturefile = "gfx/interface/leaders/leader_status_bg_for_hire_expanded.dds"
+	}
+
+	### Status Icons
+
+	spriteType = {
+		name = "GFX_leader_status_icon_no_assignment_expanded"
+		texturefile = "gfx/interface/leaders/leader_status_icon_no_assignment_expanded.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_status_icon_assigned"
+		texturefile = "gfx/interface/leaders/leader_status_icon_assigned.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_status_icon_assigned_expanded"
+		texturefile = "gfx/interface/leaders/leader_status_icon_assigned_expanded.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_status_icon_available"
+		texturefile = "gfx/interface/leaders/leader_status_icon_available.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_status_icon_for_hire"
+		texturefile = "gfx/interface/leaders/leader_status_icon_for_hire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_status_icon_for_hire_expanded"
+		texturefile = "gfx/interface/leaders/leader_status_icon_for_hire_expanded.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_status_icon_no_assignment"
+		texturefile = "gfx/interface/leaders/leader_status_icon_no_assignment.dds"
+	}
+
+	### Generic
+
+	spriteType = {
+		name = "GFX_leader_list_status_unowned"
+		texturefile = "gfx/interface/leaders/leader_list_status_unowned.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_icons"
+		texturefile = "gfx/interface/icons/leaders/leaders_small.dds"
+		noOfFrames = 5
+	}
+
+	spriteType = {
+		name = "GFX_leader_icons_small"
+		texturefile = "gfx/interface/icons/leaders/leaders_small.dds"
+		noOfFrames = 5
+	}
+
+	spriteType = {
+		name = "GFX_leader_icons_medium"
+		texturefile = "gfx/interface/icons/leaders/leaders_medium.dds"
+		noOfFrames = 5
+	}
+
+	spriteType = {
+		name = "GFX_leader_icons_large"
+		texturefile = "gfx/interface/icons/leaders/leaders_large.dds"
+		noOfFrames = 5
+	}
+
+	spriteType = {
+		name = "GFX_council_position_ruler"
+		sprite_sheet_sprite_type = "GFX_leader_icons"
+		default_frame = 5
+	}
+
+	spriteType = {
+		name = "GFX_leader_skill"
+		texturefile = "gfx/interface/icons/leaders/leader_skill.dds"
+		noOfFrames = 11
+	}
+
+	### Progress Bars
+
+	progressbartype = {
+		name = "GFX_queue_progressbar_95"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/progressbars/queue_progressbar_236.dds"
+		textureFile2 = "gfx/interface/progressbars/queue_progressbar_empty_236.dds"
+		size = { x = 95 y = 11 }
+		effectFile = "gfx/FX/progress_startend.shader"
+	}
+
+	progressbartype = {
+		name = "GFX_queue_progressbar_188"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/progressbars/queue_progressbar_236.dds"
+		textureFile2 = "gfx/interface/progressbars/queue_progressbar_empty_236.dds"
+		size = { x = 188 y = 11 }
+		effectFile = "gfx/FX/progress_startend.shader"
+	}
+
+	progressbarType = {
+		name = "GFX_leader_experience_progressbar_208"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/progressbars/happiness_progressbar_green.dds"
+		textureFile2 = "gfx/interface/progressbars/happiness_progressbar_empty.dds"
+		size = { x = 208 y = 10 }
+		effectFile = "gfx/FX/progress.shader"
+	}
+
+	progressbartype = {
+		name = "GFX_leader_experience_progressbar_248"
+		color = { 1.0 1.0 1.0 }
+		colortwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/progressbars/queue_progressbar_236.dds"
+		textureFile2 = "gfx/interface/progressbars/queue_progressbar_empty_236.dds"
+		size = { x = 248 y = 11 }
+		effectFile = "gfx/FX/progress_startend.shader"
+	}
+
+	progressbarType = {
+		name = "GFX_leader_experience_progressbar_270"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/progressbars/queue_progressbar_236.dds"
+		textureFile2 = "gfx/interface/progressbars/queue_progressbar_empty_236.dds"
+		size = { x = 270 y = 10 }
+		effectFile = "gfx/FX/progress.shader"
+	}
+
+	### DESTINY ASSIGNMENT BACKGROUNDS ###
+
+	spriteType = {
+		name = "GFX_leader_background_destiny_1"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_destiny_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_background_destiny_2"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_destiny_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_background_destiny_3"
+		texturefile = "gfx/interface/leaders/destiny_bgs/background_destiny_3.dds"
+	}
+
+	### Subclass Icons & BGs
+
+	# Commander Subclasses
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_admiral_small"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_commander_admiral_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_admiral_medium"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_commander_admiral_medium.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_admiral_large"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_commander_admiral_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_admiral_background"
+		texturefile = "gfx/interface/leaders/subclass_bgs/background_subclass_commander_admiral.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_general_small"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_commander_general_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_general_medium"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_commander_general_medium.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_general_large"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_commander_general_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_general_background"
+		texturefile = "gfx/interface/leaders/subclass_bgs/background_subclass_commander_general.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_governor_small"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_commander_governor_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_governor_medium"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_commander_governor_medium.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_governor_large"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_commander_governor_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_governor_background"
+		texturefile = "gfx/interface/leaders/subclass_bgs/background_subclass_commander_governor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_councilor_small"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_commander_councilor_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_councilor_medium"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_commander_councilor_medium.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_councilor_large"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_commander_councilor_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_commander_councilor_background"
+		texturefile = "gfx/interface/leaders/subclass_bgs/background_subclass_commander_councilor.dds"
+	}
+
+	# Official Subclasses
+
+	spriteType = {
+		name = "GFX_leader_subclass_official_delegate_small"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_official_delegate_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_official_delegate_medium"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_official_delegate_medium.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_official_delegate_large"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_official_delegate_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_official_delegate_background"
+		texturefile = "gfx/interface/leaders/subclass_bgs/background_subclass_official_delegate.dds"
+	}
+
+	spriteType = {
+	name = "GFX_leader_subclass_official_governor_small"
+	texturefile = "gfx/interface/icons/leaders/subclasses/subclass_official_governor_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_official_governor_medium"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_official_governor_medium.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_official_governor_large"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_official_governor_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_official_governor_background"
+		texturefile = "gfx/interface/leaders/subclass_bgs/background_subclass_official_governor.dds"
+	}
+
+	spriteType = {
+	name = "GFX_leader_subclass_official_diplomacy_councilor_small"
+	texturefile = "gfx/interface/icons/leaders/subclasses/subclass_official_diplomacy_councilor_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_official_diplomacy_councilor_medium"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_official_diplomacy_councilor_medium.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_official_diplomacy_councilor_large"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_official_diplomacy_councilor_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_official_diplomacy_councilor_background"
+		texturefile = "gfx/interface/leaders/subclass_bgs/background_subclass_official_diplomacy_councilor.dds"
+	}
+
+	spriteType = {
+	name = "GFX_leader_subclass_official_economy_councilor_small"
+	texturefile = "gfx/interface/icons/leaders/subclasses/subclass_official_economy_councilor_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_official_economy_councilor_medium"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_official_economy_councilor_medium.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_official_economy_councilor_large"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_official_economy_councilor_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_official_economy_councilor_background"
+		texturefile = "gfx/interface/leaders/subclass_bgs/background_subclass_official_economy_councilor.dds"
+	}
+
+	# Scientist Subclasses
+
+	spriteType = {
+	name = "GFX_leader_subclass_scientist_explorer_small"
+	texturefile = "gfx/interface/icons/leaders/subclasses/subclass_scientist_explorer_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_scientist_explorer_medium"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_scientist_explorer_medium.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_scientist_explorer_large"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_scientist_explorer_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_scientist_explorer_background"
+		texturefile = "gfx/interface/leaders/subclass_bgs/background_subclass_scientist_explorer.dds"
+	}
+
+	spriteType = {
+	name = "GFX_leader_subclass_scientist_scholar_small"
+	texturefile = "gfx/interface/icons/leaders/subclasses/subclass_scientist_scholar_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_scientist_scholar_medium"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_scientist_scholar_medium.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_scientist_scholar_large"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_scientist_scholar_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_scientist_scholar_background"
+		texturefile = "gfx/interface/leaders/subclass_bgs/background_subclass_scientist_scholar.dds"
+	}
+
+	spriteType = {
+	name = "GFX_leader_subclass_scientist_governor_small"
+	texturefile = "gfx/interface/icons/leaders/subclasses/subclass_scientist_governor_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_scientist_governor_medium"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_scientist_governor_medium.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_scientist_governor_large"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_scientist_governor_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_scientist_governor_background"
+		texturefile = "gfx/interface/leaders/subclass_bgs/background_subclass_scientist_governor.dds"
+	}
+
+	spriteType = {
+	name = "GFX_leader_subclass_scientist_councilor_small"
+	texturefile = "gfx/interface/icons/leaders/subclasses/subclass_scientist_councilor_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_scientist_councilor_medium"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_scientist_councilor_medium.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_scientist_councilor_large"
+		texturefile = "gfx/interface/icons/leaders/subclasses/subclass_scientist_councilor_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_subclass_scientist_councilor_background"
+		texturefile = "gfx/interface/leaders/subclass_bgs/background_subclass_scientist_councilor.dds"
+	}
+
+	### Recruitment BGs
+
+	spriteType = {
+		name = "GFX_leader_recruitment_bg_legendary_beholder"
+		texturefile = "gfx/interface/leaders/recruitment_bgs/leader_recruitment_bg_legendary_beholder.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_recruitment_bg_legendary_azaryn"
+		texturefile = "gfx/interface/leaders/recruitment_bgs/leader_recruitment_bg_legendary_azaryn.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_recruitment_bg_legendary_skrand"
+		texturefile = "gfx/interface/leaders/recruitment_bgs/leader_recruitment_bg_legendary_skrand.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_recruitment_bg_legendary_keides"
+		texturefile = "gfx/interface/leaders/recruitment_bgs/leader_recruitment_bg_legendary_keides.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leader_recruitment_bg_renowned"
+		texturefile = "gfx/interface/leaders/recruitment_bgs/leader_recruitment_bg_renowned.dds"
+	}
+
+	spriteType = {
+		name = "GFX_crisis_conversation_bg_synth_queen"
+		texturefile = "gfx/interface/leaders/recruitment_bgs/crisis_conversation_bg_synth_queen.dds"
+	}
+
+	### Leader Card Assets
+
+	spriteType = {
+		name = "GFX_bg_head_of_research"
+		texturefile = "gfx/interface/leaders/bg_head_of_research.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_leader_dark_backdrop_expanded"
+		texturefile = "gfx/interface/leaders/leader_dark_backdrop_expanded.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_leader_dark_backdrop_toast"
+		texturefile = "gfx/interface/leaders/leader_dark_backdrop_toast.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_leader_dark_backdrop_vertical"
+		texturefile = "gfx/interface/leaders/leader_dark_backdrop_vertical.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_leader_info_bg"
+		texturefile = "gfx/interface/leaders/leader_info_bg.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_leader_skill_bg"
+		texturefile = "gfx/interface/leaders/leader_skill_bg.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	### RECRUITMENT MESSAGE ICONS ###
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_aturion"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_aturion.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_borin"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_borin.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_giazumon"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_giazumon.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_jynn"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_jynn.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_kaisha"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_kaisha.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_lysator"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_lysator.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_nasuz"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_nasuz.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_nona"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_nona.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_qlaminder"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_qlaminder.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_shuladun"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_shuladun.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_ulastar"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_ulastar.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_ulddagr"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_ulddagr.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_vas"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_vas.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_vyctor"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_vyctor.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_xondar"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_xondar.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+	spriteType = {
+		name = "GFX_message_leader_recruitment_zosira"
+		texturefile = "gfx/interface/icons/message/message_leader_recruitment_zosira.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.shader"
+	}
+
+}

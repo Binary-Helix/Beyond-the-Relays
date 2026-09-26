@@ -1,0 +1,90 @@
+tr_btr_centralization_adoption = {
+    #possible = {
+    #}
+    unlocks_agenda = agenda_centralization
+    modifier = {
+        job_enforcer_per_pop = 0.2
+        #Officials generate influence, handled in the leaders script
+    }
+}
+
+tr_btr_centralization_finish = {
+    modifier = {
+        #custom_tooltip = btr_vigilance_finish_desc
+        planet_housing_mult = 0.1
+        ascension_perks_add = 1
+        #Also unlocks 4 special resolutions
+    }
+}
+
+tr_btr_centralized_hub = {
+    #Handled through galcom.300
+    modifier = {
+        #TODO Create a planet modifier that automatically and permenantly applies to the capital that gives 50% unity output, 10 stability and 300 politician jobs
+    }
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_centralized_home = {
+    possible = {
+    }
+    modifier = {
+        empire_size_districts_mult = -0.4
+        empire_size_colonies_mult = 1
+
+    }
+
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_centralized_sent = {
+    possible = {
+        has_tradition = tr_btr_centralized_hub
+    }
+    modifier = {
+        official_initial_skill = 3
+        official_exp_gain = 0.2
+
+    }
+    #Handled through galcom.305
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_centralized_continuing = {
+    possible = {
+        has_tradition = tr_btr_centralized_home
+    }
+    modifier = {
+        pop_government_ethic_attraction = 0.8
+        pop_ethics_shift_speed_mult = 0.25
+    }
+    #Handled through galcom.310-315
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+"tr_btr_centralized_direct" = {
+    possible = {
+        has_tradition = tr_btr_centralized_continuing
+        has_tradition = tr_btr_centralized_sent
+    }
+
+    modifier = {
+        pop_resettlement_cost_mult = -0.5
+        #TODO Make governors provide -10% building build cost and -10% building upkeep on the planets they oversee
+
+    }
+
+    ai_weight = {
+        factor = 5000
+    }
+}

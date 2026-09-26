@@ -1,0 +1,371 @@
+######################
+### ROSETTA NEBULA ###
+######################
+
+sys_alphadraconis_init = {
+    name = "Alpha Draconis"
+    class = sc_a
+	max_instances = 1
+
+    flags = { terminus_systems sector_t4 rosetta_nebula alpha_draconis_system }
+
+    planet = {
+		name = "Alpha Draconis"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 15
+        flags = { alpha_draconis_star }
+    }
+
+    planet = {
+        name = "2175 Aeia"
+        class = pc_tropical
+        orbit_distance = 250
+        orbit_angle = 149
+        has_ring = no
+		size = 16
+		flags = {subclass_world 2175_aeia_planet}
+		entity = "atoll_planet_05_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = btr_toxic_pollen
+				days = -1
+			}
+			add_modifier = {
+				modifier = atoll_world
+				days = -1
+			}
+
+            add_deposit = d_eezo_trace
+		}
+
+		moon = {
+			name = "2175 Aeia a"
+			class = pc_iron
+			orbit_distance = 20
+			size = 4
+			flags = { 2175_aeia_a_planet }
+   		}
+	}	
+
+    planet = {
+        name = "2175 AR2"
+        class = pc_gas_giant
+        orbit_distance = 250
+        orbit_angle = 181
+        has_ring = no
+		size = 33
+
+        moon = {
+            name = "2175 MR1"
+            class = pc_iron
+            orbit_distance = 20
+            orbit_angle = 184
+            has_ring = no
+			size = 6
+			flags = {2175_mr1_planet 2175_ar2_planet}
+		}	
+
+        moon = {
+            name = "2175 MR2"
+            class = pc_hothouse
+            orbit_distance = 5
+            orbit_angle = 192
+            has_ring = no
+			size = 11
+			flags = { 2175_mr2_planet }
+		}	
+    }
+}
+
+sys_enoch_init = {
+    name = "Enoch"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t4 rosetta_nebula enoch_system primary_relay_system planet_state }
+
+    planet = {
+		name = "Enoch"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+        flags = { enoch_star }
+    }
+
+    planet = {
+        name = "Laban"
+        class = pc_hothouse
+        orbit_distance = 40
+        orbit_angle = 334
+        has_ring = no
+		size = 19
+
+		flags = { laban_planet }
+        init_effect = {
+            add_deposit = d_eezo_2
+        }
+	}	
+
+    planet = {
+        name = "Mizraim"
+        class = pc_ice_giant
+        orbit_distance = 25
+        orbit_angle = 247
+        has_ring = yes
+		size = 26
+
+		flags = { mizraim_planet }
+        init_effect = {
+            add_deposit = d_eezo_2
+        }
+	}	
+
+    planet = {
+        name = "Joab"
+        class = pc_tundra
+        orbit_distance = 40
+        orbit_angle = 174
+        has_ring = no
+		size = 16
+		flags = {subclass_world joab_planet}
+        deposit_blockers = none
+        modifiers = none
+		entity = "mire_planet_06_entity"
+		# init_effect = {
+        #     save_global_event_target_as = joabHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:joabHomeworld
+        #         }
+        #         log = "Commonwealth of Joab Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_commonwealth_of_joab_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:commonwealth_of_joab
+		# 	create_colony = {
+		# 		owner = event_target:commonwealth_of_joab
+		# 		species = event_target:humanSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_joab_pops = yes
+        #
+        #     add_modifier = {
+		# 		modifier = mire_world
+		# 		days = -1
+		# 	}
+        #
+        #     add_deposit = d_eezo_scarce
+		# }
+
+		moon = {
+			name = "Esther"
+			class = pc_barren
+			orbit_distance = 20
+			size = 4
+			flags = { esther_planet }
+		}	
+
+		moon = {
+			name = "Yuka"
+			class = pc_barren_cold
+			orbit_distance = 5
+			size = 8
+			flags = { yuka_planet }
+   		}
+	}	
+
+    planet = {
+        name = "Goliath"
+        class = pc_gas_giant
+        orbit_distance = 20
+        orbit_angle = 240
+        has_ring = yes
+		size = 37
+		flags = { goliath_planet }
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "rosettanebula_yomisabyssal_primaryrelay" 
+			name = "Sector T4 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_iotaurania_init = {
+    name = "Iota Urania"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t4 rosetta_nebula iota_urania_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 400
+	}	
+
+    planet = {
+	    name = "Iota Urania"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+        flags = { iota_urania_star }
+    }
+
+    planet = {
+        name = "Republic"
+        class = pc_gas_giant
+        orbit_distance = 80
+        orbit_angle = 327
+        has_ring = no
+		size = 30
+		flags = { republic_planet }
+	}	
+
+    planet = {
+        name = "Walden"
+        class = pc_dextro_alpine
+        orbit_distance = 80
+        orbit_angle = 327
+        has_ring = no
+		size = 16
+		flags = {subclass_world walden_planet}
+		entity = "cascadian_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = cascadian_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = dextro_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Erewhon"
+        class = pc_ice_giant
+        orbit_distance = 80
+        orbit_angle = 243
+        has_ring = no
+		size = 26
+
+		moon = {
+			name = "Adora"
+			class = pc_barren
+			orbit_distance = 20
+			size = 7
+			flags = {adora_planet erewhon_planet}
+    	}
+	}	
+
+    planet = {
+        name = "Mizora"
+        class = pc_ice_giant
+        orbit_distance = 80
+        orbit_angle = 294
+        has_ring = no
+		size = 28
+
+		moon = {
+			name = "Lane"
+			class = pc_barren_cold
+			orbit_distance = 20
+			size = 11
+			flags = {lane_planet mizora_planet}
+		}	
+
+		moon = {
+			name = "Adeoatu"
+			class = pc_carbon
+			orbit_distance = 5
+			size = 6
+			flags = { adeoatu_planet }
+		}	
+    }
+
+    planet = {
+        name = "Pala"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 128
+        has_ring = no
+		size = 4
+		flags = { pala_planet }
+	}	
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Cascadia"
+        class = pc_ice_giant
+        orbit_distance = 80
+        orbit_angle = 147
+        has_ring = no
+		size = 28
+
+		moon = {
+			name = "Dur"
+			class = pc_iron
+			orbit_distance = 20
+			size = 5
+			flags = {dur_planet cascadia_planet}
+		}		
+    }
+}
+
+sys_phiclio_init = {
+    name = "Phi Clio"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t4 rosetta_nebula phi_clio_system secondary_relay_system }
+
+    planet = {
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+    }
+
+    planet = {
+        name = "Cyllene"
+        class = pc_gas_giant
+        orbit_distance = 250
+        orbit_angle = 239
+        has_ring = no
+		size = 30
+		flags = { cyllene_planet }
+	}	
+
+    planet = {
+        name = "Parnassus"
+        class = pc_barren
+        orbit_distance = 250
+        orbit_angle = 152
+        has_ring = no
+		size = 15
+		flags = { parnassus_planet }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_4_secondaryrelay" 
+			name = "Sector T4 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

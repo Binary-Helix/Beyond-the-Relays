@@ -1,0 +1,115 @@
+tr_btr_self_interest_adoption = {
+    #possible = {
+    #}
+    unlocks_agenda = agenda_self
+    modifier = {
+        country_border_friction_mult = 0.5
+        country_trade_attractiveness = -0.15
+        diplo_weight_naval_mult = 0.2
+        country_base_influence_produces_add = 1
+        diplomacy_upkeep_mult = 0.5
+        #Officials generate influence, handled in the leaders script
+    }
+}
+
+tr_btr_self_interest_finish = {
+    modifier = {
+        #custom_tooltip = btr_vigilance_finish_desc
+        council_agenda_finishing_effect_duration_mult = 0.25
+       # campaigns_cost_mult = -0.25
+        starbase_shipyard_build_speed_mult = 0.05
+        ascension_perks_add = 1
+        #Also unlocks 4 special resolutions
+    }
+}
+
+tr_btr_self_interest_imposition = {
+    #Handled through galcom.300
+    modifier = {
+        country_naval_cap_mult = 0.1
+        command_limit_add = 10
+        ship_friendly_territory_accuracy_mult = 0.2
+    }
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_self_interest_minimal = {
+    #possible = {
+     #   has_tradition = tr_btr_pan_galactism_together
+    #}
+    modifier = {
+        intel_encryption_add = 3
+        espionage_hostile_operation_difficulty_mult = 0.25
+        intel_gain_speed = -0.1
+        diplo_weight_pops_mult = -0.1
+    }
+
+    ai_weight = {
+        factor = 10000
+    }
+}
+
+tr_btr_self_interest_closed = {
+    possible = {
+        has_tradition = tr_btr_self_interest_imposition
+    }
+    modifier = {
+       planet_jobs_produces_mult = 0.05
+        country_resource_max_add = 5000
+        country_trade_fee = 0.05
+    }
+    #Handled through galcom.305
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+tr_btr_self_interest_before = {
+    possible = {
+        has_tradition = tr_btr_self_interest_minimal
+    }
+    modifier = {
+        subject_tribute_mult = 0.2
+        country_subject_power_penalty_mult = -0.25
+        country_naval_capacity_contribution_from_subjects_mult = 0.25
+    }
+    #Handled through galcom.310-315
+
+    ai_weight = {
+        factor = 5000
+    }
+}
+
+"tr_btr_self_interest_internal" = {
+    possible = {
+        has_tradition = tr_btr_self_interest_before
+        has_tradition =tr_btr_self_interest_closed
+    }
+    triggered_modifier = {
+        potential = {
+            exists = owner
+            OR = {
+                has_federation = no
+                num_defensive_pacts = 0
+            }
+        }
+        modifier = {
+            country_unity_produces_mult = 0.1
+            pop_happiness = 0.1
+        }
+    }
+    modifier = {
+        empire_size_penalty_mult = -0.1
+        planet_crime_mult = -0.1
+        country_trade_produces_mult = 0.05
+       # #local_trade_protection_add = 5
+        #TODO Make the unity and happiness require not being a federation or defensive pact
+    }
+
+    ai_weight = {
+        factor = 5000
+    }
+}

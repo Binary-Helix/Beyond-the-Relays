@@ -1,5 +1,4 @@
 
-
 #
 tech_planetary_station_1 = {
 	cost = 0
@@ -163,10 +162,8 @@ tech_planet_meltification = {
 						value < 0.5
 					}
 				}
-				any_system_within_border = {
-					any_system_planet = {
-						is_planet_class = pc_nuked
-					}
+				any_planet_within_border = {
+					is_planet_class = pc_nuked
 				}
 			}
 		}

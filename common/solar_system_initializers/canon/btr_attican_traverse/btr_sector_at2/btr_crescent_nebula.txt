@@ -1,0 +1,445 @@
+#######################
+### CRESCENT NEBULA ###
+#######################
+
+sys_lusarn_init = {
+    name = "Lusarn"
+	class = sc_a
+	max_instances = 1
+
+	flags = { attican_traverse sector_at2 crescent_nebula lusarn_system primary_relay_system }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 250
+	}
+
+	planet = {
+	    name = "Lusarn"
+		count = 1
+		class = pc_a_star
+        orbit_distance = 0
+		orbit_angle = 1
+		size = 25
+		flags = { lusarn_star }
+		has_ring = no
+
+	}
+	
+	planet = {
+		name = "Jontan"
+		class = pc_hot_giant
+        orbit_distance = 100
+		orbit_angle = 20
+		size = 36
+		has_ring = no
+		flags = {subclass_world jontan_planet}
+	}
+	
+	planet = {
+		name = "Euntanta"
+		class = pc_barren
+        orbit_distance = 100
+		orbit_angle = -160
+		size = 19
+		flags = { euntanta_planet }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Beyalt"
+		class = pc_carb_asteroid
+        orbit_distance = 50
+		size = 1
+		flags = { beyalt_planet }
+		orbit_angle = { min = 10 max = 190 }
+	}
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		name = "Doriae"
+		class = pc_hothouse
+        orbit_distance = 50
+		orbit_angle = 35
+		size = 21
+		flags = { doriae_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Tarith"
+		class = pc_chlorine
+        orbit_distance = 100
+		orbit_angle = -30
+		size = 14
+		has_ring = no
+		flags = {subclass_world tarith_planet}
+		entity = "chlorine_continental_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = prairie_world
+				days = -1
+			}
+
+			add_deposit = d_eezo_scarce
+		}
+	}
+	
+	planet = {
+		name = "Xetic"
+		class = pc_gas_giant
+        orbit_distance = 100
+		orbit_angle = 25
+		size = 29
+		has_ring = no
+		flags = {subclass_world xetic_planet}
+
+		moon = {
+			name = "Gesis"
+			class = pc_frozen
+			orbit_angle = { min = 45 max = 270 }
+			orbit_distance = 20
+			size = 6
+			flags = {subclass_world gesis_planet}
+		}
+	}
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "crescentnebula_alphacluster_primaryrelay" 
+			name = "Sector AT2 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_ondeste_init = {
+    name = "Ondeste"
+	class = sc_m
+	max_instances = 1
+
+	flags = { attican_traverse sector_at2 crescent_nebula ondeste_system }
+
+	planet = {
+		name = "Ondeste"
+		class = pc_m_star
+        orbit_distance = 0
+		orbit_angle = 1
+		size = 20
+		flags = { ondeste_star }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Zesmeni"
+		class = pc_methane
+        orbit_distance = 150
+		orbit_angle = 150
+		size = 14
+		has_ring = no
+		flags = {subclass_world zesmeni_planet}
+		entity = "methane_arctic_planet_06_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = snow_world
+				days = -1
+			}
+		}		
+	}
+	
+	planet = {
+		name = "Acaeria"
+		class = pc_carbon
+        orbit_distance = 150
+		orbit_angle = 120
+		size = 15
+		has_ring = no
+	
+		moon = {
+			name = "Acaeria a"
+			class = pc_frozen
+			orbit_angle = { min = 45 max = 270 }
+			orbit_distance = 20
+			size = 10	
+			flags = {acaeria_a_planet acaeria_planet}
+		}
+	}
+	
+	planet = {
+		name = "Maisuth"
+		class = pc_frozen
+        orbit_distance = 150
+		orbit_angle = 120
+		size = 9
+		flags = { maisuth_planet }
+		has_ring = no
+	}	
+}
+
+sys_tasale_init = {
+    name = "Tasale"
+	class = sc_g
+	max_instances = 1
+	usage = custom_empire
+
+	flags = { attican_traverse sector_at2 crescent_nebula tasale_system secondary_relay_system }
+
+	init_effect = {
+		save_global_event_target_as = illiumCorpSec
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 140
+	}	
+
+	planet = {
+		name = "Tasale"
+		class = pc_g_star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 35
+		flags = { tasale_star }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Beregale"
+		class = pc_molten
+		orbit_distance = 100
+		orbit_angle = 15
+		size = 25
+		flags = { beregale_planet }
+		has_ring = no
+	}
+
+	change_orbit = 40
+
+	planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		name = "Illium"
+		class = pc_continental
+		orbit_distance = 60
+		orbit_angle = 160
+		size = 18
+		has_ring = no		
+		starting_planet = yes	
+		flags = { illium_planet subclass_world }		
+		entity = "temperate_planet_09_entity"
+		deposit_blockers = none
+        modifiers = none
+		init_effect = {
+            add_modifier = {
+                modifier = temperate_world
+                days = -1
+            }
+            prevent_anomaly = yes
+
+            check_for_asari_player = yes
+
+            if = {
+				limit = {
+					any_country = {
+						has_country_flag = illium_corporate_interests_player
+					}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = illium_corporate_interests_player
+					}
+					save_global_event_target_as = illium_corporate_interests
+				}
+                generate_empire_home_planet = yes
+            }
+			else = {
+				generate_illium_corporate_interests_country = yes
+			}
+            set_capital = yes
+			set_owner = event_target:illium_corporate_interests
+			create_colony = {
+				owner = event_target:illium_corporate_interests
+				species = event_target:asariSpecies
+				ethos = owner
+			}
+            clear_blockers = yes
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            inline_script = "game_start/canon/illium_cor_origin"
+            generate_illium_pops = yes
+            event_target:illium_corporate_interests = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+		}
+	}
+	
+	planet = {
+		name = "Ponolus"
+		class = pc_hothouse
+		orbit_distance = 100
+		orbit_angle = 180
+		size = 14
+		flags = { ponolus_planet }
+		has_ring = no
+	}
+	
+	change_orbit = 50
+	
+	planet = {
+		count = 3
+		class = pc_carb_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 40 max = 100 }
+	}
+	
+	planet = {
+		class = pc_met_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 40 max = 100 }
+	}
+	
+	planet = {
+		name = "Teukria"
+		class = pc_iron
+		orbit_distance = 0
+		orbit_angle = { min = 40 max = 100 }
+		size = 2
+		flags = { teukria_planet }
+	}
+	
+	planet = {
+		name = "Thail"
+		class = pc_gas_giant
+		orbit_distance = 50
+		orbit_angle = 170
+		size = 38
+		flags = { thail_planet }
+		has_ring = yes
+	}
+	
+	planet = {
+		name = "Naxell"
+		class = pc_gas_giant
+		orbit_distance = 100
+		orbit_angle = -75
+		size = 34
+		flags = { naxell_planet }
+		has_ring = no
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "attican_traverse_sector_2_secondaryrelay" 
+			name = "Sector AT2 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_zelene_init = {
+    name = "Zelene"
+	class = sc_k
+	max_instances = 1
+
+	flags = { attican_traverse sector_at2 crescent_nebula zelene_system primary_relay_system }
+
+	planet = {
+		name = "Zelene"
+		class = pc_k_star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 20
+		flags = { zelene_star }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Nepyma"
+		class = pc_chlorine
+        orbit_distance = 125
+		orbit_angle = 15
+		size = 11
+		has_ring = no
+		flags = {subclass_world nepyma_planet}
+		entity = "chlorine_continental_planet_02_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+			add_modifier = {
+				modifier = forest_world
+				days = -1
+			}
+		}		
+	}
+	
+	planet = {
+		name = "Helyme"
+		class = pc_mephitic
+        orbit_distance = 125
+		orbit_angle = 45
+		size = 13
+		has_ring = no
+		flags = {subclass_world helyme_planet}	
+		entity = "mephitic_tundra_planet_09_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = lichen_world
+				days = -1
+			}
+
+			add_deposit = d_eezo_trace
+		}
+	}
+	
+	planet = {
+		name = "Epho"
+		class = pc_highgrav_mephitic
+        orbit_distance = 125
+		orbit_angle = 150
+		size = 20
+		has_ring = no
+		flags = {subclass_world epho_planet}
+		entity = "mephitic_arid_planet_06_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dune_world
+				days = -1
+			}
+		}
+	}
+	
+	planet = {
+		name = "Gaelon"
+		class = pc_gas_giant
+        orbit_distance = 125
+		orbit_angle = -60
+		size = 35
+		flags = { gaelon_planet }
+		has_ring = yes
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "crescentnebula_azuresea_primaryrelay" 
+			name = "Sector AT2 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

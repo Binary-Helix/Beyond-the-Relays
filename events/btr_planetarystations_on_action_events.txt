@@ -113,7 +113,7 @@ planet_event = {
 							
 							add_modifier = { 
 								modifier = recent_arrests
-								days = 90
+								months = 3
 							}
 						}
 						50 = {
@@ -140,7 +140,7 @@ planet_event = {
 							
 							add_modifier = { 
 								modifier = mass_arrests
-								days = 180
+								months = 6
 							}
 						}
 					}
@@ -172,7 +172,7 @@ planet_event = {
 							
 							add_modifier = { 
 								modifier = recent_arrests
-								days = 90
+								months = 3
 							}
 						}
 						50 = {
@@ -199,7 +199,7 @@ planet_event = {
 							
 							add_modifier = { 
 								modifier = mass_arrests
-								days = 180
+								months = 6
 							}
 						}
 					}
@@ -232,7 +232,7 @@ planet_event = {
 							
 							add_modifier = { 
 								modifier = recent_arrests
-								days = 90
+								months = 3
 							}
 						}
 						50 = {
@@ -261,7 +261,7 @@ planet_event = {
 							
 							add_modifier = { 
 								modifier = mass_arrests
-								days = 180
+								months = 6
 							}
 						}
 					}
@@ -490,11 +490,11 @@ planet_event = {
 			# every_country = {
 				# limit = {
 					# has_communications = root.owner
-					# NOT = { is_country = root.owner }
+					# NOT = { is_same_empire = root.owner }
 					# NOT = { is_same_species = prev }
 					# NOT = { has_ai_personality_behaviour = purger }
 					# NOT = { has_origin = origin_necrophage }
-					# NOT = { has_ethic = ethic_gestalt_consciousness }
+					# NOT = { is_gestalt = yes }
 					# NOR = {
 						# has_valid_civic = civic_death_cult
 						# has_valid_civic = civic_death_cult_corporate
@@ -514,7 +514,7 @@ planet_event = {
 			# every_country = {
 				# limit = {
 					# has_communications = root.owner
-					# NOT = { is_country = root.owner }
+					# NOT = { is_same_empire = root.owner }
 					# is_same_species = prev
 					# has_intel_level = {
 						# who = FROM
@@ -584,7 +584,7 @@ event = {
 			}
 			add_modifier = {
 				modifier = "station_deterioration"
-				days = 1800
+				years = 5
 			}
 			planet_event = { id = planetarystations_action.9 days = 1800 }
 		}

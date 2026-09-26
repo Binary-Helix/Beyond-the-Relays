@@ -267,10 +267,8 @@ energy_expenditure_terraforming = {
 				}
 				AND = {
 					has_ascension_perk = ap_detox
-					any_system_within_border = {
-						any_system_planet = {
-							has_modifier = toxic_terraforming_candidate
-						}
+					any_planet_within_border = {
+						has_modifier = toxic_terraforming_candidate
 					}
 				}
 			}

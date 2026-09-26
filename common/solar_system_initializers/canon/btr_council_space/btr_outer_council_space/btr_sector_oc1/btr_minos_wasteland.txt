@@ -1,0 +1,280 @@
+#######################
+### MINOS WASTELAND ###
+#######################
+
+sys_arrae_init = {
+    name = "Arrae"
+    class = sc_a
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 minos_wasteland arrae_system secondary_relay_system turian_hierarchy_system }
+
+    planet = {
+	    name = "Arrae"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 25
+        flags = { arrae_star }
+    }
+
+    planet = {
+        name = "Erros"
+        class = pc_iron
+        orbit_distance = 125
+        orbit_angle = 177
+        size = 17
+        flags = { erros_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Gellix"
+        class = pc_alpine
+        orbit_distance = 125
+        orbit_angle = 212
+        size = 9
+        has_ring = no
+        flags = { gellix_planet }
+    }
+
+    planet = {
+        name = "Antinax"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 121
+        size = 24
+        flags = { antinax_planet }
+        has_ring = no	
+    }
+
+    planet = {
+        name = "Nirrus"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 171
+        size = 35
+        flags = { nirrus_planet }
+        has_ring = yes	
+    }	
+}
+
+sys_buitre_init = {
+	name = "Buitre"
+	class = sc_m
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 minos_wasteland buitre_system }
+
+	planet = {
+	    name = "Buitre"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 25
+        flags = { buitre_star }
+    }
+
+	planet = {
+        name = "Cuervo"
+        class = pc_continental
+        orbit_distance = 250
+        orbit_angle = 126
+        size = 12
+        has_ring = no
+		flags = {subclass_world cuervo_planet}
+		entity = "supercon_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = supercon_world
+				days = -1
+			}
+		}
+    }
+}
+
+sys_caestus_init = {
+    name = "Caestus"
+    class = sc_g
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 minos_wasteland caestus_system turian_hierarchy_system }
+
+    init_effect = {
+		save_global_event_target_as = turianSciCon1
+	}
+
+    planet = {
+	    name = "Caestus"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+        flags = { caestus_star }
+    }
+
+    planet = {
+        name = "Invictus"
+        class = pc_dextro_desert
+        orbit_distance = 250
+        orbit_angle = 239
+        size = 18
+        has_ring = no
+        flags = { invictus_planet }
+		init_effect = {
+			add_modifier = {
+				modifier = dextro_world
+				days = -1
+			}
+			add_deposit = d_veiny_cliffs
+			add_deposit = d_lichen_fields
+            add_deposit = d_eezo_scarce
+		}
+    }
+
+    planet = {
+        name = "Temerarus"
+        class = pc_hothouse
+        orbit_distance = 250
+        orbit_angle = 342
+        size = 8
+        flags = { temerarus_planet }
+        has_ring = no
+		init_effect = {
+			add_modifier = {
+				modifier = btr_scorching_surface
+				days = -1
+			}
+		}
+    }	
+}
+
+sys_fortis_init = {
+    name = "Fortis"
+    class = sc_g
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 minos_wasteland fortis_system secondary_relay_system }
+
+    init_effect = {
+		save_global_event_target_as = turianFourthFleet
+	}
+
+    planet = {
+	    name = "Fortis"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 23
+        flags = { fortis_star }
+    }
+
+    planet = {
+        name = "Vir"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 6
+        size = 20
+        flags = { vir_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Pietas"
+        class = pc_mephitic
+        orbit_distance = 150
+        orbit_angle = 148
+        size = 13
+        has_ring = no
+		flags = {subclass_world pietas_planet}
+		entity = "mephitic_alpine_planet_11_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = basalt_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Aequitas"
+        class = pc_frozen
+        orbit_distance = 150
+        orbit_angle = 74
+        size = 17
+        flags = { aequitas_planet }
+        has_ring = no
+    }
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "outer_council_sector_1_secondaryrelay" 
+			name = "Sector OC1 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_uba_init = {
+    name = "Uba"
+    class = sc_m
+	max_instances = 1
+
+    flags = { outer_council sector_oc1 minos_wasteland uba_system vol_protectorate_system }
+
+    init_effect = {
+        save_global_event_target_as = volSciCon1
+    }
+
+    planet = {
+	    name = "Uba"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 23
+        flags = { uba_star }
+    }
+
+	planet = {
+		name = "Daleon"
+		class = pc_ammonia
+        orbit_distance = 250
+		size = 17
+		flags = { daleon_planet subclass_world }
+		entity = "ammonia_tundra_planet_04_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = lichen_world
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Asok"
+			class = pc_barren
+			orbit_distance = 20
+			size = 6
+			flags = { asok_planet }
+		}
+
+		moon = {
+			name = "Tenli"
+			class = pc_frozen
+			orbit_distance = 5
+			size = 8
+			flags = { tenli_planet }
+		}
+
+		moon = {
+			name = "Torol"
+			class = pc_iron
+			orbit_distance = 5
+			size = 5
+			flags = { torol_planet }
+		}	
+	}
+	
+	planet = {
+		name = "Mosha"
+		class = pc_carbon
+        orbit_distance = 250
+		size = 14
+		flags = { mosha_planet }
+	}
+}

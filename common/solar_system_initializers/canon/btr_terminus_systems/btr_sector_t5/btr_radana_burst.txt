@@ -1,0 +1,498 @@
+####################
+### RADANA BURST ###
+####################
+
+sys_charren_init = {
+	name = "Charren"
+	class = sc_d
+	max_instances = 1
+
+    flags = { terminus_systems sector_t5 radana_burst charren_system primary_relay_system }
+	
+	planet = {
+    	name = "Charren"
+		class = pc_d_star
+        orbit_distance = 0
+		size = 35
+		flags = { charren_star }
+	}
+
+	planet = {
+		name = "Quindre"
+		class = pc_methane
+        orbit_distance = 250
+		size = 18
+		flags = { quindre_planet }
+		entity = "methane_tropical_planet_02_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = atoll_world
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "Ragara"
+		class = pc_gas_giant
+        orbit_distance = 250
+		size = 38
+		flags = { ragara_planet }
+		has_ring = yes
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "radanaburst_homunculuscluster_primaryrelay" 
+			name = "Sector T5 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_henroshk_init = {
+	name = "Henroshk"
+	class = sc_a
+	max_instances = 1
+
+    flags = { terminus_systems sector_t5 radana_burst henroshk_system }
+	
+	planet = {
+    name = "Henroshk"
+		class = pc_a_star
+        orbit_distance = 0
+		size = 35
+		flags = { henroshk_star }
+	}
+
+	planet = {
+		name = "Wetako"
+		class = pc_barren
+        orbit_distance = 150
+		size = 11
+		flags = { wetako_planet }
+	}	
+
+	planet = {
+		name = "Darbenek"
+		class = pc_molten
+        orbit_distance = 150
+		size = 7
+		flags = { darbenek_planet }
+	}	
+
+	planet = {
+		name = "Khabraroh"
+		class = pc_tundra
+        orbit_distance = 150
+		size = 17
+		flags = {subclass_world khabraroh_planet}
+		entity = "lichen_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = lichen_world
+				days = -1
+			}
+		}
+	}
+}
+
+sys_jintanei_init = {
+    name = "Jinta'nei"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t5 radana_burst jintanei_system planet_state }
+
+	planet = {
+    name = "Jinta'nei"
+		class = pc_g_star
+        orbit_distance = 0
+		size = 25
+		flags = { jintanei_star }
+	}
+	
+	planet = {
+		name = "Esse"
+		class = pc_hothouse
+        orbit_distance = 150
+		size = 13
+
+		moon = { 
+			name = "Esse a"
+			class = pc_molten
+			orbit_angle = 270
+			orbit_distance = 20
+			size = 8	
+			flags = {esse_a_planet esse_planet}
+		}		
+	}
+
+	planet = {
+		name = "Ferris Fields"
+		class = pc_desert
+        orbit_distance = 150
+		size = 14
+		flags = {subclass_world ferrisfields_planet ferris_fields_planet}
+        deposit_blockers = none
+        modifiers = none
+		entity = "outback_planet_01_entity"
+		# init_effect = {
+        #     save_global_event_target_as = ferrisfieldsHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:ferrisfieldsHomeworld
+        #         }
+        #         log = "Ferris Fields Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_union_of_ferris_fields_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:union_of_ferris_fields
+		# 	create_colony = {
+		# 		owner = event_target:union_of_ferris_fields
+		# 		species = event_target:humanSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_ferris_fields_pops = yes
+        #
+        #     add_modifier = {
+		# 		modifier = outback_world
+		# 		days = -1
+		# 	}
+		# }
+	}
+
+	planet = {
+		name = "Angom"
+		class = pc_gas_giant
+        orbit_distance = 150
+		size = 38
+		has_ring = yes
+
+		moon = {
+			name = "Pella"
+			class = pc_primal
+			orbit_distance = 20
+			size = 15
+			flags = {pella_planet angom_planet}
+			init_effect = {
+				add_modifier = {
+					modifier = dextro_world
+					days = -1
+				}
+			}
+		}
+	}
+}
+
+
+sys_qdris_init = {
+	name = "Qdris"
+	class = sc_m
+	max_instances = 1
+
+    flags = { terminus_systems sector_t5 radana_burst qdris_system }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 80
+	}
+
+	planet = {
+    	name = "Qdris"
+		class = pc_m_star
+        orbit_distance = 0
+		size = 35
+		flags = { qdris_star }
+	}
+	
+	planet = {
+		name = "Lirdok"
+		class = pc_molten
+        orbit_distance = 80
+		size = 11
+		flags = { lirdok_planet }
+	}	
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Razolo"
+		class = pc_hothouse
+        orbit_distance = 80
+		size = 7
+		flags = { razolo_planet }
+	}
+
+	planet = {
+		name = "Paehart"
+		class = pc_dextro_arid
+        orbit_distance = 80
+		size = 19
+		flags = {subclass_world paehart_planet}
+		entity = "aquifer_planet_06_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = aquifer_world
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "Ormin"
+		class = pc_gas_giant
+        orbit_distance = 80
+		size = 33
+		flags = { ormin_planet }
+	}	
+
+	planet = {
+		name = "Raedrillo"
+		class = pc_frozen
+        orbit_distance = 80
+		size = 7
+		flags = { raedrillo_planet }
+	}	
+
+	planet = {
+		name = "Paluso"
+		class = pc_frozen
+        orbit_distance = 80
+		size = 14
+		flags = { paluso_planet }
+	}	
+}
+
+sys_razhek_init = {
+    name = "Razhek"
+    class = sc_g
+	max_instances = 1
+
+    flags = { terminus_systems sector_t5 radana_burst razhek_system primary_relay_system planet_state }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 300
+	}
+
+	planet = {
+  	  	name = "Razhek"
+		class = pc_o_super_star
+        orbit_distance = 0
+		size = 35
+		flags = { razhek_star }
+	}
+
+	planet = {
+		name = "Satur"
+		class = pc_molten
+        orbit_distance = 125
+		size = 8
+		flags = { satur_planet }
+	}	
+
+	planet = {
+		name = "New Canton"
+		class = pc_arctic
+        orbit_distance = 125
+		size = 12
+		flags = {subclass_world new_canton_planet}
+        deposit_blockers = none
+        modifiers = none
+		entity = "snow_planet_05_entity"
+		# init_effect = {
+        #     save_global_event_target_as = newcantonHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:newcantonHomeworld
+        #         }
+        #         log = "New Canton Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_authority_of_new_canton_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:authority_of_new_canton
+		# 	create_colony = {
+		# 		owner = event_target:authority_of_new_canton
+		# 		species = event_target:humanSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_new_canton_pops = yes
+        #
+        #     add_modifier = {
+		# 		modifier = snow_world
+		# 		days = -1
+		# 	}
+		# }
+	}	
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Yanoc"
+		class = pc_methane
+        orbit_distance = 75
+		size = 15
+		flags = {subclass_world yanoc_planet}
+		entity = "methane_swamp_planet_01_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = mangrove_world
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "Hobgaad"
+		class = pc_frozen
+        orbit_distance = 125
+		size = 25
+		flags = { hobgaad_planet }
+	}	
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "radanaburst_pylosnebula_primaryrelay" 
+			name = "Sector T5 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_tiedcaur_init = {
+    name = "Tied'caur"
+    class = sc_b_super
+	max_instances = 1
+
+    flags = { terminus_systems sector_t5 radana_burst tiedcaur_system secondary_relay_system }
+	
+    planet = {
+		name = "Tied'caur"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 33
+        flags = { tiedcaur_star }
+	}
+
+	planet = {
+		name = "Mnoth" 
+		class = pc_chthonian
+        orbit_distance = 150
+		orbit_angle = 200
+		size = 12
+		flags = { mnoth_planet }
+	}			
+
+    planet = {
+        name = "Zied'nar"
+        class = pc_desert
+        orbit_distance = 150
+        orbit_angle = 350
+        has_ring = no
+		size = 19
+		flags = {subclass_world ziednar_planet}
+		entity = "dune_planet_03_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dune_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = bleak_planet
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Undak"
+        class = pc_frozen
+        orbit_distance = 150
+        orbit_angle = 110
+        has_ring = no
+		size = 6
+		flags = { undak_planet }
+    }		
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_5_secondaryrelay" 
+			name = "Sector T5 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}	
+
+sys_zherena_init = {
+	name = "Zherena"
+	class = sc_o
+	max_instances = 1
+
+    flags = { terminus_systems sector_t5 radana_burst zherena_system }
+	
+	planet = {
+    name = "Razhek"
+		class = pc_o_star
+        orbit_distance = 0
+		size = 35
+		flags = { razhek_star }
+	}
+
+	planet = {
+		name = "Izon"
+		class = pc_hot_giant
+        orbit_distance = 60
+		size = 38
+		flags = { izon_planet }
+	}	
+
+	planet = {
+		name = "Naerhal"
+		class = pc_gas_giant
+        orbit_distance = 190
+		size = 37
+		flags = { naerhal_planet }
+		has_ring = yes
+	}	
+
+	planet = {
+		name = "Nirix"
+		class = pc_barren_cold
+        orbit_distance = 125
+		size = 7
+		flags = { nirix_planet }
+	}	
+
+	planet = {
+		name = "Punem"
+		class = pc_ice_giant
+        orbit_distance = 125
+		size = 32
+		flags = { punem_planet }
+		has_ring = yes
+	}	
+}

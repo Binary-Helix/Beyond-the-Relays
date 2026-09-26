@@ -1,0 +1,652 @@
+####################
+### OMEGA NEBULA ###
+####################
+
+sys_amada_init = {
+    name = "Amada"
+    class = sc_f
+    max_instances = 1
+
+	flags = { terminus_systems sector_t13 omega_nebula amada_system primary_relay_system }
+
+    planet = {
+	    name = "Amada"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 24
+        flags = { amada_star }
+    }
+
+    planet = {
+        name = "Takkan"
+        class = pc_barren
+        orbit_distance = 100
+        orbit_angle = 22
+        has_ring = no
+        size = 10
+        flags = { takkan_planet }
+	}	
+
+    planet = {
+        name = "Karora"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 151
+        has_ring = no
+        size = 6
+        flags = { karora_planet }
+	}	
+
+    planet = {
+        name = "Eingana"
+        class = pc_tropical
+        orbit_distance = 100
+        orbit_angle = 157
+        has_ring = no
+        size = 14
+        flags = {subclass_world eingana_planet}
+		entity = "jungle_planet_02_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = dangerous_wildlife
+				days = -1
+			}
+			add_modifier = {
+				modifier = jungle_world
+				days = -1
+			}
+            add_deposit = d_eezo_scarce
+		}
+		moon = {
+			name = "Barraiya"
+			class = pc_iron
+			orbit_distance = 20
+			size = 8
+			flags = { barraiya_planet }
+		}
+	}	
+
+    planet = {
+        name = "Alchera"
+        class = pc_ammonia
+        orbit_distance = 100
+        orbit_angle = 272
+        has_ring = no
+        size = 23
+        flags = {subclass_world alchera_planet}
+		entity = "ammonia_arctic_04_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = glacial_world
+				days = -1
+			}
+		}
+
+		moon = {
+			name = "Uluru"
+			class = pc_frozen
+			orbit_distance = 20
+			size = 4
+			flags = { uluru_planet }
+		}	
+
+		moon = {
+			name = "Wandjina"
+			class = pc_iron
+			orbit_distance = 5
+			size = 6
+			flags = { wandjina_planet }
+		}
+
+		moon = {
+			name = "Balame"
+			class = pc_frozen
+			orbit_distance = 5
+			size = 3
+			flags = { balame_planet }
+		}
+	}	
+
+    planet = {
+        name = "Anjea"
+        class = pc_ice_giant
+        orbit_distance = 100
+        orbit_angle = 343
+        has_ring = no
+        size = 27
+        flags = { anjea_planet }
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "omeganebula_yomisabyssal_primaryrelay" 
+			name = "Sector T13 - Primary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_arinlarkan_init = {
+    name = "Arinlarkan"
+    class = sc_a
+    max_instances = 1
+
+	flags = { terminus_systems sector_t13 omega_nebula arinlarkan_system primary_relay_system }
+
+    planet = {
+		name = "Arinlarkan"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 25
+        flags = { arinlarkan_star }
+    }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 100
+	}
+
+    change_orbit = 100
+
+    planet = {
+        name = "Utha"
+        class = pc_ocean
+        orbit_distance = 150
+        orbit_angle = 218
+        has_ring = no
+		size = 15
+        flags = {subclass_world utha_planet}
+		entity = "hotocean_planet_05_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = hotocean_world
+				days = -1
+			}
+		}
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "omeganebula_carinanebula_primaryrelay" 
+			name = "Sector T13 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_batalla_init = {
+    name = "Batalla"
+    class = sc_k
+    max_instances = 1
+
+	flags = { terminus_systems sector_t13 omega_nebula batalla_system planet_state }
+
+    init_effect = {
+        save_global_event_target_as = courtsSciCon
+    }
+
+    planet = {
+		name = "Batalla"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+        flags = { batalla_star }
+    }
+
+    planet = {
+        name = "Logarisi"
+        class = pc_mephitic
+        orbit_distance = 150
+        orbit_angle = 143
+        has_ring = no
+		size = 12
+		flags = { subclass_world logarisi_planet }
+        deposit_blockers = none
+        modifiers = none
+		entity = "mephitic_arid_planet_03_entity"
+		# init_effect = {
+        #     save_global_event_target_as = logarisiHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:logarisiHomeworld
+        #         }
+        #         log = "Logarisi Development Corporation Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_logarisi_development_corporation_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:logarisi_development_corporation
+		# 	create_colony = {
+		# 		owner = event_target:logarisi_development_corporation
+		# 		species = event_target:batarianSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_logarisi_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = outback_world
+		# 		days = -1
+		# 	}
+		# }
+    }
+
+    planet = {
+        name = "Thunawanuro"
+        class = pc_highgrav_continental
+        orbit_distance = 150
+        orbit_angle = 305
+        has_ring = no
+		size = 25
+        flags = { subclass_world thunawanuro_planet }
+        deposit_blockers = none
+        modifiers = none
+		# init_effect = {
+        #     save_global_event_target_as = thunawanuroHomeworld
+        #     if = {
+        #         limit = {
+        #             exists = event_target:thunawanuroHomeworld
+        #         }
+        #         log = "Confederation of Thunawanuro Event Target Set"
+        #     }
+        #     prevent_anomaly = yes
+        #
+        #     generate_confederation_of_thunawanuro_country = yes
+        #
+        #     set_capital = yes
+		# 	set_owner = event_target:confederation_of_thunawanuro
+		# 	create_colony = {
+		# 		owner = event_target:confederation_of_thunawanuro
+		# 		species = event_target:elcorSpecies
+		# 		ethos = owner
+		# 	}
+        #
+        #     generate_thunawanuro_pops = yes
+        #
+		# 	add_modifier = {
+		# 		modifier = high_gravity
+		# 		days = -1
+		# 	}
+		# 	add_modifier = {
+		# 		modifier = forest_world
+		# 		days = -1
+		# 	}
+        #
+        #     add_deposit = d_eezo_scarce
+		# }
+    }
+
+    planet = {
+        name = "Nearog"
+        class = pc_gas_giant
+        orbit_distance = 150
+        orbit_angle = 65
+        has_ring = no
+		size = 26
+
+		flags = { nearog_planet }
+        init_effect = {
+            add_deposit = d_eezo_2
+        }
+    }	
+}
+
+sys_fathar_init = {
+    name = "Fathar"
+    class = sc_m
+    max_instances = 1
+
+	flags = { terminus_systems sector_t13 omega_nebula fathar_system hegemony_of_kharshan_system }
+
+    planet = {
+		name = "Fathar"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 23
+        flags = { fathar_star }
+    }
+
+    planet = {
+        name = "Lorek"
+        class = pc_ocean
+        orbit_distance = 150
+        orbit_angle = 327
+        has_ring = no
+		size = 16
+		flags = { lorek_planet subclass_world }
+		entity = "hotocean_planet_05_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = hotocean_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}	
+		}
+    }
+
+    planet = {
+        name = "Korar"
+        class = pc_barren_cold
+        orbit_distance = 150
+        orbit_angle = 257
+        has_ring = no
+		size = 4
+		flags = { korar_planet }
+    }
+
+    planet = {
+        name = "Dorgal"
+        class = pc_methane
+        orbit_distance = 150
+        orbit_angle = 262
+        has_ring = no
+		size = 9
+		flags = {subclass_world dorgal_planet}
+		entity = "methane_ocean_planet_07_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = coldocean_world
+				days = -1
+			}
+		}
+    }
+}
+
+sys_kairavamori_init = {
+    name = "Kairavamori"
+    class = sc_k
+    max_instances = 1
+
+	flags = { terminus_systems sector_t13 omega_nebula kairavamori_system }
+
+    init_effect = {
+        save_global_event_target_as = omegaSecondFleet
+    }
+
+    planet = {
+	    name = "Kairavamori"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+        flags = { kairavamori_star }
+    }
+
+    planet = {
+        name = "Sehtor"
+        class = pc_hothouse
+        orbit_distance = 150
+        orbit_angle = 352
+        has_ring = no
+		size = 14
+		flags = { sehtor_planet }
+	}	
+
+    planet = {
+        name = "Vatar"
+        class = pc_mephitic
+        orbit_distance = 150
+        orbit_angle = 28
+        has_ring = no
+		size = 15
+        flags = {subclass_world vatar_planet}
+		entity = "mephitic_arctic_planet_09_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = snow_world
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Uwan Oche"
+        class = pc_frozen
+        orbit_distance = 150
+        orbit_angle = 183
+        has_ring = no
+		size = 16
+		flags = { uwan_oche_planet }
+    }		
+}
+
+sys_qetar_init = {
+	name = "Qetar"
+    class = sc_k_super
+    max_instances = 1
+
+	flags = { terminus_systems sector_t13 omega_nebula qetar_system primary_relay_system }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 200
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 300
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 350
+	}
+
+	planet = {
+		name = "Qetar"
+		class = pc_k_super_star
+		orbit_distance = 0
+		size = 33
+		flags = { qetar_star }
+	}
+
+    planet = {
+        name = "Segyar"
+        class = pc_iron
+        orbit_distance = 65
+        orbit_angle = 343
+        size = 6
+        flags = { segyar_planet }
+        has_ring = no
+    }
+
+    change_orbit = 85
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+    planet = {
+        name = "Webac"
+        class = pc_mephitic
+        orbit_distance = 30
+        orbit_angle = 228
+        size = 16
+        flags = { webac_planet }
+        has_ring = no
+    }
+    change_orbit = 20
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Cronfalas"
+        class = pc_carbon
+        orbit_distance = 100
+        orbit_angle = 244
+        size = 20
+        flags = { cronfalas_planet }
+        has_ring = no
+    }
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    change_orbit = 50
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "omeganebula_qjamafnebula_primaryrelay" 
+			name = "Sector T13 - Primary Relay 3"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_sahrabarik_init = {
+	name = "Sahrabarik"
+    class = sc_m
+    max_instances = 1
+    usage = custom_empire
+
+	flags = { terminus_systems sector_t13 omega_nebula sahrabarik_system primary_relay_system }
+
+    init_effect = {
+        save_global_event_target_as = omegaFirstFleet
+    }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 80
+	}
+
+    planet = {
+		name = "Sahrabarik"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+        flags = { sahrabarik_star }
+    }
+
+    change_orbit = 80
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Urdak"
+        class = pc_l_star
+        orbit_distance = 45
+        orbit_angle = 129
+        has_ring = no
+		size = 15
+		flags = { urdak_star }
+    }
+
+    planet = {
+        name = "Omega"
+        class = pc_omega
+        orbit_distance = 125
+        orbit_angle = 58
+        has_ring = no
+		size = 12
+        starting_planet = yes
+        flags = {omega_station omega_planet}
+        deposit_blockers = none
+        modifiers = none
+        init_effect = {
+            prevent_anomaly = yes
+
+            check_for_asari_player = yes
+
+            if = {
+				limit = {
+					any_country = {
+						has_country_flag = omega_empire_player
+					}
+				}
+				random_country = {
+					limit = {
+						has_country_flag = omega_empire_player
+					}
+					save_global_event_target_as = omega_empire
+				}
+                generate_empire_home_planet = yes
+			}
+			else = {
+				generate_omega_empire_country = yes
+			}
+            set_capital = yes
+			set_owner = event_target:omega_empire
+			create_colony = {
+				owner = event_target:omega_empire
+				species = event_target:asariSpecies
+				ethos = owner
+			}
+            clear_blockers = yes
+            generate_btr_start_deposits_and_blockers = yes
+            btr_generate_canon_planetary_features = yes
+            add_deposit = d_eezo_abundant
+            inline_script = "game_start/canon/omega_emp_origin"
+            generate_omega_pops = yes
+            event_target:omega_empire = {
+                create_starting_leaders = yes
+                country_event = { id = game_start.9 }
+            }
+        }
+	}			
+
+    planet = {
+        name = "Imorkan"
+        class = pc_gas_giant
+        orbit_distance = 125
+        orbit_angle = 136
+        has_ring = no
+		size = 33	
+		flags = { imorkan_planet }
+    }
+
+    planet = {
+        name = "Bindur"
+        class = pc_frozen
+        orbit_distance = 125
+        orbit_angle = 279
+        has_ring = no
+		size = 12
+		flags = { bindur_planet }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "omega4relay_galacticcore_primaryrelay" 
+			name = "Sector T13 - Primary Relay 4"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

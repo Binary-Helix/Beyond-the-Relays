@@ -1,0 +1,347 @@
+###################
+### DESPOIL RIM ###
+###################
+
+sys_dypas_init = {
+    name = "Dypas"
+    class = sc_w_azure
+	max_instances = 1
+
+    flags = { terminus_systems sector_t4 despoil_rim dypas_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 265
+    }
+
+    planet = {
+		name = "Dypas"
+        class = pc_w_azure_star
+        orbit_distance = 0
+        size = 34
+        flags = { dypas_star }
+    }
+
+    planet = {
+        name = "Xa'an"
+        class = pc_barren
+        orbit_distance = 60
+        orbit_angle = 287
+        size = 8
+        flags = { xaan_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Sestre"
+        class = pc_molten
+        orbit_distance = 60
+        orbit_angle = 278
+        size = 23
+        flags = { sestre_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Lystrer"
+        class = pc_alpine
+        orbit_distance = 60
+        orbit_angle = 210
+        size = 20
+        flags = { lystrer_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Femre"
+        class = pc_barren_cold
+        orbit_distance = 60
+        orbit_angle = 261
+        size = 17
+        flags = { femre_planet }
+        has_ring = no
+    }
+
+    change_orbit = 25
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "Par'rul"
+        class = pc_ice_giant
+        orbit_distance = 35
+        orbit_angle = 178
+        size = 31
+        flags = { parrul_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        class = random
+        orbit_distance = 60
+        orbit_angle = 22
+        size = 27
+        has_ring = no
+    }
+
+    planet = {
+        name = "Pulli"
+        class = pc_gas_giant
+        orbit_distance = 60
+        orbit_angle = 80
+        size = 39
+        flags = { pulli_planet }
+        has_ring = yes
+    }
+
+    planet = {
+        name = "Pindasra"
+        class = pc_barren_cold
+        orbit_distance = 60
+        orbit_angle = 124
+        size = 8
+        flags = { pindasra_planet }
+        has_ring = no
+    }
+}
+
+sys_kys_init = {
+    name = "Kys"
+    class = sc_m_giant
+	max_instances = 1
+
+    flags = { terminus_systems sector_t4 despoil_rim kys_system }
+
+    planet = {
+		name = "Kys"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 29
+        flags = { kys_star }
+    }
+
+    planet = {
+        name = "Jelrurlith"
+        class = pc_molten
+        orbit_distance = 150
+        orbit_angle = 280
+        size = 11
+        flags = { jelrurlith_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Ropoc"
+        class = pc_savannah
+        orbit_distance = 150
+        orbit_angle = 237
+        size = 12
+        has_ring = no
+
+        moon = {
+            name = "Rekindas"
+            class = pc_mephitic
+            orbit_distance = 78
+            orbit_angle = 262
+            size = 8
+            flags = {rekindas_planet ropoc_planet}
+            has_ring = no
+        }
+    }
+
+    planet = {
+        name = "Qas'aan"
+        class = pc_barren
+        orbit_distance = 150
+        orbit_angle = 158
+        size = 24
+        flags = { qasaan_planet }
+        has_ring = no
+    }
+}
+
+sys_qith_init = {
+    name = "Qith"
+    class = sc_lbv_blue
+	max_instances = 1
+
+    flags = { terminus_systems sector_t4 despoil_rim qith_system secondary_relay_system }
+
+    planet = {
+		name = "Qith"
+        class = pc_lbv_blue_star
+        orbit_distance = 0
+        size = 30
+        flags = { qith_star }
+    }
+
+    planet = {
+        name = "Xa'apis"
+        class = pc_molten
+        orbit_distance = 80
+        orbit_angle = 226
+        size = 15
+        flags = { xaapis_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Vekith"
+        class = pc_hothouse
+        orbit_distance = 80
+        orbit_angle = 157
+        size = 20
+        flags = { vekith_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Qac"
+        class = random
+        orbit_distance = 80
+        orbit_angle = 132
+        size = 10
+        flags = { qac_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Ridac"
+        class = pc_iron
+        orbit_distance = 80
+        orbit_angle = 128
+        size = 23
+        flags = { ridac_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Lyn"
+        class = pc_frozen
+        orbit_distance = 80
+        orbit_angle = 301
+        size = 11
+        flags = { lyn_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Tramon"
+        class = pc_iron
+        orbit_distance = 80
+        orbit_angle = 171
+        size = 25
+        flags = { tramon_planet }
+        has_ring = no
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_4_secondaryrelay" 
+			name = "Sector T4 - Secondary Relay 1"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_qykaanas_init = {
+    name = "Qykaanas"
+    class = sc_g_super
+	max_instances = 1
+
+    flags = { terminus_systems sector_t4 despoil_rim qykaanas_system }
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 435
+    }
+
+    planet = {
+		name = "Qykaanas"
+        class = pc_g_super_star
+        orbit_distance = 0
+        size = 29
+        flags = { qykaanas_star }
+    }
+
+    planet = {
+        name = "Emath"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 281
+        size = 9
+        flags = { emath_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Iraldiac"
+        class = pc_hothouse
+        orbit_distance = 125
+        orbit_angle = 114
+        size = 21
+        flags = { iraldiac_planet }
+        has_ring = no
+    }
+
+    planet = {
+        name = "Ikic"
+        class = pc_desert
+        orbit_distance = 125
+        orbit_angle = 170
+        size = 16
+        has_ring = no
+
+        moon = {
+            name = "Vakoc"
+            class = pc_barren_cold
+            orbit_distance = 20
+            orbit_angle = 319
+            size = 8
+            flags = {vakoc_planet ikic_planet}
+            has_ring = no
+        }
+    }
+
+    change_orbit = 60
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+    planet = {
+        name = "A'pon"
+        class = pc_gas_giant
+        orbit_distance = 65
+        orbit_angle = 293
+        size = 35
+        has_ring = yes
+
+        moon = {
+            class = pc_frozen
+            orbit_distance = 20
+            orbit_angle = 106
+            size = 7
+            has_ring = no
+        }
+
+        moon = {
+            name = "Jisan"
+            class = pc_chlorine
+            orbit_distance = 5
+            orbit_angle = 168
+            size = 5
+            flags = {jisan_planet apon_planet}
+            has_ring = no
+        }
+    }
+}

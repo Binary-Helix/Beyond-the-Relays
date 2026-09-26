@@ -1,0 +1,288 @@
+######################
+### PARAXHI SQUARE ###
+######################
+
+sys_cedinae_init = {
+    name = "Cedin'ae"
+    class = sc_m_hyper
+	max_instances = 1
+
+    flags = { terminus_systems sector_t6 paraxhi_square cedinae_system primary_relay_system }
+
+    planet = {
+		name = "Cedin'ae"
+        class = pc_m_hyper_star
+        orbit_distance = 0
+        size = 35
+        flags = { cedinae_star }
+    }
+
+	planet = {
+		name = "Cukcu"
+		class = pc_chthonian
+		orbit_distance = 250
+		size = 24
+		flags = { cukcu_planet }
+		has_ring = no
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "paraxhisquare_elkrasbasin_primaryrelay" 
+			name = "Sector T6 - Primary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}
+
+sys_lisiine_init = {
+    name = "Lisii'ne"
+    class = sc_m_giant
+	max_instances = 1
+
+    flags = { terminus_systems sector_t6 paraxhi_square lisiine_system sedriicae_collective_system }
+
+    init_effect = {
+        save_global_event_target_as = sedriicaeCon2
+    }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 60
+	}
+
+    planet = {
+		name = "Lisii'ne"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 35
+        flags = { lisiine_star }
+    }
+
+    change_orbit = 60
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		name = "Axhani"
+		class = pc_gas_giant
+		orbit_distance = 20
+		size = 24
+		has_ring = yes
+
+		moon = {
+			name = "Axhani a"
+			class = pc_barren
+			orbit_distance = 20
+			size = 4
+			flags = {axhani_a_planet axhani_planet}
+		}	
+
+		moon = {
+			name = "Axhani b"
+			class = pc_frozen
+			orbit_distance = 5
+			size = 4
+			flags = { axhani_b_planet }
+		}	
+	}
+	
+	planet = {
+		name = "Perix"
+		class = pc_dextro_desert
+		orbit_distance = 80
+		size = 16
+		has_ring = no
+		flags = { perix_planet subclass_world}
+		entity = "cenote_planet_11_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = cenote_world
+				days = -1
+			}		
+		}
+	}
+	
+	planet = {
+		name = "Siniez'ma"
+		class = pc_methane
+		orbit_distance = 80
+		size = 12
+		has_ring = yes
+		flags = {subclass_world siniezma_planet}
+		entity = "methane_tundra_planet_09_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = fungal_world
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "Ak'xhandi"
+		class = pc_barren_cold
+		orbit_distance = 80
+		size = 7
+		flags = { akxhandi_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Kcots"
+		class = pc_frozen
+		orbit_distance = 80
+		size = 6
+		flags = { kcots_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Ouzha"
+		class = pc_frozen
+		orbit_distance = 80
+		size = 10
+		flags = { ouzha_planet }
+		has_ring = no
+	}
+}
+
+sys_okred_init = {
+    name = "Okred"
+    class = sc_binary_a_d
+	max_instances = 1
+
+    flags = { terminus_systems sector_t6 paraxhi_square okred_system }	
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 120
+	}
+
+    planet = {
+		name = "Okred A"
+        class = pc_d_star
+        orbit_distance = 10
+        size = 35
+        flags = { okred_a_star }
+    }
+
+    planet = {
+		name = "Okred B"
+        class = pc_a_star
+        orbit_distance = 25
+        size = 35
+        flags = { okred_b_star }
+    }
+
+    change_orbit = 95
+
+    planet = {
+		count = { min = 1 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	
+	planet = {
+		name = "Weuzha"
+		class = pc_barren
+		orbit_distance = 35
+		size = 14
+		flags = { weuzha_planet }
+		has_ring = no
+	}
+
+	planet = {
+		name = "Raliik"
+		class = pc_ice_giant
+		orbit_distance = 150
+		size = 29
+		flags = { raliik_planet }
+		has_ring = yes	
+	}
+
+	planet = {
+		name = "Nimuas"
+		class = pc_frozen
+		orbit_distance = 150
+		size = 3
+		flags = { nimuas_planet }
+		has_ring = no
+	}
+}	
+
+sys_suryan_init = {
+    name = "Suryan"
+    class = sc_b
+	max_instances = 1
+
+    flags = { terminus_systems sector_t6 paraxhi_square suryan_system secondary_relay_system }
+
+    planet = {
+		name = "Suryan"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 35
+        flags = { suryan_star }
+    }
+
+	planet = {
+		name = "Rauzha"
+		class = pc_hothouse
+		orbit_distance = 125
+		size = 14
+		flags = { rauzha_planet }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Sanfua'ir"
+		class = pc_carbon
+		orbit_distance = 125
+		size = 13
+		flags = { sanfuair_planet }
+		has_ring = no
+	}
+
+	
+	planet = {
+		name = "Magda"
+		class = pc_highgrav_ammonia
+		orbit_distance = 125
+		size = 20
+		has_ring = no
+		flags = {subclass_world magda_planet}
+		entity = "ammonia_alpine_planet_10_entity"
+		init_effect = {
+			add_modifier = {
+				modifier = boreal_world
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "Vigviik"
+		class = pc_iron
+		orbit_distance = 125
+		size = 7
+		flags = { vigviik_planet }
+		has_ring = no
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "terminus_sector_6_secondaryrelay" 
+			name = "Sector T6 - Secondary Relay 2"
+			orbit_angle = 270 
+			orbit_distance = 500
+		} 
+	}
+}

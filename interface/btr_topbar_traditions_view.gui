@@ -22,9 +22,42 @@
 #Column 3 - 167
 #Column 4 - 237
 
+@arrow_down_x1 = 77
+@arrow_down_x2 = 112
+@arrow_down_x3 = 147
+@arrow_down_x4 = 182
+@arrow_down_x5 = 217
+@arrow_merge_x1 = 82
+@arrow_merge_x2 = 117
+@arrow_merge_x3 = 152
+@arrow_split_x1 = 76
+@arrow_split_x2 = 111
+@arrow_split_x3 = 146
+@arrow_merge_wide_x = 82
+@arrow_split_wide_x = 77
+@tradition_icon_x1 = 61
+@tradition_icon_x2 = 96
+@tradition_icon_x3 = 131
+@tradition_icon_x4 = 166
+@tradition_icon_x5 = 201
+@tradition_icon_y1 = 55
+@tradition_icon_y2 = 125
+@tradition_icon_y3 = 195
 
+@arrow_down_y1 = 100
+@arrow_down_y2 = 170
 
+# Single arrow side
+@arrow_right_x1 = 106
+@arrow_right_x2 = 141
+@arrow_right_x3 = 176
+@arrow_left_x1 = 108
+@arrow_left_x2 = 143
+@arrow_left_x3 = 178
 
+@arrow_side_y1 = 70
+@arrow_side_y2 = 140
+@arrow_side_y3 = 210
 
 @entries_row1_y = 63
 @entries_row2_y = 329
@@ -72,9 +105,9 @@ guiTypes = {
 			alwaysTransparent = yes
 		}
 
-		iconType = { #TODO
+		iconType = {
 			name = "arrow_2"
-			spriteType = "GFX_arrow_double"
+			spriteType = "GFX_arrow_left_down_long"
 			position = { x = 112 y = 170 }
 			alwaysTransparent = yes
 		}
@@ -120,21 +153,21 @@ guiTypes = {
 			#####
 			# 5 #
 			#####
-#TODO make sure that 1 to 2, 2 to everything ele individually
+#TODO make sure that 1 to 2, 2 to everything else individually
 	containerWindowType = {
 		name = "btr_tree_1_3_1"
 		position = { x = 0 y = @three_layer_tree_h }
 
 		iconType = { # TODO
 			name = "arrow_1"
-			spriteType = "GFX_arrow_mt_triple_split"
+			spriteType = "GFX_arrow_merge" #"GFX_arrow_mt_triple_split"
 			position = { x = 71 y = 100 }
 			alwaysTransparent = yes
 		}
 
 		iconType = { # TODO
 			name = "arrow_2"
-			spriteType = "GFX_arrow_mt_triple_merge"
+			spriteType = "GFX_arrow_merge" #"GFX_arrow_mt_triple_merge"
 			position = { x = 81 y = 170 }
 			alwaysTransparent = yes
 		}
@@ -291,8 +324,8 @@ guiTypes = {
 			#####
 	containerWindowType = {
 		name = "btr_11_11_21"
-		size = { width = @entry_w height = @entry_h_narrow }
-		position = { x = @entries_column1 y = @entries_row3_y }
+		size = { width = @entry_w height = @entry_h }
+		position = { x = @entries_column1 y = @entries_row2_y }
 
 		#background = {
 		#	name = "black"
@@ -301,8 +334,8 @@ guiTypes = {
 		#}
 
 		iconType = {
-			name = #TODO
-			spriteType = #TODO
+			name = "arrow_2" #TODO
+			spriteType = "GFX_arrow_merge" # #TODO
 			position = { x = -23 y = -18 }
 			alwaysTransparent = yes
 		}
@@ -326,7 +359,7 @@ guiTypes = {
 
 			iconType = {
 				name = "adopted"
-				spriteType = "GFX_adopted_tradition_category_bg_orange"
+				spriteType = "GFX_arrow_merge" #"GFX_adopted_tradition_category_bg_orange"
 				alwaysTransparent = yes
 			}
 
@@ -347,7 +380,7 @@ guiTypes = {
 			name = "adopt_button"
 			size = { x = 298 y = 35 }
 			position = { x = 163 y = -5 }
-			spriteType = #TODO
+			spriteType = "GFX_arrow_merge" #TODO
 			buttonFont = "cg_16b"
 			#text = "TRADITION_ADOPT_BUTTON"
 			font = "cg_16b"
@@ -384,7 +417,7 @@ guiTypes = {
 
 			iconType = {
 				name = "arrow_3"
-				spriteType = "GFX_arrow_side"
+				spriteType = "GFX_arrow_merge" #"GFX_arrow_side"
 				position = { x = 100 y = 140 }
 			}
 		}
@@ -411,7 +444,7 @@ containerWindowType = {
 
 	iconType = {
 		name = "arrow_1"
-		spriteType = "GFX_arrow_est_split_wide"
+		spriteType = "GFX_arrow_double"
 		position = { x = @arrow_split_wide_x y = @arrow_down_y1 }
 	}
 

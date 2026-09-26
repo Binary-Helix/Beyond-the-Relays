@@ -1,0 +1,68 @@
+tr_btr_impulse_adoption = {
+    possible = {
+        has_origin = vorcha_cla_origin
+    }
+    unlocks_agenda = agenda_impulse
+    modifier = {
+        pop_ethic_militarist_attraction_mult = 0.2
+        pop_ethic_xenophobe_attraction_mult = 0.2
+    }
+}
+
+tr_btr_impulse_finish = {
+    modifier = {
+        pop_cat_slave_political_power = -1
+        planet_jobs_slave_produces_mult = 0.2
+      #  pop_category_slave_produces_mult = 0.2
+        planet_jobs_worker_produces_mult = 0.2
+    }
+}
+
+tr_btr_impulse_swarm_mentality = {
+    modifier = {
+        army_damage_mult = 0.3
+        planet_army_build_speed_mult = -0.5
+        planet_building_build_speed_mult = -0.25
+    }
+}
+
+tr_btr_impulse_spreading_chaos = {
+    possible = {
+        has_tradition = tr_btr_impulse_swarm_mentality
+    }
+    modifier = {
+        army_collateral_damage_mult = 1.5
+        ship_orbital_bombardment_mult = 0.5
+        leaders_cost_mult = -0.15
+    }
+}
+
+tr_btr_impulse_putting_work = {
+    possible = {
+        has_tradition = tr_btr_impulse_spreading_chaos
+    }
+    modifier = {
+        planet_pops_unemployed_food_upkeep_add = -2
+        planet_pops_unemployed_unity_upkeep_add = -1
+    }
+}
+
+tr_btr_impulse_serve = {
+    possible = { has_tradition = tr_btr_impulse_spreading_chaos }
+    modifier = {
+        planet_jobs_slave_influence_produces_mult = 0.25
+        planet_jobs_slave_unity_produces_mult = 0.25
+     #   pop_category_slave_influence_add = 0.25
+      #  pop_category_slave_unity_add = 1
+        pop_category_slave_upkeep_mult = -0.2
+    }
+}
+
+tr_btr_impulse_no_weak = {
+    possible = { has_tradition = tr_btr_impulse_spreading_chaos }
+    modifier = {
+        ships_upkeep_mult = -0.25
+        starbase_upgrade_cost_mult = -0.2
+        starbase_defense_platform_capacity_add = 5
+    }
+}
