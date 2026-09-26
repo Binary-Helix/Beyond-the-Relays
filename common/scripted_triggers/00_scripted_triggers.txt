@@ -1,3 +1,7 @@
+# BTR OVERRIDE of vanilla common/scripted_triggers/00_scripted_triggers.txt, synced to Stellaris v4.3.7.
+# BTR changes are wrapped in "# BTR START: <reason>" / "# BTR END" markers (search "# BTR").
+# To resync: copy vanilla over this file, then re-apply every marked block.
+
 #	Example:
 #
 #	example_trigger = {
@@ -256,6 +260,7 @@ wears_clothes = { # The species uses the portrait that wears clothes
 		species_portrait = cyb4
 		species_portrait = cyb10
 		species_portrait = cyb5
+		species_portrait = season_10_portrait
 	}
 }
 
@@ -344,6 +349,11 @@ is_marauder_cluster = {
 	}
 }
 
+empire_design_never = {
+	optimize_memory
+	always = no
+}
+
 has_leviathans = {
 	optimize_memory
 	host_has_dlc = "Leviathans Story Pack"
@@ -384,8 +394,9 @@ has_lithoids = {
 }
 has_mammalians_micro_dlc = {
 	optimize_memory
+	# BTR START: always available. Vanilla: host_has_dlc = "Mammalian Species Pack"
 	always = yes
-
+	# BTR END
 }
 
 has_federations_dlc = {
@@ -468,9 +479,8 @@ has_machine_age_dlc = {
 	host_has_dlc = "The Machine Age"
 }
 
-has_synthetic_dawn_not_machine_age = {
+has_not_machine_age_dlc = {
 	optimize_memory
-	host_has_dlc = "Synthetic Dawn Story Pack"
 	NOT = {
 		host_has_dlc = "The Machine Age"
 	}
@@ -495,6 +505,11 @@ has_rick_the_cube_dlc = {
 has_stargazer_dlc = {
 	optimize_memory
 	host_has_dlc = "Stargazer Species Portrait"
+}
+
+has_vipra_the_vapor_dlc = {
+	optimize_memory
+	host_has_dlc = "Vipra the Vapor Species Portrait"
 }
 
 has_biogenesis_dlc = {
@@ -1025,7 +1040,10 @@ is_disconnected_drone_pop = {
 	has_trait = trait_hive_mind
 	from = {
 		is_gestalt = no
-		is_fallen_empire = no
+		NOR = {
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
 	}
 }
 
@@ -1148,12 +1166,11 @@ is_binary_star = {
 		is_star_class = sc_binary_8
 		is_star_class = sc_binary_9
 		is_star_class = sc_binary_10
-		# TODO: sc_crisis_binary_X might be deprecated
-		# is_star_class = sc_crisis_binary_1
-		# is_star_class = sc_crisis_binary_2
-		# is_star_class = sc_crisis_binary_5
-		# is_star_class = sc_crisis_binary_7_8_9
-		# is_star_class = sc_crisis_binary_10
+		is_star_class = sc_crisis_binary_1
+		is_star_class = sc_crisis_binary_2
+		is_star_class = sc_crisis_binary_5
+		is_star_class = sc_crisis_binary_7_8_9
+		is_star_class = sc_crisis_binary_10
 	}
 }
 
@@ -1276,11 +1293,10 @@ is_trinary_star = {
 		is_star_class = sc_trinary_2
 		is_star_class = sc_trinary_3
 		is_star_class = sc_trinary_4
-		# TODO: sc_crisis_binary_X might be deprecated
-		# is_star_class = sc_crisis_trinary_1
-		# is_star_class = sc_crisis_trinary_2
-		# is_star_class = sc_crisis_trinary_3
-		# is_star_class = sc_crisis_trinary_4
+		is_star_class = sc_crisis_trinary_1
+		is_star_class = sc_crisis_trinary_2
+		is_star_class = sc_crisis_trinary_3
+		is_star_class = sc_crisis_trinary_4
 	}
 }
 
@@ -1884,7 +1900,7 @@ has_met_primitives = {
 		has_country_flag = encountered_first_primitive
 		any_relation = {
 			has_communications = root
-			is_primitive = yes
+			is_country_type = primitive
 		}
 	}
 }
@@ -2058,7 +2074,7 @@ has_bordering_system = {
 # root: great khan's horde (country)
 is_potential_diadochi_system = {
 	exists = starbase
-	starbase = { is_owned_by = root }
+	starbase = { owner = { is_same_value = root } }
 	NOR = {
 		has_star_flag = first_diadochi_system
 		has_star_flag = second_diadochi_system
@@ -2398,6 +2414,7 @@ can_have_physics_deposits = {
 		is_planet_class = pc_neutron_star
 		is_planet_class = pc_pulsar
 		is_planet_class = pc_black_hole
+		has_planet_flag = can_have_physics_deposits
 	}
 }
 
@@ -2458,6 +2475,7 @@ is_fallen_empire = {
 
 has_galactic_wonders = {
 	OR = {
+		has_ascension_perk = ap_galactic_wonders
 		has_ascension_perk = ap_galactic_wonders_utopia
 		has_ascension_perk = ap_galactic_wonders_megacorp
 		has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
@@ -2540,6 +2558,7 @@ can_build_fallen_empire_buildings = {
 
 has_gw_ring_world = {
 	OR = {
+		has_ascension_perk = ap_galactic_wonders
 		has_ascension_perk = ap_galactic_wonders_utopia
 		has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
 	}
@@ -2547,6 +2566,7 @@ has_gw_ring_world = {
 
 has_gw_dyson_sphere = {
 	OR = {
+		has_ascension_perk = ap_galactic_wonders
 		has_ascension_perk = ap_galactic_wonders_utopia
 		has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
 	}
@@ -2562,6 +2582,7 @@ has_gw_spy_orb = {
 
 has_gw_matter_decompressor = {
 	OR = {
+		has_ascension_perk = ap_galactic_wonders
 		has_ascension_perk = ap_galactic_wonders_megacorp
 		has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
 	}
@@ -3008,6 +3029,7 @@ embassy_upkeep_affordable = {
 	}
 }
 
+# BTR START: redefined in btr_planetarystations_scripted_triggers.txt (adds planetary stations)
 # is_special_colony_type = {
 # 	OR = {
 # 		has_modifier = penal_colony
@@ -3015,6 +3037,7 @@ embassy_upkeep_affordable = {
 # 		has_modifier = slave_colony
 # 	}
 # }
+# BTR END
 
 scion_has_techs = {
 	OR = {
@@ -3107,7 +3130,7 @@ baol_colony_1_trigger = {
 	}
 	OR = {
 		has_owner = no
-		is_owned_by = root.owner
+		owner = { is_same_value = root.owner }
 	}
 	any_system_planet = {
 		is_planet_class = pc_barren
@@ -3129,7 +3152,7 @@ baol_colony_2_trigger = {
 	}
 	OR = {
 		has_owner = no
-		is_owned_by = root.owner
+		owner = { is_same_value = root.owner }
 	}
 	any_system_planet = {
 		is_planet_class = pc_asteroid
@@ -3150,7 +3173,7 @@ baol_colony_3_trigger = {
 	}
 	OR = {
 		has_owner = no
-		is_owned_by = root.owner
+		owner = { is_same_value = root.owner }
 	}
 	any_system_planet = {
 		habitable_planet = yes
@@ -3231,6 +3254,7 @@ necroids_portrait = { #To establish default rooms and VO weights
 		species_portrait = nec13
 		species_portrait = nec14
 		species_portrait = nec15
+		species_portrait = season_10_portrait
 	}
 }
 
@@ -3502,7 +3526,7 @@ basic_eligibility_for_separatism_joining_trigger = {
 			}
 		}
 	}
-	NOT = { is_same_empire = event_target:revolt_situation.owner }
+	NOT = { is_same_value = event_target:revolt_situation.owner }
 	is_subject = no
 	NOR = {
 		is_in_federation_with = event_target:revolt_situation.owner
@@ -4906,7 +4930,7 @@ blocks_minister_of_state = {
 }
 
 is_terraforming_candidate = {
-	OR = { 
+	OR = {
 		has_modifier = terraforming_candidate
 		has_modifier = frozen_terraforming_candidate
 		has_modifier = toxic_terraforming_candidate
@@ -5097,8 +5121,8 @@ is_legit_or_legal_criminal = {
 					is_subject = yes
 					overlord = {
 						OR = {
-							is_same_empire = root.owner
-							is_same_empire = root.owner.overlord
+							is_same_value = root.owner
+							is_same_value = root.owner.overlord
 						}
 					}
 				}
@@ -5136,8 +5160,8 @@ is_illegal_criminal = {
 			is_subject = yes
 			overlord = {
 				OR = {
-					is_same_empire = root.owner
-					is_same_empire = root.owner.overlord
+					is_same_value = root.owner
+					is_same_value = root.owner.overlord
 				}
 			}
 		}
@@ -5419,4 +5443,13 @@ has_good_relationships = {
 
 is_specialist_category = {
 	is_pop_category = specialist
+}
+
+has_unity_blocker = {
+	OR = {
+		has_deposit = d_shroudstone
+		has_deposit = d_aura_blocker
+		has_deposit = d_shroudfall
+		has_deposit = d_ruined_sanctum_of_the_lost
+	}
 }

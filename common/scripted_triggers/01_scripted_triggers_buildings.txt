@@ -1,3 +1,7 @@
+# BTR OVERRIDE of vanilla common/scripted_triggers/01_scripted_triggers_buildings.txt, synced to Stellaris v4.3.7.
+# BTR changes are wrapped in "# BTR START: <reason>" / "# BTR END" markers (search "# BTR").
+# To resync: copy vanilla over this file, then re-apply every marked block.
+
 has_upgraded_capital = {
 	hidden_trigger = { exists = owner }
 	if = {
@@ -73,6 +77,7 @@ has_major_upgraded_capital = {
 			capital_tier >= 3
 		}
 	}
+	# BTR START: planetary stations use their own capital buildings
 	else_if = {
 		limit = { has_planet_flag = planetary_station }
 		custom_tooltip = {
@@ -86,6 +91,7 @@ has_major_upgraded_capital = {
 			}
 		}
 	}
+	# BTR END
 	else_if = {
 		limit = { owner = { is_wilderness_empire = yes } }
 		custom_tooltip = {
@@ -138,6 +144,7 @@ has_fully_upgraded_capital = {
 			capital_tier >= 4
 		}
 	}
+	# BTR START: planetary stations use their own capital buildings
 	else_if = {
 		limit = { has_planet_flag = planetary_station }
 		custom_tooltip = {
@@ -149,6 +156,7 @@ has_fully_upgraded_capital = {
 			}
 		}
 	}
+	# BTR END
 	else_if = {
 		limit = { owner = { is_wilderness_empire = yes } }
 		custom_tooltip = {
@@ -844,7 +852,7 @@ has_any_mining_zone = {
 has_any_normal_mining_zone = {
 	OR = {
 		has_zone = {
-			zone = zone_rare_crystals
+			zone = zone_minerals
 		}
 		has_zone = {
 			zone = zone_minerals_wilderness
@@ -917,6 +925,9 @@ has_any_foundry_zone = {
 	OR = {
 		has_zone = {
 			zone = zone_foundry
+		}
+		has_zone = {
+			zone = zone_foundry_wilderness
 		}
 		has_zone = {
 			zone = zone_foundry_arcology
@@ -1003,6 +1014,9 @@ has_any_unity_zone = {
 			zone = zone_unity_hive
 		}
 		has_zone = {
+			zone = zone_unity_wilderness
+		}
+		has_zone = {
 			zone = zone_research_unity
 		}
 		has_zone = {
@@ -1016,6 +1030,12 @@ has_any_unity_zone = {
 
 has_any_trade_zone = {
 	OR = {
+		has_zone = {
+			zone = zone_trade
+		}
+		has_zone = {
+			zone = zone_trade_wilderness
+		}
 		has_zone = {
 			zone = zone_trade_arcology
 		}
