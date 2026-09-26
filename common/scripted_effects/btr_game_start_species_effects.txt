@@ -583,7 +583,7 @@ create_krogan_species = {
 		}
 		create_species = {
 			class = KRO
-			portrait = krogan
+			portrait = btr_krogan
 			name = PRESCRIPTED_species_name_aralakh_kahmat
 			plural = PRESCRIPTED_species_plural_aralakh_kahmat
 			adjective = PRESCRIPTED_species_adjective_aralakh_kahmat
@@ -650,7 +650,7 @@ create_drell_species = {
 		}
 		create_species = {
 			class = DRE
-			portrait = drell
+			portrait = btr_drell
 			name = PRESCRIPTED_species_name_remnants_of_rakhana
 			plural = PRESCRIPTED_species_plural_remnants_of_rakhana
 			adjective = PRESCRIPTED_species_adjective_remnants_of_rakhana
@@ -851,7 +851,7 @@ create_lystheni_species = {
 		}
 		create_species = {
 			class = LYS
-			portrait = lystheni
+			portrait = btr_lystheni
 			name = PRESCRIPTED_species_name_lystheni_order
 			plural = PRESCRIPTED_species_plural_lystheni_order
 			adjective = PRESCRIPTED_species_adjective_lystheni_order
@@ -918,7 +918,7 @@ create_gothones_species = {
 		}
 		create_species = {
 			class = GOT
-			portrait = gothones
+			portrait = btr_gothones
 			name = PRESCRIPTED_species_name_gothones_remnant
 			plural = PRESCRIPTED_species_plural_gothones_remnant
 			adjective = PRESCRIPTED_species_adjective_gothones_remnant
@@ -1186,7 +1186,7 @@ create_rachni_species = {
 		}
 		create_species = {
 			class = RAC
-			portrait = rachni
+			portrait = btr_rachni
 			name = PRESCRIPTED_species_name_rachni_hive
 			plural = PRESCRIPTED_species_plural_rachni_hive
 			adjective = PRESCRIPTED_species_adjective_rachni_hive
@@ -1312,6 +1312,8 @@ check_for_collectors_player = {
 	}
 }
 
+# TODO: create collector traits
+
 create_collectors_species = {
 	if = {
 		limit = {
@@ -1321,7 +1323,7 @@ create_collectors_species = {
 		}
 		create_species = {
 			class = GTH
-			portrait = collectors
+			portrait = btr_collectors
 			name = PRESCRIPTED_species_name_collectors_consensus
 			plural = PRESCRIPTED_species_plural_collectors_consensus
 			adjective = PRESCRIPTED_species_adjective_collectors_consensus
