@@ -7,7 +7,7 @@ generate_canon_playtest_resources = {
             limit = {
                 has_country_flag = asari_republics
             }
-            generate_asari_republic_playtest_setup = yes
+            generate_asari_republics_playtest_setup = yes
         }
         else_if = {
             limit = {
@@ -162,7 +162,7 @@ generate_canon_playtest_resources = {
     }
 }
 
-generate_asari_republic_playtest_setup = {
+generate_asari_republics_playtest_setup = {
     add_resource = { energy = 10000	}
     add_resource = { minerals = 10000 }
     add_resource = { food = 10000 }
@@ -1784,7 +1784,7 @@ generate_canon_starting_resources = {
             limit = {
                 has_country_flag = asari_republics
             }
-            generate_asari_republic_starting_setup = yes
+            generate_asari_republics_starting_setup = yes
         }
         else_if = {
             limit = {
@@ -1923,6 +1923,12 @@ generate_canon_starting_resources = {
                 has_country_flag = rachni_hive
             }
             generate_collectors_empire_starting_setup = yes
+        }
+        else if = {
+            limit = {
+                has_country_flag = sedriicaue_collective
+            }
+            generate_sedriicae_collective_starting_setup = yes
         }
         else_if = {
             limit = {

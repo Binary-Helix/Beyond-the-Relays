@@ -1,3 +1,17 @@
+# TODO: has_job / has_job_type are not valid triggers in asset_selectors, so the job-specific
+#       overrides below were commented out and replaced with is_pop_category checks.
+#       Jobs that were originally attempted (restore if job-level selection becomes possible):
+#         Overrides:   entertainer (on habitats)
+#         Slaves:      entertainer, clerk (interns), servant, slave_overseer, slave_toiler,
+#                      organic_battery, livestock
+#         Rulers:      head_researcher, high_priest, politician, noble (has_job_type), merchant, executive
+#         Specialists: colonist, researcher, priest, foundry, artisan, enforcer, telepath, entertainer,
+#                      culture_worker, translucer, gas_refiner, chemist, roboticist, healthcare,
+#                      manager, bureaucrat
+#         Workers:     clerk, technician, miner, crystal_miner, gas_extractor, mote_harvester,
+#                      farmer, soldier, preacher
+#         Special:     bio_trophy, criminal, underground_trade_worker
+
 # This is a template which multiple species can use.
 
 btr_asari_outfit = {
@@ -136,7 +150,11 @@ btr_asari_outfit = {
 		# Entertainer
 		random = {
 			trigger = { 
-				has_job = entertainer # TODO: invalid
+				# has_job = entertainer
+				OR = {
+					is_pop_category = specialist
+					is_pop_category = complex_drone
+				}
 				planet = { is_planet_class = pc_habitat }
 			}
 			list = {
@@ -186,7 +204,8 @@ btr_asari_outfit = {
 		# Entertainer
 		random = {
 			trigger = { 
-				has_job = entertainer # TODO: invalid
+				# has_job = entertainer
+				is_pop_category = slave
 				is_enslaved = yes
 			} 
 			list = {
@@ -199,7 +218,8 @@ btr_asari_outfit = {
 		# Interns
 		random = {
 			trigger = {
-				has_job = clerk
+				# has_job = clerk
+				is_pop_category = slave
 				is_enslaved = yes
 			}
 			list = {
@@ -211,7 +231,11 @@ btr_asari_outfit = {
 		
 		# Servants
 		random = {
-			trigger = { has_job = servant } # TODO: invalid
+			trigger = {
+				# has_job = servant
+				is_pop_category = slave
+				has_slavery_type = { type = slavery_domestic }
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_servant_1.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_servant_1a.dds"
@@ -221,7 +245,10 @@ btr_asari_outfit = {
 		
 		# Overseer (Thrall-World)
 		random = {
-			trigger = { has_job = slave_overseer } # TODO: invalid
+			trigger = {
+				# has_job = slave_overseer
+				is_pop_category = slave
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_slave_1.dds"
 			}
@@ -229,7 +256,10 @@ btr_asari_outfit = {
 		
 		# Toiler (Thrall-World)
 		random = {
-			trigger = { has_job = slave_toiler } # TODO: invalid
+			trigger = {
+				# has_job = slave_toiler
+				is_pop_category = slave
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_slave_2.dds"
 			}
@@ -238,9 +268,12 @@ btr_asari_outfit = {
 		# Cattle
 		random = {
 			trigger = {
+				# has_job = organic_battery
+				# has_job = livestock
+				is_pop_category = slave
 				OR = {
-					has_job = organic_battery # TODO: invalid
-					has_job = livestock
+					has_slavery_type = { type = slavery_livestock }
+					has_slavery_type = { type = slavery_matrix }
 				}
 			}
 			list = {
@@ -279,7 +312,10 @@ btr_asari_outfit = {
 		
 		# Head Researcher
 		random = {
-			trigger = { has_job = head_researcher } # TODO: invalid
+			trigger = {
+				# has_job = head_researcher
+				is_pop_category = ruler
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_scientist_1.dds"
 			}
@@ -287,7 +323,10 @@ btr_asari_outfit = {
 		
 		# High Priest
 		random = {
-			trigger = { has_job = high_priest } # TODO: invalid
+			trigger = {
+				# has_job = high_priest
+				is_pop_category = ruler
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_robe_1.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_robe_1a.dds"
@@ -297,7 +336,10 @@ btr_asari_outfit = {
 		
 		# Politician
 		random = {
-			trigger = { has_job = politician } # TODO: invalid
+			trigger = {
+				# has_job = politician
+				is_pop_category = ruler
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_formal_1.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_formal_1a.dds"
@@ -307,7 +349,10 @@ btr_asari_outfit = {
 		
 		# Noble
 		random = {
-			trigger = { has_job_type = noble } # TODO: invalid
+			trigger = {
+				# has_job_type = noble
+				is_pop_category = ruler
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_rich_1.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_rich_1a.dds"
@@ -317,7 +362,10 @@ btr_asari_outfit = {
 		
 		# Merchant
 		random = {
-			trigger = { has_job = merchant } # TODO: invalid
+			trigger = {
+				# has_job = merchant
+				is_pop_category = ruler
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_formal_2.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_formal_2a.dds"
@@ -327,7 +375,10 @@ btr_asari_outfit = {
 		
 		# Executive
 		random = {
-			trigger = { has_job = executive } # TODO: invalid
+			trigger = {
+				# has_job = executive
+				is_pop_category = ruler
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_corporate_1.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_corporate_1a.dds"
@@ -341,7 +392,10 @@ btr_asari_outfit = {
 		
 		# Colonist
 		random = {
-			trigger = { has_job = colonist } # TODO: invalid
+			trigger = {
+				# has_job = colonist
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_5.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_5a.dds"
@@ -351,7 +405,10 @@ btr_asari_outfit = {
 		
 		# Researcher
 		random = {
-			trigger = { has_job = researcher } # TODO: invalid
+			trigger = {
+				# has_job = researcher
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_scientist_2a.dds"
 			}
@@ -359,7 +416,10 @@ btr_asari_outfit = {
 		
 		# Priest
 		random = {
-			trigger = { has_job = priest } # TODO: invalid
+			trigger = {
+				# has_job = priest
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_robe_2.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_robe_2a.dds"
@@ -368,7 +428,10 @@ btr_asari_outfit = {
 		
 		# Foundry
 		random = {
-			trigger = { has_job = foundry } # TODO: invalid
+			trigger = {
+				# has_job = foundry
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_misc_2.dds"
 			}
@@ -376,7 +439,10 @@ btr_asari_outfit = {
 		
 		# Artisan
 		random = {
-			trigger = { has_job = artisan } # TODO: invalid
+			trigger = {
+				# has_job = artisan
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_misc_1.dds"
 			}
@@ -384,7 +450,10 @@ btr_asari_outfit = {
 		
 		# Enforcer
 		random = {
-			trigger = { has_job = enforcer } # TODO: invalid
+			trigger = {
+				# has_job = enforcer
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_uniform_3.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_uniform_3a.dds"
@@ -394,7 +463,10 @@ btr_asari_outfit = {
 		
 		# Telepath
 		random = {
-			trigger = { has_job = telepath } # TODO: invalid
+			trigger = {
+				# has_job = telepath
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_uniform_2.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_uniform_2a.dds"
@@ -403,7 +475,10 @@ btr_asari_outfit = {
 		
 		# Entertainer
 		random = {
-			trigger = { has_job = entertainer } # TODO: invalid
+			trigger = {
+				# has_job = entertainer
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_revealing_4.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_revealing_4a.dds"
@@ -416,7 +491,10 @@ btr_asari_outfit = {
 		
 		# Culture Worker
 		random = {
-			trigger = { has_job = culture_worker } # TODO: invalid
+			trigger = {
+				# has_job = culture_worker
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_2.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_2a.dds"
@@ -426,7 +504,10 @@ btr_asari_outfit = {
 		
 		# Translucer
 		random = {
-			trigger = { has_job = translucer } # TODO: invalid
+			trigger = {
+				# has_job = translucer
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_armour_4a.dds"
 			}
@@ -434,7 +515,10 @@ btr_asari_outfit = {
 		
 		# Gas Refiner
 		random = {
-			trigger = { has_job = gas_refiner } # TODO: invalid
+			trigger = {
+				# has_job = gas_refiner
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_armour_4b.dds"
 			}
@@ -442,7 +526,10 @@ btr_asari_outfit = {
 		
 		# Chemist
 		random = {
-			trigger = { has_job = chemist } # TODO: invalid
+			trigger = {
+				# has_job = chemist
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_armour_4.dds"
 			}
@@ -450,7 +537,10 @@ btr_asari_outfit = {
 		
 		# Roboticist
 		random = {
-			trigger = { has_job = roboticist } # TODO: invalid
+			trigger = {
+				# has_job = roboticist
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_scientist_3.dds"
 			}
@@ -458,7 +548,10 @@ btr_asari_outfit = {
 		
 		# Healthcare
 		random = {
-			trigger = { has_job = healthcare } # TODO: invalid
+			trigger = {
+				# has_job = healthcare
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_scientist_2.dds"
 			}
@@ -466,7 +559,10 @@ btr_asari_outfit = {
 		
 		# Manager
 		random = {
-			trigger = { has_job = manager } # TODO: invalid
+			trigger = {
+				# has_job = manager
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_corporate_2.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_corporate_2a.dds"
@@ -475,7 +571,10 @@ btr_asari_outfit = {
 
 		# Bureaucrat
 		random = {
-			trigger = { has_job = bureaucrat } # TODO: invalid
+			trigger = {
+				# has_job = bureaucrat
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_corporate_2.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_corporate_2a.dds"
@@ -488,7 +587,10 @@ btr_asari_outfit = {
 		
 		# Clerk
 		random = {
-			trigger = { has_job = clerk } # TODO: invalid
+			trigger = {
+				# has_job = clerk
+				is_pop_category = worker
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_3.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_3a.dds"
@@ -498,7 +600,10 @@ btr_asari_outfit = {
 		
 		# Technician
 		random = {
-			trigger = { has_job = technician } # TODO: invalid
+			trigger = {
+				# has_job = technician
+				is_pop_category = worker
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_4.dds"
 			}
@@ -506,7 +611,10 @@ btr_asari_outfit = {
 		
 		# Miner
 		random = {
-			trigger = { has_job = miner } # TODO: invalid
+			trigger = {
+				# has_job = miner
+				is_pop_category = worker
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_4a.dds"
 			}
@@ -514,7 +622,10 @@ btr_asari_outfit = {
 		
 		# Crystal Miner
 		random = {
-			trigger = { has_job = crystal_miner } # TODO: invalid
+			trigger = {
+				# has_job = crystal_miner
+				is_pop_category = worker
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_armour_5a.dds"
 			}
@@ -522,7 +633,10 @@ btr_asari_outfit = {
 		
 		# Gas Extractor
 		random = {
-			trigger = { has_job = gas_extractor } # TODO: invalid
+			trigger = {
+				# has_job = gas_extractor
+				is_pop_category = worker
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_armour_5b.dds"
 			}
@@ -530,7 +644,10 @@ btr_asari_outfit = {
 		
 		# Mote Harvester
 		random = {
-			trigger = { has_job = mote_harvester } # TODO: invalid
+			trigger = {
+				# has_job = mote_harvester
+				is_pop_category = worker
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_armour_5.dds"
 			}
@@ -538,7 +655,10 @@ btr_asari_outfit = {
 		
 		# Farmer
 		random = {
-			trigger = { has_job = farmer } # TODO: invalid
+			trigger = {
+				# has_job = farmer
+				is_pop_category = worker
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_1.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_1a.dds"
@@ -547,7 +667,10 @@ btr_asari_outfit = {
 		
 		# Soldier
 		random = {
-			trigger = { has_job = soldier } # TODO: invalid
+			trigger = {
+				# has_job = soldier
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_uniform_4.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_uniform_4a.dds"
@@ -557,7 +680,10 @@ btr_asari_outfit = {
 		
 		# Preacher
 		random = {
-			trigger = { has_job = preacher } # TODO: invalid
+			trigger = {
+				# has_job = preacher
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_6.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_6a.dds"
@@ -571,7 +697,10 @@ btr_asari_outfit = {
 		
 		# Bio Trophy
 		random = {
-			trigger = { has_job = bio_trophy } # TODO: invalid
+			trigger = {
+				# has_job = bio_trophy
+				is_pop_category = bio_trophy
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_rich_2.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_rich_2a.dds"
@@ -581,7 +710,10 @@ btr_asari_outfit = {
 		
 		# Criminal
 		random = {
-			trigger = { has_job = criminal } # TODO: invalid
+			trigger = {
+				# has_job = criminal
+				is_pop_category = criminal
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_7.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_7a.dds"
@@ -590,7 +722,10 @@ btr_asari_outfit = {
 		
 		# Underground Trade Worker
 		random = {
-			trigger = { has_job = underground_trade_worker } # TODO: invalid
+			trigger = {
+				# has_job = underground_trade_worker
+				is_pop_category = specialist
+			}
 			list = {
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_5.dds"
 				"gfx/models/portraits/btr_01_asari/btr_asari_outfit_civillian_5a.dds"

@@ -2,7 +2,7 @@
 ### PLAYER EMPIRES ###
 ######################
 
-generate_asari_republic_starting_setup = {
+generate_asari_republics_starting_setup = {
 	add_resource = { energy = 3500	}
 	add_resource = { minerals = 2000 }
 	add_resource = { food = 3500 }
@@ -988,6 +988,11 @@ generate_gothones_remnant_starting_setup = {
 	add_resource = { unity = 100 }
 
 	log = "Gothones Remnant Starting Resources Set"
+
+	add_modifier = {
+		modifier = gothones_spartan_survivalism
+		days = -1
+	}
 
 	log = "Gothones Remnant Empire Modifier Set"
 

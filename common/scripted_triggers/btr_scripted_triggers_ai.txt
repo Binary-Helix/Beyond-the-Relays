@@ -1,0 +1,19 @@
+meets_basic_light_alloys_threshold = {
+	OR = {
+		has_monthly_income = { resource = alloys value > @economic_plan_light_alloys_target }
+		resource_stockpile_compare = {
+			resource = alloys
+			value > @economic_plan_stockpile_threshold
+		}
+	}
+}
+
+meets_basic_heavy_alloys_threshold = {
+	OR = {
+		has_monthly_income = { resource = alloys value > @economic_plan_heavy_alloys_target }
+		resource_stockpile_compare = {
+			resource = alloys
+			value > @economic_plan_stockpile_threshold
+		}
+	}
+}
