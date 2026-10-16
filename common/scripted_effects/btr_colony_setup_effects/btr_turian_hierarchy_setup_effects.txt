@@ -1,0 +1,156 @@
+# ## TURIAN HIERACHY ##
+# generate_tur_palaven_capital_buildings = {
+#     while = { count = 3 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 5 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_generator ignore_cap = yes }}
+#     while = { count = 5 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_major_capital
+#     add_building = building_stronghold
+#     add_building = building_research_lab_1
+#     add_building = building_factory_2
+# }
+#
+# generate_tur_parthia_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_food_processing_centerity
+#     add_building = building_holo_theatres
+#     add_building = building_factory_1
+# }
+#
+# generate_tur_oma_ker_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 5 add_district = { district_type = district_mining ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_stronghold
+#     add_building = building_mineral_purification_plant
+#     add_building = building_holo_theatres
+# }
+#
+# generate_tur_digeris_colony_buildings = {
+#     while = { count = 4 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 4 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+#     add_building = building_foundry_1
+#     add_building = building_factory_1
+# }
+#
+# generate_tur_taetrus_colony_buildings = {
+#     while = { count = 3 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_food_processing_centerity
+#     add_building = building_holo_theatres
+# }
+#
+# generate_tur_tracmus_duxes_colony_buildings = {
+#     while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_generator ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_energy_grid
+#     add_building = building_research_lab_1
+# }
+#
+# generate_tur_invictus_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 6 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_factory_2
+#     add_building = building_research_lab_1
+#     add_building = building_holo_theatres
+# }
+#
+# generate_tur_gellix_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_research_lab_1
+# }
+#
+# generate_tur_magna_colony_buildings = {
+#     while = { count = 3 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 5 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+#     add_building = building_research_lab_1
+# }
+#
+# generate_tur_edessan_colony_buildings = {
+#     while = { count = 2 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_food_processing_centerity
+#     add_building = building_holo_theatres
+#     add_building = building_research_lab_1
+# }
+#
+# generate_tur_aephus_colony_buildings = {
+#     while = { count = 3 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 5 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_factory_1
+#     add_building = building_holo_theatres
+# }
+#
+# generate_tur_epyrus_colony_buildings = {
+#     while = { count = 2 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+# }
+#
+# generate_tur_chatti_colony_buildings = {
+#     while = { count = 2 add_district = { district_type = district_city ignore_cap = yes }}
+#     while = { count = 4 add_district = { district_type = district_industrial ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes }}
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes }}
+#     while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes }}
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+# }
+#
+# generate_tur_menae_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_residential_complex ignore_cap = yes }}
+#     add_building = building_station_major_capital
+# }
+#
+# generate_tur_pheiros_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_residential_complex ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_testing_site ignore_cap = yes }}
+#     add_building = building_station_capital
+# }
+#
+# generate_tur_nanus_colony_buildings = {
+#     add_building = building_station_major_capital
+# }
+#
+# generate_tur_nimines_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_residential_complex ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_mining_complex ignore_cap = yes }}
+#     add_building = building_station_capital
+# }
+#
+# generate_tur_maitrum_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_residential_complex ignore_cap = yes }}
+#     while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes }}
+#     add_building = building_station_capital
+# }

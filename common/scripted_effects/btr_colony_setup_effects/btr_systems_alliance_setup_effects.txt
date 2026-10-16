@@ -1,0 +1,89 @@
+# ## SYSTEM ALLIANCE ##
+#
+# generate_sys_earth_deposits = {
+#
+# }
+#
+# generate_sys_earth_capital_buildings = {
+#     while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_generator ignore_cap = yes } }
+#     while = { count = 4 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_major_capital
+#     add_building = building_factory_1
+#     add_building = building_research_lab_1
+# }
+#
+# generate_sys_luna_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_fortified_bunkers ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_mars_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_experimental_complex ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_benning_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_demeter_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_sirona_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_elysium_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_factory_1
+# }
+#
+# generate_sys_eden_prime_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_shanxi_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_bekenstein_colony_buildings = {
+#     while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_factory_1
+# }
+#
+# generate_sys_terra_nova_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_factory_1
+# }
+#
+# generate_sys_yandoa_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_sys_mindoir_colony_buildings = {
+#     add_building = building_capital
+# }
+#
+# generate_sys_tyr_colony_buildings = {
+#     add_building = building_capital
+# }
+#
+# generate_sys_arcturus_station_buildings = {
+#     add_building = building_hab_capital
+# }

@@ -1,0 +1,50 @@
+# ## ELCOR ##
+# generate_cod_dekuuna_capital_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 5 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes } }
+#     add_building = building_major_capital
+#     add_building = building_elcor_elders_assembly
+#     add_building = building_elcor_communal_croplands
+#     add_building = building_mineral_purification_plant
+#     add_building = building_factory_1
+# }
+#
+# generate_cod_thunawanuro_colony_buildings = {
+#     while = { count = 2 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+#     add_building = building_mineral_purification_plant
+# }
+#
+# generate_cod_ekuuna_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+#     while = { count = 3 add_district = { district_type = district_generator ignore_cap = yes } }
+#     while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+#     add_building = building_factory_1
+# }
+#
+# generate_cod_jurdal_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+#     add_building = building_capital
+# }
+#
+# generate_cod_yapolam_colony_buildings = {
+#     while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes } }
+#     add_building = building_capital
+#     add_building = building_holo_theatres
+#     add_building = building_factory_1
+#     add_building = building_research_lab_1
+# }
+#
+# generate_cod_oltan_colony_buildings = {
+#     add_building = building_capital
+#     add_building = building_elcor_communal_croplands
+#     add_building = building_hydroponics_greenhouse
+# }
