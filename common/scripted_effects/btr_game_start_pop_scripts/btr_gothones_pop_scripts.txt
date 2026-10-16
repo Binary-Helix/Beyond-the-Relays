@@ -1,0 +1,10 @@
+######GOTHONES REMNANT#####
+
+generate_got_vindicta_pops = {
+	while = {
+	   count = 260
+	   generate_gothonesPop = yes
+	}
+	every_owned_pop_group = { set_pop_group_flag = init_spawn }
+	check_planet_employment = yes
+}
